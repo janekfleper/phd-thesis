@@ -13,4 +13,4 @@
 
 #include "chapters/structure.typ"
 #include "chapters/theory/theory.typ"
-#include "chapters/optical-lattices.typ"
+#include "chapters/setup/setup.typ"

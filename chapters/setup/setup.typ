@@ -1,0 +1,2 @@
+= Experimental setup
+Our experimental setup consists of three optical lattices along the three coordinate axes. The lattice in the x-direction and the lattice in the z-direction are superlattices that consist of superimposed optical lattices at 532nm and 1064nm. This thesis/chapter will cover the entire setup of the x-superlattice and the required steps to optimize and characterize the superlattice potential. I will also briefly cover the setup of the z-superlattice. For the details I will refer the reader to the PhD theses of Nicola, Marcell and Jeffrey.
