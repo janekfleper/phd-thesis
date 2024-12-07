@@ -78,10 +78,20 @@ $ <bloch-theorem-uq-schroedinger>
 The coefficients $u_(q,m)$ are coupled by the Fourier series coefficients $c_(m eq.not 0)$ of the optical lattice potential.
 @bloch-theorem-uq-schroedinger can be written as a matrix and solved numerically for each quasi-momentum $q$.
 The size of the matrix depends on the values that are chosen for the index $m$.
-Since the diagonal matrix element scales with $m^2$, the off-diagonal coupling term $-1/4 v_0$ becomes weak relative to the diagonal term for large values of $m$.
-A reasonable range for the index is therefore $m = [-10, ..., 10]$.
-In that case the size of the matrix @bloch-theorem-uq-schroedinger will be $21 times 21$ and there will be $21$ eigenvalues $epsilon_n (q)$ for each quasi-momentum $q$.
+Since the diagonal matrix element is proportional to $m^2$, it scales quite quickly with the range of $m$.
+The minimal required range of $m$ that does not falsify the result depends on the lattice depth $v_0$ since the coupling of the coefficients $u_(q,m)$ can be neglected when the diagonal matrix elements are (much) greater than the off-diagonal matrix elements.
+In any case, the range of the index $m$ will determine the size of the matrix @bloch-theorem-uq-schroedinger and therefore also the number of eigenvalues $epsilon_n (q)$ and eigenvectors.
 
-When looking at the eigenvalues $epsilon_n (q)$ as a function of the quasi-momentum $q$, we can see that the eigensolutions for so-called _energy bands_ in quasi-momentum space.
+When looking at the eigenvalues $epsilon_n (q)$ as a function of the quasi-momentum $q$, we can see in @bloch-theorem-energy-bands that the eigensolutions form so-called _energy bands_ in quasi-momentum space.
 The _band index_ $n$ starts at $1$ for the lowest band and increases in integer steps to the dimension of the matrix.
-For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function of the quasi-momentum $q$, and if $v_0 > 0$ there are _band gaps_ visible between the lowest bands.
+For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function of the quasi-momentum $q$, and _band gaps_ appear between trapped bands where $epsilon_n (q) < v_0$.
+
+#figure(
+    image("../../figures/optical-lattices-energy-bands.png"),
+    caption: [
+        Energy bands in an optical lattice with depth $v_0 = #qty[??][Erec]$.
+        In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q #sym.slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.
+        The widths of the bands increase with the band index $n$ since the impact of the optical lattice potential on the particles is reduced.
+        For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
+    ]
+) <bloch-theorem-energy-bands>
