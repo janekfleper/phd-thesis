@@ -9,7 +9,7 @@
   $upright(e)^(- upright(i) #body)$
 ]
 
-== Bloch theorem
+== Bloch theorem <bloch-theorem>
 
 The solutions of the Hamiltonian @optical-lattice-hamiltonian-dimensionless-xy can be derived using Bloch's theorem that takes the periodicity of the potential @optical-lattice-potential into account.
 The theorem states that the eigenfunctions of the Hamiltonian $accent(H, hat)$ have the form
@@ -80,7 +80,7 @@ The coefficients $u_(q,m)$ are coupled by the Fourier series coefficients $c_(m 
 The size of the matrix depends on the values that are chosen for the index $m$.
 Since the diagonal matrix element is proportional to $m^2$, it scales quite quickly with the range of $m$.
 The minimal required range of $m$ that does not falsify the result depends on the lattice depth $v_0$ since the coupling of the coefficients $u_(q,m)$ can be neglected when the diagonal matrix elements are (much) greater than the off-diagonal matrix elements.
-In any case, the range of the index $m$ will determine the size of the matrix @bloch-theorem-uq-schroedinger and therefore also the number of eigenvalues $epsilon_n (q)$ and eigenvectors.
+In any case, the range of the index $m$ will determine the size of the matrix @bloch-theorem-uq-schroedinger and therefore also the number of eigenvalues $epsilon_n (q)$ and eigenvectors based on the coefficients $u_(q,m)$.
 
 When looking at the eigenvalues $epsilon_n (q)$ as a function of the quasi-momentum $q$, we can see in @bloch-theorem-energy-bands that the eigensolutions form so-called _energy bands_ in quasi-momentum space.
 The _band index_ $n$ starts at $1$ for the lowest band and increases in integer steps to the dimension of the matrix.
@@ -95,3 +95,7 @@ For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function
         For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
     ]
 ) <bloch-theorem-energy-bands>
+
+We can compute the functions @bloch-theorem-uq-fourier-series using the Fourier coefficients from the eigenvectors corresponding to the eigenvalues $epsilon_n (q)$
+These are not the Bloch waves yet since the prefactor $cexp(q x)$ is still missing, but it makes sense to look at these functions first since they show the part of the Bloch wave with the same periodicity as the optical lattice potential.
+The prefactor $cexp(q x)$ will then only slightly adjust the phase of the Bloch wave across the optical lattice potential based on the quasi-momentum $q$.
