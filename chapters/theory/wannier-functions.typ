@@ -9,6 +9,8 @@
   $upright(e)^(- upright(i) #body)$
 ]
 
+#let asc = $a_upright("sc")$
+
 == Wannier functions <wannier-functions>
 
 The Bloch waves introduced in @bloch-theorem have a discrete quasi-momentum $q$ and are therefore completely delocalized over the optical lattice potential.
@@ -40,9 +42,6 @@ The tunneling amplitudes $t_(i,j)$ are the off-diagonal matrix elements of the h
 The rate of tunneling can be tied to the finite amplitude of the Wannier function $w_(n,i)(x)$ on the target site $j$ (and vice-versa).
 In a (reasonably) deep lattice the finite amplitude can also be clearly observed on the neighbouring lattice site, see @wannier-functions-tunneling-illustration.
 
-While an actual particle will be described by a three-dimensional wavefunction, the axes perpendicular to the tunneling event can be ignored if the wave functions to not change as a function of those axes between the lattice sites $i$ and $j$.
-In a three-dimensional optical lattice this is (almost) always the case, which greatly simplifies the computation of the tunneling amplitudes.
-
 #figure(
     image("../../figures/wannier-functions-tunneling-overlap.png"),
     caption: [
@@ -54,3 +53,42 @@ In a three-dimensional optical lattice this is (almost) always the case, which g
     ]
 ) <wannier-functions-tunneling-illustration>
 
+While an actual particle will be described by a three-dimensional wavefunction, the axes perpendicular to the tunneling event can be ignored if the wave functions do not change along the axes perpendicular to the tunneling event between the lattice sites $i$ and $j$.
+In a three-dimensional optical lattice this is (almost) always the case, which greatly simplifies the computation of the tunneling amplitudes.
+
+To compute the interaction, on the other hand, the three-dimensional wave functions are required since the contact interaction is proportional to the actual density of the two particles.
+If we consider that atoms/particles on the site $i$ are described by the Wannier function $w_(n,i)(phy.vb(r))$, the interaction strength of two particles on the same site is 
+
+$
+  U
+  = (4 pi phy.hbar^2 a_upright("sc")) / m
+    integral phy.dd(phy.vb(r), 3) abs(w_(n,i)(phy.vb(r)))^4
+$ <wannier-functions-interaction-strength>
+
+where $a_upright("sc")$ is the scattering length that characterizes the magnitude and the sign of the interaction.
+For attractive (repulsive) interactions $#asc < 0$ ($#asc > 0$) the interaction will decrease (increase) the energy of the particles.
+Since @wannier-functions-interaction-strength is proportional to the squared density, the magnitude of the interaction energy will also strongly depend on the confinement of the particles.
+A strong confinement will compress the wavefunction and therefore increase the integral in @wannier-functions-interaction-strength.
+If the particles are trapped in the ground state of deep optical lattices along all three axes, we can estimate the trap by three perpendicular harmonic oscillator potentials with the trap frequencies $omega_(x,y,z)$.
+The interaction strength is then proportional to the geometric mean of the trap frequencies
+
+$
+  U prop sqrt(omega_x omega_y omega_z)
+$
+
+A weak(er) confinement along any of the three axes will therefore significantly reduce the magnitude of the interaction strength.
+
+Since the interaction energy @wannier-functions-interaction-strength is computed with the non-interacting Wannier functions, the change of the wavefunctions due to the interaction energy is not taken into account yet.
+If the two particles have a strong repulsive interaction, we would expect their wavefunctions to "decompress" such that the integral in @wannier-functions-interaction-strength is reduced. #footnote[For attractive interactions we would expect the density to get compressed instead.]
+The decompression will also reduce the energy of the kinetic term in the Hamiltonian, but the energy of the potential term will be increased.
+Solving this interplay of the kinetic energy, the potential energy and the interaction energy to find the interacting Wannier functions in an optical lattice potential is not practical.
+In a three-dimensional harmonic oscillator, however, this can be solved using a variational approach to find the ground state energy $E$ of two interacting particles as a function of $asc slash l$ where $l = sqrt((2 phy.hbar) / (m omega))$ is the characteristic oscillator length in the harmonic oscillator potential.
+The shift of the ground state energy is then rescaled using @wannier-functions-interaction-strength with the non-interacting Wannier function and with the three-dimensional gaussian function as the ground state wavefunction of the non-interacting harmonic oscillator.
+
+$
+  U = U_"Wannier" / U_"Gauss" dot (E(asc) - E(asc=0))
+$ <wannier-function-interaction-correction>
+
+In an isotropic three-dimensional optical lattice where $omega_x = omega_y = omega_z$ the calculation is quite straight forward since all axes contribute equally.
+If the trapping potential is only equal along two axes of the optical lattice, the problem can be solved in cylindrical coordinates with an aspect ratio $eta = omega_(x,y) slash omega_z$. #text(red)[Idziaszek and Calarco]
+The general case of three different trapping potentials $omega_x eq.not omega_y eq.not omega_z$ was solved by ...
