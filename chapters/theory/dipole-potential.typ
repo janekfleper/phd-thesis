@@ -117,4 +117,4 @@ $
     = - phy.dv(,x,2) + v_0 dot sin^2 x
 $ <optical-lattice-hamiltonian-dimensionless-xy>
 
-with $#unit[Erec] = -(phy.hbar^2 k^2) / (2m)$ and $v_0 = V_0 / #unit[Erec]$.
+with $#unit[Erec] = (phy.hbar^2 k^2) / (2m)$ and $v_0 = V_0 / #unit[Erec]$.
