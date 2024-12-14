@@ -75,3 +75,52 @@ The illustration of the superlattice potential in @superlattice-potential-phase 
     All configurations with other phases $phi$ will be referred to as _asymmetric_.
   ]
 ) <superlattice-potential-phase>
+
+
+=== Bloch theorem
+
+The potential @superlattice-potential-dimensionless can be plugged into the Schrödinger equation @bloch-theorem-psiq-schroedinger to compute the band structure and the Bloch waves in the superlattice potential.
+Since the superlattice potential has two spatial frequency components, the Fourier series expansion also has coefficients $c_(plus.minus) eq.not 0$ which will lead to non-zero matrix elements on the second off-diagonal.
+
+$
+  c_0 = 2v_s - 1/2 v_l,
+  c_(plus.minus 1) = - 1/4 upright(e)^(minus.plus upright(i) 2 phi),
+  c_(plus.minus 2) = v_s
+$ <superlattice-potential-fourier-coefficients>
+
+Actually solving the Schrödinger equation works just like for the monochromatic lattice.
+The eigenvalues will be the energy bands $epsilon_n (q)$ and the eigenvectors will lead to the Bloch waves $psi_(n,q) (x)$ where $n$ is the band index and $q$ is the quasi-momentum in the first Brillouin-zone of the long lattice.
+See @superlattice-potential-phase for the band structure of a _symmetric_ superlattice.
+
+#figure(
+  image("../../figures/superlattice-band-structure-zoom.png"),
+  caption: [
+    Band structure in the superlattice potential for $v_l = ?$, $v_s = ?$ and $phi = 0$.
+    In a symmetric superlattice potential the band structure shows pairs of bands that are only separated by a small energy gap.
+    The energy gaps between the band pairs are much larger in comparison, similar to the energy gaps in the monochromatic band structure, see @bloch-theorem-energy-bands.
+    The band structure in the center extends over the first Brillouin-zone of the short lattice to highlight how these so-called _mini bands_ are created.
+    From a distance it looks like we have two (large) bands that are separated by a band gap at $q slash k_l = plus.minus 2$.
+    Similar to the opening of the band gaps in the monochromatic band structure, the introduction of the long lattice will cause the bands to separate at $q slash k_l = plus.minus 1$.
+    If we then reduce the range of the quasi-momentum axis to the first Brillouin-zone of the long lattice, the "outer" parts of the bands are shifted by $plus.minus 2 k_l$ to fit inside the first Brillouin-zone of the long lattice.
+    The resulting band structure in the right figure now shows four bands in two pairs of mini bands.
+    The gap between the mini bands is much smaller since it is "created" by the peak of the potential inside the double well.
+    The gap between the pairs of the mini bands depends on the peak of the potential between the double wells which is much larger for all usual lattice configurations.
+  ]
+) <superlattice-band-structure>
+
+As determined by Bloch's theorem, the function $u_(n,q) (x)$ in the Bloch waves must have the same periodicity as the potential.
+Since the unit cell is given by the long lattice potential, the Bloch waves will also be periodic with respect to the long lattice.
+The impact of the short lattice potential on the Bloch waves can be seen inside the unit cells, see @superlattice-bloch-waves.
+In a symmetric superlattice the (inner function of the) Bloch waves will have the same symmetry properties regardless of the quasi-momentum $q$.
+If the superlattice phase is however asymmetric, the symmetry between the two sites in the unit cell is broken and the odd (even) Bloch waves will start to localize on the lower (upper) sites to follow the respective on-site energies.
+
+#figure(
+  image("../../figures/superlattice-bloch-waves.png"),
+  caption: [
+    Bloch waves at $q = 0$ in the superlattice potential for $v_l = 15$, $v_s = 15$ and $phi = 0$.
+    The Bloch waves $psi_(n,q) (x)$ are shifted by the mean of the respective energy bands $epsilon_n (q)$.
+    The amplitude of the Bloch waves does not have a meaning here since they share the y axis with the potential and the energy bands despite having completely different units.
+    Within the band pairs the Bloch waves are only different by the symmetry relative to the center of the unit cell (or double well).
+    The (lower) odd bands are always symmetric with respect to the unit cell, whereas the (upper) even bands are antisymmetric with respect to the unit cell.
+  ]
+) <superlattice-bloch-waves>
