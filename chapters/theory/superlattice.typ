@@ -124,3 +124,56 @@ If the superlattice phase is however asymmetric, the symmetry between the two si
     The (lower) odd bands are always symmetric with respect to the unit cell, whereas the (upper) even bands are antisymmetric with respect to the unit cell.
   ]
 ) <superlattice-bloch-waves>
+
+
+=== Wannier functions
+
+To describe localized particles in the superlattice potential we want to compute the Wannier functions from the Bloch waves as shown in @superlattice-bloch-waves.
+If we would just use the definition in @wannier-functions-transformation, the Wannier functions would conserve the symmetry of the Bloch waves inside the unit cell.
+In a symmetric superlattice at $phi = 0$ the Wannier functions would then be delocalized over the two sites in the unit cell.
+While those are technically valid Wannier functions, we would prefer to have a Wannier basis that describes particles that are localized on either site in the unit cell.
+In other words we want to find the _maximally localized_ Wannier functions that describe the smallest/narrowest wave function of a particle inside the potential.
+The issue of computing the maximally localized Wannier functions often arises in non-trivial lattice structures, and there has been a lot of research on this #text(red)[refs...].
+In one-dimensional potentials there is a fairly straight forward approach to compute the maximally located Wannier functions using the band-projected position operator (BPO) #text(red)[ref Marzari & Vanderbilt (1997)].
+This approach does not require any numerical optimization of the spatial variance of the Wannier functions which makes the computation really fast.
+The calculation of the matrix elements of the BPO was worked out by #text(red)[ref Bissbort] and the calculation from the band structure and the Bloch waves in the superlattice potential to the computation of the on-site energies and the tunneling amplitudes is shown in detail in #text(red)[ref Görg].
+In this section I will not explain any of the details or show any of the equations.
+I will only present the qualitative results of the maximally localized Wannier functions, and the resulting tunneling parameters and on-site energies.
+
+If we only look at the lowest two bands with $n = {1, 2}$ in @superlattice-bloch-waves, we will notice that in each unit cell the corresponding Bloch waves look very similar to the wave function of the ground state and the excited state of a single particle in a balanced double well potential.
+// We will therefore try to derive the mixing of the Bloch waves to compute the maximally localized Wannier functions based on the eigenstates of a single particle in a balanced double well.
+In the two-particle basis where $phy.ket(L)$ and $phy.ket(R)$ describe a particle on the left site and right site respectively, the ground state $phy.ket(g)$ and the excited state $phy.ket(e)$ are
+
+$
+  phy.ket(g) = 1/sqrt(2) (phy.ket(L) + phy.ket(R)) "and"
+  phy.ket(e) = 1/sqrt(2) (phy.ket(L) - phy.ket(R))
+$ <superlattice-wannier-SoD-eigenstates>
+
+In the basis of the eigenstates $phy.ket(g)$ and $phy.ket(e)$ the single-site occupations are therefore
+
+$
+  phy.ket(L) = 1/sqrt(2) (phy.ket(g) - phy.ket(e)) "and"
+  phy.ket(R) = 1/sqrt(2) (phy.ket(g) + phy.ket(e))
+  #text(red)[remove this equation?]
+$ <superlattice-wannier-SoD-LR-states>
+
+If we now associate the Bloch waves in @superlattice-bloch-waves in the superlattice potential with the eigenstates @superlattice-wannier-SoD-eigenstates of the double well potential, we will expect that a mixing of the Bloch waves will lead to the maximally localized Wannier functions analogous to $phy.ket(L)$ and $phy.ket(R)$.
+At the phase $phi = 0$ we will have equal mixtures of the bands with only the signs being different.
+If the phase is detuned from $phi = 0$, we would then expect the mixture to change analogous to the eigenstates of a single particle in a doublewell.
+The overlap of the maximally localized Wannier functions with the regular Wannier functions computed from @wannier-functions-transformation is shown in figure @superlattice-wannier-mixing.
+The illustration shows that we always have to mix the lowest two bands around $phi = 0$ and any other band pairs around avoided crossings.
+If the superlattice configuration is far away from any avoided crossings (compared to their gaps), using the regular Wannier functions is sufficient to describe (maximally) localized particles.
+
+#figure(
+  image("../../figures/superlattice-wannier-mixing.png", width: 80%),
+  caption: [
+    Mixing of the Bloch bands to form maximally located Wannier functions in the superlattice potential.
+    The y-axis shows the overlap of the maximally located Wannier function $phy.ket(w_R)$ on the right sublattice site with the regular Wannier functions $phy.ket(w_n)$ where $n$ is the index of the corresponding Bloch bands.
+    For the Wannier function $phy.ket(w_L)$ on the left sublattice site (the absolute of) the overlaps look the same for the transformation $phi -> -phi$, discussing the sign between the regular Wannier functions $phy.ket(w_n)$ is not necessary to illustrate the mixing.
+    Near the symmetry point the overlaps change rapidly since the relevant energy scale is the width of the respective bands (which is also the tunneling amplitude $t$).
+    The changes are therefore slower around the second avoided crossing at $phi approx 0.16 pi$ since the second band and the third band are much wider.
+
+    - #text(red)[Add band structure plot with $E(phi)$ that shows the avoided crossings!]
+    - #text(red)[Add doublewell eigenvector plot (at least for $phi = 0$?)]
+  ]
+) <superlattice-wannier-mixing>
