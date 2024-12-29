@@ -177,3 +177,21 @@ If the superlattice configuration is far away from any avoided crossings (compar
     - #text(red)[Add doublewell eigenvector plot (at least for $phi = 0$?)]
   ]
 ) <superlattice-wannier-mixing>
+
+
+=== Hubbard parameters / SSH model
+
+#text(red)[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
+If the superlattice potential is sufficiently deep, it makes sense to use the second quantization formalism again to describe the behavior of atoms inside the superlattice.
+The required parameters are the tunneling amplitude @wannier-functions-tunneling-amplitude and the interaction strength @wannier-functions-interaction-strength that were already introduced in @wannier-functions.
+In general the tunneling amplitudes $t_"in"$ inside a doublewell will be greater than the tunneling amplitudes $t_"out"$ between separate doublewells due to the large potential barrier (mention the SSH model here?).
+We could actually use the integral in @wannier-functions-tunneling-amplitude to compute the tunneling amplitudes $t_"in"$ and $t_"out"$ in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
+However, the computation of the maximally localized Wannier functions using the BPO matrix (#text(red)[what is the actual name here?] will already reveal the tunneling amplitudes between _all_ pairs of lattice sites in the system.
+In addition to the tunneling amplitudes, the BPO matrix will also reveal the (absolute) on-site energies of the sublattice sites.
+The relative detuning $2 Delta$ between neighbouring lattice sites is the last relevant parameter to describe the dynamics in doublewells (and extended SSH models?).
+The factor of $2$ is chosen by convention to assign the energies $plus.minus Delta$ to the left/right localized state if $E = 0$ is set to the mean energy of the two states/sites.
+The benefit behind choosing this convention for the detuning will become (more) obvious in #text(red)[the next section about the doublewell theory].
+
+==== Missing stuff:
+- Include the full/extended 1D Hubbard model for the superlattice here? This should be the extension of the SSH model (which does not include the interaction and the detuning $Delta$ "natively")
+- Add some plots here to illustrate the Hubbard parameters for the relevant parameter space?
