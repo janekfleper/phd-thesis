@@ -10,7 +10,7 @@
 ]
 
 #pagebreak()
-== Optical superlattices
+== Optical superlattices <sec:theory-superlattice>
 
 In general an optical superlattice refers to (at least) two overlapping optical lattices with different lattice wavevectors $Delta phy.vb(k)$ that are not perpendicular.
 If the lattice wavevectors would be perpendicular, the Schrödinger equation can be separated into the different axes again and the system can be described by multiple monochromatic lattices.
@@ -24,7 +24,7 @@ Overlapping three beam pairs with commensurate wavelengths at angles of $120 deg
 More examples...
 
 In this section I will cover the superlattice potential that is relevant for the optical superlattices in our experiment.
-I will not go into much detail about solving the Schrödinger equation with Bloch waves since the steps are very similar to the calculation shown in @bloch-theorem.
+I will not go into much detail about solving the Schrödinger equation with Bloch waves since the steps are very similar to the calculation shown in @sec:theory-bloch-theorem.
 For the computation of the Wannier functions some extra steps have to be taken since the unit cell in the superlattice will have two lattice sites.
 
 The optical superlattice potential according to our convention is
@@ -77,7 +77,7 @@ The illustration of the superlattice potential in @superlattice-potential-phase 
 ) <superlattice-potential-phase>
 
 
-=== Bloch theorem
+=== Bloch theorem <ssec:theory-superlattice-bloch-theorem>
 
 The potential @superlattice-potential-dimensionless can be plugged into the Schrödinger equation @bloch-theorem-psiq-schroedinger to compute the band structure and the Bloch waves in the superlattice potential.
 Since the superlattice potential has two spatial frequency components, the Fourier series expansion also has coefficients $c_(plus.minus) eq.not 0$ which will lead to non-zero matrix elements on the second off-diagonal.
@@ -126,7 +126,7 @@ If the superlattice phase is however asymmetric, the symmetry between the two si
 ) <superlattice-bloch-waves>
 
 
-=== Wannier functions
+=== Wannier functions <ssec:theory-superlattice-wannier-functions>
 
 To describe localized particles in the superlattice potential we want to compute the Wannier functions from the Bloch waves as shown in @superlattice-bloch-waves.
 If we would just use the definition in @wannier-functions-transformation, the Wannier functions would conserve the symmetry of the Bloch waves inside the unit cell.
@@ -179,11 +179,11 @@ If the superlattice configuration is far away from any avoided crossings (compar
 ) <superlattice-wannier-mixing>
 
 
-=== Hubbard parameters / SSH model
+=== Hubbard parameters / SSH model <ssec:theory-superlattice-hubbard-parameters>
 
 #text(red)[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
 If the superlattice potential is sufficiently deep, it makes sense to use the second quantization formalism again to describe the behavior of atoms inside the superlattice.
-The required parameters are the tunneling amplitude @wannier-functions-tunneling-amplitude and the interaction strength @wannier-functions-interaction-strength that were already introduced in @wannier-functions.
+The required parameters are the tunneling amplitude @wannier-functions-tunneling-amplitude and the interaction strength @wannier-functions-interaction-strength that were already introduced in @sec:theory-wannier-functions.
 In general the tunneling amplitudes $t_"in"$ inside a doublewell will be greater than the tunneling amplitudes $t_"out"$ between separate doublewells due to the large potential barrier (mention the SSH model here?).
 We could actually use the integral in @wannier-functions-tunneling-amplitude to compute the tunneling amplitudes $t_"in"$ and $t_"out"$ in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
 However, the computation of the maximally localized Wannier functions using the BPO matrix (#text(red)[what is the actual name here?] will already reveal the tunneling amplitudes between _all_ pairs of lattice sites in the system.

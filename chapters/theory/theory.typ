@@ -1,4 +1,4 @@
-= Theory
+= Theory <ch:theory>
 
 In this chapter I will introduce the theoretical concepts that are required as the baseline for the experimental setup (ref chapter) and the further chapters in this thesis.
 Starting with the interaction of (far-detuned) light with atoms I will introduce the optical potentials that we are using in the experiment.

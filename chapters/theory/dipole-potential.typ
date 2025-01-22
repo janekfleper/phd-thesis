@@ -1,7 +1,7 @@
 #import "@preview/physica:0.9.3" as phy
 #import "../../stuff.typ": num, unit, qty
 
-== Dipole potential and optical lattices
+== Dipole potential and optical lattices <sec:theory-dipole-potential>
 
 Far off-resonant light can still interact with atoms.
 Depending on the detuning of the angular frequency of the light $omega$ and the transition energy $#phy.hbar omega_0$, the sign of the interaction changes.

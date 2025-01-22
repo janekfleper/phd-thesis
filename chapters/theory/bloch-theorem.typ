@@ -9,7 +9,7 @@
   $upright(e)^(- upright(i) #body)$
 ]
 
-== Bloch theorem <bloch-theorem>
+== Bloch theorem <sec:theory-bloch-theorem>
 
 The solutions of the Hamiltonian @optical-lattice-hamiltonian-dimensionless-xy can be derived using Bloch's theorem that takes the periodicity of the potential @optical-lattice-potential into account.
 The theorem states that the eigenfunctions of the Hamiltonian $accent(H, hat)$ have the form

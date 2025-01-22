@@ -11,9 +11,9 @@
 
 #let asc = $a_upright("sc")$
 
-== Wannier functions <wannier-functions>
+== Wannier functions <sec:theory-wannier-functions>
 
-The Bloch waves introduced in @bloch-theorem have a discrete quasi-momentum $q$ and are therefore completely delocalized over the optical lattice potential.
+The Bloch waves introduced in @sec:theory-bloch-theorem have a discrete quasi-momentum $q$ and are therefore completely delocalized over the optical lattice potential.
 Wannier functions on the other hand are (maximally) localized in space and provide an alternative basis to describe particles in an optical lattice potential.
 They can be computed directly from the Bloch waves $psi_(n,q) (x)$ with a Fourier-like transformation
 
