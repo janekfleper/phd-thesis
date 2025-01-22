@@ -11,6 +11,5 @@
   date: datetime.today(),
 )
 
-#include "chapters/structure.typ"
 #include "chapters/theory/theory.typ"
 #include "chapters/setup/setup.typ"
