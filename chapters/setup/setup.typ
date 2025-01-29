@@ -12,3 +12,5 @@ The x-superlattice setup will be covered in great detail in #text(red)[chapter 3
 
 To conclude the chapter I will present the hyperfine state manipulation capabilities and the available detection methods in our experimental setup.
 These are established techniques that are essential for the conduction of experiments inside the optical lattices.
+
+#include "k40.typ"
