@@ -16,3 +16,4 @@ These are established techniques that are essential for the conduction of experi
 #include "k40.typ"
 #include "mot.typ" 
 #include "ioffe.typ"
+#include "dipole.typ"
