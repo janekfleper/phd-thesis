@@ -48,7 +48,7 @@ At an intersection angle of $2 alpha$ the period of the interference pattern inc
 
 $
   a = lambda / (2 sin alpha)
-$
+$ <eq:theory-dipole-potential-lattice-period>
 
 In the case of the counterpropagating waves the angle $alpha$ is equal to $90degree$, and the period simplifies to $a = lambda / 2$ again.
 See @dipole-potential-intersection-angle for an illustration of the change of the interference pattern based on the angle of intersection.

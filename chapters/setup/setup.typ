@@ -17,3 +17,4 @@ These are established techniques that are essential for the conduction of experi
 #include "mot.typ" 
 #include "ioffe.typ"
 #include "dipole.typ"
+#include "z-lattices.typ"
