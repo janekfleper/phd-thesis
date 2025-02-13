@@ -19,3 +19,4 @@ These are established techniques that are essential for the conduction of experi
 #include "dipole.typ"
 #include "z-lattices.typ"
 #include "xy-lattices.typ"
+#include "detection.typ"
