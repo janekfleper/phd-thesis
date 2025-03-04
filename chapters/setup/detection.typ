@@ -1,4 +1,3 @@
-#import "@preview/whalogen:0.2.0": ce
 #import "@preview/fancy-units:0.1.0": num, unit, qty
 #import "@preview/physica:0.9.4" as phy
 
@@ -16,7 +15,7 @@
   - Actually mention x-imaging and y-imaging anywhere?
 ]
 
-The rich hyperfine structure of #ce("K40") as shown in @fig:setup-k40-hfs is in incredibly useful tool for the detection of the atoms.
+The rich hyperfine structure of #phy.isotope("K", a: [40]) as shown in @fig:setup-k40-hfs is in incredibly useful tool for the detection of the atoms.
 The internal state of the atoms can be changed with simple radio frequency sweeps.
 Since the magnetic field at $~#qty[200][G]$ corresponds to the intermediate regime for the hyperfine structure, each (adjascent) pair of magnetic hyperfine states has a unique energy/frequency difference.
 The transition frequency is always around $~#qty[50][MHz]$, and the frequency differences between transitions are $~#qty[2][MHz]$ which is comfortably resolvable.
@@ -33,7 +32,7 @@ For the detection we would like to resolve whether a site is singly-occupied or 
 This is possible due to the interaction energy of the atoms on doubly-occupied sites.
 Since this interaction is usually on the order of a few #unit[kHz], we can not use the #qty[175][kHz] wide RF pulses to separate the doubly-occupied sites from the singly-occupied sites.
 Instead we are using a so-called HS1 pulse #text(red)[ref something from NMR?] that is optimized for transfers in a narrow frequency window.
-This pulse also uses a frequency sweep to achieve a Landau-Zener transfer and in addition the amplitude of the pulse is varied to address a narrow frequency window with a short pulse time. 
+This pulse also uses a frequency sweep to achieve a Landau-Zener transfer and in addition the amplitude of the pulse is varied to address a narrow frequency window with a short pulse time.
 
 $
   V_"pulse"(t) = A_"pulse"(t) ... \
@@ -61,7 +60,7 @@ As introduced in @sec:setup-z-lattices we can only occupy every second plane of 
 On paper we can easily achieve this with a #qty[1][kHz] wide HS1 pulse.
 If the center frequency is on resonance with the lattice planes, the pulse will address $plus.minus #qty[500][Hz]$ in each direction which is still far away from the neighbouring lattice planes.
 In practice we can see that the resonance frequency of the atoms is not perfectly constant on both short time scales (the duration of the pulse) and long time scales (from sequency to sequence or even day to day).
-We therefore synchronize the sequence to the phase of the power line since we can expect the power supplies of the magnetic field coils to slightly change/fluctuate during one #qty[20][ms] period of the power line. 
+We therefore synchronize the sequence to the phase of the power line since we can expect the power supplies of the magnetic field coils to slightly change/fluctuate during one #qty[20][ms] period of the power line.
 The synchronization is implemented by interrupting the sequence a few #qty[10][ms] before the HS1 slicing pulse.
 If the power line phase reaches a certain setpoint, the sequence is resumed and the HS1 slicing pulse is always executed at the same phase of the power line.
 

@@ -1,4 +1,3 @@
-#import "@preview/whalogen:0.2.0": ce
 #import "@preview/fancy-units:0.1.0": num, unit, qty
 #import "@preview/physica:0.9.4" as phy
 
@@ -25,7 +24,7 @@ The main loss process for atoms are Majorana flips in the trap center where the 
 A short transport time is therefore desirable to minimize the atom losses.
 
 In the science cell, the atoms are handed over from the transport coils to a Ioffe-Pritchard (type) trap consisting of three principal pairs of coils.
-Compared to the quadrupole field of a anti-Helmholtz pair, the Ioffe-Pritchard trap has an offset magnetic field in the center to prevent Majorana losses. 
+Compared to the quadrupole field of a anti-Helmholtz pair, the Ioffe-Pritchard trap has an offset magnetic field in the center to prevent Majorana losses.
 We are using forced evaporative cooling in the Ioffe-Pritchard trap to repeatedly remove the atoms with the highest temperature, which will effectively cool the atom cloud.
 The atoms are removed from the trap via a MW transition or an RF transition to a high-field seeking state.
 During the cooling it is important to keep a balanced mixture of the available low-field seeking HFS states for an efficient (re-)thermalization.
