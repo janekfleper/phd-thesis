@@ -1,5 +1,4 @@
-#import "@preview/physica:0.9.4" as phy
-#import "@preview/fancy-units:0.1.0": unit, qty
+#import "../../header.typ": *
 
 == Magneto-optical trap <sec:setup-mot>
 

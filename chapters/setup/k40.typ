@@ -1,5 +1,4 @@
-#import "@preview/physica:0.9.4" as phy
-#import "@preview/fancy-units:0.1.0": qty
+#import "../../header.typ": *
 
 == Potassium #phy.isotope("K", a: [40]) <sec:setup-k40>
 

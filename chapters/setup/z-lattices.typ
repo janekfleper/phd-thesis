@@ -1,5 +1,4 @@
-#import "@preview/fancy-units:0.1.0": num, unit, qty
-#import "@preview/physica:0.9.4" as phy
+#import "../../header.typ": *
 
 == Vertical lattices <sec:setup-z-lattices>
 

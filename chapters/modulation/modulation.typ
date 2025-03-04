@@ -1,4 +1,4 @@
-#import "@preview/fancy-units:0.1.0": num, unit, qty
+#import "../../header.typ": *
 
 = In-situ lattice modulation spectroscopy <ch:modulation>
 

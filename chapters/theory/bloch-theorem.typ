@@ -1,13 +1,4 @@
-#import "@preview/physica:0.9.3" as phy
-#import "../../stuff.typ": num, unit, qty
-
-#let cexp(body) = [
-  $upright(e)^(upright(i) #body)$
-]
-
-#let ncexp(body) = [
-  $upright(e)^(- upright(i) #body)$
-]
+#import "../../header.typ": *
 
 == Bloch theorem <sec:theory-bloch-theorem>
 
