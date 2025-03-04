@@ -80,7 +80,7 @@ For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function
 #figure(
   image("../../figures/optical-lattices-energy-bands.png"),
   caption: [
-    Energy bands in an optical lattice with depth $v_0 = #qty[??][Erec]$.
+    Energy bands in an optical lattice with depth $v_0 = #qty[#text(red)[15]][Erec]?$.
     In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q #sym.slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.
     The widths of the bands increase with the band index $n$ since the impact of the optical lattice potential on the particles is reduced.
     For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
