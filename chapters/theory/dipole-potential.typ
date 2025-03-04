@@ -14,7 +14,7 @@ See @dipole-potential-detuning-gauss for a sketch of the atom-light interaction 
   caption: [
     Illustration of the effect of the detuning $Delta = omega - omega_0$ between a gaussian beam and atoms.
     If the light is red-detuned, the atoms are pulled towards the intensity maximum of the gaussian beam.
-  ]
+  ],
 ) <dipole-potential-detuning-gauss>
 
 #text(red)[Add something about the scattering rate...]
@@ -44,7 +44,7 @@ According to @dipole-potential-intensity the interference pattern is described b
 The (spatial) period $a$ of the interference pattern therefore depends on the angle between the two wavevectors.
 If the waves are counter propagating, the wavevectors are related by the equation $phy.vb(k)_2 = - phy.vb(k)_1$ and the absolute of the interference wavevector will be $abs(Delta phy.vb(k)) = 2k$.
 In that case the (spatial) period will be $a = pi / k = lambda / 2$ where $lambda$ is the wavelength of the plane waves.
-At an intersection angle of $2 alpha$ the period of the interference pattern increases according to 
+At an intersection angle of $2 alpha$ the period of the interference pattern increases according to
 
 $
   a = lambda / (2 sin alpha)
@@ -63,7 +63,7 @@ See @dipole-potential-intersection-angle for an illustration of the change of th
     The sketch on the right shows two planes waves interfering at the angle $2 alpha$.
     The vector $Delta phy.vb(k)$ will point in the vertical direction since the parallel components of $phy.vb(k)_1$ and $phy.vb(k)_2$ do not contribute to the interference pattern.
     The period of the interference pattern will therefore be significantly larger than in the sketch on the left.
-  ]
+  ],
 ) <dipole-potential-intersection-angle>
 
 
@@ -82,7 +82,7 @@ The global energy offset will not affect the physics of the atoms in the lattice
     The plot on the left shows the optical dipole potential of a red-detuned optical lattice with the depth $V_0$ and the period $a$.
     The atoms are trapped at the maxima of the intensity.
     For a blue-detuned lattice as shown in the plot on the right, the atoms are trapped at the minima of the intensity.
-  ]
+  ],
 ) <optical-lattice-detuning>
 
 The common choice for the optical lattice potential is to set the potential minimum to zero such that the amplitude of the potential is always positive.
@@ -96,7 +96,7 @@ The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = 
 The Hamiltonian to describe non-interacting particles in the potential @optical-lattice-potential is
 
 $
-  accent(H, hat) = -phy.hbar^2/(2m) phy.dv(,x,2) + V(x)
+  accent(H, hat) = -phy.hbar^2 / (2m) phy.dv(,x,2) + V(x)
 $ <optical-lattice-hamiltonian>
 
 To further simplify the Hamiltonian @optical-lattice-hamiltonian we are going to introduce dimensionless coordinates $x -> x slash k$.
@@ -104,7 +104,7 @@ Since $1 slash k$ or rather $a = pi slash k$ is the characteristic length scale 
 
 $
   accent(H, hat)
-    = -(phy.hbar^2 k^2) / (2m) phy.dv(,x,2) + V_0 dot sin^2 x
+  = -(phy.hbar^2 k^2) / (2m) phy.dv(,x,2) + V_0 dot sin^2 x
 $ <optical-lattice-hamiltonian-dimensionless-x>
 
 There is also a characteristic energy scale that can be used to make the entire Hamiltonian dimensionless.
@@ -113,8 +113,8 @@ Dividing the RHS of @optical-lattice-hamiltonian-dimensionless-x by the recoil e
 
 $
   accent(h, hat)
-    = accent(H, hat) / #unit[Erec]
-    = - phy.dv(,x,2) + v_0 dot sin^2 x
+  = accent(H, hat) / #unit[Erec]
+  = - phy.dv(,x,2) + v_0 dot sin^2 x
 $ <optical-lattice-hamiltonian-dimensionless-xy>
 
 with $#unit[Erec] = (phy.hbar^2 k^2) / (2m)$ and $v_0 = V_0 / #unit[Erec]$.

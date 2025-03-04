@@ -20,7 +20,7 @@ The labels _long_ and _short_ will be used throughout the thesis to refer to the
 
 There are other complex superlattice structures available that allow interesting potentials to be created.
 By interfering two perpendicular Gaussian beams on top of a regular monochromatic lattice, a potential can be created that is tunable from a regular square lattice to a hexagonal lattice, to dimers and to a checkerboard pattern #text(red)[ref ETH].
-Overlapping three beam pairs with commensurate wavelengths at angles of $120 degree$ will create a hexagonal superlattice potential #text(red)[ref Stamper-Kurn]. 
+Overlapping three beam pairs with commensurate wavelengths at angles of $120 degree$ will create a hexagonal superlattice potential #text(red)[ref Stamper-Kurn].
 More examples...
 
 In this section I will cover the superlattice potential that is relevant for the optical superlattices in our experiment.
@@ -73,7 +73,7 @@ The illustration of the superlattice potential in @superlattice-potential-phase 
     This configuration is achieved whenever $phi = (n + 1 slash 2) dot pi slash 2$ with integer $n$ and it is referred to as _antisymmetric_ to highlight the contrast to the _symmetric_ superlattice.
 
     All configurations with other phases $phi$ will be referred to as _asymmetric_.
-  ]
+  ],
 ) <superlattice-potential-phase>
 
 
@@ -83,8 +83,8 @@ The potential @superlattice-potential-dimensionless can be plugged into the Schr
 Since the superlattice potential has two spatial frequency components, the Fourier series expansion also has coefficients $c_(plus.minus) eq.not 0$ which will lead to non-zero matrix elements on the second off-diagonal.
 
 $
-  c_0 = 2v_s - 1/2 v_l,
-  c_(plus.minus 1) = - 1/4 upright(e)^(minus.plus upright(i) 2 phi),
+  c_0 = 2v_s - 1 / 2 v_l,
+  c_(plus.minus 1) = - 1 / 4 upright(e)^(minus.plus upright(i) 2 phi),
   c_(plus.minus 2) = v_s
 $ <superlattice-potential-fourier-coefficients>
 
@@ -105,7 +105,7 @@ See @superlattice-potential-phase for the band structure of a _symmetric_ superl
     The resulting band structure in the right figure now shows four bands in two pairs of mini bands.
     The gap between the mini bands is much smaller since it is "created" by the peak of the potential inside the double well.
     The gap between the pairs of the mini bands depends on the peak of the potential between the double wells which is much larger for all usual lattice configurations.
-  ]
+  ],
 ) <superlattice-band-structure>
 
 As determined by Bloch's theorem, the function $u_(n,q) (x)$ in the Bloch waves must have the same periodicity as the potential.
@@ -122,7 +122,7 @@ If the superlattice phase is however asymmetric, the symmetry between the two si
     The amplitude of the Bloch waves does not have a meaning here since they share the y axis with the potential and the energy bands despite having completely different units.
     Within the band pairs the Bloch waves are only different by the symmetry relative to the center of the unit cell (or double well).
     The (lower) odd bands are always symmetric with respect to the unit cell, whereas the (upper) even bands are antisymmetric with respect to the unit cell.
-  ]
+  ],
 ) <superlattice-bloch-waves>
 
 
@@ -145,8 +145,8 @@ If we only look at the lowest two bands with $n = {1, 2}$ in @superlattice-bloch
 In the two-particle basis where $phy.ket(L)$ and $phy.ket(R)$ describe a particle on the left site and right site respectively, the ground state $phy.ket(g)$ and the excited state $phy.ket(e)$ are
 
 $
-  phy.ket(g) = 1/sqrt(2) (phy.ket(L) + phy.ket(R)) "and"
-  phy.ket(e) = 1/sqrt(2) (phy.ket(L) - phy.ket(R))
+  phy.ket(g) = 1 / sqrt(2) (phy.ket(L) + phy.ket(R)) "and"
+  phy.ket(e) = 1 / sqrt(2) (phy.ket(L) - phy.ket(R))
 $ <superlattice-wannier-SoD-eigenstates>
 
 In the basis of the eigenstates $phy.ket(g)$ and $phy.ket(e)$ the single-site occupations are therefore
@@ -175,7 +175,7 @@ If the superlattice configuration is far away from any avoided crossings (compar
 
     - #text(red)[Add band structure plot with $E(phi)$ that shows the avoided crossings!]
     - #text(red)[Add doublewell eigenvector plot (at least for $phi = 0$?)]
-  ]
+  ],
 ) <superlattice-wannier-mixing>
 
 

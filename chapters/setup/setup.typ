@@ -14,7 +14,7 @@ To conclude the chapter I will present the hyperfine state manipulation capabili
 These are established techniques that are essential for the conduction of experiments inside the optical lattices.
 
 #include "k40.typ"
-#include "mot.typ" 
+#include "mot.typ"
 #include "ioffe.typ"
 #include "dipole.typ"
 #include "z-lattices.typ"

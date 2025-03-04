@@ -15,11 +15,11 @@ These measurements are done with a time-of-flight detection scheme that maps the
 When lattice modulation spectroscopy is used to characterize an optical lattice, measuring the lattice depth as a function of the position is a lot more useful than probing the band structure as a function of the quasimomentum $q$.
 Since optical lattices are (almost?) always created from gaussian beams, the lattice depth will change based on the (perpendicular) distance from the optical axis of the lattice beams.
 Measuring the lattice depth as a function of the position can therefore reveal the lattice depth in the center (on the optical axis), the width of the lattice and the position of the lattice.
-Without the spatial resolution, the inhomogeneity of the lattice depth will actually broaden the measured transition/resonance. 
+Without the spatial resolution, the inhomogeneity of the lattice depth will actually broaden the measured transition/resonance.
 But with the in-situ lattice modulation spectroscopy we can turn the (necessary) inhomogeneity of the lattices into a powerful calibration tool.
 
 At the beginning of this chapter I will show the measured results for all the (monochromatic) lattices introduced in @sec:setup-z-lattices and @sec:setup-xy-lattices.
 The next sections will then introduce the theoretical and technical details of the in-situ lattice modulation spectroscopy step by step.
-Towards the end of the chapter I will showcase how we use the measurement for the optimization of the alignment of the lattices, and I will present the results of the in-situ lattice modulation spectroscopy in the x-superlattice that was introduced in #text(red)[ref chapter 3]. 
+Towards the end of the chapter I will showcase how we use the measurement for the optimization of the alignment of the lattices, and I will present the results of the in-situ lattice modulation spectroscopy in the x-superlattice that was introduced in #text(red)[ref chapter 3].
 
 #include "results.typ"

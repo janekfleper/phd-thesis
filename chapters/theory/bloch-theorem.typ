@@ -31,7 +31,7 @@ $ <bloch-theorem-uq-fourier-series>
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
 Since the potential $V(x)$ is $pi$-periodic (in dimensionless coordinates), the periodicity of $u_q (x)$ can be directly seen in @bloch-theorem-uq-fourier-series.
 Shifting the position $x -> x + pi$ will reveal the additional factor $upright(e)^(upright(i) 2 m pi)$ in the sum which is always equal to $1$ for integer values of $m$.
-With the Fourier series of $u_q (x)$ the eigenfunctions @bloch-theorem-eigenfunctions can now be written as 
+With the Fourier series of $u_q (x)$ the eigenfunctions @bloch-theorem-eigenfunctions can now be written as
 
 $
   psi_q (x) = sum_m u_(q,m) cexp((q + 2m)x) .
@@ -53,15 +53,15 @@ We will now use the Fourier series of the eigenfunctions @bloch-theorem-psiq-fou
 
 $
   epsilon_n (q) psi_q (x)
-    &= epsilon_n (q) sum_m u_(q,m) cexp((q+2m)x) \
+  &= epsilon_n (q) sum_m u_(q,m) cexp((q+2m)x) \
   epsilon_n (q) psi_q (x)
-    &= accent(h, hat) psi_q (x) \
-    &= - phy.dv(,x,2) sum_m u_(q,m) cexp((q+2m)x)
-      + sum_m u_(q,m) cexp((q+2m)x) sum_m' c_m' cexp((q + 2m')x) \
-    &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
-      + sum_m sum_m' u_(q,m) c_m' cexp((q+2(m+m'))x) \
-    &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
-      + sum_m sum_m' u_(q,m-m') c_m' cexp((q+2m)x)
+  &= accent(h, hat) psi_q (x) \
+  &= - phy.dv(,x,2) sum_m u_(q,m) cexp((q+2m)x)
+  + sum_m u_(q,m) cexp((q+2m)x) sum_m' c_m' cexp((q + 2m')x) \
+  &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
+  + sum_m sum_m' u_(q,m) c_m' cexp((q+2(m+m'))x) \
+  &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
+  + sum_m sum_m' u_(q,m-m') c_m' cexp((q+2m)x)
 $ <bloch-theorem-psiq-schroedinger>
 
 In the last step I replaced $m -> m - m'$ to get the same complex exponential function as in all the other terms.
@@ -71,8 +71,8 @@ We can therefore discard the sums over $m$ to only look at the coupled equations
 
 $
   epsilon_n (q) u_(q,m)
-    &= (q + 2m)^2 u_(q,m) + sum_(m=-1)^1 c_m' u_(q,m-m') \
-    &= ((q + 2m)^2 + 1/2 v_0) u_(q,m) - 1/4 v_0 (u_(q,m-1) + u_(q,m+1))
+  &= (q + 2m)^2 u_(q,m) + sum_(m=-1)^1 c_m' u_(q,m-m') \
+  &= ((q + 2m)^2 + 1 / 2 v_0) u_(q,m) - 1 / 4 v_0 (u_(q,m-1) + u_(q,m+1))
 $ <bloch-theorem-uq-schroedinger>
 
 The coefficients $u_(q,m)$ are coupled by the Fourier series coefficients $c_(m eq.not 0)$ of the optical lattice potential.
@@ -87,13 +87,13 @@ The _band index_ $n$ starts at $1$ for the lowest band and increases in integer 
 For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function of the quasi-momentum $q$, and _band gaps_ appear between trapped bands where $epsilon_n (q) < v_0$.
 
 #figure(
-    image("../../figures/optical-lattices-energy-bands.png"),
-    caption: [
-        Energy bands in an optical lattice with depth $v_0 = #qty[??][Erec]$.
-        In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q #sym.slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.
-        The widths of the bands increase with the band index $n$ since the impact of the optical lattice potential on the particles is reduced.
-        For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
-    ]
+  image("../../figures/optical-lattices-energy-bands.png"),
+  caption: [
+    Energy bands in an optical lattice with depth $v_0 = #qty[??][Erec]$.
+    In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q #sym.slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.
+    The widths of the bands increase with the band index $n$ since the impact of the optical lattice potential on the particles is reduced.
+    For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
+  ],
 ) <bloch-theorem-energy-bands>
 
 We can compute the functions @bloch-theorem-uq-fourier-series using the Fourier coefficients from the eigenvectors corresponding to the eigenvalues $epsilon_n (q)$
