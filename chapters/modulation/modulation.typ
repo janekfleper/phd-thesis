@@ -23,3 +23,4 @@ The next sections will then introduce the theoretical and technical details of t
 Towards the end of the chapter I will showcase how we use the measurement for the optimization of the alignment of the lattices, and I will present the results of the in-situ lattice modulation spectroscopy in the x-superlattice that was introduced in #text(red)[ref chapter 3].
 
 #include "results.typ"
+#include "evaluation.typ"

@@ -73,7 +73,7 @@ The "outer" frequencies then only allow us to extract the beam waist and the pos
 In practice, only looking at the "center" frequency would introduce a significant uncertainty for the lattice depth since the resonances become really wide around the maximum of the parabola.
 In @fig:modulation-results-images any of the last three images only show a single resonance in the center with a varying depth/contrast.
 We therefore process all images of a lattice modulation frequency scan in a single fit to get the lattice depth, the lattice waist and the lattice position.
-The details of the evaluation are presented in #text(red)[ref section evaluation...].
+The details of the evaluation are presented in @sec:modulation-evaluation.
 
 #figure(
   image("../../figures/2025-01-28_calibration_images_thesis.png"),
