@@ -26,6 +26,16 @@ By integrating over multiple lattice planes we just have to find the alignment w
 While both parameters can have many local maxima, the combined maximum is always unambiguous.
 This alignment procedure is described in detail in #text(red)[ref modulation/alignment].
 
+
+=== Fit model description <ssec:modulation-evaluation-fit-model>
+
+#text(red)[Where to put this disclaimer?]
+The evaluation of the lattice modulation spectroscopy measurements uses a model that was developed based on empirical observations of many atom images.
+Using gaussian functions to model the atomic cloud and the resonances is not based on any theory, it is just the simplest way of getting reliable fit results.
+Only the function that actually describes the lattice depth as a function of the position uses the band structure theory to relate the modulation frequency to a local lattice depth.
+The fit parameters of the lattice depth, the lattice waist and the lattice position are therefore actually quantitative results.
+The other resonance fit parameters will only be considered from a qualititive point of view (if anything).
+
 #figure(
   image("../../figures/modulation_evaluation_fit_model.png"),
   caption: [
@@ -41,13 +51,6 @@ This alignment procedure is described in detail in #text(red)[ref modulation/ali
     A modulation frequency near the center of the lattice will significantly deplete the atom cloud, whereas smaller frequencies will only "draw" a thin resonance line into the optical density.
   ],
 ) <fig:modulation-evaluation-model>
-
-#text(red)[Where to put this disclaimer?]
-The evaluation of the lattice modulation spectroscopy measurements uses a model that was developed based on empirical observations of many atom images.
-Using gaussian functions to model the atomic cloud and the resonances is not based on any theory, it is just the simplest way of getting reliable fit results.
-Only the function that actually describes the lattice depth as a function of the position uses the band structure theory to relate the modulation frequency to a local lattice depth.
-The fit parameters of the lattice depth, the lattice waist and the lattice position are therefore actually quantitative results.
-The other resonance fit parameters will only be considered from a qualititive point of view (if anything).
 
 The function we use to evaluate the images @fig:modulation-results-images is the product of a gaussian envelope $n_0(x,y)$ for the optical density of the atom cloud and the "resonance" function $R(x, y, v_0, f)$ to represent the lattice modulation as a function of the lattice depth $v_0$ and the modulation frequency $f$.
 Since the "resonance" function is defined to be positive as shown in @fig:modulation-evaluation-model, it needs to be subtraced from the optical density $n_0(x,y)$.
