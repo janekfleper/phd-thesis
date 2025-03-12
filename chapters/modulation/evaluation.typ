@@ -93,12 +93,52 @@ The frequency as a function of $x$ and $y$ is then evaluated in a one-dimensiona
 $
   R(x, y, v_0, f; theta.alt, x_0, y_0, a, a_0, a_f, w_f) &= a_f dot exp(-2 ((f_(1->3)(v) - f) / w_f)^2) \
   "with" #h(1em)
-  v(x, y, v_0; theta.alt, x_0, y_0, a, a_0) &= v_0 dot a_0 dot (1 - a (y' - y_0)^2)
+  v_"gaussian" (x, y, v_0; theta.alt, x_0, y_0, a, a_0) &= v_0 dot a_0 dot exp(-a rho^2) \
+  "or" #h(1em)
+  v_"parabola" (x, y, v_0; theta.alt, x_0, y_0, a, a_0) &= v_0 dot a_0 dot (1 - a rho^2)
 $ <eq:modulation-evaluation-model-resonance>
 
 where the parameters $a_0$, $a$, $y_0$ (and $theta.alt$) describe the lattice depth $v(x, y)$.
-For the x1064-lattice propagating along the $x$-axis, the coordinate $y'$ and the center position $y_0$ are used since they describe the distance/position relative to the optical axis.
-Correspondingly, $x'$ and $x_0$ are used for the lattices z532, z1064 and y1064.
-The coordinates $x'$ or $y'$ are the ones transformed/rotated by $theta.alt$ to allow an arbitrary angle of the optical axis.
-In either case, the resonance function will not change along the optical axis.
-See @fig:modulation-results-images for a few examples of the resonance function during a scan of the modulation frequency $f$.
+The distance $rho$ from the optical axis is computed from the coordinates $x$ and $y$, the origin $(x_0, y_0)$ and the angle $theta.alt$.
+For the lattices propagating along the $x$-axis, the parameter $x_0$ is not varied during the fit.
+The same applies to the parameter $y_0$ for the lattices propagating along the $y$-axis.
+Since the lattice depth does not change along the optical axis, it does not make sense to define an "origin" in that direction.
+See @fig:modulation-evaluation-model for a few examples of the resonance function during a scan of the modulation frequency $f$.
+
+The fit parameter $a_0$ in @eq:modulation-evaluation-model-resonance will quantify the correction factor of the programmed lattice depth $v_0$.
+While it might look odd to have two "correlated" factors in the formula, this is much nicer to work with than a single factor that would include the lattice depth in the fit.
+The fit parameter $a$ describes the "inverse width" fo the parabola which can then be related to the gaussian waist of the optical lattice.
+If you look at the two different lattice depth functions in @eq:modulation-evaluation-model-resonance, you can see that the parabolic function is just the first order expansion of the gaussian function.
+The relation of the gaussian waist $w_0$ and the "inverse width" a is given by the equation
+
+$
+  w_0 = sqrt(2/a)
+$ <eq:modulation-evaluation-waist>
+
+// By multiplying the waist $w_0$ by the pixel size of the camera, we can get the waist in #unit[μm].
+
+#linebreak()
+
+To get an idea of the match between the lattice modulation spectroscopy signals in @fig:modulation-results-images and the lattice depth determined by the fit model @eq:modulation-evaluation-model we are going to look at a cut along the $y$-axis.
+The normalized optical density data in @fig:modulation-evaluation-parabola shows a good agreement with the two fit models.
+Since the data is only averaged near the center $x = 0$ of the lattice, it is still rather noisy.
+For the y1064-lattice and the z532-lattice this is is less of an issue and the resulting averaged images look much nicer #text(red)[make this a footnote? In any case ref the subsection later].
+The parabola and the gaussian function to model the lattice depth are both evaluated at $x = 0$ with the respective fit parameters $a$, $a_0$, $theta.alt$ and $y_0$.
+There are no differences visible between the two fit models, which is a good thing regarding the lattice depth factor $a_0$.
+This was also expected since a gaussian function can be approximated really well by a parabola around the center.
+We do however expect the resulting waists to be slightly different because the fit models must have a different value of the parameter $a$ if the functions visually overlap.
+
+#figure(
+  image("../../figures/modulation_evaluation_depth_parabola.png", width: 70%),
+  caption: [
+    Comparison of fitted lattice depth to atom densities.
+    The plot shows the normalized data from @fig:modulation-results-images.
+    The images are divided by the fitted gaussian envelope $n_0(x, y)$ to improve the visibility of the resonances.
+    The mean of the images in @fig:modulation-results-images is taken in the interval $x = [140, 160]$ to reduce the noise compared to just using a single pixel column at $x = 150$.
+    Due to the finite angle $theta.alt$, the interval has to be small to avoid "washing" out of the data.
+    The parabola in orange is evaluated at $x = 0$ with the lattice parameters $a$, $a_0$, $y_0$ and $theta.alt$ taken from the fit.
+    The black dashed line shows the equivalent function that resulted from the fit with a gaussian lattice depth.
+    There is no difference between the two fit results visible here, for the detailed comparison see @ssec:modulation-evaluation-error.
+  ],
+) <fig:modulation-evaluation-parabola>
+
