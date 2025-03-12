@@ -6,6 +6,9 @@
   #set text(red)
   - Compute the change of the lattice depth across the planes for the x532-lattice
   - Discuss error sources in depth? E.g. lattices moving from sequence to sequence?
+  - Add disclaimer that all units are in pixels unless otherwise noted/mentioned?
+  - Mention that only x1064-lattice is shown in detail. Other monochromatic lattices are briefly shown at the end of this section.
+  - Mention the elliptic mask that is used for the fitting.
 ]
 
 The goal of the evaluation procedure is to yield the parameters to describe the lattice depth $v(x, y)$ from a series of images as shown in @fig:modulation-results-images.
