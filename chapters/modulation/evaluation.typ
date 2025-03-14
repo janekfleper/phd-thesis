@@ -9,6 +9,8 @@
   - Add disclaimer that all units are in pixels unless otherwise noted/mentioned?
   - Mention that only x1064-lattice is shown in detail. Other monochromatic lattices are briefly shown at the end of this section.
   - Mention the elliptic mask that is used for the fitting.
+  - Just skip the entire parabolic fits? Just using the gaussian function from the start actually sounds easier?
+  - Compare the lattice parameters to any Basler images?
 ]
 
 The goal of the evaluation procedure is to yield the parameters to describe the lattice depth $v(x, y)$ from a series of images as shown in @fig:modulation-results-images.
@@ -170,18 +172,31 @@ We cannot differentiate whether this is caused a misalignment of the optical axe
 At modulation frequencies $>#qty[114][kHz]$ the waist deviates significantly.
 This is caused by the lack of two resonances as shown in @fig:modulation-results-images and @fig:modulation-evaluation-parabola.
 We will therefore only consider the waists up to #qty[114][kHz] to estimate the error.
-See the summarized results in #text(red)[ref table] for the actual mean waist(s) and the corresponding error(s).
+See the summarized results in @tab:modulation-evaluation-error for the actual mean waist(s) and the corresponding error(s).
 
 For the lattice depth $a_0$ there is no significant difference visible between the parabolic function and the gaussian function.
 The data points at #qty[112][kHz] show a relative deviation of $tilde #num[1e-3]$, and this is by far the maximum deviation across the measurement.
 While it appears that the global result deviates significantly from the mean of the individual results, this is not true when taking the errors of the individual parameters into account.
-The two outer frequencies have the largest error, the weighted averages will be much closer to the global values.
+The two outer frequencies have the largest error, the weighted averages will therefore be much closer to the global values.
 These weights are also implicitely included in the global fit.
 The lattice depth parameter $a_0$ will be most sensitive to the resonances that "move" the most as a function of the lattice depth (or the modulation frequency).
-Both "outer" resonance are not that sensitive to the lattice depth.
-At #qty[112][kHz] this is due to the (large) slope of the parabola and at #qty[115][kHz] the resonance is already "above" the actual lattice depth function.
-The actual results are again shown in #text(red)[ref table].
+Both the minimal resonance and the maximal resonance are not that sensitive to the lattice depth.
+At #qty[112][kHz] this is due to the (large) slope of the parabola and at #qty[115][kHz] the resonance is already "above" the actual lattice depth function, see @fig:modulation-evaluation-parabola.
+The actual results are again shown in @tab:modulation-evaluation-error.
 
+As mentioned in @fig:modulation-evaluation-error both the lattice position $y_0$ and the lattice angle $theta.alt$ did not show different results for the four evaluations of the fit.
+We therefore only have to consider the differences between the individual freuqencies/sequences.
+It looks like the position $y_0$ of the lattice is just changing randomly during the measurement between #qty[-1][px] and #qty[2][px].
+These are however expected fluctuations from sequence to sequence for our experiment.
+If we take into account that the pixel size in the atom plane is $~#qty[0.6][μm]$, we are talking about a total positional change of $<#qty[2][μm]$.
+Such a change of the position is not a contradiction to/with how constant the lattice depth is.
+With a lattice waist that is larger than the changes of the position by two orders of magnitude, we do not expect the lattice depth to be affected here.
+As long as the changes of the position are much smaller than the measured resonances, the global fit will just take the average position of the individual sequences and the other fit parameters will not be (negatively) impacted.
+The angle $theta.alt$ can also slightly vary from sequence to sequence since it depends on the position of the beam in front of the last lens #text(red)[ref any figure here?]
+#text(red)[Do we have any estimation here how much that would be? Can this explain the outlier?]
+Since the rotation is done at/around $x = 0$, a change of the angle will not affect the lattice depth.
+If an individual fit returns a different angle, the distance of the resonances at $x = 0$ will still be the same to get the best overlap between the fit model and the resonance signal.
+See @tab:modulation-evaluation-error for the averaged results of the position $y_0$ and the angle $theta.alt$ together with the other fit parameters.
 
 #figure(
   image("../../figures/modulation_evaluation_error_estimation.png", width: 80%),
@@ -192,7 +207,7 @@ The actual results are again shown in #text(red)[ref table].
     The errors from the global fit are all smaller than the width of the horizontal lines, displaying them in this figure is therefore not possible.
     Only the frequencies up to #qty[115][kHz] are shown here since the individual fits are not stable for the higher frequencies.
     Looking at the lattice depth in @fig:modulation-evaluation-parabola we can see that even #qty[115][kHz] is already above the "maximum" frequency.
-    Even the data at #qty[114.5][kHz] already only uses a single data point since there is a "joint" resonance in the center of the cloud.
+    The data at #qty[114.5][kHz] already only uses a single data point since there is a "joint" resonance in the center of the cloud.
     For the lattice position $y_0$ and the lattice angle $theta.alt$, the four individual fits per image returned perfectly overlapping results.
     The figure therefore only shows the data points once in a "neutral" color.
     For the gaussian waist (which is used instead of the fit parameter $a$) and the lattice depth $a_0$, the parabolic function and the gaussian function show slightly different results.
@@ -200,3 +215,48 @@ The actual results are again shown in #text(red)[ref table].
     - #text(red)[Or rather show the position $y_0$ in μm as well?]
   ],
 ) <fig:modulation-evaluation-error>
+
+
+// make this a global function in header.typ?
+#let table-stroke(x, y, stroke: none) = {
+  if (y == 0) { (bottom: stroke) }
+  if (x == 0) { (right: stroke) }
+}
+
+#figure(
+  table(
+    columns: 5,
+    stroke: table-stroke.with(stroke: black + 0.5pt),
+    table.header(
+      [],
+      $"Waist" w_0 slash#unit[μm]$,
+      $"Lattice depth" a_0$,
+      $"Position" y_0 slash#unit[px]$,
+      $"Angle" theta.alt slash degree$,
+    ),
+
+    [Gaussian], num[142(4)], num[0.9852(12)], num[0.6(9)], num[-5.47(17)],
+    [Parabola], num[144(4)], num[0.9851(13)], num[0.6(9)], num[-5.47(17)],
+  ),
+  caption: [
+    Comparison of the fit results of the different lattice depth models.
+    The two rows show the parameters resulting from the different models in @eq:modulation-evaluation-model-resonance.
+    For the waist only the data with $f < #qty[115][kHz]$ is taken.
+    All data points in @fig:modulation-evaluation-error are used for the other three averages.
+    The averages and the standard deviations (the uncertainties) are computed with weights based on the errors of the individual fits.
+    The absolute values of the fit errors are not taken into account.
+  ],
+) <tab:modulation-evaluation-error>
+
+From the values presented in @tab:modulation-evaluation-error we can draw the conclusion that the depth $a_0$ of the x1064-lattice can be measured with a relative error of $~#num[1e-3]$ regardless for both a parabolic function and a gaussian function to model the lattice depth.
+The position $y_0$ and the angle $theta.alt$ yield the same result for the two model functions as well.
+The waist $w_0$ is the only parameter with a measurable difference between the two model functions, which is also expected since the parabola only takes the leading order of the gaussian beam profile into account.
+While the difference of the waist between the two functions is still smaller than error we obtained from the individual fits, it is nevertheless just better to use the gaussian function to model the lattice depth.
+Since both functions require the same number of fit parameters, we do not actually gain anything by using a parabola as the approximation of the lattice depth.
+The (relatively) large errors show us that the waist $w_0$ is the least accurate parameter we can extract from the in-situ lattice modulation measurements.
+This is understandable if we take into account that the atoms only occupy the lattice up to $~1 slash 3$ of the waist.
+The fit/measurement would be a lot more accurate if we could measure the local lattice up do a greater radius $rho$.
+On the other hand it is also completely fine to have an error of #qty[4][μm] for the waist since the atoms are only occupying the center up the radius where we can run this measurement.
+The waist is therefore not as important as the lattice depth $a_0$ which directly affects the region of the highest atom density in the center of the lattice.
+
+#text(red)[Compare values of waists to the trap frequency measurements in the x-superlattice setup chapter]
