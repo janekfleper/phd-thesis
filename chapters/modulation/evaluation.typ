@@ -260,3 +260,65 @@ On the other hand it is also completely fine to have an error of #qty[4][μm] fo
 The waist is therefore not as important as the lattice depth $a_0$ which directly affects the region of the highest atom density in the center of the lattice.
 
 #text(red)[Compare values of waists to the trap frequency measurements in the x-superlattice setup chapter]
+
+
+#pagebreak()
+
+=== Other monochromatic lattices <ssec:modulation-evaluation-other>
+
+#[
+  #set text(red)
+  - Add any actual images such as @fig:modulation-results-images here?
+
+]
+We use the same evaluation as introduced in @ssec:modulation-evaluation-fit-model for the y1064-lattice and the z532-lattice.
+The main difference compared to the x1064-lattice is the direction of the propagation of the lattice beams and therefore the orientation of the lattice depth model $v(x, y)$.
+For the y1064-lattice the forward-propagating beam is (almost) perfectly on the $y$-axis, we therefore expect the lattice depth to change as a function of the position $x$.
+The z532-lattice is slightly more complicated due to the shallow-angle setup.
+While the lattice vector $Delta phy.vb(k)$ points along the $z$-axis, the beams are both propagating in the $y z$-plane.
+We therefore "see" the actual waist of $w_0 approx #qty[120][μm]$ along the $x$-axis, but the "effective" waist along the $y$-axis is reduced due to the angle $alpha approx 14.5degree$ relative to the $x y$-plane, see @sec:setup-z-lattices #text(red)[ref the figure here instead?].
+The effective waist along the $y$-axis amounts to $w_0 slash tan(alpha) approx #qty[450][μm]$.
+Since the "inverse width" parameter $a$ of the lattice depth scales quadratically with the waist according to @eq:modulation-evaluation-waist, we expect the changes of the lattice depth to be $~14$ times smaller compared to the changes of the lattice depth along the $x$-axis.
+While it would be possible to include such an aspect ratio in the lattice depth model @eq:modulation-evaluation-model-resonance, we cannot resolve the ellipticity in the resonance lines if the z532-lattice is properly aligned.
+#text(red)[Mention signals that directly show misalignment of the z532-lattice?]
+We will therefore only include a variation of the lattice depth along the $x$-axis in the evaluation.
+
+The error estimation introduced in @ssec:modulation-evaluation-error can be applied to the z532-lattice and the y1064-lattice as well.
+We will not look at the detailed comparison of the global fit to the individual fits again, we just use the same procedure to compute the fit parameters and corresponding errors.
+
+#figure(
+  table(
+    columns: 5,
+    stroke: table-stroke.with(stroke: black + 0.5pt),
+    table.header(
+      [],
+      $"Waist" w_0 slash#unit[μm]$,
+      $"Lattice depth" a_0$,
+      $"Position" x_0 slash#unit[px]$,
+      $"Angle" theta.alt slash degree$,
+    ),
+
+    [z532], num[113.1(8)], num[0.9549(11)], num[0.9(5)], table.cell(align: right, num[0.0(6)]),
+    [y1064], num[167(7)], num[0.9888(23)], num[1.3(5)], table.cell(align: right, num[-0.5(4)]),
+  ),
+  caption: [
+    Comparison of the fit results of the different lattice depth models.
+    The two rows show the parameters resulting from the different models in @eq:modulation-evaluation-model-resonance.
+    For the waist of the z532-lattice only the data with $f < #qty[41.5][kHz]$ is taken, and for the waist of the y1064-lattice only the data with $f < #qty[115][kHz]$.
+    The averages of the other three parameters are computed for $f < #qty[42][kHz]$ and $f < #qty[117][kHz]$ respectively
+    The averages and the standard deviations (the uncertainties) are computed with weights based on the errors of the individual fits.
+    The absolute values of the fit errors are not taken into account.
+  ],
+) <tab:modulation-evaluation-error-other>
+
+#figure(
+  image("../../figures/modulation_evaluation_depth_parabola_y1064_and_z532.png"),
+  caption: [
+    Fitted lattice depth of z532-lattice at $v_0 = #qty[110][Erec]$ and y1064-lattice at $v_0 = #qty[55][Erec]$.
+    The two axes show the equivalent data of @fig:modulation-evaluation-parabola for the x1064-lattice.
+    The optical densities are normalized by the corresponding results of the gaussian envelope $n_0(x, y)$.
+    Since the angle $theta.alt$ of the (effective) optical axes relative to the $y-$axis is negligible, the mean of the images is taken in the interval $y = [120, 180]$.
+    The orange line shows the resulting resonance frequency for the transition $1 -> 3$ corresponding to the fitted lattice depth $v_"gaussian"(x, y)$ at $y = 150$ (or rather $y = 0$?).
+    - #text(red)[Include colorbar between the two axes?]
+  ],
+) <fig:modulation-evaluation-comparison-other>
