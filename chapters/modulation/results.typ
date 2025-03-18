@@ -6,6 +6,8 @@
   #set text(red)
   - Add logarithmic plot for band width as a function of lattice depth?
   - Add sketch for parity argument. Show harmonic oscillator and lattice?
+  - Mention depth of perpendicular lattice with reference to coupling section.
+  - Mention modulation amplitude and length of modulation? With reference to the optimization section.
 ]
 
 There are different approaches available to modulate an optical lattice.

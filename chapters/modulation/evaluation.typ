@@ -141,6 +141,7 @@ We do however expect the resulting waists to be slightly different because the f
     The parabola in orange is evaluated at $x = 0$ with the lattice parameters $a$, $a_0$, $y_0$ and $theta.alt$ taken from the fit.
     The black dashed line shows the equivalent function that resulted from the fit with a gaussian lattice depth.
     There is no difference between the two fit results visible here, for the detailed comparison see @ssec:modulation-evaluation-error.
+    - #text(red)[Show the lattice depth here as the y-axis on the right]
   ],
 ) <fig:modulation-evaluation-parabola>
 
@@ -269,7 +270,9 @@ The waist is therefore not as important as the lattice depth $a_0$ which directl
 #[
   #set text(red)
   - Add any actual images such as @fig:modulation-results-images here?
-
+  - Add an "interpretation" of the fit errors in @tab:modulation-evaluation-error-other
+    - Mention better waist resolution because of the shape of the atom cloud
+  - Add drawing of all measured angles relative to glass cell/camera frame?
 ]
 We use the same evaluation as introduced in @ssec:modulation-evaluation-fit-model for the y1064-lattice and the z532-lattice.
 The main difference compared to the x1064-lattice is the direction of the propagation of the lattice beams and therefore the orientation of the lattice depth model $v(x, y)$.
@@ -305,7 +308,7 @@ We will not look at the detailed comparison of the global fit to the individual 
     Comparison of the fit results of the different lattice depth models.
     The two rows show the parameters resulting from the different models in @eq:modulation-evaluation-model-resonance.
     For the waist of the z532-lattice only the data with $f < #qty[41.5][kHz]$ is taken, and for the waist of the y1064-lattice only the data with $f < #qty[115][kHz]$.
-    The averages of the other three parameters are computed for $f < #qty[42][kHz]$ and $f < #qty[117][kHz]$ respectively
+    The averages of the other three parameters are computed for $f < #qty[42][kHz]$ and $f < #qty[117][kHz]$ respectively.
     The averages and the standard deviations (the uncertainties) are computed with weights based on the errors of the individual fits.
     The absolute values of the fit errors are not taken into account.
   ],
