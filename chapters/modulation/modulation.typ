@@ -24,3 +24,4 @@ Towards the end of the chapter I will showcase how we use the measurement for th
 
 #include "results.typ"
 #include "evaluation.typ"
+#include "loss.typ"
