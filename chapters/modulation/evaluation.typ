@@ -305,7 +305,7 @@ We will not look at the detailed comparison of the global fit to the individual 
     [y1064], num[167(7)], num[0.9888(23)], num[1.3(5)], table.cell(align: right, num[-0.5(4)]),
   ),
   caption: [
-    Comparison of the fit results of the different lattice depth models.
+    Comparison of the fit results of the other lattices.
     The two rows show the parameters resulting from the different models in @eq:modulation-evaluation-model-resonance.
     For the waist of the z532-lattice only the data with $f < #qty[41.5][kHz]$ is taken, and for the waist of the y1064-lattice only the data with $f < #qty[115][kHz]$.
     The averages of the other three parameters are computed for $f < #qty[42][kHz]$ and $f < #qty[117][kHz]$ respectively.
