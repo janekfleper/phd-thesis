@@ -138,7 +138,7 @@ This cannot be explained by the one-dimensional band structure that we have cons
 If anything, we would have expected a maximal resonance amplitude at the upper boundary of the band (transition) where the (conserved) quasi-momentum is $q = 0$.
 To understand the additional gap in the band $n = 6$ we have to look at the two-dimensional band structure.
 Since the x1064-lattice and the y1064-lattice are not perfectly perpendicular, the band structures are not perfectly separated either.
-This coupling between the in-plane lattices is discussed in detail in #text(red)[ref (next?) section] and the gap in the band $n = 6$ is reproduced by the band structure in #text(red)[ref figure or subsection here...].
+This coupling between the (in-plane) lattices is discussed in detail in @sec:modulation-coupled and the gap in the band $n = 6$ is reproduced by the band structure in @fig:modulation-coupled-two-tone-result .
 
 #figure(
   image("../../figures/2025-01-27_two-tone_PH_x1064_result_80Erec.png"),

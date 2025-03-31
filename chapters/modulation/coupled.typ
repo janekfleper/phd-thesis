@@ -59,7 +59,7 @@ If the atoms can tunnel over a significant distance during the lattice modulatio
 #text(red)[
   Look at $t$ as a function of $v_y$ (in a notebook).
   Maybe $v_y = #qty[40][Erec]$ is actually the "ideal" configuration?
-  According to the measurements from 2024-10-25, the resonacne lines are straight up to #qty[36][Erec]. This also agrees with the different evalutions shown in @fig:modulation-coupled-band-31.
+  According to the measurements from 2024-10-25, the resonance lines are straight up to #qty[36][Erec]. This also agrees with the different evalutions shown in @fig:modulation-coupled-band-31.
 ]
 
 #figure(
@@ -92,3 +92,92 @@ For the evaluation it would be best to eliminate the additional complexity of no
 If we have to apply a mask to only select the "straight" portion of the resonances, we significantly reduce the data we use from each atom image.
 And an evaluation with the coupled band structure theory is not practical because of the complexity of the theory and fit compared to the one-dimensional band structure theory.
 The best approach is therefore to use the highest lattice depth $v_y$ that has a negligible contribution of the uncoupled band $"n13"$ in the coupled band $psi_c$.
+
+
+=== Two-tone modulation <ssec:modulation-coupled-two-tone>
+
+#[
+  #set text(red)
+  - Move figure @fig:modulation-loss-recovery and the corresponding text here?
+  - And then move everything into its own section?
+  - Discuss whether $f_1 + f_2$ or $f_1 -> f_2$ is better?
+  - Mention that only band $(6, 1)$ is discussed. Band $(7, 1)$ will be equivalent...
+  - Mention that the lattice depth compensation is already applied here...
+]
+
+We already confirmed in @sec:modulation-loss and specifically in @fig:modulation-loss-recovery that a second modulation frequency can recover the in-situ signal.
+The band structures from the one-dimensional theory could however not explain the additional gaps we could see inside of the untrapped bands.
+After understanding the coupling of the bands due to the finite angle $alpha$ we could maybe explain such a gap by a mixture of the band $(6, 1)$ with the bands $(5, 2)$ or $(4, 3)$?
+In @fig:modulation-coupled-band-31 the widths of the bands were much smaller than the coupling between the bands.
+We could therefore directly look at the mean energy of each band.
+When dealing with the highly excited bands in this subsection, this approach is no longer valid.
+We therefore have to look at the coupled band structure and compare it to the uncoupled one.
+We are doing this again for different depths of the y1064-lattice around $v_y = #qty[30][Erec]$ to confirm that the measurements accurately represent/confirm the changes in the coupled band structure.
+In addition we want to find the optimal configuration where the additional band gaps do not interfere with the two-tone lattice modulation.
+
+When we compare the uncoupled band structure to the coupled one in @fig:modulation-coupled-two-tone-theory, we can indeed see that the bands $(5, 2)$, $(4, 3)$ and $(3, 4)$ are causing the new band gaps.
+Since the coupling strength decreases with the "band index distance", the band gap from/with the band $(3, 4)$ is tiny and we are not able to resolve it during the two-tone lattice modulation.
+#text(red)[Is the band gap just proportional to the width of the coupling band?]
+Initially at $v_y = #qty[25][Erec]$ only the band $(5, 2)$ overlaps with our target band $(6, 1)$, causing a single gap to open up.
+The gap caused/created by the band $(4, 3)$ only becomes prominent at $v_y = #qty[35][Erec]$, where it splits the band $(6, 1)$ roughly in half.
+At $v_y = #qty[40][Erec]$ the uncoupled band structure suggests that there is a three-way coupling similar to @fig:modulation-coupled-band-31.
+Since the bands $(5, 2)$ and $(4, 3)$ also couple with eachother, the two gaps in the band $(6, 1)$ are further apart than one would expect from the uncoupled band structure. are further apart than one would expect from the uncoupled band structure.
+
+#figure(
+  image("../../figures/2025-01-29_two-tone_PH_x1064_bandstructure_70Erec.png", width: 85%),
+  caption: [
+    Coupled band structure around the excited band $(6, 1)$.
+    The axes show the transition frequencies relative to the band $(3, 1)$ since this is the initial state of the atoms after the modulation with the frequency $f_(1 -> 3)$.
+    The "slope" of the uncoupled bands is increasing $prop (n_y - 1)$ since the reference band has $n_y = 1$.
+
+    - #text(red)[Move this into one row similar to @fig:modulation-coupled-band-31?]
+    - #text(red)[Also include $v_y = #qty[20][Erec]$ to make it symmetric around #qty[30][Erec]?]
+    - #text(red)[Completely hide bands that are not relevant for the band gaps?]
+    - #text(red)[Also color the band $(3, 4)$ that creates the band gap at #qty[40][Erec]?]
+  ],
+) <fig:modulation-coupled-two-tone-theory>
+
+The positions/frequencies of the band gaps in @fig:modulation-coupled-two-tone-theory depend on the lattice depth $v_y$.
+We can use this signal to confirm that the band gap we initially observed in @fig:modulation-loss-recovery is actually caused by the coupling to the band $(5, 2)$.
+Furthermore we can try to find an optimal lattice depth configuration where the additional band gaps would not interfere with the two-tone lattice modulation.
+Ideally we want to use a single secondary frequency $f_2$ to cover the entire scan of the principal frequency $f_(1->3)$ across the atom cloud.
+If a specific frequency $f_2$ is required for each principle frequency, the two-tone modulation scheme would not be practical.
+
+#figure(
+  image("../../figures/2025-01-29_two-tone_PH_x1064_result_70Erec.png"),
+  caption: [
+    Band gaps in the two-tone lattice modulation scheme.
+    The axes in the first row show the uncoupled bands $(6, 1)$ and $(7, 1)$ in black and the coupled bands in solid colors.
+    All other/irrelevant bands are hidden on purpose.
+    The x-axis shows the secondary modulation frequency $f_2$ from the principal modulation frequency $f_(1->3)$ up to the lower end of the band $(7, 1)$.
+    The colored areas mark the "valid" frequency intervals according to the coupled band structure.
+    We can clearly see the additional band gaps inside the "original" band $(6, 1)$.
+    The data points show the resonance amplitudes $"r13fa"$ from invididual two-tone modulation measurements.
+    Note that a large amplitude corresponds to a significant/strong loss of atoms.
+
+    - #text(red)[Add transition $1 -> 3$ here in solid black?]
+    - #text(red)[Use #qty[75][Erec] for this measurement.]
+  ],
+) <fig:modulation-coupled-two-tone-result>
+
+
+For this measurement of the band gaps we use the same approach as in/for @fig:modulation-loss-recovery.
+We scan $f_(1->3)$ across the atom cloud once to get a reference measurement.
+During the scans of the lattice depth $v_y$ and the secondary modulation frequency $f_2$ we will then only measure a single frequency $f_(1->3)$ and use the fit parameters $a$ and $a_0$ from the reference measurement.
+To find and understand the band gaps, we are only interested in the resonance parameters $"r13fa"$ (and $"r13fw"$) anyway.
+
+We can see a nice/perfect match of the data points in @fig:modulation-coupled-two-tone-result to the theoretical band gaps.
+The resonance amplitudes are decreased by a factor $2$ in the "coupled" band gaps as well as the "uncoupled" band gaps.
+In terms of the efficiency of the two-tone lattice modulation we therefore have to be equally careful to avoid the different kinds of band gaps.
+
+#text(red)[Completely rewrite this when the data with $v_y = #qty[75][Erec]$ is used!]
+For each lattice depth $v_y$ there is a gapless interval of $~ #qty[10][kHz]$ that can be used for the two-tone lattice modulation.
+If we use the recommended lattice depth $v_y = #qty[35][Erec]$ from the earlier considerations in @sec:modulation-coupled regarding the coupling of the band $(3, 1)$ and the tunneling along the y1064-lattice, the most suitable secondary modulation frequency would be $f_2 approx #qty[135][kHz]$.
+There is only a tiny band gap that ever crosses that frequency such that we can expect a uniform resonance amplitude $"r13fa"$.
+
+#text(red)[
+  Add a plot here that shows the (mean) band gaps in an actual scan of $v_y$?
+  This would not require $q$-resolution and the figure could look similar to @fig:modulation-coupled-band-31.
+  How could I also include the scan of $v_x$ that naturally happens during the in-situ lattice modulation?
+  Also show an actual measurement here that confirms these parameters?
+]
