@@ -13,4 +13,5 @@
 
 #include "chapters/theory/theory.typ"
 #include "chapters/setup/setup.typ"
+#include "chapters/superlattice/superlattice.typ"
 #include "chapters/modulation/modulation.typ"
