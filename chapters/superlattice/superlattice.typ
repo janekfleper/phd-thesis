@@ -21,3 +21,4 @@ The so-called feed-forward is introduced in detail in #text(red)[ref section fee
 
 #include "constraints.typ"
 #include "x1064.typ"
+#include "x532.typ"
