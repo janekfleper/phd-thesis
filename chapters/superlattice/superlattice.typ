@@ -18,3 +18,5 @@ We also thought about a tube-like/tube-shaped enclosure for the optical path bet
 Due to spatial constraints this is/was however not possible.
 Our approach therefore uses environmental sensors to "predict" the changes of the phase as good as possible.
 The so-called feed-forward is introduced in detail in #text(red)[ref section feedforward].
+
+#include "constraints.typ"
