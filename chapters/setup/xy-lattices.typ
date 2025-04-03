@@ -18,7 +18,7 @@ The intersection angle is $theta approx 85^degree$ in the $x y$-plane, which has
 Both infrared in-plane lattices use gaussian beams with an $1 slash e^2$ waist of $~#qty[150][μm]$ and the retro-reflecting paths use a #qty[250][mm] lens in (a) $4f$-configuration to "mode" match the retro-reflected beam.
 The relative (power) amplitudes of the retro-reflected beams compared to the forward-propagating beams are $gamma_"x1064" approx #num[0.8]$ and $gamma_"y1064" approx #num[0.8]$. #text(red)[Use the correct values here!]
 This is relevant for the running wave component that leads to an additional confinement #text(red)[ref sec:mu-map].
-The optical setup of the infrared x-lattice is shown in detail in #text(red)[ref thermal lensing chapter] where I will present the signifcant upgrades necessary for the stability of the lattice.
+The optical setup of the infrared x-lattice is shown in detail in @sec:superlattice-x1064 where I will present the signifcant upgrades necessary for the stability of the lattice.
 For the optical setup of the infrared y-lattice see #text(red)[ref Eugenio + Luke or even earlier?]
 We can typically achieve lattice depths of up to #qty[90][_E_#sub[rec]] with the infrared in-plane lattices, although more than #qty[60][_E_#sub[rec]] are rarely required.
 
