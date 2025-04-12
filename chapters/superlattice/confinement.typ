@@ -7,6 +7,8 @@
   - Introduce the running-wave component before this section/chapter? Maybe in the setup section in this chapter?
   - Where should the actual values for the running-wave components be mentioned?
   - Find a good letter for the radial potential!
+  - Move the long calculation for the general case to the appendix.
+  - Just expand around $x_0 = 0$ at the end? Does the "guess" really matter?
 ]
 
 While we are only using the x-superlattice for one-dimensional systems with a frozen y1064-lattice in this thesis, it is still interesting to investigate the "radial" properties of the x-superlattice.
@@ -118,5 +120,75 @@ In that case discussing the radial confinement in the upper well is not necessar
 Due to the much larger prefactor of $v_s (rho)$ we never reached/used such a configuration with the superlattice in the work for this thesis.
 
 The radial potential $v_- (rho)$ will be anticonfining in most cases because the short lattice now dominates.
-Since both beams share the retro-path, we have similar running-wave components and the local term will already be anticonfining on its own.
+Since both beams share the retro-path, we have similar running-wave components and the local term can already be anticonfining on its own.
 The zero-point term will then only make the anticonfinement even stronger.
+
+For all configurations between $v_+ (rho)$ and $v_- (rho)$ we have to compute the radial potential as a function of the phase $phi$.
+Compared to the two special configurations the (mean) position of the atoms in/on the sites of the superlattice is slightly shifted from the intensity minima of the short lattice.
+This shift has relevant implications on the local term and it will also be the position where we compute/evaluate the zero-point term.
+To simplify the (full) Taylor expansion of @eq:superlattice-confinement-potential we are going to shift the $x$-axis such that a minimum of the short lattice is located at $x = 0$.
+Since the radial potential is a single-well effect, this is just a much nicer frame of reference.
+The positional shift $delta x$ will then just "be evaluated" relative to the origin.
+Rewrite the potential @eq:superlattice-confinement-potential to introduce the shift by $a/4 = pi / 4$ to the $x$-axis.
+The variable $rho$ for the radius in the $x y$-plane is omitted for the sake of readability.
+
+$
+  v(x) &=
+  4 v_s [R_s + cos^2(2x)] - v_l [R_l + cos^2(x + phi)] \
+  &= 4 v_s [R_s + 1 / 2 + 1 / 2 cos(4x)] - v_l [R_l + 1 / 2 + 1 / 2 cos(2x + 2 phi)] \
+  &std.text(std.red, attach(=, t: ?)) 4 v_s [R_s + 1 / 2 + 1 / 2 cos(4x - pi)] - v_l [R_l + 1 / 2 + 1 / 2 cos(2x - pi/2 +  2 phi)] \
+  &= 4 v_s [R_s + 1 / 2 - 1 / 2 cos(4x)] - v_l [R_l + 1 / 2 + 1 / 2 sin(2x + 2 phi)] \
+  &= 4 v_s (R_s + 1 / 2) - v_l (R_l + 1 / 2) - 2v_s cos(4x) - 1 / 2 v_l sin(2x + 2 phi)
+$ <eq:superlattice-confinement-potential-shifted>
+
+We expand the last/latter two terms around the minimum $x_0$ up to the third order of $(x - x_0)$ to find the potential shift $delta x$ and the quadratic coefficient/term for the harmonic oscillator energy.
+For the radial potential $v_+ (rho)$ and $v_- (rho)$ the odd expansion orders vanished for both individual lattices, effectively only leaving the quadratic order.
+This is no longer the case for the intermediate phases $phi = (-pi/4, pi/4)$.
+Around the symmetric phase $phi = 0$ the odd expansion orders of the long lattice potential will even be the dominant ones since the atoms are located on the "slope" of the potential.
+
+$
+  cos(4x)|_(x = x_0) =
+  &cos(4 x_0)
+  - 4 sin(4 x_0) dot (x - x_0)
+  - 8 cos(4 x_0) dot (x - x_0)^2 \
+  &+ 32 / 3 sin(4 x_0) dot (x - x_0)^3
+  + cal(O)(x - x_0)^4 \
+  sin(2x + 2 phi)|_(x = x_0) =
+  &sin(2 x_0 + 2 phi)
+  + 2 cos(2 x_0 + 2 phi) dot (x - x_0) \
+  &- 2 sin(2 x_0 + 2 phi) dot (x - x_0)^2
+  - 4 / 3 cos(2 x_0 + 2 phi) dot (x - x_0)^3
+  + cal(O)(x - x_0)^4
+$ <eq:superlattice-confinement-potential-taylor-terms>
+
+If we plug these expansions into the (shifted) potential @eq:superlattice-confinement-potential-shifted, we will get the full superlattice potential up to the third expansion order:
+
+$
+  v(x) &= a_0 + a_1 dot (x - x_0) + a_2 dot (x - x_0)^2 + a_3 dot (x - x_0)^3 + cal(O)(x - x_0)^4 \
+  a_0 &= 4 v_s (R_s + 1 / 2 - 1 / 2 cos(4 x_0)) - v_l (R_l + 1 / 2 + 1 / 2 sin(2 x_0 + 2 phi)) \
+  a_1 &= 8 v_s sin(4 x_0) - v_l cos(2 x_0 + 2 phi) \
+  a_2 &= 16 v_s cos(4 x_0) + v_l sin(2 x_0 + 2 phi) \
+  a_3 &= -64 / 3 v_s sin(4 x_0) + 2 / 3 v_l cos(2 x_0 + 2 phi)
+$ <eq:superlattice-confinement-potential-taylor>
+
+We can now find the minimum of the potential $v(x)$ to get the position/shift $delta x$ from the origin.
+This shift will also be plugged into the polynomial coefficient $a_2$ to compute the harmonic oscillator approximation for the zero-point term.
+Note that we recover the expression in @eq:superlattice-confinement-plus-zero-point for the coefficient $a_2$ with $delta x = 0$ and $phi = 0$.
+Find the minimum of @eq:superlattice-confinement-potential-taylor by computing the root(s) of the derivative
+
+$
+  phy.pdv(, x) v(x) = a_1 + a_2 / 2 dot (x - x_0) + a_3 / 3 dot (x - x_0)^2 attach(=, t: !) 0
+$ <eq:superlattice-confinement-potential-taylor-derivative>
+
+When we select the real/actual/physical root for the possible superlattice configurations/phases, we obtain a piece-wise function for the shift $delta x$:
+
+$
+  delta x = cases(
+    x_0 - (3 a_2) / (4 a_3) - sqrt(((3 a_2) / (4 a_3))^2 - 3 a_1 / a_3) quad &"if" 0 <= |phi| < pi/4,
+    x_0 &"if" |phi| = pi/4,
+    x_0 - (3 a_2) / (4 a_3) + sqrt(((3 a_2) / (4 a_3))^2 - 3 a_1 / a_3) quad &"if" pi/4 < |phi| < pi/2,
+  )
+$
+
+Per our convention for the superlattice potential @superlattice-potential-dimensionless the phase $phi$ is defined $mod pi$.
+#text(red)[How does this work here for the "upper" well then?]
