@@ -9,6 +9,7 @@
   - Find a good letter for the radial potential!
   - Move the long calculation for the general case to the appendix.
   - Just expand around $x_0 = 0$ at the end? Does the "guess" really matter?
+  - Do a proper comparison of BPO position and harmonic approximation.
 ]
 
 While we are only using the x-superlattice for one-dimensional systems with a frozen y1064-lattice in this thesis, it is still interesting to investigate the "radial" properties of the x-superlattice.
@@ -37,9 +38,9 @@ $
   v(x, rho) = 4 v_s (rho) [R_s + cos^2(2x)] - v_l (rho) [R_l + cos^2(x + phi)]
 $ <eq:superlattice-confinement-potential>
 
-Since we are only occupying a few lattices planes, the change of the lattice depths along the $z$-axis can be neglected for the radial confinement/potential #text(red)[should this be a footnote?]
+Since the atoms are only occupying a few vertical lattices planes, the change of the lattice depths along the $z$-axis can be neglected for the radial confinement/potential #text(red)[should this be a footnote?]
 The running-wave component depends on the intensity imbalance between the interfering beams.
-In a retro-reflected lattice configuration we can express this as $I_"retro" = gamma dot I_"forward"$ where the intensity of the retro-propagating beam is reduced to due losses in the retro-path.
+In a retro-reflected lattice configuration we can express this as $I_"retro" = gamma dot I_"forward"$ where the intensity of the retro-propagating beam is reduced due to losses in the retro-path.
 
 $
   R = (1 - sqrt(gamma))^2 / (4 sqrt(gamma))
@@ -48,12 +49,20 @@ $ <eq:superlattice-confinement-running-wave>
 Without losses the coefficient $gamma$ would be $1$ and the running-wave component would be $R = 0$ since all the intensity of the (interfering) beams contributes to the interference term.
 @eq:superlattice-confinement-potential will then simplify/reduce to the "theoretical" form @superlattice-potential-dimensionless.
 
+#figure(
+  image("../../figures/radial_potential_vplus_vminus.png", width: 70%),
+  caption: [
+    Simple phase configurations for the radial potential.
+    The figure on the left shows the potential $v_+$ where the confinement of the long lattice and the short lattice is effectively "added".
+    The figure on the right shows the potential $v_-$ where the confinement of the long lattice is effectively "subtracted" from the confinement of the short lattice.
+    - #text(red)[Merge this into one figure? And then reference the "lower" and "upper" well?]
+  ],
+) <fig:superlattice-confinement-vplus-vminus>
+
 #text(red)[
   Directly combine the contributing terms with the expansion @eq:superlattice-confinement-plus-taylor? The constant term in that expression is just @eq:superlattice-confinement-plus-local...
 ]
-To understand the implications of the superlattice potential on the radial potential we will first look at the two special cases where the local potential is either the sum or the difference of the individual lattices.
-#text(red)[reference a local figure here!]
-#text(red)[use general phase $plus.minus pi \/ 4$?]
+To understand the implications of the superlattice potential on the radial potential we will first look at the two special cases where the local potential is either the sum or the difference of the individual lattices, see @fig:superlattice-confinement-vplus-vminus.
 Both cases require the antisymmetric superlattice configuration (as introduced in) @superlattice-potential-phase with the phase $phi = +pi \/ 4$.
 The "lower" well in that case is located at $x = -pi \/ 4$, simplifying @eq:superlattice-confinement-potential to
 
