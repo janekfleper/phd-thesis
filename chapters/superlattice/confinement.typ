@@ -177,16 +177,16 @@ Note that we recover the expression in @eq:superlattice-confinement-plus-zero-po
 Find the minimum of @eq:superlattice-confinement-potential-taylor by computing the root(s) of the derivative
 
 $
-  phy.pdv(, x) v(x) = a_1 + a_2 / 2 dot (x - x_0) + a_3 / 3 dot (x - x_0)^2 attach(=, t: !) 0
+  phy.pdv(, x) v(x) = a_1 + 2 a_2 dot (x - x_0) + 3 a_3 dot (x - x_0)^2 attach(=, t: !) 0
 $ <eq:superlattice-confinement-potential-taylor-derivative>
 
 When we select the real/actual/physical root for the possible superlattice configurations/phases, we obtain a piece-wise function for the shift $delta x$:
 
 $
   delta x = cases(
-    x_0 - (3 a_2) / (4 a_3) - sqrt(((3 a_2) / (4 a_3))^2 - 3 a_1 / a_3) quad &"if" 0 <= |phi| < pi/4,
+    x_0 - a_2 / (3 a_3) - sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" 0 <= |phi| < pi/4,
     x_0 &"if" |phi| = pi/4,
-    x_0 - (3 a_2) / (4 a_3) + sqrt(((3 a_2) / (4 a_3))^2 - 3 a_1 / a_3) quad &"if" pi/4 < |phi| < pi/2,
+    x_0 - a_2 / (3 a_3) + sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" pi/4 < |phi| < pi/2,
   )
 $
 
