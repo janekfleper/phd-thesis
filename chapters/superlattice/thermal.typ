@@ -158,3 +158,119 @@ The changes we did are explained in detail in #text(red)[ref later section].
     - Show "final" lattice depth to illustrate the "hard limit"?
   ],
 ) <fig:superlattice-thermal-x532-ph>
+
+
+=== Theory of thermal lensing <ssec:superlattice-thermal-theory>
+
+#[
+  #set text(red)
+  - Look up ULE glasses. Do they really have G = 0?
+  - Reference achromatic lenses here that use a similar "compensation"?
+  - Mention any actual values for $G$ etc... here?
+  - Add figure to illustrate the two thermal lensing terms.
+]
+
+Before introducing the changes we made to the optical setups of the x1064-lattice and the x532-lattice, I will briefly explain the theory behind the observed thermal lensing (effects).
+When dealing with thermal lensing, there are two approaches available to reduce its effects on the optical system.
+You can either compensate the thermal lensing with a combination of glasses with "complimentary" properties, or you can (just) minimize the thermal lensing (in the first place) by a smart choice of materials.
+The former approach is often required when working with high-energy laser pulses or very high powers $cal(O)(#qty[100][W])$ and beyond.
+In that case you can only resort to custom optics optimized for your specific scenario/use case #text(red)[cite some custom optics stuff here].
+Since we are (only) dealing with medium optical powers $cal(O)(#qty[1][W])$, the simple approach of selecting (readily available) optical elements with minimal thermal lensing effects was sufficient.
+#text(red)[Where should I put this sentence?]
+An understanding of the material properties that determine the strength of the thermal lensing was important for the selection of the optical elements.
+
+We already know that the thermal lensing as observed in @fig:superlattice-thermal-x1064-ph and @fig:superlattice-thermal-x532-ph was self-induced by the laser beams of the respective lattices.
+And the "strength" of the thermal lensing was proportional to (or at least increasing with) the optical power.
+This is the expected behavior of thermal lensing caused by local temperature changes due to absorption of the laser beams in the optical elements.
+We can expect each optical element to absorb $<#qty[1][%]$ of the optical power.
+While this does not sound like a lot given the total power $cal(O)(#qty[1][W])$, we are working with beam diameters that are (unusually) small for collimated beams #text(red)[ref setup?].
+The (local) intensity can therefore be as high as #text(red)[compute an actual value here...].
+
+#text(red)[ref Laskin 2022 for this entire paragraph]
+To get started with the theoretical description of thermal lensing we will just assume that the absorbed intensity $Delta I$ leads to a (static) local increase of the temperature $Delta T prop Delta I$.
+The local change of the temperature will cause an expansion of the glass proportional to the coefficient $alpha$.
+In addition the glass will show a refractive index gradient $phy.dv(n, T)$.
+These are the two effects/terms that contribute to the change of the optical path length.
+Combining them yields the coefficient
+
+$
+  G = alpha (n_0 - 1) + phy.dv(n, T)
+$ <eq:superlattice-thermal-theory-G>
+
+where $n_0$ is the (unperturbed) refractive index of the glass.
+The first term/contribution is always positive since all glasses have a thermal coefficient of expansion $alpha > 0$.
+The thermal coefficient $phy.dv(n, T)$ on the other hand can either be negative or positive.
+For so-called "athermal" glasses the (total) coefficient G can therefore be (close to) zero, in which case they would not experience thermal lensing at all (at least not in the lowest order...).
+If the contribution by the second term in @eq:superlattice-thermal-theory-G is stronger than the first term, the coefficient G will be negative.
+Such glasses are used to compensate the effects of thermal lensing of other glasses with $G > 0$.
+Examples for glasses with negative $G$ are $"CaF"_2$ and Crystalline quartz (#text(red)[mention both orientations?]).
+
+The most common glasses used in our optical setup were Fused Silica and N-BK7 and #text(red)[any other glasses?].
+See @tab:superlattice-thermal-theory for a compilation of the material properties of the glasses in our optical setup.
+For all these glasses both terms in @eq:superlattice-thermal-theory-G are positive, leading to a strong? thermal coefficient $G$.
+The (actual) local change of the optical path length $Delta s$ is proportional to the coefficient $G$ and to the temperature change $Delta T$ #text(red)[at least approximately...].
+Since $Delta T$ follows the gaussian intensity distribution of the lattice beams, the thermal lensing will behave like an effective convex lens (focal length $f > 0$).
+This matches our observations that the focal positions were moved towards their respective lenses during the thermally-induced drifts.
+
+#figure(
+  table(
+    columns: 6,
+    stroke: none,
+    table.header(
+      "Material",
+      $n_0$,
+      $phy.dv(n, T) dot 10^6 slash thin #unit[K]$,
+      $alpha dot 10^6 slash thin #unit[K]$,
+      $k_T slash thin #unit[W/(m K)]$,
+      $G dot 10^6 slash thin #unit[K]$,
+    ),
+    table.hline(),
+    "Fused Silica", num[1.4496], num[8.8], num[0.51], num[1.31], num[9.03],
+    "N-BK7", num[1.5066], num[1.5], num[8.3], num[1.114], num[5.7],
+    $"CaF"_2$, num[1.4284], num[-10.4], num[18.9], num[9.7], num[-2.3],
+  ),
+  caption: [
+    Thermal lensing properties of common glasses.
+    The properties are measured/valid at a temperature of $T = #qty[300][K]$.
+
+    #show list: set text(red)
+    - What else should I add to the caption here?
+    - Transpose the list to allow more properties? E.g. $rho$ and the absorption.
+    - Add quartz for waveplates (and TGG for the isolators if possible?)
+  ],
+) <tab:superlattice-thermal-theory>
+
+To also understand the time dependence of the thermal lensing drifts we have to take into account that the local changes of the temperature $Delta T$ will distribute in the optical elements according to the thermal conductivity $k_T$.
+If the thermal conductivity is large, the temperature changes will "delocalize" quickly, thereby reducing the effects of the thermal lensing.
+The (total) coefficient that takes the change of the optical path length and the dissipation of the heat into account is therefore
+
+$
+  rho = G slash k_T = (alpha (n_0 - 1) + phy.dv(n, T)) slash k_T
+$ <eq:superlattice-thermal-theory-rho>
+
+Based on the coefficients $rho$ shown in @tab:superlattice-thermal-theory we would now expect Fused Silica and N-BK7 #text(red)[(and more?)] to be equally problematic regarding the thermal lensing.
+We are however still missing one material property to quantify/estimate the (actual) strength of the thermal lensing.
+As the temperature changes are caused/induced by the absorption of the lattice beams in the optical elements, the actual strength of the thermal lensing will (of course) depend on the absorbed power/intensity.
+If a glass has a very low absorption (coefficient), the effect of the thermal lensing will be small even if the coefficient $rho$ is large/substantial.
+The perfect example for such a glass is (UV) Fused Silica.
+While it has the largest thermal lensing coefficient $rho$ of all the glasses we used in the optical setups, the absorption on the other hand is by far the smallest.
+For the power regimes we are working in, (UV) Fused Silica is therefore the best/most suitable glass.
+Many (designated) high-power lenses and (polarizing) beamsplitters made from (UV) Fused Silica are readily available, making the necessary replacements possible without any custom optics.
+
+Due to its large thermal lensing coefficient $rho$ and the large absorption we decided to avoid N-BK7 optics at all costs.
+Most (cheap) singlet lenses are made from N-BK7, and it is also commonly used as the crown glass in achromatic doublets.
+Many of the optics in the optical setups of the x1064-lattice and the x532-lattice were therefore using N-BK7 glass, which proved to be the biggest contribution to the thermal lensing issues.
+
+#text(red)[Actually put this in this section?]
+A type of glass that we could not (just) optimize for its thermal lensing properties is the Faraday medium in the optical isolators that we use for the retro-reflected lattices #text(red)[ref setup].
+The most important property for those glasses is the Verdet constant that quantifies the rotation of the polarization proportional to the magnetic field $phy.vb(B)$ and the distance $d$.
+Efforts to reduce the thermal lensing of optical isolators (in high-power setups) mostly/usually add external cooling of the crystal #text(red)[add citations].
+This is not useful in our case since we are only affected by the local temperature changes in the (small) beam area.
+The best we could do for the optical isolators was therefore to use the Faraday medium TGG (which has at least decent thermal lensing properties) and to minimize the length of the crystal.
+
+The last contribution to the thermal lensing that we could identify was the glue/cement used in composite optical elements such as (polarizing) beamsplitters, waveplates or (achromatic) doublets.
+Since we do not know the thickness or the thermal and optical properties of the glue/cement, the only optimization was to get rid of them alltogehter.
+For beamsplitters and waveplates this can be achieved by optically contacting the separate parts.
+(Achromatic) doublets can be air-spaced to avoid the (additional) thermal lensing.
+Both options are readily available without requiring custom optics.
+They are usually sold as high-power optics since the glue/cement has a much lower damage threshold compared to the glasses.

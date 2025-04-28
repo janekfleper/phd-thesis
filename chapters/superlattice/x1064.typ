@@ -32,7 +32,7 @@ The "focussing" lens has a focal length of #qty[250][mm] which is only greater t
 If the collimated beam had zero curvature at the position of the lens, the focus would be too close to the lens.
 This correction/shift amounts to #text(red)[??#unit[mm]] for the given focal length and Rayleigh range.
 While this correction/shift is still much smaller than the Rayleigh length, we would lose #text(red)[??%] of the maximally achievable lattice depth.
-Furthermore, the lattice depth would become a lot more sensitive to thermally-induced focal shifts #text(red)[ref thermal lensing section].
+Furthermore, the lattice depth would become a lot more sensitive to thermally-induced focal shifts, #text(red)[see @sec:superlattice-thermal].
 
 To correctly position the focus of the forward-propagating beam of the x1064-lattice on the atoms, the beam has to be slightly diverging with a waist of #text(red)[?? #qty[500][μm]] coming into the #qty[250][mm] lens.
 At the same time we want the position of the focus to be tunable around the position of the atoms for the final optimization.
