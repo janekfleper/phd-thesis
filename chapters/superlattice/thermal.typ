@@ -274,3 +274,102 @@ For beamsplitters and waveplates this can be achieved by optically contacting th
 (Achromatic) doublets can be air-spaced to avoid the (additional) thermal lensing.
 Both options are readily available without requiring custom optics.
 They are usually sold as high-power optics since the glue/cement has a much lower damage threshold compared to the glasses.
+
+
+=== Simulation of thermal lensing <ssec:superlattice-thermal-simulation>
+
+#[
+  #set text(red)
+  - Mention any of the equations in the theory chapter?
+  - Which book should I cite here for ABCD + gaussian beams?
+  - Any references to the thermal lensing theory chapter?
+  - Find a better character for the optical strength? Maybe s or $sigma$ are good here?
+  - Where to mention that thermal lensing is always positive? Ref earlier section?
+  - Use different character for the demagnification? The vectors are also $v$...
+]
+
+To get an understanding of the "propagation" of the thermal lens(ing) through the optical setups we are going to consider a minimal setup from the thermal lens to the position of the atoms.
+The actual optical setups of the x1064-lattice and the x532-lattice are more complex, but their behavior under thermal lensing can still be related to the setup in the simulation.
+While the actual lattice beams would need to be modelled by gaussian beams, it is sufficient to consider simple rays when studying the focal shift introduced by the thermal lens(ing).
+This approximation is valid since the initial beam is collimated and since the thermal lens(ing) is only a small perturbation of the beam.
+#text(red)[Mention the Rayleigh-induced focal shift here? This should not matter for the actual thermal lensing since the Rayleigh-induced shift is a static one.]
+
+#figure(
+  image("/figures/thermal-lensing-simulation.png"),
+  caption: [
+    Dummy setup to simulate the focal shift induced by (a) thermal lens(ing).
+    The beam is initially collimated with a radius of $r = w_0$.
+    A thermal lens then slightly focusses the beam before it is demagnified by the factor $v = f_1 \/ f_2$ in a telescope to (later) get the correct beam shape/waist at the position of the atoms.
+    After a propagation by the distance $d$ the beam is focusses onto the atoms with the 2 inch lens #text(red)[ref anything?] with $f = #qty[250][mm]$.
+
+    #[
+      #set text(red)
+      - Also draw the corresponding gaussian beam in here?
+    ]
+  ],
+) <fig:superlattice-thermal-simulation-setup>
+
+@fig:superlattice-thermal-simulation-setup shows the minimal optical setup to simulate the propagation of thermal lensing.
+The setup/simulation assumes that there is a single optical element responsible for the thermal lensing.
+We are then using a demagnifying telescope to prepare the correct beam shape before the final (atom) lens that focusses the lattice beams onto the atoms.
+In practice the thermal lensing is distributed across all (transmissive) optical elements.
+All three (other) lenses in @fig:superlattice-thermal-simulation-setup would therefore also contribute to the (total) thermal lensing.
+For the x1064-lattice there is a third lens to "relay" the beam onto the final lens with $f$ that is not considered here. #text(red)[How does this actually affect the thermal lensing?]
+For the x532-lattice there are two telescopes in the setup resulting in a different demagnification for the horizontal axis and the vertical axis.
+To relate the setup to the simulation we can only count the total demagnification across the two telescopes for each axis.
+
+We are going to quantify the thermal lensing with a (very) thin lens of focal length $f_"thermal"$.
+In our setup the (effective) focal length was $cal(O)(#qty[10][m])$ which is (very) weak compared to the other lenses and the (propagation) distances.
+We will therefore use the optical power
+
+$
+  alpha = 1 \/ f_"thermal"
+$ <eq:superlattice-thermal-simulation-alpha>
+
+to characterize the thermal lens(ing).
+The lattice beams after applying the thermal lens(ing) will then be described by the vector
+
+$
+  phy.vb(v_0) = vec(w_0, - alpha w_0)
+$ <eq:superlattice-thermal-simulation-v>
+
+where $w_0$ is the (gaussian) waist of the beam.
+For the initial beams of the x1064-lattice and the x532-lattice the waist is $w_0 approx #qty[1][mm]$.
+#text(red)[(The difference of the Rayleigh length due to the wavelengths is not relevant here)]
+In the ABCD (or ray transfer) matrix formalism we can describe the propagation of the beam/vector $phy.vb(v_0)$ through the (remaining) lenses in the setup in @fig:superlattice-thermal-simulation-setup by the following equation
+
+$
+  phy.vb(v_1) =
+  mat(1, 0; -1\/f, 1) dot
+  mat(1, d; 0, 1) dot
+  mat(-1\/v, L; 0, -v) dot
+  phy.vb(v_0)
+$ <eq:superlattice-thermal-simulation-v1>
+
+where $v = f_1 \/ f_2$ and $L = f_1 + f_2$ are the demagnification and the length of the telescope, $d$ is the propagation distance between the telescope and the (atom) lens, and $f$ is the focal length of the (atom) lens.
+
+Without thermal lensing ($alpha = 0$) we would expect the beam to be focussed at distance $f$ from the last lens.
+To quantify the thermal lensing we are therefore going to compute the shift from the expected focus (as a function of the thermal lensing strength $alpha$).
+The focal shift/position can be computed from the radius $r_1$ and the angle $theta.alt_1$ of the vector $phy.vb(v_1)$
+
+$
+  delta = -r_1 / theta.alt_1 - f = - alpha v^2 f^2 + cal(O)(alpha^2)
+$ <eq:superlattice-thermal-simulation-delta>
+
+From the first order (of expansion) in the optical power $alpha$ we can already read/learn the most important properties of the thermal lensing.
+The focal shift $delta$ is negative which indicates that the focus is moved towards the (atom) lens.
+This aligns with our expectations since the thermal lens(ing) applies/applied a small focus on the collimated beam.
+The reason for the quadratic scaling of $delta$ with the demagnification $v$ is not (completely) obvious.
+If we take a look at the ABCD matrix $M_v$ of the telescope, we can see that the factor $v$ occurs twice.
+The radius is divided by the factor $v$ whereas the angle is multiplied by the factor $v$.
+In the end both the reduced radius and the increased angle contribute (equally) to the focal shift, resulting in the factor $v^2$ (in first order of $alpha$).
+
+The importance of the quadratic scaling of $delta$ with the demagnification $v$ is not obvious at first glance eitehr.
+Without this scaling one could think that the thermal lensing can be "eliminated" with a larger initial beam and a stronger telescope.
+The quadratic scaling however completely neutralizes this "trick".
+If the thermal lensing $alpha$ is proportional to the intensity prefactor $I_0$ of the gaussian beam, the order of the thermal lens(ing) and the telescope does not matter #text(red)[@ssec:superlattice-thermal-theory or an equation/figure?].
+Any reduction of $alpha$ due to a larger beam will be applied (or recovered?) by the telescope through the factor $v^2$ again.
+#text(red)[Anything to say about the scaling with $f^2$?]
+For the x532-lattice we can therefore expect a different shift $delta$ for the horizontal axis and the vertical axis.
+With an aspect ratio of $~#num[2.5]$ the shift $delta_"horizontal"$ should be greater than the shift $delta_"vertical"$ by a factor of $~#num[6]$.
+#text(red)[Add the comparison of the ray simulation and gaussian simulation here.]
