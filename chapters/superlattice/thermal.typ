@@ -107,7 +107,7 @@ In addition to the measurement of the lattice depth with the in-situ lattice mod
 From these measurements with the camera we could already see that the total effect of the thermal lensing for the x532-lattice was even worse than for the x1064-lattice.
 
 #text(red)[just reference the modulation/superlattice section here?]
-As explained in #text(red)[ref modulation/superlattice section] we always want to use the lower well at the antisymmetric phase $phi = pi/4$ for the in-situ lattice modulation in the x-superlattice.
+As explained in #text(red)[ref modulation/superlattice section] we always want to use the lower well at the antisymmetric phase $phi = pi / 4$ for the in-situ lattice modulation in the x-superlattice.
 This gives us the highest effective/greatest lattice depth as "the sum" of the x1064-lattice and the x532-lattice, and the band structure will have the smallest sensitivity to small changes of the phase $phi$.
 At the maximum x532-lattice depth of $~#qty[20][Erec]$ we can/could achieve, the bands $n = 3$ and $n = 4$ are sufficiently narrow and have the same parity as the lowest band $n = 1$.
 We will therefore use these two transitions to determine the thermally-induced change of the x532-lattice depth.
@@ -146,7 +146,7 @@ The changes we did are explained in detail in #text(red)[ref later section].
   image("../../figures/2024-06-24_PH_xsuper_result.png", width: 60%),
   caption: [
     In-situ superlattice modulation spectroscopy of the thermal lensing effects in the x532-lattice.
-    The x1064-lattice was set to $v_l = #num[55]$ and the superlattice phase was set to $phi = pi/4$.
+    The x1064-lattice was set to $v_l = #num[55]$ and the superlattice phase was set to $phi = pi / 4$.
     The modulation time was $t_"mod" = #qty[500][ms]$ after a holding time of $t_"hold" = #qty[3][s]$.
     As the reference value for the lattice depth $a_0$ we used a measurement at $t_"hold" = #qty[0][s]$ with a modulation time of #qty[100][ms].
     While this will already be the average (reduced) lattice depth during the modulation time, it is the best we can do as far as a measurement using the atoms goes.
