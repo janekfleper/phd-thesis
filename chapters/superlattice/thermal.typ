@@ -286,12 +286,17 @@ They are usually sold as high-power optics since the glue/cement has a much lowe
   - Find a better character for the optical strength? Maybe s or $sigma$ are good here?
   - Where to mention that thermal lensing is always positive? Ref earlier section?
   - Use different character for the demagnification? The vectors are also $v$...
+  - Mention suppression of (thermal) lensing around the focus...
 ]
 
-To get an understanding of the "propagation" of the thermal lens(ing) through the optical setups we are going to consider a minimal setup from the thermal lens to the position of the atoms.
-The actual optical setups of the x1064-lattice and the x532-lattice are more complex, but their behavior under thermal lensing can still be related to the setup in the simulation.
-While the actual lattice beams would need to be modelled by gaussian beams, it is sufficient to consider simple rays when studying the focal shift introduced by the thermal lens(ing).
+To get an understanding of the "propagation" of the thermal lens(ing) through the optical setup of the x532-lattice we are going to consider a minimal setup from a/the thermal lens to the position of the atoms.
+The actual setup of the x532-lattice is slightly more complex since two telescopes are used for the beam shaping, one of which is a cylindrical one.
+In the simulation we are only going to consider the combined/total (de)magnification of each axis.
+While the actual lattice beams would need to be modelled by gaussian beams, it is sufficient to consider simple ray-tracing to study the focal shift caused/introduced by the thermal lens(ing).
 This approximation is valid since the initial beam is collimated and since the thermal lens(ing) is only a small perturbation of the beam.
+We will later compare the results from the ray-tracing simulation to the numerical simulation with gaussian beams.
+Note that the ray-tracing simulation is not be applicable to the setup of the x1064-lattice since the "relay" lens significantly changes the behavior of the Gaussian beam.
+#text(red)[For the x1064-lattice we are therefore only going to look at the numerical simulation using gaussian beams.]
 #text(red)[Mention the Rayleigh-induced focal shift here? This should not matter for the actual thermal lensing since the Rayleigh-induced shift is a static one.]
 
 #figure(
@@ -311,14 +316,11 @@ This approximation is valid since the initial beam is collimated and since the t
 
 @fig:superlattice-thermal-simulation-setup shows the minimal optical setup to simulate the propagation of thermal lensing.
 The setup/simulation assumes that there is a single optical element responsible for the thermal lensing.
-We are then using a demagnifying telescope to prepare the correct beam shape before the final (atom) lens that focusses the lattice beams onto the atoms.
-In practice the thermal lensing is distributed across all (transmissive) optical elements.
-All three (other) lenses in @fig:superlattice-thermal-simulation-setup would therefore also contribute to the (total) thermal lensing.
-For the x1064-lattice there is a third lens to "relay" the beam onto the final lens with $f$ that is not considered here. #text(red)[How does this actually affect the thermal lensing?]
-For the x532-lattice there are two telescopes in the setup resulting in a different demagnification for the horizontal axis and the vertical axis.
-To relate the setup to the simulation we can only count the total demagnification across the two telescopes for each axis.
+We are then using a telescope to prepare the correct beam size/shape before the final (atom) lens that focusses the lattice beams onto the atoms.
+In practice the thermal lensing can be distributed across all (transmissive) optical elements.
+All three (other) lenses in @fig:superlattice-thermal-simulation-setup could therefore also contribute to the (total) thermal lensing.
 
-We are going to quantify the thermal lensing with a (very) thin lens of focal length $f_"thermal"$.
+We are going to model the thermal lensing with a (very) thin lens of focal length $f_"thermal"$.
 In our setup the (effective) focal length was $cal(O)(#qty[10][m])$ which is (very) weak compared to the other lenses and the (propagation) distances.
 We will therefore use the optical power
 
@@ -334,8 +336,6 @@ $
 $ <eq:superlattice-thermal-simulation-v>
 
 where $w_0$ is the (gaussian) waist of the beam.
-For the initial beams of the x1064-lattice and the x532-lattice the waist is $w_0 approx #qty[1][mm]$.
-#text(red)[(The difference of the Rayleigh length due to the wavelengths is not relevant here)]
 In the ABCD (or ray transfer) matrix formalism we can describe the propagation of the beam/vector $phy.vb(v_0)$ through the (remaining) lenses in the setup in @fig:superlattice-thermal-simulation-setup by the following equation
 
 $
@@ -364,12 +364,12 @@ If we take a look at the ABCD matrix $M_v$ of the telescope, we can see that the
 The radius is divided by the factor $v$ whereas the angle is multiplied by the factor $v$.
 In the end both the reduced radius and the increased angle contribute (equally) to the focal shift, resulting in the factor $v^2$ (in first order of $alpha$).
 
-The importance of the quadratic scaling of $delta$ with the demagnification $v$ is not obvious at first glance eitehr.
-Without this scaling one could think that the thermal lensing can be "eliminated" with a larger initial beam and a stronger telescope.
+The importance of the quadratic scaling of $delta$ with the demagnification $v$ is not obvious at first glance either.
+Without this scaling one could think that the thermal lensing can be "eliminated"/worked around with a larger initial beam and a stronger telescope.
 The quadratic scaling however completely neutralizes this "trick".
 If the thermal lensing $alpha$ is proportional to the intensity prefactor $I_0$ of the gaussian beam, the order of the thermal lens(ing) and the telescope does not matter #text(red)[@ssec:superlattice-thermal-theory or an equation/figure?].
 Any reduction of $alpha$ due to a larger beam will be applied (or recovered?) by the telescope through the factor $v^2$ again.
 #text(red)[Anything to say about the scaling with $f^2$?]
-For the x532-lattice we can therefore expect a different shift $delta$ for the horizontal axis and the vertical axis.
-With an aspect ratio of $~#num[2.5]$ the shift $delta_"horizontal"$ should be greater than the shift $delta_"vertical"$ by a factor of $~#num[6]$.
+Due to the ellipticity of the x532-lattice beam we can expect a different shift $delta$ for the horizontal/in-plane axis/focus and the vertical axis/focus.
+With an aspect ratio of $~#num[3]$ the shift $delta_"horizontal"$ should be greater than the shift $delta_"vertical"$ by a factor of $~#num[9]$.
 #text(red)[Add the comparison of the ray simulation and gaussian simulation here.]
