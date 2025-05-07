@@ -11,6 +11,7 @@
   institute: "Physikalisches Institut",
   birthplace: "Köln",
   date: datetime.today(),
+  debug: true,
 )
 
 #include "chapters/theory/theory.typ"
