@@ -1,4 +1,5 @@
-= Experimental setup
+#import "/header.typ": *
+
 
 The experimental setup cools fermionic Potassium 40 atoms from room temperature to quantum degeneracy.
 After the cooling the atoms are loaded into a three-dimensional optical lattice to study a variety of Hubbard models.

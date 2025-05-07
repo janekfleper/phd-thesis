@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Loss mechanism <sec:modulation-loss>
 

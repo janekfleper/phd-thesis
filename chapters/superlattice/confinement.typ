@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Radial potential <sec:superlattice-confinement>
 

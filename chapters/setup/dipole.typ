@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Optical dipole traps <sec:setup-dipole>
 

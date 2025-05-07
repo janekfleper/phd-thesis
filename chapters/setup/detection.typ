@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == State manipulation and absorption imaging <sec:setup-detection>
 

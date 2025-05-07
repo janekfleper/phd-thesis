@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == In-plane lattices <sec:setup-xy-lattices>
 

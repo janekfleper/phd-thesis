@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Evaluation <sec:modulation-evaluation>
 

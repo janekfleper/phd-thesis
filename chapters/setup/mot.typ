@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Magneto-optical trap <sec:setup-mot>
 

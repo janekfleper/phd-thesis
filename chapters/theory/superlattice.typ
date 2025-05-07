@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 #pagebreak()
 == Optical superlattices <sec:theory-superlattice>

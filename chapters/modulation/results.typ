@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Qualitative explanation and results <sec:modulation-results>
 

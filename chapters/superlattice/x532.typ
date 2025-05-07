@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == x532-lattice beam shaping <sec:superlattice-x532>
 

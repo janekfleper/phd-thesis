@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Potassium #phy.isotope("K", a: [40]) <sec:setup-k40>
 

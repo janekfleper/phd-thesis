@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Dipole potential and optical lattices <sec:theory-dipole-potential>
 

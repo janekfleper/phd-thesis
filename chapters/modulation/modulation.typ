@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 = In-situ lattice modulation spectroscopy <ch:modulation>
 

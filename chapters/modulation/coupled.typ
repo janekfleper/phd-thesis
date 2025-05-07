@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Coupled lattices <sec:modulation-coupled>
 

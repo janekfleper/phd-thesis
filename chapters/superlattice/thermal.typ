@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Thermal lensing <sec:superlattice-thermal>
 

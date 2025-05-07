@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Evaporative cooling in Ioffe-Pritchard trap <sec:setup-ioffe>
 

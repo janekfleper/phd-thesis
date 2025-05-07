@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Bloch theorem <sec:theory-bloch-theorem>
 

@@ -1,3 +1,5 @@
+#import "/header.typ": *
+
 = Theory <ch:theory>
 
 In this chapter I will introduce the theoretical concepts that are required as the baseline for the experimental setup (ref chapter) and the further chapters in this thesis.

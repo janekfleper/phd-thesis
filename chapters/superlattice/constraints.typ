@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Experimental constraints <sec:superlattice-constraints>
 

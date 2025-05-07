@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 == Wannier functions <sec:theory-wannier-functions>
 

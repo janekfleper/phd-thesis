@@ -1,4 +1,4 @@
-#import "../../header.typ": *
+#import "/header.typ": *
 
 = Everything about the in-plane superlattice <ch:superlattice>
 
