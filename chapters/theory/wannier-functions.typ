@@ -8,8 +8,8 @@ They can be computed directly from the Bloch waves $psi_(n,q) (x)$ with a Fourie
 
 $
   w_(n,i)(x)
-    := w_n (x - x_i)
-    = 1 / sqrt(N_L) sum_(q in #h(-0.00em) upright("BZ")) #ncexp[$q x_i$] dot psi_(n,q) (x)
+  := w_n (x - x_i)
+  = 1 / sqrt(N_L) sum_(q in #h(-0.00em) upright("BZ")) #ncexp[$q x_i$] dot psi_(n,q) (x)
 $ <eq:theory-wannier-transformation>
 
 where $n$ is the band index, $N_L$ is the number of lattice sites and the sum over $q$ takes all quasi-momentum states in the first Brillouin zone into account.
@@ -24,7 +24,7 @@ For the tunneling amplitude it is sufficient to consider the one-dimensional Wan
 
 $
   t_(i,j) #sym.slash #h(0.1em) #unit[Erec]
-    = - integral phy.dd(x) w_(n,j)(x) (- phy.dv(,x,2) + v_0 dot sin^2(x)) w_(n,i)(x)
+  = - integral phy.dd(x) w_(n,j)(x) (- phy.dv(, x, 2) + v_0 dot sin^2(x)) w_(n,i)(x)
 $ <eq:theory-wannier-tunneling-amplitude>
 
 The tunneling amplitudes $t_(i,j)$ are the off-diagonal matrix elements of the hamiltonian @eq:theory-lattice-hamiltonian-dimensionless-xy in the Wannier basis, and they quantify the tunneling rate between the lattice sites $i$ and $j$.

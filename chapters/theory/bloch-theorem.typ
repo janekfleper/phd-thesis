@@ -47,7 +47,7 @@ $
   &= epsilon_n (q) sum_m u_(q,m) cexp((q+2m)x) \
   epsilon_n (q) psi_q (x)
   &= accent(h, hat) psi_q (x) \
-  &= - phy.dv(,x,2) sum_m u_(q,m) cexp((q+2m)x)
+  &= - phy.dv(, x, 2) sum_m u_(q,m) cexp((q+2m)x)
   + sum_m u_(q,m) cexp((q+2m)x) sum_m' c_m' cexp((q + 2m')x) \
   &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
   + sum_m sum_m' u_(q,m) c_m' cexp((q+2(m+m'))x) \

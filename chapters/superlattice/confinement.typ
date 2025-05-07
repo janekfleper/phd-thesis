@@ -90,18 +90,18 @@ Write the harmonic oscillator potential in #text(red)[our convention] to find an
 
 $
   V_"HO" (x) \/ #unit[Erec] &=
-  1/2 m omega^2 x^2 \/ #unit[Erec] space.quad #text(red)[(plug in $(x -> x \/ k)$)] \
-  &= 1/2 (m phy.hbar^2) / (k^2 phy.hbar^2) omega^2 x^2 \/ #unit[Erec] \
-  &= 1/4 (phy.hbar^2 omega^2) / #unit[Erec^2] x^2
+  1 / 2 m omega^2 x^2 \/ #unit[Erec] space.quad #text(red)[(plug in $(x -> x \/ k)$)] \
+  &= 1 / 2 (m phy.hbar^2) / (k^2 phy.hbar^2) omega^2 x^2 \/ #unit[Erec] \
+  &= 1 / 4 (phy.hbar^2 omega^2) / #unit[Erec^2] x^2
 $ <eq:super-radial-harmonic-oscillator>
 
 By comparing @eq:super-radial-harmonic-oscillator to the quadratic term in @eq:super-radial-plus-taylor we can find the relation
 
 $
-  1/4 (phy.hbar^2 omega^2) / #unit[Erec^2] &=
+  1 / 4 (phy.hbar^2 omega^2) / #unit[Erec^2] &=
   16 v_s (rho) + v_l (rho) \
   <=> space.quad
-  E_"ZP" = 1/2 phy.hbar omega &= sqrt(16 v_s (rho) + v_l (rho)) #unit[Erec]
+  E_"ZP" = 1 / 2 phy.hbar omega &= sqrt(16 v_s (rho) + v_l (rho)) #unit[Erec]
 $ <eq:super-radial-plus-zero-point>
 
 Since the lattice depths $v_s (rho)$ and $v_l (rho)$ decrease with $rho$, the zero-point energy term will always be deconfining.
@@ -145,14 +145,14 @@ $
   v(x) &=
   4 v_s [R_s + cos^2(2x)] - v_l [R_l + cos^2(x + phi)] \
   &= 4 v_s [R_s + 1 / 2 + 1 / 2 cos(4x)] - v_l [R_l + 1 / 2 + 1 / 2 cos(2x + 2 phi)] \
-  &std.text(std.red, attach(=, t: ?)) 4 v_s [R_s + 1 / 2 + 1 / 2 cos(4x - pi)] - v_l [R_l + 1 / 2 + 1 / 2 cos(2x - pi/2 +  2 phi)] \
+  &std.text(std.red, attach(=, t: ?)) 4 v_s [R_s + 1 / 2 + 1 / 2 cos(4x - pi)] - v_l [R_l + 1 / 2 + 1 / 2 cos(2x - pi / 2 + 2 phi)] \
   &= 4 v_s [R_s + 1 / 2 - 1 / 2 cos(4x)] - v_l [R_l + 1 / 2 + 1 / 2 sin(2x + 2 phi)] \
   &= 4 v_s (R_s + 1 / 2) - v_l (R_l + 1 / 2) - 2v_s cos(4x) - 1 / 2 v_l sin(2x + 2 phi)
 $ <eq:super-radial-potential-shifted>
 
 We expand the last/latter two terms around the minimum $x_0$ up to the third order of $(x - x_0)$ to find the potential shift $delta x$ and the quadratic coefficient/term for the harmonic oscillator energy.
 For the radial potential $v_+ (rho)$ and $v_- (rho)$ the odd expansion orders vanished for both individual lattices, effectively only leaving the quadratic order.
-This is no longer the case for the intermediate phases $phi = (-pi/4, pi/4)$.
+This is no longer the case for the intermediate phases $phi = (-pi / 4, pi / 4)$.
 Around the symmetric phase $phi = 0$ the odd expansion orders of the long lattice potential will even be the dominant ones since the atoms are located on the "slope" of the potential.
 
 $
@@ -193,9 +193,9 @@ When we select the real/actual/physical root for the possible superlattice confi
 
 $
   delta x = cases(
-    x_0 - a_2 / (3 a_3) - sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" 0 <= |phi| < pi/4,
-    x_0 &"if" |phi| = pi/4,
-    x_0 - a_2 / (3 a_3) + sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" pi/4 < |phi| < pi/2,
+    x_0 - a_2 / (3 a_3) - sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" 0 <= |phi| < pi / 4,
+    x_0 &"if" |phi| = pi / 4,
+    x_0 - a_2 / (3 a_3) + sqrt((a_2 / (3 a_3))^2 - a_1 / (3 a_3)) quad &"if" pi / 4 < |phi| < pi / 2,
   )
 $ <eq:super-radial-delta>
 

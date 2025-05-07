@@ -114,7 +114,7 @@ If you look at the two different lattice depth functions in @eq:mod-eval-model-r
 The relation of the gaussian waist $w_0$ and the "inverse width" a is given by the equation
 
 $
-  w_0 = sqrt(2/a)
+  w_0 = sqrt(2 / a)
 $ <eq:mod-eval-waist>
 
 // By multiplying the waist $w_0$ by the pixel size of the camera, we can get the waist in #unit[μm].

@@ -95,7 +95,7 @@ The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = 
 The Hamiltonian to describe non-interacting particles in the potential @eq:theory-lattice-potential is
 
 $
-  accent(H, hat) = -phy.hbar^2 / (2m) phy.dv(,x,2) + V(x)
+  accent(H, hat) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V(x)
 $ <eq:theory-lattice-hamiltonian>
 
 To further simplify the Hamiltonian @eq:theory-lattice-hamiltonian we are going to introduce dimensionless coordinates $x -> x slash k$.
@@ -103,7 +103,7 @@ Since $1 slash k$ or rather $a = pi slash k$ is the characteristic length scale 
 
 $
   accent(H, hat)
-  = -(phy.hbar^2 k^2) / (2m) phy.dv(,x,2) + V_0 dot sin^2 x
+  = -(phy.hbar^2 k^2) / (2m) phy.dv(, x, 2) + V_0 dot sin^2 x
 $ <eq:theory-lattice-hamiltonian-dimensionless-x>
 
 There is also a characteristic energy scale that can be used to make the entire Hamiltonian dimensionless.
@@ -113,7 +113,7 @@ Dividing the RHS of @eq:theory-lattice-hamiltonian-dimensionless-x by the recoil
 $
   accent(h, hat)
   = accent(H, hat) / #unit[Erec]
-  = - phy.dv(,x,2) + v_0 dot sin^2 x
+  = - phy.dv(, x, 2) + v_0 dot sin^2 x
 $ <eq:theory-lattice-hamiltonian-dimensionless-xy>
 
 with $#unit[Erec] = (phy.hbar^2 k^2) / (2m)$ and $v_0 = V_0 / #unit[Erec]$.

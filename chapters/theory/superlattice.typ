@@ -142,8 +142,8 @@ $ <eq:theory-super-wannier-SoD-eigenstates>
 In the basis of the eigenstates $phy.ket(g)$ and $phy.ket(e)$ the single-site occupations are therefore
 
 $
-  phy.ket(L) = 1/sqrt(2) (phy.ket(g) - phy.ket(e)) "and"
-  phy.ket(R) = 1/sqrt(2) (phy.ket(g) + phy.ket(e))
+  phy.ket(L) = 1 / sqrt(2) (phy.ket(g) - phy.ket(e)) "and"
+  phy.ket(R) = 1 / sqrt(2) (phy.ket(g) + phy.ket(e))
   #text(red)[remove this equation?]
 $ <eq:theory-super-wannier-SoD-LR-states>
 
