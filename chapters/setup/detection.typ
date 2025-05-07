@@ -1,6 +1,6 @@
 #import "/header.typ": *
 
-== State manipulation and absorption imaging <sec:setup-detection>
+== State manipulation and absorption imaging <sec:setup-detect>
 
 #[
   #set text(red)
@@ -23,7 +23,8 @@ For the regular RF pulses where the states are spaced by $~#qty[2][MHz]$, we are
 To maximize the transfer efficiency an envelope is applied to the RF signal to gracefully ramp the Rabi frequency up and down #text(red)[ref Eugenio].
 If we need transfers with a better frequency resolution, we are using HS1 pulses #text(red)[later in this section].
 
-=== HS1 pulses
+
+=== HS1 pulses <ssec:setup-detect-hs1>
 
 After the "experiment" the atoms are frozen in the optical lattices and usually in the hyperfine state pair 97 or 95.
 There are either zero atoms, one atom or two atoms (of opposite) spin on a lattice site.
@@ -37,14 +38,15 @@ $
   V_"pulse"(t) = A_"pulse"(t) ... \
   A_"pulse"(t) = A_0 sech(...) \
   Delta_"pulse"(t) = Delta_0 / 2 tanh(...)
-$ <eq:setup-detection-hs1-pulse>
+$ <eq:setup-detect-hs1-pulse>
 
 For the singles-doubles separation we are usually employing the HS1 pulse with a length of #qty[7][ms] and a width of #qty[2][kHz].
 A pulse width of #qty[1][kHz] is also possible with the same pulse length, for even shorter pulses we would need to further increase the pulse length.
 The increased pulse length is not required due to the Fourier limit but rather due to the transfer efficiency in the Landau-Zener context/picture.
 With a narrower pulse the coupling will start closer to the resonance and we will already loose the adiabaticity of the transfer during the turn-on of the pulse before the pulse even reaches $Delta = 0$.
 
-=== Single-plane slicing
+
+=== Single-plane slicing <ssec:setup-detect-slicing>
 
 As shown in #text(red)[ref figure with atom pancakes in z-lattice planes], we load atoms into multiple layers of the $z$-lattice.
 By default, the imaging will therefore address all layers at the same time since the atoms occupy the same pair of HFS states.
@@ -54,7 +56,7 @@ In order to detect only a single layer, the atoms inside that layer need to be t
 We achieve this by applying a magnetic field gradient along the $z$-axis with the Fast Feshbach coils in AHH configuration #text(red)[ref Feshbach/magnetic field section].
 The maximum gradient strength we can achieve is (only) #qty(per-mode: "slash")[33][G/cm] since the Fast Feshbach coils are not actively cooled (and the power supply + capacitor combination cannot provide more power?).
 This magnetic field gradient amounts to a separation of the green $z$-lattice planes by #qty[640][Hz].
-As introduced in @sec:setup-z-lattices we can only occupy every second plane of the green $z$-lattice to move the frequency separation to #qty[1280][Hz].
+As introduced in @sec:setup-z we can only occupy every second plane of the green $z$-lattice to move the frequency separation to #qty[1280][Hz].
 
 On paper we can easily achieve this with a #qty[1][kHz] wide HS1 pulse.
 If the center frequency is on resonance with the lattice planes, the pulse will address $plus.minus #qty[500][Hz]$ in each direction which is still far away from the neighbouring lattice planes.
@@ -63,7 +65,8 @@ We therefore synchronize the sequence to the phase of the power line since we ca
 The synchronization is implemented by interrupting the sequence a few #qty[10][ms] before the HS1 slicing pulse.
 If the power line phase reaches a certain setpoint, the sequence is resumed and the HS1 slicing pulse is always executed at the same phase of the power line.
 
-=== Saturated absorption imaging
+
+=== Saturated absorption imaging <ssec:setup-detect-imaging>
 
 We are using saturated absorption imaging to measure the (optical) density of the atoms at the end of the sequence.
 The imaging is done with #qty[10][μs] pulses from the MOT (cooling) laser tuned to the transition #phy.ket($F = 9 slash 2, m_F = -9 slash 2$) -> #phy.ket($F' = 11 slash 2, m_F = -11 slash 2$).

@@ -1,12 +1,12 @@
 #import "/header.typ": *
 
-= In-situ lattice modulation spectroscopy <ch:modulation>
+= In-situ lattice modulation spectroscopy <ch:mod>
 
 When we work with our optical lattices, we program the sequence to run the lattice at a certain depth in #unit[_E_#sub[rec]].
 The lattice power is measured with a photodiode on the experimental table and we use this in a PID loop to regulate the lattice power and therefore also the lattice depth.
 Knowing the lattice depth as a function of the optical power requires careful prior calibration of the lattice potentials.
 In our setup we use lattice modulation spectroscopy to (locally) measure the depth of our lattices.
-Lattice modulation spectroscopy employs the (resonant) transfer of atoms between the energy bands as introduced in @sec:theory-bloch-theorem and shown in @bloch-theorem-energy-bands.
+Lattice modulation spectroscopy employs the (resonant) transfer of atoms between the energy bands as introduced in @sec:theory-bloch and shown in @fig:theory-bloch-energy-bands.
 This technique has been used to characterize lattice depths since the dawn of optical lattices #text(red)[what to cite here as the og paper?].
 
 Since the eigenfunctions of the optical lattice are Bloch waves, lattice modulation spectroscopy has been studied extensively as a function of the quasimomentum $q$ #text(red)[cite PhD/paper Jannes Heinze].
@@ -18,7 +18,7 @@ Measuring the lattice depth as a function of the position can therefore reveal t
 Without the spatial resolution, the inhomogeneity of the lattice depth will actually broaden the measured transition/resonance.
 But with the in-situ lattice modulation spectroscopy we can turn the (necessary) inhomogeneity of the lattices into a powerful calibration tool.
 
-At the beginning of this chapter I will show the measured results for all the (monochromatic) lattices introduced in @sec:setup-z-lattices and @sec:setup-xy-lattices.
+At the beginning of this chapter I will show the measured results for all the (monochromatic) lattices introduced in @sec:setup-z and @sec:setup-xy.
 The next sections will then introduce the theoretical and technical details of the in-situ lattice modulation spectroscopy step by step.
 Towards the end of the chapter I will showcase how we use the measurement for the optimization of the alignment of the lattices, and I will present the results of the in-situ lattice modulation spectroscopy in the x-superlattice that was introduced in #text(red)[ref chapter 3].
 

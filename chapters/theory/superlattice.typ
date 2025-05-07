@@ -1,7 +1,6 @@
 #import "/header.typ": *
 
-#pagebreak()
-== Optical superlattices <sec:theory-superlattice>
+== Optical superlattices <sec:theory-super>
 
 In general an optical superlattice refers to (at least) two overlapping optical lattices with different lattice wavevectors $Delta phy.vb(k)$ that are not perpendicular.
 If the lattice wavevectors would be perpendicular, the Schrödinger equation can be separated into the different axes again and the system can be described by multiple monochromatic lattices.
@@ -15,35 +14,35 @@ Overlapping three beam pairs with commensurate wavelengths at angles of $120 deg
 More examples...
 
 In this section I will cover the superlattice potential that is relevant for the optical superlattices in our experiment.
-I will not go into much detail about solving the Schrödinger equation with Bloch waves since the steps are very similar to the calculation shown in @sec:theory-bloch-theorem.
+I will not go into much detail about solving the Schrödinger equation with Bloch waves since the steps are very similar to the calculation shown in @sec:theory-bloch.
 For the computation of the Wannier functions some extra steps have to be taken since the unit cell in the superlattice will have two lattice sites.
 
 The optical superlattice potential according to our convention is
 
 $
   V(x) = V_s dot cos^2(k_s x) - V_l dot cos^2 (k_l x + phi)
-$ <superlattice-potential>
+$ <eq:theory-super-potential>
 
 where $(V_s, V_l)$ and $(k_s, k_l)$ are the respective depths and wavevectors of the _short_ lattice and the _long_ lattice, and $phi$ is the relative phase between the two individual lattices.
-Since the short (long) lattice is blue (red)-detuned in the experimental setup, the signs of the terms in @superlattice-potential are chosen to correctly reflect the detuning.
+Since the short (long) lattice is blue (red)-detuned in the experimental setup, the signs of the terms in @eq:theory-super-potential are chosen to correctly reflect the detuning.
 The relative phase $phi$ is associated with the long lattice since we always tune the phase of the long lattice during the experiment.
 At $phi = 0$ the superlattice potential will show balanced (symmetric) double wells.
 Technically the potential is $pi$-periodic but a very similar potential is already realized at $phi = pi slash 2$.
-See @superlattice-potential-phase for an illustration of the superlattice potential for different phases $phi$.
+See @fig:theory-super-potential-phase for an illustration of the superlattice potential for different phases $phi$.
 
-For the superlattice potential it is also useful to express @superlattice-potential in dimensionless units.
+For the superlattice potential it is also useful to express @eq:theory-super-potential in dimensionless units.
 Since there are two characteristic length scales and two characteristic energy scales, one of the lattices has to be chosen as the reference.
 In momentum space the quasi-momentum $q$ will again be limited to the first Brillouin-zone which will be based on the wavevector of the long lattice since $k_l = k_s slash 2$.
 We will therefore transform the coordinate $x -> x slash k_l$ and we will use $E_"rec,l" = (phy.hbar^2 k_l^2) / (2m)$ as the characteristic energy scale.
-The potential @superlattice-potential will therefore be
+The potential @eq:theory-super-potential will therefore be
 
 $
   V(x) slash E_"rec,l"
   = 4 v_s dot cos^2(2x) - v_l dot cos^2(x + phi)
-$ <superlattice-potential-dimensionless>
+$ <eq:theory-super-potential-dimensionless>
 
 where the prefactor of the short lattice term is chosen such that $v_s$ is the lattice depth in units of $E_"rec,s" = 4 E_"rec,l"$.
-The illustration of the superlattice potential in @superlattice-potential-phase is using the dimensionless lattice depths.
+The illustration of the superlattice potential in @fig:theory-super-potential-phase is using the dimensionless lattice depths.
 
 #figure(
   grid(
@@ -65,30 +64,30 @@ The illustration of the superlattice potential in @superlattice-potential-phase 
 
     All configurations with other phases $phi$ will be referred to as _asymmetric_.
   ],
-) <superlattice-potential-phase>
+) <fig:theory-super-potential-phase>
 
 
-=== Bloch theorem <ssec:theory-superlattice-bloch-theorem>
+=== Bloch theorem <ssec:theory-super-bloch>
 
-The potential @superlattice-potential-dimensionless can be plugged into the Schrödinger equation @bloch-theorem-psiq-schroedinger to compute the band structure and the Bloch waves in the superlattice potential.
+The potential @eq:theory-super-potential-dimensionless can be plugged into the Schrödinger equation @eq:theory-bloch-psiq-schroedinger to compute the band structure and the Bloch waves in the superlattice potential.
 Since the superlattice potential has two spatial frequency components, the Fourier series expansion also has coefficients $c_(plus.minus) eq.not 0$ which will lead to non-zero matrix elements on the second off-diagonal.
 
 $
   c_0 = 2v_s - 1 / 2 v_l,
   c_(plus.minus 1) = - 1 / 4 upright(e)^(minus.plus upright(i) 2 phi),
   c_(plus.minus 2) = v_s
-$ <superlattice-potential-fourier-coefficients>
+$ <eq:theory-super-potential-fourier-coefficients>
 
 Actually solving the Schrödinger equation works just like for the monochromatic lattice.
 The eigenvalues will be the energy bands $epsilon_n (q)$ and the eigenvectors will lead to the Bloch waves $psi_(n,q) (x)$ where $n$ is the band index and $q$ is the quasi-momentum in the first Brillouin-zone of the long lattice.
-See @superlattice-potential-phase for the band structure of a _symmetric_ superlattice.
+See @fig:theory-super-potential-phase for the band structure of a _symmetric_ superlattice.
 
 #figure(
   image("../../figures/superlattice-band-structure-zoom.png"),
   caption: [
     Band structure in the superlattice potential for $v_l = ?$, $v_s = ?$ and $phi = 0$.
     In a symmetric superlattice potential the band structure shows pairs of bands that are only separated by a small energy gap.
-    The energy gaps between the band pairs are much larger in comparison, similar to the energy gaps in the monochromatic band structure, see @bloch-theorem-energy-bands.
+    The energy gaps between the band pairs are much larger in comparison, similar to the energy gaps in the monochromatic band structure, see @fig:theory-bloch-energy-bands.
     The band structure in the center extends over the first Brillouin-zone of the short lattice to highlight how these so-called _mini bands_ are created.
     From a distance it looks like we have two (large) bands that are separated by a band gap at $q slash k_l = plus.minus 2$.
     Similar to the opening of the band gaps in the monochromatic band structure, the introduction of the long lattice will cause the bands to separate at $q slash k_l = plus.minus 1$.
@@ -97,11 +96,11 @@ See @superlattice-potential-phase for the band structure of a _symmetric_ superl
     The gap between the mini bands is much smaller since it is "created" by the peak of the potential inside the double well.
     The gap between the pairs of the mini bands depends on the peak of the potential between the double wells which is much larger for all usual lattice configurations.
   ],
-) <superlattice-band-structure>
+) <fig:theory-super-band-structure>
 
 As determined by Bloch's theorem, the function $u_(n,q) (x)$ in the Bloch waves must have the same periodicity as the potential.
 Since the unit cell is given by the long lattice potential, the Bloch waves will also be periodic with respect to the long lattice.
-The impact of the short lattice potential on the Bloch waves can be seen inside the unit cells, see @superlattice-bloch-waves.
+The impact of the short lattice potential on the Bloch waves can be seen inside the unit cells, see @fig:theory-super-bloch-waves.
 In a symmetric superlattice the (inner function of the) Bloch waves will have the same symmetry properties regardless of the quasi-momentum $q$.
 If the superlattice phase is however asymmetric, the symmetry between the two sites in the unit cell is broken and the odd (even) Bloch waves will start to localize on the lower (upper) sites to follow the respective on-site energies.
 
@@ -114,13 +113,13 @@ If the superlattice phase is however asymmetric, the symmetry between the two si
     Within the band pairs the Bloch waves are only different by the symmetry relative to the center of the unit cell (or double well).
     The (lower) odd bands are always symmetric with respect to the unit cell, whereas the (upper) even bands are antisymmetric with respect to the unit cell.
   ],
-) <superlattice-bloch-waves>
+) <fig:theory-super-bloch-waves>
 
 
-=== Wannier functions <ssec:theory-superlattice-wannier-functions>
+=== Wannier functions <ssec:theory-super-wannier>
 
-To describe localized particles in the superlattice potential we want to compute the Wannier functions from the Bloch waves as shown in @superlattice-bloch-waves.
-If we would just use the definition in @wannier-functions-transformation, the Wannier functions would conserve the symmetry of the Bloch waves inside the unit cell.
+To describe localized particles in the superlattice potential we want to compute the Wannier functions from the Bloch waves as shown in @fig:theory-super-bloch-waves.
+If we would just use the definition in @eq:theory-wannier-transformation, the Wannier functions would conserve the symmetry of the Bloch waves inside the unit cell.
 In a symmetric superlattice at $phi = 0$ the Wannier functions would then be delocalized over the two sites in the unit cell.
 While those are technically valid Wannier functions, we would prefer to have a Wannier basis that describes particles that are localized on either site in the unit cell.
 In other words we want to find the _maximally localized_ Wannier functions that describe the smallest/narrowest wave function of a particle inside the potential.
@@ -131,14 +130,14 @@ The calculation of the matrix elements of the BPO was worked out by #text(red)[r
 In this section I will not explain any of the details or show any of the equations.
 I will only present the qualitative results of the maximally localized Wannier functions, and the resulting tunneling parameters and on-site energies.
 
-If we only look at the lowest two bands with $n = {1, 2}$ in @superlattice-bloch-waves, we will notice that in each unit cell the corresponding Bloch waves look very similar to the wave function of the ground state and the excited state of a single particle in a balanced double well potential.
+If we only look at the lowest two bands with $n = {1, 2}$ in @fig:theory-super-bloch-waves, we will notice that in each unit cell the corresponding Bloch waves look very similar to the wave function of the ground state and the excited state of a single particle in a balanced double well potential.
 // We will therefore try to derive the mixing of the Bloch waves to compute the maximally localized Wannier functions based on the eigenstates of a single particle in a balanced double well.
 In the two-particle basis where $phy.ket(L)$ and $phy.ket(R)$ describe a particle on the left site and right site respectively, the ground state $phy.ket(g)$ and the excited state $phy.ket(e)$ are
 
 $
   phy.ket(g) = 1 / sqrt(2) (phy.ket(L) + phy.ket(R)) "and"
   phy.ket(e) = 1 / sqrt(2) (phy.ket(L) - phy.ket(R))
-$ <superlattice-wannier-SoD-eigenstates>
+$ <eq:theory-super-wannier-SoD-eigenstates>
 
 In the basis of the eigenstates $phy.ket(g)$ and $phy.ket(e)$ the single-site occupations are therefore
 
@@ -146,12 +145,12 @@ $
   phy.ket(L) = 1/sqrt(2) (phy.ket(g) - phy.ket(e)) "and"
   phy.ket(R) = 1/sqrt(2) (phy.ket(g) + phy.ket(e))
   #text(red)[remove this equation?]
-$ <superlattice-wannier-SoD-LR-states>
+$ <eq:theory-super-wannier-SoD-LR-states>
 
-If we now associate the Bloch waves in @superlattice-bloch-waves in the superlattice potential with the eigenstates @superlattice-wannier-SoD-eigenstates of the double well potential, we will expect that a mixing of the Bloch waves will lead to the maximally localized Wannier functions analogous to $phy.ket(L)$ and $phy.ket(R)$.
+If we now associate the Bloch waves in @fig:theory-super-bloch-waves in the superlattice potential with the eigenstates @eq:theory-super-wannier-SoD-eigenstates of the double well potential, we will expect that a mixing of the Bloch waves will lead to the maximally localized Wannier functions analogous to $phy.ket(L)$ and $phy.ket(R)$.
 At the phase $phi = 0$ we will have equal mixtures of the bands with only the signs being different.
 If the phase is detuned from $phi = 0$, we would then expect the mixture to change analogous to the eigenstates of a single particle in a doublewell.
-The overlap of the maximally localized Wannier functions with the regular Wannier functions computed from @wannier-functions-transformation is shown in figure @superlattice-wannier-mixing.
+The overlap of the maximally localized Wannier functions with the regular Wannier functions computed from @eq:theory-wannier-transformation is shown in figure @fig:theory-super-wannier-mixing.
 The illustration shows that we always have to mix the lowest two bands around $phi = 0$ and any other band pairs around avoided crossings.
 If the superlattice configuration is far away from any avoided crossings (compared to their gaps), using the regular Wannier functions is sufficient to describe (maximally) localized particles.
 
@@ -167,16 +166,16 @@ If the superlattice configuration is far away from any avoided crossings (compar
     - #text(red)[Add band structure plot with $E(phi)$ that shows the avoided crossings!]
     - #text(red)[Add doublewell eigenvector plot (at least for $phi = 0$?)]
   ],
-) <superlattice-wannier-mixing>
+) <fig:theory-super-wannier-mixing>
 
 
-=== Hubbard parameters / SSH model <ssec:theory-superlattice-hubbard-parameters>
+=== Hubbard parameters / SSH model <ssec:theory-super-hubbard>
 
 #text(red)[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
 If the superlattice potential is sufficiently deep, it makes sense to use the second quantization formalism again to describe the behavior of atoms inside the superlattice.
-The required parameters are the tunneling amplitude @wannier-functions-tunneling-amplitude and the interaction strength @wannier-functions-interaction-strength that were already introduced in @sec:theory-wannier-functions.
+The required parameters are the tunneling amplitude @eq:theory-wannier-tunneling-amplitude and the interaction strength @eq:theory-wannier-interaction-strength that were already introduced in @sec:theory-wannier.
 In general the tunneling amplitudes $t_"in"$ inside a doublewell will be greater than the tunneling amplitudes $t_"out"$ between separate doublewells due to the large potential barrier (mention the SSH model here?).
-We could actually use the integral in @wannier-functions-tunneling-amplitude to compute the tunneling amplitudes $t_"in"$ and $t_"out"$ in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
+We could actually use the integral in @eq:theory-wannier-tunneling-amplitude to compute the tunneling amplitudes $t_"in"$ and $t_"out"$ in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
 However, the computation of the maximally localized Wannier functions using the BPO matrix (#text(red)[what is the actual name here?] will already reveal the tunneling amplitudes between _all_ pairs of lattice sites in the system.
 In addition to the tunneling amplitudes, the BPO matrix will also reveal the (absolute) on-site energies of the sublattice sites.
 The relative detuning $2 Delta$ between neighbouring lattice sites is the last relevant parameter to describe the dynamics in doublewells (and extended SSH models?).

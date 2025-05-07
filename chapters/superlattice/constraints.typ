@@ -1,6 +1,6 @@
 #import "/header.typ": *
 
-== Experimental constraints <sec:superlattice-constraints>
+== Experimental setup <sec:super-setup>
 
 #[
   #set text(red)

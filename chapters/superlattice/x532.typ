@@ -1,6 +1,6 @@
 #import "/header.typ": *
 
-== x532-lattice beam shaping <sec:superlattice-x532>
+== x532-lattice beam shaping <sec:super-x532>
 
 #[
   #set text(red)
@@ -21,7 +21,7 @@ The increased inhomogeneity along the $z$-axis is not an issue since we only occ
 
 Using different waists for the horizontal axis and the vertical axis requires a cylindrical telescope, and the beam becomes prone to astigmatism.
 In addition, the Rayleigh lengths are different by a factor of $2.5^2 approx 6$ #text(red)[check this!].
-The "focussing" issue already described for the x1064-lattice in @sec:superlattice-x1064 therefore affects the two axes/waists differently.
+The "focussing" issue already described for the x1064-lattice in @sec:super-x1064 therefore affects the two axes/waists differently.
 The Rayleigh of the vertical axis/waist is $z_R^z approx #qty[20][mm]$, whereas the Rayleigh length of the horizontal axis/waist is $z_R^x approx #qty[100][mm]$.
 #text(red)[Check both values!!]
 The "situation" for the horizontal axis/waist is therefore even worse than for the x1064-lattice.
@@ -30,7 +30,7 @@ While such a configuration should also be achievable/possible with a relay lens,
 The horizontal focus is too close to the #qty[250][mm] lens on purpose and the actual waist at the focus is smaller than #qty[130][μm].
 But the "effective" beam parameters at the position of the atoms match our requirements.
 The vertical focus is located exactly (#text(red)[give an uncertainty?]) at the position of the atoms.
-We used the same procedure with the focus of the horizontal dipole beam as reference for the atom position @sec:superlattice-x1064.
+We used the same procedure with the focus of the horizontal dipole beam as reference for the atom position @sec:super-x1064.
 
 Since the retro-path can only be adjusted together for the x1064-lattice and the x532-lattice, we can not move the foci of the two lattices separately.
 In the end we decided to prioritize the vertical axis/waist/focus of the x532-lattice since it has a shorter Rayleigh length than the x1064-lattice.
