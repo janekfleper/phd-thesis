@@ -1,5 +1,5 @@
-#import "@preview/physica:0.9.4" as phy
-#import "@preview/fancy-units:0.1.0": num, unit, qty
+#import "@preview/physica:0.9.5" as phy
+#import "@preview/fancy-units:0.1.1": num, unit, qty
 
 #let cexp(body) = [
   $upright(e)^(upright(i) #body)$
