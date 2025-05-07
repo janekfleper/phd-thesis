@@ -19,8 +19,8 @@ Due to spatial constraints this is/was however not possible.
 Our approach therefore uses environmental sensors to "predict" the changes of the phase as good as possible.
 The so-called feed-forward is introduced in detail in #text(red)[ref section feedforward].
 
-#include "constraints.typ"
+#include "setup.typ"
 #include "x1064.typ"
 #include "x532.typ"
 #include "thermal.typ"
-#include "confinement.typ"
+#include "radial.typ"
