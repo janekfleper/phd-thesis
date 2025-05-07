@@ -1,5 +1,7 @@
 #import "@local/fancy-thesis-uni-bonn:0.1.0": thesis
-#import "@preview/unify:0.5.0": num, qty
+#import "@preview/fancy-units:0.1.1": add-macros
+
+#add-macros(Erec: [_E_#sub[rec]])
 
 #show: thesis.with(
   title: "Ultracold Fermions in an\nUltrastable Optical Superlattice",
