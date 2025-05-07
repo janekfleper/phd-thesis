@@ -8,7 +8,7 @@ The isotope we are using in the experiment is fermionic potassium 40 with the at
 Being an alkali metal, potassium only has a single electron in the highest orbit(al).
 The electrons in the lower orbits do not contribute to the basic electronic properties.
 Besides #phy.isotope("K", a: [40]), the isotopes #phy.isotope("K", a: [39]) and #phy.isotope("K", a: [41]) are also naturally abundant #text(red)[and also (both) used for ultracold atom experiments?]
-Since #phy.isotope("K", a: [40]) only has a natural abundance of $tilde 0.01%$, we are using an enriched source #text(red)[cite something from JILA?]
+Since #phy.isotope("K", a: [40]) only has a natural abundance of $approx 0.01%$, we are using an enriched source #text(red)[cite something from JILA?]
 
 The electronic ground state of potassium has the principal quantum number $n = 4$ and the spectroscopic notation is $attach(S, tl: 2, br: 1 slash 2)$.
 The relevant optical transitions for this thesis are the so-called D1 and D2 lines to the excited states $attach(P, tl: 2, br: 1 slash 2)$ and $attach(P, tl: 2, br: 3 slash 2)$ respectively, with an unchanged principal quantum number $n$.
@@ -23,7 +23,7 @@ Due to the positive sign of the nuclear gyromagnetic factor $g_I$, the hyperfine
 The excited state $attach(P, tl: 2, br: 1 slash 2)$ with $J = 1 slash 2$ has the same available values for the quantum number $F$.
 The excited state $attach(P, tl: 2, br: 3 slash 2)$ with $J = 3 slash 2$ on the other hand has a hyperfine structure from $F = 5 slash 2$ to $F = 11 slash 2$.
 Since (the sign of) the factor $g_I$ does not depend on the electronic state, all of the aforementioned states experience an inverted hyperfine structure.
-We are using the closed transition between the ground state manifold $phy.ket(attach(S, tl: 2, br: 1 slash 2)\, F = 9 slash 2)$ and the excited state manifold $phy.ket(attach(S, tl: 2, br: 3 slash 2)\, F = 11 slash 2)$ for the #text(red)[MOT] and the #text(red)[imaging].
+We are using the closed transition between the ground state manifold $phy.ket(attach(S, tl: 2, br: 1 slash 2) comma F = 9 slash 2)$ and the excited state manifold $phy.ket(attach(S, tl: 2, br: 3 slash 2) comma F = 11 slash 2)$ for the #text(red)[MOT] and the #text(red)[imaging].
 See @fig:setup-k40-hfs for a sketch of the hyperfine structure of those three states.
 
 #figure(

@@ -36,8 +36,8 @@ We then evaluated the images for each lattice depth $v_x$ with the method introd
 The only significant changes we can observe across the measurements are the resonance parameters $a_f$ and $w_f$, see @fig:mod-loss-parameters.
 These two parameters qualitatively describe the contrast/visibility of the resonances as highlighted by the insets in @fig:mod-loss-parameters.
 The result matches our observation that the in-situ resonances "suddenly" become worse at lattice depths $>#qty[60][Erec]$.
-We can observe a kink at $~#qty[65][Erec]$ in the fit parameters of the resonance amplitude and the resonance width.
-From the kink to a lattice depth of $~#qty[75][Erec]$ the resonance amplitude decreases by a factor of $3-4$ while the resonance width decreases by a factor of $~2$.
+We can observe a kink at $approx #qty[65][Erec]$ in the fit parameters of the resonance amplitude and the resonance width.
+From the kink to a lattice depth of $approx #qty[75][Erec]$ the resonance amplitude decreases by a factor of $3-4$ while the resonance width decreases by a factor of $approx 2$.
 
 #figure(
   image("../../figures/2024-10-25_PH_x1064_band_overlap_average_result.png"),

@@ -3,7 +3,7 @@
 == Dipole potential and optical lattices <sec:theory-dipole>
 
 Far off-resonant light can still interact with atoms.
-Depending on the detuning of the angular frequency of the light $omega$ and the transition energy $#phy.hbar omega_0$, the sign of the interaction changes.
+Depending on the detuning of the angular frequency of the light $omega$ and the transition energy $phy.hbar omega_0$, the sign of the interaction changes.
 If $omega < omega_0$, the light is referred to as _red-detuned_ and the interaction is attractive.
 Conversely if $omega > omega_0$, the light is referred to as _blue-detuned_ and the interaction is repulsive.
 See @fig:theory-dipole-detuning-gauss for a sketch of the atom-light interaction for a gaussian beam.
@@ -18,11 +18,11 @@ See @fig:theory-dipole-detuning-gauss for a sketch of the atom-light interaction
 
 #text(red)[Add something about the scattering rate...]
 
-The electric field of a plane optical wave propagating in the direction of the wavevector $#phy.vb[k]$ is given by the expression
+The electric field of a plane optical wave propagating in the direction of the wavevector $phy.vb(k)$ is given by the expression
 
 $
   phy.vb(E)(phy.vb(r), t) =
-  phy.vb(E)_0 cos(phy.vb(k) phy.dprod phy.vb(r) - omega t)
+  phy.vb(E)_0 cos(phy.vb(k) dot phy.vb(r) - omega t)
 $ <eq:theory-dipole-electric-field>
 
 While a laser beam also has a transversal component, it is sufficient to look at the component along the propagation axis to understand the origin of the optical lattice potential.
@@ -31,7 +31,7 @@ If we assume that the two waves have the same field amplitude (absolute and dire
 
 $
   I(phy.vb(r)) =
-  abs(phy.vb(E)_0)^2 (1 + cos((phy.vb(k)_2 - phy.vb(k)_1) phy.dprod phy.vb(r)))
+  abs(phy.vb(E)_0)^2 (1 + cos((phy.vb(k)_2 - phy.vb(k)_1) dot phy.vb(r)))
 $ <eq:theory-lattice-intensity>
 
 where $phy.vb(k)_1$ and $phy.vb(k)_2$ are the wavevectors of the respective plane waves.
@@ -49,7 +49,7 @@ $
   a = lambda / (2 sin alpha)
 $ <eq:theory-lattice-period>
 
-In the case of the counterpropagating waves the angle $alpha$ is equal to $90degree$, and the period simplifies to $a = lambda / 2$ again.
+In the case of the counterpropagating waves the angle $alpha$ is equal to $90 degree$, and the period simplifies to $a = lambda / 2$ again.
 See @fig:theory-lattice-intersection-angle for an illustration of the change of the interference pattern based on the angle of intersection.
 
 #figure(
@@ -91,7 +91,7 @@ $
   V(x) = V_0 dot sin^2(k x)
 $ <eq:theory-lattice-potential>
 
-The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = (2pi) / lambda$ where $lambda$ is the wavelength of the light that is used to create the optical lattice.
+The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = (2 pi) / lambda$ where $lambda$ is the wavelength of the light that is used to create the optical lattice.
 The Hamiltonian to describe non-interacting particles in the potential @eq:theory-lattice-potential is
 
 $

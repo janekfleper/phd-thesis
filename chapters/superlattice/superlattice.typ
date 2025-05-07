@@ -5,7 +5,7 @@
 While the $x$-superlattice was already mentioned in @sec:setup-xy, I will introduce the optical setup here in detail.
 The goal of/behind this bichromatic superlattice is/was to study complex one-dimensional Hubbard models/systems, especially using modulated/time-dependent potentials.
 By tuning the (relative) phase of the two individual lattices, we can adjust the tunneling amplitudes and the energy difference/offset between the individual (sub)lattice sites.
-The phases of the individual lattices accumulate over an optical path length of $tilde #qty[50][cm]$.
+The phases of the individual lattices accumulate over an optical path length of $approx #qty[50][cm]$.
 This gives us an excellent tunability of the phase by adjusting the frequency of the individual lattices.
 But it also makes the superlattice phase very sensitive to changes of the refractive index along the optical path.
 At the wavelengths $lambda_l = #qty[1064][nm]$ and $lambda_s = #qty[532][nm]$, the refractive index of air and of all/most glasses shows a (slightly) different dependency on (the) environmental parameters.

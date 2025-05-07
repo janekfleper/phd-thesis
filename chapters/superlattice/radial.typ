@@ -63,20 +63,20 @@ Without losses the coefficient $gamma$ would be $1$ and the running-wave compone
   Directly combine the contributing terms with the expansion @eq:super-radial-plus-taylor? The constant term in that expression is just @eq:super-radial-plus-local...
 ]
 To understand the implications of the superlattice potential on the radial potential we will first look at the two special cases where the local potential is either the sum or the difference of the individual lattices, see @fig:super-radial-vplus-vminus.
-Both cases require the antisymmetric superlattice configuration (as introduced in) @fig:theory-super-potential-phase with the phase $phi = +pi \/ 4$.
-The "lower" well in that case is located at $x = -pi \/ 4$, simplifying @eq:super-radial-potential to
+Both cases require the antisymmetric superlattice configuration (as introduced in) @fig:theory-super-potential-phase with the phase $phi = +pi slash 4$.
+The "lower" well in that case is located at $x = -pi slash 4$, simplifying @eq:super-radial-potential to
 
 $
   v(rho) &=
-  4 v_s (rho) \[R_s + underbrace(cos^2(pi \/ 2), 0)\]
-  - v_l (rho) \[R_l + underbrace(cos^2(pi \/ 4 - pi \/ 4), 1)\] \
+  4 v_s (rho) \[R_s + underbrace(cos^2(pi slash 2), 0)\]
+  - v_l (rho) \[R_l + underbrace(cos^2(pi slash 4 - pi slash 4), 1)\] \
   &= underbrace(4 v_s (rho) R_s, "deconfining") - underbrace(v_l (rho) [R_l + 1], "confining")
 $ <eq:super-radial-plus-local>
 
 Unless $R_s$ is really large or $v_s (rho) >> v_l (rho)$, the "local" potential term will be confining because the atoms are located at the intensity maxima of the red-detuned (long) lattice.
 #text(red)[cite Miller + Greiner here again?]
 In addition to the local term we also have to consider the zero-point term which we have to compute from the harmonic oscillator approximation.
-At $phi = +pi \/ 4$ we can directly expand the $cos^2$-terms around $x_0 = -pi \/ 4$ in @eq:super-radial-potential up to the quadratic order in the position $x$
+At $phi = +pi slash 4$ we can directly expand the $cos^2$-terms around $x_0 = -pi slash 4$ in @eq:super-radial-potential up to the quadratic order in the position $x$
 
 $
   v(x, rho) =
@@ -89,9 +89,9 @@ Only the quadratic terms are relevant for the comparison to the harmonic oscilla
 Write the harmonic oscillator potential in #text(red)[our convention] to find an expression for the zero-point energy $E_"ZP" = 1 / 2 phy.hbar omega$.
 
 $
-  V_"HO" (x) \/ #unit[Erec] &=
-  1 / 2 m omega^2 x^2 \/ #unit[Erec] space.quad #text(red)[(plug in $(x -> x \/ k)$)] \
-  &= 1 / 2 (m phy.hbar^2) / (k^2 phy.hbar^2) omega^2 x^2 \/ #unit[Erec] \
+  V_"HO" (x) slash #unit[Erec] &=
+  1 / 2 m omega^2 x^2 slash #unit[Erec] space.quad #text(red)[(plug in $(x -> x slash k)$)] \
+  &= 1 / 2 (m phy.hbar^2) / (k^2 phy.hbar^2) omega^2 x^2 slash #unit[Erec] \
   &= 1 / 4 (phy.hbar^2 omega^2) / #unit[Erec^2] x^2
 $ <eq:super-radial-harmonic-oscillator>
 
@@ -114,7 +114,7 @@ $ <eq:super-radial-plus>
 Since the zero-point term only scales with the square root of the lattice depths, the confinement will be dominated by the local term.
 The total radial potential $v_+ (rho)$ will therefore be confining unless $R_s$ is really large or $v_s (rho) >> v_l (rho)$, as already mentioned with @eq:super-radial-plus-local.
 
-For the upper well at $x_0 = +phi \/ 4$ in the lattice configuration $phi = +phi \/ 4$ the total radial potential will (effectively) be the difference of the two individual lattices.
+For the upper well at $x_0 = +phi slash 4$ in the lattice configuration $phi = +phi slash 4$ the total radial potential will (effectively) be the difference of the two individual lattices.
 
 $
   v_- (rho) = 4 v_s (rho) R_s - v_l (rho) R_l + sqrt(16 v_s (rho) - v_l (rho))

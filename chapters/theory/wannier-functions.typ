@@ -9,7 +9,7 @@ They can be computed directly from the Bloch waves $psi_(n,q) (x)$ with a Fourie
 $
   w_(n,i)(x)
   := w_n (x - x_i)
-  = 1 / sqrt(N_L) sum_(q in #h(-0.00em) upright("BZ")) #ncexp[$q x_i$] dot psi_(n,q) (x)
+  = 1 / sqrt(N_L) sum_(q in #h(-0.00em) "BZ") ncexp(q x_i) dot psi_(n,q) (x)
 $ <eq:theory-wannier-transformation>
 
 where $n$ is the band index, $N_L$ is the number of lattice sites and the sum over $q$ takes all quasi-momentum states in the first Brillouin zone into account.
@@ -54,8 +54,8 @@ $
   integral phy.dd(phy.vb(r), 3) abs(w_(n,i)(phy.vb(r)))^4
 $ <eq:theory-wannier-interaction-strength>
 
-where $a_upright("sc")$ is the scattering length that characterizes the magnitude and the sign of the interaction.
-For attractive (repulsive) interactions $#asc < 0$ ($#asc > 0$) the interaction will decrease (increase) the energy of the particles.
+where #asc is the scattering length that characterizes the magnitude and the sign of the interaction.
+For attractive (repulsive) interactions $asc < 0$ ($asc > 0$) the interaction will decrease (increase) the energy of the particles.
 Since @eq:theory-wannier-interaction-strength is proportional to the squared density, the magnitude of the interaction energy will also strongly depend on the confinement of the particles.
 A strong confinement will compress the wavefunction and therefore increase the integral in @eq:theory-wannier-interaction-strength.
 If the particles are trapped in the ground state of deep optical lattices along all three axes, we can estimate the trap by three perpendicular harmonic oscillator potentials with the trap frequencies $omega_(x,y,z)$.

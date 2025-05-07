@@ -14,10 +14,10 @@ We would therefore like to have a similar waist to not be limited by the inhomog
 With an isotropic/spherical beam we could however only reach a lattice depth of $v_s slash #unit[Erec^x532] approx 10$ which is not sufficient for our plans with the superlattice.
 #text(red)[(Note that $#unit[Erec^x532] = 4 dot #unit[Erec^x1064]$. It therefore requires much power[] to make deep lattices with an #qty[532][nm])]
 As a compromise of beam size and maximally achievable lattice depth, we are using an elliptic beam.
-The horizontal waist is $~#qty[130][μm]$ and therefore very close to the waist of the x1064-lattice.
-The vertical waist on the other hand is only $~#qty[50][μm]$.
-We directly gain this factor of $~#num[2.5]$ as an increase of the lattice depth.
-The increased inhomogeneity along the $z$-axis is not an issue since we only occupy lattice planes over a "height" of $~#qty[10][μm]$.
+The horizontal waist is $approx #qty[130][μm]$ and therefore very close to the waist of the x1064-lattice.
+The vertical waist on the other hand is only $approx #qty[50][μm]$.
+We directly gain this factor of $approx #num[2.5]$ as an increase of the lattice depth.
+The increased inhomogeneity along the $z$-axis is not an issue since we only occupy lattice planes over a "height" of $approx #qty[10][μm]$.
 
 Using different waists for the horizontal axis and the vertical axis requires a cylindrical telescope, and the beam becomes prone to astigmatism.
 In addition, the Rayleigh lengths are different by a factor of $2.5^2 approx 6$ #text(red)[check this!].

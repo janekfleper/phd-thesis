@@ -29,7 +29,7 @@ The _repumping_ beams are therefore also directly contributing to the trapping a
 
 Since the _cooling_ and _repumping_ beams have beam waists of a few #unit[cm], the initial capture region of the MOT will be equally/comparably large.
 The MOT is therefore organized in several stages/steps to start with a large initial capture region and finish with a much smaller cloud and the maximum possible #text(red)[(phase-space)] density.
-The initial stage lasts for $tilde #qty[4][s]$ until the loading from the background gas saturates.
+The initial stage lasts for $approx #qty[4][s]$ until the loading from the background gas saturates.
 In a second stage that lasts #qty[50][ms] the MOT is _compressed_ by increasing the strength of the quadrupole field and by reducing the detuning of the _cooling_ beams and the _repumping_ beams with respect to their transitions.
 Those measures will reduce the size of the atom cloud and increase the scattering rates of the beams.
 The probability that a spontaneously emitted photon is absorbed by another atom in the MOT again is therefore increased significantly.

@@ -13,9 +13,9 @@ Along the $x$-axis and the $y$-axis of the experiment we have infrared in-plane 
 The lattices are red-detuned and the lattice period is $a = #qty[0.532][μm]$ in both cases.
 To avoid reflections off the surfaces of the glass cell both lattice axes show/have an angle relative to the normal (vector) of the glass cell.
 And due to spatial constraints for the optical paths, the two in-plane lattices are not perfectly perpendicular either.
-The intersection angle is $theta approx 85^degree$ in the $x y$-plane, which has relevant implications for the band structure and the measurements of the lattice depths, see @fig:mod-coupled-band-31 and @ssec:mod-coupled-two.
+The intersection angle is $theta approx 85 degree$ in the $x y$-plane, which has relevant implications for the band structure and the measurements of the lattice depths, see @fig:mod-coupled-band-31 and @ssec:mod-coupled-two.
 
-Both infrared in-plane lattices use gaussian beams with an $1 slash e^2$ waist of $~#qty[150][μm]$ and the retro-reflecting paths use a #qty[250][mm] lens in (a) $4f$-configuration to "mode" match the retro-reflected beam.
+Both infrared in-plane lattices use gaussian beams with an $1 slash e^2$ waist of $approx #qty[150][μm]$ and the retro-reflecting paths use a #qty[250][mm] lens in (a) $4f$-configuration to "mode" match the retro-reflected beam.
 The relative (power) amplitudes of the retro-reflected beams compared to the forward-propagating beams are $gamma_"x1064" approx #num[0.8]$ and $gamma_"y1064" approx #num[0.8]$. #text(red)[Use the correct values here!]
 This is relevant for the running wave component that leads to an additional confinement #text(red)[ref sec:mu-map].
 The optical setup of the infrared x-lattice is shown in detail in @sec:super-x1064 where I will present the signifcant upgrades necessary for the stability of the lattice.
@@ -40,5 +40,5 @@ We were initally reusing the old setup, but we eventually replaced most of the o
 For the green $x$-lattice an elliptical beam shape is used.
 The in-plane waist $w_y$ is similar to the infrared $x$-lattice, and the vertical waist is much smaller at $w_z approx #qty[50][μm]$.
 This allows us to achieve a greater lattice depth compared to a round beam similar to the infrared in-plane lattices.
-The inhomogeneity over the vertical lattice planes is not an issue since the atom cloud only extends over $~#qty[10][μm]$ along the $z$-axis.
+The inhomogeneity over the vertical lattice planes is not an issue since the atom cloud only extends over $approx #qty[10][μm]$ along the $z$-axis.
 While the reduced waist makes the alignment procedure more sensitive, the pointing stability of the $x$-lattices is on the order of a few #unit[μm] which is still significantly smaller than the waist $w_z$.

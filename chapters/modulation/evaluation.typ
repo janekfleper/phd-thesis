@@ -21,9 +21,9 @@ The assumption that the lattice depth does not change with the position $z$ alon
 This is definitely the case for all optical lattices in this experiment, with the shortest Rayleigh length being #text(red)[which lattice?] (#text(red)[ref setup section!]).
 
 Another assumption for the evaluation is that the lattice depth is constant in the different vertical lattice planes.
-The atoms usually occupy the vertical lattice planes over $tilde #qty[10][μm]$.
-Even the smallest vertical waist of the x532-lattice #text(red)[ref setup section] at $tilde #qty[50][μm]$ is greater by a factor $10$ if the lattice is centered on the atom cloud.
-For the infrared in-plane lattices with waists of $tilde #qty[150][μm]$ this is even less critical.
+The atoms usually occupy the vertical lattice planes over $approx #qty[10][μm]$.
+Even the smallest vertical waist of the x532-lattice #text(red)[ref setup section] at $approx #qty[50][μm]$ is greater by a factor $10$ if the lattice is centered on the atom cloud.
+For the infrared in-plane lattices with waists of $approx #qty[150][μm]$ this is even less critical.
 If the lattices are not properly centered on the atoms, we can however see a significant reduction of the "resonances".
 We can use this signal to optimize the lattice alignment along the vertical axis where we would otherwise not have the imaging capabilities we have in the $x y$-plane.
 Even measuring the lattice modulation spectroscopy with the single-plane slicing as introduced in @sec:setup-detect would not provide a faster/better alignment procedure.
@@ -167,7 +167,7 @@ The results of the individual fits are shown in @fig:mod-eval-error.
 
 Looking at the individual fit results for the gaussian waist shows the systematic deviation between the parabolic function and the gaussian function.
 The waist is smaller for the latter fits since a gaussian function will always be wider than a parabolic function for the same value of the parameter $a$.
-For the frequencies from #qty[112][kHz] to #qty[114][kHz] the waist decreases by $tilde #qty[10][μm]$.
+For the frequencies from #qty[112][kHz] to #qty[114][kHz] the waist decreases by $approx #qty[10][μm]$.
 The most likely cause for this change is an imperfect overlap of the forward-propagating beam and the retro-propagating beam.
 We cannot differentiate whether this is caused a misalignment of the optical axes or a small mismatch of the optical waists #text(red)[or is there a way to check this?].
 At modulation frequencies $>#qty[114][kHz]$ the waist deviates significantly.
@@ -176,7 +176,7 @@ We will therefore only consider the waists up to #qty[114][kHz] to estimate the 
 See the summarized results in @tab:mod-eval-error for the actual mean waist(s) and the corresponding error(s).
 
 For the lattice depth $a_0$ there is no significant difference visible between the parabolic function and the gaussian function.
-The data points at #qty[112][kHz] show a relative deviation of $tilde #num[1e-3]$, and this is by far the maximum deviation across the measurement.
+The data points at #qty[112][kHz] show a relative deviation of $approx #num[1e-3]$, and this is by far the maximum deviation across the measurement.
 While it appears that the global result deviates significantly from the mean of the individual results, this is not true when taking the errors of the individual parameters into account.
 The two outer frequencies have the largest error, the weighted averages will therefore be much closer to the global values.
 These weights are also implicitely included in the global fit.
@@ -230,9 +230,9 @@ See @tab:mod-eval-error for the averaged results of the position $y_0$ and the a
     stroke: table-stroke.with(stroke: black + 0.5pt),
     table.header(
       [],
-      $"Waist" w_0 slash#unit[μm]$,
+      $"Waist" w_0 slash #unit[μm]$,
       $"Lattice depth" a_0$,
-      $"Position" y_0 slash#unit[px]$,
+      $"Position" y_0 slash #unit[px]$,
       $"Angle" theta.alt slash degree$,
     ),
 
@@ -249,7 +249,7 @@ See @tab:mod-eval-error for the averaged results of the position $y_0$ and the a
   ],
 ) <tab:mod-eval-error>
 
-From the values presented in @tab:mod-eval-error we can draw the conclusion that the depth $a_0$ of the x1064-lattice can be measured with a relative error of $~#num[1e-3]$ regardless for both a parabolic function and a gaussian function to model the lattice depth.
+From the values presented in @tab:mod-eval-error we can draw the conclusion that the depth $a_0$ of the x1064-lattice can be measured with a relative error of $approx #num[1e-3]$ regardless for both a parabolic function and a gaussian function to model the lattice depth.
 The position $y_0$ and the angle $theta.alt$ yield the same result for the two model functions as well.
 The waist $w_0$ is the only parameter with a measurable difference between the two model functions, which is also expected since the parabola only takes the leading order of the gaussian beam profile into account.
 While the difference of the waist between the two functions is still smaller than error we obtained from the individual fits, it is nevertheless just better to use the gaussian function to model the lattice depth.
@@ -277,7 +277,7 @@ The main difference compared to the x1064-lattice is the direction of the propag
 For the y1064-lattice the forward-propagating beam is (almost) perfectly on the $y$-axis, we therefore expect the lattice depth to change as a function of the position $x$.
 The z532-lattice is slightly more complicated due to the shallow-angle setup.
 While the lattice vector $Delta phy.vb(k)$ points along the $z$-axis, the beams are both propagating in the $y z$-plane.
-We therefore "see" the actual waist of $w_0 approx #qty[120][μm]$ along the $x$-axis, but the "effective" waist along the $y$-axis is reduced due to the angle $alpha approx 14.5degree$ relative to the $x y$-plane, see @sec:setup-z #text(red)[ref the figure here instead?].
+We therefore "see" the actual waist of $w_0 approx #qty[120][μm]$ along the $x$-axis, but the "effective" waist along the $y$-axis is reduced due to the angle $alpha approx 14.5 degree$ relative to the $x y$-plane, see @sec:setup-z #text(red)[ref the figure here instead?].
 The effective waist along the $y$-axis amounts to $w_0 slash tan(alpha) approx #qty[450][μm]$.
 Since the "inverse width" parameter $a$ of the lattice depth scales quadratically with the waist according to @eq:mod-eval-waist, we expect the changes of the lattice depth to be $~14$ times smaller compared to the changes of the lattice depth along the $x$-axis.
 While it would be possible to include such an aspect ratio in the lattice depth model @eq:mod-eval-model-resonance, we cannot resolve the ellipticity in the resonance lines if the z532-lattice is properly aligned.
@@ -293,9 +293,9 @@ We will not look at the detailed comparison of the global fit to the individual 
     stroke: table-stroke.with(stroke: black + 0.5pt),
     table.header(
       [],
-      $"Waist" w_0 slash#unit[μm]$,
+      $"Waist" w_0 slash #unit[μm]$,
       $"Lattice depth" a_0$,
-      $"Position" x_0 slash#unit[px]$,
+      $"Position" x_0 slash #unit[px]$,
       $"Angle" theta.alt slash degree$,
     ),
 

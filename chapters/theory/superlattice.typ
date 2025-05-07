@@ -33,7 +33,7 @@ See @fig:theory-super-potential-phase for an illustration of the superlattice po
 For the superlattice potential it is also useful to express @eq:theory-super-potential in dimensionless units.
 Since there are two characteristic length scales and two characteristic energy scales, one of the lattices has to be chosen as the reference.
 In momentum space the quasi-momentum $q$ will again be limited to the first Brillouin-zone which will be based on the wavevector of the long lattice since $k_l = k_s slash 2$.
-We will therefore transform the coordinate $x -> x slash k_l$ and we will use $E_"rec,l" = (phy.hbar^2 k_l^2) / (2m)$ as the characteristic energy scale.
+We will therefore transform the coordinate $x -> x slash k_l$ and we will use $#unit[Erecl] = (phy.hbar^2 k_l^2) / (2m)$ as the characteristic energy scale.
 The potential @eq:theory-super-potential will therefore be
 
 $
@@ -41,7 +41,7 @@ $
   = 4 v_s dot cos^2(2x) - v_l dot cos^2(x + phi)
 $ <eq:theory-super-potential-dimensionless>
 
-where the prefactor of the short lattice term is chosen such that $v_s$ is the lattice depth in units of $E_"rec,s" = 4 E_"rec,l"$.
+where the prefactor of the short lattice term is chosen such that $v_s$ is the lattice depth in units of $#unit[Erecs] = 4 #unit[Erecl]$.
 The illustration of the superlattice potential in @fig:theory-super-potential-phase is using the dimensionless lattice depths.
 
 #figure(

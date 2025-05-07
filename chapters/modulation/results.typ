@@ -38,8 +38,8 @@ This is mainly a concern for the excited/upper band with $n = 3$ since this corr
 But this is not nearly narrow enough for a lattice modulation spectroscopy measurement.
 There is however no universal function to quantify the minimum lattice depth for a given band transition.
 This has to be checked individually for each band, and if the width of the upper band is not completely negligible the it has to be taken into account as a systematic error.
-For the transition $1 -> 3$ we usually use a lattice depth of at least #qty[60][Erec] where the width of the third band amounts to $tilde #qty[0.17][kHz]$.
-The transition frequency is three orders of magnitude greater at $tilde #qty[120][kHz]$ and we can therefore confidently say that the band width is negligible.
+For the transition $1 -> 3$ we usually use a lattice depth of at least #qty[60][Erec] where the width of the third band amounts to $approx #qty[0.17][kHz]$.
+The transition frequency is three orders of magnitude greater at $approx #qty[120][kHz]$ and we can therefore confidently say that the band width is negligible.
 
 #figure(
   grid(
@@ -54,7 +54,7 @@ The transition frequency is three orders of magnitude greater at $tilde #qty[120
 
   caption: [
     Width of excited bands as a function of the lattice depth.
-    The figure on the left shows an optical lattice with a depth of $v_0 = #qty[40][_E_#sub[rec]]$ where the bands $1$ to $4$ are trapped in the sense that $epsilon_n (q) < v_0$.
+    The figure on the left shows an optical lattice with a depth of $v_0 = #qty[40][Erec]$ where the bands $1$ to $4$ are trapped in the sense that $epsilon_n (q) < v_0$.
     The bands $5$ and $6$ are untrapped and there is only a very small gap between the two bands since their dispersion relation is basically that of a free particle.
     The figure on the right highlights how the widths of the bands change around the amplitude where the bands start to be trapped.
     While the change is not instant, we can see a clear connection between the bandwidth and the difference between $epsilon_n (q)$ and $v_0$.
@@ -65,7 +65,7 @@ The transition frequency is three orders of magnitude greater at $tilde #qty[120
 
 With suitable modulation parameters (#text(red)[ref to optimization section?]) the in-situ lattice modulation spectroscopy produces nicely visible "resonances" where the local lattice depth matches the modulation frequency.
 In @fig:mod-results-images a series of images is shown for the lattice modulation spectroscopy measurement in the x1064-lattice.
-The lattice has a $1 slash e^2$ waist of $tilde #qty[140][μm]$ and the atoms occupy a region of $plus.minus #qty[50][μm]$ around the optical axis.
+The lattice has a $1 slash e^2$ waist of $approx #qty[140][μm]$ and the atoms occupy a region of $plus.minus #qty[50][μm]$ around the optical axis.
 We can therefore use a parabola to approximate the lattice depth as a function of the radius (#text(red)[see ref evaluation section for the quantitative comparison between a parabola and a Gaussian function]).
 The behaviour of the resonances in @fig:mod-results-images qualitative matches a parabolic lattice depth.
 With an increasing radius the resonances become narrower and their spacing also decreases for equidistant frequencies.
@@ -85,6 +85,6 @@ The details of the evaluation are presented in @sec:mod-eval.
     The expected frequency for the transition $1 -> 3$ is $f approx #qty[115.5][kHz]$ which removes the atoms in the center (on the optical axis) of the lattice.
     As the modulation frequency is decreased, the "resonance" moves away from the optical axis.
     The spacing of the resonances and their widths also become smaller as a function of the radius.
-    Note that the angle of the resonances matches the angle of $tilde 4.5degree$ of the x1064-lattice relative to the camera frame.
+    Note that the angle of the resonances matches the angle of $approx #num[4.5] degree$ of the x1064-lattice relative to the camera frame.
   ],
 ) <fig:mod-results-images>

@@ -40,9 +40,9 @@ We used a (lattice) modulation time of #qty[100][ms] to achieve a good time reso
 #text(red)[reference modulation chapter/section here on the optimization of the modulation time?]
 #text(red)[Mention shallow lattices with #qty[6][Erec] somewhere?]
 Further reducing the modulation time was not necessary to resolve the changes of the lattice due to the thermal lensing as shown in @fig:super-thermal-x1064-ph.
-We found that the lattice depth $a_0$ is reduced (or decays exponentially?) by $~#qty[5][%]$ during the first second of the holding time.
-After this initial (strong) decrease/decay, the lattice depth is further reduced linearly by $~#qty[0.2][%/s]$.
-The measured/evaluated waist $w_0$ of the optical lattice increases by $~#qty[15][μm]$ during the first second, matching the behavior of the lattice depth.
+We found that the lattice depth $a_0$ is reduced (or decays exponentially?) by $approx #qty[5][%]$ during the first second of the holding time.
+After this initial (strong) decrease/decay, the lattice depth is further reduced linearly by $approx #qty[0.2][%/s]$.
+The measured/evaluated waist $w_0$ of the optical lattice increases by $approx #qty[15][μm]$ during the first second, matching the behavior of the lattice depth.
 We therefore concluded that the foci of the forward-propagating and retro-propagating lattice beams are shifted such that we get a shallower (but wider) lattice at the position of the atoms.
 
 #figure(
@@ -65,7 +65,7 @@ We therefore concluded that the foci of the forward-propagating and retro-propag
 ) <fig:super-thermal-x1064-ph>
 
 
-The change of the position $y_0$ by $~#qty[1][px]$ (#text(red)[use lattice site $a$ as unit instead?]) during the holding time is insignificant compared to the changes of the other two lattice parameters.
+The change of the position $y_0$ by $approx #qty[1][px]$ (#text(red)[use lattice site $a$ as unit instead?]) during the holding time is insignificant compared to the changes of the other two lattice parameters.
 This does not completely rule out thermal effects on the beam pointing since the lattice depth would also be reduced if the overlap of the lattice beams gets worse.
 Measurements of the lattice beams with a camera did however show that the beam positions are constant down to a few #unit[μm].
 The beam waists and beam amplitudes (intensity in the center) on the camera did however show changes that match the measurements with the atoms in @fig:super-thermal-x1064-ph.
@@ -110,7 +110,7 @@ From these measurements with the camera we could already see that the total effe
 #text(red)[just reference the modulation/superlattice section here?]
 As explained in #text(red)[ref modulation/superlattice section] we always want to use the lower well at the antisymmetric phase $phi = pi / 4$ for the in-situ lattice modulation in the x-superlattice.
 This gives us the highest effective/greatest lattice depth as "the sum" of the x1064-lattice and the x532-lattice, and the band structure will have the smallest sensitivity to small changes of the phase $phi$.
-At the maximum x532-lattice depth of $~#qty[20][Erec]$ we can/could achieve, the bands $n = 3$ and $n = 4$ are sufficiently narrow and have the same parity as the lowest band $n = 1$.
+At the maximum x532-lattice depth of $approx #qty[20][Erec]$ we can/could achieve, the bands $n = 3$ and $n = 4$ are sufficiently narrow and have the same parity as the lowest band $n = 1$.
 We will therefore use these two transitions to determine the thermally-induced change of the x532-lattice depth.
 While both transitions $1 -> 3$ and $1 -> 4$ have similar frequencies, they each scale differently with the lattice depths $v_l$ and $v_s$.
 The frequency/energy of the transition $1 -> 4$ is around #text(red)[$10?$] times more sensitive to the lattice depth $v_s$ than the frequency/energy of the transition $1 -> 3$.
@@ -131,9 +131,9 @@ After a few seconds the measured depth would settle/converge to an increasingly 
 We therefore opted to measure the "settled" lattice depth as a function of $v_s$ at $t_"hold" = #qty[3][s]$.
 This allowed us to use a longer modulation time of #qty[500][ms] #text(red)[which is preferred for the in-situ x-superlattice measurements?]
 The results for the measurement interval/range $v_s = [14.4, ..., 24]$ are presented in @fig:super-thermal-x532-ph, confirming the non-linear decrease/decay of the lattice depth.
-At $v_s = #num[14.4]$ the "settled" lattice depth is already reduced by $~#qty[10][%]$ which is already twice the change of the x1064-lattice at its maximal depth.
-The relative "loss" of the lattice depth at $v_s = #num[24]$ already amounts to $~#qty[30][%]$.
-If we assume that the foci of the forward-propagating beam and the retro-propagating beam were (perfectly) located at the position of the atoms, such a change of the lattice depth would correspond to a shift of the focal positions by $~#qty[10][mm]$ if we only consider the (vertical) Rayleigh length of $~#qty[15][mm]$.
+At $v_s = #num[14.4]$ the "settled" lattice depth is already reduced by $approx #qty[10][%]$ which is already twice the change of the x1064-lattice at its maximal depth.
+The relative "loss" of the lattice depth at $v_s = #num[24]$ already amounts to $approx #qty[30][%]$.
+If we assume that the foci of the forward-propagating beam and the retro-propagating beam were (perfectly) located at the position of the atoms, such a change of the lattice depth would correspond to a shift of the focal positions by $approx #qty[10][mm]$ if we only consider the (vertical) Rayleigh length of $approx #qty[15][mm]$.
 For the horizontal waist the effect of the thermal lensing is a lot more complicated since the thermal lensing also changes the Rayleigh length itself and therefore the waist at the focus.
 #text(red)[Mention waists from @fig:super-thermal-x532-ph here.]
 
@@ -311,7 +311,7 @@ Note that the ray-tracing simulation is not be applicable to the setup of the x1
   caption: [
     Dummy setup to simulate the focal shift induced by (a) thermal lens(ing).
     The beam is initially collimated with a radius of $r = w_0$.
-    A thermal lens then slightly focusses the beam before it is demagnified by the factor $mag = f_1 \/ f_2$ in a telescope to (later) get the correct beam shape/waist at the position of the atoms.
+    A thermal lens then slightly focusses the beam before it is demagnified by the factor $mag = f_1 slash f_2$ in a telescope to (later) get the correct beam shape/waist at the position of the atoms.
     After a propagation by the distance $d$ the beam is focusses onto the atoms with the 2 inch lens #text(red)[ref anything?] with $f = #qty[250][mm]$.
 
     #[
@@ -332,7 +332,7 @@ In our setup the (effective) focal length was $cal(O)(#qty[10][m])$ which is (ve
 We will therefore use the optical power
 
 $
-  #power = 1 \/ f_"thermal"
+  #power = 1 slash f_"thermal"
 $ <eq:super-thermal-simulation-power>
 
 to characterize the thermal lens(ing).
@@ -347,13 +347,13 @@ In the ABCD (or ray transfer) matrix formalism we can describe the propagation o
 
 $
   phy.vb(v_1) =
-  mat(1, 0; -1\/f, 1) dot
+  mat(1, 0; -1 slash f, 1) dot
   mat(1, d; 0, 1) dot
-  mat(-1\/mag, L; 0, -mag) dot
+  mat(-1 slash mag, L; 0, -mag) dot
   phy.vb(v_0)
 $ <eq:super-thermal-simulation-v1>
 
-where $mag = f_1 \/ f_2$ and $L = f_1 + f_2$ are the demagnification and the length of the telescope, $d$ is the propagation distance between the telescope and the (atom) lens, and $f$ is the focal length of the (atom) lens.
+where $mag = f_1 slash f_2$ and $L = f_1 + f_2$ are the demagnification and the length of the telescope, $d$ is the propagation distance between the telescope and the (atom) lens, and $f$ is the focal length of the (atom) lens.
 
 Without thermal lensing ($power = 0$) we would expect the beam to be focussed at distance $f$ from the last lens.
 To quantify the thermal lensing we are therefore going to compute the shift from the expected focus (as a function of the thermal lensing strength $power$).
@@ -377,7 +377,7 @@ The quadratic scaling however completely neutralizes this "trick".
 If the thermal lensing $power$ is proportional to the intensity prefactor $I_0$ of the gaussian beam, the order of the thermal lens(ing) and the telescope does not matter #text(red)[@ssec:super-thermal-theory or an equation/figure?].
 Any reduction of $power$ due to a larger beam will be applied (or recovered?) by the telescope through the factor $mag^2$ again.
 Due to the ellipticity of the x532-lattice beam we can expect a different shift $delta$ for the horizontal/in-plane axis/focus and the vertical axis/focus.
-With an aspect ratio of $~#num[3]$ the shift $delta_"horizontal"$ should be greater than the shift $delta_"vertical"$ by a factor of $~#num[9]$.
+With an aspect ratio of $approx #num[3]$ the shift $delta_"horizontal"$ should be greater than the shift $delta_"vertical"$ by a factor of $approx #num[9]$.
 #text(red)[Add the comparison of the ray simulation and gaussian simulation here.]
 
 
@@ -495,7 +495,7 @@ For the beam shaping we used one telescope with regular lenses (#text(red)[is th
 After the two telescopes the x532-lattice beam passed through the two glass plates to shift the position relative to the x1064-lattice beam, before the x532-lattice beam is overlapped with the horizontal dipole beam and the x1064-lattice beam at the dichroic mirror.
 The rest of the optical path is shared with the x1064-lattice.
 
-We found that the telescopes were contributing roughly $1\/2$ of the total thermal lensing (strength?).
+We found that the telescopes were contributing roughly $1 slash 2$ of the total thermal lensing (strength?).
 The other half of the thermal lensing (strength) was caused by the optical isolator#footnote[#text(red)[Conoptics M712A]] and the following/trailing polarizing beam splitter.
 In the telescopes achromatic lenses were used even though they were not necessary given the beam size of $<#qty[1][mm]$ and the (absolute) focal lengths between #qty[50][mm] and #qty[150][mm].
 Removing one of the telescopes as we did for the x1064-lattice setup was not possible since we wanted to be able to adjust the vertical focus and the horizontal focus separately.

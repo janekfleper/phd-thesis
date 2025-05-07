@@ -10,8 +10,8 @@ Since the lattices are not perfectly perpendicular we also expected this "cross-
 To actually understand where the coupling shows up in the Bloch theorem and how this affects the band structure(s) we had to solve the Bloch theorem in two dimensions.
 I will only present the resulting band structures in this section, the step-by-step calculation and the technical details of the theory are shown in #text(red)[ref appendix].
 
-Based on the in-situ lattice modulation measurement results @tab:mod-eval-error and @tab:mod-eval-error-other we know that the relative angle of the x-lattices and the y1064-lattice deviates by $#num[4.9(5)]degree$ from $90degree$.
-In the theoretical model we assume that the y1064-lattice is perfectly parellel to the $y$-axis, and the x-lattices have an angle of $alpha = #num[4.9]degree$ relative to the $x$-axis.
+Based on the in-situ lattice modulation measurement results @tab:mod-eval-error and @tab:mod-eval-error-other we know that the relative angle of the x-lattices and the y1064-lattice deviates by $#num[4.9(5)] degree$ from $90degree$.
+In the theoretical model we assume that the y1064-lattice is perfectly parellel to the $y$-axis, and the x-lattices have an angle of $alpha = #num[4.9] degree$ relative to the $x$-axis.
 #text(red)[Mention here again that this is easier than two angles? Or just mention this in the appendix?]
 This is only the relevant angle in the $x y$-plane, but the $x$-lattices also have an angle relative to the $x y$-plane #text(red)[ref figure setup/x-lattices].
 This will also cause a coupling between the $x$-lattices and the z532-lattice (which is perfectly parallel to the $x y$-plane).

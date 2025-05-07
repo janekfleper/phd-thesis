@@ -16,10 +16,10 @@
 
 The rich hyperfine structure of #phy.isotope("K", a: [40]) as shown in @fig:setup-k40-hfs is in incredibly useful tool for the detection of the atoms.
 The internal state of the atoms can be changed with simple radio frequency sweeps.
-Since the magnetic field at $~#qty[200][G]$ corresponds to the intermediate regime for the hyperfine structure, each (adjascent) pair of magnetic hyperfine states has a unique energy/frequency difference.
-The transition frequency is always around $~#qty[50][MHz]$, and the frequency differences between transitions are $~#qty[2][MHz]$ which is comfortably resolvable.
+Since the magnetic field at $approx #qty[200][G]$ corresponds to the intermediate regime for the hyperfine structure, each (adjascent) pair of magnetic hyperfine states has a unique energy/frequency difference.
+The transition frequency is always around $approx #qty[50][MHz]$, and the frequency differences between transitions are $approx #qty[2][MHz]$ which is comfortably resolvable.
 By using (Landau-Zener) frequency sweeps instead of $pi$-pulses the state transfer becomes insensitive to small changes of the magnetic field.
-For the regular RF pulses where the states are spaced by $~#qty[2][MHz]$, we are using pulse widths of #qty[175][kHz] with a pulse length of #qty[2][ms].
+For the regular RF pulses where the states are spaced by $approx #qty[2][MHz]$, we are using pulse widths of #qty[175][kHz] with a pulse length of #qty[2][ms].
 To maximize the transfer efficiency an envelope is applied to the RF signal to gracefully ramp the Rabi frequency up and down #text(red)[ref Eugenio].
 If we need transfers with a better frequency resolution, we are using HS1 pulses #text(red)[later in this section].
 
@@ -69,7 +69,7 @@ If the power line phase reaches a certain setpoint, the sequence is resumed and 
 === Saturated absorption imaging <ssec:setup-detect-imaging>
 
 We are using saturated absorption imaging to measure the (optical) density of the atoms at the end of the sequence.
-The imaging is done with #qty[10][μs] pulses from the MOT (cooling) laser tuned to the transition #phy.ket($F = 9 slash 2, m_F = -9 slash 2$) -> #phy.ket($F' = 11 slash 2, m_F = -11 slash 2$).
+The imaging is done with #qty[10][μs] pulses from the MOT (cooling) laser tuned to the transition $phy.ket(F = 9 slash 2 comma m_F = -9 slash 2) -> phy.ket(F' = 11 slash 2 comma m_F = -11 slash 2)$.
 We are able to measure two different atom images per sequence in quick succession by using the fast kinetics mode of the Andor X888? camera.
 As a (spatial) reference for the imaging pulse we then grab a third image (so-called _bright_ image) without any atoms.
 From (the logarithm of) the difference between the atom images and the bright image we can compute the optical density in the two atom images.
