@@ -26,3 +26,4 @@ Towards the end of the chapter I will showcase how we use the measurement for th
 #include "evaluation.typ"
 #include "loss.typ"
 #include "coupled.typ"
+#include "alignment.typ"
