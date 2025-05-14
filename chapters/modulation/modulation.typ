@@ -27,3 +27,4 @@ Towards the end of the chapter I will showcase how we use the measurement for th
 #include "loss.typ"
 #include "coupled.typ"
 #include "alignment.typ"
+#include "superlattice.typ"
