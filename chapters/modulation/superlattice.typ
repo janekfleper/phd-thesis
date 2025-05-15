@@ -144,7 +144,41 @@ It could be possible to find a transition that is sensitive to $v_l$ at a phase 
 This would however also introduce a (stronger) sensitivity to the phase $phi$ again.
 While this can of course be ruled out/handled by (experimentally) stabilizing the phase, it will definitely make the measurements more difficult/prone to errors.
 
-At the start of this section we motivated the in-situ superlattice modulation as a tool to calibrate the lattice depth $v_s (x, y)$.
-The (primary) sensitivity of the transition frequency $1 -> 4$ to $v_s$ is therefore (actually) perfect for this use case.
-Since we can measure the infrared/long lattice depth without the superlattice (potential), we can just (re)use the lattice depth $v_l (x, y)$ for the theory of the superlattice fit model.
-The lattice depth $a_0$, the lattice position $y_0$ and the lattice waist $w_0$ will then not be fit parameters but rather constant/static function arguments.
+At the start of this section we motivated the in-situ superlattice modulation as a tool to (indirectly) calibrate the lattice depth $v_s (x, y)$.
+The (primary) sensitivity of the transition frequency $1 -> 4$ to $v_s$ is therefore (actually) perfect for our use case.
+While the transition frequency is (significantly) less sensitive to $v_l$, it is still essential to use the actual lattice depth $v_l (x, y)$ to get correct result for the lattice depth $v_s (x, y)$.
+We will therefore use the result of the in-situ lattice modulation measurement in the x1064-lattice for the theory of the superlattice fit model.
+The parameters of the x1064-lattice depth will then only be included as constant function arguments.
+The actual evaluation then works as already explained in @sec:mod-eval for the monochromatic lattices.
+There are four parameters to model the short lattice depth $v_s (x, y)$ and there is an amplitude and a width to model the resonance/transition $1 -> 4$.
+The resonance function @eq:mod-eval-model-resonance will then use the frequency $f_(1->4) (v_s; v_l, phi)$ from the superlattice band structure introduced in @sec:theory-super to model the resonance(s) (lines) in the atom images.
+
+For the in-situ superlattice modulation measurements we have decided to modulate the amplitude/depth of the short lattice.
+Due to the smaller spacing of the short lattice the modulation amplitude can be smaller than for the long lattice to achieve the same resonance signal. #text(red)[is this actually true? confirm with theory + data?]
+We are using a (relative) modulation amplitude of #text(red)[$? %$] for a modulation time of #qty[0.75][s] to obtain resonance lines with a good visibility #text(red)[define any threshold here in @sec:mod-eval?].
+In @fig:mod-super-result we can see the comparison of the fitted lattice depth to the (cut through the) atom densities/images for a single measurement, and the corresponding lattice depths $v_s$ and $v_l$ as a function of the position $y$.
+The "theory" in the left (sub)figure shows the frequency $f_(1 -> 4)$ as a function of $v_s$, $v_l$ and $phi$ evaluated at $x = 0$.
+Since this does not (actually) reveal the individual lattice depths, these are shown in the figure on the right.
+We can see that the amplitude $v_s$ decreases much faster than the amplitude $v_l$ because of the smaller waist #text(red)[ref setup/superlattice section?].
+While the waists were already expected to be different, we can also see a small positional shift between the two lattices.
+With a few #unit[μm] this shift is negligible compared to the waists $w_0 approx #qty[120][μm]$ and $w_0 approx #qty[140][μm]$ of the short lattice and the long lattice respectively.
+If this shift would be larger, e.g. on the order of #qty[10][μm], we would have to figure out a way to align the positions of the two lattices separately.
+As mentioned in @sec:mod-align the lattice positions are mainly/only changed by the retro-reflecting mirror.
+Since this mirror is shared for the two lattices, we could only ever move them by the same distance with the angle(s) of the mirror.
+We would have needed to add a refractive element to the retro-propagating path to achieve a shift between the lattices.
+In the forward-propagating path of the x532-lattice we are doing something similar to adjust the relative angle of the lattices.
+This is relevant for the phase $phi(x, y)$ as a function of the position and will be discussed/introduced in #text(red)[chapter phase].
+
+#figure(
+  grid(
+    columns: 2,
+    stroke: black,
+    inset: 1em,
+    [show the cut through the atom density here, equivalent to @fig:mod-eval-parabola and @fig:mod-eval-comparison-other],
+    [show the cut through the parabolas $v_l$ and $v_s$ here],
+  ),
+  caption: [
+    Result of the lattice depth calibration with the in-situ superlattice modulation technique.
+
+  ],
+) <fig:mod-super-result>
