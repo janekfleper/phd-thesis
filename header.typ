@@ -5,3 +5,9 @@
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
 #let asc = $a_upright("sc")$
+
+// make this a global function in header.typ?
+#let table-stroke(x, y, stroke: none) = {
+  if (y == 0) { (bottom: stroke) }
+  if (x == 0) { (right: stroke) }
+}

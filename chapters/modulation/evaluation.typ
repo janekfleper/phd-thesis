@@ -218,12 +218,6 @@ See @tab:mod-eval-error for the averaged results of the position $y_0$ and the a
 ) <fig:mod-eval-error>
 
 
-// make this a global function in header.typ?
-#let table-stroke(x, y, stroke: none) = {
-  if (y == 0) { (bottom: stroke) }
-  if (x == 0) { (right: stroke) }
-}
-
 #figure(
   table(
     columns: 5,
