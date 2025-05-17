@@ -156,29 +156,101 @@ The resonance function @eq:mod-eval-model-resonance will then use the frequency 
 For the in-situ superlattice modulation measurements we have decided to modulate the amplitude/depth of the short lattice.
 Due to the smaller spacing of the short lattice the modulation amplitude can be smaller than for the long lattice to achieve the same resonance signal. #text(red)[is this actually true? confirm with theory + data?]
 We are using a (relative) modulation amplitude of #text(red)[$? %$] for a modulation time of #qty[0.75][s] to obtain resonance lines with a good visibility #text(red)[define any threshold here in @sec:mod-eval?].
-In @fig:mod-super-result we can see the comparison of the fitted lattice depth to the (cut through the) atom densities/images for a single measurement, and the corresponding lattice depths $v_s$ and $v_l$ as a function of the position $y$.
-The "theory" in the left (sub)figure shows the frequency $f_(1 -> 4)$ as a function of $v_s$, $v_l$ and $phi$ evaluated at $x = 0$.
-Since this does not (actually) reveal the individual lattice depths, these are shown in the figure on the right.
+On the left side in @fig:mod-super-result we can see the (good?) overlap of the atom images around the center of the cloud and/with the transition frequency $f_(1->4)$ computed from the (superlattice) band structure (theory).
+Since the frequency is a function of $v_s$, $v_l$ and $phi$, we see an effective (superlattice) depth in the fit result/theory.
+We have to compare the individual lattice depth functions $v_s (x, y)$ and $v_l (x, y)$ (on the right side of the figure) to (actually) see the result of the measurement.
+The functions only show the relative lattice depths to allow a (simple) comparison/visualization on the same y-axis.
+Both maxima are (slightly) different from #num[1.0], see @tab:mod-super-result for the detailed results.
+Some variation around $a_0 = #num[1.0]$ is expected for all lattices #text(red)[(as mentioned earlier in start of chapter)] since we do not update the calibration factors in the alignment sequence.
+
 We can see that the amplitude $v_s$ decreases much faster than the amplitude $v_l$ because of the smaller waist #text(red)[ref setup/superlattice section?].
 While the waists were already expected to be different, we can also see a small positional shift between the two lattices.
-With a few #unit[μm] this shift is negligible compared to the waists $w_0 approx #qty[120][μm]$ and $w_0 approx #qty[140][μm]$ of the short lattice and the long lattice respectively.
-If this shift would be larger, e.g. on the order of #qty[10][μm], we would have to figure out a way to align the positions of the two lattices separately.
-As mentioned in @sec:mod-align the lattice positions are mainly/only changed by the retro-reflecting mirror.
-Since this mirror is shared for the two lattices, we could only ever move them by the same distance with the angle(s) of the mirror.
+Compared to the waists of the lattices (see @tab:mod-super-result) this shift is however negligible.
+Only if this shift would be larger, e.g. on the order of #qty[10][μm], we would have to figure out a way to align the positions of the two lattices separately.
+This would not have been trivial since the lattice positions can mainly/only be changed by the retro-reflecting mirror.
+Since this mirror is shared for the two lattices, we can only ever move them by the same distance.
 We would have needed to add a refractive element to the retro-propagating path to achieve a shift between the lattices.
+#text(red)[Actually reference the x532-plate?]
 In the forward-propagating path of the x532-lattice we are doing something similar to adjust the relative angle of the lattices.
 This is relevant for the phase $phi(x, y)$ as a function of the position and will be discussed/introduced in #text(red)[chapter phase].
 
+For the estimation of the measurement errors we are using the evaluation/fits in two steps.
+The initial evaluation/fit will consider all images of the scan to get the global result.
+With these parameters as the starting values we are then evaluating the individual images of each scan with the same fit model.
+Only the lattice parameters $y_0$, $theta.alt$ and $a_0$ or $a$ are then varied.
+The averages of these individual lattice parameters are then used to compute the mean values and errors of the measurement.
+In @tab:mod-super-result the results for the x1064-lattice and x532-lattice are compared/presented.
+The results for/of the x1064-lattice are taken from the monochromatic measurement just before the superlattice one.
+As a reminder, these values are also used as the parameters of the long lattice in the evaluation of the superlattice data/measurement.
+Only the (superlattice) angle $theta.alt$ can slightly change the x1064-lattice depth again.
+
 #figure(
-  grid(
-    columns: 2,
-    stroke: black,
-    inset: 1em,
-    [show the cut through the atom density here, equivalent to @fig:mod-eval-parabola and @fig:mod-eval-comparison-other],
-    [show the cut through the parabolas $v_l$ and $v_s$ here],
-  ),
+  image("/figures/2025-01-28_calibration_thesis_result_xsuper.png", width: 90%),
   caption: [
     Result of the lattice depth calibration with the in-situ superlattice modulation technique.
+    The selected lattice depths for the measurement were $v_l = #qty[60][Erec]$ and $v_s = #qty[18][Erec]$, and the superlattice phase was set to $phi = #qty[0.250(4)][#sym.pi]$.
+    The figure on the left shows the average of the images in the interval $x = [-10, 10] #text(red)[#unit[px]]$.
+    Due to the angle $theta.alt$ of the x-lattices relative to the x-axis, the signal is slightly broadened by the averaging.
+    The resulting transition frequency $f_(1 -> 4)(x, y)$ is averaged over the same interval to get a #text(red)[meaningful] comparison.
+    In the figure on the right the relative lattice depth functions $v_s (x, y)$ and $v_l (x, y)$ are shown in the interval corresponding to the data in the figure on the left.
+    The vertical offset shows the calibration/correction factor that want to measure with the in-situ lattice modulation technique.
 
+    #show list: set text(red)
+    - Add a colorbar for the left figure?
+    - Mention the real phase here? Estimate the error due to the phase?
+    - Change to $v_s = #qty[18][Erec]$ in the entire section?
+    - Add shaded area to indicate the error of $v_s$ and $v_l$?
+    - Use #unit[μm] as the x-axis?
+    - Add vertical lines to show $y_0$ in the figure on the right?
   ],
 ) <fig:mod-super-result>
+
+#text(red)[Find a better first sentence here...]
+If we look at the resulting parameters in @tab:mod-super-result, we can see that the in-situ lattice modulation also works well in a superlattice potential.
+The (relative) error of the x532-lattice depth is slightly larger than the errors from the monochromatic lattice measurements.
+With just $approx #num[0.2]%$ the result is however still great considering that the x532-lattice was measured "on top" of the x1064-lattice.
+At $v_s = #qty[18][Erec]$ a regular/monochromatic lattice modulation measurement would have been significantly worse due to the width of all (accessible/available?) excited bands.
+The positions $y_0$ of the two lattices confirm the visible shift from/in @fig:mod-super-result.
+Since the difference/shift is only $approx #qty[1.5][μm]$ we can however neglect this compared to the waists $w_0$.
+Both waists are greater by a factor (of) #num[100], matching their respective values from the thermal lensing investigation in @sec:super-thermal #text(red)[check this!].
+The resulting angles from the two measurements are in good/perfect agreement.
+While we have a much more sensitive measurement of the relative angle of the lattices as shown in #text(red)[ref phase chapter/section] the in-situ lattice modulation should also reflect/show this (up to the available resolution).
+If we had a large (relative) angle between the lattices that is too large for the phase-sensitive/phase-based measurement, we could use the in-situ lattice modulation technique for the coarse alignment.
+At/after the resolution limit of the in-situ lattice modulation measurement, we can then use the phase-sensitive measurement for the precise alignment.
+Note that this would only work (directly) for a (horizontal) relative angle in the $x y$-plane.
+For a (vertical) angle in the $x z$-plane we would have to rely on the contrast of the resonance lines during the in-situ superlattice modulation or the contrast of the symmetry line in the in-situ phase measurement as shown in #text(red)[ref phase chapter/section].
+
+#figure(
+  table(
+    columns: 5,
+    stroke: table-stroke.with(stroke: black + 0.5pt),
+    table.header(
+      [],
+      $"Lattice depth" a_0$,
+      $"Position" y_0 slash #unit[px]$,
+      $"Waist" w_0 slash #unit[μm]$,
+      $"Angle" theta.alt slash degree$,
+    ),
+
+    [x1064], num[0.9852(12)], num[0.6(9)], num[142.5(28)], num[-5.47(18)],
+    [x532], num[1.0323(23)], num[3.2(13)], num[118(5)], num[-5.5(4)],
+  ),
+  caption: [
+    Calibrated parameters of the x1064-lattice and the x532-lattice.
+    The (mean) values and errors are computed with the same schema as introduced in @ssec:mod-eval-error.
+    Only the images that show relevant data for a single-image evaluation/fit are selected.
+    For the parameters $a_0$, $y_0$ and $theta.alt$ this includes all images where a loss signal is visible ($f_"mod" < #qty[280][kHz]$).
+    In the case of the waist $w_0$ (which is computed from the parameter $a$) only the images with two visible resonance(s) (lines) are selected ($f_"mod" < #qty[276][kHz]$).
+    The lattice depth $a_0$ from/of the x1064-lattice measurement is corrected/fudged by #text(red)[what?] according to the coupled theory discussed in @sec:mod-coupled.
+
+    #text(red)[Mention this again? Or is the reference to @ssec:mod-eval-error sufficient?]
+    The errors are (then) computed as the weighted standard deviation of the individual fit results.
+
+    #show list: set text(red)
+    - Merge this with the other results table? @tab:mod-eval-error and @tab:mod-eval-error-other
+    - At least match the column order with @tab:mod-eval-error and @tab:mod-eval-error-other...
+    - Reference to waists in the thermal lensing @sec:super-thermal?
+    - Compute the position $y_0$ in #unit[μm].
+    - Use the same x1064-lattice data here as in @sec:mod-results and @sec:mod-eval?
+  ],
+) <tab:mod-super-result>
