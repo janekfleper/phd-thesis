@@ -10,3 +10,6 @@ We will then look at the superlattice phase as the measurement device/gauge for 
 Thanks to the phase sensitivity of the superlattice potential we were able to achieve a precise measurement of $U(x, y)$ close to the actual superlattice configuration.
 At the end of the chapter I will present the paper/project "Floquet-Driven Crossover from Density-Assisted Tunneling to Enhanced Pair Tunneling" where we used the phase to apply a periodic modulation to the superlattice potential.
 This modulation allowed us to modify the tunneling and the effective interaction of pairs of atoms in the separate double wells.
+
+
+#include "setup.typ"
