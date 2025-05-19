@@ -22,3 +22,4 @@
 #include "chapters/setup/setup.typ"
 #include "chapters/superlattice/superlattice.typ"
 #include "chapters/modulation/modulation.typ"
+#include "chapters/phase/phase.typ"
