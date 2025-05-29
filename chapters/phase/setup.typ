@@ -46,7 +46,7 @@ This implementation was used for the superlattice along the $z$-axis where the s
     The frequency $nu_"pump"$ is doubled in the SHG cavity (#text(red)[ref what?]) to obain the actual optical frequency $nu_532$.
     Both (optical) frequencies $nu_532$ and $nu_1064$ are shifted by AOMs with a center frequency of #qty[80][MHz].
     For the x532-lattice this is a single-pass AOM that is driven/powered by a static frequency source.
-    For the x1064-lattice this is a double-pass AOM that is driven/powered by an arbitrary waveform generator#footnote[#text(red)[Spectrum Instrumentation]]
+    For the x1064-lattice this is a double-pass AOM that is driven/powered by an arbitrary waveform generator#footnote[#text(red)[Spectrum Instrumentation]].
 
     #show list: set text(red)
     - Use different line types for optical and radio frequencies? Or use red, green (both optical) and black (RF) for the different line colors?
@@ -79,6 +79,6 @@ In the _slow_ branch the signal passes through a regular lock box before being a
 The _fast_ branch uses a Toptica FALC module (#text(red)[what is the actual name here?]) with a much higher (regulation) bandwidth than the lock box.
 The output of the _fast_ branch is applied to the diode current of the x1064-lattice seed laser for a fast feedback to the frequency $nu_1064$ with small amplitudes $Delta nu = cal(O)(#qty[1][MHz])$.
 The _slow_ signal is applied to the piezo that controls the length of the external cavity of the seed laser.
-This allows us to change the seed laser frequency by $Delta nu = cal(O)(#qty[100][MHz])$
-If the changes to the frequency #fdds are greater than #qty[1][MHz] and a rate of change faster than the band width of the piezo, we are required to apply the signal equivalent to $fdds(t)$ to the piezo in addition to the _slow_ error signal.
+This allows us to change the frequency of the seed laser by more than #qty[100][MHz].
+If the changes to the frequency #fdds are greater than #qty[1][MHz] and the ramp rate is greater than the band width of the piezo, we are required to apply the "equivalent" signal of $fdds(t)$ to the piezo in addition to the _slow_ error signal.
 We have initially calibrated the factor #text(red)[$alpha = #qty[52][mV / MHz]$] and are creating/providing the appropriate voltage signal with an arbitrary waveform generator#footnote[#text(red)[Keysight 33622A?]].

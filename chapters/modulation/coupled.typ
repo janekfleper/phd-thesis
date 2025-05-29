@@ -171,7 +171,7 @@ The resonance amplitudes are decreased by a factor $2$ in the "coupled" band gap
 In terms of the efficiency of the two-tone lattice modulation we therefore have to be equally careful to avoid the different kinds of band gaps.
 
 #text(red)[Completely rewrite this when the data with $v_y = #qty[75][Erec]$ is used!]
-For each lattice depth $v_y$ there is a gapless interval of $~ #qty[10][kHz]$ that can be used for the two-tone lattice modulation.
+For each lattice depth $v_y$ there is a gapless interval of $approx #qty[10][kHz]$ that can be used for the two-tone lattice modulation.
 If we use the recommended lattice depth $v_y = #qty[35][Erec]$ from the earlier considerations in @sec:mod-coupled regarding the coupling of the band $(3, 1)$ and the tunneling along the y1064-lattice, the most suitable secondary modulation frequency would be $f_2 approx #qty[135][kHz]$.
 There is only a tiny band gap that ever crosses that frequency such that we can expect a uniform resonance amplitude $"r13fa"$.
 
