@@ -69,6 +69,7 @@ For a strong detuning of $Delta slash t approx plus.minus 2.5$ there are seconda
 Due to their much smaller amplitude compared to the minimum at $Delta = 0$ they do however not affect the measurement.
 #text(red)[And we usually are not even able to see them in measurements due to inhomogeneities.]
 
+
 === Preparation and detection <ssec:phase-measure-sequence>
 
 #[
@@ -123,3 +124,75 @@ The diabatic condition for the rate (or change) $dot(Delta)$ only depends on the
 By/after stopping the measurement/oscillation/time the state $phy.ket(psi(tau))$ is (automatically) projected on(to) the (new) eigenstates $phy.ket(L)$ and $phy.ket(R)$ as indicated by the (finite) densities in both wells after the last step in @fig:phase-measure-sequence.
 The last step in the measurement of the superlattice phase $phi$ is the separation/resolution of the individual wells.
 See #text(red)[ref next? subsection] for (the) two possible approaches.
+
+
+=== Resolving the double well occupation <ssec:phase-measure-resolve>
+
+#[
+  #set text(red)
+  - Find a better name for the "detection" in the previous section. The actual detection should be reserved for this subsection?
+  - Use the name "imaging" for this subsection to separate it from the "detection"?
+  - Mention that this subsection is specific to polarized atom clouds?
+  - Move the hyperfine state techniques to the outlook? Or clearly mark them as "just a thought"?
+]
+
+The detection step in @fig:phase-measure-sequence only stopped the (phase-sensitive) measurement to project the state $phy.ket(psi(tau))$ onto the sublattice sites $phy.ket(L)$ and $phy.ket(R)$.
+For the (actual) detection/measurement of the state $phy.ket(psi(tau))$ (or the density thereof) we need to capture/measure the densities $n_L = abs(phy.braket(L))^2$ and $n_R = abs(phy.braket(R))^2$.
+The spatial separation of #qty[266][nm] between the sublattice sites is far below the resolution limit of the imaging system as discussed in @sec:setup-detect.
+We therefore need a technique to make the occupation of the sublattice sites "visible" to the absorption imaging.
+
+The perfect solution would be to transfer the atoms on one sublattice site to a different hyperfine state.
+In the vertical superlattice a similar technique is used for the selection of a single plane, see @sec:setup-z.
+Instead of a single (HS1) frequency sweep we would however need to use a "comb" of sweeps to address all sublattice sites at the same time.
+The magnetic field gradient would need to have the form $phy.pdv(B_z, x)$ since the atoms are only sensitive to the magnetic field along their quantization axis.
+Achieving such a magnetic field gradient with the required strength is not possible since anti Helmholtz coils/configurations only produce gradients along the respective magnetic field components (in first/lowest order).
+Rotating the quantization axis onto the optical axis of the x-superlattice is not practical either since we do not have a (large) pair of coils in Helmholtz configuration for the offset magnetic field.
+Furthermore this technique would require an absolute positional stability of the sublattice sites which is a lot more difficult to achieve than a relative stability of the superlattice phase $phi$, see @sec:phase-sensors.
+
+Another approach using the hyperfine states is based on the spin-spiral technique that was used to detect magnetic correlations in the two-dimensional lattice #text(red)[ref setup section? + Nicola].
+Instead of aligning the gradient angle along the diagonal of the x1064-lattice and the y1064-lattice, the magnetic field gradient would be/run parallel to the x1064-lattice.
+To start the spin-spiral/Ramsey measurement a $pi slash 2$-pulse is used to transfer (the spin of) all the atoms onto the $x y$-plane.
+Since the atoms are initially polarized they will all start with the same phase (in the $x y$-plane).
+The evolution/precession/measurement time $tau$ is chosen such that the atoms/spins on each sublattice site accumulate the same phase $phi mod 2 pi$.
+The atoms on the "other" sublattice will then have a (relative) phase offset by $pi$.
+A second $pi slash 2$-pulse will then transfer the atoms/spins back onto the quantization axis where $n_L$ and $n_R$ will occupy different hyperfine states.
+The (separate) densities can then be imaged sequentially as shown in @sec:setup-detect.
+While this technique sounds very tempting, it would have been even more difficult to set up than the spin spiral.
+For the measurement of the correlations it was sufficient to imprint a relative spin pattern since the absolute position of the atoms/lattice sites was relevant.
+The slope and the angle of the magnetic field gradient had to be carefully calibrated but the absolute value of the magnetic field along the $z$-axis could change from sequence to sequence.
+In the case of the measurement in the x-superlattice we would need an absolute stability of the magnetic field and the position of the sublattice sites.
+Otherwise the spin spiral/Ramsey technique will randomly/uncontrollably map the sublattice sites to the different hyperfine states.
+Trying to set this up for the phase-sensitive measurement introduced in @ssec:phase-measure-sequence would not have been practical.
+
+Instead of the two proposed techniques using the hyperfine states we decided/had to use the band structure of the superlattice to reveal/visuallize the sublattice site occupation.
+We developed two techniques with different limitations compared to an in-situ measurement of the densities $n_L (x, y)$ and $n_R (x, y)$.
+The techniques both make use of the fact that the atoms on the right sublattice site in @fig:phase-measure-sequence occupy/populate the excited band $n >= 2$.
+The exact band index $n$ will depend primarily on the long lattice depth since the energy offset $Delta$ is (just) proportional to $v_l$.
+If the long lattice depth is big/large enough, the Wannier functions corresponding to the lowest two bands will be located on the left/lower sublattice site.
+This leaves the Wannier function of the third on the right/upper sublattice site as shown in @fig:phase-measure-resolve-band-mapping.
+The state $phy.ket(R)$ from/in the double well basis will/would therefore be/get mapped/transferred to the Wannier function $w_3(x)$ in the Wannier/Bloch basis.
+We can then use the band mapping technique as introduced in #text(red)[ref theory] and mentioned in #text(red)[ref modulation/introduction?] to measure the occupation of the different sublattice sites.
+Since this technique involves the release of the atoms from the lattices the spatial resolution/information is completely lost.
+From the time-of-flight images we can only count the number of atoms in the first Brillouin zone and in the third/higher Brillouin zone to get the averaged/global population $n_L$ and $n_R$.
+Neither the inhomogeneity of the tunneling amplitude $t$ due to the varying lattice depths $v_l (x, y)$ and $v_s (x, y)$ nor the (possible) inhomogeneity of the phase $phi(x, y)$ are visible.
+If we want to (quantitatively) evaluate time-of-flight data, we always have to use another measurement for the (intrinsic/system) inhomogeneities and plug them into the theory.
+This approach was used (extensively) for the data evaluation of the Floquet-driving measurements #text(red)[ref Floquet section].
+We can (easily) get the lattice depths $v_l (x, y)$ and $v_s (x, y)$ from the in-situ lattice modulation measurement as introduced in @ch:mod #text(red)[ref a specific section here?].
+The local measurement of the phase $phi(x, y)$ will be shown in #text(red)[ref next subsection?].
+
+#figure(
+  image("/figures/phase-measure-resolve-band-structure.png"),
+  caption: [
+    Band structure at $v_l = 40$, $v_s = 15$ and $phi = pi slash 4$.
+    The bands up to $n = 6$ are shown with their corresponding widths.
+    Since none of the bands are close/coupled for this lattice configuration, the BPO formalism is not required for the Wannier functions.
+    The two Wannier functions $w_1(x)$ and $w_3(x)$ are computed directly/naively from the Bloch waves.
+    The Wannier functions
+
+    #show list: set text(red)
+    - Only show the band structure with the same x limits as @fig:phase-measure-sequence.
+    - Add the band mapping/TOF sketch here
+    - Turn off the Wannier function of band $n = 2$
+
+  ],
+) <fig:phase-measure-resolve-band-mapping>
