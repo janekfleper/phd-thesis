@@ -138,6 +138,7 @@ See #text(red)[ref next? subsection] for (the) two possible approaches.
   - Mention that this subsection is specific to polarized atom clouds?
   - Move the hyperfine state techniques to the outlook? Or clearly mark them as "just a thought"?
   - Where to properly introduce the TOF measurements?
+  - Create a new subsection for the in-situ measurement?
 ]
 
 The detection step in @fig:phase-measure-sequence only stopped the (phase-sensitive) measurement to project the state $phy.ket(psi(tau))$ onto the sublattice sites $phy.ket(L)$ and $phy.ket(R)$.
@@ -283,3 +284,41 @@ The lower amplitude/depth $v_l$ of the long/x1064 lattice will decrease the tunn
 In addition, any detuning/offset $Delta slash t != 0$ will cause a further increase of the oscillation frequency.
 The (globally) averaged frequency will therefore always be greater than the expected frequency from the tunneling amplitude $t$ in the center of the atom cloud/the lattices.
 #text(red)[Add evaluation of the Rabi oscillation here and compare the tunneling amplitude to the value obtained by $v_l$ and $v_s$.]
+
+#text(red)[Put this into a new subsection?]
+#text(red)[Discuss in-situ signal via lattice modulation? Maybe in the outlook?]
+The (only/large) disadvantage of the time-of-flight measurement is the lack of spatial resolution.
+A quantitative evaluation of time-of-flight data is only possible after further/other measurements to determine all inhomogeneities.
+We therefore developed a second technique to locally resolve the superlattice phase $phi$ by removing the atoms on the right/upper sublattice site.
+Instead of measuring the contrast @eq:phase-measure-resolve-contrast we can therefore only measure the occupation of the left/lower/remaining sublattice site.
+As discussed earlier in @ssec:phase-measure-resolve this makes the data sensitive to fluctuations of the atom number.
+We therefore have to ensure a constant/stable atom number for the duration of the measurement (or we have to measure a sufficient amount of averages).
+This in-situ technique is based on an/the (empirical) observation of an atom loss after the freezing of the long/x1064 lattice to project the atoms on the right/upper sublattice site from the band $n = 2$ to a(n even) higher band.
+Our understanding of the technique is that the final state after this projection has a contribution from higher bands in the y1064 lattice.
+The mixing is enabled by the non-orthogonality of the x-lattices and the y1064 lattice which is discussed in detail in @sec:mod-coupled and #text(red)[ref appendix?].
+If the atoms (partially) populate higher bands in the y1064 lattice, they are no longer frozen along the y-axis.
+Since these atoms are (also) localized on the upper/right sublattice sites, they will experience the deconfining radial potential @eq:super-radial-minus by the superlattice as discussed in @sec:super-radial.
+To optimize the loss of atoms we found that the depth of the y1064 should be as low as possible without compromising the freezing of the tunneling in the lowest band as discussed at the start of @ch:phase #text(red)[check this reference...].
+We therefore chose $v_y = 20$ where the tunneling amplitude in the lowest band is $tau slash h approx #qty[10][Hz]$ #text(red)[check this value again...].
+After the projection we then wait #qty[1][s] for the atoms to leave the trap.
+
+#figure(
+  grid(
+    columns: 2,
+    column-gutter: 1em,
+    image("/figures/phase-measure-resolve-in-situ-initial.png"),
+    image("/figures/phase-measure-resolve-in-situ-final.png"),
+  ),
+  caption: [
+    Projection for the in-situ measurement of the superlattice phase.
+    The figure on the left shows the superlattice configuration $(v_l, v_s) = (15, 12)$ and the phase $phi = pi slash 4$.
+    On the right the long/x1064 lattice is frozen/ramped up to the depth $v_l = 55$.
+
+    #show list: set text(red)
+    - Share the y-axis here? Or does this make the explanation worse since the right/upper well is actually not affected by the freezing of the long lattice?
+    - Draw the Wannier functions for $phy.ket(L)$ and $phy.ket(R)$.
+    - Use the BPO Wannier function for the figure on the right? Or use an amplitude where the two bands are not actually mixed?
+    - Anything to add to this caption?
+  ],
+) <fig:phase-measure-resolve-in-situ-theory>
+
