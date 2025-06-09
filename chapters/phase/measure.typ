@@ -13,8 +13,11 @@
   - Add any comparison to the phase-sensitivity of the superlattice amplitude modulation technique?
   - Where to discuss the inhomogeneity of $v_l$ and $v_s$ for the symmetry point?
   - Where to introduce phase sensitivity as a function of $v_l$ and $v_s$?
+  - Where to discuss the impact of the y-lattice inhomogeneity?
   - Mention "higher-order" symmetry point signals?
   - Mention outer well tunneling with $t_"out"$ anywhere?
+  - Introduce the sequence: Loading -> 1D -> spin-cleaning -> superlattice ...
+  - Mention "Rabi oscillations" anywhere?
 ]
 
 Measuring the (actual/absolute) superlattice phase $phi$ always requires the use of the atom cloud.
@@ -134,6 +137,7 @@ See #text(red)[ref next? subsection] for (the) two possible approaches.
   - Use the name "imaging" for this subsection to separate it from the "detection"?
   - Mention that this subsection is specific to polarized atom clouds?
   - Move the hyperfine state techniques to the outlook? Or clearly mark them as "just a thought"?
+  - Where to properly introduce the TOF measurements?
 ]
 
 The detection step in @fig:phase-measure-sequence only stopped the (phase-sensitive) measurement to project the state $phy.ket(psi(tau))$ onto the sublattice sites $phy.ket(L)$ and $phy.ket(R)$.
@@ -172,9 +176,11 @@ If the long lattice depth is big/large enough, the Wannier functions correspondi
 This leaves the Wannier function of the third on the right/upper sublattice site as shown in @fig:phase-measure-resolve-band-mapping.
 The state $phy.ket(R)$ from/in the double well basis will/would therefore be/get mapped/transferred to the Wannier function $w_3(x)$ in the Wannier/Bloch basis.
 We can then use the band mapping technique as introduced in #text(red)[ref theory] and mentioned in #text(red)[ref modulation/introduction?] to measure the occupation of the different sublattice sites.
+See #text(red)[ref PhD Nick?] for the details.
 Since this technique involves the release of the atoms from the lattices the spatial resolution/information is completely lost.
-From the time-of-flight images we can only count the number of atoms in the first Brillouin zone and in the third/higher Brillouin zone to get the averaged/global population $n_L$ and $n_R$.
-Neither the inhomogeneity of the tunneling amplitude $t$ due to the varying lattice depths $v_l (x, y)$ and $v_s (x, y)$ nor the (possible) inhomogeneity of the phase $phi(x, y)$ are visible.
+@fig:phase-measure-resolve-tof-imaging shows the time-of-flight images corresponding to the global states $phy.ket(L)$ and $phy.ket(R)$.
+From the time-of-flight images we can only count the number of atoms in the first Brillouin zone and in the higher Brillouin zone(s) to get the averaged/global population $n_L$ and $n_R$.
+Neither the inhomogeneity of the tunneling amplitude $t$ due to the varying lattice depths $v_l (x, y)$ and $v_s (x, y)$ nor the (possible) inhomogeneity of the phase $phi(x, y)$ are (directly) observable.
 If we want to (quantitatively) evaluate time-of-flight data, we always have to use another measurement for the (intrinsic/system) inhomogeneities and plug them into the theory.
 This approach was used (extensively) for the data evaluation of the Floquet-driving measurements #text(red)[ref Floquet section].
 We can (easily) get the lattice depths $v_l (x, y)$ and $v_s (x, y)$ from the in-situ lattice modulation measurement as introduced in @ch:mod #text(red)[ref a specific section here?].
@@ -187,7 +193,6 @@ The local measurement of the phase $phi(x, y)$ will be shown in #text(red)[ref n
     The bands up to $n = 6$ are shown with their corresponding widths.
     Since none of the bands are close/coupled for this lattice configuration, the BPO formalism is not required for the Wannier functions.
     The two Wannier functions $w_1(x)$ and $w_3(x)$ are computed directly/naively from the Bloch waves.
-    The Wannier functions
 
     #show list: set text(red)
     - Only show the band structure with the same x limits as @fig:phase-measure-sequence.
@@ -196,3 +201,85 @@ The local measurement of the phase $phi(x, y)$ will be shown in #text(red)[ref n
 
   ],
 ) <fig:phase-measure-resolve-band-mapping>
+
+For a superlattice configuration such as $v_l = 15$ and $v_s = 10$, the right/upper sublattice site will (only) be mapped to the second band.
+Since the states $phy.ket(L)$ and $phy.ket(R)$ are localized on/to the sublattice sites, they will span the entire momentum space $q = [-a, a)$ in the Bloch wave basis.
+In a time-of-flight measurement the atoms/populations $n_L$ and $n_R$ would therefore have no spatial/visual separation.
+This would not be an issue for a (proper) time-of-flight measurement where $tau_"TOF"$ is sufficiently long to lose any information about the initial shape of the cloud.
+Since this is not possible with our z-imaging setup, the atoms corresponding to the first and the second Brillouin zone will show some overlap.
+We therefore decided to (always) use the third (and the fourth) band to achieve a clear spatial/visual separation as shown in @fig:phase-measure-resolve-tof-imaging.
+The transfer/projection from the second (energy) band to those (energy) bands is also possible after the freezing/detection step in @fig:phase-measure-sequence.
+If the superlattice is frozen, we can map/transfer the state $phy.ket(R)$ to a higher band by diabatically increasing the depth of the x1064-lattice.
+The freezing/ramping timescale of the x1064-lattice is $<#qty[1][ms]$ which is sufficiently fast for all superlattice configurations discussed in this thesis.
+
+#figure(
+  rect(stroke: black),
+  caption: [
+    Time-of-flight measurement of the sublattice site occupation.
+    The image on the left shows an initial state of $phy.ket(L)$ where all atoms end up in the first Brillouin zone.
+    On the right the atoms were prepared in the state $phy.ket(R)$ and then mapped/transferred to the third (and fourth) band.
+    The grid overlay shows the Brillouin zones for the pixel size in the atom plane and the time $tau_"TOF"$.
+
+    #show list: set text(red)
+    - Mention the contrasts corresponding to the images here?
+  ],
+) <fig:phase-measure-resolve-tof-imaging>
+
+From the measured/averaged atom numbers $n_L$ and $n_R$ we then compute the contrast
+
+$
+  cal(C) = (n_L - n_R) / (n_L + n_R)
+$ <eq:phase-measure-resolve-contrast>
+
+to quantify the (global) population imbalance between the sublattice sites.
+Since the populations $n_L$ and $n_R$ are closely related (in most cases) it makes sense to join them in a single quantity.
+By design/definition the contrast $cal(C)$ is largely/very insensitive to fluctuations of the total atom number.
+In isolated double wells we can use this to our advantage without any downsides.
+Empty double wells will reduce the atom numbers $n_L$ and $n_R$ but they will not show up in the contrast $cal(C)$.
+In a continuous superlattice, on the other hand, (initially) empty double wells will affect the rest of the system and we cannot just measure the contrast $cal(C)$ without considering the total atom number/filling.
+
+#text(red)[Actually argue so much why we are only using a Gaussian function for the evaluation here?]
+With the time-of-flight detection/imaging we can then measure the phase-sensitive signal introduced in @fig:phase-measure-theory.
+By scanning the superlattice phase $phi$ that starts the measurement at $tau = 0$ we sweep across the symmetric configuration $phi = Delta slash t = 0$.
+The resulting signal is shown on the left in @fig:phase-measure-resolve-tof-result.
+For the evaluation of the phase-sensitive signal we are extracting the position of the minimum with a regular Gaussian function.
+Since the only purpose of the measurement is to find the DDS frequency #text(red)[ref @sec:phase-setup] corresponding to the (globally averaged) symmetric configuration $phi = Delta slash t = 0$, the specific shape of the signal is not important.
+This would require us to take the spatial variation of $v_l (x, y)$, $v_s (x, y)$ and the phase $phi(x, y)$ itself into account.
+#text(red)[Mention this way earlier in this section/chapter!]
+In addition the local detuning $Delta(x, y)$ is also affected by the confinement of the y1064-lattice $v_"y1064" (x, y)$.
+While we know the lattice depths as a function of the position $(x, y)$, the phase $phi(x, y)$ requires a phase-sensitive measurement itself.
+The technique to measure the phase $phi(x, y)$ with in-situ resolution will be introduced in the #text(red)[next subsection].
+If we take all this into account to evaluate the data of the phase-sensitive measurement, the resulting DDS frequency $f_0$ would be exactly the same as from the simple evaluation using the Gaussian function.
+
+#figure(
+  image("/figures/phase-measure-resolve-tof-result.png", width: 90%),
+  caption: [
+    Time-of-flight measurement of the symmetric superlattice configuration.
+    The figure on the left shows the phase-sensitive measurement from which we can extract the phase $phi = 0$.
+    The x-axis is already converted to the superlattice phase $phi$ based on the (expected) period #text(red)[ref eq].
+    The figure on the right then shows the same sequence/measurement as a function of the time $tau$ at the phase $phi = 0$.
+    In both measurements the lattice depths were set to #text(red)[$v_l = ??$] and #text(red)[$v_s = ??$] with a theoretical tunneling amplitude of #text(red)[$t = ??$].
+
+    #show list: set text(red)
+    - Split this into two figures? If so, show the atom numbers $n_L$ and $n_R$ next to the contrast?
+    - Mark point that is "shared" between the two plots?
+    - Use the frequency RFFreqXOffHigh as the x-axis in the left figure?
+    - Show the fit of the symmetry point here?
+    - And show the fit of the Rabi oscillation as well?
+    - Show the theoretical oscillation here? Not the fit but just the calculated (averaged) oscillation from $v_l (x, y)$, $v_s (x, y)$ etc...
+  ],
+) <fig:phase-measure-resolve-tof-result>
+
+For the oscillation signal in the symmetric superlattice (configuration) the aforementioned inhomogeneities are all relevant since the target quantity is the tunneling amplitude $t$ (in the center of the cloud).
+By measuring the average of the (Rabi) oscillations across all (occupied) double wells in the superlattice the resulting frequency will be a weighted average of all tunneling amplitudes $t(x, y)$ and detunings/offsets $Delta(x, y)$.
+The corresponding (time-of-flight) signal is shown on the right in @fig:phase-measure-resolve-tof-result.
+We can see that the oscillation decays significantly in the first few periods.
+#text(red)[Can we compute the theory for this? Add a specific explanation why the tunneling amplitude increases with the distance from the optical axis.]
+The leading contribution to this decay is the spatial variation of the tunneling amplitude $t(x, y)$ itself.
+On the optical axis of the x-lattices the tunneling amplitude $t$ is always minimal (#text(red)[at least for the given waists of the x-lattices]).
+Towards either side of the optical axis the tunneling amplitude $t$ will increase significantly.
+This increase is caused by the decrease of the amplitude/depth $v_s$ of the short/x532 lattice.
+The lower amplitude/depth $v_l$ of the long/x1064 lattice will decrease the tunneling amplitude $t$ again, but the scaling is "weaker" than for the short/x532 lattice.
+In addition, any detuning/offset $Delta slash t != 0$ will cause a further increase of the oscillation frequency.
+The (globally) averaged frequency will therefore always be greater than the expected frequency from the tunneling amplitude $t$ in the center of the atom cloud/the lattices.
+#text(red)[Add evaluation of the Rabi oscillation here and compare the tunneling amplitude to the value obtained by $v_l$ and $v_s$.]
