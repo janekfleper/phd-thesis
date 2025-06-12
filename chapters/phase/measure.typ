@@ -138,7 +138,7 @@ See #text(red)[ref next? subsection] for (the) two possible approaches.
   - Mention that this subsection is specific to polarized atom clouds?
   - Move the hyperfine state techniques to the outlook? Or clearly mark them as "just a thought"?
   - Where to properly introduce the TOF measurements?
-  - Create a new subsection for the in-situ measurement?
+  - Create an additional subsection for the TOF technique?
 ]
 
 The detection step in @fig:phase-measure-sequence only stopped the (phase-sensitive) measurement to project the state $phy.ket(psi(tau))$ onto the sublattice sites $phy.ket(L)$ and $phy.ket(R)$.
@@ -285,8 +285,16 @@ In addition, any detuning/offset $Delta slash t != 0$ will cause a further incre
 The (globally) averaged frequency will therefore always be greater than the expected frequency from the tunneling amplitude $t$ in the center of the atom cloud/the lattices.
 #text(red)[Add evaluation of the Rabi oscillation here and compare the tunneling amplitude to the value obtained by $v_l$ and $v_s$.]
 
-#text(red)[Put this into a new subsection?]
-#text(red)[Discuss in-situ signal via lattice modulation? Maybe in the outlook?]
+
+=== In-situ measurement technique <ssec:phase-measure-in-situ>
+
+#[
+  #set text(red)
+  - Discuss the in-situ signal via lattice modulation? Maybe in the outlook?
+  - Mention the preparation and oscillation here again? Or just ref the earlier stuff?
+  - Discuss error due to the y1064 lattice confinement?
+]
+
 The (only/large) disadvantage of the time-of-flight measurement is the lack of spatial resolution.
 A quantitative evaluation of time-of-flight data is only possible after further/other measurements to determine all inhomogeneities.
 We therefore developed a second technique to locally resolve the superlattice phase $phi$ by removing the atoms on the right/upper sublattice site.
@@ -321,4 +329,102 @@ After the projection we then wait #qty[1][s] for the atoms to leave the trap.
     - Anything to add to this caption?
   ],
 ) <fig:phase-measure-resolve-in-situ-theory>
+
+The (actual) measurement before the projection onto the higher bands in the y1064 lattice is identical to the time-of-flight technique presented earlier #text(red)[ref anything?].
+The (in-situ) image of the occupation $n_L (x, y)$ will therefore show the signal @fig:phase-measure-theory depending on the local detuning/offset $Delta(x, y) slash t(x, y)$.
+Due to the noise in the absorption images it is not practical to evaluate individual pixels.
+We are therefore dividing the atom images into a grid of $9 times 9$ pixels.
+With the pixel size of $approx #qty[600][nm]$ (see @sec:setup-detect) the atom plane each cell corresponds to approximately $10 times 10$ double wells (#text(red)[check the exact pixel size again...]).
+The average (atomic) density in each cell of the grid is then evaluated individually by fitting a Gaussian function to find the minimum that shows the detuning/offset $Delta slash t = 0$.
+As already discussed earlier for the time-of-flight measurement, this qualitative evaluation is sufficient since we only need to know the position of the minimum of the density.
+#text(red)[Actually mention the next sentence?]
+If we would reverse the detection/imaging by removing the atoms on the left/lower sublattice site, the signal would show a maximum of the (local) occupation $n_R (x, y)$ instead.
+From the evaluation of the individual cells we then get the zero-phase $phi = 0$ (or the detuning/offset $Delta slash t = 0$) as a function of the position $(x, y)$.
+
+A typical result we obtain from this measurement is shown in @fig:phase-measure-resolve-in-situ-result.
+The two individual signals from the marked cells show a (significant) frequency shift.
+Across the entire atom cloud this shift shows up as a gradient of the symmetric configuration.
+This is caused by an angle between the wavefronts of the x1064 lattice and the x532 as already discussed in @sec:super-setup (#text(red)[Where is the x532-plate mentioned first?]).
+We can see a few outliers of the averaged density $n_L$ in the individual signals.
+Their distance to the expected/fitted signal is however small enough to not (strongly) affect the (local) measurement of the symmetric configuration.
+The difference of the baselines is caused by the varying density (envelope) of the atom cloud.
+Since the cells are evaluated individually, we do not have to take this envelope into account as we did for the in-situ lattice modulation measurements in @ch:mod #text(red)[ref a section here instead?].
+The next step in the evaluation of the map in @fig:phase-measure-resolve-in-situ-result is to fit a first-order polynomial to extract the gradient of the phase perpendicular to the optical axis of the x-lattices.
+The polynomial can be rotated in the $x y$-plane to take the angle $theta.alt$ of the x-lattices into account.
+This follows the (same) idea behind the evaluation of the in-situ lattice modulation measurements, see @sec:mod-eval.
+The parameters resulting from the fit of the polynomial function are
+
+$
+  k &= #qty[0.033(3)][MHz / px] \
+  theta.alt &= (#num[-5.9(6)])degree \
+$ <eq:phase-measure-resolve-in-situ-result>
+
+with the reference angle of #text(red)[grab the correct value here] from the in-situ lattice modulation measurements.
+#text(red)[Where to metion that these results are averaged over 8 measurements?]
+
+#figure(
+  image("/figures/2024-12-12_symmetry_period_in-situ_result.png"),
+  caption: [
+    Phase-sensitive measurement with in-situ/spatial resolution.
+    The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
+    The first two axes show the local signals of the occupation $n_L$ in two different cells as a function of the DDS frequency.
+    The axes on the right shows the zero-phase/zero-offset extracted from the Gaussian fits across the atom cloud.
+    The marked squares show the cells corresponding to the signals shown in the first two axes.
+
+    #show list: set text(red)
+    - Use the cell coordinates for the pcolormesh?
+    - Also mention the coordinates of the marked cells?
+    - Do not show the orange lines!
+    - Add y-label for the occupation $n_L$
+    - Anything to add here?
+    - Mention the tunneling amplitude $t$ given the lattice depths?
+    - Address different widths of individual signals?
+  ],
+) <fig:phase-measure-resolve-in-situ-result>
+
+#text(red)[Mention that it does not matter which lattice is shifted!]
+#text(red)[Put the technical details in @sec:super-setup.]
+#text(red)[Find a nice introduction/explanation for the two different angles/axes.]
+To change the angle between the x1064 lattice and the x532 lattice we are using two #qty[10][mm] thick glass plates#footnote[#text(red)[Mention the exact part number from Eksma]] in the optical path of the x532 lattice.
+A rotation of the glass plates will displace/shift the x532 lattice beam perpendicular to the optical axis.
+The first glass plate is mounted in a piezo mirror mount#footnote(link("https://www.newport.com/p/AG-M100L", [Newport Agilis™ AG-M100L])) with a range of $plus.minus #num[2]degree$ for each axis.
+This mirror mount offers absolute positioning with an accuracy of $#num[0.05]degree$ by using limit switches as reference points.
+We can control the position of either axis of the mirror mount with the experiment control software to scan the "horizontal" shift and the "vertical" shift of the x532 lattice beam.// relative to the x1064 lattice beam.
+The second glass plate is mounted in a mechanical mirror mount to apply a static displacement of the x532 lattice beam.
+
+For most/regular measurements in the superlattice we would like to have a homogeneous phase $phi$ across the atom cloud.
+We are therefore scanning the "horizontal" axis of the glass plate to find the angle where the "in-plane" phase gradient vanishes.
+Finding the angle where the "vertical" phase gradient vanishes is less straight forward since the imaging averages all layers along the $z$-axis.
+We therefore have to rely on a measurement of the signal strength similar to the lattice alignment in @sec:mod-align #text(red)[Also reference @fig:mod-align-x1064-walking?].
+If we apply a horizontal gradient on purpose, the phase-sensitive measurement will show the signal @fig:phase-measure-theory as a function of the position.
+This will show up as a single line in the atom cloud similar to the resonance lines from/in @ch:mod (#text(red)[ref a specific section here?]).
+From the contrast/strength of the line/signal we can then infer the "vertical" angle where the phase is equal in all planes along the $z$-lattice.
+The result of this measurement is shown in @fig:phase-measure-resolve-vertical-gradient.
+In the atom images we can see the "resonance" lines/signals where the local phase is $phi = 0$ on average across all vertical lattice planes.
+If the local phase $phi = 0$ is reached at the same position in all (vertical) lattice planes, the line/signal strenght will be maximal.
+The optical density images are evaluated with a two-dimensional Gaussian envelope and a one-dimensional Gaussian function that models the phase-sensitive signal.
+The line/signal strength is then defined as the quotient of the line amplitude and the line width.
+In @fig:phase-measure-resolve-vertical-gradient we can see that the optimum is achieved at the angle #text(red)[#num[350] (put the actual angle here...)].
+Overall the signal here is less sensitive than the optimization of the horizontal gradient #text(red)[ref figure...], which is a direct cause of the aspect ratio of the atom cloud.
+In the $x y$-plane the atoms often span up to #qty[100][μm] whereas the (individual) planes in the $z$-lattice are only spread over $approx #qty[10][μm]$.
+It is nevertheless important to cancel the vertical gradient if we are running a measurement across/with all lattice planes.
+After the optimization of the vertical angle we can move the horizontal axis/angle back to the optimum from #text(red)[ref figure...].
+Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal gradient.
+
+#figure(
+  image("/figures/2024-11-05_symmetry_vertical_gradient_thesis_result.png", width: 70%),
+  caption: [
+    Optimization of the vertical phase gradient.
+    The horizontal phase gradient was set to $approx #qty[0.1][MHz/px]$ to get a narrow line in the optimized case.
+
+    #show list: set text(red)
+    - Use the actual angle here on the x-axis.
+    - Add lines from the markers to the optical densities.
+    - Change the evaluation to Lorentzian functions?
+    - Normalize the line/signal strength to 1.0?
+    - Anything to add to this caption?
+    - Add colorbar for the images...
+    - Add x errorbars to take the $#num[0.05]degree$ into account?
+  ],
+) <fig:phase-measure-resolve-vertical-gradient>
 
