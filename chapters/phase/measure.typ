@@ -379,12 +379,21 @@ with the reference angle of #text(red)[grab the correct value here] from the in-
     - Anything to add here?
     - Mention the tunneling amplitude $t$ given the lattice depths?
     - Address different widths of individual signals?
+    - Use different data here, something around #qty[415][MHz]?
   ],
 ) <fig:phase-measure-resolve-in-situ-result>
 
-#text(red)[Mention that it does not matter which lattice is shifted!]
-#text(red)[Put the technical details in @sec:super-setup.]
-#text(red)[Find a nice introduction/explanation for the two different angles/axes.]
+
+==== Horizontal gradient <sssec:phase-measure-resolve-horizontal>
+
+#[
+  #set text(red)
+  - Merge this with the sub-sub-section @sssec:phase-measure-resolve-vertical?
+  - Mention that it does not matter which lattice is shifted!
+  - Put the technical details in @sec:super-setup.
+  - Find a nice introduction/explanation for the two different angles/axes.
+]
+
 To change the angle between the x1064 lattice and the x532 lattice we are using two #qty[10][mm] thick glass plates#footnote[#text(red)[Mention the exact part number from Eksma]] in the optical path of the x532 lattice.
 A rotation of the glass plates will displace/shift the x532 lattice beam perpendicular to the optical axis.
 The first glass plate is mounted in a piezo mirror mount#footnote(link("https://www.newport.com/p/AG-M100L", [Newport Agilis™ AG-M100L])) with a range of $plus.minus #num[2]degree$ for each axis.
@@ -392,9 +401,50 @@ This mirror mount offers absolute positioning with an accuracy of $#num[0.05]deg
 We can control the position of either axis of the mirror mount with the experiment control software to scan the "horizontal" shift and the "vertical" shift of the x532 lattice beam.// relative to the x1064 lattice beam.
 The second glass plate is mounted in a mechanical mirror mount to apply a static displacement of the x532 lattice beam.
 
+#text(red)[Evaluate the mean angle $theta.alt$ here again?]
 For most/regular measurements in the superlattice we would like to have a homogeneous phase $phi$ across the atom cloud.
 We are therefore scanning the "horizontal" axis of the glass plate to find the angle where the "in-plane" phase gradient vanishes.
-Finding the angle where the "vertical" phase gradient vanishes is less straight forward since the imaging averages all layers along the $z$-axis.
+For each angle of the "horizontal" axis we will run the measurement as shown in @fig:phase-measure-resolve-in-situ-result and evaluate the strength of the gradient.
+The result of this measurement/evaluation is shown in @fig:phase-measure-resolve-horizontal-gradient.
+We can see that the extracted gradients line up nicely as a function of the horizontal angle of the glass plate.
+The solid line shows the expected gradients computed from the optical properties of the glass plate, the focal length of the (forward) 2 inch lens and the pixel size in the atom plane (#text(red)[ref equation for displacement by the glass plate?]).
+The offset of the solid/theory line is chosen to get the best possible match to/with the data points.
+Only the slope of the solid/theory line has an actual meaning.
+The two maps on the right (clearly) show the difference between a finite phase gradient and the optimized horizontal angle.
+In the upper area of the mask around the atom cloud there are quite a few cells missing.
+This was caused by the local phase/frequency being outside of the frequency interval (#text(red)[Mention the actual interval?]).
+The lower map in @fig:phase-measure-resolve-horizontal-gradient shows the optimized horizontal angle where the phase gradient is significantly suppressed.
+The residual phase inhomogeneity is #text(red)[compute this with a mask or just from the shown cells?]
+With the absolute positioning this is the best gradient cancellation we can achieve.
+The x errorbars of the two data points close to the zero-gradient are already overlapping, we would therefore have to rely on the additional relative positioning of the piezo mirror mount.
+This does however rule out the determination/interpolation of the zero-crossing of the gradient from the surrounding angles/positions.
+If we would require a more homogeneous phase map as achieved/shown in @fig:phase-measure-resolve-horizontal-gradient, we would need to find a more sensitive measurement.
+The easiest solution there would be to use a superlattice configuration $(v_l, v_s)$ where the offset/detuning $Delta slash t$ is (even) more sensitive to the superlattice phase $phi$.
+
+#figure(
+  image("/figures/2024-11-04_symmetry_gradient_thesis_result.png", width: 70%),
+  caption: [
+    Optimization of the horizontal phase gradient.
+    The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
+    The errorbars along the x-axis indicate the accuracy of $#num[0.05]degree$ of the absolute position of the piezo mirror mount.
+    Each white cell in the maps on the right was either exluded by the initial mask around the atom cloud or the fit was not successful.
+
+    #show list: set text(red)
+    - y-label should be the gradient with some rescaling?
+    - x-label should be the angle of the x532-plate
+    - Anything else to write here?
+    - Add lines to the markers corresponding to the images on the right.
+    - Increase size of atom images.
+    - Chooses tighter range for the colorbar of the images?
+    - Mask pixels with large errors in the images?
+    - Compute homogeneity (standard deviation) in the optimized cloud?
+  ],
+) <fig:phase-measure-resolve-horizontal-gradient>
+
+
+==== Vertical gradient <sssec:phase-measure-resolve-vertical>
+
+Finding the angle where the "vertical" phase gradient vanishes is less straight forward since the images taken with the z-camera show the accumulated optical density of all layers of the $z$-lattice.
 We therefore have to rely on a measurement of the signal strength similar to the lattice alignment in @sec:mod-align #text(red)[Also reference @fig:mod-align-x1064-walking?].
 If we apply a horizontal gradient on purpose, the phase-sensitive measurement will show the signal @fig:phase-measure-theory as a function of the position.
 This will show up as a single line in the atom cloud similar to the resonance lines from/in @ch:mod (#text(red)[ref a specific section here?]).
@@ -403,13 +453,13 @@ The result of this measurement is shown in @fig:phase-measure-resolve-vertical-g
 In the atom images we can see the "resonance" lines/signals where the local phase is $phi = 0$ on average across all vertical lattice planes.
 If the local phase $phi = 0$ is reached at the same position in all (vertical) lattice planes, the line/signal strenght will be maximal.
 The optical density images are evaluated with a two-dimensional Gaussian envelope and a one-dimensional Gaussian function that models the phase-sensitive signal.
-The line/signal strength is then defined as the quotient of the line amplitude and the line width.
+The line/signal strength is then defined as the quotient of the line amplitude and the line width/standard deviation.
 In @fig:phase-measure-resolve-vertical-gradient we can see that the optimum is achieved at the angle #text(red)[#num[350] (put the actual angle here...)].
-Overall the signal here is less sensitive than the optimization of the horizontal gradient #text(red)[ref figure...], which is a direct cause of the aspect ratio of the atom cloud.
+Overall the signal here is less sensitive than the optimization of the horizontal gradient in @fig:phase-measure-resolve-horizontal-gradient, which is a direct cause of the aspect ratio of the atom cloud.
 In the $x y$-plane the atoms often span up to #qty[100][μm] whereas the (individual) planes in the $z$-lattice are only spread over $approx #qty[10][μm]$.
 It is nevertheless important to cancel the vertical gradient if we are running a measurement across/with all lattice planes.
-After the optimization of the vertical angle we can move the horizontal axis/angle back to the optimum from #text(red)[ref figure...].
-Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal gradient.
+After the optimization of the vertical angle we can move the horizontal axis/angle back to the optimum from @fig:phase-measure-resolve-horizontal-gradient.
+Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal (or vertical) gradient.
 
 #figure(
   image("/figures/2024-11-05_symmetry_vertical_gradient_thesis_result.png", width: 70%),
@@ -427,4 +477,3 @@ Thanks to the absolute positioning capabilities of the piezo mirror mount, we ca
     - Add x errorbars to take the $#num[0.05]degree$ into account?
   ],
 ) <fig:phase-measure-resolve-vertical-gradient>
-
