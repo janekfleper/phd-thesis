@@ -443,6 +443,10 @@ The easiest solution there would be to use a superlattice configuration $(v_l, v
 
 
 ==== Vertical gradient <sssec:phase-measure-resolve-vertical>
+#[
+  #set text(red)
+  - Mention the (lack of) comparison to a theoretical signal?
+]
 
 Finding the angle where the "vertical" phase gradient vanishes is less straight forward since the images taken with the z-camera show the accumulated optical density of all layers of the $z$-lattice.
 We therefore have to rely on a measurement of the signal strength similar to the lattice alignment in @sec:mod-align #text(red)[Also reference @fig:mod-align-x1064-walking?].
@@ -455,8 +459,9 @@ If the local phase $phi = 0$ is reached at the same position in all (vertical) l
 The optical density images are evaluated with a two-dimensional Gaussian envelope and a one-dimensional Gaussian function that models the phase-sensitive signal.
 The line/signal strength is then defined as the quotient of the line amplitude and the line width/standard deviation.
 In @fig:phase-measure-resolve-vertical-gradient we can see that the optimum is achieved at the angle #text(red)[#num[350] (put the actual angle here...)].
+
 Overall the signal here is less sensitive than the optimization of the horizontal gradient in @fig:phase-measure-resolve-horizontal-gradient, which is a direct cause of the aspect ratio of the atom cloud.
-In the $x y$-plane the atoms often span up to #qty[100][μm] whereas the (individual) planes in the $z$-lattice are only spread over $approx #qty[10][μm]$.
+In the $x y$-plane the atoms often span up to #qty[100][μm] whereas the (individual) planes in the $z$-lattice are only spread over #qty[10][μm].
 It is nevertheless important to cancel the vertical gradient if we are running a measurement across/with all lattice planes.
 After the optimization of the vertical angle we can move the horizontal axis/angle back to the optimum from @fig:phase-measure-resolve-horizontal-gradient.
 Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal (or vertical) gradient.
