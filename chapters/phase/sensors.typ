@@ -146,3 +146,86 @@ All/most long-term measurements are done during nights and weekends or if no one
   ],
 ) <tab:phase-sensors-other-coefficients>
 
+
+=== Measuring the environmental parameters <ssec:phase-sensors-measure>
+
+#[
+  #set text(red)
+  - Write environmental properties or parameters?
+  - More details on the self-heating of the integrated temperature sensors?
+  - Already mention "inside" and "outside" segment earlier?
+  - Where to mention when the phase correction is actually applied?
+]
+
+To (actually) apply the environmental correction of the superlattice phase $phi$ compiled in @tab:phase-sensors-temperature-coefficients and @tab:phase-sensors-other-coefficients we need to set up the corresponding sensors in the retro-reflecting path.
+For the measurement of the temperature we would like to have (at least) one sensor for each air segment and one sensor that measures the (combined) lens temperature.
+If we had (physical) access to the glass cell, we would have also liked to attach a temperature sensor (to it?).
+As already discussed in @ssec:phase-sensors-coefficients this is however not possible.
+The measurement of the other/remaining environmental parameters is simpler as we have to take neither the glasses nor a spatial resolution into account.
+We can therefore place those sensors somewhere convenient near the retro-reflecting path.
+
+There are many (cheap) integrated environmental sensors available that can be directly connected to a Raspberry Pi or an Arduino micro controller with I2C or SPI.
+Some of those sensors only measure the temperature, others can measure the temperature, the pressure and the relative humidity in/on a single chip/device.
+Pressure sensors and relative humidity sensors always include a temperature sensor for an internal calibration (#text(red)[really mention this?]).
+These integrated sensors usually have a good resolution but not necessarily a good absolute accuracy.
+For our use case this is however not an issue since we are only interested in the relative changes of the environmental parameters/properties.
+If the temperature measurement is always off by $#num[1]degree"C"$, it does not affect the correction of the superlattice phase.
+The same is/holds true for the other environmental parameters.
+For the temperature we nevertheless decided against using integrated sensors since the measured temperature can be affected by the measurement (action) itself.
+If we measured the temperature repeatedly during/for a few seconds, we could (always) see an increase of the temperature/measurement result#footnote(text(red)[Bosch BMP280 and BME280]).
+This is most likely caused by the electrical power required for/used during the measurement heating up the PCB and therefore also the sensor (area/volume).
+Furthermore these integrated sensors are not designed for the measurement we need for the lens temperature.
+We therefore opted for (passive) resistance-based temperature sensors.
+They/those require an additional device for the readout but they offer a better/higher resolution, can be operated without "self-heating" and are (directly) available for surface/material measurements.
+A good absolute accuracy would require a calibration of these resistance-based temperature sensors.
+As mentioned earlier, this is not significant for the phase correction.
+
+The environmental sensors we built into the retro-path of the x-superlattice are shown in @fig:phase-sensors-measure-setup.
+There are multiple temperature sensors to resolve the spatial variation of the air temperature and a separate sensor to measure the temperature of the lens mount.
+For the air temperature sensors we used _negative-temperature-coefficient_ (NTC) thermistors since they are much more sensitive than _resistance temperature detectors_ (RTDs) #text(red)[ref any whitepaper here? or just give a number/order of magnitude?].
+The temperature sensors indicated by the circles are precision epoxy NTC thermistors#footnote(text(red)[TE Connectivity 44001A]) with a resistance of #qty[100][#sym.Omega] at $#num[25]degree"C"$.
+This resistance is common for platinum RTDs and allowed us to share a high-resolution data logger#footnote(text(red)[Pico Technology PT-104]) with the lens-temperature sensor.
+We used the four-wire resistance measurement for the three NTC thermistors and computed the temperature using the parameters $R_0 = #qty[100][#sym.Omega]$, $beta = #qty[2854][K]$ and $T_0 = #qty[298.15][K]$ #text(red)[ref anything for this beta-equation?].
+The lens-temperature sensor is a platinum RTD#footnote(text(red)[Omega SA1-RTD-4W]) with a resistance of $R_0 = #qty[100][#sym.Omega]$ at $#num[25]degree"C"$.
+This sensor is also connected to the data logger in a four-wire configuration and the temperature is computed internally by the data logger.
+The data logger has a conversion time of #qty[720][ms] per channel, resulting in one measurement every #qty[3][s] for each sensor.
+With a sensing current of #qty[300][μA] #text(red)[ref the communication with the engineer] self-heating of the NTC thermistors and the platinum RTD are negligible #text(red)[ref any whitepaper?].
+The two (circle marker) air-temperature sensors outside of the mu-metal and the lens-temperature sensor are used for the regular phase correction with the coefficients computed/shown in @tab:phase-sensors-temperature-coefficients.
+The (circle) air-temperature sensor inside the mu-metal is discussed again in #text(red)[ref "limitations" subsections] in the context of the limitations of the phase correction.
+
+#text(red)[Mention $beta$ etc...?]
+The temperature sensors indicated by the squares are glass-coated NTC thermistors#footnote(text(red)[Amphenol Advanced Sensors NTC Type FP07]) with an ultra-fast response time of #qty[0.1][s] in still air.
+They have a resistance of #qty[8][k:#sym.Omega] at $#num[25]degree"C"$ and require a (very) low test current to avoid self-heating.
+We are therefore using bench digital multimeters#footnote(text(red)[Keysight 34465A Digital Multimeter]) that also allow a fast readout compared to typical (temperature) data loggers.
+In the low-power mode with a measurement range of #qty[10][k:#sym.Omega] the test current is #qty[10][μA] #text(red)[ref the data sheet here?].
+The dissipated power in the NTC thermistors is $<#qty[1][μW]$ which results in is negligible self-heating given the dissipation constant of #qty[50][μW/(#sym.degree:C)] in (still) air.
+The (typical) temperature traces measured with these NTC thermistors during the experimental sequence are shown in #text(red)[ref "limitations" section, or a figure?].
+We could not see a possible improvement of the phase correction with the temperature data from these sensors #text(red)[actually mention this here?].
+
+// The three remaining sensors in @fig:phase-sensors-measure-setup measure the pressure#foonote(text(red)Bosch BME), the relative humidity and the #text(red)[CO2] concentration in the (entire) retro-path.
+The two remaining sensors in @fig:phase-sensors-measure-setup are integrated sensors that are connected to an Arduino micro controller.
+The first sensor measures the pressure#footnote(text(red)[Bosch BMP390]) and is configured at/to the highest resolution, resulting in one measurement every #qty[300][ms].
+The second sensor measures the relative humidity and the #text(red)[CO2] concentration#footnote(text(red)[Sensirion SCD30]) once every #qty[2][s].
+The pressure measurement is used for the phase correction with the coefficient computed/shown in @tab:phase-sensors-other-coefficients.
+For the relative humidity we have to multiply the coefficient @tab:phase-sensors-other-coefficients by a factor of #num[2.5] to get the best phase correction #text(red)[mention this here or in the next subsection?].
+This issue is not related to the sensor itself as we found the same factor with another sensor#footnote(text(red)[Bosch BME280]).
+A possible explanation of/for this factor is/are a (weak) absorption lines of #text(red)[H2O] around/near the wavelength $lambda = #qty[1064.5][nm]$ of the infrared lattice #text(red)[ref ciddor].
+The equation/theory covers/interpolates the refractive index (at least) from #qty[350][nm] to #qty[1300][nm] but does not take (specific) water absorption lines into account.
+
+#figure(
+  image("/figures/phase-sensors-setup.png"),
+  caption: [
+    Layout of the environmental sensors in the retro-reflecting path.
+    There are two temperature sensors (just) inside the mu-metal to the "inside" temperature near the Ioffe bars.
+    Placing a temperature sensors deeper inside the mu-metal is (unfortunately) not possible.
+    There are three other/more air temperature sensors spread in the "outside" segment.
+    For the lens temperature we are using a surface sensor that is attached to the mount of the lens.
+
+    #show list: set text(red)
+    - Add coordinate system (in upper left corner?)
+    - Add the legend in lower left corner.
+    - Extend the mu-metal shielding (and indicate a "cut" for the sketch?)
+    - Find better names for the different sensor types/models.
+    - Figure out the different markers for the temperature sensors...
+  ],
+) <fig:phase-sensors-measure-setup>
