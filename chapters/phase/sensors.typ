@@ -202,7 +202,6 @@ The dissipated power in the NTC thermistors is $<#qty[1][μW]$ which results in 
 The (typical) temperature traces measured with these NTC thermistors during the experimental sequence are shown in #text(red)[ref "limitations" section, or a figure?].
 We could not see a possible improvement of the phase correction with the temperature data from these sensors #text(red)[actually mention this here?].
 
-// The three remaining sensors in @fig:phase-sensors-measure-setup measure the pressure#foonote(text(red)Bosch BME), the relative humidity and the #text(red)[CO2] concentration in the (entire) retro-path.
 The two remaining sensors in @fig:phase-sensors-measure-setup are integrated sensors that are connected to an Arduino micro controller.
 The first sensor measures the pressure#footnote(text(red)[Bosch BMP390]) and is configured at/to the highest resolution, resulting in one measurement every #qty[300][ms].
 The second sensor measures the relative humidity and the #text(red)[CO2] concentration#footnote(text(red)[Sensirion SCD30]) once every #qty[2][s].
@@ -229,3 +228,115 @@ The equation/theory covers/interpolates the refractive index (at least) from #qt
     - Figure out the different markers for the temperature sensors...
   ],
 ) <fig:phase-sensors-measure-setup>
+
+
+=== Phase stability <ssec:phase-sensors-stability>
+
+#[
+  #set text(red)
+  - Where to mention how/when the phase correction is applied?
+  - Mention the feed-forward as a function of the time?
+  - Measure the standard deviation of the atom cloud position?
+  - Mention is the error/fluctuations of the gradient strength?
+  - Where to mention the lattice depths $v_l$ and $v_s$?
+  - Find all reported stabilities in bichromatic superlattices.
+  - Where to mention that we do not have any really short-term resolution?
+  - Add a separate subsection for the limitation? For all the refs from earlier...
+]
+
+With the phase correction based on the temperature, the pressure and the relative humidity as introduced in @ssec:phase-sensors-measure we can test the resulting stability of the superlattice phase $phi$.
+The (same) correction is automatically applied in any sequence involving the superlattice.
+We can therefore "transfer" the stability of the phase, once characterized, to other measurements.
+To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-resolve with a finite horizontal gradient.
+The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @sssec:phase-measure-resolve-vertical and @sssec:phase-measure-resolve-period #text(red)[ref a figure instead?].
+The horizontal gradient is (again) set to the smallest possible value where the phase-sensitive signal remains within the atom cloud during the measurement.
+During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.
+
+#figure(
+  image("/figures/2025-05-19_symmetry_point_thesis_result.png", width: 70%),
+  caption: [
+    Stability of the superlattice phase with the environmental correction.
+    The upper axes shows a comparison of the (actually) measured phase (blue) to the expected phase (orange) without the phase correction.
+    In the lower axes the individual contributions of/to the phase correction are shown.
+    The data is/are normalized to start at #qty[0][mrad].
+
+    #show list: set text(red)
+    - Anything else to add to this caption?
+    - Normalize the second trace in the upper figure to start at 0?
+    - Show the total applied correction instead in the upper figure?
+    - Figure out the correct signs for the phase correction.
+    - Add the CO2 concentration here?
+    - Use different offsets in the lower axes to avoid overlapping data?
+    - Show two atom images as insets?
+    - Comment that the "noise" on the sensors is much smaller than the "noise" on the phase data?
+  ],
+) <fig:phase-sensors-stability>
+
+For the (actual) measurement of the phase stability we repeat the same sequence for an entire night, resulting in around #num[1000] data points.
+The atom images are evaluated individually to extract the position $y_0$ of the phase-sensitive signal.
+The phase shown in @fig:phase-sensors-stability is then $phi = k_1 dot y_0$.
+We can see in the upper axes that the measured phase does not show any long-term/slow drifts/changes.
+There are only short-term changes visible with a peak-to-peak amplitude of #qty[5][mrad].
+The contributions to the phase correction are converted from #unit[MHz] to #unit[mrad] using the factor @eq:phase-measure-resolve-period-conversion.
+The orange data points (in the upper axes) show the expected phase without the phase correction where we can see significant drifts of $>#qty[30][mrad]$.
+These data points are computed by adding the sum of the environmental correction to the measured phases.
+(Actually) Running a measurement without the phase correction is not practical since we would need (to apply) a much stronger horizontal gradient to keep the phase-sensitive signal within the atom cloud.
+
+The data in the lower axes in @fig:phase-sensors-stability show(s) that the pressure and the relative humidity are usually the strongest contribution to the phase correction.
+Since the temperature of the experiment table is stabilized and we have put additional shielding around the retro-path, the air temperature shows peak-to-peak changes of $#num[0.1]degree"C"$ and the lens temperature shows peak-to-peak changes of $<#num[0.05]degree"C"$.
+The phase correction for the pressure corresponds to a change of only #qty[1.5][hPa] in #qty[15][h].
+Even for strong(er) pressure changes by more than #qty[10][hPa] in a few hours we observe the same phase stability #text(red)[what measurement to reference here?].
+The (relative) humidity varied by up to #qty[7][%] during the measurement which is a common change during a night measurement.
+In summer slightly larger/greater changes are possible, again depending on the weather conditions.
+The (fudge) factor #num[2.5] for the humidity correction is already applied here.
+Without this factor we would have observed a long-term drift of $>#qty[10][mrad]$ in the measured phases.
+
+We are using the standard deviation of the phase $phi$ in @fig:phase-sensors-stability to quantify the overall stability of the superlattice phase.
+Since there is no (obvious) long-term drift visible, we compute the standard deviation without any running average.
+
+$
+  sqrt(Delta phi^2) = #qty[1.35][mrad]
+$ <eq:phase-sensors-stability>
+
+This stability of the superlattice phase is better than the reported stabilities of other bichromatic superlattices.
+#text(red)[Ref Chalopin 2024, Li 2021, etc...]
+
+#text(red)[compute the running average of the standard deviation without the phase correction...]
+If we compare the data with and without the phase correction in the upper axes in @fig:phase-sensors-stability again, we can see that the sequence-to-sequence variation/stability is not (actually) improved.
+The environmental phase correction only ensures/improves the long-term stability.
+We cannot explain the short-term changes with the environmental sensors that are/were used for the phase correction.
+To understand where this residual variation comes from we will look at the temperature data measured by the two sensors inside the mu-metal and the glass-coated NTC thermistor outside of the mu-metal.
+As a reminder, the temperature (measured) inside the mu-metal is not included in the phase correction.
+For the coefficient of the air temperature only the distance of #text(red)[#qty[250][mm]] from the retro-reflecting mirror to the "retro" lens is taken into account, see @tab:phase-sensors-temperature-coefficients.
+(Accurately) measuring the air temperature on the optical path of the x-lattices inside the mu-metal is not possible as highlighted by @fig:phase-sensors-stability-limitation.
+Close to the Ioffe bars we can measure temperature changes of $#num[1]degree"C"$ to $#num[2]degree"C"$ during an experimental sequence.
+As shown in @fig:phase-sensors-measure-setup the sensor NTC100-B is located close to the "lower" Ioffe bar and the sensor FP07-A is located close to the "upper" Ioffe.
+#text(red)[Where to mention (again): we do not know the actual distance of the sensors from the Ioffe bars!]
+The measured temperature cycle is inherited from the duty cycle of the Ioffe bars during the/a typical sequence.
+There is however a delay of around #qty[15][s] between the evaporation steps using the Ioffe bars (and pinch + offset coils) and the temperature cycle of the surrounding air.
+While the Ioffe bar itself will be heated up within a few seconds, it takes longer for the "heat" to be transported through the epoxy coating enclosing/wrapping the Ioffe bars and to be "transferred" to the surrounding air.
+#text(red)[This delay is consistent for the two (different) temperature sensors despite their different positions.]
+#text(red)[Mention time scale of the epoxy NTCs (again)?]
+Actual measurements inside the superlattice start after a sequence time of #qty[52][s] which is right on the cooldown slope of the temperature cycle inside the mu-metal.
+We were not able to find any correlation between the measured phases in @fig:phase-sensors-stability and the air temperature measured by the sensor FP07-A evaluated at a specific sequence time.
+We can therefore conclude that the phase correction for the optical path inside the mu-metal is not possible because of the (strong) temperature cycle due to the Ioffe bars (and pinch + offset coils).
+The temperature of the glass cell will also be a small contribution due to its proximity to the Ioffe bars and the pinch coils.
+Measuring the glass temperature is/was however not possible since we do not have (sufficient) physical access to the glass cell to attach a temperatur sensor.
+
+#figure(
+  image("/figures/2025-06-13_sensor-dmm_result.png", width: 70%),
+  caption: [
+    Air temperature as a function of the sequence time.
+    The axes/figure on the left shows the measurement inside the mu-metal by the sensors NTC100-A (dashed) and FP07-A (solid) during a typical experimental sequence.
+    The vertical lines indicate the interval where the Ioffe bars (and pinch + offset coils) are turned on during the sequence.
+    In the axes/figure on the right the data measurement by the sensors NTC100-B (dashed) and FP07-A (solid) outside of the mu-metal is shown.
+    The shaded regions show the mean plus-minus standard deviation of the respective sensors across/in #text(red)[N] sequences.
+
+    #show list: set text(red)
+    - Show the comparison to the epoxy sensors.
+    - Only show a single trace and then a long average in the background?
+    - Add Ioffe interval to the left axes.
+    - Actually show the sensors measuring outside of the mu-metal? It might be easier here to just show a wide plot of the sensor(s) inside of the mu-metal...
+    - Mention theoretical time scale of the NTC100 sensor?
+  ],
+) <fig:phase-sensors-stability-limitation>
