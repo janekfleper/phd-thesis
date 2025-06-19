@@ -89,13 +89,15 @@ This will be discussed further in #text(red)[ref section "limitations"].
     inset: 0.6em,
     columns: 5,
     "Material", "Air", "CaF2", "N-BALF4", "UVFS",
-    [Distance $d slash#unit[mm]$], num[250], num[10], num[2.9], num[4],
+    [Distance $d slash#unit[mm]$], num[250], num[9.0], num[3.7], num[4.0],
     $phy.dv(Delta n, T) med slash med #qty[1e-8][1/K]$, num[1.3], num[-27.4], num[-94.2], num[-61.8],
-    $phy.dv(phi, T) med slash #unit[mrad/K]$, num[19.20], num[-16.17], num[-16.13], num[-14.60],
+    $phy.dv(phi, T) med slash #unit[mrad/K]$, num[19.20], num[-14.55], num[-20.58], num[-14.60],
   ),
   caption: [
     Temperature coefficients of the superlattice phase $phi$.
     The reference conditions/parameters for the computation of the temperature coefficients are $T_0 = #num[24]degree "C"$, $P_0 = #qty[1013.3][hPa]$, $R H_0 = #qty[40][%]$ and $C = #qty[450][ppm]$.
+    The center thickness of the CaF2 lens is #qty[10][mm] and the center thickness of the N-BALF4 lens is #qty[2.9][mm].
+    The actual distances are different because the lattice beams are shifted by $approx #qty[10][mm]$ from the center of the retro lens.
 
     #show list: set text(red)
     - Anything else to add to the caption?
@@ -318,25 +320,54 @@ While the Ioffe bar itself will be heated up within a few seconds, it takes long
 #text(red)[This delay is consistent for the two (different) temperature sensors despite their different positions.]
 #text(red)[Mention time scale of the epoxy NTCs (again)?]
 Actual measurements inside the superlattice start after a sequence time of #qty[52][s] which is right on the cooldown slope of the temperature cycle inside the mu-metal.
-We were not able to find any correlation between the measured phases in @fig:phase-sensors-stability and the air temperature measured by the sensor FP07-A evaluated at a specific sequence time.
-We can therefore conclude that the phase correction for the optical path inside the mu-metal is not possible because of the (strong) temperature cycle due to the Ioffe bars (and pinch + offset coils).
-The temperature of the glass cell will also be a small contribution due to its proximity to the Ioffe bars and the pinch coils.
-Measuring the glass temperature is/was however not possible since we do not have (sufficient) physical access to the glass cell to attach a temperatur sensor.
+We were not able to find any correlation between the measured phases in @fig:phase-sensors-stability and the air temperature measured by the sensor FP07-A evaluated at a constant/specific sequence time.
+We therefore had to conclude that the phase correction can not be improved further with the air-temperature sensors inside the mu-metal.
+The amplitude/strength of the temperature cycle and the spatial variation of the temperature are too big/great of an uncertainty.
+The temperature of the glass cell would also be a small contribution due to its proximity to the Ioffe bars and the pinch coils.
+Measuring the glass temperature is/was however not possible (either) since we do not have (sufficient) physical access to the glass cell to attach a temperatur sensor.
+#text(red)[where to actually mention this in this paragraph?]
+We could however see a drift of the superlattice phase as a function of the sequence time with $approx #text(red)[#qty[-1][mrad/s]]$.
+The sign/slope of the drift (already) matches the expected sign based on the decrease of the air temperature after #qty[50][s] in the sequence.
+// The actual value of the temperature slope is however too high/strong.
+Between #qty[50][s] and #qty[60][s] in the sequence time, the temperature decreases by #qty[-0.0337(27)][#sym.degree:C / s].
+If we use the coefficient $phy.dv(Delta n, T) = #qty[1.3e-8][1/K]$ from @tab:phase-sensors-temperature-coefficients with a distance of #text(red)[#qty[200][mm]] between the retro lens and the glass cell, the resulting phase correction would be #qty[-0.56(5)][mrad / s] which is smaller than the actual decrease by a factor of almost #num[2].
+We therefore have to conclude that the air-temperature sensor FP07-A only allows us to draw qualitative conclusions about the air temperature inside the mu-metal.
+For a quantitative phase correction we have to rely on the empirical slope of
+
+$
+  phy.dv(phi, tau) approx #text(red)[#qty[-1][mrad/s]]
+$ <eq:phase-sensors-stability-slope>
+
+where $tau$ is the sequence time after #qty[50][s].
 
 #figure(
-  image("/figures/2025-06-13_sensor-dmm_result.png", width: 70%),
+  grid(
+    columns: (2fr, 1fr),
+    image("/figures/2025-06-13_sensor-dmm_result.png"), image("/figures/2024-11-06_ON_symmetry_drifts_result.png"),
+  ),
   caption: [
     Air temperature as a function of the sequence time.
     The axes/figure on the left shows the measurement inside the mu-metal by the sensors NTC100-A (dashed) and FP07-A (solid) during a typical experimental sequence.
     The vertical lines indicate the interval where the Ioffe bars (and pinch + offset coils) are turned on during the sequence.
-    In the axes/figure on the right the data measurement by the sensors NTC100-B (dashed) and FP07-A (solid) outside of the mu-metal is shown.
     The shaded regions show the mean plus-minus standard deviation of the respective sensors across/in #text(red)[N] sequences.
+    In the axes/figure on the right the drift of the phase with the sequence time is shown.
 
     #show list: set text(red)
-    - Show the comparison to the epoxy sensors.
+    - Show the comparison to the epoxy sensor NTC100-A.
     - Only show a single trace and then a long average in the background?
     - Add Ioffe interval to the left axes.
-    - Actually show the sensors measuring outside of the mu-metal? It might be easier here to just show a wide plot of the sensor(s) inside of the mu-metal...
-    - Mention theoretical time scale of the NTC100 sensor?
+    - Actually evaluate the "gradient" in the right axes? It would be good to get an actual uncertainty here...
+    - Use $tau$ for the time(s) on the x-axis.
   ],
 ) <fig:phase-sensors-stability-limitation>
+
+We tried to overcome the limitation of (the) temperature sensors inside the mu-metal by setting up a bichromatic Michelson interferometer in the retro-path #text(red)[add some nice refs].
+The idea was to use two overlapping beams with the wavelengths #qty[532][nm] and #qty[1064][nm] to directly measure/probe the relative phase (changes) due to the refractive index.
+The beam splitter was placed just next to the retro-mirror and the reference/short arm was located directly behind the retro-mirror (with a length of a few #unit[cm]).
+In the long/probe arm we would then guide/position the interferometer beams as close to the lattice beams as possible.
+Only the outer walls of the glass cell are coated, we could therefore use the inner wall (facing the retro-path) of the glass cell as the retro-reflecting mirror in/of the probe arm.
+The interferometer beams therefore covered all segments in @fig:phase-sensors-measure-setup that are (actually) relevant for the superlattice phase.
+The limitation here was however that it is not possible to overlap the interferometer beams and the lattice beams.
+The optical axis of the interferometer beams needs to be (perfectly) perpendicular to the glass cell wall to achieve a reflection back to the beam splitter.
+The lattice beams on the other hand are set up to deliberately avoid a perpendicular reflection off the glass cell walls #text(red)[ref @sec:super-setup?].
+While the distance between the beams is only a few #unit[mm], this is already too much if we take into account that the distance to the Ioffe bars and the pinch coils is on the same order of magnitude.
