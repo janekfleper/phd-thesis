@@ -553,7 +553,7 @@ $ <eq:phase-measure-resolve-period>
 where the error denotes the standard deviation.
 From the period $Delta f_"DDS"$ and the corresponding phase $Delta phi = pi slash 2$ we can now compute the conversion factor between the DDS frequencies and the superlattice phases as
 $
-  alpha = #qty[10.487(13)][MHz/mrad] thin .
+  alpha = #qty[10.487(13)][mrad/MHz] thin .
 $ <eq:phase-measure-resolve-period-conversion>
 
 During the measurement the position of the line/signal varied in/across a range of #qty[25][px], allowing us to neglect changes to the position of the atom cloud/imaging.
