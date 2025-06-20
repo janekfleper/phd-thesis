@@ -76,7 +76,7 @@ The shift of the ground state energy is then rescaled using @eq:theory-wannier-i
 
 $
   U = U_"Wannier" / U_"Gauss" dot (E(asc) - E(asc=0))
-$ <eq:theory-wannierinteraction-correction>
+$ <eq:theory-wannier-interaction-correction>
 
 In an isotropic three-dimensional optical lattice where $omega_x = omega_y = omega_z$ the calculation is quite straight forward since all axes contribute equally.
 If the trapping potential is only equal along two axes of the optical lattice, the problem can be solved in cylindrical coordinates with an aspect ratio $eta = omega_(x,y) slash omega_z$. #text(red)[Idziaszek and Calarco]
