@@ -122,7 +122,7 @@ Since we have acquired the beam positions (in forward-propagating direction and 
 #text(red)[Go into even more detail here?]
 
 #figure(
-  image("/figures/2025-04-06_PH_x1064_walk_UD_result_thesis.png"),
+  image("figures/2025-04-06_PH_x1064_walk_UD_result_thesis.png"),
   caption: [
     Walking of the x1064-lattice alignment with the forward-propagating beam and the retro-propagating beam.
     The in-plane lattice depths were set to $v_x = #qty[60][Erec]$ and $v_y = #qty[30][Erec]$ and the modulation time was set to $t_"mod" = #qty[0.75][s]$.

@@ -41,7 +41,7 @@ The primary cause for this inhomogeneity/imperfection is the relative alignment 
 (However), compared to the tunneling amplitude $t$ we can actually get the superlattice phase $phi$ to be constant across/over the atom cloud, see #text(red)[ref phase gradient section].
 
 #figure(
-  image("/figures/phase-measurement.png", width: 80%),
+  image("figures/phase-measurement.png", width: 80%),
   caption: [
     Measurement of the superlattice phase $phi$.
     The (three) double wells (potentials) show the detunings/offsets $Delta slash t = [-1, 0, 0.5]$ and/with an initial occupation of the left site.
@@ -103,7 +103,7 @@ For a (completely) diabatic preparation the final detuning/phase does not matter
 As shown in the second sketch/figure in @fig:phase-measure-sequence the initial density in/on the right well/site is zero.
 
 #figure(
-  image("/figures/phase-preparation-and-detection.png", width: 80%),
+  image("figures/phase-preparation-and-detection.png", width: 80%),
   caption: [
     State preparation and detection for the measurement of the superlattice phase $phi$.
     The blue lines show the densities at/after the specific steps in the sequence and the black? lines show the energies of the eigenstates.
@@ -188,7 +188,7 @@ We can (easily) get the lattice depths $v_l (x, y)$ and $v_s (x, y)$ from the in
 The local measurement of the phase $phi(x, y)$ will be shown in #text(red)[ref next subsection?].
 
 #figure(
-  image("/figures/phase-measure-resolve-band-structure.png"),
+  image("figures/phase-measure-resolve-band-structure.png"),
   caption: [
     Band structure at $v_l = 40$, $v_s = 15$ and $phi = pi slash 4$.
     The bands up to $n = 6$ are shown with their corresponding widths.
@@ -253,7 +253,7 @@ The technique to measure the phase $phi(x, y)$ with in-situ resolution will be i
 If we take all this into account to evaluate the data of the phase-sensitive measurement, the resulting DDS frequency $f_0$ would be exactly the same as from the simple evaluation using the Gaussian function.
 
 #figure(
-  image("/figures/phase-measure-resolve-tof-result.png", width: 90%),
+  image("figures/phase-measure-resolve-tof-result.png", width: 90%),
   caption: [
     Time-of-flight measurement of the symmetric superlattice configuration.
     The figure on the left shows the phase-sensitive measurement from which we can extract the phase $phi = 0$.
@@ -314,8 +314,8 @@ After the projection we then wait #qty[1][s] for the atoms to leave the trap.
   grid(
     columns: 2,
     column-gutter: 1em,
-    image("/figures/phase-measure-resolve-in-situ-initial.png"),
-    image("/figures/phase-measure-resolve-in-situ-final.png"),
+    image("figures/phase-measure-resolve-in-situ-initial.png"),
+    image("figures/phase-measure-resolve-in-situ-final.png"),
   ),
   caption: [
     Projection for the in-situ measurement of the superlattice phase.
@@ -363,7 +363,7 @@ with the reference angle of #text(red)[grab the correct value here] from the in-
 #text(red)[Where to metion that these results are averaged over 8 measurements?]
 
 #figure(
-  image("/figures/2024-12-12_symmetry_period_in-situ_result.png"),
+  image("figures/2024-12-12_symmetry_period_in-situ_result.png"),
   caption: [
     Phase-sensitive measurement with in-situ/spatial resolution.
     The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
@@ -422,7 +422,7 @@ If we would require a more homogeneous phase map as achieved/shown in @fig:phase
 The easiest solution there would be to use a superlattice configuration $(v_l, v_s)$ where the offset/detuning $Delta slash t$ is (even) more sensitive to the superlattice phase $phi$.
 
 #figure(
-  image("/figures/2024-11-04_symmetry_gradient_thesis_result.png", width: 70%),
+  image("figures/2024-11-04_symmetry_gradient_thesis_result.png", width: 70%),
   caption: [
     Optimization of the horizontal phase gradient.
     The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
@@ -467,7 +467,7 @@ After the optimization of the vertical angle we can move the horizontal axis/ang
 Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal (or vertical) gradient.
 
 #figure(
-  image("/figures/2024-11-05_symmetry_vertical_gradient_thesis_result.png", width: 70%),
+  image("figures/2024-11-05_symmetry_vertical_gradient_thesis_result.png", width: 70%),
   caption: [
     Optimization of the vertical phase gradient.
     The horizontal phase gradient was set to $approx #qty[0.1][MHz/px]$ to get a narrow line in the optimized case.
@@ -517,9 +517,9 @@ With a typical atom cloud size of up to #qty[100][px], we can choose the variati
 #figure(
   grid(
     columns: (6.5cm, 1fr),
-    image("/figures/phase-measure-period-order0.png"),
-    grid.cell(rowspan: 2, image("/figures/2024-12-12_symmetry_period_histogram.png")),
-    image("/figures/phase-measure-period-order1.png"),
+    image("figures/phase-measure-period-order0.png"),
+    grid.cell(rowspan: 2, image("figures/2024-12-12_symmetry_period_histogram.png")),
+    image("figures/phase-measure-period-order1.png"),
   ),
   caption: [
     Measurement of the superlattice period.

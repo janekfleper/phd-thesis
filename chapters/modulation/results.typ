@@ -45,9 +45,9 @@ The transition frequency is three orders of magnitude greater at $approx #qty[12
   grid(
     columns: 2,
     gutter: 1em,
-    image("../../figures/modulation-results-theory-bandstructure.png"),
+    image("figures/modulation-results-theory-bandstructure.png"),
     block[
-      #image("../../figures/modulation-results-theory-bandwidth.png")
+      #image("figures/modulation-results-theory-bandwidth.png")
       #place(curve(stroke: 0.5pt, curve.move((24pt, -30pt)), curve.line((165pt, -148pt))))
     ],
   ),
@@ -78,7 +78,7 @@ We therefore process all images of a lattice modulation frequency scan in a sing
 The details of the evaluation are presented in @sec:mod-eval.
 
 #figure(
-  image("../../figures/2025-01-28_calibration_images_thesis.png"),
+  image("figures/2025-01-28_calibration_images_thesis.png"),
   caption: [
     In-situ lattice modulation spectroscopy measurement.
     The images show the optical densities after the modulation of the x1064-lattice at a lattice depth of #qty[55][Erec].

@@ -48,9 +48,9 @@ The illustration of the superlattice potential in @fig:theory-super-potential-ph
   grid(
     columns: 3,
     column-gutter: 2mm,
-    image("../../figures/superlattice-potential-symmetric.png"),
-    image("../../figures/superlattice-potential-asymmetric.png"),
-    image("../../figures/superlattice-potential-antisymmetric.png"),
+    image("figures/superlattice-potential-symmetric.png"),
+    image("figures/superlattice-potential-asymmetric.png"),
+    image("figures/superlattice-potential-antisymmetric.png"),
   ),
   caption: [
     Superlattice potential for different phases $phi$.
@@ -83,7 +83,7 @@ The eigenvalues will be the energy bands $epsilon_n (q)$ and the eigenvectors wi
 See @fig:theory-super-potential-phase for the band structure of a _symmetric_ superlattice.
 
 #figure(
-  image("../../figures/superlattice-band-structure-zoom.png"),
+  image("figures/superlattice-band-structure-zoom.png"),
   caption: [
     Band structure in the superlattice potential for $v_l = ?$, $v_s = ?$ and $phi = 0$.
     In a symmetric superlattice potential the band structure shows pairs of bands that are only separated by a small energy gap.
@@ -105,7 +105,7 @@ In a symmetric superlattice the (inner function of the) Bloch waves will have th
 If the superlattice phase is however asymmetric, the symmetry between the two sites in the unit cell is broken and the odd (even) Bloch waves will start to localize on the lower (upper) sites to follow the respective on-site energies.
 
 #figure(
-  image("../../figures/superlattice-bloch-waves.png"),
+  image("figures/superlattice-bloch-waves.png"),
   caption: [
     Bloch waves at $q = 0$ in the superlattice potential for $v_l = 15$, $v_s = 15$ and $phi = 0$.
     The Bloch waves $psi_(n,q) (x)$ are shifted by the mean of the respective energy bands $epsilon_n (q)$.
@@ -155,7 +155,7 @@ The illustration shows that we always have to mix the lowest two bands around $p
 If the superlattice configuration is far away from any avoided crossings (compared to their gaps), using the regular Wannier functions is sufficient to describe (maximally) localized particles.
 
 #figure(
-  image("../../figures/superlattice-wannier-mixing.png", width: 80%),
+  image("figures/superlattice-wannier-mixing.png", width: 80%),
   caption: [
     Mixing of the Bloch bands to form maximally located Wannier functions in the superlattice potential.
     The y-axis shows the overlap of the maximally located Wannier function $phy.ket(w_R)$ on the right sublattice site with the regular Wannier functions $phy.ket(w_n)$ where $n$ is the index of the corresponding Bloch bands.

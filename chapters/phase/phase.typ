@@ -11,7 +11,6 @@ Thanks to the phase sensitivity of the superlattice potential we were able to ac
 At the end of the chapter I will present the paper/project "Floquet-Driven Crossover from Density-Assisted Tunneling to Enhanced Pair Tunneling" where we used the phase to apply a periodic modulation to the superlattice potential.
 This modulation allowed us to modify the tunneling and the effective interaction of pairs of atoms in the separate double wells.
 
-
 #include "setup.typ"
 #include "measure.typ"
 #include "sensors.typ"

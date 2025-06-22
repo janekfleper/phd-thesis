@@ -58,7 +58,7 @@ For any reasonably sized interaction $U$ they will simply remain in their (initi
 We will however detect half of them (#text(red)[explain this in detail?]) as singles as the state $phy.ket(L)$ (and technically also the state $phy.ket(R)$) have the same RF transition frequency as the singlet state $phy.ket(s)$.
 
 #figure(
-  image("/figures/phase-interaction-sketch.png", width: 80%),
+  image("figures/phase-interaction-sketch.png", width: 80%),
   caption: [
     Theory of the calibration of the interaction energy $U$.
     The double well on the left (right) shows the (prepared) state $phy.ket(L L)$ with repulsive (attractive) interactions.
@@ -106,7 +106,7 @@ With a waist of (only) #qty[115][μm] the z532-lattice depth also decreases the 
 The "rapid" decrease of the interaction strength $U$ away from the center along the x-axis is therefore expected.
 
 #figure(
-  image("/figures/2023-09-28_U_calibration_thesis_map.png", width: 80%),
+  image("figures/2023-09-28_U_calibration_thesis_map.png", width: 80%),
   caption: [
     Result of the interaction calibration with density-assisted tunneling.
     The lattice depths for this measurement were set to $v_l = 15$ and $v_s = 12$ and the magnetic field was set to $B = #text(red)[???]$.

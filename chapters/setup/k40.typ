@@ -27,7 +27,7 @@ We are using the closed transition between the ground state manifold $phy.ket(at
 See @fig:setup-k40-hfs for a sketch of the hyperfine structure of those three states.
 
 #figure(
-  image("../../figures/setup-potassium-hfs.png"),
+  image("figures/setup-potassium-hfs.png"),
   caption: [
     Hyperfine structure of Potassium #phy.isotope("K", a: [40]).
     The states on the left show the electronic structure for the principal quantum number $n = 4$.

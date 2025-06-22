@@ -42,7 +42,7 @@ The fit parameters of the lattice depth, the lattice waist and the lattice posit
 The other resonance fit parameters will only be considered from a qualititive point of view (if anything).
 
 #figure(
-  image("../../figures/modulation_evaluation_fit_model.png"),
+  image("figures/modulation_evaluation_fit_model.png"),
   caption: [
     Illustration of the lattice modulation spectroscopy fit model.
     The lattice in the figure has a depth of #qty[60][Erec] (in the center) and the waist of the lattice is #qty[140][μm].
@@ -131,7 +131,7 @@ This was also expected since a gaussian function can be approximated really well
 We do however expect the resulting waists to be slightly different because the fit models must have a different value of the parameter $a$ if the functions visually overlap.
 
 #figure(
-  image("../../figures/modulation_evaluation_depth_parabola.png", width: 70%),
+  image("figures/modulation_evaluation_depth_parabola.png", width: 70%),
   caption: [
     Comparison of fitted lattice depth to atom densities.
     The plot shows the normalized data from @fig:mod-results-images.
@@ -200,7 +200,7 @@ If an individual fit returns a different angle, the distance of the resonances a
 See @tab:mod-eval-error for the averaged results of the position $y_0$ and the angle $theta.alt$ together with the other fit parameters.
 
 #figure(
-  image("../../figures/modulation_evaluation_error_estimation.png", width: 80%),
+  image("figures/modulation_evaluation_error_estimation.png", width: 80%),
   caption: [
     Lattice modulation spectroscopy error estimation.
     The figure shows the results of four different fits to the individual images from the measurement in @fig:mod-results-images.
@@ -307,7 +307,7 @@ We will not look at the detailed comparison of the global fit to the individual 
 ) <tab:mod-eval-error-other>
 
 #figure(
-  image("../../figures/modulation_evaluation_depth_parabola_y1064_and_z532.png"),
+  image("figures/modulation_evaluation_depth_parabola_y1064_and_z532.png"),
   caption: [
     Fitted lattice depth of z532-lattice at $v_0 = #qty[110][Erec]$ and y1064-lattice at $v_0 = #qty[55][Erec]$.
     The two axes show the equivalent data of @fig:mod-eval-parabola for the x1064-lattice.

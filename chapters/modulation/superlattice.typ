@@ -37,7 +37,7 @@ In the case of band $n = 6$ we can only see a small change across the entire ran
 Since the initial band will always be $n = 1$, its sensitivity to the phase will always be the limitation of the in-situ superlattice modulation around the phase $phi = 0$.
 
 #figure(
-  image("/figures/modulation-superlattice-phase.png", width: 70%),
+  image("figures/modulation-superlattice-phase.png", width: 70%),
   caption: [
     Sensitivity of the band structure to the superlattice phase $phi$.
     The (corresponding) lattice depths are $v_l = #qty[60][Erec]$ and $v_s = #qty[20][Erec]$, which are the usual parameters we use for the in-situ superlattice modulation measurements.
@@ -79,7 +79,7 @@ Even for slightly greater lattice depths there is no (imminent) threat to lose t
 #text(red)[Check whether this would actually be possible at all?]
 
 #figure(
-  image("/figures/modulation-superlattice-wannier.png", width: 90%),
+  image("figures/modulation-superlattice-wannier.png", width: 90%),
   caption: [
     Possible (band) transitions in the modulated superlattice potential.
     The potential is shown here for the lattice depths $v_l = #qty[60][Erec]$ and $v_s = #qty[20][Erec]$ and the phase $phi = pi slash 4$.
@@ -114,7 +114,7 @@ As discussed earlier this is not caused by the parity of the Wannier functions b
   grid(
     columns: 2,
     column-gutter: 1em,
-    image("/figures/modulation-superlattice-vl.png"), image("/figures/modulation-superlattice-vs.png"),
+    image("figures/modulation-superlattice-vl.png"), image("figures/modulation-superlattice-vs.png"),
   ),
   caption: [
     Sensitivity of the superlattice band structure to the lattice depths $v_l$ and $v_s$.
@@ -185,7 +185,7 @@ As a reminder, these values are also used as the parameters of the long lattice 
 Only the (superlattice) angle $theta.alt$ can slightly change the x1064-lattice depth again.
 
 #figure(
-  image("/figures/2025-01-28_calibration_thesis_result_xsuper.png", width: 90%),
+  image("figures/2025-01-28_calibration_thesis_result_xsuper.png", width: 90%),
   caption: [
     Result of the lattice depth calibration with the in-situ superlattice modulation technique.
     The selected lattice depths for the measurement were $v_l = #qty[60][Erec]$ and $v_s = #qty[18][Erec]$, and the superlattice phase was set to $phi = #qty[0.250(4)][#sym.pi]$.

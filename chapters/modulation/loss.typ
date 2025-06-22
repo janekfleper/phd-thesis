@@ -40,7 +40,7 @@ We can observe a kink at $approx #qty[65][Erec]$ in the fit parameters of the re
 From the kink to a lattice depth of $approx #qty[75][Erec]$ the resonance amplitude decreases by a factor of $3-4$ while the resonance width decreases by a factor of $approx 2$.
 
 #figure(
-  image("../../figures/2024-10-25_PH_x1064_band_overlap_average_result.png"),
+  image("figures/2024-10-25_PH_x1064_band_overlap_average_result.png"),
   caption: [
     Decrease of "loss efficiency" in deep lattices.
     We ran the in-situ parametric heating measurement for lattice depths from #qty[50][Erec] to #qty[74][Erec].
@@ -69,8 +69,8 @@ Atoms in the sixth band would therefore be able to leave the trap against/despit
   grid(
     columns: 2,
     gutter: 0.5em,
-    image("../../figures/2024-10-25_band_structure_theory.png", width: 85%),
-    image("../../figures/2024-10-25_band_overlap_theory.png", width: 85%),
+    image("figures/2024-10-25_band_structure_theory.png", width: 85%),
+    image("figures/2024-10-25_band_overlap_theory.png", width: 85%),
   ),
   caption: [
     Available transitions $3 -> n$ in a deep lattice.
@@ -141,7 +141,7 @@ Since the x1064-lattice and the y1064-lattice are not perfectly perpendicular, t
 This coupling between the (in-plane) lattices is discussed in detail in @sec:mod-coupled and the gap in the band $n = 6$ is reproduced by the band structure in @fig:mod-coupled-two-result .
 
 #figure(
-  image("../../figures/2025-01-27_two-tone_PH_x1064_result_80Erec.png"),
+  image("figures/2025-01-27_two-tone_PH_x1064_result_80Erec.png"),
   caption: [
     Recovery of the resonance contrast by a second modulation frequency.
     The frequency $f_(1 -> 3) approx #qty[140][kHz]$ at $v_x = #qty[80][Erec]$ is shown by the blue line in the upper row.

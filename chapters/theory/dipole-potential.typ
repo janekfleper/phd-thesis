@@ -9,7 +9,7 @@ Conversely if $omega > omega_0$, the light is referred to as _blue-detuned_ and 
 See @fig:theory-dipole-detuning-gauss for a sketch of the atom-light interaction for a gaussian beam.
 
 #figure(
-  image("../../figures/optical-potential-detuning.png", width: 80%),
+  image("figures/optical-potential-detuning.png", width: 80%),
   caption: [
     Illustration of the effect of the detuning $Delta = omega - omega_0$ between a gaussian beam and atoms.
     If the light is red-detuned, the atoms are pulled towards the intensity maximum of the gaussian beam.
@@ -53,7 +53,7 @@ In the case of the counterpropagating waves the angle $alpha$ is equal to $90 de
 See @fig:theory-lattice-intersection-angle for an illustration of the change of the interference pattern based on the angle of intersection.
 
 #figure(
-  image("../../figures/optical-lattices-interference.png"),
+  image("figures/optical-lattices-interference.png"),
   caption: [
     Interference of plane waves based on the angle of intersection.
     The wavelengths of the plane waves in the two examples are equal, as indicated by the equal lengths of the wavevectors!
@@ -75,7 +75,7 @@ If we disregard the scattering effects, the two possible potentials only differ 
 The global energy offset will not affect the physics of the atoms in the lattices, and we can disregard this when looking at the eigensolutions in an optical lattice potential.
 
 #figure(
-  image("../../figures/optical-lattices-detuning.png"),
+  image("figures/optical-lattices-detuning.png"),
   caption: [
     Illustration of the trapping of atoms in optical lattices with different detuning.
     The plot on the left shows the optical dipole potential of a red-detuned optical lattice with the depth $V_0$ and the period $a$.

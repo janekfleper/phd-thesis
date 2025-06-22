@@ -46,7 +46,7 @@ The measured/evaluated waist $w_0$ of the optical lattice increases by $approx #
 We therefore concluded that the foci of the forward-propagating and retro-propagating lattice beams are shifted such that we get a shallower (but wider) lattice at the position of the atoms.
 
 #figure(
-  image("../../figures/2024-05-30_x1064-heating_reference_result.png", width: 80%),
+  image("figures/2024-05-30_x1064-heating_reference_result.png", width: 80%),
   caption: [
     In-situ lattice modulation spectroscopy of the thermal lensing effects in the x1064-lattice.
     The setpoint of the lattice depth for this measurement was #qty[55][Erec] which would correspond to a parabola offset of $a_0 = 1.0$.
@@ -144,7 +144,7 @@ The changes we did are explained in detail in @ssec:super-thermal-x532-rebuild.
 
 
 #figure(
-  image("../../figures/2024-06-24_PH_xsuper_result.png", width: 60%),
+  image("figures/2024-06-24_PH_xsuper_result.png", width: 60%),
   caption: [
     In-situ superlattice modulation spectroscopy of the thermal lensing effects in the x532-lattice.
     The x1064-lattice was set to $v_l = #num[55]$ and the superlattice phase was set to $phi = pi / 4$.
@@ -307,7 +307,7 @@ Note that the ray-tracing simulation is not be applicable to the setup of the x1
 #text(red)[Mention the Rayleigh-induced focal shift here? This should not matter for the actual thermal lensing since the Rayleigh-induced shift is a static one.]
 
 #figure(
-  image("/figures/thermal-lensing-simulation.png"),
+  image("figures/thermal-lensing-simulation.png"),
   caption: [
     Dummy setup to simulate the focal shift induced by (a) thermal lens(ing).
     The beam is initially collimated with a radius of $r = w_0$.
@@ -456,7 +456,7 @@ We decided against this since we are already close to the resolution of the in-s
 Unless the overlap with the x532-lattice will lead to a strong(er) thermal lensing again, we don't have to worry about it for the x1064-lattice anymore.
 
 #figure(
-  image("/figures/2024-10-28_PH_x1064_thermal_lensing_result.png", width: 80%),
+  image("figures/2024-10-28_PH_x1064_thermal_lensing_result.png", width: 80%),
   caption: [
     In-situ lattice modulation spectroscopy of the minimized thermal lensing effects in the x1064-lattice.
     The setpoint of the lattice depth for this measurement was #qty[60][Erec] and the modulation time was set to #qty[200][ms].
@@ -547,7 +547,7 @@ We would only have to revisit the thermal lensing "optimization" if we would sig
 If the focal shifts get "stronger" by a factor of more than $2$, this could show up as a change of the lattice amplitude eventually.
 
 #figure(
-  image("/figures/2024-10-31_ON_x532_lensing_PH_result_18.png", width: 65%),
+  image("figures/2024-10-31_ON_x532_lensing_PH_result_18.png", width: 65%),
   caption: [
     In-situ lattice modulation spectroscopy of the minimized thermal lensing in the x532-lattice.
     The lattice depths were $v_l = #qty[60][Erec]$ and $v_s = #qty[18][Erec]$ respectively, and the superlattice was set to $phi = pi / 4$.

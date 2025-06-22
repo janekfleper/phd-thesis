@@ -78,7 +78,7 @@ The _band index_ $n$ starts at $1$ for the lowest band and increases in integer 
 For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function of the quasi-momentum $q$, and _band gaps_ appear between trapped bands where $epsilon_n (q) < v_0$.
 
 #figure(
-  image("../../figures/optical-lattices-energy-bands.png"),
+  image("figures/optical-lattices-energy-bands.png"),
   caption: [
     Energy bands in an optical lattice with depth $v_0 = #qty[#text(red)[15]][Erec]?$.
     In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.

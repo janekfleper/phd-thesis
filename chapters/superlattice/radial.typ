@@ -50,7 +50,7 @@ Without losses the coefficient $gamma$ would be $1$ and the running-wave compone
 @eq:super-radial-potential will then simplify/reduce to the "theoretical" form @eq:theory-super-potential-dimensionless.
 
 #figure(
-  image("../../figures/radial_potential_vplus_vminus.png", width: 70%),
+  image("figures/radial_potential_vplus_vminus.png", width: 70%),
   caption: [
     Simple phase configurations for the radial potential.
     The figure on the left shows the potential $v_+$ where the confinement of the long lattice and the short lattice is effectively "added".

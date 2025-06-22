@@ -32,7 +32,7 @@ The rate of tunneling can be tied to the finite amplitude of the Wannier functio
 In a (reasonably) deep lattice the finite amplitude can also be clearly observed on the neighbouring lattice site, see @fig:theory-wannier-tunneling.
 
 #figure(
-  image("../../figures/wannier-functions-tunneling-overlap.png"),
+  image("figures/wannier-functions-tunneling-overlap.png"),
   caption: [
     Wannier functions of the lowest band on neighbouring lattice sites in an optical lattice with depth $v_0 = #qty[#text(red)[15]][Erec]?$.
     The zero point of the second y-axis is shifted to the mean energy of the lowest band $epsilon_1 (q)$.

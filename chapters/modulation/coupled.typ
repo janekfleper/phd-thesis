@@ -65,8 +65,8 @@ If the atoms can tunnel over a significant distance during the lattice modulatio
 #figure(
   grid(
     columns: 2,
-    image("../../figures/modulation_coupling_mixture_band_31.png"),
-    image("../../figures/modulation_coupling_measurement_band_31.png"),
+    image("figures/modulation_coupling_mixture_band_31.png"),
+    image("figures/modulation_coupling_measurement_band_31.png"),
   ),
   caption: [
     Coupling of the bands $(3, 1)$, $(2, 2)$ and $(1, 3)$.
@@ -124,7 +124,7 @@ At $v_y = #qty[40][Erec]$ the uncoupled band structure suggests that there is a 
 Since the bands $(5, 2)$ and $(4, 3)$ also couple with eachother, the two gaps in the band $(6, 1)$ are further apart than one would expect from the uncoupled band structure. are further apart than one would expect from the uncoupled band structure.
 
 #figure(
-  image("../../figures/2025-01-29_two-tone_PH_x1064_bandstructure_70Erec.png", width: 85%),
+  image("figures/2025-01-29_two-tone_PH_x1064_bandstructure_70Erec.png", width: 85%),
   caption: [
     Coupled band structure around the excited band $(6, 1)$.
     The axes show the transition frequencies relative to the band $(3, 1)$ since this is the initial state of the atoms after the modulation with the frequency $f_(1 -> 3)$.
@@ -144,7 +144,7 @@ Ideally we want to use a single secondary frequency $f_2$ to cover the entire sc
 If a specific frequency $f_2$ is required for each principle frequency, the two-tone modulation scheme would not be practical.
 
 #figure(
-  image("../../figures/2025-01-29_two-tone_PH_x1064_result_70Erec.png"),
+  image("figures/2025-01-29_two-tone_PH_x1064_result_70Erec.png"),
   caption: [
     Band gaps in the two-tone lattice modulation scheme.
     The axes in the first row show the uncoupled bands $(6, 1)$ and $(7, 1)$ in black and the coupled bands in solid colors.

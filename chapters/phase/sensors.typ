@@ -214,7 +214,7 @@ A possible explanation of/for this factor is/are a (weak) absorption lines of #t
 The equation/theory covers/interpolates the refractive index (at least) from #qty[350][nm] to #qty[1300][nm] but does not take (specific) water absorption lines into account.
 
 #figure(
-  image("/figures/phase-sensors-setup.png"),
+  image("figures/phase-sensors-setup.png"),
   caption: [
     Layout of the environmental sensors in the retro-reflecting path.
     There are two temperature sensors (just) inside the mu-metal to the "inside" temperature near the Ioffe bars.
@@ -255,7 +255,7 @@ The horizontal gradient is (again) set to the smallest possible value where the 
 During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.
 
 #figure(
-  image("/figures/2025-05-19_symmetry_point_thesis_result.png", width: 70%),
+  image("figures/2025-05-19_symmetry_point_thesis_result.png", width: 70%),
   caption: [
     Stability of the superlattice phase with the environmental correction.
     The upper axes shows a comparison of the (actually) measured phase (blue) to the expected phase (orange) without the phase correction.
@@ -343,7 +343,7 @@ where $tau$ is the sequence time after #qty[50][s].
 #figure(
   grid(
     columns: (2fr, 1fr),
-    image("/figures/2025-06-13_sensor-dmm_result.png"), image("/figures/2024-11-06_ON_symmetry_drifts_result.png"),
+    image("figures/2025-06-13_sensor-dmm_result.png"), image("figures/2024-11-06_ON_symmetry_drifts_result.png"),
   ),
   caption: [
     Air temperature as a function of the sequence time.

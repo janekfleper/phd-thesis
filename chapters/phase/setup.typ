@@ -38,7 +38,7 @@ If we would not have access to the pump laser of the x532-laser, the frequency s
 This implementation was used for the superlattice along the $z$-axis where the source for the green/z532-lattice is a Coherent Verdi V18 that only/directly emits light at #qty[532][nm] #text(red)[ref Nicola + Marcell].
 
 #figure(
-  image("/figures/phase-setup.png"),
+  image("figures/phase-setup.png"),
   caption: [
     Flow diagram of the control of the superlattice phase $phi$.
     The optical frequencies are denoted by the character $nu$, where radio frequencies (and lower) are denoted by the character $f$.
