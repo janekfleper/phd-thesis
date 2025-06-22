@@ -4,7 +4,7 @@
 
 #[
   #set text(red)
-  - Figure out the correct signs for $Delta$, $phi$ etc...
+  - Figure out the correct signs for $Delta$, $phi$ etc... Change the sign definition of $phi$ to make all the signs equal?
   - Highlight that initially the DDS frequency is measured? The phase $phi$ is only the final evaluated quantity...
   - Evaluate #asc in each grid individually?
 ]
@@ -31,9 +31,15 @@ The measurement of $Delta U$ requires completely frozen lattices, but the intera
 Ideally we would like to calibrate the interaction strength $U$ in a lattice configuration that is equal or very close to the configuration where we are ultimately running our measurements.
 
 In the superlattice potential such a calibration is possible with a technique that is similar to the phase-sensitive measurement @fig:phase-measure-theory.
-Instead of determining the superlattice phase $phi = 0$, we can measure the offset/detuning where $2 Delta(phi) = - U$ #text(red)[ref Trotzky/Fölling and Andrea?].
+Instead of determining the superlattice phase $phi = 0$, we can measure the offset/detuning where
+
+$
+  2 Delta(phi) = - U
+$ <eq:phase-int-condition>
+
+which has already been used extensively in superlattices and double wells #text(red)[ref Trotzky/Fölling and Andrea?].
 The tunneling of one of the atoms is then equivalent to the tunneling of the atom/particle in a singly-occupied double well at the symmetric phase $phi = 0$.
-This configuration is shown in @fig:phase-interaction-theory for repulsive interactions as well as attractive interactions.
+This configuration is shown in @fig:phase-int-theory for repulsive interactions as well as attractive interactions.
 The timescale of this so-called _density-assisted_ tunneling is the (single-particle) tunneling $t$ since the energy splitting at/of the avoided crossings at $plus.minus 2 Delta = U$ is (also) $2t$.
 Any detuning from this "resonance" condition will (again) result in a faster oscillation frequency.
 We can/will therefore measure the phase-sensitive signal developed/introduced in @sec:phase-measure with an offset given by the condition $2 Delta(phi) = - U$.
@@ -64,7 +70,7 @@ We will however detect half of them (#text(red)[explain this in detail?]) as sin
     - Anything else to add to this caption?
     - Show a spectrum here where the points $plus.minus 2 Delta = U$ are marked?
   ],
-) <fig:phase-interaction-theory>
+) <fig:phase-int-theory>
 
 Compared to the calibration technique based on the RF transitions, the phase-sensitive/phase-based technique can directly measure the interaction strength $U$.
 There are however two systematic errors that we have to consider.
@@ -83,13 +89,46 @@ We therefore have to simulate the expected signals to estimate the correction th
 
 Considering these small relative errors, we can use the phase-sensitive signal with the density-assisted tunneling to calibrate the (local) interaction energy $U$ without ever computing the interaction energy with @eq:theory-wannier-interaction-correction.
 We only need to compute the detuning/offset $Delta(phi)$ as a function of the (measured) superlattice phase $phi(x, y)$ using the BPO formalism #text(red)[@ssec:theory-super-wannier].
-As a reference for the measured phase $phi(x, y)$ we can use the zero-phase determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-resolve-in-situ-result.
+#text(red)[Explain this better with the DDS frequency maps for the interaction and the zero-phase...]
+As a reference for the measured interaction frequency $f_U (x, y)$ we can use the zero-phase frequency $f_0 (x, y)$ determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-resolve-in-situ-result.
 Subtracting the underlying superlattice phase will (also) automatically correct the measurement for any residual phase gradients.
 
-With the calibration/measurement of the local interaction $U(x, y)$, the scattering length #asc could be determined in a further evaluation step.
+$
+  phi(x, y) = alpha dot (f_U (x, y) - f_0 (x, y))
+$ <eq:phase-int-phi>
+
+With the lattice depths $v_l (x, y)$ and $v_s (x, y)$ we can then compute the offset/detuning $Delta(x, y)$ and subsequently the interaction strength $U(x, y)$ with the relation @eq:phase-int-condition.
+The result of such a measurement/evaluation is shown in @fig:phase-int-result-maps.
+We can see that the phase $phi(x, y)$ changes primarily along the x-axis.
+This is caused by the confinement along the z-axis which is provided by the z532-lattice.
+Due to the longer lattice spacing (compared to the xy-plane), the confinement along the z-axis is (already) the weakest.
+With a waist of (only) #qty[115][μm] the z532-lattice depth also decreases the fastest (or all available lattices).
+The "rapid" decrease of the interaction strength $U$ away from the center along the x-axis is therefore expected.
+
+#figure(
+  image("/figures/2023-09-28_U_calibration_thesis_map.png", width: 80%),
+  caption: [
+    Result of the interaction calibration with density-assisted tunneling.
+    The lattice depths for this measurement were set to $v_l = 15$ and $v_s = 12$ and the magnetic field was set to $B = #text(red)[???]$.
+    The figure on the left shows the measured phase $phi(x, y)$ where the density-assisted tunneling was resonant.
+    The resulting offset/detuning $Delta(x, y)$ is shown on the right.
+    The mask for both figures is computed based on the density (of doubles) $n(x, y)$.
+    The figures only show the cells where $n(x, y) >= 0.1 n_max$ with $n_max$ being the maximal density in the center of the atom cloud.
+
+    #show list: set text(red)
+    - Really show $phi$ and $Delta$ here? Maybe $phi$ and $U$ would be better?
+    - Mention the magnetic field and the hyperfine states?
+    - How/where to include the units for the respective colorbars?
+    - Show the expected interaction map somewhere?
+    - Show any cuts here to visualize the change along the x-axis?
+  ],
+) <fig:phase-int-result-maps>
+
+With the calibration/measurement of the local interaction $U(x, y)$, we can determine the scattering length #asc in a further evaluation step.
 If we use the calibrated lattice depths from #text(red)[@ch:mod], the scattering length #asc is the only free parameter of the interaction energy.
 Since #asc only depends on the magnetic field $B$, it is expected to be constant across the atom cloud.
-The inhomogeneity of the interaction $U(x, y)$ is only caused by the inhomogeneity of the lattice depths.
-A global fit to determine #asc shows that the inhomogeneity of $U(x, y)$ agrees with/matches the confinement by the lattices.
+As discussed earlier in this section, the inhomogeneity of the interaction $U(x, y)$ is only caused by the inhomogeneity of the lattice depths.
+A global fit to determine (a scalar) #asc shows that the inhomogeneity of $U(x, y)$ agrees with/matches the confinement by the lattices.
 To estimate the error of the scattering length, we can evaluate the cells individually.
-The standard deviation of the invidual scattering lengths can then be used as the error of the entire calibration/measurement.
+The standard deviation of the individual scattering lengths can then be used as an estimated error of the entire calibration/measurement.
+#text(red)[Figure out something to finish this section and transition to the Floquet stuff...]
