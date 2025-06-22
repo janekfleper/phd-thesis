@@ -31,23 +31,60 @@ The measurement of $Delta U$ requires completely frozen lattices, but the intera
 Ideally we would like to calibrate the interaction strength $U$ in a lattice configuration that is equal or very close to the configuration where we are ultimately running our measurements.
 
 In the superlattice potential such a calibration is possible with a technique that is similar to the phase-sensitive measurement @fig:phase-measure-theory.
-Instead of determining the superlattice phase $phi = 0$, we can measure the offset/detuning where $Delta(phi) = - U slash 2$.
-This detuning corresponds to the case where the energies of the non-interacting states $phy.ket(L)$ and $phy.ket(R)$ are equal to the interaction energy $U$.
+Instead of determining the superlattice phase $phi = 0$, we can measure the offset/detuning where $2 Delta(phi) = - U$ #text(red)[ref Trotzky/Fölling and Andrea?].
 The tunneling of one of the atoms is then equivalent to the tunneling of the atom/particle in a singly-occupied double well at the symmetric phase $phi = 0$.
-The timescale of this so-called _density-assisted_ tunneling is the (single-particle) tunneling $t$ since the energy splitting at/of the avoided crossings at $plus.minus Delta = U slash 2$ is (also) $2t$.
+This configuration is shown in @fig:phase-interaction-theory for repulsive interactions as well as attractive interactions.
+The timescale of this so-called _density-assisted_ tunneling is the (single-particle) tunneling $t$ since the energy splitting at/of the avoided crossings at $plus.minus 2 Delta = U$ is (also) $2t$.
 Any detuning from this "resonance" condition will (again) result in a faster oscillation frequency.
-We can/will therefore measure the phase-sensitive signal developed/introduced in @sec:phase-measure with an offset given by the condition $Delta(phi) = - U slash 2$.
+We can/will therefore measure the phase-sensitive signal developed/introduced in @sec:phase-measure with an offset given by the condition $2 Delta(phi) = - U$.
+#text(red)[Really put this here? Find the best spot for the next few sentences!]
+A look at the double well states that are relevant for the density-assisted tunneling will "confirm" the similarity to the non-interacting tunneling at $phi = 0$.
+The atoms are initially prepared in the state $phy.ket(L L)$ at $phi = pi slash 4$ with a large detuning $abs(Delta) >> abs(U), t$.
+After the preparation at the detuning $2 Delta approx -U$ the actual oscillation happens between the state $phy.ket(L L)$ and the "singlet" state $phy.ket(s) = 1 / sqrt(2) (phy.ket(L R) + phy.ket(R L))$ #text(red)[ref theory double well].
+The superposition of the "split" states captures the fact that either atom can tunnel to the other sublattice site.
+In any case, we have to figure out a technique to detect the (local) population of the states $phy.ket(L L)$ and $phy.ket(s)$ after we stop the evolution at the time $tau$ by changing the superlattice phase back to $phi = pi slash 4$.
+Due to the interaction energy $U$ between particles on the same sublattice site, we can now actually resolve the in-situ contrast.
+With a "regular" singles-doubles separation pulse, the atoms in state $phy.ket(L L)$ will be detected as doubles and the atoms in state $phy.ket(s)$ will be detected as singles.
+We are therefore able to measure the population contrast $cal(C)$ locally (or in-situ at least?).
+There will however always be a significant offset from $cal(C) = 1$ because of the single-occupied double wells.
+Because of the separation of the double wells they do not affect the time evolution of the double-occupied double wells.
+For any reasonably sized interaction $U$ they will simply remain in their (initial) state $phy.ket(L)$.
+We will however detect half of them (#text(red)[explain this in detail?]) as singles as the state $phy.ket(L)$ (and technically also the state $phy.ket(R)$) have the same RF transition frequency as the singlet state $phy.ket(s)$.
+
+#figure(
+  image("/figures/phase-interaction-sketch.png", width: 80%),
+  caption: [
+    Theory of the calibration of the interaction energy $U$.
+    The double well on the left (right) shows the (prepared) state $phy.ket(L L)$ with repulsive (attractive) interactions.
+    In both cases the offset/detuning is chosen as $2 Delta = -U$ where one of the particles can tunnel to the unoccupied sublattice site.
+
+    #show list: set text(red)
+    - Is there a way to (correctly) visualize this with wavefunctions? Maybe with $phy.ket(L L)$ and the split state?
+    - Really show both interaction cases/signs here?
+    - Anything else to add to this caption?
+    - Show a spectrum here where the points $plus.minus 2 Delta = U$ are marked?
+  ],
+) <fig:phase-interaction-theory>
 
 Compared to the calibration technique based on the RF transitions, the phase-sensitive/phase-based technique can directly measure the interaction strength $U$.
-If we use the (super)lattice configuration $(v_l, v_s, #text(red)[$v_y$], #text(red)[$v_z$])$ that we are also using for the (later) measurement, the only error in/of the interaction strength will be the change of the confinement due to the finite offset/detuning $Delta$.
+There are however two systematic errors that we have to consider.
+If we use the (super)lattice configuration $(v_l, v_s, #text(red)[$v_y$], #text(red)[$v_z$])$ that we are also using for the (later) measurement, the interaction strength $U$ will change with the confinement due to the finite offset/detuning $Delta$.
 For typical lattice configurations and scattering lengths this error is (however) really small.
 As an example we will consider the lattice configuration $v_l = #num[40]$, $v_s = #num[14.4]$, $v_y = #num[60]$ and $v_z = #num[100]$.
 For a scattering length of $asc = #qty[-500][a0]$, the relative error $epsilon_U = abs((U(phi) - U(0)) / U(0))$ is/would (only) be a little below #qty[1.1][%].
 On the repulsive side with $asc = #qty[500][a0]$ this error is even smaller at below #qty[0.6][%].
+The second (possible) error is related to the resonance condition $2 Delta = -U$.
+The statement/assumption that the tunneling atom follows/creates the same signal as @fig:phase-measure-theory is only correct for $abs(U) >> t$.
+If the interaction is/becomes weaker (relative to the tunneling), the smallest energy gap is no longer located at $2 Delta = U$.
+As an example, for $abs(U) = 4t$ the minimal energy gap is located at $#num[1.9] Delta approx U$ (which would constitute an error of #qty[5][%]).
+Furthermore, the contribution of the singlet state $phy.ket(s)$ to the (maximally) excited state $phy.ket(psi_4)$ will increase as $abs(U slash t)$ gets smaller.
+If three (eigen)states are part of/contributing to the time evolution, there will be two time/energy scales and the oscillation is more complicated than in the non-interacting case.
+We therefore have to simulate the expected signals to estimate the correction that we have to apply.
+
 Considering these small relative errors, we can use the phase-sensitive signal with the density-assisted tunneling to calibrate the (local) interaction energy $U$ without ever computing the interaction energy with @eq:theory-wannier-interaction-correction.
 We only need to compute the detuning/offset $Delta(phi)$ as a function of the (measured) superlattice phase $phi(x, y)$ using the BPO formalism #text(red)[@ssec:theory-super-wannier].
 As a reference for the measured phase $phi(x, y)$ we can use the zero-phase determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-resolve-in-situ-result.
-Subtracting the underlying superlattice phase will automatically correct the measurement for any residual phase gradients.
+Subtracting the underlying superlattice phase will (also) automatically correct the measurement for any residual phase gradients.
 
 With the calibration/measurement of the local interaction $U(x, y)$, the scattering length #asc could be determined in a further evaluation step.
 If we use the calibrated lattice depths from #text(red)[@ch:mod], the scattering length #asc is the only free parameter of the interaction energy.
