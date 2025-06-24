@@ -6,6 +6,9 @@
 
 #let asc = $a_upright("sc")$
 
+// a shortcut for red text to be used as an annotation
+#let tr = text.with(red)
+
 // make this a global function in header.typ?
 #let table-stroke(x, y, stroke: none) = {
   if (y == 0) { (bottom: stroke) }
