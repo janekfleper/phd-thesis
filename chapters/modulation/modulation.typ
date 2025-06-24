@@ -2,25 +2,38 @@
 
 = In-situ lattice modulation spectroscopy <ch:mod>
 
-When we work with our optical lattices, we program the sequence to run the lattice at a certain depth in #unit[Erec].
-The lattice power is measured with a photodiode on the experimental table and we use this in a PID loop to regulate the lattice power and therefore also the lattice depth.
-Knowing the lattice depth as a function of the optical power requires careful prior calibration of the lattice potentials.
-In our setup we use lattice modulation spectroscopy to (locally) measure the depth of our lattices.
-Lattice modulation spectroscopy employs the (resonant) transfer of atoms between the energy bands as introduced in @sec:theory-bloch and shown in @fig:theory-bloch-energy-bands.
-This technique has been used to characterize lattice depths since the dawn of optical lattices #text(red)[what to cite here as the og paper?].
+#[
+  #set text(red)
+  - Actually mention anything about the PID loops? E.g. their bandwidth?
+  - Is "in-situ" actually a good name here? Maybe use "local" instead?
+]
 
-Since the eigenfunctions of the optical lattice are Bloch waves, lattice modulation spectroscopy has been studied extensively as a function of the quasimomentum $q$ #text(red)[cite PhD/paper Jannes Heinze].
-If the energy bands are not "flat" compared to the modulation frequency, one can nicely resolve the transition energy as a function of the quasimomentum $q$.
-These measurements are done with a time-of-flight detection scheme that maps the quasimomentum $q$ to a position in the atom image.
-When lattice modulation spectroscopy is used to characterize an optical lattice, measuring the lattice depth as a function of the position is a lot more useful than probing the band structure as a function of the quasimomentum $q$.
-Since optical lattices are (almost?) always created from gaussian beams, the lattice depth will change based on the (perpendicular) distance from the optical axis of the lattice beams.
-Measuring the lattice depth as a function of the position can therefore reveal the lattice depth in the center (on the optical axis), the width of the lattice and the position of the lattice.
-Without the spatial resolution, the inhomogeneity of the lattice depth will actually broaden the measured transition/resonance.
-But with the in-situ lattice modulation spectroscopy we can turn the (necessary) inhomogeneity of the lattices into a powerful calibration tool.
+In an experimental sequence we would like to program the depths of the optical lattices in units of #unit[Erec].
+The quantity for the power stabilization of the lattices is however the #tr[(photo)] current measured by photodiodes on the experimental table.
+We therefore need to calibrate the lattice depths in #unit[Erec] as a function of the optical power on the photodiodes.
+Lattice modulation spectroscopy has proven to be a reliable technique for this calibration #tr[what are the OG papers here?]
+By modulating the lattice depth the atoms are transferred to higher bands when the modulation frequency is equal to the #tr[energy/frequency] difference relative to the initial band.
+The lattice depth in #unit[Erec] can then be inferred directly from the band structure theory in @sec:theory-bloch.
 
-At the beginning of this chapter I will show the measured results for all the (monochromatic) lattices introduced in @sec:setup-z and @sec:setup-xy.
-The next sections will then introduce the theoretical and technical details of the in-situ lattice modulation spectroscopy step by step.
-Towards the end of the chapter I will showcase how we use the measurement for the optimization of the alignment of the lattices, and I will present the results of the in-situ lattice modulation spectroscopy in the x-superlattice that was introduced in @ch:super.
+Since the #tr[eigenfunctions/eigenstates] of the optical lattice are Bloch waves, lattice modulation spectroscopy has been studied extensively as a function of the quasimomentum $q$ #tr[cite PhD/paper Jannes Heinze and something else?].
+If the widths of the energy bands are comparable to the energy difference between the bands, one can nicely resolve the band structure as a function of the quasimomentum $q$.
+These measurements are usually done with a time-of-flight detection scheme that maps the quasimomentum $q$ to a position in the atom image.
+When lattice modulation spectroscopy is used to calibrate the lattice depth, we would however like to avoid the resolution of the quasimomentum $q$.
+This is done by using deep lattices where the band widths are negligible relative to the energy difference between the bands.
+#tr[In this chapter] we will go one step further and measure the lattice depth as a function of the position $(x, y)$.
+Since optical lattices are usually created by overlapping two gaussian beams, the lattice depth will decrease based on the radius $rho$ from the optical axis of the lattice beams.
+Calibrating the lattice depth $v(x, y)$ will therefore reveal the maximal lattice depth in the center, as well as the #tr[(radial)] width and the position of the optical lattice.
+This allowed us to turn the inherent inhomogeneity of the lattice potentials into a powerful calibration technique.
+
+#tr[Really link every section here?]
+At the beginning of this chapter I will introduce the general concept of the lattice modulation spectroscopy, followed by additional considerations for the in-situ technique.
+I will then show the detailed evaluation of a measurement of the x1064-lattice depth in @sec:mod-eval.
+This includes the introduction of the fit model and the error estimation of the calibrated lattice parameters.
+In @sec:mod-loss I will explain the atom-loss mechanism that is required for the in-situ signal and the resulting limitations for the possible lattice depths.
+As already discussed in #tr[@sec:setup-xy] the x1064 lattice and the y1064 lattice are not perfectly orthogonal.
+I will compare the relevant implications on the lattice modulation spectroscopy to the two-dimensional compled band structure in @sec:mod-coupled.
+In @sec:mod-align I will explain how we were able to improve the alignment procedure of the lattices thanks to the in-situ spectroscopy signals.
+At the end of the chapter I will showcase the in-situ lattice modulation in the x-superlattice potential.
 
 #include "results.typ"
 #include "evaluation.typ"
