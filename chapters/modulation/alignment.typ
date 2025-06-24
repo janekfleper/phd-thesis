@@ -8,63 +8,144 @@
   - Explain the alignment of the dipole traps and z-lattices somewhere?
   - Reference the mirror in @sec:super-setup that is used for the x1064-lattice alignment?
   - Would gravity actually mess with the vertical alignment?
-  - Mention that we have to adjust the frequency if the lines are too far apart?
   - Actually mention the individual alignment of the z532-lattice beams?
   - Also show the "up-down" alignment of the z532-lattice?
-  - Reorder the section? E.g. put the x1064-lattice walking before the z532-lattice?
-  - Use subsections to separate the x1064-lattice from the z532-lattice?
 ]
 
-The measurements in this chapter so far were always conducted with (perfectly) aligned lattices.
-After the alignment we can then run the in-situ lattice modulation measurements to calibrate the lattice depth, the lattice position and the lattice angle.
-While this is the primary purpose of these measurements, they are also essential for the alignment of the lattices in the first place.
-Before the implementation of the in-situ lattice modulation measurements the alignment procedure took much longer and was less reproducable.
-To understand why the in-situ lattice modulation measurements improve the alignment, I will shortly explain the required steps for the infrared in-plance lattices #text(red)[x1064 and y1064].
-For the z-lattices and the x532-lattice the old/initial alignment was different due to the geometry and the detuning of these lattices.
-We can however also use the in-situ lattice modulation alignment for these lattices now, significantly improving on the old techniques/procedures.
+#tr[Shorten this paragraph?]
+The main purpose of the in-situ lattice modulation is the #tr[(quantitative)] calibration of the lattice depths $v(x, y)$ across the atom cloud.
+We are however also using it as a qualitative tool for the alignment of the lattice beams.
+The direct feedback from the atoms about the local lattice depth significantly improves #tr[(all steps of)] the lattice-alignment procedure.
+Without the in-situ resolution the lattice depth #tr[can/could] only be measured with a scan of the modulation frequency #tr[$f_"mod"$] over the interval where we #tr[_expect_] the transition to a higher band.
+#tr[A/The] coarse alignment of the lattice beams is therefore much faster #tr[(now)] because we are able to see changes of the lattice depth from sequence to sequence.
+We made use of this extensively during the first alignment of the x1064-lattice beams #tr[(and the x532-lattice beams)] after the upgrade of the optical setup #tr[(introduced/shown)] in @ssec:super-thermal-x1064-rebuild #tr[(and @ssec:super-thermal-x532-rebuild)].
+For the fine alignment the in-situ measurement also has a better precision than the time-of-flight measurement.
+The fidelity of the position of a resonance is much higher than the #tr[(decrease of the)] global atom number.
+We are therefore able to reliably find the #tr[optimum/optimal] alignment of the lattice beams.
+This makes the alignment more robust against slow drifts of the lattice beams, requiring fewer alignment procedures than before.
+#tr[Is there any data to back this claim?]
 
-#text(red)[I will only focus on the alignment of the x1064-lattice here. The alignment of the y1064-lattice is largely the same but we do not have a motorized mirror for the forward-propagating beam.]
-At the start of the in-plane lattice alignment procedure we are only using the forward-propagating beams by placing a beam block/dump in the retro-reflecting path.
-This allows us to measure/see the position of the forward-propagating beam of the x1064-lattice in the $x y$-plane.
-Since the atoms are trapped at the maximum of the intensity of the forward-propagating beam, we can directly infer the beam position from the position of the atom cloud on the z-camera #text(red)[ref what?].
-We can then move the forward-propagating beam until the atom cloud is centered in/to the (local) camera frame.
-After removing the beam dump from the retro-reflecting path, we can use that mirror to center the atom cloud in/to the camera frame again.
-Since we know that the forward-propagating beam is already aligned/centered, any shift of the position must be caused by the retro-propagating beam.
-Due to the high resolution of the z-camera the alignment in the $x y$-plane is therefore fast/simple and robust.
+#tr[Put this somewhere in the previous paragraph?]
+In this section I will show how we are using the in-situ lattice modulation for the alignment of the in-plane lattices in @ssec:mod-align-x1064 well as the vertical lattices in @ssec:mod-align-z532.
 
-#text(red)[Any transition here?]
-For the vertical alignment of the x1064-lattice #text(red)[(and the y1064-lattice)] this is not possible since the atoms are already loaded into the planes of the z532-lattice at that time in the sequence.
-If we would not use the z532-lattice to "pin" the atoms, we would still need to use the horizontal dipole trap for the vertical confinment #text(red)[is this actually true?].
-Moving the forward-propagating beam or the retro-propagating beam vertically would therefore not result in a (measurable) signal even if the y-camera (or x-camera) had the required resolution.
-We therefore need(ed) to infer the vertical alignment of the forward-propagating beam and the retro-propagating beam from the atom cloud measured with the z-camera.
-#text(red)[How much was this compared to the beam waist?]
-The old solution/technique used a wide scan of the vertical beam positions (#text(red)[one after the other]) to measure the change of the aspect ratio of the atom cloud.
-This was not an accurate/precise measurement and it was therefore not reliable in finding the optimal alignment of the lattice beams.
 
-With the in-situ lattice modulation spectroscopy we can infer (the change of) the lattice depth from a single image instead.
-We select the modulation frequency such that the resonances (#text(red)[resonance lines?]) are located (roughly) halfway between the edge of the cloud and the center of the cloud.
-If we change the vertical alignment of the lattice beams, the resonance lines will either shift towards the center of the cloud or move away from the center of the cloud.
-In the former case the (maximum) lattice depth has/was decreased, whereas in the latter case the (maximum) lattice depth has/was increased.
-See @fig:mod-align-x1064-retro for a series of images from an alignment procedure where we scanned the vertical alignment of the retro-propagating beam.
-We can see that the resonance lines have a maximal separation at/in the #text(red)[nth] image, indicating the (local) maximum of the lattice depth.
-While we could evaluate the images to actually determine the distance/separation of the resonance lines, the optimization #text(red)["by eye"] is sufficient due to the high sensitivity of the measurement.
-#text(red)[Really already mention this for this short measurement?]
-We can also scan the mirror axis with a variable in the experimental sequence to automate this measurement.
-Since the piezo mirror shows significant/strong hysteris we can use the beam data captured with the camera #text(red)[looking?] at the atom position to move beam to the optimal position.
-This technique allows us to qualitatively maximize the lattice depth with the same resolution as the calibration measurement itself.
-For the full calibration of the lattice depth and the gaussian waist we still have to scan the frequency across/over the atom cloud, but we only have to do this once at the end of the alignment.
+=== x1064-lattice alignment <ssec:mod-align-x1064>
+
+#[
+  #set text(red)
+  - Mention typical position fluctuations? This is relevant in @ssec:phase-measure-resolve.
+  - Any sketches to show the horizontal alignment?
+  - Mention the old alignment procedure with the aspect ratio?
+  - Estimate the sensitivity of the vertical alignment?
+  - Where to mention the hysteresis of the piezo mirror mounts for the first time?
+  - Where to introduce the contrast of the resonances?
+  - Mention the vertical atom cloud size anywhere?
+]
+
+The properties x1064 lattice and the y1064 lattice are very similar, which also applies to their alignment procedures.
+Both are standing-wave lattices, they are red-detuned, they have gaussian waists around #qty[150][μm] and they have piezo mirror mounts#footnote[Newport Agilis AG-M100N #tr[mention this here again or somewhere in @sec:setup-xy?]] to align the retro-propagating beams.
+The main difference is that the x1064 lattice also has the same piezo mirror mount to align the forward-propagating beam.
+This allows us to run more a more complex alignment optimization where we #tr[walk] the two piezo mirror mounts against each other.
+The optimal alignment for the x1064 lattice is also more important in the context of this thesis as it is the starting point for the alignment of the x532 lattice in @sec:mod-super #tr[(ref a subsection here instead?)].
+
+To start the alignment procedure of the in-plane lattices we are only using the respective forward-propagating lattice beams.
+The corresponding retro-propagating beam is blocked just in front of the retro-mirror and the perpendicular in-plane lattice is turned off.
+We can then infer the #tr[_horizontal_] position of the forward-propagating beam from the position of the atom cloud in the $x y$ plane.
+For the x1064 lattice the horizontal position is measured along the $y$ axis.
+We therefore align the forward-propagating beam such that the atom cloud is centered #tr[in/on] the camera frame at $y = 0$.
+After unblocking the retro-propagating beam we center the atom cloud again, this time using the #tr[(respective)] retro mirror.
+This already concludes the horizontal alignment of the in-plane lattices.
+
+The vertical position of both in-plane lattices is measured along the $z$ axis, which is also the optical axis for the high-resolution imaging.
+We are therefore not able to measure the vertical positions directly, as neither imaging for the $x$ axis nor the imaging for the $y$ axis have a sufficient #tr[magnification/resolution] #tr[ref @sec:setup-detect?].
+In addition to the lack of imaging resolution, the vertical position of the atom cloud is #tr[pinned] by the horizontal dipole trap #tr[and/or] the z532 lattice.
+Changing the vertical position of the in-plane lattices would therefore not affect the position of the atom cloud.
+With the in-situ lattice modulation we can overcome this limitation by directly optimizing the lattice depth.
+If the vertical position of the in-plane lattices is centered on the atom cloud, the lattice depth will be maximal.
+During the optimization of the vertical alignment, we would therefore expect the #tr[resonance/transition] frequency in the center of the atom cloud to increase.
+Instead of maximizing the #tr[resonance/transition] frequency, we could also use a constant modulation frequency and maximize the distance of the resonances.
+Both signals allow a distinct optimization of the vertical alignment, but the latter approach with the constant modulation frequency is more robust.
+As shown in @fig:mod-eval-model, the #tr[resonance/transition] frequency in the center of the atom cloud is not easy to interpret.
+Even if the modulation frequency is too large for the lattice depth in the center, there can still be a visible resonance in the atom cloud.
+If we use the position of the resonances instead, the interpretation of the signal is always clear.
+In @fig:mod-align-x1064-forward such an optimization is shown for the vertical position of the forward-propagating beam.
+We start with a modulation frequency $f_"mod"$ where the resonances are close to the center of the atom cloud.
+This gives us the most room for the optimization of the lattice depth without changing the frequency.
+The resonances will then move outwards as we improve the lattice depth.
+When we reach the resonance position in the image on the right, we increase the modulation frequency by a few #unit[kHz] to continue the optimization with the resonances near the center again.
+The optimized vertical position is reached when the resonances do not move anymore.
+We can then run the same steps again with the vertical position of the retro-propagating beam.
 
 #figure(
-  [some images of the x1064-lattice single-frequency alignment],
+  image("figures/alignment_x1064_vertical.png"),
   caption: [
-    Optimization of the x1064-lattice depth by scanning the vertical alignment of the retro-propagating beam.
-    The lattice depth was set to #text(red)[$v_x = #qty[60][Erec]$] and the modulation frequency was set to #text(red)[$f = #qty[118][kHz]$].
-    Between the images we are moving the retro-propagating beam by #text(red)[$? #unit[μm]$] per step along the $z$-axis.
+    Optimization of the x1064-lattice depth at a constant modulation frequency.
+    The lattice depth #tr[is/was] set to $v_x = #num[55]$ where the maximum #tr[resonance/transition] frequency is #qty[115.7][kHz].
+    The modulation frequency #tr[is/was] set to $f_"mod" = #qty[110][kHz]$ which corresponds to a local lattice depth of #qty[50.4][Erec].
+    From left to right the vertical position of the forward-propagating beam is changed #tr[monotonically].
 
     #show list: set text(red)
     - Draw any helper lines in the images?
+    - Remove the colorbar?
+    - Anything else to add to this caption?
   ],
-) <fig:mod-align-x1064-retro>
+) <fig:mod-align-x1064-forward>
+
+With the optimization technique in @fig:mod-align-x1064-forward we will only find a local optimum of the lattice alignment.
+To find the global optimum we have to #tr[_walk_] the vertical position of the forward-propagating beam against the vertical position of the retro-propagating beam.
+This measurement takes several hours to be completed with a sufficient sampling of the respective beam positions.
+Thanks to the sequence control of the piezo mirror mounts it works completely autonomous and we can run this #tr[overnight].
+An issue that arises when #tr[_walking_] the forward-propagating beam and the retro-propagating beam is the hysteresis of the piezo mirror mounts.
+// The positions of the mirror mount that is scanned back and forth will not be equal during each iteration of the other mirror mount.
+To overcome this limitation we are tracking the two beams with cameras that are imaging the position of the atoms #tr[ref anything?].
+We can then use the measured beam positions instead of the programmed mirror-mount positions for the evaluation.
+
+For this measurement to find the global optimum of the lattice alignment we are probing the variation of the lattice depth $v(x, y)$ across the vertical lattice planes.
+Even though the image shows the atom density integrated along the $z$ axis, we can still extract information about the individual lattice planes.
+If the lattice depth $v(x, y)$ is equal in all lattice planes, we expect the resonances to have the best contrast.
+A changing lattice depth $v(x, y)$ on the other hand will show broad resonances at the mean position of all lattice planes.
+In @fig:mod-align-x1064-walking we can see how the relative lattice depth #tr[$a_0$] and the resonance contrast #tr[what?] change as a function of the vertical beam positions.
+The maximum of #tr[$a_0$] is always achieved at the same position $z_"retro" approx 0$ where the retro-propagating beam is centered on the atom cloud.
+This is expected since the lattice depth $v(x, y)$ will always #tr[have/show] a local maximum when the intensity of either beam as maximal at the position of the atoms.
+The optimum of the resonance contrast then shows us where the two beams are perfectly overlapped.
+In the global optimum of the vertical alignment both conditions are fulfilled at the same time.
+From the measurement in @fig:mod-align-x1064-walking *d* we can extract the positions #tr[$z_"retro" approx 0$] and #tr[$z_"forward" approx #qty[4][μm]$] as the global optimum.
+The maximum of the relative lattice depth suggests that the optimal vertical position of the forward-propagating beam is between #qty[0][μm] and #qty[5][μm].
+While this result agrees with the position extracted from the overlap of the relative lattice depth #tr[$a_0$] and the resonance contrast, it is significantly less robust and requires the same amount of data acquisition.
+With the intersection of #tr[$a_0$] and the #tr[contrast] we can determine the optimal vertical alignment with a precision of $delta z = #qty[1][μm]$.
+This is on par with the precision of the horizontal alignment where we can directly use the position of the atom cloud.
+The precision is #tr[(now)] limited by the beam pointing, the imaging of the atom cloud and the tracking of the lattice beams with the cameras.
+
+Compared to the previous lattice-alignment procedure we were able to improve the precision of the vertical alignment by one order of magnitude #tr[ref Luke].
+As shown in @fig:mod-align-x1064-walking *e* the lattice depth is only slightly improved thanks to this precision.
+The important aspect is the robustness of the lattice alignment over time.
+When both lattice beams are aligned to the global optimum, it takes much longer for the lattice depth $v(x, y)$ to decrease due to drifts of the lattice beams.
+Furthermore, subsequent alignment procedures will be faster since the lattice beams are already close to the global optimum.
+Running the measurement in @fig:mod-align-x1064-walking is also not required for every alignment procedure.
+The simple optimization as shown in @fig:mod-align-x1064-forward is sufficient if the lattice beams are already close to their optimal positions.
+
+#figure(
+  image("figures/alignment_x1064_walking.png", width: 90%),
+  caption: [
+    Optimization of the vertical x1064-lattice alignment with the forward-propagating beam and the retro-propagating beam.
+    The lattice depth was set to $v = #qty[60][Erec]$ and #tr[mention something else...].
+    We scanned the vertical position of the forward-propagating beam in five steps around the local optimum from @fig:mod-align-x1064-forward.
+    For each of those positions we then did a broad scan of the vertical position of the retro-propagating beam around the expected optimum of the lattice depth.
+    Each data point in *a* -- *c* shows the result of the evaluation as introduced in @sec:mod-eval.
+    The maximum relative lattice depth #tr[$a_0$] is always reached at $z_"retro" approx 0$.
+    The optimal resonance contrast #tr[some letter?] on the other hand moves with $z_"forward"$.
+    In *d* the optimal positions $z_"retro"$ are shown as a function of $z_"forward"$ where the intersection of the two lines shows the global optimum of the vertical alignment.
+    This position $z_"forward"$ is in agreement with the maximum of the relative lattice depth in *e*.
+
+    #show list: set text(red)
+    - Reduce the height of the lower row? Just use the same height for both rows?
+    - Add some errorbars?
+    - What is the actual name for the "relative lattice depth"?
+    - Really use the inverse contrast here?
+    - Find a letter for the resonance contrast...
+    - Add lines to *d* to highlight the intersection?
+  ],
+) <fig:mod-align-x1064-walking>
 
 #text(red)[Put a good transition here?]
 Compared to the lattice depth and the gaussian waist the lattice position can already by accurately determined from the single-frequency measurement/technique.
@@ -108,30 +189,3 @@ Since the atoms only occupy a small fraction of the projected waist along the $y
   ],
 ) <fig:mod-align-z532-up-down>
 
-Besides the simple optimization of the x1064-lattice depth by maximizing the resonance line distance, we can also use the in-situ lattice modulation technique for a more advanced alignment procedure.
-While this simple technique is fast, it will "only" find/show a local maximum of the lattice depth.
-To find the global maximum/optimum we have to run a two-dimensional scan of the vertical aligment of the forward-propagating beam and the retro-propagating beam.
-Such an optimization is only necessary after the experiment was completely shut down for a significant time or after changes to the optical setup (e.g. to fix the thermal lensing as shown in @sec:super-thermal).
-The "global" maximum/optimum does not show a (significantly) better lattice depth than slightly misaligned beam configurations.
-Instead we are "defining" the global maximum/optimum as the configuration where the maximum of the lattice depth coincides with the maximum of the resonance line contrast.
-The results of such a measurement are shown in @fig:mod-align-x1064-walking.
-For each (vertical) position of the forward-propagating beam we are scanning the (vertical) position of the retro-propagating beam to find the (local) maximum/optimum of the beam overlap.
-We can see that the position of the forward-propagating slightly affects the maximally achievable lattice depth, but the better/stronger signal is the overlap of the best (local) lattice depth with the best (local) resonance contrast.
-In the data shown in the figure this optimal alignment is achieved between the second configuration and the third configuration.
-Since we have acquired the beam positions (in forward-propagating direction and in retro-propagating direction), we can directly move to the optimized configuration/position despite the hysteresis of the alignment mirrors.
-#text(red)[Go into even more detail here?]
-
-#figure(
-  image("figures/2025-04-06_PH_x1064_walk_UD_result_thesis.png"),
-  caption: [
-    Walking of the x1064-lattice alignment with the forward-propagating beam and the retro-propagating beam.
-    The in-plane lattice depths were set to $v_x = #qty[60][Erec]$ and $v_y = #qty[30][Erec]$ and the modulation time was set to $t_"mod" = #qty[0.75][s]$.
-    Each column shows a different vertical position of the forward-propagating beam.
-    The step size between each column/measurement is (only) $approx #qty[5][μm]$.
-    Each data point corresponds to a frequency scan across the atom cloud to (accuractely) measure the lattice depth and the resonance contrast (width and amplitude?).
-
-    #show list: set text(red)
-    - Fit parabolas here to quantitatively find the optimum positon?
-    - Use the resonance contrast and share the y-axis?
-  ],
-) <fig:mod-align-x1064-walking>
