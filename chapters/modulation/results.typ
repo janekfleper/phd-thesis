@@ -1,90 +1,126 @@
 #import "/header.typ": *
 
-== Qualitative explanation and results <sec:mod-results>
+== Introduction to lattice modulation spectroscopy <sec:mod-results>
 
 #[
   #set text(red)
-  - Add logarithmic plot for band width as a function of lattice depth?
-  - Add sketch for parity argument. Show harmonic oscillator and lattice?
+  - Better title "theory of lattice modulation spectroscopy"?
   - Mention depth of perpendicular lattice with reference to coupling section.
   - Mention modulation amplitude and length of modulation? With reference to the optimization section.
+  - Make a strong argument that we are modulating in the Wannier basis?
+  - Add a sketch for the sequence?
+  - Already tease the loss mechanism here?
 ]
 
-There are different approaches available to modulate an optical lattice.
-The most common one is the (sinusoidal) modulation of the lattice depth
+The idea behind #tr[(the)] lattice modulation spectroscopy is to probe the band structure by exciting atoms to higher bands #tr[ref what?].
+By modulation the lattice potential a small overlap between the wave functions in different bands is created.
+If the modulation is then resonant to the energy difference between the bands, the atoms can be excited to the higher band.
+In this thesis the modulation is always applied to the lattice depth $v$.
+We can therefore write the time-dependent lattice potential as
 
 $
-  v(t) = v_0 + delta v dot sin(2 pi f t) #text(red)[move this to the introduction?]
+  v(tau) = v_0 + delta v dot sin(2 pi f_"mod" tau)
 $ <eq:mod-results-function>
 
-with the modulation amplitude $delta v$ and the modulation frequency $f$.
-The second option in monochromatic lattices is a modulation of the lattice phase/position such that the potential minima are moved periodically.
-In superlattices there are even more modulation options since there are two lattices amplitudes and the superlattice phase $phi$ that can be tuned. #text(red)[ref PhD Carla]
+with the modulation amplitude $delta v$ and the modulation frequency $f_"mod"$.
+This type of modulation is also the most common one for the calibration of the lattie depth.
+The other type of modulation in monochromatic lattices targets the lattice position instead by #tr[shaking] the potential along the lattice vector #tr[$phy.vb(k)$] #tr[ref what?].
+In superlattices there are even more modulation options since there are two lattices amplitudes $v_l$ and $v_s$ and the superlattice phase $phi$ that can be tuned.
+This allows complex measurements beyond the calibration of the lattice depths #tr[ref PhD Carla and the Floquet sections?].
 
-The parity of the modulation has important implications on the band transitions that can be driven/accessed.
-While the amplitude modulation has an even parity since the symmetry of the lattice potential (from the POV of an atom on a lattice site) is not changed.
-The phase/position modulation on the other hand has an odd parity since the lattice sites are actually moved.
-In a harmonic oscillator potential this parity argument is used to determine the allowed transitions $n -> n'$.
-Since the eigenstates have alternating parity, the amplitude modulation requires $Delta n = 2$ and the position modulation requires $Delta n = 1$.
+If we compare the two different modulation types for monochromatic lattices, we find that they have opposite parities.
+The modulation of the lattice depth according to @eq:mod-results-function is _even_ while the modulation of the lattice position is _odd_.
+Since the excitation to a higher band requires a finite overlap of the respective wave functions, the parity of the modulation has important implications on the allowed band transitions $n -> n'$ #tr[ref any textbook here?].
+In @fig:mod-results-theory we can see that the parity $cal(P)$ of the Bloch waves at $q = 0$ on a single lattice site alternates with the band index $n$.
+The parity of the Bloch waves does not change as a function of the quasimomentum $q$, resulting in the Wannier functions #tr[inheriting] the parity from the Bloch waves.
+When the modulation has an even parity, only the transitions with $Delta n = n' - n = 2, 4, ...$ are therefore allowed.
+In practice, transitions with $Delta n = 1, 3, ...$ can be allowed for an even-parity modulation if the optical lattice has a running-wave component #tr[ref theory or radial potential section?].
+This is discussed in detail in #tr[@sec:mod-loss] where we compare the x1064 lattice to the z532 lattice.
 
-In the Bloch waves #text(red)[ref what figure?] and the Wannier functions @fig:theory-wannier-tunneling we can see the same dependence of the parity on the band index $n$.
-For the amplitude modulation we will therefore target band transitions with $Delta n = 2$.
-#footnote[#text(red)[Footnote? In practice we can also drive transitions with an odd parity but their efficiency/strength will be significantly reduced. We would therefore require a stronger modulation amplitude $delta v$ which can further broaden the transition.]]
-Since the atoms initially occupy the lowest band with $n = 1$ the main transition responsible for the lattice modulation spectroscopy is $1 -> 3$.
-
-As already mentioned in the introduction, the bands that are used for the (in-situ) lattice modulation spectroscopy should be very narrow compared to the modulation frequency $f$.
-This is mainly a concern for the excited/upper band with $n = 3$ since this corresponds to a much higher energy where the Bloch waves are impacted less by the lattice potential.
-@fig:mod-results-theory shows that the energy bands start to narrow as soon as they are trapped.
-But this is not nearly narrow enough for a lattice modulation spectroscopy measurement.
-There is however no universal function to quantify the minimum lattice depth for a given band transition.
-This has to be checked individually for each band, and if the width of the upper band is not completely negligible the it has to be taken into account as a systematic error.
-For the transition $1 -> 3$ we usually use a lattice depth of at least #qty[60][Erec] where the width of the third band amounts to $approx #qty[0.17][kHz]$.
-The transition frequency is three orders of magnitude greater at $approx #qty[120][kHz]$ and we can therefore confidently say that the band width is negligible.
+Besides the parity of the Bloch waves, the width of the higher energy band $n'$ is also important for the selection of the transition $n -> n'$ #tr[mention the lower energy band?].
+We always have to take the entire energy band into account since we pass on the quasimomentum resolution in favor of the local measurement of the lattice depth.
+The atoms will initially occupy most quasimomentum states $q$ in the lowest band #tr[mention this?].
+We consider the #tr[excited/higher] band to be #tr[(sufficiently)] narrow if its width is negligible relative to the modulation frequency $f_"mod"$ and the expected change thereof across the atom cloud.
+If this condition is not fulfilled, the accuracy of the evaluation of the local signals in the atom cloud will be limited.
+There is no #tr[universal] function to quantiy the maximally allowed with of the #tr[higher/upper/excited] band.
+We have to check this individually based on the transition $n -> n'$ and the lattice that is #tr[probed/measured].
+The maximally available lattice depth also plays a role in the decision.
+Based on the widths of the bands shown in @fig:mod-results-theory, the band $n' = 3$ looks like a suitable candidate for lattice depths $V > #qty[50][Erec]$.
+#tr[Really mention this?]
+If we could only reach a depth of #qty[40][Erec] with a specific lattice, it would still make sense to attempt the in-situ lattice modulation spectroscopy.
+At lattice depths of $V < #qty[30][Erec]$, on the other hand, the band width would #tr[(severely)] limit the evaluation.
 
 #figure(
-  grid(
-    columns: 2,
-    gutter: 1em,
-    image("figures/modulation-results-theory-bandstructure.png"),
-    block[
-      #image("figures/modulation-results-theory-bandwidth.png")
-      #place(curve(stroke: 0.5pt, curve.move((24pt, -30pt)), curve.line((165pt, -148pt))))
-    ],
-  ),
-
+  image("figures/modulation_introduction.png"),
   caption: [
-    Width of excited bands as a function of the lattice depth.
-    The figure on the left shows an optical lattice with a depth of $v_0 = #qty[40][Erec]$ where the bands $1$ to $4$ are trapped in the sense that $epsilon_n (q) < v_0$.
-    The bands $5$ and $6$ are untrapped and there is only a very small gap between the two bands since their dispersion relation is basically that of a free particle.
-    The figure on the right highlights how the widths of the bands change around the amplitude where the bands start to be trapped.
-    While the change is not instant, we can see a clear connection between the bandwidth and the difference between $epsilon_n (q)$ and $v_0$.
-    - #text(red)[Somehow also show $epsilon_n$ as a function of $q$ here?]
+    Properties of the energy bands for the lattice modulation spectroscopy.
+    The figure on the left shows an optical lattice with a depth of $V_0 = #qty[60][Erec]$ and the resulting energy bands from $n = 1$ to $n = 5$.
+    The solid (dashed) lines show the real (imaginary) parts of the corresponding Bloch waves at $q = 0$ shifted by the band energies $epsilon_n (q=0)$.
+    Starting with an even parity of the lowest band, the parity alternates with the band index $n$.
+    The figure on the right shows how the width of the energy bands changes as a function of the lattice depth #tr[$V_0$].
+    The diagonal line indicates when the bands are initially #tr[_trapped_] which is however not sufficiently narrow for the lattice modulation spectroscopy yet.
+
+    #show list: set text(red)
+    - Somehow also show $epsilon_n$ as a function of $q$ here?
+    - Also show some higher bands $n > 5$?
+    - Use *a* and *b* here for the subfigures?
+    - How to handle the real and imaginary parts of the Bloch waves? Just make all Bloch waves real?
+    - What should the legend look like here?
+    - Use semilogy for the figure on the right?
+    - Mention "trapped" bands?
   ],
 ) <fig:mod-results-theory>
 
+The experimental sequence to measure the in-situ lattice modulation spectroscopy is based on the default sequence #tr[ref setup].
+After the atoms are loaded into the shallow x1064 lattice and the y1064 lattice, both lattices are frozen.
+We then use an imaging pulse to #tr[_clean_] the atoms in the hyperfine state $phy.ket(m_F = -9 slash 2)$, resulting in a polarized atom cloud.
+The remaining atoms are transferred to the state $phy.ket(m_F = -9 slash 2)$ in preparation for the imaging.
+The modulation in @eq:mod-results-function is always applied to a #tr[single/specific] lattice by modulating the amplitude of the radio-frequency signal that drives the acousto-optic modulator #tr[go into this much detail?].
+The amplitudes of the #tr[other/non-modulated] lattices are selected to maximize the signal strength (see #tr[ref z532]) and to minimize the coupling between the lattices (see #tr[ref @sec:mod-coupled]).
+In the experimental sequence we can #tr[control/set] the modulation amplitude $delta v$, modulation frequency $f_"mod"$ and the modulation time $tau_"mod"$.
+Based on the #tr[probed/targeted] lattice we apply the modulation for up to $tau_"mod" = #qty[1][s]$ with a relative amplitude $delta v slash v_0$ between #qty[1][%] and #qty[10][%].
+The band width of the power stabilization is lower than the possible modulation frequencies $f_"mod"$ for all available lattices.
+Even for the largest modulation amplitude the setpoint $v_0$ of the lattice depth therefore remains constant.
 
-With suitable modulation parameters (#text(red)[ref to optimization section?]) the in-situ lattice modulation spectroscopy produces nicely visible "resonances" where the local lattice depth matches the modulation frequency.
-In @fig:mod-results-images a series of images is shown for the lattice modulation spectroscopy measurement in the x1064-lattice.
-The lattice has a $1 slash e^2$ waist of $approx #qty[140][μm]$ and the atoms occupy a region of $plus.minus #qty[50][μm]$ around the optical axis.
-We can therefore use a parabola to approximate the lattice depth as a function of the radius (#text(red)[see ref evaluation section for the quantitative comparison between a parabola and a Gaussian function]).
-The behaviour of the resonances in @fig:mod-results-images qualitative matches a parabolic lattice depth.
-With an increasing radius the resonances become narrower and their spacing also decreases for equidistant frequencies.
+#tr[Add a transition here?]
+For the infrared in-plane lattices we are #tr[(usually)] using a lattice depth of $V = #qty[60][Erec]$.
+With $#unit[Erec] slash h = #qty[4.405][kHz]$ the maximum modulation frequency is $f_"mod" approx #qty[122][kHz]$ and the band width is only $Delta epsilon_n slash h approx #qty[0.17][kHz]$.
+Based on the waists of the x1064 lattice and the y1064 lattice, We expect the local modulation frequency to change by $delta f_"mod" approx #qty[5][kHz]$ across the atom cloud.
+The band width is therefore negligible relative to $f_"mod"$ as well as $delta f_"mod"$.
+While the modulated lattice has a depth of #qty[60][Erec] we set the #tr[other/perpendicular] lattice to a depth of #qty[30][Erec].
+This reduces the coupling between the two lattices, see @sec:mod-coupled for the detailed investigation.
+The z532 lattice is set to its maximum depth of #qty[100][Erec] #tr[really mention this lattice?].
 
-In theory, the modulation frequency that creates a resonance in the center of the atom cloud is sufficient to calibrate the lattice depth by comparing the frequency to the transition frequency computed from the band structure.
-The "outer" frequencies then only allow us to extract the beam waist and the position of the modulated lattice in addition to the lattice depth.
-In practice, only looking at the "center" frequency would introduce a significant uncertainty for the lattice depth since the resonances become really wide around the maximum of the parabola.
-In @fig:mod-results-images any of the last three images only show a single resonance in the center with a varying depth/contrast.
-We therefore process all images of a lattice modulation frequency scan in a single fit to get the lattice depth, the lattice waist and the lattice position.
-The details of the evaluation are presented in @sec:mod-eval.
+With a #tr[constant/fixed] modulation time we select the modulation amplitude $delta v$ based on the #tr[contrast/visibility] of the resonances.
+The resonances should be resolvable #tr[by eye] in the atom images, but they should not #tr[saturate].
+This leaves a wide range of modulation amplitudes that yield consistent results for the lattice parameters #tr[actually show this later?].
+With a suitable modulation amplitude, we then scan the modulation frequency in the expected range based on the local lattice depths.
+The resulting series of atom images for such a measurement #tr[for/with] the x1064 lattice are shown in @fig:mod-results-images.
+For the lowest modulation frequency of #qty[118.0][kHz] we can see narrow resonances near the edge of the atom cloud.
+These resonances move towards the center with increasing step sizes as the modulation frequency is increased.
+The inhomogeneity of the lattice depth also causes the resonances to become #tr[broader/wider] near the center.
+Both effects follow the expected behavior of the intensity profile of a gaussian beam.
+
+When we look at the single resonance in #subref(<fig:mod-results-images>, [i]), we could argue that it is sufficient to determine the lattice depth in the center from the modulation frequency of #qty[122.0][kHz].
+The corresponding lattice depth is $approx #qty[60.3][Erec]$ which would result in the correction factor $#tr[$a_0$] approx #num[1.005]$ relative to the setpoint of $v_0 = #qty[60][Erec]$.
+Such a simple evaluation would always result in a systematic error since there will also be a single resonance in the center if the modulation frequency is slightly too high for the lattice depth.
+In a measurement such as shown in @fig:mod-results-images, there can be images at multiple frequencies that only show a single resonance with different contrasts.
+For a reliable evaluation we are therefore using all images together with their modulation frequencies.
+Besides the maximum lattice depth, we will also learn the waist of the underlying gaussian beams and the lattice position in the $x y$ plane from this evaluation.
+The details of this evaluation are presented in the next @sec:mod-eval.
 
 #figure(
-  image("figures/2025-01-28_calibration_images_thesis.png"),
+  image("figures/modulation_x1064-images.png"),
   caption: [
-    In-situ lattice modulation spectroscopy measurement.
-    The images show the optical densities after the modulation of the x1064-lattice at a lattice depth of #qty[55][Erec].
-    The expected frequency for the transition $1 -> 3$ is $f approx #qty[115.5][kHz]$ which removes the atoms in the center (on the optical axis) of the lattice.
-    As the modulation frequency is decreased, the "resonance" moves away from the optical axis.
-    The spacing of the resonances and their widths also become smaller as a function of the radius.
-    Note that the angle of the resonances matches the angle of $approx #num[4.5] degree$ of the x1064-lattice relative to the camera frame.
+    In-situ lattice modulation spectroscopy #tr[of/with] the x1064 lattice.
+    For this measurement the lattice depth was set to $v_0 = #qty[60][Erec]$, the modulation time was set to $tau_"mod" = #qty[0.75][s]$ and the modulation amplitude was set to $delta v slash v_0 = #tr[#qty[1][%]?]$.
+    The modulation frequency was scanned from #qty[118.0][kHz] in *a* to #qty[122.5][kHz] in *j* in steps of #qty[0.5][kHz].
+    For the transition $1 -> 3$ the resonant frequency in the center of the lattice is expected to be #qty[121.6][kHz] which #tr[is/lies] (just) between the images *h* and *i*.
+    The angle of the resonances in the $x y$ plane matches the expected optical axis of the x1064 lattice relative to the camera frame.
+
+    #show list: set text(red)
+    - Use #unit[μm] or #unit[_a_] as the unit here or keep #unit[px]?
+    - Remove the colorbar?
+    - Use a different colormap?
   ],
 ) <fig:mod-results-images>
