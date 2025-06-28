@@ -5,6 +5,7 @@
 #[
   #set text(red)
   - Check the coupled lattice theory for the superlattice.
+  - Write something about the alignment of the x532-lattice?
   - Already reference this section earlier when introducing the x532-lattice? With a maximum lattice depth of #qty[20][Erec] we have to rely on the superlattice modulation to measure the lattice depth $v_s$.
   - Compare the lattice depth slope of the transition $1 -> 4$ to the x1064-lattice?
   - Actually include any alignment stuff in this section? Or just add a short reference to @sec:mod-align to mention that the x532-lattice is more sensitive etc...?
@@ -70,7 +71,7 @@ For the bands $n = 3$ and $n = 4$ the Wannier functions both have positive parit
 The Wannier function $n = 3$ appears to be the (local) ground state on the upper well.
 An overlap with the Wannier function $n = 1$ will therefore be strongly suppressed, despite the similar/identical shape of the two Wannier functions.
 The Wannier function $n = 4$ is then located on the "correct"/left well again and the shape of the function reminds us of the Wannier function $n = 3$ in the monochromatic lattice #text(red)[ref what?].
-Since we are (exclusively) using the transition $1 -> 3$ for the monochromatic/regular lattices as introduced in @sec:mod-results, we can expect the transition $1 -> 4$ to work "out of the box" in the superlattice potential.
+Since we are (exclusively) using the transition $1 -> 3$ for the monochromatic/regular lattices as introduced in @sec:mod-intro, we can expect the transition $1 -> 4$ to work "out of the box" in the superlattice potential.
 The width of the fourth band is $approx #qty[200][Hz]$ in the superlattice configuration shown in @fig:mod-super-wannier.
 With a modulation/transition frequency $f$ of almost #qty[300][kHz], this is well within the requirements for a narrow excited band #text(red)[ref anything?].
 For the in-situ lattice modulation signal we also have to consider the transition from the enxcited (fourth) band to an untrapped band.
@@ -251,6 +252,6 @@ For a (vertical) angle in the $x z$-plane we would have to rely on the contrast 
     - At least match the column order with @tab:mod-eval-error and @tab:mod-eval-error-other...
     - Reference to waists in the thermal lensing @sec:super-thermal?
     - Compute the position $y_0$ in #unit[μm].
-    - Use the same x1064-lattice data here as in @sec:mod-results and @sec:mod-eval?
+    - Use the same x1064-lattice data here as in @sec:mod-intro and @sec:mod-eval?
   ],
 ) <tab:mod-super-result>

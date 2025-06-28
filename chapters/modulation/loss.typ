@@ -11,7 +11,7 @@
   - Argue that only looking at r13fa (and "ignoring" r13fw) is sufficient?
 ]
 
-At the start of @sec:mod-results we only discussed the requirements on the width of the upper band for the (in-situ) modulation spectroscopy.
+At the start of @sec:mod-intro we only discussed the requirements on the width of the upper band for the (in-situ) modulation spectroscopy.
 The conclusion was that the upper band (usually $n = 3$) should be deeply trapped in the lattice potential to have a negligible width compared to the transition frequency.
 This does however raise the question why we can actually see the in-situ signal?
 If the atoms are only in the third band, they are still trapped inside the lattice with a tunneling amplitude of $t slash h = cal(O)(#qty[100][Hz])$.
@@ -25,7 +25,7 @@ At the time we were always running the in-situ measurements for the in-plane lat
 We only realized how "lucky" we were with the in-situ measurements when we could achieve lattice depths up to #qty[90][Erec].
 When we tried to calibrate the lattices at $v_0 > #qty[60][Erec]$, the in-situ signal quickly became a lot worse to the point where it was not visible anymore (at reasonable modulation amplitudes).
 This cannot be caused by any changes to the transition $1 -> 3$.
-While the bands will become narrower as a function of the lattice depth $v_0$, the difference between #qty[60][Erec] and #qty[90][Erec] is hardly significant as show in @fig:mod-results-theory #text(red)[ref specific subfigure?].
+While the bands will become narrower as a function of the lattice depth $v_0$, the difference between #qty[60][Erec] and #qty[90][Erec] is hardly significant as show in @fig:mod-intro-theory #text(red)[ref specific subfigure?].
 And we have already observed that the resonances we see are wider than the upper band $n = 3$.
 We would therefore not expect the resonances to disappear if the band width becomes too small.
 
@@ -39,24 +39,21 @@ The result matches our observation that the in-situ resonances "suddenly" become
 We can observe a kink at $approx #qty[65][Erec]$ in the fit parameters of the resonance amplitude and the resonance width.
 From the kink to a lattice depth of $approx #qty[75][Erec]$ the resonance amplitude decreases by a factor of $3-4$ while the resonance width decreases by a factor of $approx 2$.
 
-#figure(
-  image("figures/2024-10-25_PH_x1064_band_overlap_average_result.png"),
-  caption: [
-    Decrease of "loss efficiency" in deep lattices.
-    We ran the in-situ parametric heating measurement for lattice depths from #qty[50][Erec] to #qty[74][Erec].
-    The modulation time was #qty[0.5][s] and the modulation amplitude was #num[0.1].
-    For these parameters we could achieve a great contrast at #qty[60][Erec].
-    - #text(red)[Only show r13fa and r13fw here]
-    - #text(red)[Is there anything else required here to just describe the figure?]
-    - #text(red)[Where to mention the decrease between #qty[50][Erec] and #qty[65][Erec]?]
-    - #text(red)[Add insets here that highlight the difference between the amplitudes 0.8 and 0.2]
-  ],
-) <fig:mod-loss-parameters>
+#figure(image("figures/2024-10-25_PH_x1064_band_overlap_average_result.png"), caption: [
+  Decrease of "loss efficiency" in deep lattices.
+  We ran the in-situ parametric heating measurement for lattice depths from #qty[50][Erec] to #qty[74][Erec].
+  The modulation time was #qty[0.5][s] and the modulation amplitude was #num[0.1].
+  For these parameters we could achieve a great contrast at #qty[60][Erec].
+  - #text(red)[Only show r13fa and r13fw here]
+  - #text(red)[Is there anything else required here to just describe the figure?]
+  - #text(red)[Where to mention the decrease between #qty[50][Erec] and #qty[65][Erec]?]
+  - #text(red)[Add insets here that highlight the difference between the amplitudes 0.8 and 0.2]
+]) <fig:mod-loss-parameters>
 
 To understand why the resonance signal decreases at lattice depths $>#qty[65][Erec]$ we have to take the band structure beyond the transition $1 -> 3$ into account, see @fig:mod-loss-theory.
 The atoms in the third band could be excited to an even higher band if the transition is resonant with the modulation frequency $f$.
 When we look at the frequencies associated with the transitions $3 -> 5$ and $3 -> 6$, we notice that the latter transition is actually "resonant" with the frequency $f_(1->3)$.
-Since the band $n = 6$ has a width of a few #qty[10][kHz] (#text(red)[ref @fig:mod-results-theory here?]) the overlap between the transitions is fullfilled for a wide range of lattice depths.
+Since the band $n = 6$ has a width of a few #qty[10][kHz] (#text(red)[ref @fig:mod-intro-theory here?]) the overlap between the transitions is fullfilled for a wide range of lattice depths.
 However, at #qty[65][Erec] there is no overlap of the modulation frequency $f_(1->3)$ with the transition $3 -> 6$ anymore.
 This behavior (perfectly) matches our observations in @fig:mod-loss-parameters.
 
@@ -90,7 +87,9 @@ We can therefore run the detection right after the end of the lattice modulation
 The resonance parameters r13fa and r13fw in @fig:mod-loss-parameters do not show a step-like behavior since the lattice depth $v_x$ is only reached on the optical axis.
 As discussed in @sec:mod-eval (#text(red)[ref another section here]) and shown in @fig:mod-eval-parabola a single measurement includes a range of lattice depths. #text(red)[what is the actually expected range for the x1064-lattice?]
 The fit model will therefore show the (weighted) average across the images, which leads to a "slower" decrease of the resonance parameters.
-#text(red)[Do an error-estimation style evaluation of the resonance parameters for the individual images here? Or just refer to the two-tone lattice modulation section?]
+#text(
+  red,
+)[Do an error-estimation style evaluation of the resonance parameters for the individual images here? Or just refer to the two-tone lattice modulation section?]
 
 #text(red)[Put some kind of transition here?]
 
@@ -98,7 +97,9 @@ Compared to the width of third band, the width of the sixth band does not limit 
 Only the atoms that are already in the third band can also be excited further to the sixth band #text(red)[draw a comparison to detection transitions and clock transitions?].
 If anything, having a wide band for the second transition is beneficial to ensure an overlap with $f_(1->3)$ over a wide range of lattice depths.
 
-#text(red)[Is this discussion really necessary? Or is it fine to just accept the fact that the transition works and we can see the in-situ resonances?]
+#text(
+  red,
+)[Is this discussion really necessary? Or is it fine to just accept the fact that the transition works and we can see the in-situ resonances?]
 Displaying the transition $3 -> 6$ as a "simple" area in @fig:mod-loss-theory does ignore that the band energies $epsilon_n$ are a function of the quasi-momentum $q$.
 This does not matter for a really narrow band where the band energy barely changes across the Brillouin zone.
 If the band is really wide (such as band $n = 6$), we would also expect the resonance transition $f_(3 -> 6)$ to be a function of the quasi-momentum $q$ in the Bloch basis.

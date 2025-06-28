@@ -69,7 +69,9 @@ The change of the position $y_0$ by $approx #qty[1][px]$ (#text(red)[use lattice
 This does not completely rule out thermal effects on the beam pointing since the lattice depth would also be reduced if the overlap of the lattice beams gets worse.
 Measurements of the lattice beams with a camera did however show that the beam positions are constant down to a few #unit[μm].
 The beam waists and beam amplitudes (intensity in the center) on the camera did however show changes that match the measurements with the atoms in @fig:super-thermal-x1064-ph.
-#text(red)[Mention that the camera was not properly measuring with a 4f configuration, hence no actual camera data shown here?]
+#text(
+  red,
+)[Mention that the camera was not properly measuring with a 4f configuration, hence no actual camera data shown here?]
 
 A quantitative analysis of the thermally induced focal shift would require a measurement of the beam waist and the beam amplitude as a function of the time $t$ and at different positions $x$ around the (virtual) position of the atoms.
 From the data in @fig:super-thermal-x1064-ph we can only conclude that we do not "cross" the position of the atoms with the foci of the forward-propagating beam and/or the retro-propagating beam.
@@ -100,7 +102,7 @@ The results are presented in @ssec:super-thermal-x1064-rebuild.
 ]
 
 For the x1064-lattice we were able to directly measure the lattice depth with the (monochromatic) in-situ parametric heating technique.
-This is not possible for the x532-lattice since we do not have enough optical power to achieve a sufficient lattice depth to get a narrow resonance $1 -> 3$, see @sec:mod-results for the discussion.
+This is not possible for the x532-lattice since we do not have enough optical power to achieve a sufficient lattice depth to get a narrow resonance $1 -> 3$, see @sec:mod-intro for the discussion.
 We therefore had to rely on the x-superlattice to measure the depth of the x532-lattice.
 The technical details of the in-situ lattice modulation spectroscopy in the x-superlattice are explained in #text(red)[ref modulation/superlattice section].
 I will therefore only qualitatively explain the (parameters of the) in-situ measurement here.
@@ -304,7 +306,9 @@ This approximation is valid since the initial beam is collimated and since the t
 We will later compare the results from the ray-tracing simulation to the numerical simulation with gaussian beams.
 Note that the ray-tracing simulation is not be applicable to the setup of the x1064-lattice since the "relay" lens significantly changes the behavior of the Gaussian beam.
 #text(red)[For the x1064-lattice we are therefore only going to look at the numerical simulation using gaussian beams.]
-#text(red)[Mention the Rayleigh-induced focal shift here? This should not matter for the actual thermal lensing since the Rayleigh-induced shift is a static one.]
+#text(
+  red,
+)[Mention the Rayleigh-induced focal shift here? This should not matter for the actual thermal lensing since the Rayleigh-induced shift is a static one.]
 
 #figure(
   image("figures/thermal-lensing-simulation.png"),

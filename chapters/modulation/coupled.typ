@@ -3,7 +3,7 @@
 == Coupled lattices <sec:mod-coupled>
 
 We have always selected the depths of the "other" lattices such that they do not "interfere" with the lattice that is currenctly getting modulated.
-As mentioned in @sec:mod-results we would set the depth of the y1064-lattice to #qty[30][Erec] when modulating the x1064-lattice at a depth of #qty[60][Erec].
+As mentioned in @sec:mod-intro we would set the depth of the y1064-lattice to #qty[30][Erec] when modulating the x1064-lattice at a depth of #qty[60][Erec].
 #text(red)[What about the depth of the z532-lattice?]
 This was based on the (empirical) observation that the modulation of the x1064-lattice can also address the y1064-lattice (and vice-versa).
 Since the lattices are not perfectly perpendicular we also expected this "cross-talk" to happen because of a (small) coupling of the lattices.
@@ -24,8 +24,12 @@ Since we only ever use the x532-lattice together with the x1064-lattice, we don'
 
 As explained in #text(red)[ref appendix] an angle $alpha != 0$ introduces a coupling between the x1064-lattice and the y1064-lattice.
 Such a coupling allows bands with different indices $(n_x, n_y)$ to mix.
-#text(red)[First show the case of the $(2, 1)$ here since it is much easier to understand? Or show this in the appendix in detail?]
-#text(red)[The coupling is strongest when the "total" band index $n_x + n_y$ is conserved (#text(red)[Why? mention the zero-coupling between $(3, 1)$ and $(2, 3)$?]) and it gets gradually weaker with the "distance" of the coupling.]
+#text(
+  red,
+)[First show the case of the $(2, 1)$ here since it is much easier to understand? Or show this in the appendix in detail?]
+#text(
+  red,
+)[The coupling is strongest when the "total" band index $n_x + n_y$ is conserved (#text(red)[Why? mention the zero-coupling between $(3, 1)$ and $(2, 3)$?]) and it gets gradually weaker with the "distance" of the coupling.]
 We will first look at the coupling of the band $(3, 1)$.
 The same approach can however be used for other bands in the two-dimensional coupled lattice.
 We will use this at the end of this section in #text(red)[ref subsection] to explain the "dip" in the resonance contrast shown in @fig:mod-loss-recovery.
@@ -87,7 +91,9 @@ The axis on the RHS in @fig:mod-coupled-band-31 shows a measurement of the latti
 Since the evaluation assumes the theory as shown by the line $"n31"$ in the axis on the left, the increase of the transition frequency as a function of $v_y$ will be intrepreted as an increase of the lattice depth $a_0$.
 The y-axis is scaled such that the effective lattice depth $1.0$ corresponds to the uncoupled theory.
 Starting at $v_y approx #qty[40][Erec]$ we can see a strong increase of the correction factor.
-#text(red)[While this is not problematic itself, this increase goes hand-in-hand with the coupling to the band $(1, 3)$ which results in curved/elliptical resonances]
+#text(
+  red,
+)[While this is not problematic itself, this increase goes hand-in-hand with the coupling to the band $(1, 3)$ which results in curved/elliptical resonances]
 For the evaluation it would be best to eliminate the additional complexity of non-straight resonances.
 If we have to apply a mask to only select the "straight" portion of the resonances, we significantly reduce the data we use from each atom image.
 And an evaluation with the coupled band structure theory is not practical because of the complexity of the theory and fit compared to the one-dimensional band structure theory.

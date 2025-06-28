@@ -35,7 +35,7 @@ I will compare the relevant implications on the lattice modulation spectroscopy 
 In @sec:mod-align I will explain how we were able to improve the alignment procedure of the lattices thanks to the in-situ spectroscopy signals.
 At the end of the chapter I will showcase the in-situ lattice modulation in the x-superlattice potential.
 
-#include "results.typ"
+#include "introduction.typ"
 #include "evaluation.typ"
 #include "loss.typ"
 #include "coupled.typ"
