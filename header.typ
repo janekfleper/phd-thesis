@@ -1,5 +1,10 @@
 #import "@preview/physica:0.9.5" as phy
-#import "@preview/fancy-units:0.1.1": num, unit, qty
+#import "@preview/fancy-units:0.1.1": num, qty, unit
+
+#let subref(label, index) = {
+  show ref: it => link(it.element.location(), it + index)
+  ref(label)
+}
 
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
