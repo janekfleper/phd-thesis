@@ -44,7 +44,7 @@ To start the alignment procedure of the in-plane lattices we are only using the 
 The corresponding retro-propagating beam is blocked just in front of the retro-reflecting mirror and the perpendicular in-plane lattice is turned off.
 We can then infer the #tr[_horizontal_] position of the forward-propagating beam from the position of the atom cloud in the $x y$ plane.
 For the x1064 lattice the horizontal position is measured along the $y$ axis.
-We then align the forward-propagating beam such that the atom cloud is centered #tr[in/on] the camera frame at $y = 0$.
+We therefore align the forward-propagating beam to center the atom cloud #tr[in/on] the camera frame at $y = 0$.
 After unblocking the retro-propagating beam we center the atom cloud again, this time using the #tr[(respective)] retro-reflecting mirror.
 This already concludes the horizontal alignment of the in-plane lattices.
 

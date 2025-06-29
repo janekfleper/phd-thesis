@@ -108,6 +108,7 @@ In a measurement such as shown in @fig:mod-intro-images, there can be images at 
 For a reliable evaluation we are therefore using all images together with their modulation frequencies.
 Besides the maximum lattice depth, we will also learn the waist of the underlying gaussian beams and the lattice position in the $x y$ plane from this evaluation.
 The details of this evaluation are presented in the next @sec:mod-eval.
+#tr[Really ref the next section here?]
 
 #figure(
   image("figures/modulation_x1064-images.png"),
