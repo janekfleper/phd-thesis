@@ -10,6 +10,7 @@
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
 #let asc = $a_upright("sc")$
+#let fita0 = sym.alpha
 
 // a shortcut for red text to be used as an annotation
 #let tr = text.with(red)

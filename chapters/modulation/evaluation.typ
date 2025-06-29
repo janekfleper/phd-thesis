@@ -4,122 +4,125 @@
 
 #[
   #set text(red)
-  - Compute the change of the lattice depth across the planes for the x532-lattice
   - Discuss error sources in depth? E.g. lattices moving from sequence to sequence?
   - Add disclaimer that all units are in pixels unless otherwise noted/mentioned?
   - Mention that only x1064-lattice is shown in detail. Other monochromatic lattices are briefly shown at the end of this section.
   - Mention the elliptic mask that is used for the fitting.
-  - Just skip the entire parabolic fits? Just using the gaussian function from the start actually sounds easier?
   - Compare the lattice parameters to any Basler images?
+  - Mention depth of focus regarding the outermost layers?
 ]
 
-The goal of the evaluation procedure is to yield the parameters to describe the lattice depth $v(x, y)$ from a series of images as shown in @fig:mod-intro-images.
-Since the atoms only occupy the center of the optical lattice, we can approximate the lattice depth by a parabolic function.
-While the data shows two-dimensional distributions of atoms, the function to describe the lattice depth only changes with the distance from the optical axis.
-We can therefore use a one-dimensional parabola that is "extruded" along the optical axis to parametrize the lattice depth.
-The assumption that the lattice depth does not change with the position $z$ along the optical axis is valid if the Rayleigh length is much greater than the region that is occupied by the atoms.
-This is definitely the case for all optical lattices in this experiment, with the shortest Rayleigh length being #text(red)[which lattice?] (#text(red)[ref setup section!]).
+With the evaluation procedure we want to find the parameters that describe the lattice depth $v(x, y)$ as a function of the position in the $x y$ plane.
+We would like the evaluation to only require a single fit to a series of images shown in @fig:mod-intro-images with the corresponding modulation frequencies.
+This will make the most of the in-situ lattice modulation spectroscopy as a calibration technique.
+To minimize the number of fit parameters, we make several assumptions about the lattice depth $v(x, y)$.
+While the resonances are two-dimensional signals in the atom images, the underlying lattice depth can be modelled by a one-dimensional function.
 
-Another assumption for the evaluation is that the lattice depth is constant in the different vertical lattice planes.
-The atoms usually occupy the vertical lattice planes over $approx #qty[10][μm]$.
-Even the smallest vertical waist of the x532-lattice #text(red)[ref setup section] at $approx #qty[50][μm]$ is greater by a factor $10$ if the lattice is centered on the atom cloud.
-For the infrared in-plane lattices with waists of $approx #qty[150][μm]$ this is even less critical.
-If the lattices are not properly centered on the atoms, we can however see a significant reduction of the "resonances".
-We can use this signal to optimize the lattice alignment along the vertical axis where we would otherwise not have the imaging capabilities we have in the $x y$-plane.
-Even measuring the lattice modulation spectroscopy with the single-plane slicing as introduced in @sec:setup-detect would not provide a faster/better alignment procedure.
-By integrating over multiple lattice planes we just have to find the alignment where both the lattice depth and the resonance "contrast" are maximized.
-While both parameters can have many local maxima, the combined maximum is always unambiguous.
-This alignment procedure is described in detail in #text(red)[ref modulation/alignment].
+For the lattices in a standing-wave configuration, this assumption is based on the Rayleigh lengths of the optical lattices that determine the change of the lattice depths on the optical axes.
+The x532 lattice has the shortest Rayleigh length of $z_R approx #qty[1.2][mm]$ due to the waist $w_0 approx #qty[45][μm]$ along the $z$ axis.
+With a typical diameter of up to #qty[100][μm], the atom cloud is two orders of magnitude smaller.
+We can therefore use a constant lattice depth along the optical axis for the fit model of the in-plane lattices.
+
+For the z532 lattice we also have to consider the projection of the lattice depth onto the $x y$ plane.
+Due to its shallow-angle configuration, we expect the lattice depth to form an ellipse with an aspect ratio of $r_y slash r_x approx 4$, see #tr[ref figure] for the optical setup.
+We are able to see this elliptical shape in the resonances when the lattice beams are not centered along the $y$ direction.
+In @ssec:mod-align-z532 we are using this signal to optimize the alignment of the z532 lattice.
+If the z532 lattice is properly aligned to the position $y = 0$, the resonances are always parallel and we cannot resolve the ellipticity anymore.
+We are therefore also assuming that the z532-lattice depth only changes perpendicular to the projection of the optical axis onto the $x y$ plane.
+
+The second assumption for the evaluation addresses the $z$ axis.
+Since the atom images show the accumulated optical density of the vertical lattice planes, we would need to use the single-plane slicing introduced in @sec:setup-detect to resolve the lattice depth as a function of the position $z$.
+The required effort for such a measurement is however not practical for a calibration measurement of the lattice depth #tr[really mention this?].
+We will therefore estimate whether the inhomogeneity $v(z)$ of the optical lattices is even relevant for the in-situ lattice modulation spectroscopy.
+If we compare the beam waists of all lattices to the extent of the atom cloud along the $z$ axis, we find that the expected change of the lattice depth is only significant for the x532 lattice.
+Due to the ellipticity of the horizontal dipole trap, the atom cloud typically has a vertical extent up to #qty[10][μm].
+With a waist of $w_0 approx #qty[45][μm]$, the x532-lattice depth is therefore decreased by #qty[2.5][%] in the outermost vertical layers.
+For the resonance signal, the weight of those layers is however smaller than the weight of the central layers due to a lower #tr[atom density/occupation].
+This will reduce the systematic error of the mean lattice depth to less than #qty[1][%].
+If we only want to determine the lattice depth in the central layers, we could apply a correction factor to the calibration measurement to cancel this systematic error.
+
+For all other optical lattices, the change of $v(z)$ is smaller by at least one order of magnitude.
+We can therefore neglect the inhomogeneity along the $z$ axis when the lattice beams are well aligned.
+During the alignment itself, we actually use the inhomogeneity along the $z$ axis to get information about the vertical position of the lattice beams.
+In @ssec:mod-align-x1064 this procedure is explained in detail using the example of the x1064-lattice alignment.
 
 
-=== Fit model description <ssec:mod-eval-fit>
+=== Development of the fit model <ssec:mod-eval-fit>
 
-#text(red)[Where to put this disclaimer?]
-The evaluation of the lattice modulation spectroscopy measurements uses a model that was developed based on empirical observations of many atom images.
-Using gaussian functions to model the atomic cloud and the resonances is not based on any theory, it is just the simplest way of getting reliable fit results.
-Only the function that actually describes the lattice depth as a function of the position uses the band structure theory to relate the modulation frequency to a local lattice depth.
-The fit parameters of the lattice depth, the lattice waist and the lattice position are therefore actually quantitative results.
-The other resonance fit parameters will only be considered from a qualititive point of view (if anything).
+Based on the aforementioned assumptions to simplify the fit model, the lattice depth $v(x, y)$ will only require four parameters.
+The factor $fita0$ will quantify the correction of the measured lattice depth relative to the set value $v_0$.
+We are using a one-dimensional Gaussian function with the position $y_0$ and the beam waist $w_0$ to model the lattice depth perpendicular to the optical axis.
+The fourth parameter is the angle $theta.alt$ that allows a rotation of the optical axis in the $x y$ plane.
+We expect an angle of $theta.alt approx #num[5]degree$ for the x1064 lattice relative to the $x$ axis based on the images in @fig:mod-intro-images.
+For the y1064 lattice and the z532 lattice, the angle is $theta.alt < #num[1]degree$ relative to the $y$ axis.
+The coordinate axis of the Gaussian function is also changed accordingly.
+To generalize the fit model for all lattices in the experimental setup, we are introducing the radius $rho(x, y, x_0, y_0, theta.alt)$ that handles the different optical axes.
+The resulting function for the lattice depth is then
+
+$
+  v(x, y, v_0; alpha, x_0, y_0, theta.alt, w_0) = alpha dot v_0 dot exp(-2 rho^2 / w_0^2) thin .
+$ <eq:mod-eval-model-lattice-depth>
+
+From the lattice depth and the band structure as shown in @fig:mod-intro-theory we can then compute the transition frequency $f_(1->3)(v)$ in #unit[kHz].
+The first the parameters are variables passed to the fit model, and the last five parameters will be optimized by the fit.
+Only one of the parameters $x_0$ and $y_0$ is used at a time depending on the optical axis of the lattice.
+
+The modulation is parametrized by a Lorentzian function centered at the modulation frequency $f_"mod"$.
+The actual shape of the resonances is only a qualitative observable, we could therefore use any symmetric distribution with an amplitude and a width.
+We ultimately chose the Lorentzian function since it is commonly used to describe resonances.
+If we use the transition frequency $f_(1->3)(v)$ as a function of the local lattice depth, we will directly get the resonances in position space from the following model function
+
+$
+  R(v, f_"mod"; a_R, gamma_R) = a_R dot 1 / (1 + ((f_(1->3)(v) - f_"mod") / gamma_R)^2)
+$ <eq:mod-eval-model-resonance>
+
+with the dimensionless amplitude $a_R$, the lattice depth $v$ @eq:mod-eval-model-lattice-depth[] and the half width at half maximum (HWHM) $gamma_R$ in #unit[kHz].
+The axes *e* to *h* in @fig:mod-eval-model show the resulting resonances for different modulation frequencies.
+For constant steps of the modulation frequency, the resonances move faster and become wider towards the center.
+This is a direct consequence of the local lattice depth as visualized by the overlap with the modulation frequency in *a* to *d*.
+
+To finalize the fit model we need to take the #tr[(underlying)] optical density $n_0(x, y)$ into account.
+We decided to use a two-dimensional Gaussian function that can be shifted and rotated in the $x y$ plane.
+Just like the shape of the resonances, this is only an empirical model that does not affect the calibration of the actual lattice depth @eq:mod-eval-model-lattice-depth[].
+Since the resonance function @eq:mod-eval-model-resonance[] is defined with a positive amplitude, we need to subtract it from the optical density $n_0(x, y)$.
+The resulting fit model that we can directly use on the atom images is therefore
+
+$
+  n(x, y) = n_0(x, y) dot (1 - R) thin .
+$ <eq:mod-eval-model>
+
+In @fig:mod-eval-model the total fit model is shown for several modulation frequencies in subfigures *i* to *l*.
+With this fit model we assume that the optical density $n_0(x, y)$ does not change significantly between the images in a measurement as shown in @fig:mod-intro-images.
+This requires a #tr[constant/stable] atom number in each sequence before the modulation starts.
+During the measurement time of #num[10] to #qty[15][min], the typical atom number variation is sufficiently small.
+#tr[ref anything in @ch:setup?]
+
+The alternative to including the optical density in the fit model would be to run a reference measurement that determines $n_0(x, y)$ independently.
+Dividing $n(x, y)$ by $n_0(x, y)$ and subtracting $1$ would then directly return the data that is modelled by the resonance function @eq:mod-eval-model-resonance[].
+This would shorten the runtime required for the evaluation, but in return the measurement time would be increased.
+For a meaningful reference measurement we need to take #num[5] to #num[10] images before every lattice modulation measurement, which would roughly double the total measurement time.
+The result of the lattice depth @eq:mod-eval-model-lattice-depth[] would not actually be improved since lattice-depth parameters $alpha$, $x_0$, $y_0$, $theta.alt$ and $w_0$ do not show any correlations with the fit parameters of $n_0(x, y)$.
 
 #figure(
   image("figures/modulation_evaluation_fit_model.png"),
   caption: [
-    Illustration of the lattice modulation spectroscopy fit model.
-    The lattice in the figure has a depth of #qty[60][Erec] (in the center) and the waist of the lattice is #qty[140][μm].
-    In the first row the figures show the frequency of the transition $1 -> 3$ computed from the lattice depth as a function of the distance from the optical axis/lattice site.
-    The modulation is parametrized by a one-dimensional gaussian function in frequency space with the amplitude #num[0.9] and the $1 slash e^2$ radius #num[1.2] #text(red)[use FWHM here instead...].
-    The shaded regions in the first row indicate the modulation which is uniform across the entire lattice.
-    Depending on the intersection of the modulation frequency with the "resonance" parabola, the actual resonance function will have a different amplitude and width.
-    This is shown in the second row where the resonance widths decrease as the modulation frequency approaches the center of the optical lattice.
-    The amplitude of the resonance function only decreases when the modulation frequency is greater than the center frequency for the maximum lattice depth.
-    In the third row the application of the resonance function to the optical density shows the signal that we will actually measure with the atoms.
-    A modulation frequency near the center of the lattice will significantly deplete the atom cloud, whereas smaller frequencies will only "draw" a thin resonance line into the optical density.
+    Fit model for the in-situ lattice modulation spectroscopy.
+    The lattice in the figure has a depth of $v_0 = #qty[60][Erec]$ and the lattice beams have a waist of #qty[140][μm].
+    In *a* to *d*, the solid black lines show the transition frequency $f_(1->3)(y)$ computed from the local lattice depth $v(y)$, and the shaded areas show the modulation that is scanned from #qty[116.0][kHz] to #qty[122.0][kHz] in steps of #qty[2.0][kHz].
+    The parameters of the Lorentzian modulation function in frequency space are $a_R = #num[0.9]$ and $gamma_R = #tr[#qty[1.2][kHz]]$
+    In *e* to *h* to corresponding resonance functions $R(v, f_"mod")$ are plotted as a function of the position $y$.
+    Depending on the #tr[overlap/intersection] of the frequency $f_(1->3)(y)$ with the modulation frequency $f_"mod"$, the amplitude $a_R$ and the width in position space can change.
+    The resonances get wider towards the center at $y = 0$, and their amplitude decreases if $f_"mod" > max(f_(1->3))$.
+    In *i* to *l* the resonance functions are applied to the optical density $n_0(y)$ to show the signal that we will actually measure with the atoms.
+    A modulation frequency near the center of the lattice will deplete a significant area of the atom cloud, whereas smaller frequencies will only create thin resonances.
+    This behavior qualitatively matches the series of images in @fig:mod-intro-images.
+
+    #show list: set text(red)
+    - Add abc indices...
+    - Use #unit[μm] on the x-axis...
+    - Add a legend/label for $f_(1->3)$ and $n_0(y)$?
   ],
 ) <fig:mod-eval-model>
-
-The function we use to evaluate the images @fig:mod-intro-images is the product of a gaussian envelope $n_0(x,y)$ for the optical density of the atom cloud and the "resonance" function $R(x, y, v_0, f)$ to represent the lattice modulation as a function of the lattice depth $v_0$ and the modulation frequency $f$.
-Since the "resonance" function is defined to be positive as shown in @fig:mod-eval-model, it needs to be subtraced from the optical density $n_0(x,y)$.
-The total fit function of the lattice modulation spectroscopy is therefore
-
-$
-  n(x, y) = n_0(x, y) dot (1 - R(x, y, v_0, f))
-$ <eq:mod-eval-model>
-
-where the actual fit parameters of the functions $n_0(x, y)$ and $R(x, y, v_0, f)$ are omitted for the sake of readability.
-The resonance function $R$ internally computes the lattice depth as a one-dimensional parabola.
-Having both coordinates $x$ and $y$ as parameters is only used as a generalization for all available lattices and for a rotation of the optical axis of the lattice in the $x y$-plane.
-The complete fit function of the optical density $n_0(x, y)$ is given by the expression
-
-$
-  n_0(x, y; theta.alt, a, y_0, x_0, w_y, w_x) & = a dot g(x', x_0, w_x) dot g(y', y_0, w_y) \
-                  "with" #h(1em) g(x, x_0, w) & = exp(-2 ((x-x_0) / w)^2)
-$ <eq:mod-eval-model-density>
-
-where $x'$ and $y'$ are the coordinates transformed/rotated by the angle $theta.alt$.
-Also making the optical density $n_0(x, y)$ rotatable was a choice to accomodate the fact that the atomic density distribution follows the optical axis of the x1064-lattice as seen in @fig:mod-intro-images.
-The optical density function $n_0(x, y)$ is used for all of the images in a single measurement.
-This assumes that the atom number during each sequence before the modulation starts is constant over the measurement time.
-With a measurement time of #num[10] to #qty[15][min], this is a valid assumption to make.
-
-The alternative to including the optical density in the fit model would be to run a reference measurement to determine $n_0(x, y)$ independently.
-Dividing $n(x, y)$ by $n_0(x, y)$ and subtracting $1$ would then directly return $-R(x, y, v_0, f)$.
-While this sounds really tempting, we would need to do this before every modulation measurement since the atom number is not constant over timescales from hours to days.
-In addition, the atom density $n_0(x, y)$ can change between sequences that modulate different lattices since we use different lattice depths.
-The increased measuring time would only shorten the runtime of the fits since the model will have fewer parameters.
-The result of the fit of the lattice depth is not actually improved since those parameters do not show any relevant correlations with the fit parameters of $n_0(x, y)$.
-
-The resonance function $R(x, y, v_0, f)$ uses a one-dimensional parabola to model the lattice depth $v(x, y)$.
-To apply the modulation frequency, the frequency $f_(1->3)$ is computed from the lattice depth.
-The frequency as a function of $x$ and $y$ is then evaluated in a one-dimensional gaussian function with the modulation frequency, the resonance amplitude and the resonance width as follows
-
-$
-  R(x, y, v_0, f; theta.alt, x_0, y_0, a, a_0, a_f, w_f) & = a_f dot exp(-2 ((f_(1->3)(v) - f) / w_f)^2) \
-   "with" #h(1em)
-   v_"gaussian" (x, y, v_0; theta.alt, x_0, y_0, a, a_0) & = v_0 dot a_0 dot exp(-a rho^2)               \
-   "or" #h(1em)
-   v_"parabola" (x, y, v_0; theta.alt, x_0, y_0, a, a_0) & = v_0 dot a_0 dot (1 - a rho^2)
-$ <eq:mod-eval-model-resonance>
-
-where the parameters $a_0$, $a$, $y_0$ (and $theta.alt$) describe the lattice depth $v(x, y)$.
-The distance $rho$ from the optical axis is computed from the coordinates $x$ and $y$, the origin $(x_0, y_0)$ and the angle $theta.alt$.
-For the lattices propagating along the $x$-axis, the parameter $x_0$ is not varied during the fit.
-The same applies to the parameter $y_0$ for the lattices propagating along the $y$-axis.
-Since the lattice depth does not change along the optical axis, it does not make sense to define an "origin" in that direction.
-See @fig:mod-eval-model for a few examples of the resonance function during a scan of the modulation frequency $f$.
-
-The fit parameter $a_0$ in @eq:mod-eval-model-resonance will quantify the correction factor of the programmed lattice depth $v_0$.
-While it might look odd to have two "correlated" factors in the formula, this is much nicer to work with than a single factor that would include the lattice depth in the fit.
-The fit parameter $a$ describes the "inverse width" fo the parabola which can then be related to the gaussian waist of the optical lattice.
-If you look at the two different lattice depth functions in @eq:mod-eval-model-resonance, you can see that the parabolic function is just the first order expansion of the gaussian function.
-The relation of the gaussian waist $w_0$ and the "inverse width" a is given by the equation
-
-$
-  w_0 = sqrt(2 / a)
-$ <eq:mod-eval-waist>
-
-// By multiplying the waist $w_0$ by the pixel size of the camera, we can get the waist in #unit[μm].
-
-#linebreak()
 
 To get an idea of the match between the lattice modulation spectroscopy signals in @fig:mod-intro-images and the lattice depth determined by the fit model @eq:mod-eval-model we are going to look at a cut along the $y$-axis.
 The normalized optical density data in @fig:mod-eval-parabola shows a good agreement with the two fit models.
@@ -273,7 +276,7 @@ The z532-lattice is slightly more complicated due to the shallow-angle setup.
 While the lattice vector $Delta phy.vb(k)$ points along the $z$-axis, the beams are both propagating in the $y z$-plane.
 We therefore "see" the actual waist of $w_0 approx #qty[120][μm]$ along the $x$-axis, but the "effective" waist along the $y$-axis is reduced due to the angle $alpha approx 14.5 degree$ relative to the $x y$-plane, see @sec:setup-z #text(red)[ref the figure here instead?].
 The effective waist along the $y$-axis amounts to $w_0 slash tan(alpha) approx #qty[450][μm]$.
-Since the "inverse width" parameter $a$ of the lattice depth scales quadratically with the waist according to @eq:mod-eval-waist, we expect the changes of the lattice depth to be $~14$ times smaller compared to the changes of the lattice depth along the $x$-axis.
+Since the "inverse width" parameter $a$ of the lattice depth scales quadratically with the waist, we expect the changes of the lattice depth to be $~14$ times smaller compared to the changes of the lattice depth along the $x$-axis.
 While it would be possible to include such an aspect ratio in the lattice depth model @eq:mod-eval-model-resonance, we cannot resolve the ellipticity in the resonance lines if the z532-lattice is properly aligned.
 #text(red)[Mention signals that directly show misalignment of the z532-lattice?]
 We will therefore only include a variation of the lattice depth along the $x$-axis in the evaluation.
