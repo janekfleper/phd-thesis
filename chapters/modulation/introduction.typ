@@ -102,11 +102,11 @@ The inhomogeneity of the lattice depth also causes the resonances to become #tr[
 Both effects follow the expected behavior of the intensity profile of a gaussian beam.
 
 When we look at the single resonance in #subref(<fig:mod-intro-images>, [i]), we could argue that it is sufficient to determine the lattice depth in the center from the modulation frequency of #qty[122.0][kHz].
-The corresponding lattice depth is $approx #qty[60.3][Erec]$ which would result in the correction factor $#tr[$a_0$] approx #num[1.005]$ relative to the setpoint of $v_0 = #qty[60][Erec]$.
-Such a simple evaluation would always result in a systematic error since there will also be a single resonance in the center if the modulation frequency is slightly too high for the lattice depth.
+The corresponding lattice depth is $approx #qty[60.3][Erec]$ which would result in the correction factor $fita0 approx #num[1.005]$ relative to the setpoint of $v_0 = #qty[60][Erec]$.
+Such a simple evaluation would always result in a systematic error since we cannot realiably infer the center of a single resonance in frequency space.
 In a measurement such as shown in @fig:mod-intro-images, there can be images at multiple frequencies that only show a single resonance with different contrasts.
 For a reliable evaluation we are therefore using all images together with their modulation frequencies.
-Besides the maximum lattice depth, we will also learn the waist of the underlying gaussian beams and the lattice position in the $x y$ plane from this evaluation.
+Besides the maximum lattice depth, we will also get the waist of the underlying gaussian beams and the lattice position in the $x y$ plane from this evaluation.
 The details of this evaluation are presented in the next @sec:mod-eval.
 #tr[Really ref the next section here?]
 

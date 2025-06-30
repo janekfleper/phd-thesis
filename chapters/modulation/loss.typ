@@ -85,7 +85,7 @@ Even if the atoms would need to tunnel over #num[100] lattice sites, the associa
 We can therefore run the detection right after the end of the lattice modulation.
 
 The resonance parameters r13fa and r13fw in @fig:mod-loss-parameters do not show a step-like behavior since the lattice depth $v_x$ is only reached on the optical axis.
-As discussed in @sec:mod-eval (#text(red)[ref another section here]) and shown in @fig:mod-eval-parabola a single measurement includes a range of lattice depths. #text(red)[what is the actually expected range for the x1064-lattice?]
+As discussed in @sec:mod-eval (#text(red)[ref another section here]) and shown in @fig:mod-eval-x1064-result a single measurement includes a range of lattice depths. #text(red)[what is the actually expected range for the x1064-lattice?]
 The fit model will therefore show the (weighted) average across the images, which leads to a "slower" decrease of the resonance parameters.
 #text(
   red,
@@ -125,7 +125,7 @@ As long as the condition $f_(1->3) < f_2 < f_(1->4)$ is fullfilled, we don't exp
 Instead of measuring multiple frequencies to cover the entire lattice depth $v(x, y)$ that is occupied by the atoms, we only run this measurement at a single frequency $f_(1->3)$.
 We can use the calibration of the lattice depth from a previous measurement as the "reference" for the atom density parameters and the gaussian waist.
 Only the lattice depth $a_0$, the lattice position $y_0$, the lattice angle $theta.alt$ and (most importantly) the resonance parameters r13fa and r13fw are varied during the single-image fits.
-We already used this producedure for the error estimation presented in @ssec:mod-eval-error and @fig:mod-eval-error.
+We already used this producedure for the error estimation presented in @ssec:mod-eval-error and @fig:mod-eval-x1064-result.
 Compared to the data shown in @fig:mod-loss-parameters the resonance amplitudes r13fa from the single-image fits will not be washed out (better convoluted?) by the varying lattice depth.
 We can therefore expect a "step-like" behavior when the modulation frequency $f_2$ enters (and exits) the transition $3 -> 6$.
 
