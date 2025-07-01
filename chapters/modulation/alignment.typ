@@ -178,23 +178,20 @@ The initial resonances showed a small angle that suggested a lattice position $y
 In a few iterations we can then find the lattice position where the resonances are parallel.
 This procedure is again limited by the mechanical mirror mount and the lack of a camera to measure the beam positions.
 The precision of $delta y tilde.eq #qty[10][μm]$ is however sufficient to center the lattice position such that we can neglect the inhomogeneity of the z532-lattice depth along the $y$ axis.
-As discussed in #tr[@ssec:mod-eval-other] both the z532 lattice and the y1064 lattice are parametrized by a one-dimensional gaussian lattice depth as a function of $x$.
+As discussed in #tr[@sec:mod-eval] both the z532 lattice and the y1064 lattice are parametrized by a one-dimensional gaussian lattice depth as a function of $x$.
 
-#figure(
-  image("figures/alignment_z532_left-right.png"),
-  caption: [
-    Optimization of the z532-lattice position along the $x$ axis.
-    The lattice depth was set to $v = #qty[100][Erec]$ and the modulation frequency was set to $f_"mod" = #qty[40][kHz]$.
-    The first image on the left shows the z532-lattice position after the alignment of the individual lattice beams.
-    We are then moving the lattice position until the resonances are centered around $x = 0$.
-    The atom cloud always moves in the opposite direction because of the deconfinement from the z532 lattice.
+#figure(image("figures/alignment_z532_left-right.png"), caption: [
+  Optimization of the z532-lattice position along the $x$ axis.
+  The lattice depth was set to $v = #qty[100][Erec]$ and the modulation frequency was set to $f_"mod" = #qty[40][kHz]$.
+  The first image on the left shows the z532-lattice position after the alignment of the individual lattice beams.
+  We are then moving the lattice position until the resonances are centered around $x = 0$.
+  The atom cloud always moves in the opposite direction because of the deconfinement from the z532 lattice.
 
-    #show list: set text(red)
-    - Draw any helper lines in the images?
-    - Merge this figure with @fig:mod-align-z532-up-down?
-    - Remove the colorbar?
-  ],
-) <fig:mod-align-z532-left-right>
+  #show list: set text(red)
+  - Draw any helper lines in the images?
+  - Merge this figure with @fig:mod-align-z532-up-down?
+  - Remove the colorbar?
+]) <fig:mod-align-z532-left-right>
 
 #figure(
   image("figures/alignment_z532_up-down.png"),

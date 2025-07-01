@@ -5,7 +5,6 @@
 #[
   #set text(red)
   - Better title "theory of lattice modulation spectroscopy"?
-  - Mention depth of perpendicular lattice with reference to coupling section.
   - Mention modulation amplitude and length of modulation? With reference to the optimization section.
   - Make a strong argument that we are modulating in the Wannier basis?
   - Add a sketch for the sequence?
@@ -13,7 +12,7 @@
 ]
 
 The idea behind #tr[(the)] lattice modulation spectroscopy is to probe the band structure by exciting atoms to higher bands #tr[ref what?].
-By modulation the lattice potential a small overlap between the wave functions in different bands is created.
+By modulating the lattice potential a small overlap between the wave functions in different bands is created.
 If the modulation is then resonant to the energy difference between the bands, the atoms can be excited to the higher band.
 In this thesis the modulation is always applied to the lattice depth $v$.
 We can therefore write the time-dependent lattice potential as
@@ -23,7 +22,7 @@ $
 $ <eq:mod-intro-function>
 
 with the modulation amplitude $delta v$ and the modulation frequency $f_"mod"$.
-This type of modulation is also the most common one for the calibration of the lattie depth.
+This type of modulation is also the most common one for the calibration of the lattice depth.
 The other type of modulation in monochromatic lattices targets the lattice position instead by #tr[shaking] the potential along the lattice vector #tr[$phy.vb(k)$] #tr[ref what?].
 In superlattices there are even more modulation options since there are two lattices amplitudes $v_l$ and $v_s$ and the superlattice phase $phi$ that can be tuned.
 This allows complex measurements beyond the calibration of the lattice depths #tr[ref PhD Carla and the Floquet sections?].
@@ -84,17 +83,18 @@ Even for the largest modulation amplitude the setpoint $v_0$ of the lattice dept
 
 #tr[Add a transition here?]
 For the infrared in-plane lattices we are #tr[(usually)] using a lattice depth of $V = #qty[60][Erec]$.
-With $#unit[Erec] slash h = #qty[4.405][kHz]$ the maximum modulation frequency is $f_"mod" approx #qty[122][kHz]$ and the band width is only $Delta epsilon_n slash h approx #qty[0.17][kHz]$.
-Based on the waists of the x1064 lattice and the y1064 lattice, We expect the local modulation frequency to change by $delta f_"mod" approx #qty[5][kHz]$ across the atom cloud.
+With $#unit[Erec] slash h = #qty[4.405][kHz]$ the maximum modulation frequency is $f_"mod" approx #qty[122][kHz]$ and the frequency width is only $Delta f = Delta epsilon_n slash h approx #qty[0.17][kHz]$.
+Based on the waists of the x1064 lattice and the y1064 lattice, we expect the local modulation frequency to change by $delta f_"mod" approx #qty[5][kHz]$ across the atom cloud.
 The band width is therefore negligible relative to $f_"mod"$ as well as $delta f_"mod"$.
-While the modulated lattice has a depth of #qty[60][Erec] we set the #tr[other/perpendicular] lattice to a depth of #qty[30][Erec].
+While the modulated lattice has a depth of #qty[60][Erec], we set the #tr[other/perpendicular] lattice to a depth of #qty[30][Erec].
 This reduces the coupling between the two lattices, see @sec:mod-coupled for the detailed investigation.
 The z532 lattice is set to its maximum depth of #qty[100][Erec] #tr[really mention this lattice?].
 
 With a #tr[constant/fixed] modulation time we select the modulation amplitude $delta v$ based on the #tr[contrast/visibility] of the resonances.
 The resonances should be resolvable #tr[by eye] in the atom images, but they should not #tr[saturate].
 This leaves a wide range of modulation amplitudes that yield consistent results for the lattice parameters #tr[actually show this later?].
-With a suitable modulation amplitude, we then scan the modulation frequency in the expected range based on the local lattice depths.
+For the x1064 lattice we find that $delta v slash v_0 approx #tr[#qty[3][%]]$ is a suitable modulation amplitude.
+We then scan the modulation frequency in the expected range based on the local lattice depths.
 The resulting series of atom images for such a measurement #tr[for/with] the x1064 lattice are shown in @fig:mod-intro-images.
 For the lowest modulation frequency of #qty[118.0][kHz] we can see narrow resonances near the edge of the atom cloud.
 These resonances move towards the center with increasing step sizes as the modulation frequency is increased.

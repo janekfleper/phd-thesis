@@ -4,8 +4,10 @@
 
 #[
   #set text(red)
+  - Find a better section title...
   - Mention that only x1064-lattice is shown in detail. Other monochromatic lattices are briefly shown at the end of this section.
   - Mention depth of focus regarding the outermost layers?
+  - Mention the resonance widths to compare them to the expected $Delta f$?
 ]
 
 With the evaluation procedure we want to find the parameters that describe the lattice depth $v(x, y)$ as a function of the position in the $x y$ plane.
@@ -38,8 +40,8 @@ For the resonance signal, the weight of those layers is however smaller than the
 This will reduce the systematic error of the mean lattice depth to less than #qty[1][%].
 If we only want to determine the lattice depth in the central layers, we could apply a correction factor to the calibration measurement to cancel this systematic error.
 
-For all other optical lattices, the change of $v(z)$ is smaller by at least one order of magnitude.
-We can therefore neglect the inhomogeneity along the $z$ axis when the lattice beams are well aligned.
+For all other optical lattices, the systematic error due to the change of $v(z)$ is less than #qty[0.1][%].
+We will therefore neglect the inhomogeneity along the $z$ axis when the lattice beams are well aligned.
 During the alignment itself, we actually use the inhomogeneity along the $z$ axis to get information about the vertical position of the lattice beams.
 In @ssec:mod-align-x1064 this procedure is explained in detail using the example of the x1064-lattice alignment.
 
@@ -132,7 +134,7 @@ The comparison to the lattice depth now confirms that this resonance is indeed a
 #figure(
   image("figures/modulation_x1064-result.png"),
   caption: [
-    Calibration result of the x1064-lattice depth.
+    Resonances and fit parameters of the x1064-lattice calibration.
     The data in *a* shows the resonances computed from the atom images in @fig:mod-intro-images.
     Each image is divided by the envelope $n_0(x, y)$ from the fit model @eq:mod-eval-model[] to normalize the resonances.
     We average the images over the interval $#qty[-5][μm] < x < #qty[5][μm]$ to only show the resonances as a function of the position $y$.
@@ -147,27 +149,26 @@ The comparison to the lattice depth now confirms that this resonance is indeed a
 ) <fig:mod-eval-x1064-result>
 
 
-=== Error estimation <ssec:mod-eval-error>
+=== Estimation of the calibration uncertainty <ssec:mod-eval-error>
 
 While the visual match of the normalized resonances and the result of the fit already looks good in @fig:mod-eval-x1064-result, we would like to quantify this in a second evaluation step.
-We can not use the uncertainties of the fit parameters of the combined fit.
+We can not use the uncertainties of the fit parameters of the combined fit to assess the #tr[quality/suitability] of the fit model.
 In most cases they are unreasonably small because the initial data does not include any uncertainties.
 Even though the atom images are noisy, we cannot quantify a useful uncertainty for each pixel.
 This would require averaging of the atom images before the fit #tr[ref EOS paper?].
-For this evaluation we would however like to use the full resolution of the resonances as a function of the position $(x, y)$.
-We will therefore estimate the uncertainties of the fit result by repeating the fit for each image individually.
-This will also show whether there is a systematic error in the assumptions that we made in @sec:mod-intro about the parameters of the lattice depth.
+For the lattice-depth calibration we would however like to use the full resolution of the resonances as a function of the position $(x, y)$.
+We will therefore estimate the uncertainties by repeating the fit for each image individually.
+This will also show whether there is a systematic error in the assumptions that we made in @sec:mod-intro about the required parameters of the lattice depth.
 
 For the individual fits we can not optimize the correction factor $fita0$ and the waist $w_0$ at the same time.
-We will therefore use the fixed value of $fita0$ from the combined fit for the individual fits to determine the waist $w_0$ and vice-versa.
-The fit parameters $y_0$ and $theta.alt$ are always varied since the position and the orientation of the lattice depth $v(x, y)$ can be determined reliably from a single image.
-It only makes sense to try the individual fits #tr[on/for] the images where resonances are visible in the atom cloud.
+We will therefore use the fixed value of $fita0$ from the combined fit to determine the waist $w_0$ with the individual fits and vice-versa.
+The fit parameters $y_0$ and $theta.alt$ are always varied since the position and the orientation of the lattice depth $v(x, y)$ can be determined reliably from a single image, as long as resonances are visible.
 We are therefore not considering the images with $f_"mod" >= #qty[122.0][kHz]$ for the error estimation.
 
 The comparison of the combined fit result and the individual fit results is shown in @fig:mod-eval-x1064-result.
-For all fit parameters, the individual results are scattered randomly around the combined results.
-If the lattice depth could not be modelled by a Gaussian function, either the waist $w_0$ or the correction factor $fita0$ should change systematically as a function of the modulation frequency.
-We can therefore conclude that the fit model @eq:mod-eval-model[] is #tr[sufficient] to describe the x1064-lattice depth $v(x, y)$.
+For all fit parameters, the individual results are scattered #tr[randomly] around the combined results.
+If the lattice depth could not be modelled by a Gaussian function, either the waist $w_0$ or the correction factor $fita0$ would change systematically as a function of the modulation frequency.
+We can therefore conclude that the fit model @eq:mod-eval-model[] is suitable to describe the x1064-lattice depth $v(x, y)$.
 The waist $w_0$ varies by a few #unit[μm] across the scan of the modulation frequency.
 This is reasonable amount given the size of the lattice beams compared to the size of the atom cloud.
 We can only measure the resonances up to a radius of $rho approx #qty[20][μm]$ which is significantly smaller than the waist of $w_0 approx #qty[140][μm]$.
@@ -176,101 +177,93 @@ The variation of the position $y_0$ is on par with the expected variation of the
 This is a general limitation for all measurements that rely on signals in position space.
 The angle $theta.alt$ shows variations that are comparable to the errors of the individual fits.
 #tr[something else to mention here? compare this to the phase gradient in @sssec:phase-measure-resolve-horizontal?]
+For all parameters in @fig:mod-eval-x1064-result, we compute the mean value and the standard deviation of the invidiual fits.
+The resulting fit parameters are compiled in @tab:mod-eval-results.
+#tr[something else to mention here?]
+
+#figure(
+  image("figures/modulation_other-lattices.png"),
+  caption: [
+    Lattice-modulation resonances in the y1064 lattice and in the z532 lattice.
+    The y1064 lattice in *a* is set to a depth of $v_0 = #qty[60][Erec]$, and the z532 lattice in *b* is set to a depth of $v_0 = #qty[100][Erec]$.
+    In the y1064 lattice we are using the transition $1 -> 3$ and in the z532 lattice we are using the transition $1 -> 5$ for the lattice modulation spectroscopy.
+    The data shows the normalized resonances averaged in the interval $#qty[-15][μm] < y < #qty[15][μm]$.
+    Due to the small angles $theta.alt$, we can use a larger interval for the averaging compared to the x1064 lattice.
+    The solid red lines show the results for the lattice depth @eq:mod-eval-model-lattice-depth[] averaged in the same interval.
+
+    #show list: set text(red)
+    - Include colorbar between the two axes?
+    - Add secondary y-axis for the lattice depth like in @fig:mod-eval-x1064-result?
+  ],
+) <fig:mod-eval-other-result>
+
+The in-situ lattice modulation spectroscopy in the y1064 lattice works largely the same as in the x1064 lattice.
+We are now using a lattice depth of $v_0 = #qty[60][Erec]$ for the y1064 lattice, and a lattice depth of #qty[30][Erec] for the x1064 lattice to limit the coupling #tr[ref anything?].
+Since both lattices have the same #tr[period/spacing] $a$, the resonance frequencies of the transition $1 -> 3$ will be similar.
+We are again selecting a modulation amplitude of $delta v slash v_0 approx #tr[#qty[3][%]]$ to achieve a good contrast of the resonances.
+The overlap between the resonances and the lattice depth $v(x, y)$ is shown in #subref(<fig:mod-eval-other-result>, "a"), and the calibration result computed from the individual fits is shown in @tab:mod-eval-results.
+For the error estimation we are only using the images with $f_"mod" <= #qty[118.5][kHz]$.
+The last image with $f_"mod" = #qty[119.5][kHz]$ does not show a resonance anymore.
+
+For the z532 lattice we are using a lattice depth of $v_0 = #qty[100][Erec]$ since this is the default value in most sequences.
+This requires us to use the transition $1 -> 5$ instead of the $1 -> 3$ to realize a decent resonance contrast.
+The details behind this choice of the #tr[higher/upper] band are discussed in @sec:mod-loss.
+With $#unit[Erec]slash h = #qty[1.101][kHz]$ in the z532 lattice, the maximum modulation frequency is $f_"mod" approx #qty[75][kHz]$ and the width of the #tr[higher/upper] band is $Delta f = Delta epsilon_5 slash h approx #qty[0.3][kHz]$.
+In terms of the relative frequency width $Delta f slash f_"mod" approx #num[4e-3]$, this is slightly worse than the corresponding parameters in the x1064 lattice and the y1064 lattice.
+We are however still in the regime where $Delta f$ does not affect the width of the resonances.
+
+Compared to the modulation in the x1064 lattice and the in the y1064 lattice, we need a stronger amplitude of $delta v slash v_0 approx #qty[10][%]$ in the z532 lattice to achieve a good resonance contrast.
+While this does not qualify as a small perturbation anymore, we have confirmed that the strong modulation does not cause a systematic error of the calibration.
+Furthermore, we are using a depth of #qty[20][Erec] for the x1064 lattice and the y1064 lattice to improve the resonance #tr[contrast/strength].
+This is not related to the coupling of the lattices but rather to the required loss of the atoms.
+For the details, see the discussion of the loss mechanism in @sec:mod-loss.
 
 #figure(
   table(
     columns: 5,
     stroke: table-stroke.with(stroke: black + 0.5pt),
-    table.header(
-      [],
-      $"Waist" w_0 slash #unit[μm]$,
-      $"Lattice depth" a_0$,
-      $"Position" y_0 slash #unit[px]$,
-      $"Angle" theta.alt slash degree$,
-    ),
+    table.header([Lattice], $w_0 slash#unit[μm]$, $fita0$, $x_0 "or" y_0 slash#unit[μm]$, $theta.alt slash degree$),
 
-    [Gaussian], num[142(4)], num[0.9852(12)], num[0.6(9)], num[-5.47(17)],
-    [Parabola], num[144(4)], num[0.9851(13)], num[0.6(9)], num[-5.47(17)],
+    [x1064], num[139.4(17)], num[1.0011(5)], $#hide[#sym.minus]#num[0.62(15)]$, num[-5.50(17)],
+    [y1064], num[158(4)], num[0.9611(20)], num[-1.60(23)], num[-0.9(5)],
+    [z532], num[118.0(28)], num[1.0011(11)], $#hide[#sym.minus]#num[1.6(5)]$, num[-0.7(6)],
   ),
   caption: [
-    Comparison of the fit results of the different lattice depth models.
-    The two rows show the parameters resulting from the different models in @eq:mod-eval-model-resonance.
-    For the waist only the data with $f < #qty[115][kHz]$ is taken.
-    All data points in @fig:mod-eval-x1064-result are used for the other three averages.
-    The averages and the standard deviations (the uncertainties) are computed with weights based on the errors of the individual fits.
-    The absolute values of the fit errors are not taken into account.
+    Calibration results of the monochromatic lattices.
+    The overlap of the resonances with the fit results are shown in @fig:mod-eval-x1064-result for the x1064 lattice and in @fig:mod-eval-other-result for the y1064 lattice and the z532 lattice.
+    The values and uncertainties are determined from the individual fits as described in @ssec:mod-eval-error.
+
+    #show list: set text(red)
+    - Change order of the columns?
   ],
-) <tab:mod-eval-error>
+) <tab:mod-eval-results>
 
-From the values presented in @tab:mod-eval-error we can draw the conclusion that the depth $a_0$ of the x1064-lattice can be measured with a relative error of $approx #num[1e-3]$ regardless for both a parabolic function and a gaussian function to model the lattice depth.
-The position $y_0$ and the angle $theta.alt$ yield the same result for the two model functions as well.
-The waist $w_0$ is the only parameter with a measurable difference between the two model functions, which is also expected since the parabola only takes the leading order of the gaussian beam profile into account.
-While the difference of the waist between the two functions is still smaller than error we obtained from the individual fits, it is nevertheless just better to use the gaussian function to model the lattice depth.
-Since both functions require the same number of fit parameters, we do not actually gain anything by using a parabola as the approximation of the lattice depth.
-The (relatively) large errors show us that the waist $w_0$ is the least accurate parameter we can extract from the in-situ lattice modulation measurements.
-This is understandable if we take into account that the atoms only occupy the lattice up to $~1 slash 3$ of the waist.
-The fit/measurement would be a lot more accurate if we could measure the local lattice up do a greater radius $rho$.
-On the other hand it is also completely fine to have an error of #qty[4][μm] for the waist since the atoms are only occupying the center up the radius where we can run this measurement.
-The waist is therefore not as important as the lattice depth $a_0$ which directly affects the region of the highest atom density in the center of the lattice.
+The calibration results in @tab:mod-eval-results show the strengths as well as the limitations of the in-situ lattice modulation spectroscopy.
+The #tr[most important] parameter is the correction factor $fita0$ to #tr[apply/use] the correct lattice depths in the experimental sequence.
+// Since the atoms occupy the lattices in a region much smaller than the waist $w_0$, the core are
+With a relative uncertainty on the order of #num[1e-3] the precision of the result is #tr[more than sufficient].
+In practice, the limitation of the lattice depth will be drifts of the lattice beams over time.
+If we need to know the correction factors $fita0$ with the precision as stated in @tab:mod-eval-results, we need to frequently run the calibration measurements introduced in this chapter.
 
+The three spatial parameters $w_0$, $x_0 "or" y_0$ and $theta.alt$ are less significant for the calibration than the correction factor $fita0$ since the atoms only occupy the lattices close to the optical axes.
+We will nevertheless compare the in-situ lattice modulation spectroscopy to the respective measurements that would otherwise be necessary to determine these parameters.
+For the waist $w_0$, we have already discussed that the precision of the measurement is limited by the small extent of the atom cloud relative to the size of the lattice beams.
+In return, the uncertainty of the waist of a few #unit[μm] does not have a measurable impact on the lattice depth $v(x, y)$ in the region where the atoms occupy the lattices.
+The precision of the resulting beam waists is #tr[on par] with the measurement of the radial potential.
+In the past, the beam waists were measured with the trap frequencies perpendicular to the lattice axes #tr[ref Luke and someone else?].
+The radial trap frequency of an optical lattice scales as #tr[$f prop sqrt(v_0 slash w_0)$].
+It is however not always possible to measure the isolated trap frequency of a single lattice.
+In the case of the y1064 lattice and the z532 lattice, both contribute to the radial potential along the $x$ axis.
+For a reliable determination of the waists we therefore need to measure the trap frequency $f_x$ as a function of the depths of the two lattices.
+This measurement takes several hours to complete for each lattice.
+If we only want to get the trap frequencies for one specific lattice configuration, the measurement takes around #qty[1][h] in total.
 
-=== Other monochromatic lattices <ssec:mod-eval-other>
+The uncertainties of the lattice positions $x_0 "or" y_0$ are limited by the position of the lattice beams.
+From measurements of the position of the atom cloud we know that the lattice positions vary by up to #qty[1][μm] from sequence to sequence.
+With the infrared lattices we could achieve the same precision by measuring the position of the atom cloud.
+In the case of the z532 lattice this would not be possible.
+Instead, we would need to infer the lattice position from the combined potential with the y1064 lattice or the dimple beam along the $x$ axis.
+This is a similar limitation to the radial trap frequency $f_x$ where we can only measure the total #tr[(radial)] potential.
+#tr[mention the measurement time for this?]
 
-#[
-  #set text(red)
-  - Add any actual images such as @fig:mod-intro-images here?
-  - Add an "interpretation" of the fit errors in @tab:mod-eval-error-other
-    - Mention better waist resolution because of the shape of the atom cloud
-  - Add drawing of all measured angles relative to glass cell/camera frame?
-]
-We use the same evaluation as introduced in @ssec:mod-eval-fit for the y1064-lattice and the z532-lattice.
-The main difference compared to the x1064-lattice is the direction of the propagation of the lattice beams and therefore the orientation of the lattice depth model $v(x, y)$.
-For the y1064-lattice the forward-propagating beam is (almost) perfectly on the $y$-axis, we therefore expect the lattice depth to change as a function of the position $x$.
-The z532-lattice is slightly more complicated due to the shallow-angle setup.
-While the lattice vector $Delta phy.vb(k)$ points along the $z$-axis, the beams are both propagating in the $y z$-plane.
-We therefore "see" the actual waist of $w_0 approx #qty[120][μm]$ along the $x$-axis, but the "effective" waist along the $y$-axis is reduced due to the angle $alpha approx 14.5 degree$ relative to the $x y$-plane, see @sec:setup-z #text(red)[ref the figure here instead?].
-The effective waist along the $y$-axis amounts to $w_0 slash tan(alpha) approx #qty[450][μm]$.
-Since the "inverse width" parameter $a$ of the lattice depth scales quadratically with the waist, we expect the changes of the lattice depth to be $~14$ times smaller compared to the changes of the lattice depth along the $x$-axis.
-While it would be possible to include such an aspect ratio in the lattice depth model @eq:mod-eval-model-resonance, we cannot resolve the ellipticity in the resonance lines if the z532-lattice is properly aligned.
-#text(red)[Mention signals that directly show misalignment of the z532-lattice?]
-We will therefore only include a variation of the lattice depth along the $x$-axis in the evaluation.
-
-The error estimation introduced in @ssec:mod-eval-error can be applied to the z532-lattice and the y1064-lattice as well.
-We will not look at the detailed comparison of the global fit to the individual fits again, we just use the same procedure to compute the fit parameters and corresponding errors.
-
-#figure(
-  table(
-    columns: 5,
-    stroke: table-stroke.with(stroke: black + 0.5pt),
-    table.header(
-      [],
-      $"Waist" w_0 slash #unit[μm]$,
-      $"Lattice depth" a_0$,
-      $"Position" x_0 slash #unit[px]$,
-      $"Angle" theta.alt slash degree$,
-    ),
-
-    [z532], num[113.1(8)], num[0.9549(11)], num[0.9(5)], table.cell(align: right, num[0.0(6)]),
-    [y1064], num[167(7)], num[0.9888(23)], num[1.3(5)], table.cell(align: right, num[-0.5(4)]),
-  ),
-  caption: [
-    Comparison of the fit results of the other lattices.
-    The two rows show the parameters resulting from the different models in @eq:mod-eval-model-resonance.
-    For the waist of the z532-lattice only the data with $f < #qty[41.5][kHz]$ is taken, and for the waist of the y1064-lattice only the data with $f < #qty[115][kHz]$.
-    The averages of the other three parameters are computed for $f < #qty[42][kHz]$ and $f < #qty[117][kHz]$ respectively.
-    The averages and the standard deviations (the uncertainties) are computed with weights based on the errors of the individual fits.
-    The absolute values of the fit errors are not taken into account.
-  ],
-) <tab:mod-eval-error-other>
-
-#figure(
-  image("figures/modulation_evaluation_depth_parabola_y1064_and_z532.png"),
-  caption: [
-    Fitted lattice depth of z532-lattice at $v_0 = #qty[110][Erec]$ and y1064-lattice at $v_0 = #qty[55][Erec]$.
-    // The two axes show the equivalent data of @fig:mod-eval-parabola for the x1064-lattice.
-    The optical densities are normalized by the corresponding results of the gaussian envelope $n_0(x, y)$.
-    Since the angle $theta.alt$ of the (effective) optical axes relative to the $y-$axis is negligible, the mean of the images is taken in the interval $y = [120, 180]$.
-    The orange line shows the resulting resonance frequency for the transition $1 -> 3$ corresponding to the fitted lattice depth $v_"gaussian"(x, y)$ at $y = 150$ (or rather $y = 0$?).
-    - #text(red)[Include colorbar between the two axes?]
-  ],
-) <fig:mod-eval-comparison-other>
+#tr[finish with the angles $theta.alt$ here...]

@@ -248,8 +248,8 @@ For a (vertical) angle in the $x z$-plane we would have to rely on the contrast 
     The errors are (then) computed as the weighted standard deviation of the individual fit results.
 
     #show list: set text(red)
-    - Merge this with the other results table? @tab:mod-eval-error and @tab:mod-eval-error-other
-    - At least match the column order with @tab:mod-eval-error and @tab:mod-eval-error-other...
+    - Merge this with the other results table? @tab:mod-eval-results
+    - At least match the column order with @tab:mod-eval-results...
     - Reference to waists in the thermal lensing @sec:super-thermal?
     - Compute the position $y_0$ in #unit[μm].
     - Use the same x1064-lattice data here as in @sec:mod-intro and @sec:mod-eval?

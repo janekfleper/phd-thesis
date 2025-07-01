@@ -10,7 +10,7 @@ Since the lattices are not perfectly perpendicular we also expected this "cross-
 To actually understand where the coupling shows up in the Bloch theorem and how this affects the band structure(s) we had to solve the Bloch theorem in two dimensions.
 I will only present the resulting band structures in this section, the step-by-step calculation and the technical details of the theory are shown in #text(red)[ref appendix].
 
-Based on the in-situ lattice modulation measurement results @tab:mod-eval-error and @tab:mod-eval-error-other we know that the relative angle of the x-lattices and the y1064-lattice deviates by $#num[4.9(5)] degree$ from $90degree$.
+Based on the in-situ lattice modulation measurement results @tab:mod-eval-results we know that the relative angle of the x-lattices and the y1064-lattice deviates by $#num[4.9(5)] degree$ from $90degree$.
 In the theoretical model we assume that the y1064-lattice is perfectly parellel to the $y$-axis, and the x-lattices have an angle of $alpha = #num[4.9] degree$ relative to the $x$-axis.
 #text(red)[Mention here again that this is easier than two angles? Or just mention this in the appendix?]
 This is only the relevant angle in the $x y$-plane, but the $x$-lattices also have an angle relative to the $x y$-plane #text(red)[ref figure setup/x-lattices].
@@ -56,7 +56,7 @@ In the left axis in @fig:mod-coupled-band-31 the coupling of the aforementioned 
 While we want to use the transition to the state $"n31"$ we are "automatically" addressing the coupled state $psi_c$.
 Since the transition frequency to that state/band increases as a function of the lattice depth $v_y$, we have to correct the depth parameter $a_0$ that we obtain from the evaluation as described in @sec:mod-eval.
 This is still true at $v_y = #qty[30][Erec]$ where we usually calibrate the depth of the x1064-lattice.
-The correction we need to apply at that lattice depth is $~1%$ which is greater than the estimated error of the lattice depth by one order of magnitude, see @tab:mod-eval-error.
+The correction we need to apply at that lattice depth is $~1%$ which is greater than the estimated error of the lattice depth by one order of magnitude, see @tab:mod-eval-results.
 While the required correction would further decrease by reducing the lattice depth $v_y$, this would also increase the tunneling amplitude along the y1064-lattice.
 At $v_y = #qty[20][Erec]$ the tunneling amplitude is already $t slash h approx #qty[10][Hz]$.
 If the atoms can tunnel over a significant distance during the lattice modulation, the resonances will "move" in the atom cloud and therefore falsify the evaluated signal.
