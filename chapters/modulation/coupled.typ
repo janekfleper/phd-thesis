@@ -32,7 +32,7 @@ Such a coupling allows bands with different indices $(n_x, n_y)$ to mix.
 )[The coupling is strongest when the "total" band index $n_x + n_y$ is conserved (#text(red)[Why? mention the zero-coupling between $(3, 1)$ and $(2, 3)$?]) and it gets gradually weaker with the "distance" of the coupling.]
 We will first look at the coupling of the band $(3, 1)$.
 The same approach can however be used for other bands in the two-dimensional coupled lattice.
-We will use this at the end of this section in #text(red)[ref subsection] to explain the "dip" in the resonance contrast shown in @fig:mod-loss-recovery.
+We will use this at the end of this section in #text(red)[ref subsection] to explain the "dip" in the resonance contrast shown in @fig:mod-loss-channels.
 
 In the case of the band $(3, 1)$ that we use as the (first) excited band in the in-situ lattice modulation measurements, the coupling will cause a mixture with the bands $(2, 2)$ and $(1, 3)$.
 We will look at this case in detail here for $v_x = #qty[60][Erec]$ to figure out the correction we have to apply to the result we obtain from the in-situ lattice modulation spectroscopy measurements.
@@ -104,14 +104,14 @@ The best approach is therefore to use the highest lattice depth $v_y$ that has a
 
 #[
   #set text(red)
-  - Move figure @fig:mod-loss-recovery and the corresponding text here?
+  - Move figure @fig:mod-loss-channels and the corresponding text here?
   - And then move everything into its own section?
   - Discuss whether $f_1 + f_2$ or $f_1 -> f_2$ is better?
   - Mention that only band $(6, 1)$ is discussed. Band $(7, 1)$ will be equivalent...
   - Mention that the lattice depth compensation is already applied here...
 ]
 
-We already confirmed in @sec:mod-loss and specifically in @fig:mod-loss-recovery that a second modulation frequency can recover the in-situ signal.
+We already confirmed in @sec:mod-loss and specifically in @fig:mod-loss-channels that a second modulation frequency can recover the in-situ signal.
 The band structures from the one-dimensional theory could however not explain the additional gaps we could see inside of the untrapped bands.
 After understanding the coupling of the bands due to the finite angle $alpha$ we could maybe explain such a gap by a mixture of the band $(6, 1)$ with the bands $(5, 2)$ or $(4, 3)$?
 In @fig:mod-coupled-band-31 the widths of the bands were much smaller than the coupling between the bands.
@@ -144,7 +144,7 @@ Since the bands $(5, 2)$ and $(4, 3)$ also couple with eachother, the two gaps i
 ) <fig:mod-coupled-two-theory>
 
 The positions/frequencies of the band gaps in @fig:mod-coupled-two-theory depend on the lattice depth $v_y$.
-We can use this signal to confirm that the band gap we initially observed in @fig:mod-loss-recovery is actually caused by the coupling to the band $(5, 2)$.
+We can use this signal to confirm that the band gap we initially observed in @fig:mod-loss-channels is actually caused by the coupling to the band $(5, 2)$.
 Furthermore we can try to find an optimal lattice depth configuration where the additional band gaps would not interfere with the two-tone lattice modulation.
 Ideally we want to use a single secondary frequency $f_2$ to cover the entire scan of the principal frequency $f_(1->3)$ across the atom cloud.
 If a specific frequency $f_2$ is required for each principle frequency, the two-tone modulation scheme would not be practical.
@@ -167,7 +167,7 @@ If a specific frequency $f_2$ is required for each principle frequency, the two-
 ) <fig:mod-coupled-two-result>
 
 
-For this measurement of the band gaps we use the same approach as in/for @fig:mod-loss-recovery.
+For this measurement of the band gaps we use the same approach as in/for @fig:mod-loss-channels.
 We scan $f_(1->3)$ across the atom cloud once to get a reference measurement.
 During the scans of the lattice depth $v_y$ and the secondary modulation frequency $f_2$ we will then only measure a single frequency $f_(1->3)$ and use the fit parameters $a$ and $a_0$ from the reference measurement.
 To find and understand the band gaps, we are only interested in the resonance parameters $"r13fa"$ (and $"r13fw"$) anyway.

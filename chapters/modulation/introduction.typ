@@ -24,11 +24,11 @@ $ <eq:mod-intro-function>
 with the modulation amplitude $delta v$ and the modulation frequency $f_"mod"$.
 This type of modulation is also the most common one for the calibration of the lattice depth.
 The other type of modulation in monochromatic lattices targets the lattice position instead by #tr[shaking] the potential along the lattice vector #tr[$phy.vb(k)$] #tr[ref what?].
-In superlattices there are even more modulation options since there are two lattices amplitudes $v_l$ and $v_s$ and the superlattice phase $phi$ that can be tuned.
+In superlattice potentials there are even more modulation options since there are two lattices depths[] $v_l$ and $v_s$ and the superlattice phase $phi$ that can be tuned.
 This allows complex measurements beyond the calibration of the lattice depths #tr[ref PhD Carla and the Floquet sections?].
 
 If we compare the two different modulation types for monochromatic lattices, we find that they have opposite parities.
-The modulation of the lattice depth according to @eq:mod-intro-function is _even_ while the modulation of the lattice position is _odd_.
+The modulation of the lattice depth according to @eq:mod-intro-function is _even_ while the modulation of the lattice position would be _odd_.
 Since the excitation to a higher band requires a finite overlap of the respective wave functions, the parity of the modulation has important implications on the allowed band transitions $n -> n'$ #tr[ref any textbook here?].
 In @fig:mod-intro-theory we can see that the parity $cal(P)$ of the Bloch waves at $q = 0$ on a single lattice site alternates with the band index $n$.
 The parity of the Bloch waves does not change as a function of the quasimomentum $q$, resulting in the Wannier functions #tr[inheriting] the parity from the Bloch waves.
@@ -44,10 +44,8 @@ If this condition is not fulfilled, the accuracy of the evaluation of the local 
 There is no #tr[universal] function to quantiy the maximally allowed with of the #tr[higher/upper/excited] band.
 We have to check this individually based on the transition $n -> n'$ and the lattice that is #tr[probed/measured].
 The maximally available lattice depth also plays a role in the decision.
-Based on the widths of the bands shown in @fig:mod-intro-theory, the band $n' = 3$ looks like a suitable candidate for lattice depths $V > #qty[50][Erec]$.
-#tr[Really mention this?]
-If we could only reach a depth of #qty[40][Erec] with a specific lattice, it would still make sense to attempt the in-situ lattice modulation spectroscopy.
-At lattice depths of $V < #qty[30][Erec]$, on the other hand, the band width would #tr[(severely)] limit the evaluation.
+Based on the widths of the bands shown in @fig:mod-intro-theory, the band $n' = 3$ looks like a suitable candidate for lattice depths $V > #qty[40][Erec]$.
+At lattice depths of $V < #qty[40][Erec]$, on the other hand, the band width starts to limit the evaluation.
 
 #figure(
   image("figures/modulation_introduction.png"),
@@ -67,6 +65,7 @@ At lattice depths of $V < #qty[30][Erec]$, on the other hand, the band width wou
     - What should the legend look like here?
     - Use semilogy for the figure on the right?
     - Mention "trapped" bands?
+    - Add band $n = 6$ for the reference in @sec:mod-loss?
   ],
 ) <fig:mod-intro-theory>
 
