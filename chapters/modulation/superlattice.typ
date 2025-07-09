@@ -14,7 +14,7 @@
 In a superlattice potential the core principle of the in-situ lattice modulation technique does not change.
 We need a narrow band that can be excited from the lowest band with the modulation of the lattice amplitude.
 For the visibility of the in-situ signal we then need an untrapped band that can be "reached" from the excited band with the applied modulation frequency.
-While the two-tone modulation introduced in @ssec:mod-coupled-two could also be applied in a superlattice potential, we would prefer to avoid this additional complexity.
+While the two-tone modulation introduced in @sec:mod-loss could also be applied in a superlattice potential, we would prefer to avoid this additional complexity.
 The difference compared to the lattice modulation in a monochromatic lattice potential arises from the multiple lattice parameters $v_l$, $v_s$ and $phi$.
 The increased complexity of the band structure as introduced in @sec:theory-super #text(red)[(ref figure from theory?)] requires some additional care before running the in-situ lattice modulation measurements.
 In this section I will briefly explain the (additional) theoretical considerations required for the in-situ superlattice modulation in a superlattice potential.
