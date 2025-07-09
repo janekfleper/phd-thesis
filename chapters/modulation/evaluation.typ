@@ -279,14 +279,15 @@ Furthermore, this measurement does not work for the z532 lattice since the latti
 
 #tr[Already reference @sec:mod-align here?]
 With the in-situ lattice modulation spectroscopy we have developed a calibration technique for the lattice depth $v(x, y)$ that combines several measurements at a fraction of the runtime.
-We only need #num[10] minutes per lattice compared to an entire workday if we would run all of the reference measurements mentioned above.
+We only need #num[10] minutes per lattice compared to an entire workday for all of the reference measurements mentioned above.
 Furthermore, the lattice modulation can be fully automated, from the measurement to the evaluation.
-It would therefore be an option to run the calibration every day to keep track of drifts and other possible changes to the lattices.
+It would therefore be possible to run the calibration every day to keep track of drifts and other possible changes to the lattices.
 This would significantly improve the debugging workflow which is often hindered by the lack of recent calibrations.
 As of the writing of this thesis, the automation is still limited by the available modulation hardware.
-We are currently sharing a single arbitrary-waveform generator#footnote[Keysight 33622A Waveform Generator] for the modulation of all lattices.
+We are currently using a single arbitrary-waveform generator#footnote[Keysight 33622A Waveform Generator] for the modulation of all lattices.
 If we had separate devices for each lattice or a single device with a sufficient number of channels, we could target the different lattices with a control variable in the experimental sequence.
-The automation of the evaluation is already possible.
-We can detect the last sequence of the modulation frequency scan for each lattice to identify the required images.
-The fit model as introduced in @ssec:mod-eval-model is robust as long as the beam waist $w_0$ does not change significantly.
+The automated evaluation of the measurements is already possible.
+We can detect the last sequence of the modulation frequency scan for each lattice to identify the  images.
+These images are then processed as introduced in @sec:setup-detect before running the evaluation introduced in @ssec:mod-eval-model
+The fit model is robust as long as the beam waist $w_0$ does not change significantly.
 If this would be the case, manual intervention is required anyway and it would be sufficient if the automated evaluation issues a warning about the unsuccessful fit.

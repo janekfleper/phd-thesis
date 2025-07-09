@@ -123,7 +123,7 @@ In practice, this range of possible lattice depths will be sufficient #tr[someth
     Loss channels as a function of the lattice depth.
     In *a* the frequencies corresponding to the transitions $3 -> n''$ are shown for an x1064-lattice depth of #qty[70][Erec].
     For this #tr[(specific)] lattice depth, the expected frequency for the transition $1 -> 3$ is #qty[133][kHz], which is marked by the vertical dashed line.
-    The solid black lines are computed from the one-dimensional band structure, and the colored lines are computed from the coupled band structure with the y1064-lattice depth #qty[25][Erec] and the coupling angle $alpha = #num[4.6]degree$.
+    The solid black lines are computed from the one-dimensional band structure, and the colored lines are computed from the coupled band structure with the y1064-lattice depth #qty[25][Erec] and the coupling angle #tr[$alpha = #num[4.6]degree$].
     The coupling of the x1064 lattice #tr[and/to] the y1064 lattice is responsible for the gap in the transition $3 -> 6$, see @sec:mod-coupled for the details.
     The shaded regions in *b* show the transitions in *a* without the quasimomentum resolution.
     We can see that the resonance amplitude $a_R$ follows the available transitions $3 -> n''$.

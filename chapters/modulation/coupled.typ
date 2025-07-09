@@ -2,44 +2,118 @@
 
 == Coupled lattices <sec:mod-coupled>
 
-We have always selected the depths of the "other" lattices such that they do not "interfere" with the lattice that is currenctly getting modulated.
-As mentioned in @sec:mod-intro we would set the depth of the y1064-lattice to #qty[30][Erec] when modulating the x1064-lattice at a depth of #qty[60][Erec].
-#text(red)[What about the depth of the z532-lattice?]
-This was based on the (empirical) observation that the modulation of the x1064-lattice can also address the y1064-lattice (and vice-versa).
-Since the lattices are not perfectly perpendicular we also expected this "cross-talk" to happen because of a (small) coupling of the lattices.
-To actually understand where the coupling shows up in the Bloch theorem and how this affects the band structure(s) we had to solve the Bloch theorem in two dimensions.
-I will only present the resulting band structures in this section, the step-by-step calculation and the technical details of the theory are shown in #text(red)[ref appendix].
+#[
+  #set text(red)
+  - Mention the coupling of the x1064 lattice and the z532 lattice?
+  - Where to introduce the general band index $eta$?
+  - Use $tilde(epsilon)$ to mark the coupled band structure?
+  - Compute the tunneling in the coupled band structure?
+  - Use $v_(x 1064)$ and $v_(y 1064)$ everywhere?
+]
 
-Based on the in-situ lattice modulation measurement results @tab:mod-eval-results we know that the relative angle of the x-lattices and the y1064-lattice deviates by $#num[4.9(5)] degree$ from $90degree$.
-In the theoretical model we assume that the y1064-lattice is perfectly parellel to the $y$-axis, and the x-lattices have an angle of $alpha = #num[4.9] degree$ relative to the $x$-axis.
-#text(red)[Mention here again that this is easier than two angles? Or just mention this in the appendix?]
-This is only the relevant angle in the $x y$-plane, but the $x$-lattices also have an angle relative to the $x y$-plane #text(red)[ref figure setup/x-lattices].
-This will also cause a coupling between the $x$-lattices and the z532-lattice (which is perfectly parallel to the $x y$-plane).
-There is no coupling between the y1064-lattice and the z532-lattice since the two lattice vectors are perfectly perpendicular.
+Throughout this chapter, I have already mentioned that the coupling of the x1064 lattice #tr[and/to] the y1064 lattice can affect the band structure.
+Using a depth of #qty[60][Erec] for the modulated lattice and a depth of #qty[30][Erec] for the other lattice was decided based on the empirical understanding of the coupling of the lattices.
+// If both lattices were set to a similar depth, we could observe a crosstalk in the calibration measurements.
+Thanks to the in-situ lattice modulation spectroscopy we can now investigate this coupling in detail.
+The precision of the lattice-depth measurement will show that the coupling is still present even if we use the lattice depths of #qty[60][Erec] and #qty[30][Erec].
+Furthermore, the local loss of the atoms can visualize the coupled band structure with elliptical and circular resonances.
+In this section, I will only show the coupled band structure that is directly related to the results of the in-situ lattice modulation spectroscopy.
+The step-by-step calculation and the technical details of the coupled band structure are shown in #tr[ref appendix].
 
-This section will only address the coupling between the x1064-lattice and the y1064-lattice in detail.
-The effects of the coupling between the x1064-lattice and the z532-lattice will only be covered briefly to get the relevant results.
-How the coupling affects the x-superlattice will be addressed in #text(red)[ref section modulation/superlattice].
-Since we only ever use the x532-lattice together with the x1064-lattice, we don't have to address the individual coupling of the x532-lattice with the (almost) perpendicular lattices.
+Based on the in-situ lattice modulation measurement results @tab:mod-eval-results we know that the x1064 lattice and the y1064 lattice are not perpendicular in the $x y$ plane.
+Their angle of intesection deviates by $theta.alt = (#num[-4.9(5)])degree$ from orthogonality, which results in a coupling of the band structures.
+The coupled energy bands $tilde(epsilon)_eta (q_x, q_y)$ are now two-dimensional functions of the quasimomenta $q_x$ and $q_y$ with a general band index $eta$.
+We can not use the uncoupled indices $n_x$ and $n_y$ as labels anymore, we can however interpret the coupled bands as superpositions of the uncoupled bands $epsilon_phy.vb(n) (q_x, q_y)$ with $phy.vb(n) = (n_x, n_y)$.
+For the transition $1 -> 3$, we now have to consider all bands with an energy close to the uncoupled band with index $phy.vb(n) = (3, 1)$.
+If the two lattices have a similar depth, the relevant uncoupled bands will be $(2, 2)$ and $(1, 3)$.
+In #subref(<fig:mod-coupled-theory>, "d") we can see the coupled bands $tilde(epsilon)_eta$ as a function of the lattice depth $v_y$#footnote[#tr[Where to add this footnote?] The two lattice depths are interchangeable, the coupling is only computed from the angle of intersection.].
+The uncoupled bands intersect at $v_y approx #qty[50][Erec]$, at $v_y = #qty[60][Erec]$ and at $v_y = #qty[70][Erec]$.
+At each intersection, the corresponding coupled bands show the signature of an avoided crossing.
+The composition of the coupled bands in #subref(<fig:mod-coupled-theory>, "a-c") shows how the superpositions evolve with the lattice depth $v_y$.
 
-As explained in #text(red)[ref appendix] an angle $alpha != 0$ introduces a coupling between the x1064-lattice and the y1064-lattice.
-Such a coupling allows bands with different indices $(n_x, n_y)$ to mix.
-#text(
-  red,
-)[First show the case of the $(2, 1)$ here since it is much easier to understand? Or show this in the appendix in detail?]
-#text(
-  red,
-)[The coupling is strongest when the "total" band index $n_x + n_y$ is conserved (#text(red)[Why? mention the zero-coupling between $(3, 1)$ and $(2, 3)$?]) and it gets gradually weaker with the "distance" of the coupling.]
-We will first look at the coupling of the band $(3, 1)$.
-The same approach can however be used for other bands in the two-dimensional coupled lattice.
-We will use this at the end of this section in #text(red)[ref subsection] to explain the "dip" in the resonance contrast shown in @fig:mod-loss-channels.
+#figure(
+  image("figures/modulation_coupled_theory.png", width: 85%),
 
-In the case of the band $(3, 1)$ that we use as the (first) excited band in the in-situ lattice modulation measurements, the coupling will cause a mixture with the bands $(2, 2)$ and $(1, 3)$.
-We will look at this case in detail here for $v_x = #qty[60][Erec]$ to figure out the correction we have to apply to the result we obtain from the in-situ lattice modulation spectroscopy measurements.
-Compared to the example before (#text(red)[or in the appendix]) the coupling of these three bands is quite complex since they overlap for a similar lattice depth $v_y$.
-We are therefore dealing with an avoided crossing of three states that/which are all coupled (#text(red)[this is automatically the case if two states couple?]).
-Overlapping the (mean) energies of the coupled bands with the (mean) energies of the uncoupled bands already helps a lot to understand the effect of the coupling on the in-situ results #text(red)[ref figure...].
-If we want to get into the details of the coupling, we can also look at the composition of the coupled eigenstates in the basis of the uncoupled ones #text(red)[ref figure...].
+  caption: [
+    Theory of the band transition $1 -> 3$ in coupled lattices.
+    The lattice parameters are $v_x = #qty[60][Erec]$ and $theta.alt = #num[-4.9]degree$.
+    In *d* the transition frequencies of the coupled bands $tilde(epsilon)_eta$ (colored lines) and the uncoupled bands $epsilon_phy.vb(n)$ (black lines) are shown.
+    The band structure is computed with the quasimomenta $phy.vb(q)$ along the x1064-lattice vector $phy.vb(a)$.
+    Since the widths of the bands are small compared to the transition frequency, only the average of the coupled bands $tilde(epsilon)_eta (phy.vb(q))$ and the uncoupled bands $epsilon_phy.vb(n) (phy.vb(q))$ in quasimomentum space is used.
+    The transition frequencies are computed relative to the lowest band $phy.vb(n) = (1, 1)$ which is the initial state before the lattice modulation.
+    In *a* to *c* we can see the composition of the coupled bands in the uncoupled basis as we would expect for a triple avoided crossing.
+
+    #show list: set text(red)
+    - Directly label the coupled bands and remove the second legend?
+    - Reverse order of *a* to *c*?
+    - Find a better position for the uncoupled legend
+    - Is the band width actually negligible for (1, 3)?
+    - Find a better y-axis label for *a* to *c*?
+    - Add the accessibility with the lattice modulation as an alpha channel in *d*?
+  ],
+) <fig:mod-coupled-theory>
+
+For the in-situ lattice modulation spectroscopy, we need to look at the contribution of the uncoupled band with index $phy.vb(n) = (3, 1)$ to the coupled bands $tilde(epsilon)_eta$.
+If the x1064-lattice depth is modulated, the transition $(1, 1) -> (3, 1)$ will still be the strongest one due to the perturbation of the wave functions.
+As long as we set $v_y < #qty[40][Erec]$, we will mainly be able to excite the atoms to the coupled band $tilde(epsilon)_c$.
+This includes the configuration with $v_y = #qty[30][Erec]$ that we use by default for the modulation of the x1064 lattice.
+At $v_y > #qty[70][Erec]$, the coupled band $tilde(epsilon)_a$ will then show the strongest transition.
+In the intermediate regime for $v_y$, we can also see a contribution in the coupled band $tilde(epsilon)_b$.
+For the in-situ lattice modulation spectroscopy, we would like to select a configuration where we only target a single excited band.
+If there are multiple accessible transitions, the association to the resonances in the atom cloud can be ambiguous.
+Furthermore, we would be forced to use the coupled band structure theory for the evaluation if there are different resonances visible at the same modulation frequency.
+We should therefore avoid the intermediate regime $#qty[40][Erec] < v_y < #qty[70][Erec]$ alltogether.
+There are at least two, sometimes even three, pairs of resonances possible with rapidly varying amplitudes.
+
+To measure the coupled band structure, we are applying the modulation to the x1064 lattice as introduced in @sec:mod-intro.
+We are using the uncoupled band structure for the evaluation, and therefore expect the correction factor $fita0$ to follow the transition frequencies to the coupled bands in #subref(<fig:mod-coupled-theory>, "d").
+Directly using the coupled band structure evaluation for the evaluation is not practical.
+The computation takes a long time, and a manual identification of the coupled bands $tilde(epsilon)_eta$ can be necessary depending on the lattice depths $v_x$ and $v_y$.
+In #subref(<fig:mod-coupled-result>, "a") we can see the result of the evaluation compared to the coupled bands $tilde(epsilon)_a$ and $tilde(epsilon)_c$.
+For $v_y < #qty[40][Erec]$ the correction factor $fita0$ deviates by less than #qty[1][%] from the uncoupled band structure.
+In this regime, the measurement matches the theory, and the waist $w_0$ in #subref(<fig:mod-coupled-result>, "b") shows consistent results.
+In the range $#qty[40][Erec] < v_y < #qty[60][Erec]$ we can a significant increase of the expected correction factor $fita0$ and the measured one.
+The measured correction factors are however slightly too small compared to the coupled band $tilde(epsilon)_c$.
+At the same time, the waists increases from #qty[145][μm] to #qty[170][μm].
+This shows the breakdown of the evaluation with the uncoupled theory close to the first avoided crossing at $v_y = #qty[50][Erec]$.
+To understand this we have to consider the coupled theory as a function of the lattice depth $v_x$ at a constant lattice depth $v_y$.
+If we set $v_y = #qty[50][Erec]$, the correction factor $fita0$ will increase as the local lattice depth $v_x (x, y)$ decreases towards the outside of the atom cloud.
+This will slow down the decrease of the transition frequencies away from the center of the atom cloud.
+Since the evaluation assumes a global correction factor $fita0$, it will show a larger waist $w_0$ instead.
+This limitation could only be overcome by directly using the coupled band structure as the theory for the evaluation.
+
+At $v_y > #qty[60][Erec]$, we can see the results of the transition to the coupled band $tilde(epsilon)_a$.
+The correction factor $fita0$ matches the theory, and the waists are consistent with the expected waist apart from the measurement at $v_y = #qty[70][Erec]$.
+Since that measurement is closest to the avoided crossing at $v_y = #qty[60][Erec]$, we can understand the increased waist as a breakdown of the evaluation again.
+
+
+#figure(
+  image("figures/modulation_coupled_result.png", width: 100%),
+
+  caption: [
+    Lattice-depth calibration in the coupled band structure.
+    The measurement was done with $v_x = #qty[60][Erec]$ and $t_"mod" = #qty[0.75][s]$.
+    We apply a mask to the images such that we only select the pixels $#qty[-10][μm] < x < #qty[10][μm]$, and the data points show the mean value and the corresponding uncertainty based on the evaluation procedure introduced in @ssec:mod-eval-error.
+    *a* shows the correction factor $fita0$ evaluated with the uncoupled band structure.
+    The shaded areas then show the expected correction factors for the coupled bands $tilde(epsilon)_a$ and $tilde(epsilon)_c$ computed with $v_x = #qty[58.9][Erec]$ and $theta = (#num[-4.9(5)])degree$.
+    The lattice depth $v_x$ was selected to match the theory at $v_y = #qty[30][Erec]$, which is the usual lattice depth for the in-situ lattice modulation measurements.
+    We selected the modulation frequencies to only cover the expected transitions to the bands $tilde(epsilon)_a$ and $tilde(epsilon)_c$.
+    The intermediate band $tilde(epsilon)_b$ is therefore not shown.
+
+
+    // *a* shows the correction factor $fita0$
+
+    #show list: set text(red)
+    - Synchronize colors with @fig:mod-eval-x1064-result and @fig:mod-coupled-theory!
+    - Show the evaluation mask in the insets?
+    - Add legend for the coupled bands $tilde(epsilon)_a$ and $tilde(epsilon)_c$.
+    - Mention that/why manually selecting the lattice depth $v_x$ is required?
+    - Show the band $tilde(epsilon)_c$ anyway?
+  ],
+) <fig:mod-coupled-result>
+
+
+#pagebreak()
 
 Working with a two-dimensional band structure comes with a certain difficulty regarding the ordering and labeling of the energy bands.
 In one dimension the energy bands will never "cross" during a "scan" of the quasi-momentum $q$, and the band index can only be incremented starting from $n = 1$.
@@ -130,7 +204,8 @@ At $v_y = #qty[40][Erec]$ the uncoupled band structure suggests that there is a 
 Since the bands $(5, 2)$ and $(4, 3)$ also couple with eachother, the two gaps in the band $(6, 1)$ are further apart than one would expect from the uncoupled band structure. are further apart than one would expect from the uncoupled band structure.
 
 #figure(
-  image("figures/2025-01-29_two-tone_PH_x1064_bandstructure_70Erec.png", width: 85%),
+  rect(),
+  // image("figures/2025-01-29_two-tone_PH_x1064_bandstructure_70Erec.png", width: 85%),
   caption: [
     Coupled band structure around the excited band $(6, 1)$.
     The axes show the transition frequencies relative to the band $(3, 1)$ since this is the initial state of the atoms after the modulation with the frequency $f_(1 -> 3)$.
@@ -150,7 +225,8 @@ Ideally we want to use a single secondary frequency $f_2$ to cover the entire sc
 If a specific frequency $f_2$ is required for each principle frequency, the two-tone modulation scheme would not be practical.
 
 #figure(
-  image("figures/2025-01-29_two-tone_PH_x1064_result_70Erec.png"),
+  rect(),
+  // image("figures/2025-01-29_two-tone_PH_x1064_result_70Erec.png"),
   caption: [
     Band gaps in the two-tone lattice modulation scheme.
     The axes in the first row show the uncoupled bands $(6, 1)$ and $(7, 1)$ in black and the coupled bands in solid colors.
