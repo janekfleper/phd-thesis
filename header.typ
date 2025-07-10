@@ -12,6 +12,15 @@
 #let asc = $a_upright("sc")$
 #let fita0 = sym.alpha
 
+#let vx1064 = $v_(x 1064)$
+#let Vx1064 = $V_(x 1064)$
+#let vx532 = $v_(x 532)$
+#let Vx532 = $V_(x 532)$
+#let vy1064 = $v_(y 1064)$
+#let Vy1064 = $V_(y 1064)$
+#let vz532 = $v_(z 532)$
+#let Vz532 = $V_(z 532)$
+
 // a shortcut for red text to be used as an annotation
 #let tr = text.with(red)
 
