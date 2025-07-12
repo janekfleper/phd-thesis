@@ -36,9 +36,8 @@ For higher lattice depths the resonance amplitude decreases rapidly, matching th
 In the x1064 lattice the resonances were already too faint for the evaluation at lattice depths $v_0 > #qty[75][Erec]$
 This was not an issue in the z532 lattice where the evaluation returned consistent results even for $a_R < #num[0.1]$.
 
-#figure(
+#floating-figure(
   image("figures/modulation_loss_result.png"),
-
   caption: [
     Rapid decrease of the resonance amplitude $a_R$ for the transition $1 -> 3$ in deep lattices.
     In *a* we can see the results for the x1064 lattice and the z532 lattice.
@@ -57,7 +56,8 @@ This was not an issue in the z532 lattice where the evaluation returned consiste
     - Add some images to show the low-amplitude resonances?
     - Add the transition $1 -> 4$?
   ],
-) <fig:mod-loss-result>
+  label: <fig:mod-loss-result>,
+)
 
 Due to the kink in #subref(<fig:mod-loss-result>, "a"), we took a closer look at the band structure as a function of the lattice depth $v_0$.
 While the energy associated with the transition $1 -> 3$ is just increasing monotonously with $v_0$, we found something interesting when looking at the possible transitions $3 -> n''$ in #subref(<fig:mod-loss-result>, "b").
@@ -117,7 +117,7 @@ For the z532 lattice we are already using this as at the lattice depth $v_0 = #q
 The band structure predicts that the transition $1 -> 5$ can be used up to $v_0 = #qty[220][Erec]$, before the overlap with the transition $5 -> 11$ #tr[stops/vanishes].
 In practice, this range of possible lattice depths will be sufficient #tr[something to conclude the section?].
 
-#figure(
+#floating-figure(
   image("figures/modulation_loss_channels.png"),
   caption: [
     Loss channels as a function of the lattice depth.
@@ -143,4 +143,5 @@ In practice, this range of possible lattice depths will be sufficient #tr[someth
     - Add a point or line for $a_R$ without the secondary modulation?
     - Discuss the slight mismatch between the data and the coupled theory?
   ],
-) <fig:mod-loss-channels>
+  label: <fig:mod-loss-channels>,
+)

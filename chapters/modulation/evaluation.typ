@@ -97,7 +97,7 @@ This requires a #tr[constant/stable] atom number in each sequence before the mod
 During the measurement time of #num[10] to #qty[15][min], the typical atom number variation is sufficiently small.
 #tr[ref anything in @ch:setup?]
 
-#figure(
+#floating-figure(
   image("figures/modulation_evaluation_fit_model.png"),
   caption: [
     Fit model for the in-situ lattice modulation spectroscopy.
@@ -116,7 +116,8 @@ During the measurement time of #num[10] to #qty[15][min], the typical atom numbe
     - Use #unit[μm] on the x-axis...
     - Add a legend/label for $f_(1->3)$ and $n_0(y)$?
   ],
-) <fig:mod-eval-model>
+  label: <fig:mod-eval-model>,
+)
 
 The alternative to including the optical density in the fit model would be to run a reference measurement that determines $n_0(x, y)$ independently.
 Dividing $n(x, y)$ by $n_0(x, y)$ and subtracting $1$ would then directly return the data that is modelled by the resonance function @eq:mod-eval-model-resonance[].
@@ -133,13 +134,13 @@ The measured lattice depth in the center is slightly larger than expected, resul
 At the modulation frequency $f_"mod" = #qty[122.0][kHz]$ we #tr[can/could] still see a single resonance, as already discussed in @sec:mod-intro.
 The comparison to the lattice depth now confirms that this resonance is indeed above the actual lattice depth.
 
-#figure(
+#floating-figure(
   image("figures/modulation_x1064-result.png"),
   caption: [
     Resonances and fit parameters of the x1064-lattice calibration.
     The data in *a* shows the resonances computed from the atom images in @fig:mod-intro-images.
     Each image is divided by the envelope $n_0(x, y)$ from the fit model @eq:mod-eval-model[] to normalize the resonances.
-    We average the images over the interval $#qty[-5][μm] < x < #qty[5][μm]$ to only show the resonances as a function of the position $y$.
+    The images are averaged in the interval $#qty[-5][μm] < x < #qty[5][μm]$ to only show the resonances as a function of the position $y$.
     The solid red line is the result for the lattice depth @eq:mod-eval-model-lattice-depth[] averaged in the same interval.
     *b* to *e* show the corresponding fit parameters $w_0$, $fita0$, $y_0$ and $theta.alt$.
     The solid lines are the results of the combined fit to all images, and the markers show the results of the separate fits to each individual image.
@@ -148,7 +149,8 @@ The comparison to the lattice depth now confirms that this resonance is indeed a
     - Show the lattice depth as a secondary x-axis in *a*?
     - Really use different colors for the individual parameters?
   ],
-) <fig:mod-eval-x1064-result>
+  label: <fig:mod-eval-x1064-result>,
+)
 
 
 === Estimation of the calibration uncertainty <ssec:mod-eval-error>
@@ -183,7 +185,7 @@ For all parameters in @fig:mod-eval-x1064-result, we compute the mean value and 
 The resulting fit parameters are compiled in @tab:mod-eval-results.
 #tr[something else to mention here?]
 
-#figure(
+#floating-figure(
   image("figures/modulation_other-lattices.png"),
   caption: [
     Lattice-modulation resonances in the y1064 lattice and in the z532 lattice.
@@ -197,7 +199,8 @@ The resulting fit parameters are compiled in @tab:mod-eval-results.
     - Include colorbar between the two axes?
     - Add secondary y-axis for the lattice depth like in @fig:mod-eval-x1064-result?
   ],
-) <fig:mod-eval-other-result>
+  label: <fig:mod-eval-other-result>,
+)
 
 The in-situ lattice modulation spectroscopy in the y1064 lattice works largely the same as in the x1064 lattice.
 We are now using a lattice depth of $v_0 = #qty[60][Erec]$ for the y1064 lattice, and a lattice depth of #qty[30][Erec] for the x1064 lattice to limit the coupling #tr[ref anything?].
@@ -220,7 +223,7 @@ Furthermore, we are using a depth of #qty[20][Erec] for the x1064 lattice and th
 This is not related to the coupling of the lattices but rather to the required loss of the atoms.
 For the details, see the discussion of the loss mechanism in @sec:mod-loss.
 
-#figure(
+#floating-figure(
   table(
     columns: 5,
     stroke: table-stroke.with(stroke: black + 0.5pt),
@@ -238,7 +241,8 @@ For the details, see the discussion of the loss mechanism in @sec:mod-loss.
     #show list: set text(red)
     - Change order of the columns?
   ],
-) <tab:mod-eval-results>
+  label: <tab:mod-eval-results>,
+)
 
 The calibration results in @tab:mod-eval-results show the strengths as well as the limitations of the in-situ lattice modulation spectroscopy.
 The #tr[most important] parameter is the correction factor $fita0$ to #tr[apply/use] the correct lattice depths in the experimental sequence.

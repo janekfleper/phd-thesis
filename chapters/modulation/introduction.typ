@@ -47,7 +47,7 @@ The maximally available lattice depth also plays a role in the decision.
 Based on the widths of the bands shown in @fig:mod-intro-theory, the band $n' = 3$ looks like a suitable candidate for lattice depths $V > #qty[40][Erec]$.
 At lattice depths of $V < #qty[40][Erec]$, on the other hand, the band width starts to limit the evaluation.
 
-#figure(
+#floating-figure(
   image("figures/modulation_introduction.png"),
   caption: [
     Properties of the energy bands for the lattice modulation spectroscopy.
@@ -67,7 +67,8 @@ At lattice depths of $V < #qty[40][Erec]$, on the other hand, the band width sta
     - Mention "trapped" bands?
     - Add band $n = 6$ for the reference in @sec:mod-loss?
   ],
-) <fig:mod-intro-theory>
+  label: <fig:mod-intro-theory>,
+)
 
 The experimental sequence to measure the in-situ lattice modulation spectroscopy is based on the default sequence #tr[ref setup].
 After the atoms are loaded into the shallow x1064 lattice and the y1064 lattice, both lattices are frozen.
@@ -109,7 +110,7 @@ Besides the maximum lattice depth, we will also get the waist of the underlying 
 The details of this evaluation are presented in the next @sec:mod-eval.
 #tr[Really ref the next section here?]
 
-#figure(
+#floating-figure(
   image("figures/modulation_x1064-images.png"),
   caption: [
     In-situ lattice modulation spectroscopy #tr[of/with] the x1064 lattice.
@@ -123,4 +124,5 @@ The details of this evaluation are presented in the next @sec:mod-eval.
     - Remove the colorbar?
     - Use a different colormap?
   ],
-) <fig:mod-intro-images>
+  label: <fig:mod-intro-images>,
+)

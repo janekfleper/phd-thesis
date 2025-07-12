@@ -30,9 +30,8 @@ The uncoupled bands intersect at $v_y approx #qty[50][Erec]$, at $v_y = #qty[60]
 At each intersection, the corresponding coupled bands show the signature of an avoided crossing.
 The composition of the coupled bands in #subref(<fig:mod-coupled-theory>, "a-c") shows how the superpositions evolve with the lattice depth $v_y$.
 
-#figure(
+#floating-figure(
   image("figures/modulation_coupled_theory.png", width: 85%),
-
   caption: [
     Theory of the band transition $1 -> 3$ in coupled lattices.
     The lattice parameters are $v_x = #qty[60][Erec]$ and $theta.alt = #num[-4.9]degree$.
@@ -50,7 +49,8 @@ The composition of the coupled bands in #subref(<fig:mod-coupled-theory>, "a-c")
     - Find a better y-axis label for *a* to *c*?
     - Add the accessibility with the lattice modulation as an alpha channel in *d*?
   ],
-) <fig:mod-coupled-theory>
+  label: <fig:mod-coupled-theory>,
+)
 
 For the in-situ lattice modulation spectroscopy, we need to look at the contribution of the uncoupled band with index $phy.vb(n) = (3, 1)$ to the coupled bands $tilde(epsilon)_eta$.
 If the x1064-lattice depth is modulated, the transition $(1, 1) -> (3, 1)$ will still be the strongest one due to the perturbation of the wave functions.
@@ -83,9 +83,8 @@ At $v_y > #qty[60][Erec]$, we can see the results of the transition to the coupl
 The correction factor $fita0$ matches the theory, and the waists are consistent with the expected waist apart from the measurement at $v_y = #qty[70][Erec]$.
 Since that measurement is closest to the avoided crossing at $v_y = #qty[60][Erec]$, we can understand the increased waist as a breakdown of the evaluation again.
 
-#figure(
+#floating-figure(
   image("figures/modulation_coupled_result.png", width: 100%),
-
   caption: [
     Lattice-depth calibration in the coupled band structure.
     The measurement was done with $v_x = #qty[60][Erec]$ and $t_"mod" = #qty[0.75][s]$.
@@ -106,7 +105,8 @@ Since that measurement is closest to the avoided crossing at $v_y = #qty[60][Ere
     - Show the band $tilde(epsilon)_b$ anyway?
     - Mention the number of average sets?
   ],
-) <fig:mod-coupled-result>
+  label: <fig:mod-coupled-result>,
+)
 
 Regarding the resonance #tr[contrast/visibility], the atom images at $v_y > #qty[60][Erec]$ are generally worse than the atom images at $v_y < #qty[60][Erec]$.
 Qualitatively, we can see the reduced #tr[contrast/visibility] of the resonances in the insets of #subref(<fig:mod-coupled-result>, "a").

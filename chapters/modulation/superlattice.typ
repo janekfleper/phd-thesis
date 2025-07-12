@@ -52,7 +52,7 @@ To see the in-situ resonances we also need to ensure that a loss channel $4 -> n
 If we add the modulation frequency $f_"mod" = #qty[270][kHz]$ to the energy of the fourth band, we find the band with index $n'' = 9$.
 This is already the third untrapped band, ensuring that there is a loss channel available for a wide range of lattice depths #Vx1064 and #Vx532.
 
-#figure(
+#floating-figure(
   image("figures/modulation_superlattice_phase.png", width: 90%),
   caption: [
     Phase configuration for the in-situ superlattice modulation.
@@ -70,7 +70,8 @@ This is already the third untrapped band, ensuring that there is a loss channel 
     - Add arrow for the transition $1 -> 4$?
     - Explain why we are looking at Wannier functions instead of Bloch functions?
   ],
-) <fig:mod-super-phase>
+  label: <fig:mod-super-phase>,
+)
 
 Since the potential of the lower well at $phi = pi slash 4$ is effectively the sum of the individual lattices, the modulation of either lattice depth can drive the transition $1 -> 4$.
 In terms of the transition strength there is however a difference due to the lattice periods $a_(x 532)$ and $a_(x 1064)$.
@@ -88,7 +89,7 @@ For the evaluation, we are reusing the parameters of the lattice depth $Vx1064(x
 We can then apply the same procedure as introduced in @sec:mod-eval with the superlattice band structure as the theory.
 In the function @eq:mod-eval-model-resonance to model the resonance, we replace the transition frequency with $f_(1->4) (Vx1064, Vx532, phi)$ where the parameters of the lattice depth $Vx1064(x, y)$ are fixed and the phase is set to $phi = pi slash 4$.
 
-#figure(
+#floating-figure(
   image("figures/modulation_superlattice_scaling.png"),
   caption: [
     Sensitivity of the superlattice band structure to the lattice depths #Vx1064 and #Vx532.
@@ -101,7 +102,8 @@ In the function @eq:mod-eval-model-resonance to model the resonance, we replace 
     - Anything to add to this caption?
     - Any deeper explanation why the sensitivity to #Vx1064 is not possible?
   ],
-) <fig:mod-super-scaling>
+  label: <fig:mod-super-scaling>,
+)
 
 In #subref(<fig:mod-super-result>, "a") we can see the result of the in-situ lattice modulation spectroscopy in the superlattice potential to calibrate the x532-lattice depth.
 The black line shows the transition frequency $f_(1->4) (Vx1064, Vx532, phi = pi slash 4)$ computed from the superlattice band structure.
@@ -118,7 +120,7 @@ With the transition $1 -> 4$ and a constant modulation frequency $f_"mod"$, we c
 Without the vertical optimization of the x1064 lattice in @fig:mod-align-x1064-walking, the alignment and the calibration of the x532 lattice would show inconsistent results.
 Due to the small waist along the $z$ axis, we need the beams to be aligned to $delta z tilde.eq #qty[1][μm]$ to observe resonances with a good contrast.
 
-#figure(
+#floating-figure(
   image("figures/modulation_superlattice_result.png"),
   caption: [
     Calibration of the x532-lattice depth with the superlattice potential.
@@ -132,7 +134,8 @@ Due to the small waist along the $z$ axis, we need the beams to be aligned to $d
     #show list: set text(red)
     - Set x-ticks in *a* to match the measured frequencies.
   ],
-) <fig:mod-super-result>
+  label: <fig:mod-super-result>,
+)
 
 The parameters of the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ are compiled in @tab:mod-super-result.
 We can see that the uncertainties of the x532-lattice parameters are generally larger than the uncertainties of the x1064-lattice parameters.
@@ -161,7 +164,7 @@ For the calibration in the superlattice potential we can neglect this coupling b
 The transition frequencies as shown in #subref(<fig:mod-super-result>, "a") would correspond to the band index $phy.vb(n) = (1, 8)$ if set the y1064-lattice depth to $Vy1064 = #qty[30][Erec]$.
 Based on the differences of the band indices, the coupling to the excited band $phy.vb(n) = (4, 1)$ is completely negligible.
 
-#figure(
+#floating-figure(
   table(
     columns: 5,
     stroke: table-stroke.with(stroke: black + 0.5pt),
@@ -181,4 +184,5 @@ Based on the differences of the band indices, the coupling to the excited band $
     - Merge this with the other results table? @tab:mod-eval-results
     - Reference to waists in the thermal lensing @sec:super-thermal?
   ],
-) <tab:mod-super-result>
+  label: <tab:mod-super-result>,
+)

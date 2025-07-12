@@ -1,3 +1,4 @@
+#import "@local/fancy-thesis:0.1.0": floating-figure
 #import "@preview/physica:0.9.5" as phy
 #import "@preview/fancy-units:0.1.1": num, qty, unit
 
