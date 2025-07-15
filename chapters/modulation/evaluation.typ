@@ -4,7 +4,7 @@
 
 #notes[
   - Find a better section title...
-  - Mention the resonance widths to compare them to the expected $Delta f$?
+  - Mention the resonance widths $sigma_R$ to compare them to the expected $Delta f$?
   - Where should I mention the transition $1 -> 4$?
 ]
 
@@ -176,9 +176,10 @@ The resulting fit parameters are compiled in @tab:mod-eval-results.
     Due to the small angles $theta.alt$ relative to the camera frame, we can use a larger interval for the averaging compared to the x1064 lattice.
     The solid red lines show the results for the lattice depth @eq:mod-eval-model-lattice-depth[] averaged in the same interval.
 
-    #show list: set text(red)
-    - Include colorbar between the two axes?
-    - Add secondary y-axis for the lattice depth like in @fig:mod-eval-x1064-result?
+    #notes[
+      - Include colorbar between the two axes?
+      - Add secondary y-axis for the lattice depth like in @fig:mod-eval-x1064-result?
+    ]
   ],
   label: <fig:mod-eval-other-result>,
 )
@@ -224,23 +225,25 @@ For the details, see the discussion of the loss mechanism in @sec:mod-loss.
 
 The calibration results in @tab:mod-eval-results show the strengths as well as the limitations of the in-situ lattice modulation spectroscopy.
 The main parameter is the correction factor $fita0$ to use the correct lattice depths in the experimental sequences.
-With a relative uncertainty $delta alpha < #num[1e-3]$, the precision of the result shows a significant improvement compared to the previous calibration technique #tr[cite PhD Miller].
-From the time-of-flight images we could only determine the lattice depth with an uncertainty up to #qty[3][%].
-In practice, the current limitation of the lattice depth will be drifts of the lattice beams over time.
+With a relative uncertainty $delta alpha = #num[5e-4]$, the precision of the result shows a significant improvement compared to the previous calibration technique #tr[cite PhD Luke].
+From the time-of-flight images we could only determine the lattice depth with a relative uncertainty up to #num[0.03].
+In practice, the calibration of the lattice depth is now only limited by drifts of the lattice beams over time.
 If we need to know the correction factors $fita0$ with the precision as stated in @tab:mod-eval-results, we need to frequently run the calibration measurements introduced in this chapter.
 
 The three spatial parameters $w_0$, $x_0 "or" y_0$ and $theta.alt$ are less significant for the calibration than the correction factor $fita0$, since the atoms only occupy the lattices close to the optical axes.
 We will nevertheless compare the in-situ lattice modulation spectroscopy to the respective measurements that would otherwise be necessary to determine these parameters.
 For the waist $w_0$, we have already discussed that the precision of the measurement is limited by the small extent of the atom cloud relative to the size of the lattice beams.
-In return, the uncertainty of the waist of a few #unit[μm] is insignificant for the lattice depth $v(x, y)$ in the region where the atoms occupy the lattices.
-#tr[Historically], the beam waists were inferred from the trap frequencies perpendicular to the lattice axes #tr[ref Luke and someone else?].
-The radial trap frequency of an optical lattice scales as #tr[$f prop sqrt(v_0 slash w_0)$].
+In return, the uncertainty of the waist of a few #unit[μm] is insignificant for the lattice depth $V(x, y)$ in the region where the atoms occupy the lattices.
+The reference measurement for the waists makes use of dipole oscillations along the two principal axes #tr[cite PhD Luke and Nicola?].
+The radial trap frequency of a red-detuned optical lattice roughly scales as #tr[$f prop sqrt(V_0 slash w_0)$].
+Using this technique, we are able to achieve measurement uncertainties $delta w_0 < #qty[1][μm]$.
 It is however not always possible to measure the isolated trap frequency of a single lattice.
 In the case of the y1064 lattice and the z532 lattice, both contribute to the radial potential along the $x$ axis.
 For a reliable determination of the waists we therefore need to measure the trap frequency $f_x$ as a function of the depths of the two lattices.
-This measurement takes several hours to complete for each lattice, and the precision of the resulting beam waists is #tr[on par] with the results in @tab:mod-eval-results.
-If we only want to get the trap frequencies for one specific lattice configuration, the measurement takes around #qty[1][h] in total.
+This measurement takes several hours to complete for each axis, and the precision of the resulting beam waists only shows a small improvement compared to the results in @tab:mod-eval-results.
 The advantage of measuring the spatial parameters of all lattices is that we can then compute the radial potential for all lattice configurations.
+If we only want to get the trap frequencies for one specific lattice configuration, the measurement takes around #qty[1][h] in total.
+In the past, this was done regularly to calibrate the confinement in the lattice configuration to simulate the two-dimensional Hubbard model #tr[cite Luke - Nicola].
 
 The uncertainties of the lattice positions $x_0 "or" y_0$ are limited by the beam pointing of the lattice beams.
 From measurements of the position of the atom cloud we know that the lattice positions vary by up to #qty[1][μm] from sequence to sequence.
@@ -248,28 +251,31 @@ With the infrared lattices we can directly measure their positions with the atom
 Such a measurement takes around #num[10] minutes and would achieve the same precision as the in-situ lattice modulation.
 In the case of the z532 lattice this is however not possible.
 Instead, we would need to infer the lattice position from the combined potential with the y1064 lattice or the dimple beam along the $x$ axis.
-This is a similar limitation to the #tr[(radial)] trap frequency $f_x$ where we can only measure the total #tr[(radial)] potential.
+This is a similar limitation to the radial trap frequency $f_x$ where we can only measure the total radial potential.
 The consequences on the alignment procedure of the z532-lattice beams are discussed in @ssec:mod-align-z532.
 
-The angle $theta.alt$ is the only parameter of the lattice depth $v(x, y)$ where the reference measurement has a higher precision.
-For fermionic atoms in optical lattices we can use the density-density correlations when releasing the atoms in a time-of-flight measurement to see the lattice angles relative to the camera frame #tr[ref Eugenio].
+Besides the waist, the angle $theta.alt$ is another parameter of the lattice depth $v(x, y)$ where the reference measurement has a higher precision.
+For fermionic atoms in optical lattices, we can use the density-density correlations when releasing the atoms in a time-of-flight measurement to see the lattice angles relative to the camera frame #tr[cite Eugenio].
 The antibunching due to the Pauli blocking occurs at the edges of the Brillouin zones.
-We can therefore directly see the lattice vectors $phy.vb(k)_(x 1064)$ and $phy.vb(k)_(y 1064)$ in the time-of-flight images.
+Therefore, we can directly see the lattice vectors $phy.vb(k)_(x 1064)$ and $phy.vb(k)_(y 1064)$ in the time-of-flight images.
 The resulting uncertainties of this measurement are lower by one order of magnitude compared to the results in @tab:mod-eval-results.
-To acquire a good antibunching signal, this measurement requires averaging over several hours.
+To acquire a good antibunching signal, this measurement requires averaging for several hours.
 Furthermore, this measurement does not work for the z532 lattice since the lattice vector $phy.vb(k)_(z 532)$ is perpendicular to the imaging plane.
+The angle $theta.alt$ we are measuring in the case of the z532 lattice only shows the projection of the optical axes onto the $x y$ plane.
 
-#tr[Already reference @sec:mod-align here?]
-With the in-situ lattice modulation spectroscopy we have developed a calibration technique for the lattice depth $v(x, y)$ that combines several measurements at a fraction of the runtime.
-We only need #num[10] minutes per lattice compared to an entire workday for all of the reference measurements mentioned above.
+With the in-situ lattice modulation spectroscopy we have developed a calibration technique for the lattice depth $V(x, y)$ that combines several measurements at a fraction of the runtime.
+We only need #num[10] minutes per lattice compared to an entire workday for all the reference measurements mentioned above.
 Furthermore, the lattice modulation can be fully automated, from the measurement to the evaluation.
 It would therefore be possible to run the calibration every day to keep track of drifts and other possible changes to the lattices.
-This would significantly improve the debugging workflow which is often hindered by the lack of recent calibrations.
+This would significantly improve the debugging workflow, which is often hindered by the lack of recent calibrations.
 As of the writing of this thesis, the automation is still limited by the available modulation hardware.
 We are currently using a single arbitrary-waveform generator#footnote[Keysight 33622A Waveform Generator] for the modulation of all lattices.
 If we had separate devices for each lattice or a single device with a sufficient number of channels, we could target the different lattices with a control variable in the experimental sequence.
 The automated evaluation of the measurements is already possible.
-We can detect the last sequence of the modulation frequency scan for each lattice to identify the  images.
+We can detect the last sequence of the modulation frequency scan for each lattice to identify the images.
 These images are then processed as introduced in @sec:setup-detect before running the evaluation introduced in @ssec:mod-eval-model
 The fit model is robust as long as the beam waist $w_0$ does not change significantly.
 If this would be the case, manual intervention is required anyway and it would be sufficient if the automated evaluation issues a warning about the unsuccessful fit.
+Besides the lattice-depth calibration, the in-situ lattice modulation spectroscopy can also significantly improve the alignment of the lattice beams.
+With a single pair of resonances, we can directly see the position of the optical lattice and we can see relative changes of the lattice depth when moving the lattice beams.
+This is discussed in detail in @sec:mod-align for the x1064 lattice and the z532 lattice.
