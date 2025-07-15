@@ -15,10 +15,10 @@ In @sec:mod-intro we have discussed the requirements on the width of the excited
 We concluded that the excited band needs to be deeply trapped in the lattice potential to be considered narrow.
 For the x1064 lattice and the y1064 lattice, this condition is fulfilled for the excited band $n' = 3$ at a lattice depth of #qty[60][Erec].
 With a tunneling amplitude of $t slash h = cal(O)(#qty[100][Hz])$ the atoms are not completely frozen in the upper band, but they are not able to leave the lattices either.
-The overall potential is still strongly confining due to the red-detuned x1064 lattice and the y1064 lattice.
+The overall potential is still strongly confining due to the red detuning of the x1064 lattice and the y1064 lattice.
 Therefore, we cannot explain the visible resonances in @fig:mod-intro-images if we only consider the transition $1 -> 3$.
 
-During regular calibration measurements of the lattice depth, we discovered that the visibility of the resonances is significantly worse at #qty[70][Erec] and #qty[80][Erec].
+During regular calibration measurements of the lattice depth, we discovered that the amplitude of the resonances is significantly worse at #qty[70][Erec] and #qty[80][Erec].
 This behavior cannot be explained in the context of the transition $1 -> 3$.
 The changes to the band structure compared to the lattice depth of #qty[60][Erec] are insignificant.
 When modulating the z532 lattice at a depth of #qty[100][Erec], the transition $1 -> 3$ is not visible at all.
@@ -29,9 +29,9 @@ We will look at the x1064 lattice as well as the z532 lattice since we do not kn
 To quantify the visibility of the resonances, we are going to use the dimensionless resonance amplitudes $a_R$.
 We introduced the resonance function @eq:mod-eval-model-resonance[] as an empirical model to describe the shape of the resonances in the atom cloud.
 The amplitude $a_R$ and the width $sigma_R$ are not based on any theoretical model.
-We are only using the amplitude $a_R$ to illustrate the changes of the resonance visibility as a function of the lattice depth $v_0$.
+We are only using the amplitude $a_R$ to illustrate the changes of the resonance amplitude as a function of the lattice depth $v_0$.
 In #subref(<fig:mod-loss-result>, "a") we can see that the resonance amplitudes show a kink near the lattice depth $V_0 = #qty[65][Erec]$.
-For higher lattice depths the resonance amplitude decreases rapidly, matching the observed visibility of the resonances.
+For higher lattice depths the resonance amplitude decreases rapidly, matching the observed amplitude of the resonances.
 In the x1064 lattice, the resonances were already too faint for the evaluation at lattice depths $V_0 > #qty[75][Erec]$
 This was not an issue in the z532 lattice, where the evaluation returned consistent results even for $a_R < #num[0.1]$.
 
@@ -42,7 +42,7 @@ This was not an issue in the z532 lattice, where the evaluation returned consist
     In *a* we can see the results for the x1064 lattice and the z532 lattice.
     During the modulation in the x1064 lattice, the depth of the y1064 lattice is set to #qty[30][Erec] and the depth of the z532 lattice is set to #qty[100][Erec].
     This is the default configuration already introduced in @sec:mod-intro.
-    For the modulation in the z532 lattice, the depth of the x1064 lattice and the y1064 lattice is set to #qty[20][Erec] which maximizes the resonance visibility for a fixed modulation amplitude.
+    For the modulation in the z532 lattice, the depth of the x1064 lattice and the y1064 lattice is set to #qty[20][Erec] which maximizes the resonance amplitude for a fixed modulation amplitude.
     *b* shows the available band transitions in the range of lattice depths.
 
     #notes[
@@ -85,7 +85,6 @@ If our understanding about the overlap of the transitions $1 -> 3$ and $3 -> 6$ 
 To see the isolated effect of the secondary modulation frequency, we are going to conduct the measurement at $Vx1064 = #qty[70][Erec]$ where the gap between the transitions $1 -> 3$ and $3 -> 6$ is already #qty[4][kHz] wide.
 For the primary modulation, we are going to use the default amplitude $delta V slash Vx1064 = #tr[#qty[3][%]]$, where the resonances are barely visible.
 If we would make the primary modulation too strong, we would already have a broadening on the primary transition $1 -> 3$.
-#tr[We would just not be able to see the broadened resonances without the secondary modulation.]
 The goal of this measurement is however to keep the primary transition as is, and to investigate the resonance amplitude $a_R$ as a function of the secondary modulation frequency.
 As long as there is no other transition $1 -> n'$ available at the frequency $f_"mod"^((2))$, the secondary modulation will not result in additional resonances and we can use a strong modulation amplitude $delta V^((2)) slash delta V approx 5$.
 

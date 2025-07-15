@@ -37,7 +37,7 @@ This is discussed in detail in @sec:mod-loss where we compare the x1064 lattice 
 
 Besides the parity of the wave functions, the width of the excited band $n'$ is also important for the selection of the transition $n -> n'$.
 After the loading into the optical lattices, the atoms will initially occupy most quasimomentum states $q$ in the lowest band $n = 1$.
-We always have to take the entire excited band $epsilon_n' (q)$ into account, since we pass on the quasimomentum resolution in favor of the local measurement of the lattice depth.
+We always have to take the entire excited band $band_n' (q)$ into account, since we pass on the quasimomentum resolution in favor of the local measurement of the lattice depth.
 We consider the excited band to be sufficiently narrow if its width is negligible relative to the modulation frequency $f_"mod"$ and the expected change thereof across the atom cloud.
 If this condition is not fulfilled, the reliability of the evaluation of the local signals in the atom cloud will be limited.
 There is no universal function to quantify the maximally allowed width of the excited band.
@@ -50,7 +50,7 @@ For lower lattice depths, the band width would already start to limit the evalua
   caption: [
     Properties of the energy bands for the lattice-modulation spectroscopy.
     *a* shows an optical lattice with a depth of $V = #qty[60][Erec]$ and the resulting energy bands from $n = 1$ to $n = 5$.
-    The solid lines show the corresponding Bloch waves at $q = 0$ shifted by the mean band energies $epsilon_n (q)$.
+    The solid lines show the corresponding Bloch waves at $q = 0$ shifted by the mean band energies $band_n (q)$.
     Only the real part is shown for an odd $n$, and only the imaginary part is shown for an even $n$.
     Starting with an even parity of the lowest band, the parity alternates with the band index $n$.
     *b* shows how the width of the energy bands changes as a function of the lattice depth $V$.
@@ -77,7 +77,7 @@ The band width of the power stabilization is lower than the possible modulation 
 Even for the largest modulation amplitude, the setpoint $V$ of the lattice depth therefore remains constant.
 
 For the infrared in-plane lattices we are using a lattice depth of $V = #qty[60][Erec]$.
-With $#unit[Erec] slash h = #qty[4.405][kHz]$, the maximum modulation frequency is $f_"mod" approx #qty[122][kHz]$ and the frequency width is only $Delta f = Delta epsilon_n slash h approx #qty[0.17][kHz]$.
+With $#unit[Erec] slash h = #qty[4.405][kHz]$, the maximum modulation frequency is $f_"mod" approx #qty[122][kHz]$ and the frequency width is only $Delta f = Delta band_n slash h approx #qty[0.17][kHz]$.
 Based on the waists of the x1064 lattice and the y1064 lattice, we expect the local modulation frequency to change by $delta f_"mod" approx #qty[5][kHz]$ across the atom cloud.
 The band width is therefore negligible relative to $f_"mod"$ as well as $delta f_"mod"$.
 While the modulated lattice has a depth of #qty[60][Erec], we set the opposite in-plane lattice to a depth of #qty[30][Erec] to reduce the coupling between the two lattices.
@@ -112,6 +112,7 @@ Besides the maximum lattice depth, we will also get the waist of the underlying 
 
     #notes[
       - Use #unit[μm] or #unit[_a_] as the unit here or keep #unit[px]?
+      - Only use a single label for the y-axis and the x-axis?
       - Remove the colorbar?
       - Use a different colormap?
     ]

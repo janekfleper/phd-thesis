@@ -195,7 +195,7 @@ The last image with $f_"mod" = #qty[119.5][kHz]$ does not show a resonance anymo
 For the z532 lattice we are using a lattice depth of $Vz532 = #qty[100][Erec]$ since this is the default value in most sequences.
 This requires us to use the transition $1 -> 5$ instead of the $1 -> 3$ to realize a decent resonance visibility.
 The details behind this choice of the excited band are discussed in @sec:mod-loss.
-With $#unit[Erec]slash h = #qty[1.101][kHz]$ in the z532 lattice, the maximum modulation frequency is $f_"mod" approx #qty[75][kHz]$ and the width of the excited band is $Delta f = Delta epsilon_5 slash h approx #qty[0.3][kHz]$.
+With $#unit[Erec]slash h = #qty[1.101][kHz]$ in the z532 lattice, the maximum modulation frequency is $f_"mod" approx #qty[75][kHz]$ and the width of the excited band is $Delta f = Delta band_5 slash h approx #qty[0.3][kHz]$.
 In terms of the relative frequency width $Delta f slash f_"mod" approx #num[4e-3]$, this is slightly worse than the corresponding parameters in the x1064 lattice and the y1064 lattice.
 We are however still in the regime where $Delta f$ does not affect the width of the resonances.
 

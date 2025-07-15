@@ -18,7 +18,7 @@ Since the eigenstates of the optical lattice are Bloch waves, lattice-modulation
 If the widths of the energy bands are comparable to the energy difference between the bands, one can resolve the band structure as a function of the quasimomentum $q$.
 These measurements are usually done with a time-of-flight detection scheme that maps the quasimomentum $q$ to a position in the atom image.
 However, when lattice modulation spectroscopy is used to calibrate the lattice depth, the resolution of the quasimomentum $q$ is not required.
-By using deep lattices where the band widths are negligible compared to the energy difference between the bands, the dispersion $epsilon(q)$ can be suppressed.
+By using deep lattices where the band widths are negligible compared to the energy difference between the bands, the dispersion $band(q)$ can be suppressed.
 In this chapter we will go one step further and measure the local lattice depth as a function of the position $(x, y)$.
 When optical lattices are created by interfering two Gaussian beams, the lattice depth will decrease with the radius $rho$ from the optical axis of the lattice beams.
 Calibrating the lattice depth $V(x, y)$ will reveal the maximal lattice depth in the center, as well as the waist of the lattice beams and the position of the optical lattice.

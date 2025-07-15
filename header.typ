@@ -22,6 +22,9 @@
 #let vz532 = $v_(z 532)$
 #let Vz532 = $V_(z 532)$
 
+#let band = $epsilon$
+#let cband = $tilde(epsilon)$
+
 // a shortcut for red text to be used as an annotation
 #let tr = text.with(red)
 
