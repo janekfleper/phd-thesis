@@ -7,17 +7,15 @@
   - Reference the mirror in @sec:super-setup that is used for the x1064-lattice alignment?
 ]
 
-#tr[Shorten this paragraph?]
 The main purpose of the in-situ lattice modulation is the quantitative calibration of the lattice depths $V(x, y)$ across the atom cloud.
 However, we can also use the technique as a qualitative tool for the alignment of the lattice beams.
-In this section, I will show how we are using the in-situ lattice modulation for the alignment of the in-plane lattices in @ssec:mod-align-x1064 well as the vertical lattices in @ssec:mod-align-z532.
 The direct feedback from the atoms about the local lattice depth significantly improves all steps of the lattice-alignment procedure.
-Without the in-situ resolution the lattice depth could only be measured with a scan of the modulation frequency $f_"mod"$ over the expected interval of a transition to a higher band.
+Without the in-situ resolution the lattice depth could only be measured with a scan of the modulation frequency $f_"mod"$ over the expected interval of the transition to a higher band.
 The coarse alignment of the lattice beams is much faster now because we are able to see changes of the lattice depth from sequence to sequence.
 We made use of this extensively during the first alignment of the x1064-lattice beams and the x532-lattice beams after the upgrade of the optical setup in @ssec:super-thermal-x1064-rebuild and @ssec:super-thermal-x532-rebuild.
 For the fine alignment, the in-situ measurement also has a better precision than the time-of-flight measurement.
 The fidelity of the position of a resonance is much higher than a decrease of the global atom number.
-We are therefore able to reliably find the optimal alignment of the lattices, which makes the alignment more robust against slow drifts of the lattice beams.
+We are therefore able to reliably find the optimal alignment of the lattices, which makes the alignment more robust against temporal drifts of the lattice beams.
 
 
 === x1064-lattice alignment <ssec:mod-align-x1064>

@@ -41,7 +41,8 @@ We always have to take the entire excited band $band_n' (q)$ into account, since
 We consider the excited band to be sufficiently narrow if its width is negligible relative to the modulation frequency $f_"mod"$ and the expected change thereof across the atom cloud.
 If this condition is not fulfilled, the reliability of the evaluation of the local signals in the atom cloud will be limited.
 There is no universal function to quantify the maximally allowed width of the excited band.
-We have to check this individually based on the transition $n -> n'$ and the lattice that is modulated, the maximally available lattice depth also plays a role in the decision.
+We have to check this individually based on the transition $n -> n'$ and the lattice that is modulated.
+The maximally available lattice depth also plays a role in the decision.
 Based on the widths of the bands shown in #subref(<fig:mod-intro-theory>, "b"), the band $n' = 3$ is a suitable candidate for lattice depths $V > #qty[40][Erec]$.
 For lower lattice depths, the band width would already start to limit the evaluation.
 
