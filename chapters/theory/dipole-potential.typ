@@ -53,7 +53,7 @@ In the case of the counterpropagating waves the angle $alpha$ is equal to $90 de
 See @fig:theory-lattice-intersection-angle for an illustration of the change of the interference pattern based on the angle of intersection.
 
 #figure(
-  image("figures/optical-lattices-interference.png"),
+  lattice-configurations(),
   caption: [
     Interference of plane waves based on the angle of intersection.
     The wavelengths of the plane waves in the two examples are equal, as indicated by the equal lengths of the wavevectors!
