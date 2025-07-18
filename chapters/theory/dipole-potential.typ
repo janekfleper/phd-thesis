@@ -1,78 +1,135 @@
 #import "/header.typ": *
+#import "figures/figures.typ": *
 
-== Dipole potential and optical lattices <sec:theory-dipole>
+#let k1 = $phy.vb(k)_1$
+#let k2 = $phy.vb(k)_2$
 
-Far off-resonant light can still interact with atoms.
-Depending on the detuning of the angular frequency of the light $omega$ and the transition energy $phy.hbar omega_0$, the sign of the interaction changes.
-If $omega < omega_0$, the light is referred to as _red-detuned_ and the interaction is attractive.
-Conversely if $omega > omega_0$, the light is referred to as _blue-detuned_ and the interaction is repulsive.
-See @fig:theory-dipole-detuning-gauss for a sketch of the atom-light interaction for a gaussian beam.
+== Atom-light interaction and optical lattices <sec:theory-dipole>
 
-#figure(
-  image("figures/optical-potential-detuning.png", width: 80%),
-  caption: [
-    Illustration of the effect of the detuning $Delta = omega - omega_0$ between a gaussian beam and atoms.
-    If the light is red-detuned, the atoms are pulled towards the intensity maximum of the gaussian beam.
-  ],
-) <fig:theory-dipole-detuning-gauss>
+#notes[
+  - Discuss hyperfine structure for the dipole force?
+  - Really only show the electric field of the simplified Gaussian beam?
+  - Already introduce the running-wave component in @eq:theory-lattice-intensity?
+  - Mention accordion lattices with a variable period $a$? Or only do this in the setup section for the z532 lattice?
+]
 
-#text(red)[Add something about the scattering rate...]
+The interaction of atoms with far-detuned light plays an essential role in quantum gas experiments #tr[cite Grimm].
 
-The electric field of a plane optical wave propagating in the direction of the wavevector $phy.vb(k)$ is given by the expression
+If an atom is exposed to light with the intensity $I prop abs(phy.vb(E))^2$, the electric field $phy.vb(E)$ induces an oscillating dipole moment $phy.vb(p)$ in the atom.
+The oscillation frequency of the dipole moment is equal to the driving frequency $omega = c slash lambda$, where $c$ is the speed of light and $lambda$ is the wavelength of the light.
+The amplitude and the phase of the dipole moment relative to the electric field are characterized by the complex polarizability $alpha(omega)$.
+
+$
+  phy.vb(p) = alpha(omega) phy.vb(E)
+$ <eq:theory-dipole-moment>
+
+The induced dipole moment $phy.vb(p)$ interacts with the electric field $phy.vb(E)$ #tr[again], resulting in the dipole potential $U_"dip"$ and the scattering rate $Gamma_"sc"$.
+In the Lorentz model, this atom-light interaction is described by a driven harmonic oscillator with the eigenfrequency $omega_0$ and a damping rate $Gamma$.
+Despite being a classical model, it can correctly predict the polarizability $alpha(omega)$ as long as the scattering rate is small compared to the damping rate $Gamma_"sc" << Gamma$.
+The resulting expressions for the dipole potential and the scattering rate are
+
+$
+     U_"dip" (phy.vb(r)) & prop Gamma / Delta I(phy.vb(r))     \
+  Gamma_"sc" (phy.vb(r)) & prop (Gamma / Delta)^2 I(phy.vb(r))
+$ <eq:theory-dipole-terms>
+
+where $Delta = omega - omega_0$ is the detuning of the driving frequency relative to the #tr[eigenfrequency] of the atom.
+In the quantum-mechanical model, the eigenfrequency corresponds to the transition frequency between the ground state and the excited state#footnote[This is a simplified model that only considers a two-level atom. In general, the total dipole potential is computed as the weighted sum of all available transitions to excited states.].
+The scaling with $Delta$ shows that using a large detuning and a high intensity is optimal for optical dipole potentials while limiting the scattering rate $Gamma_"sc"$.
+In the context of far-detuned light, the condition $Gamma_"sc" << Gamma$ is usually fulfilled and the scattering rate can be small relative to the experimental timescales.
+The sign of the detuning $Delta$ decides whether the dipole potential in @eq:theory-dipole-terms[] is attractive or repulsive.
+Light with $Delta < 0$ is called _red-detuned_ and attracts the atoms to the maximum of the intensity $I(phy.vb(r))$.
+Conversely, light with $Delta > 0$ is called _blue-detuned_ and repells the atoms.
+
+The dipole potential $U_"dip" (phy.vb(r))$ can be applied to regular optical dipole traps as well as optical lattices.
+In the former case, a red-detuned laser beam is commonly used to create a confining potential for atoms #tr[cite Grimm?].
+If the beam has a Gaussian intensity profile, the atoms will be attracted radially towards the optical axis.
+A blue-detuned Gaussian laser beam cannot be used to trap atoms, it can however be used to locally modify existing potentials #tr[cite plug beams?].
+Regardless of the detuning, the dipole potential is proportional to the intensity envelope $I(phy.vb(r)) prop abs(phy.vb(E(phy.vb(r))))^2$.
+The electric field of a Gaussian beam close to the focal position can be written as
 
 $
   phy.vb(E)(phy.vb(r), t) =
-  phy.vb(E)_0 cos(phy.vb(k) dot phy.vb(r) - omega t)
-$ <eq:theory-dipole-electric-field>
+  phy.vb(E)_0 exp(-rho^2 / w_0^2) exp lr((i (omega t - phy.vb(k) dot phy.vb(r))), size: #150%)
+$ <eq:theory-dipole-gaussian>
 
-While a laser beam also has a transversal component, it is sufficient to look at the component along the propagation axis to understand the origin of the optical lattice potential.
-When two (plane) waves are overlapped, they will interfere if they have electric field components with the same polarization which is encoded in the field amplitude $phy.vb(E)_0$.
-If we assume that the two waves have the same field amplitude (absolute and direction) and the same (angular) frequency $omega$, the intensity of the interference pattern is given by
+where $rho$ is the distance from the optical axis and $w_0$ is the beam waist #tr[cite Saleh & Teich?].
+If the beam propagates along the $z$ axis, this simplified electric field assumes $abs(z) << z_R$ with the Rayleigh length $z_R$.
+In this approximation, the beam waist $w_0 = w(0)$ is used instead of the beam radius $w(z)$, and the radius of curvature $R(z)$ and the Gouy phase $psi(z)$ are omitted from the complex exponential function.
+The vector $phy.vb(E)_0 = E_0 phy.vu(x)$ characterizes the amplitude $E_0$ of the electric field as well as the polarization $phy.vu(x)$.
+Both quantities are not exclusive to Gaussian beams and also show up in the electric field of a plane optical wave.
+The same is the case for the complex exponential function that characterizes the phase of the wave.
+In this simplified form, only the radial exponential function is characteristic for a Gaussian beam.
+
+The spatial periodicity of the electric field $phy.vb(E)$ characterized by the wavevector $phy.vb(k)$ cannot be resolved in a running-wave potential.
+However, this property is essential for the creation of optical lattice potentials by interfering multiple laser beams.
+The interference pattern of two laser beams with the same #tr[amplitude/vector] $phy.vb(E)_0$ and the same frequency $omega$ is
 
 $
   I(phy.vb(r)) =
-  abs(phy.vb(E)_0)^2 (1 + cos((phy.vb(k)_2 - phy.vb(k)_1) dot phy.vb(r)))
+  #tr[$2$?] abs(phy.vb(E)_0)^2 lr((1 + cos((phy.vb(k)_2 - phy.vb(k)_1) dot phy.vb(r))), size: #150%)
 $ <eq:theory-lattice-intensity>
 
-where $phy.vb(k)_1$ and $phy.vb(k)_2$ are the wavevectors of the respective plane waves.
-The time-dependence of the interference term is averaged out since it oscillates at the (angular) frequency of the electric field $omega$ which is not observable for wavelengths in the optical regime.
-If the two plane waves had (slightly) different oscillation frequencies, the interference term would (also) oscillate at the frequency $omega_2 - omega_1$ which can not be averaged out in all cases.
-
-According to @eq:theory-lattice-intensity the interference pattern is described by the (vector) difference $Delta phy.vb(k) = phy.vb(k)_2 - phy.vb(k)_1$.
-// Due to the scalar product of $Delta phy.vb(k)$ and the position vector $phy.vb(r)$, the interference pattern will evolve in the direction of $Delta phy.vb(k)$.
-The (spatial) period $a$ of the interference pattern therefore depends on the angle between the two wavevectors.
-If the waves are counter propagating, the wavevectors are related by the equation $phy.vb(k)_2 = - phy.vb(k)_1$ and the absolute of the interference wavevector will be $abs(Delta phy.vb(k)) = 2k$.
-In that case the (spatial) period will be $a = pi / k = lambda / 2$ where $lambda$ is the wavelength of the plane waves.
-At an intersection angle of $2 alpha$ the period of the interference pattern increases according to
+where $phy.vb(k)_1$ and $phy.vb(k)_2$ are the wavevectors of the two beams.
+The time-dependence of the electric field @eq:theory-dipole-gaussian[] is averaged out when computing the intensity of the total electric field#footnote[If the two beams had slightly different frequencies, the interference term in @eq:theory-lattice-intensity would oscillate at the frequency $omega_2 - omega_1$.].
+If the local intensity of the beams is not equal, a running-wave term is added to @eq:theory-lattice-intensity.
+This term does not affect the microscopic properties of the interference pattern, just like the Gaussian envelope of the individual laser beams.
+Both contributions are omitted here for the derivation of the optical lattice potential.
+The interference term in @eq:theory-lattice-intensity describes an oscillation in space defined by the wavevector $Delta phy.vb(k) = k2 - k1$.
+Therefore, the period $a = pi / abs(Delta phy.vb(k))$ depends on the #tr[amplitude/absolute/mangitude] $k$ of the wavevectors as well as the angle between the two interfering beams.
+If the two beams are counterpropagating, their wavevectors are related by $phy.vb(k)_2 = -phy.vb(k)_1$ and the #tr[amplitude/absolute/magnitude] of the interference wavevector is $abs(Delta phy.vb(k)) = 2k$.
+The resulting period is $a = lambda / 2$ where $lambda = (2 pi) / k$ is the wavelength of the interfering beams.
+For a general intersection angle $2 dot alpha$ between the wavevectors #k1 and #k2, the expression for the period is
 
 $
-  a = lambda / (2 sin alpha)
+  a = lambda / (2 sin alpha) thin .
 $ <eq:theory-lattice-period>
 
-In the case of the counterpropagating waves the angle $alpha$ is equal to $90 degree$, and the period simplifies to $a = lambda / 2$ again.
-See @fig:theory-lattice-intersection-angle for an illustration of the change of the interference pattern based on the angle of intersection.
+At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.
+@fig:theory-lattice-intersection-angle illustrates the change of the lattice period in a shallow-angle configuration compared to the counterpropagating configuration where $k2 = -k1$.
+// A shallow angle can be used to select
+// The change of the lattice period in a shallow-angle configuration compared to the counterpropagating configuration where $k2 = -k1$ is illustrated in @fig:theory-lattice-intersection-angle.
 
-#figure(
+#floating-figure(
   lattice-configurations(),
   caption: [
-    Interference of plane waves based on the angle of intersection.
-    The wavelengths of the plane waves in the two examples are equal, as indicated by the equal lengths of the wavevectors!
-    The sketch on the left shows two plane waves that are counterpropagating with $phy.vb(k)_2 = - phy.vb(k)_1$.
-    The interference pattern will be parallel to the two wavevectors with the period $a = lambda / 2$.
-    The sketch on the right shows two planes waves interfering at the angle $2 alpha$.
-    The vector $Delta phy.vb(k)$ will point in the vertical direction since the parallel components of $phy.vb(k)_1$ and $phy.vb(k)_2$ do not contribute to the interference pattern.
-    The period of the interference pattern will therefore be significantly larger than in the sketch on the left.
+    Interference period based on the angle of intersection.
+    The wavelengths $lambda$ of the individual beams in the two examples are equal, as indicated by the equal lengths of the wavevectors $abs(k1) = abs(k2)$.
+    The configuration on the left shows the interference of two counterpropagating beams with $k2 = - k1$.
+    The resulting interference pattern is parallel to the two wavevectors with the period $a = lambda / 2$.
+    With the shallow angle $alpha$ as shown on the right, the wavevector $Delta phy.vb(k)$ points in the vertical direction.
+    The parallel components of #k1 and #k2 do not contribute to the interference pattern, causing the lattice period $a$ to be larger
+
+    #notes[
+      - Add *a* and *b* here to reference the different configurations?
+      - Show the wavevector $Delta phy.vb(k)$ in the two configurations?
+      - Use a different angle, since $alpha$ is also the polarizability?
+      - Add a coordinate system $x$ and $y$?
+    ]
   ],
-) <fig:theory-lattice-intersection-angle>
+  label: <fig:theory-lattice-intersection-angle>,
+)
 
+The optical lattice potential can be computed directly from the dipole potential in @eq:theory-dipole-terms and the interference pattern in @eq:theory-lattice-intensity.
+When the coordinate system is oriented such that $Delta phy.vb(k) || phy.vu(x)$, the optical lattice potential can be written as
 
-As introduced at the start of this section in @fig:theory-dipole-detuning-gauss, the detuning of the light creating the optical lattice will decide whether the potential is attractive or repulsive.
-Due to its periodic nature, a blue-detuned optical lattice is still able to trap atoms in the direction of $Delta phy.vb(k)$.
-The atoms will be trapped in the intensity minima.
-In a red-detuned optical lattice the atoms will be trapped in the intensity maxima.
-Regarding losses of the atoms due to scattering, the blue-detuned optical lattice has a clear advantage since the atoms are only subject to a very small amount of light.
-If we disregard the scattering effects, the two possible potentials only differ by an energy offset equal to the lattice depth of the red-detuned lattice, as illustrated in @fig:theory-lattice-detuning.
-The global energy offset will not affect the physics of the atoms in the lattices, and we can disregard this when looking at the eigensolutions in an optical lattice potential.
+$
+  V(x) = V_0 dot sin^2(k x)
+$ <eq:theory-lattice-potential>
+
+with the lattice depth $V_0$ and the wavevector $k = (2 pi) / lambda$.
+The lattice depth takes the intensity $I(0) = abs(phy.vb(E)_0)^2$, the detuning $Delta$ and the other parameters of the atom-light interaction into account.
+This expression for the optical lattice potential can be used for red-detuned light and blue-detuned light.
+The practical difference between the two detunings is the location where the atoms are trapped.
+In a red-detuned optical lattice, the atoms are attracted by the intensity maxima of the interference pattern.
+On the other hand, in a blue-detuned optical lattice, the atoms are trapped in the intensity minima.
+In the direction of the lattice wavevector $Delta phy.vb(k)$, the two potentials therefore only differ by a global energy offset as shown in @fig:theory-lattice-detuning.
+The relevant differences between the two detunings can be found in the scattering rate and the radial potential.
+Since the scattering rate in @eq:theory-dipole-terms is proportional to the local intensity $I(phy.vb(r))$, the scattering rate will be maximal (minimal) if the lattice is red-detuned (blue-detuned).
+If the scattering causes an atom loss or a heating of the atoms, a blue-detuned optical lattice can be used to minimize these effects.
+The radial potential of an optical lattice depends on the Gaussian envelope introduced in @eq:theory-dipole-gaussian.
+In a red-detuned optical lattice the radial potential is always confining, while it is always deconfining in a blue-detuned optical lattice #tr[cite Greiner/Luke?].
+This is primarily relevant for the trapping of atoms in a three-dimensional optical lattice, and is discussed further in @sec:super-radial #tr[and ref setup?].
 
 #figure(
   image("figures/optical-lattices-detuning.png"),
@@ -83,13 +140,6 @@ The global energy offset will not affect the physics of the atoms in the lattice
     For a blue-detuned lattice as shown in the plot on the right, the atoms are trapped at the minima of the intensity.
   ],
 ) <fig:theory-lattice-detuning>
-
-The common choice for the optical lattice potential is to set the potential minimum to zero such that the amplitude of the potential is always positive.
-We are also going to choose the coordinate system such that the vector $Delta phy.vb(k)$ points along the x-axis, turning this into a one-dimensional problem.
-
-$
-  V(x) = V_0 dot sin^2(k x)
-$ <eq:theory-lattice-potential>
 
 The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = (2 pi) / lambda$ where $lambda$ is the wavelength of the light that is used to create the optical lattice.
 The Hamiltonian to describe non-interacting particles in the potential @eq:theory-lattice-potential is

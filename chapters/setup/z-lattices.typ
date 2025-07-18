@@ -27,7 +27,7 @@ The power imbalance between the _long_ lattice beams will cause a large running 
 A Mephisto MOPA (20W) is used for the _long_ lattice and we can typically reach lattice depths of $> #qty[100][Erecl]$.
 
 For the measurements covered in this thesis, the _short_ vertical lattice is always used during the actual measurements.
-Due to the blue detuning and the (perfectly) balanced beam powers, the atoms are trapped in the potential minimum as envisioned in @fig:theory-dipole-detuning-gauss and there is only a small deconfining potential due to the finite size of the lattice beams @sec:super-radial.
+Due to the blue detuning and the (perfectly) balanced beam powers, the atoms are trapped in the potential minimum as envisioned in @fig:theory-lattice-detuning and there is only a small deconfining potential due to the finite size of the lattice beams @sec:super-radial.
 The _long_ vertical lattice is only used for the transfer of the atoms from the dipole trap to the _short_ vertical lattice.
 When the atoms are transferred from the dipole trap to the _long_ vertical lattice, the atom pancakes will be distanced by $approx #qty[2][μm]$ in the $z$-direction.
 By then transfering the atoms to the _short_ vertical lattice, only every other plane will be occupied which makes the single-plane tomography significantly easier @ssec:setup-detect-slicing.

@@ -2,7 +2,7 @@
 
 = Theory <ch:theory>
 
-In this chapter I will introduce the theoretical concepts that are required as the baseline for the experimental setup (ref chapter) and the further chapters in this thesis.
+In this chapter, I will introduce the theoretical concepts that form the basis of the measurements presented in this thesis.
 Starting with the interaction of (far-detuned) light with atoms I will introduce the optical potentials that we are using in the experiment.
 
 By interfering laser beams we can create so-called optical lattices which are periodic potentials for the atoms.
