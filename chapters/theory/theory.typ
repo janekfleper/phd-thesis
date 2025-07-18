@@ -19,7 +19,7 @@ The potential landscape will then feature many double-well potentials where the 
 
 We use the two-site Hubbard model to explain the behavior of two interacting fermionic particles in a single double well...
 
-#include "dipole-potential.typ"
+#include "dipole.typ"
 #include "bloch-theorem.typ"
 #include "wannier-functions.typ"
 #include "superlattice.typ"
