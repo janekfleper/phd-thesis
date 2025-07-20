@@ -69,7 +69,7 @@ The illustration of the superlattice potential in @fig:theory-super-potential-ph
 
 === Bloch theorem <ssec:theory-super-bloch>
 
-The potential @eq:theory-super-potential-dimensionless can be plugged into the Schrödinger equation @eq:theory-bloch-psiq-schroedinger to compute the band structure and the Bloch waves in the superlattice potential.
+The potential @eq:theory-super-potential-dimensionless can be plugged into the Schrödinger equation #tr[eq:theory-bloch-psiq-schroedinger] to compute the band structure and the Bloch waves in the superlattice potential.
 Since the superlattice potential has two spatial frequency components, the Fourier series expansion also has coefficients $c_(plus.minus) eq.not 0$ which will lead to non-zero matrix elements on the second off-diagonal.
 
 $
@@ -171,7 +171,9 @@ If the superlattice configuration is far away from any avoided crossings (compar
 
 === Hubbard parameters / SSH model <ssec:theory-super-hubbard>
 
-#text(red)[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
+#text(
+  red,
+)[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
 If the superlattice potential is sufficiently deep, it makes sense to use the second quantization formalism again to describe the behavior of atoms inside the superlattice.
 The required parameters are the tunneling amplitude @eq:theory-wannier-tunneling-amplitude and the interaction strength @eq:theory-wannier-interaction-strength that were already introduced in @sec:theory-wannier.
 In general the tunneling amplitudes $t_"in"$ inside a doublewell will be greater than the tunneling amplitudes $t_"out"$ between separate doublewells due to the large potential barrier (mention the SSH model here?).

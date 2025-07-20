@@ -27,7 +27,7 @@ $
   = - integral phy.dd(x) w_(n,j)(x) (- phy.dv(, x, 2) + v_0 dot sin^2(x)) w_(n,i)(x)
 $ <eq:theory-wannier-tunneling-amplitude>
 
-The tunneling amplitudes $t_(i,j)$ are the off-diagonal matrix elements of the hamiltonian @eq:theory-lattice-hamiltonian-dimensionless-xy in the Wannier basis, and they quantify the tunneling rate between the lattice sites $i$ and $j$.
+The tunneling amplitudes $t_(i,j)$ are the off-diagonal matrix elements of the hamiltonian @eq:theory-bloch-hamiltonian in the Wannier basis, and they quantify the tunneling rate between the lattice sites $i$ and $j$.
 The rate of tunneling can be tied to the finite amplitude of the Wannier function $w_(n,i)(x)$ on the target site $j$ (and vice-versa).
 In a (reasonably) deep lattice the finite amplitude can also be clearly observed on the neighbouring lattice site, see @fig:theory-wannier-tunneling.
 

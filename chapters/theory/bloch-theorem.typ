@@ -2,91 +2,108 @@
 
 == Bloch theorem <sec:theory-bloch>
 
-The solutions of the Hamiltonian @eq:theory-lattice-hamiltonian-dimensionless-xy can be derived using Bloch's theorem that takes the periodicity of the potential @eq:theory-lattice-potential into account.
-The theorem states that the eigenfunctions of the Hamiltonian $accent(H, hat)$ have the form
+#notes[
+  - Really skip all of the dimensionless stuff here?
+  - Write eigenfunctions or eigen functions?
+  - Use a different character for the mass to avoid confusion with the Fourier series index?
+  - Explain the dimensionless units in more detail? E.g. $a = pi$...
+  - Explain the origin of the name "recoil energy"?
+  - Explain the "mapping" between the free-particle momentum $p$ and the quasimomentum $q$?
+]
+
+The Hamiltonian associated with a single particle in the optical lattice potential @eq:theory-lattice-potential[] is
+
+$
+  hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V_0 dot sin^2(k x) thin .
+$ <eq:theory-bloch-hamiltonian>
+
+To make the Hamiltonian dimensionless, the position can be rescaled as $x -> x slash k$ and the energy can be expressed in the recoil energy $#unit[Erec] = (phy.hbar^2 k^2) / (2 m)$, where $m$ is the mass of the particle.
+This convention is used throughout this chapter and in #tr[ref appendix].
+The resulting dimensionless Hamiltonian is
+
+$
+  hat(h) = -phy.dv(, x, 2) + v_0 dot sin^2 x thin .
+$ <eq:theory-lattice-hamiltonian-dimensionless>
+
+In the Bloch theorem, the Hamiltonian is solved with an ansatz where the eigenfunctions have the same periodicity as the potential $V(x)$.
+The so-called Bloch waves have the form
 
 $
   psi_q (x) = u_q (x) dot cexp(q x)
-$ <eq:theory-bloch-eigenfunctions>
+$ <eq:theory-bloch-waves>
 
-where $q$ is the (dimensionless) quasi-momentum and the function $u_q (x)$ has the same periodicity as the potential $V(x)$ in @eq:theory-lattice-potential.
-Since the position $x$ is dimensionless, the quasi-momentum $q$ must be dimensionless as well.
-Analogous to the transformation $x -> x slash k$, the quasi-momentum is transformed as $q -> q dot k$.
-
-Due to its periodicity, the function $u_q (x)$ can be written as the Fourier series
+with the quasimomentum $q$ and the periodic functions $u_q (x)$.
+Due to the discrete translation symmetry of the potential, the quasimomentum is only uniquely defined in the #tr[first] Brillouin zone $q in [-pi / a, pi / a)$.
+The periodicity of the functions $u_q (x)$ makes them invariant to #tr[spatial] translations by the lattice period $a$.
+This property can be used to write the functions as the Fourier series
 
 $
-  u_q (x) = sum_m u_(q,m) cexp(2 m x)
+  u_q (x) = sum_m u_q^m thin cexp(2 m x)
 $ <eq:theory-bloch-uq-fourier-series>
 
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
-Since the potential $V(x)$ is $pi$-periodic (in dimensionless coordinates), the periodicity of $u_q (x)$ can be directly seen in @eq:theory-bloch-uq-fourier-series.
-Shifting the position $x -> x + pi$ will reveal the additional factor $cexp(2 m pi)$ in the sum which is always equal to $1$ for integer values of $m$.
-With the Fourier series of $u_q (x)$ the eigenfunctions @eq:theory-bloch-eigenfunctions can now be written as
+Since $k dot a = pi$, the #tr[spatial] translation $x -> x + a$ will only shift the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
+In the next step, the potential $V(x)$ is also expressed as a Fourier series with the terms $cexp(2 m x)$.
+The Fourier series coefficients $c_m$ are revealed by rewriting the $sin^2x$ with complex exponential functions.
 
 $
-  psi_q (x) = sum_m u_(q,m) cexp((q + 2m)x) .
-$ <eq:theory-bloch-psiq-fourier-series>
-
-The potential $V(x)$ can directly be rewritten as a Fourier series by writing $sin^2 x$ as complex exponential functions.
-The Fourier series coefficients can then be read directly from the different terms.
-
-$
-  v(x)
-  &= v_0 dot sin^2 x \
-  &= v_0 dot (1 / 2 - 1 / 2 cos(2x)) \
-  &= underbrace(1 / 2 v_0, c_0) #h(0.3em) underbrace(- 1 / 4 v_0, c_(plus.minus 1)) (cexp(2x) + ncexp(2x)) \
+  V(x) slash #unit[Erec] & = v_0 dot sin^2x \
+  & = v_0 dot (1 / 2 - 1 / 2 cos(2 x)) \
+  & = underbrace(1 / 2 v_0, c_0) med underbrace(- 1 / 4 v_0, c_(plus.minus 1)) (cexp(2 x) + ncexp(2 x))
 $ <eq:theory-bloch-potential-fourier-series>
 
-Instead of the sum over $m$ from $-infinity$ to $+infinity$, the Fourier series for the potential only requires the terms $m = (-1, 0, 1)$ since all other coefficients $c_m$ are zero.
-
-We will now use the Fourier series of the eigenfunctions @eq:theory-bloch-psiq-fourier-series and the Fourier series of the potential @eq:theory-bloch-potential-fourier-series to find the solutions of the Hamiltonian @eq:theory-lattice-hamiltonian-dimensionless-xy.
-
-$
-  epsilon_n (q) psi_q (x)
-  &= epsilon_n (q) sum_m u_(q,m) cexp((q+2m)x) \
-  epsilon_n (q) psi_q (x)
-  &= accent(h, hat) psi_q (x) \
-  &= - phy.dv(, x, 2) sum_m u_(q,m) cexp((q+2m)x)
-  + sum_m u_(q,m) cexp((q+2m)x) sum_m' c_m' cexp((q + 2m')x) \
-  &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
-  + sum_m sum_m' u_(q,m) c_m' cexp((q+2(m+m'))x) \
-  &= sum_m u_(q,m) (q + 2m)^2 cexp((q+2m)x)
-  + sum_m sum_m' u_(q,m-m') c_m' cexp((q+2m)x)
-$ <eq:theory-bloch-psiq-schroedinger>
-
-In the last step I replaced $m -> m - m'$ to get the same complex exponential function as in all the other terms.
-Since the sum over $m$ goes from $-infinity$ to $+infinity$, it is fine to just shift the index.
-Each term in @eq:theory-bloch-psiq-schroedinger features a sum over $m$ and the exponential function $cexp((q+2m)x)$.
-We can therefore discard the sums over $m$ to only look at the coupled equations for the Fourier series coefficients $u_(q,m)$ of the eigenfunctions in @eq:theory-bloch-psiq-fourier-series.
+Instead of the sum over all $m$, the Fourier series of the potential only requires the terms with $m = (-1, 0, 1)$.
+While the coefficient $c_0$ is just a global energy offset, the coefficients $c_(plus.minus 1)$ result in a coupling of the coefficients $u_q^m$ in the Schrödinger equation.
+All other Fourier series coefficients $c_m$ of the potential are zero.
+With the Bloch waves @eq:theory-bloch-waves[] and the potential @eq:theory-bloch-potential-fourier-series[], the Schrödinger equation for each index $m$ is
 
 $
-  epsilon_n (q) u_(q,m)
-  &= (q + 2m)^2 u_(q,m) + sum_(m=-1)^1 c_m' u_(q,m-m') \
-  &= ((q + 2m)^2 + 1 / 2 v_0) u_(q,m) - 1 / 4 v_0 (u_(q,m-1) + u_(q,m+1))
+  epsilon_n (q) u_q^m = ((q + 2 m)^2 + 1 / 2 v_0) u_q^m - 1 / 4 v_0 (u_q^(m-1) + u_q^(m+1))
 $ <eq:theory-bloch-uq-schroedinger>
 
-The coefficients $u_(q,m)$ are coupled by the Fourier series coefficients $c_(m eq.not 0)$ of the optical lattice potential.
-@eq:theory-bloch-uq-schroedinger can be written as a matrix and solved numerically for each quasi-momentum $q$.
-The size of the matrix depends on the values that are chosen for the index $m$.
-Since the diagonal matrix element is proportional to $m^2$, it scales quite quickly with the range of $m$.
-The minimal required range of $m$ that does not falsify the result depends on the lattice depth $v_0$ since the coupling of the coefficients $u_(q,m)$ can be neglected when the diagonal matrix elements are (much) greater than the off-diagonal matrix elements.
-In any case, the range of the index $m$ will determine the size of the matrix @eq:theory-bloch-uq-schroedinger and therefore also the number of eigenvalues $epsilon_n (q)$ and eigenvectors based on the coefficients $u_(q,m)$.
+where $epsilon_n (q)$ are the eigenenergies with the band index $n$.
+The sum over all $m$ is eliminated by using the orthogonality of the complex exponential functions $cexp(2 m x)$.
+To find the eigenenergies $epsilon_n (q)$ for a fixed quasimomentum $q$, @eq:theory-bloch-uq-schroedinger is expressed as a matrix where the rows and columns correspond to the index $m$.
+The dimension of the matrix depends on the cutoff $abs(m) <= m_max$.
+If $m_max^2$ in the diagonal term is greater than the prefactor $-1/4 v_0$ of the coupling term, the result will not be affected by a further increase of $m_max$.
+The diagonalization of the matrix will reveal the eigenenergies $epsilon_n (q)$ and the eigenvector coefficients $u_q^m$ from which the Bloch waves can be computed.
+As a function of the quasimomentum $q$, the eigenenergies $epsilon_n (q)$ form energy bands with the band index starting from $n = 1$.
+The Bloch waves $psi_q^n (x)$ are the corresponding eigenvectors of the Hamiltonian @eq:theory-bloch-hamiltonian.
 
-When looking at the eigenvalues $epsilon_n (q)$ as a function of the quasi-momentum $q$, we can see in @fig:theory-bloch-energy-bands that the eigensolutions form so-called _energy bands_ in quasi-momentum space.
-The _band index_ $n$ starts at $1$ for the lowest band and increases in integer steps to the dimension of the matrix.
-For each value of $n$ the eigenvalues $epsilon_n (q)$ form a continuous function of the quasi-momentum $q$, and _band gaps_ appear between trapped bands where $epsilon_n (q) < v_0$.
+In @fig:theory-bloch-energy-bands, the four lowest energy bands are shown with the corresponding Bloch waves at $q = 0$.
+The lowest band with index $n = 1$ is #tr[deeply] trapped in the optical lattice potential.
+Therefore, the dispersion $epsilon_1 (q)$ is nearly constant and the Bloch wave shows maxima on the lattice sites and vanishes inside the potential $V(x)$.
+Both aspects show a similarity to the ground state of the harmonic oscillator.
+In deeper lattices, this behavior is extended to excited bands and the corresponding excited states of the harmonic oscillator #tr[ref @fig:mod-intro-theory?].
+For the lattice depth $V_0 = #qty[15][Erec]$, the band with index $n = 4$ is no longer trapped according to the condition $epsilon_n (q) > V_0$.
+As a result, the dispersion $epsilon_n (q)$ and the Bloch wave $psi_(q=0)^n (x)$ resemble a free particle with momentum $p$.
+At $q = 0$, the band gap to the fifth band is closed, and the Bloch wave only changes slightly at the positions of the potential maxima.
+This behavior can be found in all energy bands that are not trapped inside the potential anymore.
+In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite band width $Delta epsilon_n (q)$ and Bloch waves that follow the shape of the potential $V(x)$.
+#tr[Anything else to add?]
 
-#figure(
-  image("figures/optical-lattices-energy-bands.png"),
+#floating-figure(
+  image("figures/theory_band_structure.png"),
   caption: [
-    Energy bands in an optical lattice with depth $v_0 = #qty[#text(red)[15]][Erec]?$.
-    In quasi-momentum space the energy bands $epsilon_n (q)$ are only uniquely defined in the interval $q slash k = [-1, 1)$ due to the periodicity of the optical lattice potential.
-    The widths of the bands increase with the band index $n$ since the impact of the optical lattice potential on the particles is reduced.
-    For untrapped bands with $epsilon_n (q) > v_0$ the band gaps disappear and the shape of the energy bands approaches the dispersion relation of free particles in the n-th Brillouin zone that is shifted by $2(n-1) dot k$.
-  ],
-) <fig:theory-bloch-energy-bands>
+    Band structure of an optical lattice with a depth of $V_0 = #qty[15][Erec]$.
+    In *a*, the four lowest energy bands $epsilon_n (q)$ are shown in the first Brillouin zone $q slash k = [-1, 1)$.
+    The band with index $n = 1$ appears to be flat since its width is only $Delta epsilon_1 approx #qty[0.026][Erec]$.
+    The higher bands show finite band widths that are increasing with the index $n$.
+    In *b*, the band energies and the Bloch waves $psi_(q=0)^n (x)$ are shown in relation to the potential $V(x)$.
+    The offsets for the Bloch waves are the corresponding energies $epsilon_n (q = 0)$, and the solid (dashed) lines indicate the real (imaginary) parts.
+    The parity of the Bloch waves alternates with the band index $n$ according to $cal(P) = (-1)^(n-1)$.
+    For the lowest band $n = 1$, the Bloch wave on a single site looks like the ground state of the harmonic oscillator potential.
+    With an increasing band index $n$, the Bloch waves are further delocalized until they approach plane waves $phi.alt(x) prop cexp(p x slash phy.hbar)$ describing a free particle with the momentum $p$.
+    Correspondingly, the band gaps are getting smaller until the energy bands show the dispersion $epsilon = p^2 / (2 m)$ of a free particle mapped onto the first Brillouin zone.
 
-We can compute the functions @eq:theory-bloch-uq-fourier-series using the Fourier coefficients from the eigenvectors corresponding to the eigenvalues $epsilon_n (q)$
-These are not the Bloch waves yet since the prefactor $cexp(q x)$ is still missing, but it makes sense to look at these functions first since they show the part of the Bloch wave with the same periodicity as the optical lattice potential.
-The prefactor $cexp(q x)$ will then only slightly adjust the phase of the Bloch wave across the optical lattice potential based on the quasi-momentum $q$.
+    #notes[
+      - Really show the Bloch waves with the offset $epsilon_n (q = 0)$?
+      - Do not include $q slash k = 1$ to respect the first Brillouin zone?
+      - Really use labels instead of a legend?
+      - Add harmonic oscillator ground state here for $n = 1$?
+      - Add free-particle wave for $n = 4$?
+      - Plot the bottom of the band $n = 5$ to show the closed band gap?
+    ]
+  ],
+  label: <fig:theory-bloch-energy-bands>,
+)

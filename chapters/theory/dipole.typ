@@ -75,9 +75,9 @@ The time-dependence of the electric field @eq:theory-dipole-gaussian[] is averag
 If the local intensity of the beams is not equal, a running-wave term is added to @eq:theory-lattice-intensity.
 This term does not affect the microscopic properties of the interference pattern, just like the Gaussian envelope of the individual laser beams.
 Both contributions are omitted here for the derivation of the optical lattice potential.
-The interference term in @eq:theory-lattice-intensity describes an oscillation in space defined by the wavevector $Delta phy.vb(k) = k2 - k1$.
+The interference term in @eq:theory-lattice-intensity describes an oscillation in space defined by the vector $Delta phy.vb(k) = k2 - k1$.
 Therefore, the period $a = pi / abs(Delta phy.vb(k))$ depends on the #tr[amplitude/absolute/mangitude] $k$ of the wavevectors as well as the angle between the two interfering beams.
-If the two beams are counterpropagating, their wavevectors are related by $phy.vb(k)_2 = -phy.vb(k)_1$ and the #tr[amplitude/absolute/magnitude] of the interference wavevector is $abs(Delta phy.vb(k)) = 2k$.
+If the two beams are counterpropagating, their wavevectors are related by $phy.vb(k)_2 = -phy.vb(k)_1$ and the #tr[amplitude/absolute/magnitude] of the interference vector is $abs(Delta phy.vb(k)) = 2k$.
 The resulting period is $a = lambda / 2$ where $lambda = (2 pi) / k$ is the wavelength of the interfering beams.
 For a general intersection angle $2 dot alpha$ between the wavevectors #k1 and #k2, the expression for the period is
 
@@ -87,8 +87,6 @@ $ <eq:theory-lattice-period>
 
 At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.
 @fig:theory-lattice-intersection-angle illustrates the change of the lattice period in a shallow-angle configuration compared to the counterpropagating configuration where $k2 = -k1$.
-// A shallow angle can be used to select
-// The change of the lattice period in a shallow-angle configuration compared to the counterpropagating configuration where $k2 = -k1$ is illustrated in @fig:theory-lattice-intersection-angle.
 
 #floating-figure(
   lattice-configurations(),
@@ -97,12 +95,12 @@ At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is reco
     The wavelengths $lambda$ of the individual beams in the two examples are equal, as indicated by the equal lengths of the wavevectors $abs(k1) = abs(k2)$.
     The configuration on the left shows the interference of two counterpropagating beams with $k2 = - k1$.
     The resulting interference pattern is parallel to the two wavevectors with the period $a = lambda / 2$.
-    With the shallow angle $alpha$ as shown on the right, the wavevector $Delta phy.vb(k)$ points in the vertical direction.
+    With the shallow angle $alpha$ as shown on the right, the vector $Delta phy.vb(k)$ points in the vertical direction.
     The parallel components of #k1 and #k2 do not contribute to the interference pattern, causing the lattice period $a$ to be larger
 
     #notes[
       - Add *a* and *b* here to reference the different configurations?
-      - Show the wavevector $Delta phy.vb(k)$ in the two configurations?
+      - Show the vector $Delta phy.vb(k)$ in the two configurations?
       - Use a different angle, since $alpha$ is also the polarizability?
       - Add a coordinate system $x$ and $y$?
     ]
@@ -111,19 +109,19 @@ At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is reco
 )
 
 The optical lattice potential can be computed directly from the dipole potential in @eq:theory-dipole-terms and the interference pattern in @eq:theory-lattice-intensity.
-When the coordinate system is oriented such that $Delta phy.vb(k) || phy.vu(x)$, the optical lattice potential can be written as
+In a coordinate system where $Delta phy.vb(k) || phy.vu(x)$, the optical lattice potential can be written as
 
 $
   V(x) = V_0 dot sin^2(k x)
 $ <eq:theory-lattice-potential>
 
-with the lattice depth $V_0$ and the wavevector $k = (2 pi) / lambda$.
+with the lattice depth $V_0$ and the lattice vector $k = abs(Delta phy.vb(k)) = pi / a$.
 The lattice depth takes the intensity $I(0) = abs(phy.vb(E)_0)^2$, the detuning $Delta$ and the other parameters of the atom-light interaction into account.
 This expression for the optical lattice potential can be used for red-detuned light and blue-detuned light.
 The practical difference between the two detunings is the location where the atoms are trapped.
 In a red-detuned optical lattice, the atoms are attracted by the intensity maxima of the interference pattern.
 On the other hand, in a blue-detuned optical lattice, the atoms are trapped in the intensity minima.
-In the direction of the lattice wavevector $Delta phy.vb(k)$, the two potentials therefore only differ by a global energy offset as shown in @fig:theory-lattice-detuning.
+In the direction of the lattice vector $Delta phy.vb(k)$, the two potentials therefore only differ by a global energy offset as shown in @fig:theory-lattice-detuning.
 The relevant differences between the two detunings can be found in the scattering rate and the radial potential.
 Since the scattering rate in @eq:theory-dipole-terms is proportional to the local intensity $I(phy.vb(r))$, the scattering rate will be maximal (minimal) if the lattice is red-detuned (blue-detuned).
 If the scattering causes an atom loss or a heating of the atoms, a blue-detuned optical lattice can be used to minimize these effects.
@@ -140,30 +138,3 @@ This is primarily relevant for the trapping of atoms in a three-dimensional opti
     For a blue-detuned lattice as shown in the plot on the right, the atoms are trapped at the minima of the intensity.
   ],
 ) <fig:theory-lattice-detuning>
-
-The amplitude $V_0$ is also called _lattice depth_, and the wave vector is $k = (2 pi) / lambda$ where $lambda$ is the wavelength of the light that is used to create the optical lattice.
-The Hamiltonian to describe non-interacting particles in the potential @eq:theory-lattice-potential is
-
-$
-  accent(H, hat) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V(x)
-$ <eq:theory-lattice-hamiltonian>
-
-To further simplify the Hamiltonian @eq:theory-lattice-hamiltonian we are going to introduce dimensionless coordinates $x -> x slash k$.
-Since $1 slash k$ or rather $a = pi slash k$ is the characteristic length scale of the system, it makes sense to compute everything in relative coordinates.
-
-$
-  accent(H, hat)
-  = -(phy.hbar^2 k^2) / (2m) phy.dv(, x, 2) + V_0 dot sin^2 x
-$ <eq:theory-lattice-hamiltonian-dimensionless-x>
-
-There is also a characteristic energy scale that can be used to make the entire Hamiltonian dimensionless.
-The prefactor of the kinetic term in @eq:theory-lattice-hamiltonian-dimensionless-x is called _recoil energy_ #unit[Erec] since it is the kinetic energy transferred to an atom during the absorption or emission of a single photon with the wave vector $k$.
-Dividing the RHS of @eq:theory-lattice-hamiltonian-dimensionless-x by the recoil energy #unit[Erec] yields the dimensionless Hamiltonian
-
-$
-  accent(h, hat)
-  = accent(H, hat) / #unit[Erec]
-  = - phy.dv(, x, 2) + v_0 dot sin^2 x
-$ <eq:theory-lattice-hamiltonian-dimensionless-xy>
-
-with $#unit[Erec] = (phy.hbar^2 k^2) / (2m)$ and $v_0 = V_0 / #unit[Erec]$.
