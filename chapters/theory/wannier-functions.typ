@@ -2,82 +2,114 @@
 
 == Wannier functions <sec:theory-wannier>
 
-The Bloch waves introduced in @sec:theory-bloch have a discrete quasi-momentum $q$ and are therefore completely delocalized over the optical lattice potential.
-Wannier functions on the other hand are (maximally) localized in space and provide an alternative basis to describe particles in an optical lattice potential.
-They can be computed directly from the Bloch waves $psi_(n,q) (x)$ with a Fourier-like transformation
-
-$
-  w_(n,i)(x)
-  := w_n (x - x_i)
-  = 1 / sqrt(N_L) sum_(q in #h(-0.00em) "BZ") ncexp(q x_i) dot psi_(n,q) (x)
-$ <eq:theory-wannier-transformation>
-
-where $n$ is the band index, $N_L$ is the number of lattice sites and the sum over $q$ takes all quasi-momentum states in the first Brillouin zone into account.
-The coordinate $x_i$ represents the position of the lattice site where the Wannier function is located.
-Because of the gauge freedom the (global) phases of the Bloch functions can be chosen such that the functions are always real.
-
-Since the Wannier functions $w_(n,i)(x)$ describe localized particles, they are great candidates to compute the tunneling amplitude between (neighbouring) sites and the interaction energy of two particles on the same site.
-For the tunneling amplitude it is sufficient to consider the one-dimensional Wannier functions $w_(n,i)(x)$.
-#footnote[
-  Taking the complex conjugate of the "target" Wannier function $w_(n,j)(x)$ is not necessary since the Wannier functions @eq:theory-wannier-transformation are real.
+#notes[
+  - Find the correct name for the transformation Bloch -> Wannier
+  - Use "atoms" or "particles" in the theory?
+  - Check the orthonormal basis...
+  - Explain why the Wannier function can always be real?
+  - Where to mention fermion statistics for the first time?
+  - Use interaction "energy" or interaction "strength"?
+  - Use "strong" or "strongly" repulsive/attractive interaction?
 ]
 
+The Bloch waves introduced in @sec:theory-bloch have a discrete quasimomentum $q$ and are therefore completely delocalized over the optical lattice potential.
+In the Wannier basis, maximally localized wavefunctions are used to describe individual particles localized on a lattice site #tr[cite Wannier].
+The _Wannier functions_ can be computed directly from the Bloch waves $psi_q^n (x)$ with a Fourier-like transformation
+
 $
-  t_(i,j) #sym.slash #h(0.1em) #unit[Erec]
-  = - integral phy.dd(x) w_(n,j)(x) (- phy.dv(, x, 2) + v_0 dot sin^2(x)) w_(n,i)(x)
+  w_n (x - x_i)
+  = 1 / sqrt(N) sum_(q in #h(0em) "BZ") psi_q^n (x) med ncexp(q x_i)
+$ <eq:theory-wannier-transformation>
+
+where $n$ is the band index, $N$ is the number of lattice sites.
+The sum over $q$ takes all quasimomentum states in the first Brillouin zone into account, and the coordinate $x_i$ represents the position where the Wannier function is located.
+Just like the Bloch waves, the Wannier functions of the different bands $n$ at the position $x_i$ form an orthonormal basis.
+In #subref(<fig:theory-wannier>, "a") the Wannier functions computed from the Bloch waves in @fig:theory-bloch-energy-bands are shown.
+The Wannier function of the lowest band confirms the similarity of the band structure and the Bloch wave to the ground state of the harmonic oscillator.
+On the lattice site at $x_i = 0$, the Wannier function looks identical to the Gaussian wavefunction in a harmonic oscillator potential.
+However, the Wannier function also has a finite amplitude on the neighbouring lattice sites.
+In the shallower lattice in #subref(<fig:theory-wannier>, "b"), the overlap of the Wannier functions on adjacent lattice sites is clearly visible.
+This property enables a tunneling process of the localized particle in the optical lattice.
+The tunneling amplitude from the lattice site $i$ to the lattice site $j$ can be computed as the off-diagonal matrix element
+
+$
+  t_(i,j) #sym.slash#unit[Erec]
+  = - integral phy.dd(x) w_n (x - x_j) med hat(h) med w_n (x - x_i)
 $ <eq:theory-wannier-tunneling-amplitude>
 
-The tunneling amplitudes $t_(i,j)$ are the off-diagonal matrix elements of the hamiltonian @eq:theory-bloch-hamiltonian in the Wannier basis, and they quantify the tunneling rate between the lattice sites $i$ and $j$.
-The rate of tunneling can be tied to the finite amplitude of the Wannier function $w_(n,i)(x)$ on the target site $j$ (and vice-versa).
-In a (reasonably) deep lattice the finite amplitude can also be clearly observed on the neighbouring lattice site, see @fig:theory-wannier-tunneling.
+of the dimensionless Hamiltonian @eq:theory-bloch-hamiltonian-dimensionless[] in the Wannier basis.
+While the tunneling amplitude can be computed for arbitrary lattice sites $i$ and $j$, the most common one is $t_1 := t_(i, i plus.minus 1)$ between neighbouring lattice sites as shown in #subref(<fig:theory-wannier>, "b").
+Tunneling over longer distances is exponentially suppressed and can be neglected in most cases.
 
-#figure(
-  image("figures/wannier-functions-tunneling-overlap.png"),
+#floating-figure(
+  image("figures/theory_wannier_functions.png"),
   caption: [
-    Wannier functions of the lowest band on neighbouring lattice sites in an optical lattice with depth $v_0 = #qty[#text(red)[15]][Erec]?$.
-    The zero point of the second y-axis is shifted to the mean energy of the lowest band $epsilon_1 (q)$.
-    The on-site portion of the Wannier functions resembles the ground state wavefunction of the harmonic oscillator potential.
-    With increasing lattice depth the Wannier functions will converge towards the harmonic oscillator solution.
-    The off-site portion of the Wannier functions is however vastly different than the harmonic oscillator solution.
+    Wannier functions in an optical lattice.
+    *a* shows the Wannier functions in an optical-lattice potential with a depth of $V_0 = #qty[15][Erec]$.
+    Since the Wannier functions are computed from the superposition of all Bloch waves, the mean energy of the corresponding bands $epsilon_n (q)$ is used as the offset.
+    The Wannier function of the lowest band with index $n = 1$ appears to be completely localized to the lattice site at $x = 0$.
+    For the bands $n = 2$ and $n = 3$, a small amplitude is visible on the neighbouring sites.
+    In the untrapped band with index $n = 4$, the Wannier function appears to be delocalized over multiple lattice sites.
+    *b* shows the Wannier functions in the lowest band for a lattice depth of $V_0 = #qty[6][Erec]$.
+    The horizontal line highlights the finite amplitude on neighbouring lattice sites.
+
+    #notes[
+      - Go into more detail for the intermediate and untrapped bands?
+    ]
   ],
-) <fig:theory-wannier-tunneling>
+  label: <fig:theory-wannier>,
+)
 
-While an actual particle will be described by a three-dimensional wavefunction, the axes perpendicular to the tunneling event can be ignored if the wave functions do not change along the axes perpendicular to the tunneling event between the lattice sites $i$ and $j$.
-In a three-dimensional optical lattice this is (almost) always the case, which greatly simplifies the computation of the tunneling amplitudes.
+Even though the Wannier functions @eq:theory-wannier-transformation[] are maximally localized, they cannot completely describe a particle since they are only one-dimensional.
+The total wavefunction of a particle must always be three-dimensional.
+For the tunneling amplitude, the other two dimensions can only be ignored if the potential is separable into three orthogonal #tr[axes/potentials] such as $V(phy.vb(r)) = V(x) + V(y) + V(z)$.
+In that case, the Schrödinger equation can be solved separately for each axis, and the total wavefunction will be the product of the wavefunctions in the three dimensions $psi(phy.vb(r)) = psi_x (x) dot psi_y (y) dot psi_z (z)$.
+For a general potential $V(phy.vb(r))$, the tunneling amplitude @eq:theory-wannier-tunneling-amplitude[] would require a three-dimensional integral of the total wavefunctions.
+If the optical dipole potential consists of a single red-detuned optical lattice, only one of the wavefunctions will be a Wannier function according to @eq:theory-wannier-transformation.
+The wavefunctions #tr[for/of] the other two axes will depend on the radial confinement as discussed in @sec:theory-dipole.
+In a three-dimensional optical lattice on the other hand, the total wavefunction will be the product of three Wannier functions.
 
-To compute the interaction, on the other hand, the three-dimensional wave functions are required since the contact interaction is proportional to the actual density of the two particles.
-If we consider that atoms/particles on the site $i$ are described by the Wannier function $w_(n,i)(phy.vb(r))$, the interaction strength of two particles on the same site is
+Considering the total wavefunction in three dimensions is required to compute the interaction energy.
+Compared to the tunneling amplitude, the #tr[contact] interaction is a two-particle effect that scales with the density $n(phy.vb(r)) = abs(psi(phy.vb(r)))^2$ of both particles.
+While the interaction can also be computed for particles on different sites, the on-site interaction is always the strongest one.
+The interaction energy of two particles with the same spatial wavefunction $w(phy.vb(r))$ is
 
 $
   U
-  = (4 pi phy.hbar^2 a_upright("sc")) / m
-  integral phy.dd(phy.vb(r), 3) abs(w_(n,i)(phy.vb(r)))^4
+  = (4 pi phy.hbar^2 asc) / m
+  integral phy.dd(phy.vb(r), 3) abs(w(phy.vb(r)))^4
 $ <eq:theory-wannier-interaction-strength>
 
 where #asc is the scattering length that characterizes the magnitude and the sign of the interaction.
-For attractive (repulsive) interactions $asc < 0$ ($asc > 0$) the interaction will decrease (increase) the energy of the particles.
-Since @eq:theory-wannier-interaction-strength is proportional to the squared density, the magnitude of the interaction energy will also strongly depend on the confinement of the particles.
+If the scattering length is negative (positive), the corresponding interaction will be attractive (repulsive) and the energy of the two particles will be decreased (increased).
+Since the integrand in @eq:theory-wannier-interaction-strength is proportional to the squared density, the magnitude of the interaction energy will also strongly depend on the confinement of the particles.
 A strong confinement will compress the wavefunction and therefore increase the integral in @eq:theory-wannier-interaction-strength.
-If the particles are trapped in the ground state of deep optical lattices along all three axes, we can estimate the trap by three perpendicular harmonic oscillator potentials with the trap frequencies $omega_(x,y,z)$.
-The interaction strength is then proportional to the geometric mean of the trap frequencies
+While the interaction energy can be computed for particles in excited states, only the ground state is considered from here on.
+To estimate the scaling due to the confinement, a three-dimensional optical lattice can be approximated by three harmonic oscillator potentials with the trap frequencies $omega_(x, y, z)$.
+Then, the interaction energy is proportional to the geometric mean
 
 $
   U prop sqrt(omega_x omega_y omega_z)
 $ <eq:theory-wannier-interaction-scaling>
 
-A weak(er) confinement along any of the three axes will therefore significantly reduce the magnitude of the interaction strength.
+which will significantly reduce the interaction energy if only one axis has a weaker confinement.
+The trap frequency in the harmonic approximation scales like $omega prop sqrt(v_0) slash a^2$, where $v_0$ is the dimensionless lattice depth and $a$ is the lattice period.
+Therefore, different lattice periods will usually have the strongest impact on the confinement and the resulting interaction energy.
 
-Since the interaction energy @eq:theory-wannier-interaction-strength is computed with the non-interacting Wannier functions, the change of the wavefunctions due to the interaction energy is not taken into account yet.
-If the two particles have a strong repulsive interaction, we would expect their wavefunctions to "decompress" such that the integral in @eq:theory-wannier-interaction-strength is reduced. #footnote[For attractive interactions we would expect the density to get compressed instead.]
-The decompression will also reduce the energy of the kinetic term in the Hamiltonian, but the energy of the potential term will be increased.
-Solving this interplay of the kinetic energy, the potential energy and the interaction energy to find the interacting Wannier functions in an optical lattice potential is not practical.
-In a three-dimensional harmonic oscillator, however, this can be solved using a variational approach to find the ground state energy $E$ of two interacting particles as a function of $asc slash l$ where $l = sqrt((2 phy.hbar) / (m omega))$ is the characteristic oscillator length in the harmonic oscillator potential.
-The shift of the ground state energy is then rescaled using @eq:theory-wannier-interaction-strength with the non-interacting Wannier function and with the three-dimensional gaussian function as the ground state wavefunction of the non-interacting harmonic oscillator.
+Since the interaction energy @eq:theory-wannier-interaction-strength[] is computed with the non-interacting Wannier functions, a change of the wavefunctions due to the interaction cannot be taken into account.
+However, unless the interaction energy is small compared to the kinetic term and the potential term in the single-particle Hamiltonian, the actual wavefunction will change to take the interaction into account.
+In the case of a strong repulsive interaction, the wavefunction will expand to reduce the integral in @eq:theory-wannier-interaction-strength.
+Correspondingly, the wavefunction will shrink in response to a strong attractive interaction.
+Solving this interplay of the kinetic energy, the potential energy and the interaction energy to find the interacting Wannier functions is not practical.
+However, in a three-dimensional harmonic oscillator the ground state energy $E$ of two interacting particles can be found with a variational approach.
+This correction of the interaction energy is applied to the Wannier functions with the expression
 
 $
-  U = U_"Wannier" / U_"Gauss" dot (E(asc) - E(asc=0))
+  U = U_"Wannier" / U_"Gauss" dot Delta E(asc)
 $ <eq:theory-wannier-interaction-correction>
 
-In an isotropic three-dimensional optical lattice where $omega_x = omega_y = omega_z$ the calculation is quite straight forward since all axes contribute equally.
-If the trapping potential is only equal along two axes of the optical lattice, the problem can be solved in cylindrical coordinates with an aspect ratio $eta = omega_(x,y) slash omega_z$. #text(red)[Idziaszek and Calarco]
-The general case of three different trapping potentials $omega_x eq.not omega_y eq.not omega_z$ was solved by ...
+where the shift of the energy $Delta E$ compared to the non-interacting harmonic oscillator only depends on the scattering length #asc in units of the oscillator length $x_0 = sqrt(phy.hbar / (m omega))$.
+The analytical solution decomposes the wavefunction $psi(phy.vb(r))$ in the non-interacting basis and minimizes the energy of the interacting Hamiltonian.
+In an isotropic three-dimensional harmonic oscillator where $omega_x = omega_y = omega_z$, the spherical symmetry of the potential can be used to find the analytical solution #tr[cite Busch (1998)].
+Since then, this approach has been extended to cylindrically symmetric potentials where $omega_x = omega_y != omega_z$ #tr[cite Idziaszek and Calarco (2005 + 2006)], and to completely anisotropic potentials where $omega_x != omega_y != omega_z$ #tr[cite Chen (2020)].
+The fraction $U_"Wannier" / U_"Gauss"$ in @eq:theory-wannier-interaction-correction applies a correction to the energy $Delta E$ that takes the subtle differences between the Wannier functions and the Gaussian wavefunctions as the ground state of the harmonic oscillator into account #tr[cite Schneider 2009].
