@@ -21,5 +21,5 @@ We use the two-site Hubbard model to explain the behavior of two interacting fer
 
 #include "dipole.typ"
 #include "bloch.typ"
-#include "wannier-functions.typ"
+#include "wannier.typ"
 #include "superlattice.typ"
