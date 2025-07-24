@@ -25,6 +25,11 @@
 #let band = $epsilon$
 #let cband = $tilde(epsilon)$
 
+#let eL = $epsilon_L$
+#let eR = $epsilon_R$
+#let tin = $t_"in"$
+#let tout = $t_"out"$
+
 // a shortcut for red text to be used as an annotation
 #let tr = text.with(red)
 

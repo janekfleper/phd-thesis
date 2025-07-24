@@ -126,12 +126,15 @@ This is not as obvious for the two upper bands, but their Bloch waves still show
 
 #notes[
   - Even mention the gauge freedom?
+  - Mention orthonormality of BPO Wannier functions?
+  - Use the abbreviations BPO and MLWF?
+  - Where to mention the implementation and optimization of the theory?
 ]
 
 #tr[Figure out some introductory sentence...]
 With the definition @eq:theory-wannier-transformation[], the Wannier functions would conserve the symmetry of the Bloch waves inside the unit cell.
-In a symmetric superlattice, the Wannier functions for each band $n$ would then be delocalized over the two sides of the unit cell.
-While these are valid Wannier functions, they are not maximally localized in the superlattice potential.
+In a symmetric superlattice, the Wannier functions for each band $n$ are spread across both lattice sites in a unit cell.
+While these are valid Wannier functions, they are not maximally localized #tr[on/to] a single lattice site.
 In general, finding the maximally localized Wannier functions requires a minimization of the spatial variance $sigma_x^2 = phy.expval(x^2) - phy.expval(x)^2$ using numerical methods #tr[cite Marzari 1997 (paper) + 2012 (review)].
 However, in one-dimensional systems these Wannier functions can be derived with the band-projected position operator #tr[cite Kivelson (1982)].
 The application to optical lattices was worked out in #tr[cite Bissport (2012)], and the calculation for the specific case of the superlattice potential is shown in #tr[cite Görg (2014)].
@@ -142,7 +145,7 @@ It is not possible for a superosition of the Bloch waves from a single band to h
 Therefore, the approach to find the maximally localized Wannier functions takes multiple bands into account #tr[cite Bissbort].
 The number of bands has to be equal to the number of separate Wannier functions inside the unit cell.
 In the case of the superlattice potential @eq:theory-super-potential-dimensionless[], we are therefore using two bands at a time.
-For the Bloch waves in the symmetric superlattice shown in #subref(<fig:theory-super-band-structure>, "b"), we can expect an equal mixture of the lowest two bands to localize the Wannier functions to the left or the right sublattice site.
+For the Bloch waves in the symmetric superlattice shown in #subref(<fig:theory-super-band-structure>, "b"), we can expect an equal mixture of the lowest two bands to localize the Wannier functions to the left or the right lattice site of the unit cell.
 If the Wannier functions $w_1 (x)$ and $w_2 (x)$ are computed with @eq:theory-wannier-transformation, the maximally localized Wannier functions will be
 
 $
@@ -151,26 +154,13 @@ $ <eq:theory-super-wannier-superposition>
 
 This mixture of the Wannier functions is illustrated in the insets in @fig:theory-super-wannier-mixing.
 Since the underlying bands $epsilon_1 (q)$ and $epsilon_2 (q)$ have a different energy, the time evolution of the superposition will alternate between the Wannier functions $w_L (x)$ and $w_R (x)$.
-In the Wannier picture, this can be interpreted as the tunneling event inside the unit cell where the tunneling amplitude is proportional to the energy gap $Delta epsilon = epsilon_2 (q) - epsilon_1 (q)$.
-However, the tunneling amplitude can also be computed with the integral @eq:theory-wannier-tunneling-amplitude[] based on the spatial overlap of the Wannier functions.
-Despite the maximal localization, the Wannier functions $w_L (x)$ and $w_R (x)$ will have a finite amplitude on the neighbouring sublattice sites.
-Compared to the regular lattice, there are two different tunneling amplitudes between neighbouring sublattice sites in the superlattice potential.
+The frequency of the time evolution is proportional to the energy gap $Delta epsilon = epsilon_2 (q) - epsilon_1 (q)$.
+This oscillation between the left and the right lattice site is equivalent to the tunneling event in the Wannier picture.
+Despite the maximal localization, the Wannier functions $w_L (x)$ and $w_R (x)$ will have a finite amplitude on the neighbouring lattice sites, and the tunneling amplitude can be computed with the integral @eq:theory-wannier-tunneling-amplitude[].
+Compared to the regular lattice, there are two different tunneling amplitudes in the superlattice potential.
 The particle can either tunnel _inside_ of the unit cell or _outside_ of the unit cell.
 Due to the smaller potential barrier inside the unit cell, the amplitude $t_"in"$ is always greater than the amplitude $t_"out"$.
 To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x - x_i)$ and $w_R (x - x_(i-1))$ are used, where $i$ is the index of the unit cell.
-
-In an asymmetric superlattice, the degeneracy of the sublattice sites inside the unit cell is lifted.
-This causes the Wannier functions of the individual bands to become more localized until they are equal to the maximally localized Wannier functions $w_L (x)$ and $w_R (x)$.
-To visualize this change, the composition of the Wannier function $w_L (x)$ is shown in #subref(<fig:theory-super-wannier-mixing>, "b") as a function of the superlattice phase $phi$.
-The Wannier function $w_L (x)$ approaches either the Wannier function $w_1 (x)$ or the Wannier function $w_2 (x)$, depending on the sign of the superlattice phase.
-At the phase $phi = pi slash 10$ in @fig:theory-super-wannier-mixing, the insets only show subtle differences between $w_L (x)$ and $w_1 (x)$ as well as $w_R (x)$ and $w_2 (x)$.
-In the opposite configuration $phi = -pi slash 10$, the association of the Wannier functions will switch.
-While $w_L (x)$ and $w_R (x)$ are always localized on the left and right sublattices sites, the Wannier functions $w_1 (x)$ and $w_2 (x)$ will be localized on the lower and upper sublattice sites respectively.
-This is a consequence of the different bases.
-The band-projected position operator orders the Wannier functions by their position from left to right, whereas the Wannier functions computed directly from the Bloch waves are ordered by their corresponding energy bands.
-
-// Besides the maximally localized Wannier functions, the band-projected position operator can also yield the tunneling amplitudes and the on-site energies corresponding to those Wannier functions.
-// In the eigenbasis of the band-projected position operator, the hamiltonian
 
 #floating-figure(
   image("figures/theory_superlattice_wannier_composition.png", width: 80%),
@@ -193,10 +183,57 @@ The band-projected position operator orders the Wannier functions by their posit
       - Add the coupling/mixing of the bands $n = 2$ and $n = 3$? Or just remove band $n = 3$ instead?
       - Improve the y-label of axes *b*? Maybe just "Composition $|<...>|$"
       - Explain why the data in *b* stops at $phi slash pi = 0.2$?
+      - Show the Wannier functions $w_3 (x)$ in the insets in *a*?
     ]
   ],
   label: <fig:theory-super-wannier-mixing>,
 )
+
+In an asymmetric superlattice, the degeneracy of the sublattice sites inside the unit cell is lifted.
+This causes the Wannier functions of the individual bands to become more localized until they are equal to the maximally localized Wannier functions $w_L (x)$ and $w_R (x)$.
+To visualize this change, the composition of the Wannier function $w_L (x)$ is shown in #subref(<fig:theory-super-wannier-mixing>, "b") as a function of the superlattice phase $phi$.
+The Wannier function $w_L (x)$ approaches either the Wannier function $w_1 (x)$ or the Wannier function $w_2 (x)$, depending on the sign of the superlattice phase.
+At the phase $phi = pi slash 10$ in @fig:theory-super-wannier-mixing, the insets only show subtle differences between $w_L (x)$ and $w_1 (x)$ as well as $w_R (x)$ and $w_2 (x)$.
+In the opposite configuration $phi = -pi slash 10$, the association of the Wannier functions will switch.
+While $w_L (x)$ and $w_R (x)$ are always localized on the left and right lattices sites, the Wannier functions $w_1 (x)$ and $w_2 (x)$ will be localized on the lower and upper lattice sites respectively.
+This is a consequence of the different bases that are used to compute the Wannier functions.
+The Wannier functions $w_n (x)$ computed directly from the Bloch waves are sorted by their corresponding energy bands.
+On the other hand, the eigenvalues of the band-projected position operator are the positions $x_(L,R)^i$ of the maximally localized Wannier functions.
+The Wannier functions $w_(L,R) (x)$ are therefore sorted from left to right.
+Besides the computation of the maximally localized Wannier functions, we can also use the eigenvectors of the band-projected position operator to find the associated tunneling amplitudes and the on-site energies #tr[cite Görg].
+If we transform the superlattice hamiltonian to the eigenbasis of the band-projected position operator, the matrix elements will show these properties of the Wannier functions.
+As an example, we are going to consider a superlattice potential with the system size $N = 2$.
+The resulting hamiltonian is
+
+$
+  hat(h)_"BPO" = mat(
+    eL^0, tin, , ;
+    tin, eR^0, tout;
+    , tout, eL^1, tin;
+    , , tin, eR^1;
+  )
+$ <eq:theory-super-hamiltonian-bpo>
+
+with the on-site energies $epsilon_(L,R)^i$ in each unit cell $i$ and the tunneling amplitudes inside and outside of the unit cells.
+The empty off-diagonal elements are higher-order tunneling amplitudes that are exponentially suppressed compared to #tin and #tout due to the distance between the corresponding Wannier functions.
+In terms of the runtime, the computation of the band-projected position operator is the most costly step.
+Since this is required for the maximally localized Wannier functions anyway, using the hamiltonian $hat(h)_"BPO"$ to get the tunneling amplitudes and on-site energies is the most efficient approach in terms of the computation time.
+The calculation of the tunneling amplitudes with @eq:theory-wannier-tunneling-amplitude and the calculation of the on-site energies with $epsilon_(L,R) = phy.braket(w_(L,R), hat(h), w_(L,R))$ both contain an integral over the position $x$.
+Setting up the hamiltonian $hat(h)_"BPO"$ only requires the basis tranformation of a small matrix.
+
+The composition of the Wannier function in #subref(<fig:theory-super-wannier-mixing>, "b") shows that the mixing of the corresponding bands follows the avoided crossing in the band structure.
+If the gap between the coupled bands becomes large, we expect the mixing to converge.
+However, the mixing will change again if one of the bands is part of another avoided crossing.
+In the superlattice potential, this is often the case for the band $n = 2$ which approaches the band $n = 3$ with an increasing phase $phi$.
+Therefore, computing the maximally localized Wannier functions with the bands $n = 1$ and $n = 2$ breaks down close to the antisymmetric phase $phi = pi slash 4$.
+For the Wannier function $w_L (x)$, we should only use the band $n = 1$ to avoid this issue.
+The mixture of the bands $n = 2$ and $n = 3$ will yield the Wannier function $w_R (x)$ and the Wannier function $w'_L (x)$ of the first excited state on the left.
+Handling the changing pairs of bands automatically would require more than two bands in the setup of the band-projected position operator.
+This is mentioned in #tr[cite Görg] to generalize the formalism to get more than two Wannier functions per unit cell.
+The downside of this approach is an additional projection of the Wannier functions depending on their position inside the unit cell.
+If the superlattice phase $phi$ changes, this can require a discrete change in the association of the Wannier functions with the left or the right lattice site.
+Since we only expect continuous changes of the maximally localized Wannier function, this association based on the positions of the Wannier functions is questionable.
+We therefore decided to only use pairs of bands that are close to each other in the band structure, which is also the approach recommended in #tr[cite Görg].
 
 
 === Hubbard parameters / SSH model <ssec:theory-super-hubbard>
