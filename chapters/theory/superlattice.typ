@@ -149,7 +149,7 @@ For the Bloch waves in the symmetric superlattice shown in #subref(<fig:theory-s
 If the Wannier functions $w_1 (x)$ and $w_2 (x)$ are computed with @eq:theory-wannier-transformation, the maximally localized Wannier functions will be
 
 $
-  w_L (x) = 1 / sqrt(2) (w_1 (x) + w_2 (x)) "and" w_R (x) = 1 / sqrt(2) (w_1 (x) - w_2 (x)) thin .
+  w_L (x) = 1 / sqrt(2) (w_1 (x) + w_2 (x)) quad "and" quad w_R (x) = 1 / sqrt(2) (w_1 (x) - w_2 (x)) thin .
 $ <eq:theory-super-wannier-superposition>
 
 This mixture of the Wannier functions is illustrated in the insets in @fig:theory-super-wannier-mixing.
@@ -159,7 +159,7 @@ This oscillation between the left and the right lattice site is equivalent to th
 Despite the maximal localization, the Wannier functions $w_L (x)$ and $w_R (x)$ will have a finite amplitude on the neighbouring lattice sites, and the tunneling amplitude can be computed with the integral @eq:theory-wannier-tunneling-amplitude[].
 Compared to the regular lattice, there are two different tunneling amplitudes in the superlattice potential.
 The particle can either tunnel _inside_ of the unit cell or _outside_ of the unit cell.
-Due to the smaller potential barrier inside the unit cell, the amplitude $t_"in"$ is always greater than the amplitude $t_"out"$.
+Due to the smaller potential barrier inside the unit cell, the amplitude #tin is always greater than the amplitude #tout.
 To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x - x_i)$ and $w_R (x - x_(i-1))$ are used, where $i$ is the index of the unit cell.
 
 #floating-figure(
@@ -206,7 +206,7 @@ As an example, we are going to consider a superlattice potential with the system
 The resulting hamiltonian is
 
 $
-  hat(h)_"BPO" = mat(
+  hat(H)_"BPO" = mat(
     eL^0, tin, , ;
     tin, eR^0, tout;
     , tout, eL^1, tin;
@@ -243,8 +243,8 @@ We therefore decided to only use pairs of bands that are close to each other in 
 )[In this subsection we will only discuss the dynamics in the maximally localized Wannier functions based on the lowest two bands!]
 If the superlattice potential is sufficiently deep, it makes sense to use the second quantization formalism again to describe the behavior of atoms inside the superlattice.
 The required parameters are the tunneling amplitude @eq:theory-wannier-tunneling-amplitude and the interaction strength @eq:theory-wannier-interaction-strength that were already introduced in @sec:theory-wannier.
-In general the tunneling amplitudes $t_"in"$ inside a doublewell will be greater than the tunneling amplitudes $t_"out"$ between separate doublewells due to the large potential barrier (mention the SSH model here?).
-We could actually use the integral in @eq:theory-wannier-tunneling-amplitude to compute the tunneling amplitudes $t_"in"$ and $t_"out"$ in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
+In general the tunneling amplitudes #tin inside a doublewell will be greater than the tunneling amplitudes #tout between separate doublewells due to the large potential barrier (mention the SSH model here?).
+We could actually use the integral in @eq:theory-wannier-tunneling-amplitude to compute the tunneling amplitudes #tin and #tout in the superlattice potential with the Wannier functions $phy.ket(w_L)$ and $phy.ket(w_R)$ from the same doublewell and from a neighbouring doublewell respectively.
 However, the computation of the maximally localized Wannier functions using the BPO matrix (#text(red)[what is the actual name here?] will already reveal the tunneling amplitudes between _all_ pairs of lattice sites in the system.
 In addition to the tunneling amplitudes, the BPO matrix will also reveal the (absolute) on-site energies of the sublattice sites.
 The relative detuning $2 Delta$ between neighbouring lattice sites is the last relevant parameter to describe the dynamics in doublewells (and extended SSH models?).
