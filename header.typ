@@ -10,6 +10,13 @@
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
+#let sn(L, J) = {
+  show math.frac: it => $it.num slash it.denom$
+  $attach(#L, tl: 2, br: #J)$
+}
+
+#let mF(N) = $phy.ket(#N)$
+
 #let asc = $a_upright("sc")$
 #let fita0 = sym.alpha
 

@@ -2,18 +2,14 @@
 
 = Experimental setup <ch:setup>
 
-The experimental setup cools fermionic Potassium 40 atoms from room temperature to quantum degeneracy.
-After the cooling the atoms are loaded into a three-dimensional optical lattice to study a variety of Hubbard models.
-I will briefly cover the different cooling stages from the magneto optical trap to the quantum degenerate Fermi gas inside the optical dipole trap.
-Since this covers the work of previous PhD students, I will reference their theses where the respective parts of the setup are explained in more detail.
+The experimental setup I am referring to in this thesis was built by several generations of PhD students.
+While the initial setup was used to study two-dimensional fermi gases #tr[cite Feld, Fröhlich + Vogt], it has since been upgraded #tr[by/to] a three-dimensional optical lattice #tr[cite Eugenio + Luke], and a vertical superlattice #tr[cite Jeffrey, Marcell, Nicola].
+During the early stages, there was also an in-plane superlattice #tr[cite Pertot (2014)] which was recently set up again #tr[cite Nick Master].
 
-The three-dimensional optical lattice is created by individual lattices using different geometries.
-Apart from the x-superlattice the setup of the lattices is unchanged compared to the previous generation of PhD students.
-I will nevertheless go into some details here since all of the lattices are relevant for the lattice modulation measurements in @ch:mod and the radial potential considerations at the end of @ch:super.
-The x-superlattice setup will be covered in great detail in @ch:super.
-
-To conclude the chapter I will present the hyperfine state manipulation capabilities and the available detection methods in our experimental setup.
-These are established techniques that are essential for the conduction of experiments inside the optical lattices.
+In this chapter, I will briefly summarize the experimental setup as of the start of my thesis.
+Furthermore, I will introduce the experimental sequence we use to cool the atoms from room temperature to a quantum degenerate fermi gas, which is then loaded into the optical lattices.
+The only major changes to the experimental setup are related to the in-plane superlattice, which I will discuss in detail in @ch:super.
+Modifications of the experimental sequence are introduced in the respective chapters.
 
 #include "k40.typ"
 #include "mot.typ"
