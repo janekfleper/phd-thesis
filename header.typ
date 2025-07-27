@@ -17,6 +17,7 @@
 
 #let mF(N) = $phy.ket(#N)$
 
+#let K40 = $phy.isotope("K", a: 40)$
 #let asc = $a_upright("sc")$
 #let fita0 = sym.alpha
 

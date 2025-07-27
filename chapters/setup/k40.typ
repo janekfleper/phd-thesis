@@ -3,7 +3,7 @@
 == Properties of Potassium-40 <sec:setup-k40>
 
 #notes[
-  - Where to mention the low abundance of K40? Here or in @sec:setup-mot?
+  - Where to mention the low abundance of K40? Here or in @sec:setup-prepare-mot?
   - Any "primary" citations to grab from the Tiecke properties?
   - Explain what s-wave Feshbach resonances are? In comparison to p-wave resonances?
 ]
@@ -34,10 +34,10 @@ Since $g_I$ does not depend on the electronic state, all of the aforementioned s
     Hyperfine structure of Potassium #phy.isotope("K", a: [40]).
     The states in *a* show the hyperfine splitting of the ground state $sn(S, 1/2)$ and the excited states $sn(P, 1/2)$ and $sn(P, 3/2)$.
     In the ground state $sn(S, 1/2)$, the hyperfine splitting is by far the largest with $Delta E slash h = #qty[1285.8][MHz]$.
-    We use the D2 line between $F = 9 slash 2$ and $F' = 11 slash 2$ for the magneto-optical trap (see @sec:setup-mot) and the imaging of the atoms (see @sec:setup-detect).
+    We use the D2 line between $F = 9 slash 2$ and $F' = 11 slash 2$ for the magneto-optical trap (see @sec:setup-prepare-mot) and the imaging of the atoms (see @sec:setup-detect).
     In addition, the transition between $F = 7 slash 2$ and $F' = 9 slash 2$ is required for the repumping in the magneto-optical trap.
     In *b*, the hyperfine structure of the ground state $sn(S, 1/2)$ is shown as a function of an external magnetic field $B$.
-    In the lower manifold with $F = 9 slash 2$, the four upper $m_F$ states (black) are used for the magnetic evaporation (see @sec:setup-ioffe).
+    In the lower manifold with $F = 9 slash 2$, the four upper $m_F$ states (black) are used for the magnetic evaporation (see @sec:setup-prepare-ioffe).
     The four lowest $m_F$ states and the state $m_F = -7 slash 2$ in the upper manifold are used for the internal-state manipulation during the detection and imaging (see @sec:setup-detect).
 
     #notes[
