@@ -79,13 +79,13 @@ The interference term in @eq:theory-lattice-intensity describes an oscillation i
 Therefore, the period $a = pi / abs(Delta phy.vb(k))$ depends on the #tr[amplitude/absolute/mangitude] $k$ of the wavevectors as well as the angle between the two interfering beams.
 If the two beams are counterpropagating, their wavevectors are related by $phy.vb(k)_2 = -phy.vb(k)_1$ and the #tr[amplitude/absolute/magnitude] of the interference vector is $abs(Delta phy.vb(k)) = 2k$.
 The resulting period is $a = lambda / 2$ where $lambda = (2 pi) / k$ is the wavelength of the interfering beams.
-For a general intersection angle $2 dot alpha$ between the wavevectors #k1 and #k2, the expression for the period is
+For a general intersection angle $2 dot anglez$ between the wavevectors #k1 and #k2, the expression for the period is
 
 $
-  a = lambda / (2 sin alpha) thin .
+  a = lambda / (2 sin anglez) thin .
 $ <eq:theory-lattice-period>
 
-At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.
+At $anglez = 90degree$, the counterpropagating case with $a = lambda / 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.
 @fig:theory-lattice-intersection-angle illustrates the change of the lattice period in a shallow-angle configuration compared to the counterpropagating configuration where $k2 = -k1$.
 
 #floating-figure(
@@ -95,7 +95,7 @@ At $alpha = 90degree$, the counterpropagating case with $a = lambda / 2$ is reco
     The wavelengths $lambda$ of the individual beams in the two examples are equal, as indicated by the equal lengths of the wavevectors $abs(k1) = abs(k2)$.
     The configuration on the left shows the interference of two counterpropagating beams with $k2 = - k1$.
     The resulting interference pattern is parallel to the two wavevectors with the period $a = lambda / 2$.
-    With the shallow angle $alpha$ as shown on the right, the vector $Delta phy.vb(k)$ points in the vertical direction.
+    With the shallow angle #anglez as shown on the right, the vector $Delta phy.vb(k)$ points in the vertical direction.
     The parallel components of #k1 and #k2 do not contribute to the interference pattern, causing the lattice period $a$ to be larger
 
     #notes[
