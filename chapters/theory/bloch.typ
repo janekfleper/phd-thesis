@@ -23,7 +23,7 @@ The resulting dimensionless Hamiltonian is
 
 $
   hat(h) = -phy.dv(, x, 2) + v_0 dot sin^2 x thin .
-$ <eq:theory-lattice-hamiltonian-dimensionless>
+$ <eq:theory-bloch-hamiltonian-dimensionless>
 
 In the Bloch theorem, the Hamiltonian is solved with an ansatz where the eigenfunctions have the same periodicity as the potential $V(x)$.
 The so-called Bloch waves have the form
