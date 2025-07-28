@@ -56,7 +56,7 @@ In order to detect only a single layer, the atoms inside that layer need to be t
 We achieve this by applying a magnetic field gradient along the $z$-axis with the Fast Feshbach coils in AHH configuration #text(red)[ref Feshbach/magnetic field section].
 The maximum gradient strength we can achieve is (only) #qty(per-mode: "slash")[33][G/cm] since the Fast Feshbach coils are not actively cooled (and the power supply + capacitor combination cannot provide more power?).
 This magnetic field gradient amounts to a separation of the green $z$-lattice planes by #qty[640][Hz].
-As introduced in @sec:setup-z we can only occupy every second plane of the green $z$-lattice to move the frequency separation to #qty[1280][Hz].
+As introduced in @ssec:setup-lattices-z we can only occupy every second plane of the green $z$-lattice to move the frequency separation to #qty[1280][Hz].
 
 On paper we can easily achieve this with a #qty[1][kHz] wide HS1 pulse.
 If the center frequency is on resonance with the lattice planes, the pulse will address $plus.minus #qty[500][Hz]$ in each direction which is still far away from the neighbouring lattice planes.

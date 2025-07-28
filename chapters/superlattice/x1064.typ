@@ -19,7 +19,7 @@
 ]
 
 The x1064-lattice is the principal lattice along the x-axis.
-As (already) mentioned in @sec:setup-xy the x1064-lattice was used conjunction with the y1064-lattice to simulate the two-dimensional Hubbard model.
+As (already) mentioned in @ssec:setup-lattices-xy the x1064-lattice was used conjunction with the y1064-lattice to simulate the two-dimensional Hubbard model.
 Since the x1064-lattice beams are red-detuned with respect to the D2 transition, the optical potential can "solo" confine the atoms in the $y z$-plane (even with just the forward-propagating beam).
 There is no significant confinement along the optical axis of the x1064-lattice since the Rayleigh length of the beam is #text(red)[$approx #qty[5][cm]$].
 The waist of the x1064-lattice beam is chosen as a compromise of the maximally achievable lattice depth in #unit[Erec] and the inhomogeneity of the lattice depth across the atom cloud.

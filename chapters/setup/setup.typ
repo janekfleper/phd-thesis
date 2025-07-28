@@ -13,9 +13,5 @@ The specific modifications of the experimental sequence are introduced in the re
 
 #include "k40.typ"
 #include "preparation.typ"
-#include "mot.typ"
-#include "ioffe.typ"
-#include "dipole.typ"
-#include "z-lattices.typ"
-#include "xy-lattices.typ"
+#include "lattices.typ"
 #include "detection.typ"

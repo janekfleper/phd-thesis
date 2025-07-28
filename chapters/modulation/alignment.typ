@@ -30,7 +30,7 @@ We are therefore able to reliably find the optimal alignment of the lattices, wh
 ]
 
 The properties x1064 lattice and the y1064 lattice are very similar, which also applies to their alignment procedures.
-Both are standing-wave lattices, they are red-detuned, they have Gaussian waists around #qty[150][μm] and they have piezo mirror mounts#footnote[Newport Agilis AG-M100N #tr[mention this here again or somewhere in @sec:setup-xy?]] to align the retro-propagating beams.
+Both are standing-wave lattices, they are red-detuned, they have Gaussian waists around #qty[150][μm] and they have piezo mirror mounts#footnote[Newport Agilis AG-M100N #tr[mention this here again or somewhere in @ssec:setup-lattices-xy?]] to align the retro-propagating beams.
 The main difference is that the x1064 lattice also uses the same type of piezo mirror mount to align the forward-propagating beam.
 This allows us to run a complex alignment optimization where we walk the two piezo mirror mounts against each other.
 The optimal alignment for the x1064 lattice is also more important in the context of this thesis as it is the starting point for the alignment and calibration of the x532 lattice in @sec:mod-super.

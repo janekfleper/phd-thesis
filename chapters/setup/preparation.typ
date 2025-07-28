@@ -50,6 +50,7 @@ The remaining atoms occupy the states $phy.ket(m_F = 9 slash 2)$ and $phy.ket(m_
 
 #notes[
   - Really mention all the axes before introducing the coordinate system?
+  - Mention the typical cloud size in the dipole trap? In preparation for the #x532 lattice...
 ]
 
 After the evaporative cooling in the Ioffe-Pritchard trap, the atoms are transferred to an optical dipole trap #tr[cite Vogt (2013)].
@@ -62,7 +63,7 @@ To achieve a variable three-dimensional confinement, we use the _dimple_ beam to
 The dimple beam propagates in the $y z$-plane at an angle of $~#num[45]degree$ relative to the $x y$-plane.
 
 The horizontal beam has an elliptical shape with the waists $w_z approx #qty[12][μm]$ and $w_y approx #qty[140][μm]$.
-This results in a strong vertical confinement that is required for the loading of the atoms into the optical lattices (see @sec:setup-z).
+This results in a strong vertical confinement that is required for the loading of the atoms into the optical lattices (see @ssec:setup-lattices-z).
 The dimple beam has a circular shape with a waist of $w_0 approx #qty[150][μm]$, enabling an equal confinement of the atoms in the $x y$-plane.
 Both dipole beams are created from the same laser#footnote[#tr[Eagleyard DFB diode (amplified by NKT Koheras Boostik...)]] that is linewidth broadened to reduce the coherence length to $<#qty[10][mm]$ #tr[cite Marcell].
 This is required to avoid an optical-lattice potential created by the horizontal dipole beam with its own reflection off the inner surfaces of the glass cell#footnote[Only the outer surfaces of the glass cell are anti-reflection coated].

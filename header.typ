@@ -21,14 +21,37 @@
 #let asc = $a_upright("sc")$
 #let fita0 = sym.alpha
 
-#let vx1064 = $v_(x 1064)$
-#let Vx1064 = $V_(x 1064)$
-#let vx532 = $v_(x 532)$
-#let Vx532 = $V_(x 532)$
-#let vy1064 = $v_(y 1064)$
-#let Vy1064 = $V_(y 1064)$
-#let vz532 = $v_(z 532)$
-#let Vz532 = $V_(z 532)$
+#let anglez = $alpha$
+
+#let x1064 = $x 1064$
+#let ax1064 = $a_x1064$
+#let wx1064 = $w_x1064$
+#let vx1064 = $v_x1064$
+#let Vx1064 = $V_x1064$
+
+#let x532 = $x 532$
+#let ax532 = $a_x532$
+#let wx532 = $w_x532$
+#let vx532 = $v_x532$
+#let Vx532 = $V_x532$
+
+#let y1064 = $y 1064$
+#let ay1064 = $a_y1064$
+#let wy1064 = $w_y1064$
+#let vy1064 = $v_y1064$
+#let Vy1064 = $V_y1064$
+
+#let z532 = $z 532$
+#let az532 = $a_z532$
+#let wz532 = $w_z532$
+#let vz532 = $v_z532$
+#let Vz532 = $V_z532$
+
+#let z1064 = $z 1064$
+#let az1064 = $a_z1064$
+#let wz1064 = $w_z1064$
+#let vz1064 = $v_z1064$
+#let Vz1064 = $V_z1064$
 
 #let band = $epsilon$
 #let cband = $tilde(epsilon)$

@@ -15,7 +15,7 @@
   - Also mention absolute frequency difference
 ]
 
-This section builds upon @sec:setup-xy, @sec:super-setup and @sec:super-thermal where I already discussed the optical setup of the x1064-lattice and the x532-lattice in detail.
+This section builds upon @ssec:setup-lattices-xy, @sec:super-setup and @sec:super-thermal where I already discussed the optical setup of the x1064-lattice and the x532-lattice in detail.
 The superlattice along the x-axis uses a standing wave configuration where the retro-reflecting mirror is the reference point for the superlattice phase.
 Compared to shallow-angle superlattices #text(red)[or other configurations] the optical phase of the forward-propagating lattice beams does not affect the phase $phi$ of the superlattice potential.
 Instead we have to/can use the frequency of the lattice beams to modify the phase $phi$.

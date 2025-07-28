@@ -147,7 +147,7 @@ The spatial separation of #qty[266][nm] between the sublattice sites is far belo
 We therefore need a technique to make the occupation of the sublattice sites "visible" to the absorption imaging.
 
 The perfect solution would be to transfer the atoms on one sublattice site to a different hyperfine state.
-In the vertical superlattice a similar technique is used for the selection of a single plane, see @sec:setup-z.
+In the vertical superlattice a similar technique is used for the selection of a single plane, see @ssec:setup-lattices-z.
 Instead of a single (HS1) frequency sweep we would however need to use a "comb" of sweeps to address all sublattice sites at the same time.
 The magnetic field gradient would need to have the form $phy.pdv(B_z, x)$ since the atoms are only sensitive to the magnetic field along their quantization axis.
 Achieving such a magnetic field gradient with the required strength is not possible since anti Helmholtz coils/configurations only produce gradients along the respective magnetic field components (in first/lowest order).

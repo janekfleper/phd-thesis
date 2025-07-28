@@ -2,7 +2,7 @@
 
 = Everything about the in-plane superlattice <ch:super>
 
-While the $x$-superlattice was already mentioned in @sec:setup-xy, I will introduce the optical setup here in detail.
+While the $x$-superlattice was already mentioned in @ssec:setup-lattices-xy, I will introduce the optical setup here in detail.
 The goal of/behind this bichromatic superlattice is/was to study complex one-dimensional Hubbard models/systems, especially using modulated/time-dependent potentials.
 By tuning the (relative) phase of the two individual lattices, we can adjust the tunneling amplitudes and the energy difference/offset between the individual (sub)lattice sites.
 The phases of the individual lattices accumulate over an optical path length of $approx #qty[50][cm]$.
