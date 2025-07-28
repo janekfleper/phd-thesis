@@ -20,8 +20,8 @@ Therefore, the repumping transition is necessary to keep all atoms inside the co
 
 The wavelengths of the cooling light and the repumping light are red-detuned from the respective transitions to make the absorption of photons sensitive to the position and the velocity of the atoms.
 Due to the large hyperfine splitting in the ground state, we need to use two separate lasers that are detuned by $Delta nu approx #qty[1.3][GHz]$.
-The frequency of the repumping laser#footnote[Toptica DL Pro (amplified with a self-built tapered amplifier)] is stabilized with an FM-spectroscopy lock to the doppler-free absorption spectrum of $phy.isotope("K", a: 39)$.
-The cooling laser#footnote[Coherent MBR-110 (pumped by a Coherent Verdi V18)] is then stabilized relative to the repumping laser with a frequency-offset lock.
+The frequency of the repumping laser#footnote[Toptica DL Pro + Eagleyard tapered amplifier] is stabilized with an FM-spectroscopy lock to the doppler-free absorption spectrum of $phy.isotope("K", a: 39)$.
+The cooling laser#footnote[Coherent Verdi V18 + Coherent MBR-110] is then stabilized relative to the repumping laser with a frequency-offset lock.
 The details of the laser system and the frequency locks can be found in #tr[cite Feld].
 
 At the start of each experimental sequence, we operate the MOT for approximately #qty[4][s] to saturate the number of atoms in the MOT.
@@ -65,7 +65,7 @@ The dimple beam propagates in the $y z$-plane at an angle of $~#num[45]degree$ r
 The horizontal beam has an elliptical shape with the waists $w_z approx #qty[12][μm]$ and $w_y approx #qty[140][μm]$.
 This results in a strong vertical confinement that is required for the loading of the atoms into the optical lattices (see @ssec:setup-lattices-z).
 The dimple beam has a circular shape with a waist of $w_0 approx #qty[150][μm]$, enabling an equal confinement of the atoms in the $x y$-plane.
-Both dipole beams are created from the same laser#footnote[#tr[Eagleyard DFB diode (amplified by NKT Koheras Boostik...)]] that is linewidth broadened to reduce the coherence length to $<#qty[10][mm]$ #tr[cite Marcell].
+Both dipole beams are created from the same laser#footnote[Eagleyard DFB diode + NKT Koheras BOOSTIK fiber amplifier] that is linewidth broadened to reduce the coherence length to $<#qty[10][mm]$ #tr[cite Marcell].
 This is required to avoid an optical-lattice potential created by the horizontal dipole beam with its own reflection off the inner surfaces of the glass cell#footnote[Only the outer surfaces of the glass cell are anti-reflection coated].
 
 After the atoms are loaded into the crossed-beam dipole trap, we gradually reduce the power of the beams to lower the dipole potential.
