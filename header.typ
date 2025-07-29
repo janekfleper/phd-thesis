@@ -16,6 +16,7 @@
 }
 
 #let mF(N) = $phy.ket(#N)$
+#let mix(N1, N2) = $mF(N1) \& mF(N2)$
 
 #let K40 = $phy.isotope("K", a: 40)$
 #let asc = $a_upright("sc")$

@@ -14,4 +14,5 @@ The specific modifications of the experimental sequence are introduced in the re
 #include "k40.typ"
 #include "preparation.typ"
 #include "lattices.typ"
+#include "sequence.typ"
 #include "detection.typ"

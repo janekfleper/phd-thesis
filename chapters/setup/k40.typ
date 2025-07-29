@@ -43,7 +43,7 @@ Since $g_I$ does not depend on the electronic state, all of the aforementioned s
     #notes[
       - Add arrows for MOT + imaging and repumping?
       - Really mention the D1 transition? Or make it very transparent?
-      - Synchronize the HFS colors with the later sequence figures...
+      - Synchronize the HFS colors with the later sequence figures... Or just remove the HFS colors since they are not really useful later?
       - Actually use the y-label "Energy shift $delta E$" in *b*?
     ]
   ],

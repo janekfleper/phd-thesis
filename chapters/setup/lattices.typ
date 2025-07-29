@@ -41,7 +41,7 @@ During the measurements in this thesis, the #z1064 lattice was turned off and we
 I only mentioned the #z1064 lattice here for the sake of completeness, and to highlight the possibility to create a vertical superlattice potential.
 
 
-== In-plane lattices <ssec:setup-lattices-xy>
+=== In-plane lattices <ssec:setup-lattices-xy>
 
 #notes[
   - What is the best way to separate the infrared lattices from the x532-lattice?
