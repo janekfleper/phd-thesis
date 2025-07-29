@@ -33,6 +33,7 @@ $
 $ <eq:theory-bloch-waves>
 
 with the quasimomentum $q$ and the periodic functions $u_q (x)$.
+The Bloch waves are completely delocalized over the optical lattice potential $V(x)$.
 Due to the discrete translation symmetry of the potential, the quasimomentum is only uniquely defined in the #tr[first] Brillouin zone $q in [-pi / a, pi / a)$.
 The periodicity of the functions $u_q (x)$ makes them invariant to #tr[spatial] translations by the lattice period $a$.
 This property can be used to write the functions as the Fourier series
@@ -44,7 +45,7 @@ $ <eq:theory-bloch-uq-fourier-series>
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
 Since $k dot a = pi$, the #tr[spatial] translation $x -> x + a$ will only shift the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
 In the next step, the potential $V(x)$ is also expressed as a Fourier series with the terms $cexp(2 m x)$.
-The Fourier series coefficients $c_m$ are revealed by rewriting the $sin^2x$ with complex exponential functions.
+The Fourier series coefficients $c_m$ are revealed by rewriting $sin^2 x$ in terms of complex exponential functions.
 
 $
   V(x) slash #unit[Erec] & = v_0 dot sin^2x \
@@ -103,6 +104,7 @@ In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a fi
       - Add harmonic oscillator ground state here for $n = 1$?
       - Add free-particle wave for $n = 4$?
       - Plot the bottom of the band $n = 5$ to show the closed band gap?
+      - Mention that the amplitude/scale of the Bloch waves is "arbitrary"?
     ]
   ],
   label: <fig:theory-bloch-energy-bands>,
