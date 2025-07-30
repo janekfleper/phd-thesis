@@ -33,7 +33,7 @@ In @sec:phase-setup (and @eq:phase-setup-delta-phi) we assumed that the path len
 While this might be true for the mechanical/physical length between the atom position and the retro-reflecting mirror, it is not true for the optical (path) length that also takes the refractive index (or dispersion) $n(lambda)$ into account.
 Since the individual lattices have (vastly) different wavelengths of #qty[532][nm] and #qty[1064][nm], the changes of the refractive index $phy.pdv(n(lambda), xi)$ as a function of the environmental parameters/properties $xi$ will also be different.
 (Only) this difference between the wavelengths (actually) causes the superlattice phase $phi$ to change.
-The phase shifts of the individual lattices will be higher by one order of magnitude but we are not able to observe this due to the lack of single-site resolution of the imaging system, see @sec:setup-detect.
+The phase shifts of the individual lattices will be higher by one order of magnitude but we are not able to observe this due to the lack of single-site resolution of the imaging system, see @ssec:setup-sequence-detect.
 We will therefore directly/only focus on the relative changes/phase shifts of the lattices/wavelengths.
 
 If we look at the retro-reflecting path in #text(red)[ref figure superlattice setup/or sensor setup?], we can split the length $d$ into six different segments.

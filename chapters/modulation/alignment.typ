@@ -44,7 +44,7 @@ After unblocking the retro-propagating beam we center the atom cloud again, this
 This already concludes the horizontal alignment of the in-plane lattices.
 
 The vertical position of both in-plane lattices is measured along the $z$ axis, which is also the optical axis for the high-resolution imaging.
-We are therefore not able to measure the vertical positions directly, as neither the imaging for the $x$ axis nor the imaging for the $y$ axis have a sufficient resolution #tr[ref @sec:setup-detect?].
+We are therefore not able to measure the vertical positions directly, as neither the imaging for the $x$ axis nor the imaging for the $y$ axis have a sufficient resolution #tr[ref @ssec:setup-sequence-detect?].
 In addition to the lack of imaging resolution, the vertical position of the atom cloud is pinned by the horizontal dipole trap or the z532 lattice.
 Changing the vertical position of the in-plane lattices would therefore not affect the position of the atom cloud.
 With the in-situ lattice modulation we can overcome this limitation by directly optimizing the lattice depth.

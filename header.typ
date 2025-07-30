@@ -15,6 +15,11 @@
   $attach(#L, tl: 2, br: #J)$
 }
 
+#let FmF(F, mF) = {
+  show math.frac: it => $it.num slash it.denom$
+  $phy.ket(F = #F\, m_F = #mF)$
+}
+
 #let mF(N) = $phy.ket(#N)$
 #let mix(N1, N2) = $mF(N1) \& mF(N2)$
 

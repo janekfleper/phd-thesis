@@ -16,7 +16,7 @@ If we (however) want to run experiments with interacting particles in double wel
 
 While we could just compute the interaction energy $U$ from the scattering length $a(B)$ near the Feshbach resonances #text(red)[ref theory] and the confinement by the optical lattices, it is always better to calibrate the interaction energy at/for the desired/targeted magnetic field configuration.
 Before the x-superlattice, the calibration of the interaction energy $U$ was done with RF spectroscopy #text(red)[cite Eugenio/Luke and Marcell/Nicola].
-As illustrated in #text(red)[@sec:setup-detect, ref figure instead?], the frequency difference $Delta f$ between non-interacting particles and interacting particles is proportional to the difference $Delta U$ of the interaction energies.
+As illustrated in #text(red)[@ssec:setup-sequence-detect, ref figure instead?], the frequency difference $Delta f$ between non-interacting particles and interacting particles is proportional to the difference $Delta U$ of the interaction energies.
 From the Feshbach resonances of the participating hyperfine state pairs we could then determine the magnetic field $B$ and subsequently the scattering length $a(B)$.
 Since the RF pulses require frozen in-plane lattices, the actual interaction strength $U$ in the two-dimensional lattice planes was then computed with @eq:theory-wannier-interaction-correction.
 With $Delta U slash h = cal(O)(#qty[1][kHz])$ the resolution of this measurement is limited by the stability of the magnetic field (and the width of the RF pulse?).

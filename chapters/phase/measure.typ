@@ -143,7 +143,7 @@ See #text(red)[ref next? subsection] for (the) two possible approaches.
 
 The detection step in @fig:phase-measure-sequence only stopped the (phase-sensitive) measurement to project the state $phy.ket(psi(tau))$ onto the sublattice sites $phy.ket(L)$ and $phy.ket(R)$.
 For the (actual) detection/measurement of the state $phy.ket(psi(tau))$ (or the density thereof) we need to capture/measure the densities $n_L = abs(phy.braket(L))^2$ and $n_R = abs(phy.braket(R))^2$.
-The spatial separation of #qty[266][nm] between the sublattice sites is far below the resolution limit of the imaging system as discussed in @sec:setup-detect.
+The spatial separation of #qty[266][nm] between the sublattice sites is far below the resolution limit of the imaging system as discussed in @ssec:setup-sequence-detect.
 We therefore need a technique to make the occupation of the sublattice sites "visible" to the absorption imaging.
 
 The perfect solution would be to transfer the atoms on one sublattice site to a different hyperfine state.
@@ -161,7 +161,7 @@ Since the atoms are initially polarized they will all start with the same phase 
 The evolution/precession/measurement time $tau$ is chosen such that the atoms/spins on each sublattice site accumulate the same phase $phi mod 2 pi$.
 The atoms on the "other" sublattice will then have a (relative) phase offset by $pi$.
 A second $pi slash 2$-pulse will then transfer the atoms/spins back onto the quantization axis where $n_L$ and $n_R$ will occupy different hyperfine states.
-The (separate) densities can then be imaged sequentially as shown in @sec:setup-detect.
+The (separate) densities can then be imaged sequentially as shown in @ssec:setup-sequence-detect.
 While this technique sounds very tempting, it would have been even more difficult to set up than the spin spiral.
 For the measurement of the correlations it was sufficient to imprint a relative spin pattern since the absolute position of the atoms/lattice sites was relevant.
 The slope and the angle of the magnetic field gradient had to be carefully calibrated but the absolute value of the magnetic field along the $z$-axis could change from sequence to sequence.
@@ -334,7 +334,7 @@ The (actual) measurement before the projection onto the higher bands in the y106
 The (in-situ) image of the occupation $n_L (x, y)$ will therefore show the signal @fig:phase-measure-theory depending on the local detuning/offset $Delta(x, y) slash t(x, y)$.
 Due to the noise in the absorption images it is not practical to evaluate individual pixels.
 We are therefore dividing the atom images into a grid of $9 times 9$ pixels.
-With the pixel size of $approx #qty[600][nm]$ (see @sec:setup-detect) the atom plane each cell corresponds to approximately $10 times 10$ double wells (#text(red)[check the exact pixel size again...]).
+With the pixel size of $approx #qty[600][nm]$ (see @ssec:setup-sequence-detect) the atom plane each cell corresponds to approximately $10 times 10$ double wells (#text(red)[check the exact pixel size again...]).
 The average (atomic) density in each cell of the grid is then evaluated individually by fitting a Gaussian function to find the minimum that shows the detuning/offset $Delta slash t = 0$.
 As already discussed earlier for the time-of-flight measurement, this qualitative evaluation is sufficient since we only need to know the position of the minimum of the density.
 #text(red)[Actually mention the next sentence?]

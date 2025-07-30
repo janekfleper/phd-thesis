@@ -34,11 +34,11 @@ Since $g_I$ does not depend on the electronic state, all of the aforementioned s
     Hyperfine structure of #K40.
     The states in *a* show the hyperfine splitting of the ground state $sn(S, 1/2)$ and the excited states $sn(P, 1/2)$ and $sn(P, 3/2)$.
     In the ground state $sn(S, 1/2)$, the hyperfine splitting is by far the largest with $Delta E slash h = #qty[1285.8][MHz]$.
-    We use the D2 line between $F = 9 slash 2$ and $F' = 11 slash 2$ for the magneto-optical trap (see @sec:setup-prepare-mot) and the imaging of the atoms (see @sec:setup-detect).
+    We use the D2 line between $F = 9 slash 2$ and $F' = 11 slash 2$ for the magneto-optical trap (see @sec:setup-prepare-mot) and the imaging of the atoms (see @ssec:setup-sequence-detect).
     In addition, the transition between $F = 7 slash 2$ and $F' = 9 slash 2$ is required for the repumping in the magneto-optical trap.
     In *b*, the hyperfine structure of the ground state $sn(S, 1/2)$ is shown as a function of an external magnetic field $B$.
     In the lower manifold with $F = 9 slash 2$, the four upper $m_F$ states (black) are used for the magnetic evaporation (see @sec:setup-prepare-ioffe).
-    The four lowest $m_F$ states and the state $m_F = -7 slash 2$ in the upper manifold are used for the internal-state manipulation during the detection and imaging (see @sec:setup-detect).
+    The four lowest $m_F$ states and the state $m_F = -7 slash 2$ in the upper manifold are used for the internal-state manipulation during the detection and imaging (see @ssec:setup-sequence-detect).
 
     #notes[
       - Add arrows for MOT + imaging and repumping?
@@ -62,7 +62,7 @@ During the later stages of the experimental sequence, the atoms will only occupy
 We are therefore using the naming convention
 
 $
-  phy.ket(N) eq.triple phy.ket(F = 9 slash 2\, m_F = -N slash 2)
+  phy.ket(N) eq.triple FmF(9/2, -N/2)
 $ <eq:setup-k40-hfs-naming>
 
 to refer to these states as #mF(9), #mF(7), #mF(5) and #mF(3).

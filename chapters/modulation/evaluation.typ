@@ -27,7 +27,7 @@ We are therefore also assuming that the z532-lattice depth only changes perpendi
 The z532 lattice and the y1064 lattice can then be described by the same fit model.
 
 The second assumption for the evaluation addresses the $z$ axis.
-Since the atom images show the accumulated optical density of the vertical lattice planes, we would need to use the single-plane slicing introduced in @sec:setup-detect to resolve the lattice depth as a function of the position $z$.
+Since the atom images show the accumulated optical density of the vertical lattice planes, we would need to use the single-plane slicing introduced in @ssec:setup-sequence-detect to resolve the lattice depth as a function of the position $z$.
 The required effort for such a measurement is however not practical for the calibration of the lattice depth.
 We will therefore estimate whether the inhomogeneity $V(z)$ of the optical lattices is even relevant for the in-situ lattice modulation spectroscopy.
 If we compare the beam waists of all lattices to the extent of the atom cloud along the $z$ axis, we find that the expected change of the lattice depth is only significant for the x532 lattice.
@@ -273,7 +273,7 @@ We are currently using a single arbitrary-waveform generator#footnote[Keysight 3
 If we had separate devices for each lattice or a single device with a sufficient number of channels, we could target the different lattices with a control variable in the experimental sequence.
 The automated evaluation of the measurements is already possible.
 We can detect the last sequence of the modulation frequency scan for each lattice to identify the images.
-These images are then processed as introduced in @sec:setup-detect before running the evaluation introduced in @ssec:mod-eval-model
+These images are then processed as introduced in @ssec:setup-sequence-detect before running the evaluation introduced in @ssec:mod-eval-model
 The fit model is robust as long as the beam waist $w_0$ does not change significantly.
 If this would be the case, manual intervention is required anyway and it would be sufficient if the automated evaluation issues a warning about the unsuccessful fit.
 Besides the lattice-depth calibration, the in-situ lattice modulation spectroscopy can also significantly improve the alignment of the lattice beams.
