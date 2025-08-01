@@ -193,31 +193,44 @@ Analogous to the loss of the mixture #mix(9, 3) (see @sec:setup-k40), the states
 
 ==== Saturated absorption imaging <ssec:setup-sequence-detect-imaging>
 
-We are using saturated absorption imaging to measure the (optical) density of the atoms at the end of the sequence.
-The imaging is done with #qty[10][μs] pulses from the MOT (cooling) laser tuned to the transition $phy.ket(F = 9 slash 2 comma m_F = -9 slash 2) -> phy.ket(F' = 11 slash 2 comma m_F = -11 slash 2)$.
-We are able to measure two different atom images per sequence in quick succession by using the fast kinetics mode of the Andor X888? camera.
-As a (spatial) reference for the imaging pulse we then grab a third image (so-called _bright_ image) without any atoms.
-From (the logarithm of) the difference between the atom images and the bright image we can compute the optical density in the two atom images.
-Due to the short (and intense) imaging pulses, the optical transition is satured to effectively lower the optical density.
-This is a special technique that allows (very) high optical densities to be measured reliably.
-Without saturating the optical transition, an optical density of 2.0 would only transmit #qty[1][%] of the photons in the imaging pulse.
-Since we have to calculate the optical density from the transmitted photon number, high optical densities quickly become an issue.
-The satured absorption imaging solves this by "rescaling" the optical density.
-This technique requires careful calibration of the camera with pulses of different intensities.
+#notes[
+  - Really mention the fast-kinetics mode?
+  - Mention the dark images at all?
+  - Talk about the "closed" transition and the lack of repumping?
+  - Where to mention the imaging axis for the first time?
+  - Mention spin-resolved imaging instead of the density-resolved?
+]
 
-With the two available atom images we usually capture the doubly-occupied sites in the first image and the singly-occupied sites in the second image.
-Due to the small spacing of the HFS states as shown in @fig:setup-k40-hfs the imaging pulse resonant for the optical transition of the $m_F = -9 slash 2$ state can also (slightly) affect the other $m_F$ states of the $F = 9 slash 2$ manifold.
-We are therefore using a microwave transition to the $F = 7 slash 2$ manifold to _shelve_ the state for the second atom image.
-This microwave shelving is not possible for doubly-occupied sites since the atoms will be lost.
-#text(red)[Is this just caused by spin-exchange collisions since there are now state pairs available at a lower energy?]
-For singly-occupied sites the shelving is possible with a very high fidelity #text(red)[Mention the number from Eugenio here?]
-Note that we will only measure singly-occupied sites in one of the two HFS spin states.
-This is fine under the assumption that the two spin states are equally occupied after the spin-mixing pulses at the start of the experiment.
-In that case we can assume that the average density of singly-occupied sites is equal for both spin states since we are not using anything spin-sensitive in our optical lattices.
+At the end of an experimental sequence, we are imaging the atoms with light pulses to measure the density distribution $n(x, y)$ integrated along the $z$ axis.
+The frequency of the imaging pulses is resonant to the cooling transition in #subref(<fig:setup-k40-hfs>, "a") to excite the atoms from the state $FmF(9/2, -9/2)$ to the state $FmF(11/2, -11/2, prime: #true)$.
+We can use three consecutive imaging pulses to measure two different atom images and one bright image, as illustrated in @fig:setup-sequence.
+The light pulses are captured with a CCD camera#footnote[Andor iXon Ultra 888] in fast-kinetics mode to enable a short readout time.
+The absorption by the atoms will reduce the photon count in the resonant imaging pulses according to Beer's law #tr[cite Foot].
+We can therefore compute the optical density of the atoms with the expression
 
-#text(red)[Actually mention the spin regime?]
-Besides resolving singly-occupied and doubly-occupied sites, the two atom images can also be used to measure the different spin states.
-This was used in the past to measure spin correlations with the spin spiral in the two-dimensional Hubbard model.
-In that case the doubly-occupied sites are removed prior to the spin spiral measurement.
-A separation of singly-occupied sites and doubly-occupied sites is therefore no longer necessary and we can use the two atom images to measure the different (HFS) spin states.
+$
+  "OD"(x, y) = -ln((I_"atom" (x, y)) / (I_"bright" (x, y))) = sigma_0 dot n(x, y)
+$ <eq:setup-sequence-detect-imaging-od>
 
+where $I_"atom" (x, y)$ and $I_"bright" (x, y)$ are the atom image and the bright image respectively.
+The atomic density is related to the optical density by the scattering cross section $sigma_0$ of the #tr[atom-photon interaction].
+
+If the atom cloud is dense, the atom image $I_"atom" (x, y)$ will have a low photon count which limits the signal-to-noise ratio of the atomic density $n(x, y)$.
+We are therefore using short imaging pulses with a high intensity to saturate the imaging transition #tr[cite Reinaudi].
+While the atoms are in the excited state, they cannot absorb more photons from the imaging pulse.
+This will reduce the measured optical density $"OD"(x, y)$ to a regime with a good signal-to-noise ratio.
+Computing the atomic density $n(x, y)$ from the effective optical density requires an elaborate calibration of the imaging system and the parameters of the imaging pulse #tr[cite Chomaz PhD].
+This procedure is explained in detail in #tr[cite Eugenio] and #tr[cite Luke].
+
+As mentioned earlier, the primary imaging system in the experimental setup measures the integrated atomic density $n(x, y)$ along the $z$ axis.
+Along the $x$ axis and the $y$ axis, there are additional imaging systems that are mainly used for calibration and debugging purposes now.
+Their setups and previous use cases are presented in #tr[cite Feld - Eugenio].
+Here, I will only mention the important properties of the $z$ imaging system.
+The optical setup and characterization thereof can be found in #tr[cite Eugenio] and #tr[cite Luke].
+The imaging system has a numerical aperture of $"NA" = 0.5$ and uses a pair of aspheric lenses with $f = #qty[8][mm]$ that are mounted above and below the atoms inside the glass cell#tr[cite Feld + Fröhlich].
+A second lens with $f = #qty[200][mm]$ and a $1:1$ relay are used to image the atom plane onto the camera.
+The measured magnification is $M = #num[22.7(1)]$, resulting in a pixel size of $d_"px" approx #qty[0.57][μm]$ in the atom plane.
+While this is close to the lattice spacing $ax1064 = ay1064 = #qty[0.532][μm]$, the actual imaging resolution is worse.
+The measured width of the point-spread function is $"HWHM" = #qty[1.25][μm]$.
+We are therefore always measuring the atomic density $n(x, y)$ averaged across a few lattice sites.
+This is a critical limitation regarding the occupation of the individual sites in the superlattice potential #tr[ref anything?].

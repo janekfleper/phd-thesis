@@ -15,9 +15,10 @@
   $attach(#L, tl: 2, br: #J)$
 }
 
-#let FmF(F, mF) = {
+#let FmF(F, mF, prime: false) = {
   show math.frac: it => $it.num slash it.denom$
-  $phy.ket(F = #F\, m_F = #mF)$
+  let label = if prime { $F'$ } else { $F$ }
+  $phy.ket(#label = #F\, m_F = #mF)$
 }
 
 #let mF(N) = $phy.ket(#N)$
