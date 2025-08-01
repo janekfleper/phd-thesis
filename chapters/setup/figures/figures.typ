@@ -1,5 +1,8 @@
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
+#import "@preview/cetz:0.4.1"
 #import "/header.typ": *
+
+#set page(width: auto, height: auto, margin: 0.9em)
 
 #let level-structure(debug: 0) = {
   let fs-width = 0.6
@@ -107,5 +110,182 @@
   )
 }
 
-
 #figure(block(stroke: black, level-structure(debug: 3)))
+#pagebreak()
+
+#let experimental-sequence-hfs(position, width) = {
+  let height = 3.5
+  let start-gap = 0.7
+  let end-gap = 0.3
+  let offset = 0.4
+  let spacing = 0.5
+  let lines = (
+    (height: offset, name: "mF9", label: mF(9)),
+    (height: offset + spacing, name: "mF7", label: mF(7)),
+    (height: offset + 2 * spacing, name: "mF5", label: mF(5)),
+    (height: offset + 3 * spacing, name: "mF3", label: mF(3)),
+    (height: height - offset, name: "shelf", label: mF("?")),
+  )
+
+  let occupation-height = 0.2
+  let occupation-radius = 0.1
+  let occuptation(state, color, start, end, name: none) = {
+    cetz.draw.rect(
+      (rel: (start, -occupation-height / 2), to: state + ".start"),
+      (rel: (end, occupation-height / 2), to: state + ".start"),
+      radius: occupation-radius,
+      fill: color.transparentize(50%),
+      stroke: black + 0.3pt,
+    )
+    cetz.draw.line(
+      (rel: (start + occupation-radius, 0), to: state + ".start"),
+      (rel: (end - occupation-radius, 0), to: state + ".start"),
+      stroke: none,
+      name: name,
+    )
+  }
+
+  let dt = 0.7
+  let t = (
+    0.0, // initial state
+    6.5, // singles-doubles separation
+    7.9, // 97 swap
+    9.3, // 75 swap
+    10.7, // MW shelving
+    11.4, // 97 swap
+    12.8, // MW shelving
+    12.8, // OD1 pulse
+    14.2, // OD2 pulse
+    14.6, // bright pulse
+    15.0, // final state
+  )
+
+  let arrow-padding = 0.15
+  let arrow(initial, final) = {
+    cetz.draw.line(
+      (initial + ".end", arrow-padding, final + ".start"),
+      (final + ".start", arrow-padding, initial + ".end"),
+      mark: (end: "triangle", fill: black, scale: 0.7),
+      stroke: 0.6pt,
+    )
+  }
+
+  cetz.draw.group(name: "hfs", {
+    cetz.draw.translate(x: position.at(0), y: position.at(1))
+    cetz.draw.rect((0, 0), (width, height), name: "rect")
+    for l in lines {
+      cetz.draw.line(
+        (rel: (start-gap, l.height), to: "rect.south-west"),
+        (rel: (-end-gap, l.height), to: "rect.south-east"),
+        stroke: luma(50%) + 0.3pt,
+        name: l.name,
+      )
+      cetz.draw.content((rel: (-0.1cm, 0), to: l.name + ".start"), l.label, anchor: "east")
+    }
+
+    occuptation("mF9", blue, t.at(0), t.at(2), name: "down-0")
+    occuptation("mF7", blue, t.at(2) + dt, t.at(3), name: "down-1")
+    occuptation("mF5", blue, t.at(3) + dt, t.at(-1), name: "down-2")
+
+    occuptation("mF7", orange, t.at(0), t.at(1), name: "up-0")
+    occuptation("mF5", yellow, t.at(1) + dt, t.at(3), name: "double-0")
+    occuptation("mF7", yellow, t.at(3) + dt, t.at(5), name: "double-1")
+    occuptation("mF9", yellow, t.at(5) + dt, t.at(7), name: "double-2")
+
+    occuptation("mF7", red, t.at(1) + dt, t.at(2), name: "single-0")
+    occuptation("mF9", red, t.at(2) + dt, t.at(4), name: "single-1")
+    occuptation("shelf", red, t.at(4) + dt, t.at(6), name: "single-2")
+    occuptation("mF9", red, t.at(6) + dt, t.at(8), name: "single-3")
+
+    arrow("up-0", "double-0")
+    arrow("double-0", "double-1")
+    arrow("double-1", "double-2")
+
+    arrow("up-0", "single-0")
+    arrow("down-0", "down-1")
+    arrow("down-1", "down-2")
+    arrow("single-0", "single-1")
+    arrow("single-1", "single-2")
+    arrow("single-2", "single-3")
+  })
+}
+
+#let experimental-sequence-xy(position, width) = {
+  import cetz.draw: *
+
+  let sine-squared(start, stop, ..args) = {
+    let dx = 0.5 * (stop.at(0) - start.at(0))
+    bezier(
+      start,
+      stop,
+      (start.at(0) + dx, start.at(1)),
+      (stop.at(0) - dx, stop.at(1)),
+      ..args,
+    )
+  }
+
+  let end-gap = 0.3cm
+  let t0 = 4
+  let px1064 = (
+    (t0, 0),
+    (t0 + 1, 0),
+    (t0 + 2, 0.4),
+    (t0 + 2.2, 1.0),
+    (t0 + 5.0, 1.0),
+    (t0 + 5.2, 3.0),
+    (width - end-gap, 3.0),
+  )
+  let py1064 = (
+    (t0, 0),
+    (t0 + 1, 0),
+    (t0 + 2, 0.4),
+    (t0 + 2.2, 2.0),
+    (width - end-gap, 2.0),
+  )
+  let px532 = (
+    (t0 + 2.5, 0),
+    (t0 + 3.0, 0),
+    (t0 + 3.4, 0.6),
+    (width - end-gap, 0.6),
+  )
+
+  let height = 3.5cm
+  group(name: "xy", {
+    translate(x: position.at(0), y: position.at(1))
+    rect((0, 0), (width, height), name: "rect")
+
+    translate(x: 0, y: 0.2cm)
+    set-style(stroke: (thickness: 1pt, cap: "round"))
+
+    set-style(stroke: (paint: red.darken(20%)))
+    line(py1064.at(2), py1064.at(3))
+    line(py1064.at(3), py1064.at(4))
+
+    set-style(stroke: (paint: red))
+    line(px1064.at(0), px1064.at(1))
+    sine-squared(px1064.at(1), px1064.at(2))
+    line(px1064.at(2), px1064.at(3))
+    line(px1064.at(3), px1064.at(4))
+    line(px1064.at(4), px1064.at(5))
+    line(px1064.at(5), px1064.at(6))
+
+    set-style(stroke: green + 1pt)
+    line(px532.at(0), px532.at(1))
+    sine-squared(px532.at(1), px532.at(2), stroke: (paint: green, cap: "round"))
+    line(px532.at(2), px532.at(3))
+  })
+}
+
+#let experimental-sequence() = {
+  let width = 16cm
+
+  cetz.canvas({
+    import cetz.draw: *
+
+    experimental-sequence-hfs((0cm, 0cm), width)
+    experimental-sequence-xy((0cm, 3.5cm), width)
+  })
+}
+
+#figure(block(stroke: black, experimental-sequence()))
+
