@@ -23,3 +23,5 @@
 #include "chapters/superlattice/superlattice.typ"
 #include "chapters/modulation/modulation.typ"
 #include "chapters/phase/phase.typ"
+
+#bibliography("refs.bib", style: "american-physics-society")
