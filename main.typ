@@ -1,4 +1,4 @@
-#import "@local/fancy-thesis-uni-bonn:0.1.0": thesis
+#import "@local/fancy-thesis:0.1.0": thesis
 #import "@preview/fancy-units:0.1.1": add-macros
 
 #add-macros(
