@@ -3,7 +3,7 @@
 == Experimental sequence <sec:setup-sequence>
 
 #notes[
-  - Really mention the temperatur stability here?
+  - Really mention the temperature stability here?
   - Move the preparation times to the introduction of @sec:setup-prepare?
   - Go into depth about attractive interactions -> doubly-occupied sites here?
   - Where to mention the mapping $mF(9) = phy.ket(arrow.b)$ and $mF(7) = phy.ket(arrow.t)$?
@@ -194,43 +194,99 @@ Analogous to the loss of the mixture #mix(9, 3) (see @sec:setup-k40), the states
 ==== Saturated absorption imaging <ssec:setup-sequence-detect-imaging>
 
 #notes[
-  - Really mention the fast-kinetics mode?
   - Mention the dark images at all?
-  - Talk about the "closed" transition and the lack of repumping?
   - Where to mention the imaging axis for the first time?
-  - Mention spin-resolved imaging instead of the density-resolved?
+  - Mention the actual values of $alpha = #num[1.175]$ and $I_0^"sat" = #qty[97][counts]$?
 ]
 
-At the end of an experimental sequence, we are imaging the atoms with light pulses to measure the density distribution $n(x, y)$ integrated along the $z$ axis.
+At the end of an experimental sequence, we are imaging the atoms with light pulses to measure the integrated density distribution $n(x, y)$ along the $z$ axis#footnote[There are additional imaging systems along the $x$ axis and the $y$ axis, which are mainly used for calibration measurements now. The corresponding setups and previous use cases are presented in #tr[cite Feld - Eugenio]].
+The optical setup and the characterization of the $z$ imaging system can be found in #tr[cite Eugenio] and #tr[cite Luke].
+I will only summarize the important properties of the imaging system, and I will show how the atomic densities $n(x, y)$ are computed from the #tr[raw] images.
+The imaging system has a numerical aperture of $"NA" = 0.5$ and uses an aspheric lenses with $f = #qty[8][mm]$ that is mounted above the atoms inside the glass cell #tr[cite Feld + Fröhlich].
+A second lens with $f = #qty[200][mm]$ and a $1:1$ relay are used to image the atom plane onto a CCD camera#footnote[Andor iXon Ultra 888].
+The measured magnification is $M = #num[22.7(1)]$, resulting in a pixel size of $d_"px" approx #qty[0.57][μm]$ in the atom plane.
+While this is close to the lattice periods $ax1064 = ay1064 = #qty[0.532][μm]$, the actual imaging resolution is worse due to a point-spread function with $"HWHM" = #qty[1.25][μm]$.
+We are therefore always measuring the atomic density $n(x, y)$ averaged across a few lattice sites.
+This is a critical limitation regarding the occupation of the individual sites in the superlattice potential #tr[ref anything?].
+
 The frequency of the imaging pulses is resonant to the cooling transition in #subref(<fig:setup-k40-hfs>, "a") to excite the atoms from the state $FmF(9/2, -9/2)$ to the state $FmF(11/2, -11/2, prime: #true)$.
 We can use three consecutive imaging pulses to measure two different atom images and one bright image, as illustrated in @fig:setup-sequence.
-The light pulses are captured with a CCD camera#footnote[Andor iXon Ultra 888] in fast-kinetics mode to enable a short readout time.
+The light pulses are captured with the CCD camera in fast-kinetics mode to enable a short readout time.
 The absorption by the atoms will reduce the photon count in the resonant imaging pulses according to Beer's law #tr[cite Foot].
 We can therefore compute the optical density of the atoms with the expression
 
 $
-  "OD"(x, y) = -ln((I_"atom" (x, y)) / (I_"bright" (x, y))) = sigma_0 dot n(x, y)
+  "OD"(x, y) = sigma_0 dot n(x, y) = -ln((I_"atom" (x, y)) / (I_"bright" (x, y)))
 $ <eq:setup-sequence-detect-imaging-od>
 
 where $I_"atom" (x, y)$ and $I_"bright" (x, y)$ are the atom image and the bright image respectively.
-The atomic density is related to the optical density by the scattering cross section $sigma_0$ of the #tr[atom-photon interaction].
-
+The atomic density $n(x, y)$ is related to the optical density by the scattering cross section $sigma_0$ of the #tr[atom-photon interaction].
 If the atom cloud is dense, the atom image $I_"atom" (x, y)$ will have a low photon count which limits the signal-to-noise ratio of the atomic density $n(x, y)$.
 We are therefore using short imaging pulses with a high intensity to saturate the imaging transition #tr[cite Reinaudi].
 While the atoms are in the excited state, they cannot absorb more photons from the imaging pulse.
 This will reduce the measured optical density $"OD"(x, y)$ to a regime with a good signal-to-noise ratio.
-Computing the atomic density $n(x, y)$ from the effective optical density requires an elaborate calibration of the imaging system and the parameters of the imaging pulse #tr[cite Chomaz PhD].
+Computing the atomic density $n(x, y)$ from the measured optical density requires an elaborate calibration of the imaging system and the parameters of the imaging pulse #tr[cite Chomaz PhD].
 This procedure is explained in detail in #tr[cite Eugenio] and #tr[cite Luke].
+Once calibrated, the evaluation can be applied to all images with the same parameters of the imaging pulses.
+Instead of @eq:setup-sequence-detect-imaging-od, we are using the expression
 
-As mentioned earlier, the primary imaging system in the experimental setup measures the integrated atomic density $n(x, y)$ along the $z$ axis.
-Along the $x$ axis and the $y$ axis, there are additional imaging systems that are mainly used for calibration and debugging purposes now.
-Their setups and previous use cases are presented in #tr[cite Feld - Eugenio].
-Here, I will only mention the important properties of the $z$ imaging system.
-The optical setup and characterization thereof can be found in #tr[cite Eugenio] and #tr[cite Luke].
-The imaging system has a numerical aperture of $"NA" = 0.5$ and uses a pair of aspheric lenses with $f = #qty[8][mm]$ that are mounted above and below the atoms inside the glass cell#tr[cite Feld + Fröhlich].
-A second lens with $f = #qty[200][mm]$ and a $1:1$ relay are used to image the atom plane onto the camera.
-The measured magnification is $M = #num[22.7(1)]$, resulting in a pixel size of $d_"px" approx #qty[0.57][μm]$ in the atom plane.
-While this is close to the lattice spacing $ax1064 = ay1064 = #qty[0.532][μm]$, the actual imaging resolution is worse.
-The measured width of the point-spread function is $"HWHM" = #qty[1.25][μm]$.
-We are therefore always measuring the atomic density $n(x, y)$ averaged across a few lattice sites.
-This is a critical limitation regarding the occupation of the individual sites in the superlattice potential #tr[ref anything?].
+$
+  "OD"(x, y) = sigma_0 dot n(x, y) = -alpha ln((I_"atom" (x, y)) / (I_"bright" (x, y))) + (I_"bright" (x, y) - I_"atom" (x, y)) / I_0^"sat"
+$ <eq:setup-sequence-detect-imaging-saturated-od>
+
+where the second term takes the effect of the saturation of the imaging transition into account, and the deviations from an ideal two-level system are captured by the parameter $alpha$.
+
+#floating-figure(
+  image("figures/setup_imaging_insitu.png"),
+  caption: [
+    In-situ imaging with singles-doubles separation.
+    The images *a* and *b* show the atomic densities of the doubles and the singles respectively.
+    As illustrated in @fig:setup-sequence, the first two imaging pulses measure the doubles and the singles.
+    The third imaging pulse is used to measure the bright image $I_"bright" (x, y)$ in @eq:setup-sequence-detect-imaging-od.
+    In *c*, the image capture with the fast-kinetics mode shows the two atom images and the bright images arranged from top to bottom.
+    The black squares indicate the regions of interest where the atomic densities in *a* and *b* are computed.
+    A slight reduction of the photon count is visible where the atoms are located in the upper two images.
+
+    #notes[
+      - Add unit for the atomic density?
+      - Remove the black square in the bright image?
+    ]
+  ],
+  label: <fig:setup-sequence-imaging-in-situ>,
+)
+
+In a typical experimental sequence as shown in @fig:setup-sequence, we use _in-situ_ imaging to measure the atomic density $n(x, y)$ in the frozen lattices.
+An example for the measured atomic densities of doubles and singles is shown in @fig:setup-sequence-imaging-in-situ.
+We can see that the doubles density has a smaller cloud size and a higher density in the center compared to the singles density.
+This is the excpected signal when the atoms are loaded into the optical lattice with an attractive interaction.
+If we do not need to resolve two different atomic densities, the second atom image will be empty and the detection segment in @sec:setup-sequence can be simplified significantly.
+This is the case for all measurements in @ch:mod and the polarized measurements in @ch:phase.
+An alternative to the in-situ imaging of the atoms is the time-of-flight technique where the atoms are released from the optical lattices shortly before the first imaging pulse.
+By quickly turning off the optical lattices, the quasimomenta $q$ #tr[in/of] the bands $n$ are mapped to their corresponding free-particle momentum #tr[cite Köhl (2005)].
+This technique allows us to measure the occupation of the higher bands in the lattice potential and in the superlattice potential, at the expense of the spatial resolution of the atomic densities.
+Since the atoms are no longer confined by the optical lattices, we are also limited to a single atom image with the time-of-flight technique in the $z$ imaging system#footnote[#tr[Really mention this? ]With the imaging systems along the $x$ axis or the $y$ axis, multiple $m_F$ can be captured in a single image if they are spatially separated by a applying a gradient magnetic field #tr[cite Feld + Fröhlich].].
+In @fig:setup-sequence-imaging-tof a time-of-flight image is shown where the atoms occupy the $1^"st"$, $3^"rd"$ and $4^"th"$ Brillouin zone along the $x$ axis.
+The atoms in the $1^"st"$ Brillouin zone occupied the band $n = 1$, while the other atoms occupied the excited bands $n = 3$ and $n = 4$ respectively.
+This is an essential measurement in the superlattice potential to infer the population of the left and right lattice sites in each double well #tr[cite Nick?].
+The details for this detection technique are discussed in #tr[ref Floquet section...].
+
+
+#floating-figure(
+  image("figures/setup_imaging_tof.png"),
+  caption: [
+    Band mapping and time-of-flight imaging.
+    The optical lattices are turned off in $tau_"map" = #qty[1][ms]$ to map the band index $n$ to the corresponding Brillouin zone.
+    The expansion time is only $tau_"TOF" = #qty[6][ms]$ to allow a measurement up the $4^"th"$ Brillouin zone along the $x$ axis.
+    As indicated by the black rectangles in *b*, the camera sensor is already maxed out#footnote(emoji.hippo) by the region of interest.
+    Along the $y$ axis, we could only measure up to the $2^"nd"$ Brillouin zone.
+
+    #notes[
+      - Label the different Brillouin zones in *a*.
+      - Anything to add to the caption?
+    ]
+  ],
+  label: <fig:setup-sequence-imaging-tof>,
+)
+
+
+
