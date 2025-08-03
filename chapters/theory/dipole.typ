@@ -1,5 +1,5 @@
 #import "/header.typ": *
-#import "figures/figures.typ": *
+#import "figures/figures.typ": lattice-configurations
 
 #let k1 = $phy.vb(k)_1$
 #let k2 = $phy.vb(k)_2$
@@ -29,7 +29,7 @@ Despite being a classical model, it can correctly predict the polarizability $al
 The resulting expressions for the dipole potential and the scattering rate are
 
 $
-     U_"dip" (phy.vb(r)) & prop Gamma / Delta I(phy.vb(r))     \
+     U_"dip" (phy.vb(r)) & prop Gamma / Delta I(phy.vb(r)) \
   Gamma_"sc" (phy.vb(r)) & prop (Gamma / Delta)^2 I(phy.vb(r))
 $ <eq:theory-dipole-terms>
 

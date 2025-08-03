@@ -3,8 +3,7 @@
 == Properties of #K40 <sec:setup-k40>
 
 #notes[
-  - Where to mention the low abundance of K40? Here or in @sec:setup-prepare-mot?
-  - Any "primary" citations to grab from the Tiecke properties?
+  - Mention the low natural abundance of K40? Here or in @sec:setup-prepare-mot?
   - Explain what s-wave Feshbach resonances are? In comparison to p-wave resonances?
 ]
 
@@ -98,8 +97,6 @@ The required radio-frequency sweeps for the transition $mF(7) -> mF(5)$ are intr
     The Feshbach resonances are computed from the coupled-channel parameters in @ludewig_feshbach_2012.
     Each solid line refers to the scattering length $asc(B)$ of a mixture of $m_F$ states in the naming convention @eq:setup-k40-hfs-naming[].
     The dashed vertical lines show the resonance positions $B_0$ where the scattering length diverges.
-    For mixture of states #mix(7, 5), there are two Feshbach resonances close to each other.
-    In such a case, we have to use a more elaborate expression to compute the scattering length from the properties of both Feshbach resonances.
 
     #notes[
       - Find better colors?
