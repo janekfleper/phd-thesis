@@ -4,6 +4,9 @@
 
 #set page(width: auto, height: auto, margin: 0.9em)
 
+
+/* Figure for the hyperfine level structure with the MOT transitions */
+
 #let level-structure(debug: 0) = {
   let fs-width = 0.6
   let gap = 0.3
@@ -113,10 +116,80 @@
 #figure(block(stroke: black, level-structure(debug: 3)))
 #pagebreak()
 
-#let experimental-sequence-hfs(position, width) = {
-  let height = 3.5
-  let start-gap = 0.7
-  let end-gap = 0.3
+
+/* Figure for the minimal working experimental sequence */
+
+#let arrow-style = (
+  mark: (end: "triangle", fill: black, scale: 0.7),
+  stroke: 0.5pt,
+)
+
+#let sine-squared(start, stop, ..args) = {
+  let dx = 0.5 * (stop.at(0) - start.at(0))
+  cetz.draw.bezier(
+    start,
+    stop,
+    (start.at(0) + dx, start.at(1)),
+    (stop.at(0) - dx, stop.at(1)),
+    ..args,
+  )
+}
+
+#let image-fill(color, inner: true) = block(
+  width: 100%,
+  height: 100%,
+  stroke: 0.3pt,
+  clip: true,
+  {
+    place(
+      horizon,
+      block(
+        width: 100%,
+        height: 200%,
+        fill: gradient.radial(radius: 60%, color.darken(30%), white),
+      ),
+    )
+    if inner {
+      place(
+        center + horizon,
+        dx: 5%,
+        block(
+          width: 40%,
+          height: 60%,
+          fill: gradient.radial(white.transparentize(10%), white.transparentize(100%)),
+        ),
+      )
+    }
+  },
+)
+
+#let atom-cloud(radius, shape, color, kx: 1, ky: 1, xscale: 100%, yscale: 100%) = block(
+  width: radius * shape.at(0),
+  height: radius * shape.at(1),
+  // stroke: black + 0.5pt,
+  // clip: true,
+  {
+    let atom-fill-steps = (0%, 10%, 20%, 40%, 60%, 80%, 90%, 100%, 100%)
+    let atom-fill = gradient.radial(radius: 40%, ..atom-fill-steps.map(p => color.transparentize(p)))
+    place(block(width: 100%, height: 100%, clip: true, {
+      for x in range(shape.at(0) * kx) {
+        for y in range(shape.at(1) * ky) {
+          let mark = scale(x: xscale / kx, y: yscale / ky, circle(radius: radius, fill: atom-fill))
+          place(top + left, dx: (x - 1 / 2) * radius / kx, dy: (y - 1 / 2) * radius / ky, mark)
+        }
+      }
+    }))
+
+    let outer-fill-steps = (100%, 100%, 80%, 50%, 10%, 0%)
+    let outer-fill = gradient.radial(focal-radius: 10%, ..outer-fill-steps.map(p => white.transparentize(p)))
+    place(block(width: 100%, height: 100%, stroke: white + 2pt, outset: 1pt, fill: outer-fill))
+  },
+)
+
+
+#let experimental-sequence-hfs(position, height, width, start-gap, end-gap, timings, style) = {
+  import cetz.draw: *
+
   let offset = 0.4
   let spacing = 0.5
   let lines = (
@@ -124,20 +197,20 @@
     (height: offset + spacing, name: "mF7", label: mF(7)),
     (height: offset + 2 * spacing, name: "mF5", label: mF(5)),
     (height: offset + 3 * spacing, name: "mF3", label: mF(3)),
-    (height: height - offset, name: "shelf", label: mF("?")),
+    (height: height - offset, name: "shelf", label: $FmF(7/2, -7/2)$),
   )
 
   let occupation-height = 0.2
   let occupation-radius = 0.1
   let occuptation(state, color, start, end, name: none) = {
-    cetz.draw.rect(
+    rect(
       (rel: (start, -occupation-height / 2), to: state + ".start"),
       (rel: (end, occupation-height / 2), to: state + ".start"),
       radius: occupation-radius,
-      fill: color.transparentize(50%),
+      fill: color.lighten(50%),
       stroke: black + 0.3pt,
     )
-    cetz.draw.line(
+    line(
       (rel: (start + occupation-radius, 0), to: state + ".start"),
       (rel: (end - occupation-radius, 0), to: state + ".start"),
       stroke: none,
@@ -145,122 +218,155 @@
     )
   }
 
-  let dt = 0.7
+  let dt = 0.6
+  let t0 = timings.at("freeze-x1064") + 0.5
   let t = (
-    0.0, // initial state
-    6.5, // singles-doubles separation
-    7.9, // 97 swap
-    9.3, // 75 swap
-    10.7, // MW shelving
-    11.4, // 97 swap
-    12.8, // MW shelving
-    12.8, // OD1 pulse
-    14.2, // OD2 pulse
-    14.6, // bright pulse
-    15.0, // final state
+    start: timings.at("start"), // initial state
+    rf1-sd: t0,
+    rf2-97: t0 + 2 * dt,
+    rf3-75: t0 + 4 * dt,
+    rf4-97: t0 + 7 * dt,
+    mw1: t0 + 6 * dt,
+    mw2: t0 + 9 * dt,
+    im1: t0 + 9 * dt,
+    im2: t0 + 11 * dt,
+    im3: t0 + 13 * dt,
+    end: timings.at("end"), // final state
   )
 
   let arrow-padding = 0.15
   let arrow(initial, final) = {
-    cetz.draw.line(
+    line(
       (initial + ".end", arrow-padding, final + ".start"),
       (final + ".start", arrow-padding, initial + ".end"),
-      mark: (end: "triangle", fill: black, scale: 0.7),
-      stroke: 0.6pt,
+      ..arrow-style,
     )
   }
 
-  cetz.draw.group(name: "hfs", {
-    cetz.draw.translate(x: position.at(0), y: position.at(1))
-    cetz.draw.rect((0, 0), (width, height), name: "rect")
+  group(name: "hfs", {
+    translate(..position)
+    rect((0, 0), (width, height), name: "rect", ..style.at("rect"))
     for l in lines {
-      cetz.draw.line(
+      line(
         (rel: (start-gap, l.height), to: "rect.south-west"),
         (rel: (-end-gap, l.height), to: "rect.south-east"),
         stroke: luma(50%) + 0.3pt,
+      )
+      line(
+        (rel: (0, l.height), to: "rect.south-west"),
+        (rel: (width, l.height), to: "rect.south-west"),
+        stroke: none,
         name: l.name,
       )
-      cetz.draw.content((rel: (-0.1cm, 0), to: l.name + ".start"), l.label, anchor: "east")
+      content(
+        (rel: (start-gap - 0.5, 0), to: l.name + ".start"),
+        block(fill: white, outset: (right: 0.5mm), l.label),
+        anchor: "west",
+      )
     }
 
-    occuptation("mF9", blue, t.at(0), t.at(2), name: "down-0")
-    occuptation("mF7", blue, t.at(2) + dt, t.at(3), name: "down-1")
-    occuptation("mF5", blue, t.at(3) + dt, t.at(-1), name: "down-2")
+    occuptation("mF9", blue, t.at("start"), t.at("rf2-97"), name: "down-0")
+    occuptation("mF7", blue, t.at("rf2-97") + dt, t.at("rf3-75"), name: "down-1")
+    occuptation("mF5", blue, t.at("rf3-75") + dt, t.at("end"), name: "down-2")
 
-    occuptation("mF7", orange, t.at(0), t.at(1), name: "up-0")
-    occuptation("mF5", yellow, t.at(1) + dt, t.at(3), name: "double-0")
-    occuptation("mF7", yellow, t.at(3) + dt, t.at(5), name: "double-1")
-    occuptation("mF9", yellow, t.at(5) + dt, t.at(7), name: "double-2")
+    occuptation("mF7", orange, t.at("start"), t.at("rf1-sd"), name: "up-0")
+    occuptation("mF5", yellow, t.at("rf1-sd") + dt, t.at("rf3-75"), name: "double-0")
+    occuptation("mF7", yellow, t.at("rf3-75") + dt, t.at("rf4-97"), name: "double-1")
+    occuptation("mF9", yellow, t.at("rf4-97") + dt, t.at("im1"), name: "double-2")
 
-    occuptation("mF7", red, t.at(1) + dt, t.at(2), name: "single-0")
-    occuptation("mF9", red, t.at(2) + dt, t.at(4), name: "single-1")
-    occuptation("shelf", red, t.at(4) + dt, t.at(6), name: "single-2")
-    occuptation("mF9", red, t.at(6) + dt, t.at(8), name: "single-3")
+    occuptation("mF7", red, t.at("rf1-sd") + dt, t.at("rf2-97"), name: "single-0")
+    occuptation("mF9", red, t.at("rf2-97") + dt, t.at("mw1"), name: "single-1")
+    occuptation("shelf", red, t.at("mw1") + dt, t.at("mw2"), name: "single-2")
+    occuptation("mF9", red, t.at("mw2") + dt, t.at("im2"), name: "single-3")
 
     arrow("up-0", "double-0")
     arrow("double-0", "double-1")
     arrow("double-1", "double-2")
 
-    arrow("up-0", "single-0")
+    // arrow("up-0", "single-0")
     arrow("down-0", "down-1")
     arrow("down-1", "down-2")
     arrow("single-0", "single-1")
     arrow("single-1", "single-2")
     arrow("single-2", "single-3")
+
+    let im-shape = (0.9, 0.45)
+    let image(timing, label, atoms: true) = {
+      let x = t.at(timing)
+      rect(
+        (x, -0.6),
+        (rel: im-shape),
+        name: timing,
+        anchor: "north-east",
+        stroke: none,
+      )
+      content(
+        timing + ".south",
+        (rel: im-shape),
+        anchor: "north",
+        image-fill(red, inner: atoms),
+      )
+      line(
+        (x, offset - 0.15),
+        (rel: (0, 0.05), to: timing + ".north"),
+        ..arrow-style,
+      )
+      content(
+        (rel: (0, -0.1), to: timing + ".south"),
+        text(11pt, label),
+        anchor: "north",
+      )
+    }
+
+    image("im1", "OD1")
+    image("im2", "OD2")
+    image("im3", "bright", atoms: false)
   })
 }
 
-#let experimental-sequence-xy(position, width) = {
+#let experimental-sequence-xy(position, height, width, start-gap, end-gap, timings, style) = {
   import cetz.draw: *
 
-  let sine-squared(start, stop, ..args) = {
-    let dx = 0.5 * (stop.at(0) - start.at(0))
-    bezier(
-      start,
-      stop,
-      (start.at(0) + dx, start.at(1)),
-      (stop.at(0) - dx, stop.at(1)),
-      ..args,
-    )
-  }
-
-  let end-gap = 0.3cm
-  let t0 = 4
+  let dt-freeze = 0.2
   let px1064 = (
-    (t0, 0),
-    (t0 + 1, 0),
-    (t0 + 2, 0.4),
-    (t0 + 2.2, 1.0),
-    (t0 + 5.0, 1.0),
-    (t0 + 5.2, 3.0),
-    (width - end-gap, 3.0),
+    (timings.at("ramp-xy") - 0.5, 0),
+    (timings.at("ramp-xy"), 0),
+    (timings.at("freeze-xy"), 0.4),
+    (timings.at("freeze-xy") + dt-freeze, 1.0),
+    (timings.at("freeze-x1064"), 1.0),
+    (timings.at("freeze-x1064") + dt-freeze, 2.9),
+    (timings.at("end"), 2.9),
   )
   let py1064 = (
-    (t0, 0),
-    (t0 + 1, 0),
-    (t0 + 2, 0.4),
-    (t0 + 2.2, 2.0),
-    (width - end-gap, 2.0),
+    (timings.at("ramp-xy") - 0.5, 0),
+    (timings.at("ramp-xy"), 0),
+    (timings.at("freeze-xy"), 0.4),
+    (timings.at("freeze-xy") + dt-freeze, 2.0),
+    (timings.at("end"), 2.0),
   )
   let px532 = (
-    (t0 + 2.5, 0),
-    (t0 + 3.0, 0),
-    (t0 + 3.4, 0.6),
-    (width - end-gap, 0.6),
+    (timings.at("ramp-x532") - 0.5, 0),
+    (timings.at("ramp-x532"), 0),
+    (timings.at("ramp-x532") + 0.4, 0.6),
+    (timings.at("end"), 0.6),
   )
 
-  let height = 3.5cm
+  let offset = 0.2
   group(name: "xy", {
-    translate(x: position.at(0), y: position.at(1))
-    rect((0, 0), (width, height), name: "rect")
+    translate(..position)
+    rect((0, 0), (width, height), name: "rect", ..style.at("rect"))
 
-    translate(x: 0, y: 0.2cm)
+    translate(y: offset)
+    line((0, 0), (width, 0), stroke: 0.1pt) // mark the zero-level
     set-style(stroke: (thickness: 1pt, cap: "round"))
 
+    // y1064 lattice
     set-style(stroke: (paint: red.darken(20%)))
     line(py1064.at(2), py1064.at(3))
     line(py1064.at(3), py1064.at(4))
+    content((rel: (0.5, 0.1), to: py1064.at(3)), Vy1064, anchor: "south")
 
+    // x1064 lattice
     set-style(stroke: (paint: red))
     line(px1064.at(0), px1064.at(1))
     sine-squared(px1064.at(1), px1064.at(2))
@@ -268,22 +374,158 @@
     line(px1064.at(3), px1064.at(4))
     line(px1064.at(4), px1064.at(5))
     line(px1064.at(5), px1064.at(6))
+    content((rel: (0.5, 0.1), to: px1064.at(3)), Vx1064, anchor: "south")
 
-    set-style(stroke: green + 1pt)
+    // x532 lattice
+    set-style(stroke: (paint: green))
     line(px532.at(0), px532.at(1))
-    sine-squared(px532.at(1), px532.at(2), stroke: (paint: green, cap: "round"))
+    sine-squared(px532.at(1), px532.at(2))
     line(px532.at(2), px532.at(3))
+    content((rel: (2, 0.1), to: px532.at(2)), Vx532, anchor: "south")
+  })
+}
+
+#let experimental-sequence-confine(position, height, width, start-gap, end-gap, timings, style) = {
+  import cetz.draw: *
+
+  let t0 = start-gap
+  let pdipole = (
+    (timings.at("start"), 0.4),
+    (timings.at("ramp-xy"), 0.4),
+    (timings.at("freeze-xy"), 0.0),
+    (timings.at("freeze-xy") + 0.5, 0.0),
+  )
+  let pz532 = (
+    (timings.at("start"), 0),
+    (timings.at("ramp-z532"), 0),
+    (timings.at("ramp-xy") - 0.1, 2.5),
+    (timings.at("end"), 2.5),
+  )
+
+  let offset = 0.2
+  group(name: "confine", {
+    translate(..position)
+    rect((0, 0), (width, height), name: "rect", ..style.at("rect"))
+
+    translate(y: offset)
+    line((0, 0), (width, 0), stroke: 0.1pt) // mark the zero-level
+    set-style(stroke: (thickness: 1pt, cap: "round"))
+
+    // dipole trap
+    set-style(stroke: (paint: red))
+    line(pdipole.at(0), pdipole.at(1))
+    sine-squared(pdipole.at(1), pdipole.at(2))
+    line(pdipole.at(2), pdipole.at(3))
+    content((rel: (1.6, 0.1), to: pdipole.at(0)), "Dipole trap", anchor: "south-west")
+
+    // z532 lattice
+    set-style(stroke: (paint: green))
+    for i in range(pz532.len() - 1) {
+      line(pz532.at(i), pz532.at(i + 1))
+    }
+    content((rel: (0.5, 0.1), to: pz532.at(2)), Vz532, anchor: "south")
+
+    // label the different segments
+    set-style(stroke: (paint: black, thickness: 0.9pt), mark: (start: "|", end: "|", scale: 1.0))
+    let loading-start = 0
+    let loading-end = start-gap + timings.at("ramp-x532")
+    let loading-width = loading-end - loading-start
+    let experiment-end = timings.at("freeze-x1064")
+    let experiment-width = experiment-end - loading-end
+    let detection-end = width
+    let detection-width = detection-end - experiment-end
+    line(
+      (rel: (loading-start, 0.3), to: "rect.north-west"),
+      (rel: (loading-width, 0)),
+      name: "loading",
+    )
+    line(
+      (rel: (loading-end, 0.3), to: "rect.north-west"),
+      (rel: (experiment-width, 0)),
+      mark: none,
+      name: "experiment",
+    )
+    line(
+      (rel: (experiment-end, 0.3), to: "rect.north-west"),
+      (rel: (detection-width, 0)),
+      name: "detection",
+    )
+    content((rel: (0, 0.35), to: "loading"), "Loading")
+    content((rel: (0, 0.35), to: "experiment"), "Experiment")
+    content((rel: (0, 0.35), to: "detection"), "Detection")
   })
 }
 
 #let experimental-sequence() = {
-  let width = 16cm
+  let width = 16
 
   cetz.canvas({
     import cetz.draw: *
 
-    experimental-sequence-hfs((0cm, 0cm), width)
-    experimental-sequence-xy((0cm, 3.5cm), width)
+    let start-gap = 0.7
+    let end-gap = 0.3
+    let height-hfs = 3.5
+    let height-xy = 3.5
+    let height-confine = 3.5
+    let pos-hfs = (x: 0, y: 0)
+    let pos-xy = (x: 0, y: height-hfs)
+    let pos-confine = (x: 0, y: height-hfs + height-xy)
+
+    let timings = (
+      start: start-gap,
+      ramp-z532: 1.4,
+      ramp-xy: 3.5,
+      freeze-xy: 4.5,
+      ramp-x532: 5.5,
+      freeze-x1064: 7.0,
+      end: width - end-gap,
+    )
+    let style = (
+      rect: (stroke: black + 0.9pt),
+      atom: (radius: 3mm, shape: (6, 5)),
+    )
+    let args = (width, start-gap, end-gap, timings, style)
+    experimental-sequence-hfs(pos-hfs, height-hfs, ..args)
+    experimental-sequence-xy(pos-xy, height-xy, ..args)
+    experimental-sequence-confine(pos-confine, height-confine, ..args)
+
+
+    let atom-radius = 2.5mm
+    let atom-shape = (7, 5)
+    content(
+      (rel: (1.2, 2.5), to: "confine.rect.south-west"),
+      name: "atom-dipole",
+      atom-cloud(atom-radius, atom-shape, blue.lighten(20%), xscale: 500%, yscale: 500%),
+    )
+    line("atom-dipole", (rel: (2, 0.2)), ..arrow-style)
+
+    content(
+      (rel: (2.2, 1.2), to: "xy.rect.south-west"),
+      name: "atom-ramp-xy",
+      atom-cloud(atom-radius, atom-shape, blue.darken(20%), xscale: 100%, yscale: 100%),
+    )
+    line("atom-ramp-xy", (rel: (2.2, -0.5)), ..arrow-style)
+
+    content(
+      (rel: (3.2, 2.5), to: "xy.rect.south-west"),
+      name: "atom-freeze-xy",
+      atom-cloud(atom-radius, atom-shape, blue.darken(20%), xscale: 80%, yscale: 60%),
+    )
+    line("atom-freeze-xy", (rel: (1.4, -0.3)), ..arrow-style)
+
+    content(
+      (rel: (6.0, 1.0), to: "confine.rect.south-west"),
+      name: "atom-ramp-x532",
+      atom-cloud(atom-radius, atom-shape, blue.darken(20%), kx: 2, xscale: 100%, yscale: 60%),
+    )
+    line("atom-ramp-x532", (rel: (-0.1, -3.6)), ..arrow-style)
+
+    content(
+      (rel: (8.0, 1.3), to: "confine.rect.south-west"),
+      name: "atom-freeze-x1064",
+      atom-cloud(atom-radius, atom-shape, blue.darken(20%), kx: 2, xscale: 60%, yscale: 60%),
+    )
+    line("atom-freeze-x1064", (rel: (-0.7, -1.6)), ..arrow-style)
   })
 }
 
