@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/figures.typ": level-structure
 
 == Properties of #K40 <sec:setup-k40>
 
@@ -10,7 +11,7 @@
 Potassium is an alkali metal with the atomic number $Z = 19$.
 The electronic properties of potassium depend on the single electron in the outermost orbital, while the electrons occupying the inner orbitals only shield the charge of the nucleus.
 The experimental setup in this thesis was built to work with the fermionic isotope #K40.
-There are also two naturally abundant bosonic isotopes, #phy.isotope("K", a: [39]) and #phy.isotope("K", a: [41]), which are used in experiments with ultracold atoms and molecules #tr[cite what?].
+There are also two naturally abundant bosonic isotopes, #phy.isotope("K", a: [39]) and #phy.isotope("K", a: [41]), which are used in experiments with ultracold atoms and molecules #tr[add some citations...].
 The physical properties, optical properties and scattering properties of these three potassium isotopes are compiled in @tiecke_properties_2011.
 In this section, I will only mention a selection of the most important properties to understand the experimental setup and the manipulation of the internal states of the potassium atoms.
 
@@ -29,10 +30,13 @@ Since $g_I$ does not depend on the electronic state, the excited states also exp
 The relevant optical transitions between the hyperfine states are shown in #subref(<fig:setup-k40-hfs>, "a").
 
 #floating-figure(
-  image("figures/setup_k40_hyperfine.png"),
+  block({
+    image("figures/setup_k40_hyperfine.png")
+    place(top + left, dx: 0.1cm, dy: 0.5cm, scale(50%, reflow: true, level-structure()))
+  }),
   caption: [
     Hyperfine structure of #K40.
-    The level structure in *a* shows the hyperfine splitting of the ground state $sn(S, 1/2)$ and the excited states $sn(P, 1/2)$ and $sn(P, 3/2)$.
+    The level structure in *a* shows the hyperfine splitting of the ground state $sn(S, 1/2)$ and the excited state and $sn(P, 3/2)$.
     In the ground state $sn(S, 1/2)$, the hyperfine splitting $Delta E slash h = #qty[1285.8][MHz]$ is large compared to the splitting in the excited state $sn(P, 3/2)$ with $Delta E slash h < #qty[100][MHz]$.
     We use the D2 line between the states $phy.ket(F = 9 slash 2)$ and $phy.ket(F' = 11 slash 2)$ for the magneto-optical trap (see @sec:setup-prepare-mot) and the imaging of the atoms (see @ssec:setup-sequence-detect).
     In addition, the transition between $phy.ket(F = 7 slash 2)$ and $phy.ket(F' = 9 slash 2)$ is required for the repumping in the magneto-optical trap.
@@ -41,10 +45,8 @@ The relevant optical transitions between the hyperfine states are shown in #subr
     The four lowest $m_F$ states in the lower manifold and the state $m_F = -7 slash 2$ in the upper manifold are used for the detection and the imaging.
 
     #notes[
-      - Add arrows for MOT + imaging and repumping?
-      - Really mention the D1 transition? Or make it very transparent?
+      - Add labels for hyperfine splitting in *a*. Between $F' = 9 slash 2$ and $F' = 11 slash 2$ should be enough in the excited state...
       - Synchronize the HFS colors with the later sequence figures... Or just remove the HFS colors since they are not really useful later?
-      - Actually use the y-label "Energy shift $delta E$" in *b*?
     ]
   ],
   label: <fig:setup-k40-hfs>,

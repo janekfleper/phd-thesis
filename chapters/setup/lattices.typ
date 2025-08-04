@@ -2,16 +2,31 @@
 
 == Optical lattices <sec:setup-lattices>
 
-#notes[
-  - Where to mention the lattice-depth calibration?
-  - Where to mention the lattice-depth stabilization with photodiodes + PID loops?
-  - Add the large figure here in the "introduction"?
-]
-
 After the evaporative cooling in the Ioffe-Pritchard trap and the optical dipole trap, the atoms are loaded into optical lattices for the remainder of the experimental sequence.
-The individual lattices axes are roughly perpendicular to each other to create a three-dimensional optical-lattice potential.
+The individual lattices axes are roughly perpendicular to each other to create the three-dimensional optical-lattice potential shown in @fig:setup-lattices.
 In this section, I will introduce the individual lattice configurations and the shapes of the corresponding Gaussian beams.
-The optical setups to create the lattices are largely unchanged compared to earlier theses, and I will only...
+Unless noted otherwise, the optical setups to create the lattices are unchanged compared to earlier theses.
+
+The power in each optical lattice is measured with photodiodes on the experimental table.
+By comparing the output of the photodiodes to the setpoints of the lattice depth, we can achieve a regulation of the optical power with PID loops that have a bandwidth of a few #unit[kHz].
+For the calibration of the lattice depths, we are using the lattice modulation spectroscopy introduced in @ch:mod.
+
+#floating-figure(
+  image("figures/alpha_lattices.png"),
+  caption: [
+    Beam configuration of the optical lattices.
+    The #z532 lattice shows a shallow-angle configuration, why the in-plane lattices are created from counterpropagating beams.
+    A comparison of the two configurations is shown in @fig:theory-lattice-intersection-angle.
+    The lattice beams intersect at the position of the atoms inside the glass cell to achieve the maximum lattice depths.
+
+    #notes[
+      - Remove the #z1064 lattice
+      - Add labels or a legend?
+      - Create a "secondary" figure that shows the lattice structure? Like the original version?
+    ]
+  ],
+  label: <fig:setup-lattices>,
+)
 
 
 === Vertical lattices <ssec:setup-lattices-z>
@@ -22,7 +37,7 @@ To take the lattice axis and the wavelength into account, I will refer to this l
 The angle of intersection as defined in @fig:theory-lattice-intersection-angle is $anglez = #num[14.5(1)]degree$, resulting in the lattice period $az532 = #qty[1.06(1)][μm]$ according to @eq:theory-lattice-period.
 The lattice beams have a waist of $wz532 approx #qty[120][μm]$ at the position of the atoms.
 However, due to the shallow-angle configuration, the effective waist along the $y$ axis is greater by a factor of #num[2].
-Due to the blue detuning and a power ratio of #num[1.00(1)] between the lattice beams, the atoms inside the lattice are only subject to the small deconfinement from the zero-point energy @greiner_ultracold_2003.
+With the blue detuning and a power ratio of #num[1.00(1)] between the lattice beams, the atoms inside the lattice are only subject to the small deconfinement from the zero-point energy @greiner_ultracold_2003.
 The #z532 lattice can therefore not confine the atoms without the optical dipole trap or another optical lattice.
 The optical setup was optimized to have equal optical path lengths for the two lattice beams, making the phase of the lattice insensitive to changes of any environmental parameters on the experimental table.
 With the available optical power, we can typically achieve lattice depths up to $Vz532 = #qty[100][Erec]$.
