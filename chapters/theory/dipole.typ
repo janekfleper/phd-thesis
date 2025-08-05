@@ -14,7 +14,7 @@
 ]
 
 The interaction of atoms with far-detuned light enables the creation of optical dipole traps that play an essential role in quantum gas experiments.
-In this section, I will present the essential quantities to describe optical dipole potentials based on the review #tr[cite Grimm].
+In this section, I will present the essential quantities to describe optical dipole potentials based on the review @grimm_optical_2000.
 If an atom is exposed to light with the intensity $I prop abs(phy.vb(E))^2$, the electric field $phy.vb(E)$ induces an oscillating dipole moment $phy.vb(p) = alpha(omega) phy.vb(E)$ in the atom.
 The oscillation frequency of the dipole moment is equal to the driving frequency $omega = 2 pi c slash lambda$, where $c$ is the speed of light and $lambda$ is the wavelength of the light.
 The amplitude and the phase of the dipole moment relative to the electric field are characterized by the complex polarizability $alpha(omega)$.
@@ -120,7 +120,7 @@ The relevant differences between the two detunings can be found in the scatterin
 Since the scattering rate in @eq:theory-dipole-terms is proportional to the local intensity $I(phy.vb(r))$, it rate will be maximal (minimal) if the lattice is red-detuned (blue-detuned).
 If the scattering causes an atom loss or heating of the atoms, a blue-detuned optical lattice can be used to minimize these effects.
 The radial potential of an optical lattice depends on the Gaussian envelope introduced in @eq:theory-dipole-gaussian.
-In a red-detuned optical lattice, the radial potential is always confining, while it is always deconfining in a blue-detuned optical lattice #tr[cite Greiner/Luke?].
+In a red-detuned optical lattice, the radial potential is always confining, while it is always deconfining in a blue-detuned optical lattice @greiner_ultracold_2003.
 A running-wave component will further enhance the radial potential for both detunings.
 The radial potential is relevant for the trapping of atoms in a three-dimensional optical lattice.
 I will discuss this further in @sec:super-radial in the context of the in-plane superlattice.

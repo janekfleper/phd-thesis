@@ -3,8 +3,6 @@
 == Bloch theorem <sec:theory-bloch>
 
 #notes[
-  - Really skip all of the dimensionless stuff here?
-  - Write eigenfunctions or eigen functions?
   - Use a different character for the mass to avoid confusion with the Fourier series index?
   - Explain the dimensionless units in more detail? E.g. $a = pi$...
   - Explain the origin of the name "recoil energy"?
@@ -25,15 +23,15 @@ $
   hat(h) = -phy.dv(, x, 2) + v_0 dot sin^2 x thin .
 $ <eq:theory-bloch-hamiltonian-dimensionless>
 
-In the Bloch theorem, the Hamiltonian is solved with an ansatz where the eigenfunctions have the same periodicity as the potential $V(x)$.
-The so-called Bloch waves are completely delocalized over the potential and they have the form
+Bloch's theorem states that the eigenfunctions of the Hamiltonian are plane waves multiplied by a function with the same periodicity as the lattice potential @ashcroft_solid_1976.
+The so-called Bloch waves are completely delocalized over the lattice potential and they have the form
 
 $
   psi_q (x) = u_q (x) dot cexp(q x)
 $ <eq:theory-bloch-waves>
 
 with the quasimomentum $q$ and the periodic functions $u_q (x)$.
-Due to the discrete translation symmetry of the potential, the quasimomentum is only uniquely defined in the Brillouin zone $q in [-pi / a, pi / a)$.
+Due to the discrete translation symmetry of the potential, the quasimomentum is only uniquely defined in the Brillouin zone $q in [-pi slash a, pi slash a)$.
 Conversely, the functions $u_q (x)$ are invariant under a spatial translation by the lattice period $a$.
 This property can be used to write the functions as the Fourier series
 
@@ -79,7 +77,6 @@ As a result, the dispersion $epsilon_n (q)$ and the Bloch wave $psi_(q=0)^n (x)$
 At $q = 0$, the band gap to the fifth band is already closed, and the Bloch wave only changes slightly at the positions of the potential maxima.
 This behavior can be found in all energy bands that are not trapped inside the potential anymore.
 In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite band width $Delta epsilon_n (q)$ and Bloch waves that still follow the shape of the potential $V(x)$.
-#tr[Anything else to add?]
 
 #floating-figure(
   image("figures/theory_band_structure.png"),
