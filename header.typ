@@ -1,5 +1,6 @@
 #import "@local/fancy-thesis:0.1.0": floating-figure
 #import "@preview/physica:0.9.5" as phy
+#import "@preview/mannot:0.3.0"
 #import "@preview/fancy-units:0.1.1": num, qty, unit
 
 #let subref(label, index) = {
@@ -70,12 +71,19 @@
 #let tin = $t_"in"$
 #let tout = $t_"out"$
 
+#let ketg = $phy.ket(g)$
+#let kete = $phy.ket(e)$
+#let ketup = $phy.ket(arrow.t)$
+#let ketdown = $phy.ket(arrow.b)$
 #let ketL = $phy.ket(L)$
 #let ketR = $phy.ket(R)$
 #let ketLL = $phy.ket(L L)$
 #let ketLR = $phy.ket(L R)$
 #let ketRL = $phy.ket(R L)$
 #let ketRR = $phy.ket(R R)$
+
+// a dummy function to mark stuff I still want to fix...
+#let fix(comment, body) = body
 
 // a shortcut for red text to be used as an annotation
 #let tr = text.with(red)

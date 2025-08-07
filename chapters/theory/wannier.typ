@@ -15,8 +15,8 @@ where $n$ is the band index and $N$ is the number of sites in the optical lattic
 The Wannier function will be located at $x_i$ by superimposing the Bloch waves for all quasimomenta $q$ in the first Brillouin zone.
 Just like the Bloch waves, the Wannier functions form an orthonormal basis with respect to the band index $n$ and, additionally, the lattice site $i$.
 #subref(<fig:theory-wannier>, "a") shows the Wannier functions computed from the Bloch waves in @fig:theory-bloch-energy-bands.
-On the lattice site at $x_i = 0$, the Wannier function of the lowest band looks just like the Gaussian wavefunction in a harmonic oscillator potential.
-However, the Wannier function has a finite amplitude on the neighbouring lattice sites, as shown in the shallow lattice in #subref(<fig:theory-wannier>, "b").
+On the lattice site at $x_i = 0$, the Wannier function of the lowest band looks similar to the Gaussian wavefunction in a harmonic-oscillator potential.
+However, the Wannier function has a finite amplitude on the neighboring lattice sites, as shown in the shallow lattice in #subref(<fig:theory-wannier>, "b").
 This property enables the localized particle to tunnel in the optical lattice.
 The tunneling amplitude from the lattice site $i$ to the lattice site $j$ can be computed as the off-diagonal matrix element
 
@@ -26,7 +26,7 @@ $
 $ <eq:theory-wannier-tunneling-amplitude>
 
 of the dimensionless Hamiltonian @eq:theory-bloch-hamiltonian-dimensionless[] in the Wannier basis #tr[cite what?].
-While the tunneling amplitude is defined for arbitrary lattice sites $i != j$, the most common case is $t_1 := t_(i, i plus.minus 1)$ between neighbouring lattice sites as shown in #subref(<fig:theory-wannier>, "b").
+While the tunneling amplitude is defined for arbitrary lattice sites $i != j$, the most common case is $t_1 := t_(i, i plus.minus 1)$ between neighboring lattice sites as shown in #subref(<fig:theory-wannier>, "b").
 We can usually neglect tunneling over longer distances since it is exponentially suppressed compared to $t_1$.
 
 #floating-figure(
@@ -54,7 +54,7 @@ This is a valid approach for a single particle in a separable potential $V(phy.v
 However, the actual optical potential and the total wavefunction must be three dimensional.
 In accordance with our experimental setup, we will therefore consider a three-dimensional optical lattice, where each dimension is described by the Wannier function corresponding to the lowest band $n = 1$.
 Additionally, instead of being a single-particle system, the optical lattice is occupied by many particles with the spin states $phy.ket(arrow.t)$ and $phy.ket(arrow.b)$.
-Within the Pauli exclusion principle, this enables the interaction of two particles of opposite spin on the same lattice site#footnote[In general, there are also off-site interaction terms @dutta_non-standard_2015. They are negligible for the optical-lattice potentials in the context of this thesis.].
+Within the Pauli exclusion principle, this enables the interaction of two particles of opposite spin on the same lattice site#footnote[In general, there are also off-site interaction terms @dutta_non-standard_2015. However, they are negligible for the optical-lattice potentials in the context of this thesis.].
 The corresponding interaction energy of two particles with the same spatial wavefunction $w(phy.vb(r))$ is
 
 $
@@ -74,7 +74,7 @@ $
   U prop sqrt(omega_x omega_y omega_z)
 $ <eq:theory-wannier-interaction-scaling>
 
-which will reduce significantly if only one axis has a weaker confinement.
+which will be reduced significantly if only one axis has a weaker confinement.
 The trap frequency in the harmonic approximation scales like $omega prop sqrt(v_0) slash a^2$, where $v_0$ is the dimensionless lattice depth and $a$ is the lattice period.
 Different lattice periods will therefore have the strongest impact on the confinement and the interaction energy.
 

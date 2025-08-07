@@ -38,8 +38,8 @@ $
   = 4 v_s dot cos^2(2x) - v_l dot cos^2(x + phi)
 $ <eq:theory-super-potential-dimensionless>
 
-where the relation $k_s = 2 k_l$ is used for the lattice vectors, and $#unit[Erec] prop k^2$ is used for the two recoil energies.
-With the additional factor of $4$, we can express the depth of the short lattice $v_s$ in units of the short recoil energy.
+where we used the relation $k_s = 2 k_l$ for the lattice vectors, and $#unit[Erec] prop k^2$ for the recoil energy of the two lattices.
+With the factor of $4$ in front of the short-lattice depth, we can express the entire potential in units of the long recoil energy.
 I will use this convention throughout the thesis when referring to the lattice depths in the superlattice potential.
 
 #floating-figure(
@@ -125,7 +125,7 @@ $ <eq:theory-super-wannier-superposition>
 
 This mixture of the Wannier functions is illustrated in the insets in @fig:theory-super-wannier-mixing.
 Since the underlying bands $epsilon_1 (q)$ and $epsilon_2 (q)$ have a different energy, the time evolution of the superposition will alternate between the Wannier functions $w_L (x)$ and $w_R (x)$.
-The frequency of the time evolution is given by the energy gap $2f dot h = Delta epsilon = epsilon_2 (q) - epsilon_1 (q)$.
+The frequency of the time evolution is given by the energy gap $f dot h = Delta epsilon = epsilon_2 (q) - epsilon_1 (q)$.
 This oscillation between the left and right lattice site is equivalent to the tunneling event in the Wannier picture.
 Despite the maximal localization, the Wannier functions $w_L (x)$ and $w_R (x)$ will have a finite amplitude on the neighbouring lattice sites, and the tunneling amplitude can also be computed with the integral @eq:theory-wannier-tunneling-amplitude[].
 However, compared to the regular lattice, there are two different tunneling amplitudes in the superlattice potential.
