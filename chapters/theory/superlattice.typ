@@ -54,6 +54,10 @@ I am using this convention throughout the thesis when referring to the lattice d
     The _antisymmetric_ configuration $phi = pi slash 4$ in *c* results in the maximum energy offset equal to the lattice depth $V_l$.
     Intermediate phases such as $phi = pi slash 10$ in *b* are referred to as _asymmetric_.
     The dotted red line highlights the shift of the long lattice compared to the phase $phi = 0$.
+
+    #notes[
+      - Use the xticks $[-1, -0.75, -0.25, 0]$ to match the shift of the long lattice in *c*.
+    ]
   ],
   label: <fig:theory-super-potential-phase>,
 )
@@ -94,7 +98,7 @@ However, the Bloch waves still show their origin from the band $tilde(n) = 2$ wi
     The lowest two bands already appear to be flat, whereas the upper two bands show a strong dispersion.
     In *b*, the energy bands and the Bloch waves $psi_(q=0)^n (x)$ are shown in the superlattice potential @eq:theory-super-potential[].
     Within each pair of bands, the Bloch waves only show a different symmetry in the unit cell (shaded area).
-    On each lattice site, the Bloch waves have the same number of nodes.
+    The number of nodes per lattice site only increases in the upper pair of bands.
   ],
   label: <fig:theory-super-band-structure>,
 )

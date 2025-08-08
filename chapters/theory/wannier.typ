@@ -38,7 +38,7 @@ We can usually neglect tunneling over longer distances since it is exponentially
     For the bands $n = 2$ and $n = 3$, a small amplitude is visible on the neighboring sites.
     In the untrapped band with index $n = 4$, the Wannier function appears to be delocalized over multiple lattice sites.
     *b* shows the Wannier functions in the lowest band for a lattice depth of $V_0 = #qty[6][Erec]$.
-    The horizontal line highlights the finite amplitude on neighboring lattice sites.
+    The horizontal line highlights the finite amplitude on the neighboring lattice sites.
 
     #notes[
       - Go into more detail for the intermediate and untrapped bands?

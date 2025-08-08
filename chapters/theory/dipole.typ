@@ -131,12 +131,8 @@ I will discuss this further in @sec:super-radial in the context of the in-plane 
   lattice-detuning(xscale: 2.4, depth: 3),
   caption: [
     Trapping atoms in an optical-lattice potential.
-    Both optical lattices have the lattice depth $V_0$ and the lattice period $a$ according to @eq:theory-lattice-potential.
-    The red-detuned optical lattice in *a* traps the atoms
-    Illustration of the trapping of atoms in optical lattices with different detuning.
-    The plot on the left shows the optical dipole potential of a red-detuned optical lattice with the depth $V_0$ and the period $a$.
-    The atoms are trapped at the maxima of the intensity.
-    For a blue-detuned lattice as shown in the plot on the right, the atoms are trapped at the minima of the intensity.
+    Both optical lattices have the same lattice depth $V_0$ and the same lattice period $a$ according to @eq:theory-lattice-potential.
+    The red-detuned optical lattice traps the atoms at the maxima of the intensity, while the blue-detuned lattice traps the atoms at the minima of the intensity.
 
     #notes[
       - Add two particles on some lattice sites? With or without different colors (spins)?

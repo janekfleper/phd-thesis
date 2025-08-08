@@ -87,7 +87,7 @@ In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a fi
     In *b*, the band energies and the Bloch waves $psi_(q=0)^n (x)$ are shown in relation to the potential $V(x)$.
     The offsets for the Bloch waves are the corresponding energies $epsilon_n (q = 0)$, and the solid (dashed) lines indicate the real (imaginary) parts.
     The parity of the Bloch waves alternates with the band index $n$ according to $cal(P) = (-1)^(n-1)$.
-    For the lowest band $n = 1$, the Bloch wave on a single site looks like the ground state of the harmonic- oscillator potential.
+    For the lowest band $n = 1$, the Bloch wave on a single site looks like the ground state of the harmonic-oscillator potential.
     With an increasing band index $n$, the Bloch waves are further delocalized until they approach plane waves $phi.alt(x) prop cexp(p x slash phy.hbar)$ describing a free particle with the momentum $p$.
     Correspondingly, the band gaps are getting smaller until the energy bands show the dispersion $epsilon = p^2 / (2 m)$ of a free particle mapped onto the first Brillouin zone.
 
