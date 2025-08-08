@@ -1,5 +1,5 @@
 #import "/header.typ": *
-#import "figures/figures.typ": lattice-configurations
+#import "figures/figures.typ": lattice-configurations, lattice-detuning
 
 == Atom-light interaction and optical lattices <sec:theory-dipole>
 
@@ -96,7 +96,7 @@ At $anglez = 90degree$, the counterpropagating case with $a = lambda / 2$ is rec
     #notes[
       - Add *a* and *b* here to reference the different configurations?
       - Show the vector $Delta phy.vb(k)$ in the two configurations?
-      - Use a different angle, since $alpha$ is also the polarizability?
+      - Use a different letter for the angle, since $alpha$ is also the polarizability?
       - Add a coordinate system $x$ and $y$?
     ]
   ],
@@ -128,7 +128,7 @@ The radial potential is relevant for the trapping of atoms in a three-dimensiona
 I will discuss this further in @sec:super-radial in the context of the in-plane superlattice.
 
 #floating-figure(
-  image("figures/optical-lattices-detuning.png"),
+  lattice-detuning(xscale: 2.4, depth: 3),
   caption: [
     Trapping atoms in an optical-lattice potential.
     Both optical lattices have the lattice depth $V_0$ and the lattice period $a$ according to @eq:theory-lattice-potential.
@@ -137,6 +137,10 @@ I will discuss this further in @sec:super-radial in the context of the in-plane 
     The plot on the left shows the optical dipole potential of a red-detuned optical lattice with the depth $V_0$ and the period $a$.
     The atoms are trapped at the maxima of the intensity.
     For a blue-detuned lattice as shown in the plot on the right, the atoms are trapped at the minima of the intensity.
+
+    #notes[
+      - Add two particles on some lattice sites? With or without different colors (spins)?
+    ]
   ],
   label: <fig:theory-lattice-detuning>,
 )
