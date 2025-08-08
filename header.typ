@@ -81,6 +81,10 @@
 #let ketLR = $phy.ket(L R)$
 #let ketRL = $phy.ket(R L)$
 #let ketRR = $phy.ket(R R)$
+#let kets = $phy.ket(s)$
+#let kett = $phy.ket(t)$
+#let ketdp = $phy.ket(d_+)$
+#let ketdm = $phy.ket(d_-)$
 
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body

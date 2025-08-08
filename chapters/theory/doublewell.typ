@@ -1,5 +1,7 @@
 #import "/header.typ": *
 
+#let marks(body, color: black) = mannot.markrect(body, color: color, outset: 0.5em, radius: 1mm)
+
 == Interacting fermions in a double-well potential <sec:theory-double>
 
 #notes[
@@ -71,13 +73,12 @@ For the time evolution inside the double well, we can therefore use the constant
     The sketch of the double well in *a* shows the unit cell of the superlattice potential in @fig:theory-super-potential-phase at the phase $phi slash pi = 0.03$.
     The corresponding energy offset is $Delta slash t approx #num[-1.8]$.
     In *b*, the energies of the ground state and the excited state are shown as a function of the offset $Delta slash t$.
-    // We can see the characteristic avoided crossing between two coupled states.
     The composition of the ground state in the basis ${ketL, ketR}$ is displayed in *c*.
-    For the excited state, the composition is just inverted due to the symmetry of the double-well potential with respect to the offset $Delta$.
+    For the excited state, the composition is inverted due to the symmetry of the double-well potential with respect to the offset $Delta$.
 
     #notes[
       - Add particle, a tunneling arrow and the offset $Delta$ to *a*.
-      - Add colored gradients to *b* to show the occupation from *c* (again)?
+      - Apply colored gradients to *b* to show the occupation from *c* (again).
     ]
   ],
   label: <fig:theory-double-one>,
@@ -126,35 +127,115 @@ I will therefore show two specific configurations that are relevant in the conte
 #floating-figure(
   grid(
     columns: (60%, auto),
-    // align: horizon,
     image("figures/theory_doublewell_two_symmetric.png"),
     block(
       width: 100%,
       {
+        [#math.equation(block: true, [Symmetry basis]) <eq:theory-double-two-symmetry-basis>]
         set math.equation(numbering: none)
         show math.equation.where(block: true): set par(leading: 1.5em)
-        let mark(body, color: black) = mannot.markrect(body, color: color, outset: 0.5em, radius: 1mm)
-        [Symmetry basis]
         $
-          mark(phy.ket(s) & = 1 / sqrt(2) (ketLR + ketRL), color: #blue) \
-          mark(phy.ket(t) & = 1 / sqrt(2) (ketLR - ketRL), color: #red) \
-          mark(phy.ket(d_+) & = 1 / sqrt(2) (ketLL + ketRR), color: #purple) \
-          mark(phy.ket(d_-) & = 1 / sqrt(2) (ketLL - ketRR), color: #olive) \
+          marks(kets & = 1 / sqrt(2) (ketLR + ketRL), color: #blue) \
+          marks(kett & = 1 / sqrt(2) (ketLR - ketRL), color: #red) \
+          marks(ketdp & = 1 / sqrt(2) (ketLL + ketRR), color: #purple) \
+          marks(ketdm & = 1 / sqrt(2) (ketLL - ketRR), color: #olive) \
         $
       },
     ),
   ),
   caption: [
     Two particles in the symmetric double-well potential.
-    If the offset is $Delta = 0$, the double-well potential shows a symmetry with respect to left and the right lattice site.
-    The spectrum shows the eigenenergies as a function of the interaction energy $U slash t$ and the composition of the corresponding eigenstates.
+    If the offset is $Delta = 0$, the double-well potential shows a symmetry with respect to the left and right lattice site.
     In the symmetry basis, the split states and the interacting states are combined in symmetric and antisymmetric superpositions.
-    This allows a simple represenation of the eigenstates in the symmetric double well.
-    The eigenstates $phy.ket(psi_2) = phy.ket(d_-)$ and $phy.ket(psi_3) = phy.ket(t)$ do not change as a function of the interaction energy $U slash t$, and the corresponding eigenenergies are $epsilon_2 = U$ and $epsilon_3 = 0$.
+    This allows a simple represenation of the eigenstates in the symmetric double well, as indicated by the colors of the eigenenergies.
 
     #notes[
-      - Use a gradient for the energies $epsilon_1$ and $epsilon_4$.
+      - Apply a color gradient to the energies $epsilon_1$ and $epsilon_4$.
+      - Add arrows to mark the gaps $2t$ and $J$.
+      - Fix the spacing of the equation title + numbering.
     ]
   ],
   label: <fig:theory-double-two-symmetric>,
 )
+
+In the symmetric double-well potential where $Delta = 0$, the two lattice sites are degenerate.
+This results in a characteristic symmetry of the eigenstates as presented in @fig:theory-double-two-symmetric.
+The symmetry basis uses equal superpositions of the states in the spin-ordered basis.
+This directly follows the observed behavior in the symmetric superlattice potential (see @eq:theory-super-wannier-superposition) and in the symmetric double-well potential with a single particle (see @eq:theory-double-one-eigenstate-plus-minus).
+The two split states #ketLR and #ketRL form the singlet state #kets and the triplet state #kett.
+The names of the basis states become obvious if we separate the spatial wavefunction and the spin wavefunction.
+If we exchange the position of the particles $L <-> R$, the state #kets is unchanged (symmetric) while the state #kett picks up a minus sign (antisymmetric).
+To make the total wavefunction antisymmetric, the corresponding spin wavefunctions must have the opposite symmetry of the spatial wavefunctions @foot_double_2011.
+Therefore, the spin wavefunction of the state #kets is the spin singlet $1 / sqrt(2) (phy.ket(arrow.t arrow.b) - phy.ket(arrow.b arrow.t))$, and the spin wavefunction of the state #kett is the spin triplet $1 / sqrt(2) (phy.ket(arrow.t arrow.b) + phy.ket(arrow.b arrow.t))$.
+The basis states #ketdp and #ketdm are also spatially symmetric, and must occupy the spin singlet to get an antisymmetric wavefunction.
+
+To understand the spectrum in @fig:theory-double-two-symmetric, we will check which of the states in the symmetry basis are coupled by the tunneling $t$.
+Both the interacting state #ketdm and the triplet state #kett are isolated from the other basis states due to their parity and their symmetry respectively.
+These two basis states are therefore also the eigenstates $phy.ket(psi_2) = ketdm$ and $phy.ket(psi_3) = kett$ with the corresponding eigenenergies $epsilon_2 = U$ and $epsilon_3 = 0$.
+The other two basis states #kets and #ketdp are coupled by the tunneling $t$, and form an avoided crossing around the interaction energy $U slash t = 0$.
+Depending on the sign of the interaction, the ground state $phy.ket(psi_1)$ either favors the interacting state #ketdp or the split state #kets.
+The excited state $phy.ket(psi_4)$ always has the opposite composition of the ground state.
+For strongly repulsive interactions $U >> t$, the ground-state energy $epsilon_1$ only slowly approaches the energy $epsilon = 0$ we would expect from a completely split state.
+This gap is a result of the second-order tunneling process between the split state #kets and the interacting state #ketdp.
+The corresponding energy scale is the superexchange constant
+
+$
+  J = (4t^2) / U thin ,
+$ <eq:theory-double-two-superexchange>
+
+which can be computed from the second-order perturbation theory #tr[cite Auerbach (2012)].
+In the ground state $phy.ket(psi_1)$, this process is enabled by a tiny fraction of the interacting state #ketdp, even for large interactions $U >> t$.
+The same energy gap $J$ also shows up between the strongly attractive ground state and the state #ketdm.
+While the process itself is not referred to as the superexchange, we can interpret the gap with the equivalent second-order tunneling process between the states #ketdp and #kets.
+
+#floating-figure(
+  grid(
+    rows: 2,
+    row-gutter: 1em,
+    $"Basis:" quad marks(ketLL, color: #blue) wide marks(ketRR, color: #red) wide marks(kets, color: #olive) wide marks(kett, color: #orange)$,
+    image("figures/theory_doublewell_two_general.png"),
+  ),
+  caption: [
+    Two attractively interacting particles in the double-well potential.
+    The interaction energy of the two particles in the system is $U slash t = -4$.
+    *a* shows the spectrum as a function of the offset $Delta slash t$.
+    The colors of the eigenenergies indicate the basis states ${ketLL, ketRR, kets, kett}$.
+    *b* and *c* show the time evolutions starting with both particles on the left site at the offsets $Delta slash t = 2.1$ and $Delta slash t = 0$ respectively.
+
+    #notes[
+      - Apply color gradients to the eigenenergies in *a*.
+      - Connect *b* and *c* to the respective positions in *a*. With a zoom-like circle?
+      - Match the colors with @fig:theory-double-two-symmetric.
+      - Put the legend for the basis inside *a*?
+      - Add insets of the double-well potential to highlight the definition of $Delta$...
+    ]
+  ],
+  label: <fig:theory-double-two-general>,
+)
+
+In the second configuration, we are looking at a double-well potential with a fixed interaction energy $U slash t = -4$.
+When we vary the offset $Delta slash t$, we can study the general behavior of two particles in the double-well potential.
+The spectrum in #subref(<fig:theory-double-two-general>, "a") shows three avoided crossings between the eigenstates $phy.ket(psi_1)$, $phy.ket(psi_2)$ and $phy.ket(psi_4)$, while the third eigenstate is isolated again.
+We are using a mixed basis to show the composition of the eigenstates.
+The interacting states #ketLL and #ketRR are part of the original basis of the Hamiltonian @eq:theory-double-two-hamiltonian[].
+On the other hand, the states #kets and #kett are part of the symmetry basis @eq:theory-double-two-symmetry-basis[] that introduces the superpositions of the basis states #ketLR and #ketRL.
+This basis allows a simple representation of the eigenstates and the time evolution in the double-well potential.
+
+Around the offset $Delta = 0$, the ground state $phy.ket(psi_1)$ rapidly switches between the states #ketLL and #ketRR due to the attractive interaction.
+The corresponding energy of two particles in the lower well is $epsilon_1 approx U - 2 abs(Delta)$.
+At $Delta = 0$, the double-well potential is symmetric, and the ground state is mainly composed of the state #ketdp (see @fig:theory-double-two-symmetric).
+The neighboring eigenstate is $phy.ket(psi_2) = ketdm$, which has the opposite parity of the state #ketdp.
+A coupling between the two states #ketdp and #ketdm is only possible with a second-order tunneling process that involves the singlet state #kets.
+This is also apparent in the time evolution with the initial state $phy.ket(psi(tau = 0)) = ketLL$ shown in #subref(<fig:theory-double-two-general>, "c").
+A small occupation of the singlet state #kets mediates the slow oscillation between the states #ketLL and #ketRR.
+The oscillation frequency is $f = (epsilon_2 - epsilon_1) slash h approx J slash h$, with the superexchange constant $J$ introduced in @eq:theory-double-two-superexchange.
+Since the superexchange assumes $abs(U) >> t$, the actual energy gap is slightly smaller than $J$.
+
+Besides the avoided crossing at $Delta = 0$, we can see two more avoided crossings at $plus.minus Delta approx abs(U) slash 2$ in #subref(<fig:theory-double-two-general>, "a").
+In both cases, the eigenstates $phy.ket(psi_2)$ and $phy.ket(psi_4)$ mix the interacting state (#ketLL or #ketRR) on the upper site and the singlet state #kets.
+We can interpret this coupling as the resonant tunneling of a single particle since the energy of the interacting states is $U + 2 abs(Delta) approx 0$.
+The time evolution of the initial state #ketLL at the offset $Delta slash t = 2.1$ in #subref(<fig:theory-double-two-general>, "b") highlights this process.
+Apart from a tiny contribution by the state #ketRR, the occupation oscillates between the states #ketLL and #kets with a large amplitude.
+The corresponding frequency is $f approx 2.7 t slash h$, which is significantly larger than the expected frequency for the single-particle tunneling (see @eq:theory-double-one-rabi-parameters).
+This is caused by the proximity of the avoided crossing to the symmetric double-well potential.
+With stronger interactions $abs(U) >> t$, the positions of the two avoided crossings will approach $plus.minus Delta = abs(U) slash 2$, and the energy gap will become $epsilon_4 - epsilon_2 = 2t$.
