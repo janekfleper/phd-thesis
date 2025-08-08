@@ -1,27 +1,29 @@
 #import "/header.typ": *
 
-#let marks(body, color: black) = mannot.markrect(body, color: color, outset: 0.5em, radius: 1mm)
+#let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm)
 
 == Interacting fermions in a double-well potential <sec:theory-double>
 
-#notes[
-  - Really make the introduction this long? Maybe move some of the RM and SSH stuff to the introduction?
-  - Really use "offset" for $Delta$? Is "detuning" the better term?
-]
+If the Wannier functions are strongly localized to their respective lattice sites, we can treat the system in the tight-binding approximation @slater_simplified_1954.
+This enables a significant simplification for the description of optical lattices.
+Instead of using the Wannier functions $w_0 (x - x_i)$, we only need to quantify the occupation of the lattice sites by the index $i$.
+The Wannier functions are only required to compute the tunneling amplitude $t$ @eq:theory-wannier-tunneling-amplitude[] and the interaction energy $U$ @eq:theory-wannier-interaction-strength[].
+In a system with a single particle, this is only a marginal gain.
+On the other hand, for many-body states, the occupation number representation#footnote[
+  This is also referred to as the second quantization.
+] is inevitable.
+In a regular optical lattice, this formalism is used to express the Hamiltonian of the Fermi-Hubbard model @esslinger_fermi-hubbard_2010.
+The general superlattice potential with the tunneling amplitudes #tin and #tout and an asymmetric phase $phi != 0$ is described by the Rice-Mele model @rice_elementary_1982.
+Recently, this model was also extended to interacting particles @lin_interacting_2020.
+If the superlattice phase is symmetric ($phi = 0$), the system can be simplified since the on-site energies #eL and #eR are equal.
+The corresponding Su-Schrieffer-Heger model @su_solitons_1979 has also been studied for interacting particles @di_salvo_topological_2024.
+Both models are used to quantify the topological properties of the superlattice potential #tr[cite anything experimental?].
 
-In the basis of the maximally localized Wannier functions, the dynamics in the superlattice potential can be described in the #tr[language] of second quantization #tr[again].
-As already discussed in @ssec:theory-super-wannier, the properties of the Wannier functions can be read from the Hamiltonian @eq:theory-super-hamiltonian-bpo[] in the Wannier basis.
-The Wannier functions $w_L (x)$ and $w_R (x)$ have the associated on-site energies #eL and #eR, and the tunneling between the lattice sites is characterized by the amplitudes #tin and #tout.
-If two particles occupy the same lattice site, we also have to take the interaction energy $U$ @eq:theory-wannier-interaction-strength[] with the correction @eq:theory-wannier-interaction-correction[] into account.
-In an extended superlattice potential, this system can be described by the Rice-Mele model #tr[cite Rice (1982)] which was also extended to interacting particles #tr[cite Lin (2020)].
-If the superlattice phase is symmetric $phi = 0$, the system can be simplified since the on-site energies #eL and #eR are equal.
-The corresponding Su-Schrieffer-Heger model #tr[cite Su (1979)] has also been studied for interacting particles #tr[cite Di Salvo (2024), Huang (2025)].
-Both models are used to investigate the topological properties of the superlattice potential #tr[cite anything experimental?].
-However, in the context of this thesis we are working exclusively with the dynamics inside the unit cells.
-By selecting the lattice depths $V_l$ and $V_s$ such that $tin >> tout$, we can study the superlattice potential as an array of isolated double wells#footnote[While the coupling of the double wells by the tunneling amplitude #tout cannot be completely neglected, it is sufficient to treat it as a perturbation. #tr[ref any later results?]].
-In this section, I will introduce the behavior of one and two particles inside a double-well potential based on #tr[cite Andrea (PhD)].
-
-Compared to an extended superlattice with an exponentially increasing number of states, the description of the double-well potential only requires a small number of states.
+In the context of this thesis, we are mainly investigating the dynamics inside the unit cells of the superlattice potential.
+By selecting the lattice depths $V_l$ and $V_s$ such that $tin >> tout$, we can describe the superlattice potential as an array of weakly coupled double wells.
+In this section, I will introduce the behavior of one and two particles inside the double-well potential based on @bergschneider_strong_2017.
+This will provide important insights for the measurements related to the superlattice phase in @ch:phase.
+There, I will also discuss the residual coupling of the double wells.
 
 
 === One particle in a double well <ssec:theory-double-one>
@@ -31,7 +33,9 @@ The corresponding basis states, in place of the maximally localized Wannier func
 Instead of the on-site energies #eL and #eR, we are only considering the energy offset $2 Delta = eL - eR$.
 We can ignore the mean energy $(eL + eR) slash 2$ inside the double well, since it only contributes to the global phase of the system.
 Analogous to the maximally localized Wannier functions, the two states #ketL and #ketR are coupled by the tunneling amplitude $t := tin$.
-This model is illustrated in #subref(<fig:theory-double-one>, "a") inside a unit cell of the superlattice potential#footnote[In general, the underlying potential can have any shape with two minima. Only the parameters $t$ and $Delta$ are relevant, and all detailed information about the potential is lost.].
+This model is illustrated in #subref(<fig:theory-double-one>, "a") inside a unit cell of the superlattice potential#footnote[
+  In general, the underlying potential can have any shape with two minima. Only the parameters $t$ and $Delta$ are relevant, and all detailed information about the potential is lost.
+].
 In the basis #fix("line wrap of the equation")[${ketL = vec(1, 0), ketR = vec(0, 1)}$], the Hamiltonian of a single particle inside of a double well is
 
 $
@@ -88,10 +92,10 @@ For the time evolution inside the double well, we can therefore use the constant
 === Two particles in a double well <ssec:theory-double-two>
 
 With a second particle in the double well, the interaction energy $U$ introduced in @eq:theory-wannier-interaction-strength and the spin states of the particles become relevant again.
-The Pauli exclusion principle prevents two particles with the same to occupy the same lattice site.
+The Pauli exclusion principle prevents two particles with the same spin to occupy the same lattice site.
 In the context of the double-well potential, the states where two particles have the same spin are therefore trivial.
-Each particle has to occupy a separate lattice site, and neither tunneling nor an interaction are possible.
-The resulting energy of the states $phy.ket(arrow.t\, arrow.t)$ and $phy.ket(arrow.b\, arrow.b)$ is therefore $E = Delta - Delta = 0$.
+Each particle has to occupy a separate lattice site, and the particles can neither tunnel nor interact with each other.
+The resulting energy of the states $phy.ket(arrow.t\, arrow.t)$ and $phy.ket(arrow.b\, arrow.b)$ is $E = Delta - Delta = 0$.
 If the two particles have opposite spins #ketup and #ketdown, several configurations are possible.
 Here, we are using the basis ${ketLL, ketLR, ketRL, ketRR}$ where the particles are ordered by their spin.
 The first letter indicates the site of the particle in the spin state #ketup, and the second letter indicates the site of the particle in the spin state #ketdown.
@@ -105,7 +109,7 @@ We can sort the basis states into two categories based on the occupation of the 
 The _interacting_ states #ketLL and #ketRR have both particles on the same lattice site, making the states subject to the interaction energy $U$ and the offset $Delta$.
 On the other hand, the particles in the _split_ states #ketLR and #ketRL do not interact#footnote[
   The nearest-neighbor interaction $V_"nn"$ is part of the extended Hubbard parameters @dutta_non-standard_2015.
-] and their total energy due to the offset $Delta$ averages to zero.
+] and their total energy offset $Delta$ averages to zero.
 In first order, the interacting states are coupled to the split states by the tunneling amplitude $t$.
 We will neglect the coupling terms between the states in the same category, since they are only small corrections compared to the parameters $t$ and $U$.
 The resulting Hamiltonian of two particles inside a double well is
@@ -147,7 +151,7 @@ I will therefore show two specific configurations that are relevant in the conte
     Two particles in the symmetric double-well potential.
     If the offset is $Delta = 0$, the double-well potential shows a symmetry with respect to the left and right lattice site.
     In the symmetry basis, the split states and the interacting states are combined in symmetric and antisymmetric superpositions.
-    This allows a simple represenation of the eigenstates in the symmetric double well, as indicated by the colors of the eigenenergies.
+    This allows a simple representation of the eigenstates in the symmetric double well, as indicated by the colors of the eigenenergies.
 
     #notes[
       - Apply a color gradient to the energies $epsilon_1$ and $epsilon_4$.
@@ -183,7 +187,7 @@ $
   J = (4t^2) / U thin ,
 $ <eq:theory-double-two-superexchange>
 
-which can be computed from the second-order perturbation theory #tr[cite Auerbach (2012)].
+which can be computed from the second-order perturbation theory @auerbach_interacting_2012.
 In the ground state $phy.ket(psi_1)$, this process is enabled by a tiny fraction of the interacting state #ketdp, even for large interactions $U >> t$.
 The same energy gap $J$ also shows up between the strongly attractive ground state and the state #ketdm.
 While the process itself is not referred to as the superexchange, we can interpret the gap with the equivalent second-order tunneling process between the states #ketdp and #kets.
@@ -235,7 +239,7 @@ Besides the avoided crossing at $Delta = 0$, we can see two more avoided crossin
 In both cases, the eigenstates $phy.ket(psi_2)$ and $phy.ket(psi_4)$ mix the interacting state (#ketLL or #ketRR) on the upper site and the singlet state #kets.
 We can interpret this coupling as the resonant tunneling of a single particle since the energy of the interacting states is $U + 2 abs(Delta) approx 0$.
 The time evolution of the initial state #ketLL at the offset $Delta slash t = 2.1$ in #subref(<fig:theory-double-two-general>, "b") highlights this process.
-Apart from a tiny contribution by the state #ketRR, the occupation oscillates between the states #ketLL and #kets with a large amplitude.
+Apart from a tiny contribution by the state #ketRR, the occupation oscillates with the maximum amplitude between the states #ketLL and #kets.
 The corresponding frequency is $f approx 2.7 t slash h$, which is significantly larger than the expected frequency for the single-particle tunneling (see @eq:theory-double-one-rabi-parameters).
 This is caused by the proximity of the avoided crossing to the symmetric double-well potential.
 With stronger interactions $abs(U) >> t$, the positions of the two avoided crossings will approach $plus.minus Delta = abs(U) slash 2$, and the energy gap will become $epsilon_4 - epsilon_2 = 2t$.

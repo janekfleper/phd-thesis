@@ -1,23 +1,30 @@
 #import "/header.typ": *
 
-= Theory <ch:theory>
+= Fermionic particles in optical lattices <ch:theory>
+
+#notes[
+  - Reference the sections in the introduction?
+]
 
 In this chapter, I will introduce the theoretical concepts behind the measurements presented in this thesis.
-Starting with the interaction of (far-detuned) light with atoms I will introduce the optical potentials that we are using in the experiment.
+The interaction of far-detuned light with atoms is the foundation of the optical potentials we use to confine the atoms.
+With a single laser beam, we can create an optical dipole trap for an entire atom cloud.
+This is an essential tool for the trapping and cooling of quantum gases (see @sec:setup-prepare).
+Multiple interfering laser beams form optical-lattice potentials that resemble the structure of a solid-state crystal.
+The neutral atoms trapped in the optical-lattice potential take on the role of the free electrons in the crystal.
+We can use the periodicity of the optical lattices to find the eigenstates of a particle with the Bloch theorem.
+While the resulting Bloch waves are completely delocalized over the optical lattice, the Wannier functions provide a basis to describe localized particles.
+If the particles are strongly localized to the lattice sites, we can use the tight-binding approximation to simplify the description of the system.
+Instead of using spatial wavefunctions, each particle is just associated with a specific lattice site.
+The particles can then tunnel to neighboring lattices sites, and they can interact with other particles on the same lattice site.
 
-By interfering laser beams we can create so-called optical lattices which are periodic potentials for the atoms.
-The periodicity of the potentials allows us to solve the Schrödinger equation using Bloch's theorem.
-The so-called Bloch waves are the eigenstates of non-interacting atoms in optical lattices.
-When an optical lattice is sufficiently deep, the atoms can also be described as localized particles.
-The so-called Wannier functions are an alternative basis that can be computed directly from the Bloch waves.
-Using the Wannier functions the system of atoms in an optical lattice can also be described in the tight-binding model.
-
-By overlapping two optical lattices with different lattice periods along the same axis, we can create a so-called superlattice potential.
-This allows us to create much more complex physical systems or to access states which would otherwise not be accessible in monochromatic lattices.
-One special case of the superlattice potential is achieved when the lattice periods differ from each other by a factor of 2.
-The potential landscape will then feature many double-well potentials where the offset $Delta$ between the sites can be changed by detuning the phase of the superlattice.
-
-We use the two-site Hubbard model to explain the behavior of two interacting fermionic particles in a single double well...
+If we overlap two optical lattices with different lattice periods, we can create an optical superlattice.
+In addition to the depths of both lattices, the relative phase between the two lattices is also tunable.
+Therefore, compared to a regular lattice, the superlattice has a non-trivial unit cell and a complex band structure.
+This requires an elaborate formalism to find the maximally localized Wannier functions.
+In the tight-binding approximation, we can quantify the system with the tunneling amplitudes inside and outside of the unit cell, as well as an energy offset inside the unit cell.
+If the tunneling amplitude outside of the unit cells is small, the superlattice potential resembles an array of weakly coupled double-well potentials.
+The small system size of a double well enables us to determine the exact solution for a single particle and two interacting particles.
 
 #include "dipole.typ"
 #include "bloch.typ"

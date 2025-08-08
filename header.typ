@@ -1,6 +1,6 @@
 #import "@local/fancy-thesis:0.1.0": floating-figure
 #import "@preview/physica:0.9.5" as phy
-#import "@preview/mannot:0.3.0"
+#import "@preview/mannot:0.3.0": markrect
 #import "@preview/fancy-units:0.1.1": num, qty, unit
 
 #let subref(label, index) = {
@@ -26,9 +26,11 @@
 #let mix(N1, N2) = $mF(N1) \& mF(N2)$
 
 #let K40 = $phy.isotope("K", a: 40)$
-#let asc = $a_upright("sc")$
+#let asc = $a_(upright("sc"))$
 #let fita0 = sym.alpha
 
+#let k1 = $phy.vb(k)_1$
+#let k2 = $phy.vb(k)_2$
 #let anglez = $alpha$
 
 #let x1064 = $x 1064$

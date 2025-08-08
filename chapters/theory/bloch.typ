@@ -15,7 +15,9 @@ $
   hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V_0 dot sin^2(k x) thin .
 $ <eq:theory-bloch-hamiltonian>
 
-To make the Hamiltonian dimensionless, we will rescale the position $x -> x slash k$ and express the energy in units of the recoil energy $#unit[Erec] = (phy.hbar^2 k^2) / (2 m)$, where $m$ is the mass of the particle.
+To make the Hamiltonian dimensionless, we rescale the position $x -> x slash k$ and express the energy in units of the recoil energy#footnote[
+  The energy associated with the recoil of the atom from a single photon with the momentum $phy.hbar k$.
+] $#unit[Erec] = (phy.hbar^2 k^2) / (2 m)$, where $m$ is the mass of the particle.
 I am using this convention throughout this chapter and in the appendix #tr[ref appendix].
 The resulting dimensionless Hamiltonian is
 
@@ -40,7 +42,7 @@ $
 $ <eq:theory-bloch-uq-fourier-series>
 
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
-With $k dot a = pi$, the translation $x -> x + a$ will only shift the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
+With $k dot a = pi$, the translation $x -> x + a$ only shifts the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
 In the next step, we will also express the potential $V(x)$ as a Fourier series.
 The coefficients $c_m$ are revealed by rewriting $sin^2 x$ in terms of complex exponential functions.
 
@@ -76,7 +78,7 @@ For the lattice depth $V_0 = #qty[15][Erec]$, the band with index $n = 4$ is no 
 As a result, the dispersion $epsilon_n (q)$ and the Bloch wave $psi_(q=0)^n (x)$ resemble a free particle with momentum $p$.
 At $q = 0$, the band gap to the fifth band is already closed, and the Bloch wave only changes slightly at the positions of the potential maxima.
 This behavior can be found in all energy bands that are not trapped inside the potential anymore.
-In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite band width $Delta epsilon_n (q)$ and Bloch waves that still follow the shape of the potential $V(x)$.
+In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite bandwidth $Delta epsilon_n (q)$ and Bloch waves that still follow the shape of the potential $V(x)$.
 
 #floating-figure(
   image("figures/theory_band_structure.png"),
@@ -84,7 +86,7 @@ In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a fi
     Band structure of an optical lattice with a depth of $V_0 = #qty[15][Erec]$.
     In *a*, the four lowest energy bands $epsilon_n (q)$ are shown in the first Brillouin zone $q slash k = [-1, 1)$.
     The band with index $n = 1$ has a width of only $Delta epsilon_1 approx #qty[0.026][Erec]$ and therefore appears to be flat.
-    The higher bands show finite band widths that are increasing with the index $n$.
+    The higher bands show finite bandwidths that are increasing with the index $n$.
     In *b*, the band energies and the Bloch waves $psi_(q=0)^n (x)$ are shown in relation to the potential $V(x)$.
     The offsets for the Bloch waves are the corresponding energies $epsilon_n (q = 0)$, and the solid (dashed) lines indicate the real (imaginary) parts.
     The parity of the Bloch waves alternates with the band index $n$ according to $cal(P) = (-1)^(n-1)$.
