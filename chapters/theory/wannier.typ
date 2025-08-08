@@ -21,11 +21,10 @@ This property enables the localized particle to tunnel in the optical lattice.
 The tunneling amplitude from the lattice site $i$ to the lattice site $j$ can be computed as the off-diagonal matrix element
 
 $
-  t_(i,j) #sym.slash#unit[Erec]
-  = integral phy.dd(x) w_n (x - x_j) med hat(h) med w_n (x - x_i)
+  t_(i,j) = integral phy.dd(x) w_n (x - x_j) med hat(H) med w_n (x - x_i)
 $ <eq:theory-wannier-tunneling-amplitude>
 
-of the dimensionless Hamiltonian @eq:theory-bloch-hamiltonian-dimensionless[] in the Wannier basis #tr[cite what?].
+of the Hamiltonian @eq:theory-bloch-hamiltonian[] in the Wannier basis @jaksch_cold_2005.
 While the tunneling amplitude is defined for arbitrary lattice sites $i != j$, the most common case is $t_1 := t_(i, i plus.minus 1)$ between neighboring lattice sites as shown in #subref(<fig:theory-wannier>, "b").
 We can usually neglect tunneling over longer distances since it is exponentially suppressed compared to $t_1$.
 
@@ -65,7 +64,7 @@ $
   integral phy.dd(phy.vb(r), 3) abs(w(phy.vb(r)))^4
 $ <eq:theory-wannier-interaction-strength>
 
-where #asc is the scattering length that characterizes the magnitude and the sign of the interaction #tr[cite what?].
+where #asc is the scattering length that characterizes the magnitude and the sign of the interaction @jaksch_cold_1998.
 If the scattering length is negative (positive), the corresponding interaction is attractive (repulsive) and the energy of the two particles is decreased (increased).
 Since the integrand in @eq:theory-wannier-interaction-strength is proportional to the squared density $n(phy.vb(r)) = abs(w(phy.vb(r)))^2$, the magnitude of the interaction energy depends on the confinement of the particles.
 A strong confinement will compress the wavefunction and therefore increase the integral in @eq:theory-wannier-interaction-strength.

@@ -6,7 +6,7 @@
   - Discuss other superlattice types somewhere else? @sec:super-setup or @sec:phase-setup?
 ]
 
-An optical superlattice is created by superimposing (at least) two optical lattices to form a potential with a non-trivial unit cell #tr[cite Fölling or who?].
+An optical superlattice is created by superimposing (at least) two optical lattices to form a potential with a non-trivial unit cell @windpassinger_engineering_2013.
 In the experimental setup presented in this thesis, we are using two commensurate wavelengths $lambda_l = 2 lambda_s$ to create the optical-superlattice potential
 
 $

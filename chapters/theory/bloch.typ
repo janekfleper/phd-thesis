@@ -4,9 +4,6 @@
 
 #notes[
   - Use a different character for the mass to avoid confusion with the Fourier series index?
-  - Explain the dimensionless units in more detail? E.g. $a = pi$...
-  - Explain the origin of the name "recoil energy"?
-  - Explain the "mapping" between the free-particle momentum $p$ and the quasimomentum $q$?
 ]
 
 The Hamiltonian associated with a single particle in the optical lattice potential @eq:theory-lattice-potential[] is
