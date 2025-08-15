@@ -88,6 +88,10 @@
 #let ketdp = $phy.ket(d_+)$
 #let ketdm = $phy.ket(d_-)$
 
+// thermal lensing parameters
+#let tpower = $p$
+#let tmag = sym.gamma
+
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body
 

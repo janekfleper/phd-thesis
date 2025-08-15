@@ -1,26 +1,44 @@
 #import "/header.typ": *
 
-= Everything about the in-plane superlattice <ch:super>
+= Upgrading the in-plane superlattice setup <ch:super>
 
-While the $x$-superlattice was already mentioned in @ssec:setup-lattices-xy, I will introduce the optical setup here in detail.
-The goal of/behind this bichromatic superlattice is/was to study complex one-dimensional Hubbard models/systems, especially using modulated/time-dependent potentials.
-By tuning the (relative) phase of the two individual lattices, we can adjust the tunneling amplitudes and the energy difference/offset between the individual (sub)lattice sites.
-The phases of the individual lattices accumulate over an optical path length of $approx #qty[50][cm]$.
-This gives us an excellent tunability of the phase by adjusting the frequency of the individual lattices.
-But it also makes the superlattice phase very sensitive to changes of the refractive index along the optical path.
-At the wavelengths $lambda_l = #qty[1064][nm]$ and $lambda_s = #qty[532][nm]$, the refractive index of air and of all/most glasses shows a (slightly) different dependency on (the) environmental parameters.
-This requires a lot of effort to keep the phase of the superlattice stable from sequence to sequence.
+#notes[
+  - Introduce the distinction of laser table and experimental table in @ch:setup
+  - When was the x1064 lattice really used for the first time?
+  - Shorten the "history" of the thermal lensing discovery/investigation...
+]
 
-Since both the sensitivity and the tunability are just inversely "related" to the optical path difference between the forward-propagating beam and the retro-propagating beam, there is no easy way/path to build a superlattice that is both very stable but also easily/quickly tunable.
-There are setups that try to achieve this by putting the optical path in a simple/low vacuum #text(red)[ref Bloch group].
-If the "optical path" is not subject(ed) to changes of the refractive index, the sensitivity to the temperature, the pressure and the humidity is just gone.
-We also thought about a tube-like/tube-shaped enclosure for the optical path between the atoms and the retro-reflecting mirror.
-Due to spatial constraints this is/was however not possible.
-Our approach therefore uses environmental sensors to "predict" the changes of the phase as good as possible.
-The so-called feed-forward is introduced in detail in #text(red)[ref section feedforward].
+At the start of my thesis, the optical setup for the x1064 lattice and the x532 lattice was already in place.
+The x1064 lattice was used in many former projects @cocchi_equation_2016 @drewes_antiferromagnetic_2017 @wurz_coherent_2018 @gall_competing_2021 #tr[find something to add to this sentence...].
+For the operation of the x1064 lattice as part of the in-plane superlattice, we only modified the optical setup on the laser table.
+This was required for the control of the superlattice phase, which I will discuss in detail in @sec:phase-setup.
+The x532 lattice was put into operation again shortly before my thesis @klemmer_ultracold_2020.
+On the experimental table, the optical setup was unchanged compared to the initial purpose of studying a fermi gas in an optical superlattice @pertot_relaxation_2014.
+#tr[Mention anything else?]
 
+After already working with the in-plane superlattice for more than three years, we noticed that the lattice depths #Vx1064 and #Vx532 are strongly time-dependent.
+While the intensity regulation with the photodiode on the experimental table showed a constant power, the lattice depth at the position of the atoms was already dropping significantly in a few #qty[100][ms].
+At this point, several reasons were possible to explain this effect.
+#tr[First of all, ]The overall power could be reduced by a polarization-sensitive element behind the regulation photodiode.
+However, this is unlikely since the regulation photodiodes are always located behind a polarizing beam splitter to clean the polarization.
+If the power is #tr[actually] constant, the lattice beams could either change their position or their size over time to reduce the amplitude of the interference pattern at the position of the atoms.
+With the in-situ lattice modulation spectroscopy (see @ch:mod), we could quantify the temporal change of the lattice depth $V(x, y)$.
+We started with the investigation of the #x1064 lattice since the #x532 lattice can only be calibrated together with the #x1064 lattice (see @sec:mod-super).
+While the #x1064\-lattice position was nearly constant, we could see an increase of the Gaussian waist $w_0$ that matched the decrease of the lattice depth.
+We could confirm this behavior by imaging the forward-propagating lattice beam at the position of the atoms with a camera.
+For the #x532 lattice, the measured reduction of the lattice depth was even stronger.
+Based on these observations, we concluded that the optical setups of the #x1064 lattice and the #x532 lattice are subject to thermal lensing.
+We initially made several attempts to compensate the changes of the lattice depths due to the thermal lensing.
+However, due to the severity of the thermal lensing, we ultimately made the decision to completely rebuild the optical setups of the two lattices on the experimental table.
+
+In this chapter, I will introduce a theoretical description of thermal lensing to justify the choices of the optical materials that we used for the upgrade of the optical setup.
+As a reference for the upgrades and the other chapters in this thesis, I will show the complete optical setup of the #x1064 lattice and the #x532 lattice on the experimental table.
+This is also relevant for the alignment of the lattices in @sec:mod-align and the control of the superlattice phase in
+At the end of the chapter, I will present the measured lattice depths $Vx1064(tau)$ and $Vx532(tau)$, and compare them to the initial measurements to highlight the improvement of the optical setup.
+
+#include "thermal.typ"
 #include "setup.typ"
+#include "stability.typ"
 #include "x1064.typ"
 #include "x532.typ"
-#include "thermal.typ"
 #include "radial.typ"
