@@ -92,6 +92,10 @@
 #let tpower = $p$
 #let tmag = sym.gamma
 
+// waveplate names...
+#let hwp = [$lambda slash 2$ waveplate]
+#let qwp = [$lambda slash 4$ waveplate]
+
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body
 
