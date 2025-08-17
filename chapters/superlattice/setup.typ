@@ -94,6 +94,8 @@ For the fine tuning of the retro-lens position, we are using two imaging systems
 The imaging systems are also set up in a $4f$-configuration using another lens with the focal length $f = #qty[250][mm]$ and a camera at the virtual atom position.
 We can infer the center of the glass cell by looking for the outer surfaces of the glass cell.
 This measurement has an uncertainty of $sigma approx #qty[1][mm]$, which is negligible compared to the Rayleigh lengths of the lattice beams.
+
+#tr[Move this to the @sec:super-stability?]
 Besides the optimization of the foci, we also use the additional imaging systems to continuously track the lattice-beam profiles during the experimental sequence.
 With an RGB camera#footnote[
   #tr[Basler acA2040-35gc]
@@ -132,6 +134,7 @@ In addition to the in-situ lattice modulation spectroscopy, the beam profiling a
 
 #notes[
   - Really create a new subsection for the replacement stuff?
+  - Mention any details about the identification of the "bad" optical elements with the camera?
 ]
 
 The optical setup of the #x1064 lattice initially used two telescopes with focal-length ratios of $1.75:1$ and $1.25:1$.

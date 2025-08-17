@@ -1,76 +1,89 @@
 #import "/header.typ": *
 
-== Stability of the optical lattices <sec:super-stability>
+== Characterizing the optical lattices <sec:super-stability>
 
 #notes[
+  - Mention that the in-situ lattice modulation can only see the horizontal waist!
+  - Create separate subsections for the two lattices?
+  - Show in-situ lattice modulation images where the thermal-lensing improvement can be seen in the resonance contrast?
+  - Mention the typical beam powers (at the atom position)?
+  - Actually mention the size of the atom cloud compared to the lattice waists?
+  - Already mention the superlattice phase $phi$ here somewhere?
 ]
 
-=== x1064-lattice characterization <ssec:super-thermal-x1064>
+As already mentioned in the introduction of the chapter, we used the in-situ lattice modulation spectroscopy as well as beam profiling with a camera to characterize the thermal lensing.
+The modulation spectroscopy directly measures the spatial profile of the optical lattices, which reveals the lattice depth in the center, the Gaussian waist and the position.
+In terms of accuracy, it is the best characterization method available #tr[and...?].
+However, compared to the beam profiling with a camera, it can not measure the forward-propagating and the retro-propagating beams separately, and the minimum time resolution is #qty[100][ms].
+With a camera that images the position of the atoms, we can resolve the profiles of the individual beams and we can achieve a time resolution of $< #qty[100][μm]$.
+Furthermore, we can place the camera on a mechanical stage for a full characterization of the beam parameters.
+This allows us to actually quantify the focal shift due to the thermal lensing, whereas the lattice modulation spectroscopy is restricted to the position of the atoms.
+#tr[Really mention this sentence?]
+Ultimately, the measured lattice depths have to be #tr[constant/stable] to claim the #tr[resolution] of the thermal lensing.
 
-#[
-  #set text(red)
-  - Estimate the shift of the focus for an initially perfect alignment?
+
+=== #x1064 lattice <ssec:super-stability-x1064>
+
+#notes[
+  - Mention overall linearity of the thermal lensing drift? This is relevant compared to the #x532 lattice...
+  - Mention the astigmatism of $approx #qty[5][mm]$ between the horizontal and vertical waists?
 ]
 
-While we initially noticed the thermal lensing and thermal "phasing" issues in the superlattice, we opted to investigate the x1064-lattice separately first.
-There are only two transmissive optical elements that are shared by the lattices, see #text(red)[ref figure in setup section], we can expect most of the thermal lensing to "originate" in the individual optical setups.
-For the x1064-lattice we could just run the monochromatic in-situ parametric heating to measure the changes due to the thermal lensing.
-We used a (lattice) modulation time of #qty[100][ms] to achieve a good time resolution with the in-situ lattice modulation measurements.
-#text(red)[reference modulation chapter/section here on the optimization of the modulation time?]
-#text(red)[Mention shallow lattices with #qty[6][Erec] somewhere?]
-Further reducing the modulation time was not necessary to resolve the changes of the lattice due to the thermal lensing as shown in @fig:super-thermal-x1064-ph.
-We found that the lattice depth $a_0$ is reduced (or decays exponentially?) by $approx #qty[5][%]$ during the first second of the holding time.
-After this initial (strong) decrease/decay, the lattice depth is further reduced linearly by $approx #qty[0.2][%/s]$.
-The measured/evaluated waist $w_0$ of the optical lattice increases by $approx #qty[15][μm]$ during the first second, matching the behavior of the lattice depth.
-We therefore concluded that the foci of the forward-propagating and retro-propagating lattice beams are shifted such that we get a shallower (but wider) lattice at the position of the atoms.
+For the initial characterization of the thermal lensing in the #x1064\-lattice setup, we used the in-situ lattice modulation spectroscopy.
+In the experimental sequence, we introduced a holding time $tau$ just after the #x1064 lattice is frozen at the lattice depth #Vx1064 (see @sec:setup-sequence).
+We are neglecting the slow ramp up to #qty[6][Erec] earlier in the sequence.
+The lattice-depth modulation begins right after the holding time $tau$ and lasts #qty[100][ms].
+In #subref(<fig:super-stability-x1064>, "a") we can see an exponential drop of the lattice depth by #qty[5][%] up to a holding time of #qty[1][s].
+During the rest of the holding time up to $tau = #qty[5][s]$, the lattice depth is reduced approximately linear at the rate #qty[0.25][%/s].
+The waist $w_0$ in #subref(<fig:super-stability-x1064>, "b") shows the complementary signal with an exponential increase by approximately #qty[15][μm].
+From these two lattice parameters, we concluded that the foci of the forward-propagating and retro-propagating beams were initially too close to their respective lenses.
+The thermal lensing would shifted the foci further towards their lenses to create a shallower but wider optical lattice at the position of the atoms.
+Compared to the waist $w_0$, the change of the lattice position by $Delta y_0 < #qty[1][μm]$ is negligible.
 
-#figure(
-  image("figures/2024-05-30_x1064-heating_reference_result.png", width: 80%),
+#tr[Put this at the end of the #x1064 subsection?]
+For the initial thermal lensing, we do not have usable data available from the beam-profiling cameras.
+At #tr[that/the] time, the imaging setup to measure the forward-propagating and retro-propagating lattice beams was not in a $4f$-configuration.
+Due to the divergence of the collimated Gaussian beams, the cameras were therefore measuring the lattice beams at a significant distance from the atom position.
+Furthermore, we did not conduct measurements of the actual focal shift caused by the thermal lensing.
+This would have required a beam-profiling as a function of the holding time $tau$ and the camera position $x$.
+#tr[We only developed the corresponding measurement routine after we had already upgraded the #x1064\-lattice setup.]
+
+After replacing all telescope lenses made out of N-BK7 and the retro lens, we measured a focal shift $delta < #qty[1][mm]$ after #qty[5][s] at the lattice depth $Vx1064 = #qty[60][Erec]$.
+Relative to the Rayleigh length of $z_R approx #qty[60][mm]$, this is a tiny shift that should result in a stability of the lattice depth better than #qty[0.5][%] if the foci perfectly overlap with the atoms before the shift.
+After optimizing the focal position of the forward-propagating beam and the distance between the atoms and the retro lens with the cameras, we use the in-situ lattice modulation spectroscopy for the final characterization.
+In #subref(<fig:super-stability-x1064>, "a") we can see that the lattice depth increases by less than #qty[0.2][%] in #qty[5][s].
+Compared to the initial setup, we were able to reduce the variation of the lattice depth by a factor of approximately #num[30].
+Correspondingly, the waist $w_0$ in #subref(<fig:super-stability-x1064>, "b") does not show a drift in either direction.
+The standard deviation of the #tr[data points] is on par with the expected uncertainty from the in-situ lattice modulation spectroscopy (see @ssec:mod-eval-error).
+Besides being constant, the waist $w_0$ is also significantly smaller than before.
+This allows us to achieve lattice depths beyond #qty[60][Erec], while maintaining a waist that is significantly larger than the atom cloud.
+The stronger confinement along the $y$ axis is not an issue since the #y1064 lattice is always frozen when we are working with the in-plane superlattice.
+While we could significantly improve the stability of the lattice depth and the lattice waist, the position still drifts by up to #qty[1][μm] in #qty[5][s].
+We can attribute this to the thermal cycle during the experimental sequence, which is mainly determined by the magnetic field coils (see @sec:setup-sequence #tr[and ref limitation in @sec:phase-measure]?).
+In any case, the drift is negligible compared to the size of the atom cloud and the waist of the #x1064 lattice.
+
+#floating-figure(
+  image("figures/superlattice_stability_x1064.png"),
   caption: [
-    In-situ lattice modulation spectroscopy of the thermal lensing effects in the x1064-lattice.
-    The setpoint of the lattice depth for this measurement was #qty[55][Erec] which would correspond to a parabola offset of $a_0 = 1.0$.
-    In the experimental sequence the lattice modulation would start immediately after the time $t_"hold"$ which we varied from #qty[0][s] to #qty[5][s].
-    The modulation time was set to #qty[100][ms], and the modulation amplitude was chosen such that the resonance amplitudes are between #num[0.45] and #num[0.65] #text(red)[ref modulation chapter/section].
-    The errorbars show the standard deviation of three measurements per data point.
+    Improvement of the thermal lensing in the #x1064\-lattice setup.
+    The data shows the calibration of the lattice depth with the in-situ lattice modulation spectroscopy (see @ch:mod).
+    For the #tr["old"] data and the #tr["new"], the lattice depth in the experimental sequence was set to #qty[55][Erec] and #qty[60][Erec] respectively.
+    The modulation time was #qty[100][ms], and the modulation amplitude was set to obtain a good #tr[signal-to-noise ratio].
+    The correction factor #tr[$alpha$] quantifies the actual lattice depth relative to the setpoint in the experimental sequence.
+    From the other lattice parameters (#tr[compare/see] @fig:mod-eval-x1064-result), only the waist $w_0$ and the position $y_0$ changed during the holding time, while the angle $theta.alt$ was constant even in the #tr["old"] setup.
 
-    #show list: set text(red)
-    - Shift the data points by #qty[50][ms]?
-    - Rename x-axis variable?
-    - Is the fit really necessary here?
-    - Normalize a0 to be 1.0 at t = 0?
-    - Only show position, depth and waist here.
-    - Also include data with #qty[45][Erec]
+    #notes[
+      - Move the *abc* indices outside of the axes? Just above the x-labels?
+      - Find better label names instead of "old" and "new". Maybe "initial" and "final"?
+      - Also include the measurement at #qty[45][Erec]?
+      - Mention the normalization of the "old" correction factor to $1.0$?
+      - Mention number of average sets for each measurement? And mention the origin of the errors?
+      - Shift the data points by #qty[50][ms]?
+      - Show the fit of the "old" data?
+    ]
   ],
-) <fig:super-thermal-x1064-ph>
-
-
-The change of the position $y_0$ by $approx #qty[1][px]$ (#text(red)[use lattice site $a$ as unit instead?]) during the holding time is insignificant compared to the changes of the other two lattice parameters.
-This does not completely rule out thermal effects on the beam pointing since the lattice depth would also be reduced if the overlap of the lattice beams gets worse.
-Measurements of the lattice beams with a camera did however show that the beam positions are constant down to a few #unit[μm].
-The beam waists and beam amplitudes (intensity in the center) on the camera did however show changes that match the measurements with the atoms in @fig:super-thermal-x1064-ph.
-#text(
-  red,
-)[Mention that the camera was not properly measuring with a 4f configuration, hence no actual camera data shown here?]
-
-A quantitative analysis of the thermally induced focal shift would require a measurement of the beam waist and the beam amplitude as a function of the time $t$ and at different positions $x$ around the (virtual) position of the atoms.
-From the data in @fig:super-thermal-x1064-ph we can only conclude that we do not "cross" the position of the atoms with the foci of the forward-propagating beam and/or the retro-propagating beam.
-We do not know the distance the foci actually moved due to the thermal lensing.
-The spatial direction of the change can be inferred from the fact that thermal lensing (almost) always has a "focusing" effect.
-The focus of the forward-propagating beam was therefore moved towards the #qty[2][in] lens in the forward-path.
-In accordance with the expected behavior in a $4f$-configuration, the focus of the retro-propagating beam was shifted towards the lens in the retro-path.
-If we had known the focal positions relative to the positions of the atoms, we could have inferred the distance of the focal shift from the lattice depth measurement or the measurements with the camera.
-However, we only learned how to measure the focal positions with a camera reliably after we had already minimized the thermal lensing in the optical setup.
-
-To find the optical elements responsible for the thermal lensing, we only used the forward-propagating beam to simplify the interpretation of the data.
-We manually placed a beam block just behind the fiber (out)coupler in the (experimental) optical path of the x1064-lattice.
-After waiting for a few seconds we would then removed the beam block and measured the beam with the camera at the (virtual) position of the atoms as a function of the time $t$.
-This allowed us to measure the combined effect of the thermal lensing in all optical elements _behind_ the beam block.
-We then repeated this measurement with the beam block at every available position in the optical setup.
-The differences in the combined thermal lensing would then reveal which optical elements we should remove or replace.
-We decided against measuring the actual focal shift for each position of the beam block since this would have increased the measurement time by at least a factor of $10$.
-To identify the problematic optical elements it was sufficient to use the "qualitative" measurement at the (virtual) position of the atoms.
-For the final setup that minimizes the thermal lensing, we then measured the actual focal shifts of the forward-propagating beam and the retro-propagating beam.
-The results are presented in @ssec:super-thermal-x1064-rebuild.
+  label: <fig:super-stability-x1064>,
+)
 
 
 === x532-lattice characterization <ssec:super-thermal-x532>
@@ -140,98 +153,6 @@ The changes we did are explained in detail in @ssec:super-thermal-x532-rebuild.
     - Show "final" lattice depth to illustrate the "hard limit"?
   ],
 ) <fig:super-thermal-x532-ph>
-
-
-
-=== x1064-lattice rebuild <ssec:super-thermal-x1064-rebuild>
-
-#[
-  #set text(red)
-  - Merge this with the x532-lattice rebuild subsection?
-  - Give different names to the waists to tell them apart?
-  - Mention all the lens types? Compare before and after?
-  - Really mention that the concave lenses were mostly responsible? Or is this just an unnecessary detail?
-  - Mention that a/the focus is technically inside the optical isolator?
-  - Really compare the materials of the forward-lens and retro-lens? Check the materials again after including them in the table @tab:super-thermal-theory.
-  - Mention the perfect focus matching with #qty[532][nm] and #qty[1064][nm] of the YAP lens?
-  - Add figure that shows the actual beam profiling as a function of $t$ and $x$?
-  - Where to mention the improvement of the x1064-lattice depth by 20%? Also mention the corresponding decrease of the waists.
-  - Use actual errors for all the estimated values here?
-]
-
-Based on the measurements from @ssec:super-thermal-x1064, the theoretical considerations from @sec:super-thermal and the simulation of the "propagation" of thermal lensing in @ssec:super-thermal-simulation we rebuilt the optical setup of the x1064-lattice.
-The primary goal was to minimize the thermal lensing but we also wanted to make sure that we can properly tune the around the position of the atoms #text(red)[ref setup section?].
-In the initial setup for the x1064-lattice there were two Galilean telescopes used for the beam shaping.
-The first telescope used lenses with the focal lengths #qty[175][mm] and #qty[-100][mm] and was placed directly behind the fiber coupler.
-With a (de)magnification of $tmag_1 = 1.75$ the initial waist of the collimated beam was reduced from $w_0 approx #qty[0.9][mm]$ to $w_0 approx #qty[0.5][mm]$.
-The second telescope was placed just before the mirror used for the alignment, and it used lenses with the focal lengths #qty[125][mm] and #qty[-100][mm].
-With a demagnification of $tmag_2 = 1.25$ the telescope only slightly reduced the beam size again.
-The total demagnification without taking the propagation between the telescopes into account is therefore $tmag approx 2$.
-
-During the characterization/investigation of the thermal lensing in @ssec:super-thermal-x1064 we found the main contributions coming from the concave lenses of the telescopes.
-All four lenses were singlets made from N-BK7 with similar (center) thickness, we therefore don't know why the concave ones were worse than the convex ones.
-To minimize the thermal lensing in the x1064-lattice setup we therefore decided to replace the two telescopes by a single one with demagnification $tmag = 2$.
-We placed the telescope just in front of the optical isolator, and for the lenses we used UVFS singlets with the focal lengths #qty[150][mm] and #qty[-75][mm].
-In addition to the telescope we also introduced a "relay" lens with a focal length of #qty[750][mm] that is also made from UVFS.
-The relay lens is positioned just behind the mirror used for the alignment since it should be as close as possible to the 2 inch lens before the atoms.
-#text(red)[Add reference to the setup here!]
-
-With optimized focal positions we had already cut down the change of the lattice depth due to the thermal lensing to $approx #num[1]%$ #text(red)[At #qty[60][Erec]].
-Neither the optical isolator#footnote[#text(red)[Conoptics 714, TGG?]] nor the waveplate and PBS in the x1064-lattice setup to rotate the polarization behind the isolator showed a relevant thermal lensing.
-The biggest remaining contribution to the thermal lensing of the x1064-lattice was the 2 inch lens in the retro-path#footnote[#text(red)[YAP-250.0-50.0]].
-While $approx #num[1]%$ is not a large change anymore, the origin of the thermal lensing in the lens in the retro-path was still critical.
-Since the x1064-lattice beams and the x532-lattice beams have to be overlapped for the alignment of the x-superlattice, the thermal lensing contribution from the two lattices would add up in the 2 inch lenses around the glass cell.
-For the 2 inch lens in the forward-path a different model#footnote[#text(red)[Borchers? Any model name/description?]] was used that did not show any thermal lensing (contribution).
-While both lenses have a focal length of #qty[250][mm] and a diameter of $>#qty[50][mm]$, their materials are completely different.
-The lens in the forward-path is an achromatic doublet with N-BALF4 as the flint glass with a (center) thickness of $approx #qty[3][mm]$ and $"CaF"_2$ as the crown glass with a (center) thickness of #qty[10][mm].
-According to the thermal lensing properties in @tab:super-thermal-theory these glasses are well suited for a minimal thermal lensing.
-$"CaF"_2$ actually has a negative thermal lensing contribution which would counteract the thermal lensing caused by the N-BALF4.
-The lens in the retro-path on the other hand was an achromatic triplet consisting of one N-SF11 lens (as the flint glass) with a (center) thickness of #qty[4][mm] and two N-BK7 lenses (as the crown glass(es)) with a total (center) thickness of #qty[13][mm].
-In terms of thermal lensing this is probably the worst possible composition of a lens #text(red)[is N-SF11 also bad on its own?].
-
-Regarding the stability of the superlattice potential the lens in the retro-path is extra critical since it also affects the phase $phi$ of the superlattice #text(red)[ref what?].
-The local temperature change $Delta T$ that causes the thermal lens(ing) will also detune the superlattice phase #text(red)[ref superlattice chapter].
-We therefore decided to replace the lens in the retro-path by the same lens model as in the forward-path.
-Both the thermal lensing of the lattices as shown in #text(red)[ref x1064-figure and x532-figure] as well as the phase of the superlattice #text(red)[ref figure in superlattice chapter] were significantly improved by the replacement.
-
-As the final optimization of the thermal lensing we set/place the focal positions of the forward-propagating beam and the retro-propagating beam such that the change of the beam amplitude is minimal.
-The lattice depth in the center is most sensitive to the maximum beam amplitude, small changes of the waist on the other hand are not problematic for our experiments.
-#text(red)[where to put the next sentence? even mention the astigmatism?]
-We determined these focal positions empirically from beam profiling measurements as a function of the camera displacement and the time.
-For the x1064-lattice we can observe a small astigmatism where the in-plane focus is displaced by $approx #qty[5][mm]$ compared to the vertical focus.
-With a Rayleigh range of $z_R approx #qty[60][mm]$ the loss of the (maximum) amplitude is negligible.
-Adding a cyclindrical telescope or introducing other changes to the optical setup to compensate/correct the astigmatism would not be worth it.
-
-#text(red)[Find a better transition here...]
-From the beam profiling measurements with a camera we found that the focal shift due to the thermal lensing is $delta < #qty[1][mm]$ for both the forward-propagating beam as well as the retro-reflected beam.
-#text(red)[Just also write #qty[60][Erec] here?]
-The total measurement time was #qty[5][s] and the x1064-lattice was set to a lattice depth of #qty[65][Erec].
-From the beam amplitude/intensity (in the center) we could already estimate that the change of the lattice depth will be positive at $<#num[0.5]%$.
-For the definitive result we have to look at the in-situ parametric heating measurement shown in @fig:super-thermal-x1064-rebuild.
-Over the measurement time of #qty[5][s] the lattice depth increases by $approx #num[0.2]%$.
-The actual thermal lensing change/strength is therefore even smaller than expected from the measurements with the camera.
-Compared to the initial measurement in @fig:super-thermal-x1064-ph we have therefore reduced the thermal lensing by a factor of #num[25] due to the improvements presented in this subsection.
-#text(red)[Actually mention this possible improvement?]
-In theory we could have tried to reduce the thermal lensing effect even more by optimizing the position of the focus such that the focus is "pulled" through the position of the atoms by the shift $delta$.
-#text(red)[Just skip this idea?]
-We decided against this since we are already close to the resolution of the in-situ measurement.
-Unless the overlap with the x532-lattice will lead to a strong(er) thermal lensing again, we don't have to worry about it for the x1064-lattice anymore.
-
-#figure(
-  image("figures/2024-10-28_PH_x1064_thermal_lensing_result.png", width: 80%),
-  caption: [
-    In-situ lattice modulation spectroscopy of the minimized thermal lensing effects in the x1064-lattice.
-    The setpoint of the lattice depth for this measurement was #qty[60][Erec] and the modulation time was set to #qty[200][ms].
-    The data shows five averages of full in-situ lattice modulation scans where the errorbars denote the
-
-    #[
-      #set text(red)
-      - Remove Basler camera data.
-      - Make sure that this figure is connected to @fig:super-thermal-x1064-ph.
-      - Only show the position, the waist and the depth here.
-    ]
-  ],
-) <fig:super-thermal-x1064-rebuild>
 
 
 === x532-lattice rebuild <ssec:super-thermal-x532-rebuild>

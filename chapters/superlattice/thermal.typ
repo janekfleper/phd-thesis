@@ -15,13 +15,11 @@
   - Where to first introduce the abbreviation PBS?
 ]
 
-In the general context of laser applications, thermal lensing is a common issue in the high-power regime #tr[cite Laskin (2021)].
-Lasers used for welding or cutting can routinely achieve average powers of several #unit[kW].
+In high-power laser applications, thermal lensing is a common issue #tr[cite Laskin (2021)].
 The absorption of light in lenses, windows and other optical elements induces a thermal gradient in the material that will affect the geometrical and optical properties.
-If the optical power is in the #unit[kW] range, elaborate techniques are required to compensate the effects of the thermal lensing.
+Lasers used for welding or cutting can routinely achieve average powers of several #unit[kW], where elaborate techniques are required to compensate the effects of the thermal lensing.
 With an online focus shift measurement, a closed-loop control system can be implemented to compensate the thermal lensing #tr[cite Reitemeyer (2010)].
-Another approach is to find a balance between thermal dispersion and surface deformation due to the absorption of light #tr[cite Rall (2022)].
-
+Another approach is to use specific materials to find a balance between thermal dispersion and surface deformation due to the absorption of light #tr[cite Rall (2022)].
 In the context of the experimental setup in this thesis, we are #tr[only] dealing with intermediate optical powers up to a few watts.
 However, the collimated lattice beams have relatively small diameters (see #tr[ref setup section/figure]) to realize the large beam waists at the atom position #tr[add a footnote or ref to a later figure/section?].
 Therefore, the resulting intensity was sufficient to cause a thermal lensing that significantly affected the operation of the optical lattices.
@@ -83,14 +81,14 @@ If the absorption in the bulk material is the only heating source, fused silica 
 Composite lenses such as achromatic doublets always use two materials with different dispersive properties to compensate chromatic aberrations #tr[cite Hecht].
 The dispersion is quantified by the Abbe number $V$, where a small value corresponds to a strong dispersion and vice-versa.
 In an achromatic doublet, one lens is made from a _crown_ glass which has a low refractive index and a weak dispersion, while the other lens is made from _flint_ glass with a high refractive index and a strong dispersion.
-Both N-BK7 and fused silica are suitable crown glasses, although the former is more commonly used in readily available doublets.
+Both N-BK7 and fused silica are suitable crown glasses, although the former is more commonly used in achromatic doublets.
 Another typical crown glass that is also suitable for high-power applications is calcium fluoride (#tr[$"CaF"_2$]).
 It has a very low absorption $< #qty[0.1][%]$ in #qty[10][mm] glass at #qty[532][nm] and #qty[1064][nm], and the thermo-optical ratio is #tr[$rho_"CaF2" = #qty[-0.24e-6][W/m]$].
 If the flint glass used for the other lens has a positive thermo-optical ratio, the doublet can be made athermal.
-In general, there is a wide range of crown and flint glasses available to construct achromatic doublets, and we have to check the thermal-lensing properties of the glasses individually for each material.
-This is very relevant for the replacement of the lens in the retro-propagating path #tr[ref what?].
+In general, there is a wide range of crown and flint glasses available to construct achromatic doublets, and we had to check the thermal-lensing properties of the glasses individually for each material.
+This was essential for the replacement of the lens in the retro-propagating path #tr[ref what?].
 Regardless of the glasses used in an achromatic doublet, the lenses should be air-spaced for high-power applications #tr[cite what?].
-Cemented doublets can suffer from significant absorption in the material that is connecting the two lenses.
+Cemented doublets can experience significant absorption in the material that is connecting the two lenses.
 
 For polarization optics, the range of materials is limited compared to #tr[refractive] optics.
 Waveplates require a birefringent crystal where the optical axis of the crystal is perpendicular to the propagation direction of the beam.

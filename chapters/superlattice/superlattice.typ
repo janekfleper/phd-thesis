@@ -6,6 +6,8 @@
   - Introduce the distinction of laser table and experimental table in @ch:setup
   - When was the x1064 lattice really used for the first time?
   - Shorten the "history" of the thermal lensing discovery/investigation...
+  - Change the title to "Upgrading the superlattice setup"?
+  - Discuss the inhomogeneity of the #x1064 lattice and the #x532 relative to the atom cloud.
 ]
 
 At the start of my thesis, the optical setup for the x1064 lattice and the x532 lattice was already in place.
@@ -39,6 +41,5 @@ At the end of the chapter, I will present the measured lattice depths $Vx1064(ta
 #include "thermal.typ"
 #include "setup.typ"
 #include "stability.typ"
-#include "x1064.typ"
 #include "x532.typ"
 #include "radial.typ"
