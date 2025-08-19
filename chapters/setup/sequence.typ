@@ -170,7 +170,7 @@ The states $FmF(9/2, -5/2)$ and $FmF(7/2, -7/2)$ experience inelastic spin-excha
 At the end of an experimental sequence, we are imaging the atoms with light pulses to measure the integrated density distribution $n(x, y)$ along the $z$ axis#footnote[There are additional imaging systems along the $x$ axis and the $y$ axis, which are mainly used for calibration measurements now. The corresponding setups and previous use cases are presented in @feld_low_2011 @frohlich_strongly_2011  and @cocchi_analogue_2016 @miller_ultracold_2016].
 The optical setup and the characterization of the $z$ imaging system can be found in @cocchi_analogue_2016 @miller_ultracold_2016.
 I will only summarize the important properties of the imaging system, and I will show how the atomic densities $n(x, y)$ are computed from the raw images.
-The imaging system has a numerical aperture of $"NA" = 0.5$ and uses an aspheric lenses with $f = #qty[8][mm]$ that is placed above the atoms inside the glass cell.
+The imaging system uses an aspheric lens placed above the atoms inside the glass cell with the focal length $f = #qty[8][mm]$ and the numerical aperture $"NA" = 0.5$.
 A second lens with $f = #qty[200][mm]$ and a $1:1$ relay are then used to image the atom plane onto a CCD camera#footnote[Andor iXon Ultra 888].
 The measured magnification is $M = #num[22.7(1)]$, resulting in a pixel size of $d_"px" approx #qty[0.57][μm]$ in the atom plane.
 While this is close to the lattice periods $ax1064 = ay1064 = #qty[0.532][μm]$, the actual imaging resolution is worse due to a point-spread function with $"HWHM" = #qty[1.25][μm]$.
