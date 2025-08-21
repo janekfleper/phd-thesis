@@ -12,62 +12,56 @@
   - Discuss the systematic error for all previous measurements because of the lattice calibration?
 ]
 
-As already mentioned in the introduction of the chapter, we used the in-situ lattice modulation spectroscopy as well as beam profiling with a camera to characterize the thermal lensing.
+As already mentioned in the introduction of this chapter, we used the in-situ lattice modulation spectroscopy as well as beam profiling with cameras to characterize the thermal lensing.
 The modulation spectroscopy directly measures the spatial profile of the optical lattices, which reveals the lattice depth in the center, the Gaussian waist and the position.
-In terms of accuracy, it is the best characterization method available #tr[and...?].
-However, compared to the beam profiling with a camera, it can not measure the forward-propagating and the retro-propagating beams separately, and the minimum time resolution is #qty[100][ms].
-With a camera that images the position of the atoms, we can resolve the profiles of the individual beams and we can achieve a time resolution of $< #qty[100][μm]$.
-Furthermore, we can place the camera on a mechanical stage for a full characterization of the beam parameters.
+In terms of the measurement accuracy, this is the best characterization method available in the experimental setup.
+On the other hand, the beam-profiling cameras have a great time resolution and they can measure the beam profile around the atom position.
 This allows us to actually quantify the focal shift due to the thermal lensing, whereas the lattice modulation spectroscopy is restricted to the position of the atoms.
-#tr[Really mention this sentence?]
-Ultimately, the measured lattice depths have to be #tr[constant/stable] to claim the #tr[resolution] of the thermal lensing.
 
 
 === #x1064 lattice <ssec:super-stability-x1064>
 
 #notes[
-  - Mention overall linearity of the thermal lensing drift? This is relevant compared to the #x532 lattice...
   - Mention the astigmatism of $approx #qty[5][mm]$ between the horizontal and vertical waists?
   - Mention the amplitude feed-forward attempts?
 ]
 
 For the initial characterization of the thermal lensing in the #x1064\-lattice setup, we used the in-situ lattice modulation spectroscopy.
 In the experimental sequence, we introduced a holding time $tau$ just after the #x1064 lattice is frozen at the lattice depth #Vx1064 (see @sec:setup-sequence).
-We are neglecting the slow ramp up to #qty[6][Erec] earlier in the sequence.
+For the characterization of the thermal lensing, we are neglecting the slow ramp up to #qty[6][Erec] earlier in the sequence.
 The lattice-depth modulation begins right after the holding time $tau$ and lasts #qty[100][ms].
-In #subref(<fig:super-stability-x1064>, "a") we can see an exponential drop of the lattice depth $Vx1064 = #qty[55][Erec]$ by #qty[5][%] up to a holding time of #qty[1][s].
-During the rest of the holding time up to $tau = #qty[5][s]$, the lattice depth is reduced approximately linear at the rate #qty[0.25][%/s].
+In #subref(<fig:super-stability-x1064>, "a") we can see an exponential decay of the lattice depth $Vx1064 = #qty[55][Erec]$ by #qty[5][%] up to a holding time of #qty[1][s].
+During the rest of the holding time up to $tau = #qty[5][s]$, the lattice depth decreases at the rate #qty[0.25][%/s].
 Overall, we observed an approximately linear strength of the thermal lensing.
-At $Vx1064 = #qty[45][Erec]$, the lattice depth only dropped by roughly #qty[4][%] in the first second.
+At $Vx1064 = #qty[45][Erec]$, the lattice depth only dropped by around #qty[4][%] in the first second.
 Running the in-situ lattice modulation spectroscopy down to lattice depths of #qty[6][Erec] is not possible.
-We couly have only measured the thermal lensing across the full range of the lattice depth with the beam-profiling cameras.
-The waist $w_0$ in #subref(<fig:super-stability-x1064>, "b") shows the complementary signal to the lattice depth with an exponential increase by approximately #qty[15][μm].
+We only could have measured the thermal lensing across the full range of the lattice depth with the beam-profiling cameras.
+The waist #wx1064 in #subref(<fig:super-stability-x1064>, "b") shows the complementary signal to the lattice depth with an exponential increase by approximately #qty[15][μm].
 From these two lattice parameters, we can conclude that the foci of the forward-propagating and retro-propagating beams were initially too close to their respective lenses.
 The thermal lensing then shifted the foci further towards their lenses to create a shallower but wider optical lattice at the position of the atoms.
-The other two lattice parameters did not show any relevant thermal lensing .
+The other two lattice parameters did not show any relevant thermal lensing.
 At $Delta y_0 < #qty[1][μm]$, the change of the lattice position is negligible compared to the waist $w_0$.
 The angle $theta.alt$ was constant at $#num[-5.50]degree plus.minus #num[0.21]degree$ during the #qty[5][s] holding time, which matches the expected result in @tab:mod-eval-results.
 
-#tr[Put this at the end of the #x1064 subsection?]
 For the initial thermal lensing, we do not have usable data available from the beam-profiling cameras.
-At #tr[that/the] time, the imaging setup to measure the forward-propagating and retro-propagating lattice beams was not in a $4f$-configuration.
+At the time, the imaging setup to measure the forward-propagating and retro-propagating lattice beams was not in a $4f$-configuration.
 Due to the divergence of the collimated Gaussian beams, the cameras were therefore measuring the lattice beams at a significant distance from the atom position.
 Furthermore, we did not conduct measurements of the actual focal shift caused by the thermal lensing.
-This would have required a beam-profiling as a function of the holding time $tau$ and the camera position $x$.
-#tr[We only developed the corresponding measurement routine after we had already upgraded the #x1064\-lattice setup.]
+This requires a beam-profiling as a function of the holding time $tau$ and the camera position $x$.
+We only developed the corresponding measurement routine after we had already upgraded the #x1064\-lattice setup.
 
-After replacing all telescope lenses made out of N-BK7 and the retro lens, we measured a focal shift $delta < #qty[1][mm]$ after #qty[5][s] at the lattice depth $Vx1064 = #qty[60][Erec]$.
-Relative to the Rayleigh length of $z_R approx #qty[60][mm]$, this is a tiny shift that should result in a stability of the lattice depth better than #qty[0.5][%] if the foci perfectly overlap with the atoms before the shift.
+After replacing all telescope lenses made of #NBK7 and the retro lens, we measured a focal shift $delta < #qty[1][mm]$ after #qty[5][s] at the lattice depth $Vx1064 = #qty[60][Erec]$.
+Relative to the Rayleigh length of $z_R approx #qty[60][mm]$, this is a tiny shift that should result in a stability of the lattice depth better than #qty[0.5][%] if the foci are initially located at the atom position.
 After optimizing the focal position of the forward-propagating beam and the distance between the atoms and the retro lens with the cameras, we use the in-situ lattice modulation spectroscopy for the final characterization.
 In #subref(<fig:super-stability-x1064>, "a") we can see that the lattice depth increases by less than #qty[0.2][%] in #qty[5][s].
 Compared to the initial setup, we were able to reduce the variation of the lattice depth by a factor of approximately #num[30].
-Correspondingly, the waist $w_0$ in #subref(<fig:super-stability-x1064>, "b") does not show a drift in either direction.
+Correspondingly, the waist #wx1064 in #subref(<fig:super-stability-x1064>, "b") does not show a drift in either direction.
 The standard deviation of the #tr[data points] is on par with the expected uncertainty from the in-situ lattice modulation spectroscopy (see @ssec:mod-eval-error #tr[or @tab:mod-eval-results?]).
-Besides being constant, the waist $w_0$ is also significantly smaller in the final configuration.
+Besides being constant, the waist #wx1064 is also significantly smaller in the final configuration.
 This allows us to achieve lattice depths beyond #qty[60][Erec], while maintaining a waist that is still sufficiently large compared to the atom cloud.
 The stronger confinement along the $y$ axis is not an issue since the #y1064 lattice is always frozen when we are working with the in-plane superlattice.
 While we could significantly improve the stability of the lattice depth and the lattice waist, the position still drifts by up to #qty[1][μm] in #qty[5][s].
-We can attribute this to the thermal cycle during the experimental sequence, which is mainly determined by the magnetic field coils (see @sec:setup-sequence #tr[and ref limitation in @sec:phase-measure]?).
+We can attribute this to the thermal cycle during the experimental sequence, which is mainly determined by the magnetic field coils (see @sec:setup-sequence and @ssec:phase-sensors-stability).
 In any case, the drift is negligible compared to the size of the atom cloud and the waist of the #x1064 lattice.
 
 #floating-figure(
@@ -76,8 +70,8 @@ In any case, the drift is negligible compared to the size of the atom cloud and 
     Improvement of the thermal lensing in the #x1064\-lattice setup.
     The data shows the calibration of the lattice depth with the in-situ lattice modulation spectroscopy (see @ch:mod).
     For the _initial_ data and the _final_ data, the lattice depth in the experimental sequence was set to #qty[55][Erec] and #qty[60][Erec] respectively.
-    The modulation time was #qty[100][ms], and we selected the modulation amplitude to obtain a good #tr[signal-to-noise ratio].
-    The correction factor #tr[$alpha$] quantifies the actual lattice depth relative to the setpoint in the experimental sequence.
+    The modulation time was #qty[100][ms], and we selected the modulation amplitude to obtain a good signal strength.
+    The correction factor $alpha$ quantifies the actual lattice depth relative to the setpoint in the experimental sequence.
     From the other lattice parameters (#tr[compare/see] @fig:mod-eval-x1064-result), only the waist $w_0$ and the position $y_0$ changed during the holding time, while the angle $theta.alt$ was constant in both setup configurations.
 
     #notes[

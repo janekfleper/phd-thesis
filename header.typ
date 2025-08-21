@@ -92,6 +92,13 @@
 #let tpower = $p$
 #let tmag = sym.gamma
 
+// optical materials
+#let UVFS = "UVFS"
+#let NBK7 = "N-BK7"
+#let NSF11 = "N-SF11"
+#let NBALF4 = "N-SF11"
+#let CAF2 = $"CaF"_2$
+
 // waveplate names...
 #let hwp = [$lambda slash 2$ waveplate]
 #let qwp = [$lambda slash 4$ waveplate]
