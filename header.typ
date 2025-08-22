@@ -94,10 +94,15 @@
 
 // optical materials
 #let UVFS = "UVFS"
-#let NBK7 = "N-BK7"
-#let NSF11 = "N-SF11"
-#let NBALF4 = "N-SF11"
 #let CAF2 = $"CaF"_2$
+#let NBK7 = "N-BK7"
+#let NSF5 = "N-SF5"
+#let NSF6HT = "N-SF6HT"
+#let NSF11 = "N-SF11"
+#let NBAF10 = "N-BAF10"
+#let NBALF4 = "N-BALF4"
+#let SiO2 = "SiO2"
+#let TGG = "TGG"
 
 // waveplate names...
 #let hwp = [$lambda slash 2$ waveplate]

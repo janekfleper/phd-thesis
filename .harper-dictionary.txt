@@ -1,9 +1,14 @@
+Erec
+Verdet
+afterwards
 athermal
+birefringent
 collimated
 collimator
 crosstalk
 demagnification
 dichroic
+dispersive
 foci
 inhomogeneity
 lensing
@@ -17,4 +22,5 @@ splitters
 superlattice
 thermo
 uncoated
+waveplates
 x1064

@@ -2,21 +2,12 @@
 
 = Upgrading the in-plane superlattice setup <ch:super>
 
-#notes[
-  - Introduce the distinction of laser table and experimental table in @ch:setup
-  - When was the #x1064 lattice really used for the first time?
-  - Shorten the "history" of the thermal lensing discovery/investigation...
-  - Change the title to "Upgrading the superlattice setup"?
-  - Discuss the inhomogeneity of the #x1064 lattice and the #x532 relative to the atom cloud.
-]
-
-At the start of my thesis, the optical setup for the #x1064 lattice and the #x532 lattice was already in place.
-The #x1064 lattice was used in many former projects @cocchi_equation_2016 @drewes_antiferromagnetic_2017 @wurz_coherent_2018 @gall_competing_2021 #tr[find something to add to this sentence...].
+At the start of my thesis, the optical setups for the #x1064 lattice and the #x532 lattice were already in place.
+The #x1064 lattice was used in many former projects @cocchi_equation_2016 @drewes_antiferromagnetic_2017 @wurz_coherent_2018 @gall_competing_2021 in the original configuration.
 For the operation of the x1064 lattice as part of the in-plane superlattice, we only modified the optical setup on the laser table.
 This was required for the control of the superlattice phase, which I will discuss in detail in @sec:phase-setup.
 The #x532 lattice was put into operation again shortly before my thesis @klemmer_ultracold_2020.
 On the experimental table, the optical setup was unchanged compared to the initial purpose of studying a Fermi gas in an optical superlattice @pertot_relaxation_2014.
-#tr[Mention anything else?]
 
 After already working with the in-plane superlattice for more than three years, we noticed that the lattice depths #Vx1064 and #Vx532 are strongly time-dependent.
 While the intensity regulation with the photodiode on the experimental table showed a constant power, the lattice depth at the position of the atoms was dropping significantly in a few #qty[100][ms].
@@ -31,8 +22,8 @@ However, due to the severity of the thermal lensing, we had to completely rebuil
 
 In this chapter, I will introduce a theoretical description of thermal lensing to justify the choices of the optical materials that we used for the upgrade of the optical setup.
 As a reference for the upgrades and the other chapters in this thesis, I will show the complete optical setup of the #x1064 lattice and the #x532 lattice on the experimental table.
-This is also relevant for the alignment of the lattices in @sec:mod-align and the control of the superlattice phase in #tr[@ch:phase].
-At the end of the chapter, I will present the measured lattice depths $Vx1064(tau)$ and $Vx532(tau)$, and compare them to the initial measurements to highlight the improvement of the optical setup.
+This is also relevant for the alignment of the lattices in @sec:mod-align and the control of the superlattice phase in @sec:phase-setup.
+At the end of the chapter, I will present the measured lattice depths $Vx1064(tau)$ and $Vx532(tau)$, and compare them to the initial measurements to highlight the improvement of the optical setups.
 
 #include "thermal.typ"
 #include "setup.typ"

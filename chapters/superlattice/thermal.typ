@@ -1,15 +1,7 @@
 #import "/header.typ": *
+#import "figures/figures.typ": table-optical-properties
 
 == Thermal lensing <sec:super-thermal>
-
-#notes[
-  - Mention the y-lattice depth here anywhere?
-  - Use "glasses" or "optical materials"
-  - Use table and/or figure to illustrate the two thermal lensing terms?
-  - Mention that we immediately saw that the thermal lensing scales with the optical power of the lattice beams!
-  - Mention low damage threshold of cemented/glued composite optics?
-  - Where to first introduce the abbreviation PBS?
-]
 
 In high-power laser applications, thermal lensing is a common issue @laskin_selection_2021.
 The absorption of light in lenses, windows, and other optical elements induces a thermal gradient in the material that affects its geometrical and optical properties.
@@ -36,7 +28,7 @@ $ <eq:super-thermal-G>
 
 where $n_0$ is the refractive index of the optical material @laskin_selection_2022.
 The _coefficient of thermal expansion_ (CTE) $alpha$ is positive for most optical materials#footnote[
-  Corning Ultra-Low Expansion (ULE#super[®]) Glass @corning_ultra-low_2016 and SCHOTT ZERODUR#super[®] @schott_zerodur_2024 are examples for glasses with a near-zero thermal expansion down to $alpha = #qty[0+-10e-9][1/K]$.
+  Corning Ultra-Low Expansion (ULE#super[®]) Glass @corning_ultra-low_2016 and SCHOTT ZERODUR#super[®] @schott_zerodur_2024 are examples for glasses with a near-zero thermal expansion $alpha = #qty[0+-10e-9][1/K]$.
 ], while the coefficient $phy.dv(n, T)$ can either be positive or negative.
 For all optical materials with $phy.dv(n, T) > 0$, the coefficient $G$ is also positive.
 If the coefficient $phy.dv(n, T)$ is negative, the value of $G$ can range from weakly positive to weakly negative.
@@ -62,56 +54,67 @@ The outer region of the temperature gradient has the opposite curvature, which r
 For the lattice beams, we are mainly interested in the focal shift in the center of the thermal lens, while the spherical aberrations are only a secondary effect.
 Since we are operating the lattice beams far away from the diffraction limit, small aberrations are negligible.
 
-#tr[Where to mention the average of #qty[532][nm] and #qty[1064][nm] for the thermo-optical ratio $rho$?]
-The most common materials used for readily available optical elements are #NBK7#footnote[
-  Manufactured by SCHOTT #tr[cite data sheet here?]
-] and fused silica.
-According to the thermo-optical ratio @eq:super-thermal-rho[], they experience a similar thermal-lensing strength with #tr[$rho_NBK7 = #qty[5.12e-6][W/m]$] and #tr[$rho_"FS" = #qty[6.89e-6][W/m]$] #tr[cite Laskin (2022)].
+#floating-figure(
+  {
+    show table: set text(10pt)
+    show table: set align(center)
+    table-optical-properties
+  },
+  caption: [
+    Properties of the optical materials in the experimental setup.
+    The thermo-optical coefficient $rho$ and the absorption coefficient $a$ quantify the effective strength of the thermal lensing.
+    Each coefficient has separate values for the wavelengths $lambda = #qty[1064][nm]$ (upper value) and $lambda = #qty[532][nm]$ (lower value).
+
+    #notes[
+      - Add all references to data sheets etc. here...
+      - Add crystalline quartz (for waveplates)
+      - Highlight the rows to make it easier to see the different wavelengths?
+    ]
+  ],
+  label: <tab:super-thermal-materials>,
+)
+
+In @tab:super-thermal-materials, the relevant properties of all optical materials related to the #x1064\-lattice setup and the #x532\-lattice setup are compiled.
+The most common materials used for readily available optical elements are #NBK7 and UV-grade fused silica (#UVFS).
+According to the thermo-optical ratio @eq:super-thermal-rho[], they should experience a similar thermal-lensing strength.
 However, this does not take the initial heating due to the absorption of the laser beams into account.
-At the wavelengths #qty[532][nm] and #qty[1064][nm], the typical absorption in fused silica#footnote[
-  For example Heraeus Suprasil#super[®] or Corning High Purity Fused Silica (HPFS#super[®]) #tr[cite some data sheets?] with an absorption $< #qty[0.1][%]$ in #qty[10][mm] glass.
-] is lower than the absorption in #NBK7 by more than one order of magnitude.
-If the absorption in the bulk material is the only heating source, fused silica is therefore well-suited for most optical elements such as singlet lenses, windows and polarizing beam splitters (PBS).
+At the wavelengths #qty[532][nm] and #qty[1064][nm], the typical absorption in #UVFS is significantly lower than the absorption in #NBK7.
+If the absorption in the bulk material is the only heating source, #UVFS is therefore the ideal choice for most optical elements such as singlet lenses, windows and polarizing beam splitters (PBS).
 
 Composite lenses such as achromatic doublets always use two materials with different dispersive properties to compensate chromatic aberrations @hecht_optics_2016.
 The dispersion is quantified by the Abbe number $V$, where a small value corresponds to a strong dispersion and vice-versa.
 In an achromatic doublet, one lens is made from a _crown_ glass which has a low refractive index and a weak dispersion, while the other lens is made from _flint_ glass with a high refractive index and a strong dispersion.
-Both #NBK7 and fused silica are suitable crown glasses, although the former is more commonly used in achromatic doublets.
-Another typical crown glass that is also suitable for high-power applications is calcium fluoride (#tr[$"CaF"_2$]).
-It has a very low absorption $< #qty[0.1][%]$ in #qty[10][mm] glass at #qty[532][nm] and #qty[1064][nm], and the thermo-optical ratio is #tr[$rho_CAF2 = #qty[-0.24e-6][W/m]$].
-If the flint glass used for the other lens has a positive thermo-optical ratio, the doublet can be made athermal.
-In general, there is a wide range of crown and flint glasses available to construct achromatic doublets, and we had to check the thermal-lensing properties of the glasses individually for each material.
-This was essential for the replacement of the lens in the retro-propagating path #tr[ref what?].
-Regardless of the glasses used in an achromatic doublet, the lenses should be air-spaced for high-power applications #tr[cite what?].
+Both #NBK7 and #UVFS are suitable crown glasses, although the former is more commonly used in achromatic doublets.
+Another typical crown glass that is also suitable for high-power applications is calcium fluoride (#CAF2).
+It has a very low absorption at #qty[532][nm] and #qty[1064][nm], and the thermo-optical ratio is slightly negative.
+If the flint glass used for the other lens has a positive thermo-optical ratio, the achromatic doublet can be made athermal.
+In general, there is a wide range of crown and flint glasses available to construct achromatic doublets, and we had to check the thermal-lensing properties of the glasses individually for each material (see @tab:super-thermal-materials).
+This was essential for the replacement of the lens in the retro-propagating path.
+Regardless of the glasses used in an achromatic doublet, the lenses should be air-spaced for high-power applications.
 Cemented doublets can experience significant absorption in the material that is connecting the two lenses.
 
 For polarization optics, the range of materials is limited compared to general optics such as lenses and windows.
 Waveplates require a birefringent material where the optical axis of the crystal is perpendicular to the propagation direction of the beam.
-In high-power applications, the most suitable material is crystalline quartz (#tr[SiO2]).
+In high-power applications, the most suitable material is crystalline quartz (#SiO2).
 Regardless of the orientation of the optical axis, it exhibits a very low absorption and ideal thermal properties @laskin_selection_2022.
-In the orientation that is required for waveplates, the thermo-optical ratio almost vanishes completely at $rho_"SiO2" approx #qty[-0.04e-6][W/m]$.
-Analogous to achromatic doublets, compound waveplates are either air-spaced#footnote[
-  Thorlabs zero-order waveplates #tr[add link?]
-] or optically contacted#footnote[
-  Altechna high energy waveplates #tr[add link?]
-] to avoid heating in the connecting material.
-Polarizing beam-splitter cubes use a polarization-sensitive dielectric coating and can be made from a wide range of glasses.
-In high-power applications, the typical material is UV-grade fused silica and the two parts are optically contacted #tr[cite Thorlabs + Altechna?].
+In the orientation that is required for waveplates, the thermo-optical ratio almost vanishes completely.
+Analogous to achromatic doublets, compound waveplates are either air-spaced or optically contacted to avoid heating in the connecting material.
 Optical isolators use a Faraday medium in a magnetic field to rotate the polarization of the laser beam between two polarizing beam-splitters.
-The strength of the Faraday effect is described by the Verdet constant in units of #unit[rad/((T m))].
-The most commonly used material is Terbium gallium garnet (TGG) due to its large Verdet constant and its favorable optical properties.
-At #qty[532][nm], the thermo-optical ratio is $rho_"TGG" approx #qty[3.3e-6][W/m]$, and the absorption is #qty[1.4][%/cm].
-Other than selecting an optical isolator with a minimal crystal length, we can not reduce the strength of the thermal lensing.
-#tr[Anything else to add regarding the optical isolator?]
+The strength of the Faraday effect is characterized by the Verdet constant in units of #unit(per-mode: "fraction")[rad/(T m)].
+The most commonly used material in optical isolators is terbium gallium garnet (#TGG).
+It has a large Verdet constant and shows a low absorption at #qty[1064][nm] @stevens_promising_2016.
+However, the absorption increases significantly towards shorter wavelengths @franta_wide_2025.
+At #qty[532][nm], the absorption is more than $10 times$ larger than the absorption at #qty[1064][nm].
+Despite the large absorption, it is the default material used in readily available optical isolators at #qty[532][nm].
+Other than selecting an optical isolator with a minimal crystal length, we can not reduce the thermal lensing at #qty[532][nm].
+There is ongoing research on suitable optical materials with significantly lower absorption @xygkis_absorption_2023.
 
 
 === Simulating the focal shift <ssec:super-thermal-simulation>
 
 #notes[
-  - Mention any of the equations in the theory chapter?
-  - Any references to the thermal lensing theory chapter?
   - Mention suppression of (thermal) lensing around the focus...?
-  - Interpret/Say anything about the scaling with $f^2$?
+  - Interpret the scaling $delta prop f^2$?
 ]
 
 Disregarding any higher-order aberrations, we can use a thin spherical lens to model the thermal lensing.
@@ -134,10 +137,10 @@ The negative sign corresponds to a focal shift towards the additional lens if th
     The beam is initially collimated with the radius $r = w_0$ and the angle $theta.alt = 0$.
     A thermal lens slightly focuses the beam before it is demagnified by the factor $tmag = f_1 slash f_2$ in the telescope.
     After the beam shaping in the telescope, the beam is focused onto the position of the atoms by the lens with the focal length $f$.
-    The #tr[dashed] lines indicate the propagating beam without the thermal lens.
+    The dashed lines indicate the propagating beam without the thermal lens.
 
     #notes[
-      - Draw the rays without thermal lensing as dashed lines?
+      - Draw the rays without thermal lensing as dashed lines...
     ]
   ],
   label: <fig:super-thermal-simulation-setup>,
