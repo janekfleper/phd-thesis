@@ -275,7 +275,9 @@ For the oscillation signal in the symmetric superlattice (configuration) the afo
 By measuring the average of the (Rabi) oscillations across all (occupied) double wells in the superlattice the resulting frequency will be a weighted average of all tunneling amplitudes $t(x, y)$ and detunings/offsets $Delta(x, y)$.
 The corresponding (time-of-flight) signal is shown on the right in @fig:phase-measure-resolve-tof-result.
 We can see that the oscillation decays significantly in the first few periods.
-#text(red)[Can we compute the theory for this? Add a specific explanation why the tunneling amplitude increases with the distance from the optical axis.]
+#text(
+  red,
+)[Can we compute the theory for this? Add a specific explanation why the tunneling amplitude increases with the distance from the optical axis.]
 The leading contribution to this decay is the spatial variation of the tunneling amplitude $t(x, y)$ itself.
 On the optical axis of the x-lattices the tunneling amplitude $t$ is always minimal (#text(red)[at least for the given waists of the x-lattices]).
 Towards either side of the optical axis the tunneling amplitude $t$ will increase significantly.
@@ -283,7 +285,9 @@ This increase is caused by the decrease of the amplitude/depth $v_s$ of the shor
 The lower amplitude/depth $v_l$ of the long/x1064 lattice will decrease the tunneling amplitude $t$ again, but the scaling is "weaker" than for the short/x532 lattice.
 In addition, any detuning/offset $Delta slash t != 0$ will cause a further increase of the oscillation frequency.
 The (globally) averaged frequency will therefore always be greater than the expected frequency from the tunneling amplitude $t$ in the center of the atom cloud/the lattices.
-#text(red)[Add evaluation of the Rabi oscillation here and compare the tunneling amplitude to the value obtained by $v_l$ and $v_s$.]
+#text(
+  red,
+)[Add evaluation of the Rabi oscillation here and compare the tunneling amplitude to the value obtained by $v_l$ and $v_s$.]
 
 
 === In-situ measurement technique <ssec:phase-measure-in-situ>
@@ -305,7 +309,7 @@ This in-situ technique is based on an/the (empirical) observation of an atom los
 Our understanding of the technique is that the final state after this projection has a contribution from higher bands in the y1064 lattice.
 The mixing is enabled by the non-orthogonality of the x-lattices and the y1064 lattice which is discussed in detail in @sec:mod-coupled and #text(red)[ref appendix?].
 If the atoms (partially) populate higher bands in the y1064 lattice, they are no longer frozen along the y-axis.
-Since these atoms are (also) localized on the upper/right sublattice sites, they will experience the deconfining radial potential @eq:super-radial-minus by the superlattice as discussed in @sec:super-radial.
+Since these atoms are (also) localized on the upper/right sublattice sites, they will experience the deconfining radial potential @eq:mod-radial-minus by the superlattice as discussed in @sec:mod-radial.
 To optimize the loss of atoms we found that the depth of the y1064 should be as low as possible without compromising the freezing of the tunneling in the lowest band as discussed at the start of @ch:phase #text(red)[check this reference...].
 We therefore chose $v_y = 20$ where the tunneling amplitude in the lowest band is $tau slash h approx #qty[10][Hz]$ #text(red)[check this value again...].
 After the projection we then wait #qty[1][s] for the atoms to leave the trap.
@@ -355,8 +359,8 @@ This follows the (same) idea behind the evaluation of the in-situ lattice modula
 The parameters resulting from the fit of the polynomial function are
 
 $
-  k &= #qty[0.033(3)][MHz / px] \
-  theta.alt &= (#num[-5.9(6)])degree \
+          k & = #qty[0.033(3)][MHz / px] \
+  theta.alt & = (#num[-5.9(6)])degree \
 $ <eq:phase-measure-resolve-in-situ-result>
 
 with the reference angle of #text(red)[grab the correct value here] from the in-situ lattice modulation measurements.

@@ -125,7 +125,7 @@ The radial potential of an optical lattice depends on the Gaussian envelope intr
 In a red-detuned optical lattice, the radial potential is always confining, while it is always deconfining in a blue-detuned optical lattice @greiner_ultracold_2003.
 A running-wave component will further enhance the radial potential for both detunings.
 The radial potential is relevant for the trapping of atoms in a three-dimensional optical lattice.
-I will discuss this further in @sec:super-radial in the context of the in-plane superlattice.
+I will discuss this further in @sec:mod-radial in the context of the in-plane superlattice.
 
 #floating-figure(
   lattice-detuning(xscale: 2.4, depth: 3),
