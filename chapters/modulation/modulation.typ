@@ -35,3 +35,4 @@ In the last two sections, I will highlight the improvement of the lattice-alignm
 #include "coupled.typ"
 #include "alignment.typ"
 #include "superlattice.typ"
+#include "radial.typ"

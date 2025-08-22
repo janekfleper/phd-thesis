@@ -28,4 +28,3 @@ At the end of the chapter, I will present the measured lattice depths $Vx1064(ta
 #include "thermal.typ"
 #include "setup.typ"
 #include "stability.typ"
-#include "radial.typ"
