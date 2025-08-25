@@ -1,5 +1,5 @@
 #import "/header.typ": *
-#import "figures/figures.typ": table-optical-properties
+#import "figures/figures.typ": table-optical-properties, thermal-lensing-simulation
 
 == Thermal lensing <sec:super-thermal>
 
@@ -131,7 +131,7 @@ where $tpower = 1 slash f_"thermal"$ is the optical power in units of #unit[1/m]
 The negative sign corresponds to a focal shift towards the additional lens if the thermal lens is convex.
 
 #floating-figure(
-  image("figures/thermal-lensing-simulation.png"),
+  thermal-lensing-simulation(),
   caption: [
     Optical setup for the simulation of the thermally-induced focal shift.
     The beam is initially collimated with the radius $r = w_0$ and the angle $theta.alt = 0$.
@@ -140,7 +140,8 @@ The negative sign corresponds to a focal shift towards the additional lens if th
     The dashed lines indicate the propagating beam without the thermal lens.
 
     #notes[
-      - Draw the rays without thermal lensing as dashed lines...
+      - Add the radius $r$ and the angle $theta$ around the final lens $f$.
+      - Make the "real" lenses look nicer.
     ]
   ],
   label: <fig:super-thermal-simulation-setup>,
