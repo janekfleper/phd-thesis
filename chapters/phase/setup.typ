@@ -48,9 +48,11 @@ While the formal superlattice period according to @eq:theory-super-potential is 
       - Find the proper blocks here for comparison, x2, addition etc...
       - Replace the amplifier by the "buffer" triangle...
       - Use $f_"beat"$ instead of $Delta nu$?
+      - Add #fdds to the DDS line...
       - Where to mention double-pass for #x1064\-lattice?
       - Add static frequency #qty[80][MHz] for the #x532\-lattice AOM.
-      - Anything to add to the caption/
+      - Anything to add to the caption?
+      - Mention second harmonic generation (SHG) again?
     ]
   ],
   label: <fig:phase-setup>,
