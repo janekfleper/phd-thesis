@@ -21,7 +21,7 @@ The step-by-step calculation and the technical details of the coupled band struc
 Based on the in-situ lattice modulation measurement results in @tab:mod-eval-results, we know that the x1064 lattice and the y1064 lattice are not perpendicular in the $x y$ plane.
 Their angle of intersection deviates by $theta.alt = (#num[-4.9(5)])degree$ from orthogonality, which results in a coupling of the band structures.
 The coupled energy bands $cband_eta (q_x, q_y)$ are two-dimensional functions of the quasimomenta $q_x$ and $q_y$ with a general band index $eta$.
-We cannot use the uncoupled indices $n_x$ and $n_y$ as labels anymore, we can only interpret the coupled bands as superpositions of the uncoupled bands $band_phy.vb(n) (q_x, q_y)$ with $phy.vb(n) = (n_x, n_y)$.
+We cannot use the uncoupled indices $n_x$ and $n_y$ as labels anymore, we can only interpret the coupled bands as superpositions of the uncoupled bands $band_(phy.vb(n)) (q_x, q_y)$ with $phy.vb(n) = (n_x, n_y)$.
 For the transition $1 -> 3$, we have to consider all bands with an energy close to the uncoupled band with index $phy.vb(n) = (3, 1)$.
 If the two lattices have a similar depth, the relevant uncoupled bands will be $(2, 2)$ and $(1, 3)$.
 In #subref(<fig:mod-coupled-theory>, "d") we can see the coupled bands $cband_eta$ as a function of the lattice depth #Vy1064.
@@ -35,9 +35,9 @@ The axes *a* to *c* in @fig:mod-coupled-theory reveal how the superpositions evo
   caption: [
     Theory of the transition $1 -> 3$ in the coupled band structure.
     The lattice parameters are $Vx1064 = #qty[60][Erec]$ and $theta.alt = #num[-4.9]degree$.
-    In *d* the transition frequencies of the coupled bands $cband_eta$ (colored lines) and the uncoupled bands $band_phy.vb(n)$ (black lines) are shown.
+    In *d* the transition frequencies of the coupled bands $cband_eta$ (colored lines) and the uncoupled bands $band_(phy.vb(n))$ (black lines) are shown.
     The band structure is computed with the quasimomenta $phy.vb(q)$ along the x1064-lattice vector $phy.vb(a)$.
-    Since the widths of the bands are small compared to the transition frequency, only the average of the coupled bands $cband_eta (phy.vb(q))$ and the uncoupled bands $band_phy.vb(n) (phy.vb(q))$ in quasimomentum space is used.
+    Since the widths of the bands are small compared to the transition frequency, only the average of the coupled bands $cband_eta (phy.vb(q))$ and the uncoupled bands $band_(phy.vb(n)) (phy.vb(q))$ in quasimomentum space is used.
     The transition frequencies are computed relative to the lowest band $phy.vb(n) = (1, 1)$, which is the initial state before the lattice modulation.
     In *a* to *c* we can see the composition of the coupled bands in the uncoupled basis.
 
