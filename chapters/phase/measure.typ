@@ -14,33 +14,34 @@
   - Mention "Rabi oscillations" anywhere?
 ]
 
+#tr[Find a nice(r) sentence as the introduction to the section...]
 The measurement of the superlattice phase $phi$ can only be conducted with the atom cloud.
-Unlike for the lattice depth, there is no technique available to measure the phase of a standing-wave optical lattice with a camera or a photodiode.
-We therefore developed a measurement technique where the band structure introduced in @sec:theory-super is strongly sensitive to the superlattice phase $phi$.
+Unlike for the lattice depth, there is no technique available to observe the phase of a standing-wave optical lattice with a camera or a photodiode.
+We therefore developed a measurement technique where the band structure is strongly sensitive to the superlattice phase $phi$.
 In @sec:mod-super we found the minimal sensitivity to the superlattice phase at the antisymmetric configuration $phi = pi slash 4$.
 Correspondingly, the symmetric configuration $phi = 0$ shows the maximal sensitivity.
 As introduced in @sec:phase-setup, we tune the superlattice phase $phi$ with the DDS frequency #fdds.
 While this does not include the frequency changes applied by the AOMs in @fig:phase-setup, it is sufficient to calibrate $phi$ as a function of #fdds.
-According to @eq:phase-setup-delta-phi, the superlattice phase is perfectly linear in the frequency detuning $Delta nu$.
-The purpose of the phase measurement is therefore to find the DDS frequency where the phase is $phi = 0$.
+The AOMs only add a frequency offset and we can take any deviations from their center frequencies manually into account.
+According to @eq:phase-setup-delta-phi, the superlattice phase is perfectly linear in the frequency detuning $Delta nu$ and we only need to find the DDS frequency where the phase is $phi = 0$.
 In practice, the superlattice phase $phi = 0$ is not uniquely defined since the band structure is $pi slash 2$ periodic.
 With the DDS frequency, we can therefore find the symmetric configuration approximately every #qty[150][MHz].
 In @sssec:phase-measure-resolve-period, we determine the exact periodicity of the DDS frequency.
 This allows us to precisely compute any superlattice phase $phi(fdds)$.
 
-For the phase measurement, we are #tr[regarding/treating/using] the superlattice potential as an array of isolated double wells.
+For the phase measurement, we are using the superlattice potential as an array of isolated double wells.
 This allows a robust preparation of the initial state and a simple interpretation of the detected occupation at the end of the measurement.
-Furthermore, we are using a spin-polarized atom cloud where each double well is occupied by one atom #tr[at most].
-For the preparation and loading of the atoms into the optical lattices, we are still using the regular sequence shown in @fig:setup-sequence.
-To #tr[polarize] the atom cloud, we apply an imaging pulse to remove all atoms in the state #mF(9) just before the experiment segment.
-During the imaging pulse, the atoms in the state #mF(7) are temporarily transferred to the state #mF(5) to reduce the loss of atoms.
+Furthermore, we are using a spin-polarized atom cloud where each double well is occupied by one atom at most.
+For the preparation and loading of the atoms into the optical lattices, we are using the regular sequence shown in @fig:setup-sequence.
+To polarize the atom cloud, we apply an imaging pulse to remove all atoms in the state #mF(9) just before the #tr[experimental] segment.
+For the imaging pulse, the atoms in the state #mF(7) are temporarily transferred to the state #mF(5) to reduce the loss of atoms.
 With the spin-polarized atom cloud, the detection is simplified significantly since we can directly detect the remaining atoms in the first image.
 
 #floating-figure(
   image("figures/phase_symmetry_signal.png", width: 80%),
   caption: [
     Measurement of the superlattice phase $phi$.
-    The three configurations *a* to *c* show the energy offsets $Delta slash t = -1, 0 "and" 0.5$ respectively with the corresponding double-well potential and the time evolution of the initial state #ketL.
+    The three configurations *a* to *c* show the energy offsets $Delta slash t = -1, 0 "and" 0.5$ respectively #tr[with the corresponding double-well potential and the time evolution of the initial state #ketL.]
     In the two cases where $Delta slash t != 0$, the oscillation is faster and the amplitude is smaller compared to the time evolution at $Delta slash t = 0$.
     At the fixed time $tau_0 = #qty[0.25][_h_ / _t_]$ indicated by the vertical dashed lines, the occupation of the #tr[left/initial] site therefore varies significantly.
     In *d*, the resulting occupation at time $tau_0$ is shown as a function of $Delta slash t$.
@@ -52,6 +53,8 @@ With the spin-polarized atom cloud, the detection is simplified significantly si
       - Draw any connection of the wave functions to the right site?
       - Add markers/lines in *d* to show the configurations *a*, *b* and *c*...
       - Find a good position for the abc indices in *a*, *b* and *c*...
+      - Move *a*, *b* and *c* to the right... And add inset indicators/zooms
+      - Add the value of $Delta slash t$ to each double-well potential
     ]
   ],
   label: <fig:phase-measure-theory>,
@@ -59,17 +62,17 @@ With the spin-polarized atom cloud, the detection is simplified significantly si
 
 As discussed in @ssec:theory-double-one, the eigenstates of a single particle in the double-well potential only depend on $Delta slash t$.
 In the symmetric configuration $Delta slash t = phi = 0$, the two eigenstates are equal mixtures of the localized states #ketL and #ketR, and the gap between the eigenenergies is $2t$.
-If we prepare the initial state #ketL, the atom will oscillate between the two sites.
+Therefore, if we prepare the initial state #ketL, the atom will undergo a coherent Rabi oscillation between the two sites.
 According to @eq:theory-double-one-rabi-parameters, the oscillation frequency is minimal at $Delta slash t = 0$ while the oscillation amplitude is maximal at $Delta slash t = 0$.
-Since both parameters of the #tr[oscillation/time evoluation] only depend on $abs(Delta) slash t$, we can find a symmetric signal around $Delta slash t = phi = 0$.
+Since both parameters of the oscillation only depend on $abs(Delta) slash t$, we can find a symmetric signal around $Delta slash t = phi = 0$.
 In @fig:phase-measure-theory, the origin of the signal is illustrated for a few offsets $Delta slash t$.
 At the first minimum of the time evoluation of the symmetric configuration in #subref(<fig:phase-measure-theory>, "b"), the occupation $n_L$ is zero.
-For any offset $abs(Delta) slash t > 0$, the occupation of $n_L$ at the same measurement time is greater.
-The strong sensitivity of the phase-sensitive signal in #subref(<fig:phase-measure-theory>, "d") is a result of the two oscillation parameters both contributing to an increase of the occupation $n_L$.
+For any offset $abs(Delta) slash t > 0$, the occupation of $n_L$ at the same measurement time is greater than zero.
+The strong sensitivity of the signal in #subref(<fig:phase-measure-theory>, "d") is a result of the two oscillation parameters both contributing to an increase of the occupation $n_L$ at the time $tau_0$.
 
 In the experimental setup, the tunneling amplitude $t(x, y)$ varies across the atom cloud due to the inhomogeneity of the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$.
-The ideal measuring time therefore changes as a function of the position in the atom cloud.
-We can nevertheless use the phase-sensitive signal since it is robust to small variations of the measuring time.
+The ideal measurement time therefore changes as a function of the position in the atom cloud.
+We can nevertheless use the phase-sensitive signal since it is robust to small variations of the measurement time.
 The symmetry of the signal is a consequence of the symmetry of the double-well eigenstates in @fig:theory-double-one.
 A variation of the tunneling amplitude only slightly changes the shape of the signal, which does not affect the identification of the symmetric configuration $Delta slash t = phi = 0$.
 Besides the tunneling amplitude, the superlattice phase itself can also change across the atom cloud.
@@ -77,65 +80,67 @@ If the wavefronts of the #x1064 lattice and the #x532 lattice are not parallel, 
 #tr[ref the gradient sections...]
 
 
-=== Preparation and projection <ssec:phase-measure-sequence>
+=== State initialization and projection <ssec:phase-measure-sequence>
 
 #notes[
   - (Immediately) mention the actual lattice depths $v_l$ and $v_s$?
   - Use $phi = - pi slash 4$ for the antisymmetric configuration?
   - Flip the sign of $Delta$ in the double well potentials (compared to the dashboards)?
   - Always use $Delta slash t = 0$ instead of $Delta = 0$?
-  - Mention that $phi = pi slash 4$ is not actually necessary for a good preparation?
+  - Really use the unit #unit[rad/ms] here for the ramp rates $dot(phi)$?
 ]
 
 To measure the signal shown in #subref(<fig:phase-measure-theory>, "d"), we need to prepare the initial state #ketL and detect the state $phy.ket(psi(tau))$ after the time $tau_0$.
 For the preparation, we are using a large offset $abs(Delta) >> t$ where the ground state in the double well is equal to #ketL.
 We achieve this by initially loading the atoms into the lowest band of the #x1064 lattice.
-The #x532 lattice is then turned on at the antisymmetric phase $phi = pi slash 4$, and the atoms remain in the lowest band of the superlattice potential.
-In each unit cell, the atoms are located on the left site which corresponds to the state #ketL in the double wells as shown in @fig:phase-measure-sequence.
-For the initialization of the #tr[Rabi] oscillation, we diabatically change the superlattice phase from $pi slash 4$ to the target phase that realizes the detuning $Delta(phi)$.
+The #x532 lattice is turned on adiabatically at the antisymmetric phase $phi = pi slash 4$ to keep the atoms in the lowest band of the superlattice potential.
+As shown in @fig:phase-measure-sequence, the atoms are located on the left site in each unit cell, which corresponds to the state #ketL in the double-well potential.
+For the initialization of the Rabi oscillation in each double well, we diabatically change the superlattice phase from $pi slash 4$ to the target phase that realizes the detuning $Delta(phi)$.
 The relevant energy scale for the phase ramp is the energy gap $2t$ of the avoided crossing at $Delta slash t = 0$ (see #subref(<fig:theory-double-one>, "b")).
-If the rate of change $dot(Delta)$ is too small, the initial state can follow the ground state which would reduce or completely disable the oscillation.
-In that case, we would expect the phase-sensitive signal to become asymmetric due to the composition of the ground state.
-The diabatic preparation is therefore essential to keep the initial state #ketL at any offset $Delta slash t$.
+If the rate of change $dot(Delta)$ is too small, the atoms remain in the ground state which would reduce or completely disable the oscillation.
+The diabatic preparation is therefore essential to conserve the initial state #ketL at any offset $Delta slash t$.
+After the oscillation time $tau_0$, we need to stop the oscillation to freeze the current state $phy.ket(psi(tau))$.
+We can achieve this with the phase ramp back to $phi = pi slash 4$ to project the final state onto the states #ketL and #ketR.
+This phase ramp also needs to be diabatic to conserve the composition of the final state.
 
 #floating-figure(
-  image("figures/phase-preparation-and-detection.png", width: 80%),
+  image("figures/phase_preparation_and_projection.png", width: 100%),
   caption: [
-    Preparation and detection for the measurement of the superlattice phase $phi$.
-    The blue lines show the densities at/after the specific steps in the sequence and the black? lines show the energies of the eigenstates.
-    For the strong detuning at $phi = pi slash 4$ the densities for the two wells are not connected to indicate that there is no mixture of the states $phy.ket(L)$ and $phy.ket(R)$.
-    #text(red)[Use the opposite argument here that the connected line equals a mixture of the states?]
+    State initialization and projection for the phase measurement.
+    Initially, only the left well is occupied by loading the superlattice at the antisymmetric phase $phi = pi slash 4$.
+    After the initialization at the offset $Delta$, the two sites are connected by the tunneling as the eigenstates are delocalized.
+    During the time evolution, the atom oscillates between the left and the right site with the parameters in @eq:theory-double-one-rabi-parameters.
+    To stop the oscillation after the time $tau_0$, we use a diabatic phase ramp back to $phi = pi slash 4$ to project the state $phy.ket(psi(tau = tau_0))$ onto the states #ketL and #ketR.
 
-    #show list: set text(red)
-    - Mention the lattice depths $v_l$ and $v_s$ that were used for these potentials?
-    - Anything else to mention in this caption?
-    - Draw zero-density line for right site/well in initial double well.
-    - Draw energies of eigenstates? Should be symmetric around the offset of $phy.ket(psi)$ for the two double wells in the middle?
-    - Draw coefficients or densities here?
-    - Is there any way to show the eigenstates here?
-    - Add a plot/sketch of the superlattice phase $phi(tau)$ here?
+    #notes[
+      - Mention the lattice depths $v_l$ and $v_s$ that were used for these potentials?
+      - Anything else to mention in this caption?
+      - Draw energies of eigenstates? Should be symmetric around the offset of $phy.ket(psi)$ for the two double wells in the middle?
+      - Really use $tau_0$ here instead of $tau$?
+      - Add a plot/sketch of the superlattice phase $phi(tau)$ here?
+      - Add *abc* here? Or make it I, II, III and IV?
+    ]
   ],
   label: <fig:phase-measure-sequence>,
 )
 
-After the measuring time $tau_0$, we need to stop the oscillation to freeze the current state $phy.ket(psi(tau))$.
-We can achieve this with the reverse phase ramp back to $phi = pi slash 4$ to project the final state onto the states #ketL and #ketR.
-This phase ramp also needs to be diabatic to correctly freeze the composition of the final state.
-The occupations $n_L$ and $n_R$ show mirrored signals since the total occupation is $n_L + n_R = 1$ if we neglect a loss of the atom.
-While both occupation numbers show the full signal, it can be beneficial to consider the contrast between the two.
-This is used in @ssec:phase-measure-resolve to improve the robustness of the signal to changes of the atom number during the phase-sensitive measurement.
-If we use the phase $phi = pi slash 4$ for the initial loading of the atoms, we need to increase the DDS frequency by approximately #qty[75][MHz] to reach the target phase around $phi = 0$.
+When we use the phase $phi = pi slash 4$ for the initial loading of the atoms, we need to increase the DDS frequency by approximately #qty[75][MHz] to reach the target phase around $phi = 0$.
 For the projection, we use the identical phase ramp back to the antisymmetric configuration $phi = pi slash 4$.
-The digital ramp generator of the DDS is perfectly suited for this sequence of ramps between two phases.
-However, the phase lock limits the maximum rate of change of the superlattice phase to $dot(phi) = #qty[150][MHz/ms]$.
-If this rate of change is not sufficient for the diabatic phase ramps, we need to use the double-pass AOM for the preparation and projection where we can achieve rates up to $dot(phi) = #qty[10][MHz/μs]$.
-The limitation when using the AOM driven by the arbitrary waveform generator is the maximum frequency detuning.
-Typically, we can only detune the frequency by #qty[10][MHz] compared to the symmetric configuration.
-While this is far away from the antisymmetric phase $phi = pi slash 4$, it is generally sufficient for the preparation and projection of the states for the phase-sensitive measurement.
-According to the composition of the ground state in #subref(<fig:theory-double-one>, "c"), we can already neglect the mixture of the states #ketL and #ketR at $abs(Delta) slash t = 5$.
-As long as we can achieve this offset with the AOM, there is no advantage in moving all the way to the antisymmetric phase $phi = pi slash 4$ for the preparation and the projection.
-
 === Resolving the double well occupation <ssec:phase-measure-resolve>
+While we can change the DDS frequency arbitrarily on nanosecond timescales, the rate of change of the superlattice phase is limited by the phase locked loop.
+If we use the arbitrary waveform generator to add the auxiliary voltage signal to the output of the slow PID regulator#footnote[
+  Without the auxiliary signal, the rate of change is even lower. #tr[Actually add a value here?]
+] (see @fig:phase-setup), the maximum rate of change is $dot(phi) approx pi slash 2 #h(0.2em) #unit[rad/ms]$.
+With the double-pass AOM, we can achieves rates up to $dot(phi) approx #qty[0.1][rad/μs]$ which is an improvement by a factor of more than $60$ compared to the DDS frequency and the phase locked loop.
+The limitation when using the double-pass AOM is the maximum frequency detuning of #qty[20][MHz] which corresponds to the phase detuning $pi slash 15$.
+While this range is too small to achieve the phase ramp $pi slash 4 -> 0$, it is generally sufficient for the initialization and projection of the states for the phase measurement.
+According to the composition of the ground state in #subref(<fig:theory-double-one>, "c"), we can already neglect the mixture of the states #ketL and #ketR at $abs(Delta) slash t = 5$, which typically corresponds to the phase $phi approx pi slash 100$.
+As soon as the ground state is equal to #ketL, there is no advantage in moving all the way to the antisymmetric phase $phi = pi slash 4$ for the state initialization and the projection onto the sites #ketL and #ketR.
+However, the antisymmetric configuration can be required for the detection of the final state.
+In that case we can use the two phase ramps #box[$pi slash 4 attach(-->, t: "DDS") pi slash 15 attach(-->, t: "AOM") 0$] to cover the entire phase range.
+During the first phase ramp, the rate of change can be slower since the double-well potential is far detuned from $Delta slash t = 0$.
+Only the rate of change during the second phase ramp is relevant for the initialization and projection in @fig:phase-measure-sequence.
+
 
 #[
   #set text(red)
