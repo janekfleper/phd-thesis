@@ -154,7 +154,7 @@ This would however introduce an additional source for a variation of the superla
 Since the shift $delta y_0$ is significantly smaller than the size of the atom cloud as well as the waists of the respective lattices, we have decided not to pursue a possible compensation.
 Compared to the positions $y_0$, the angles $theta.alt$ have to be perfectly matched to achieve a homogoneous superlattice phase $phi(x, y)$.
 With the in-situ lattice modulation spectroscopy, we can however only determine the absolute angle $theta.alt$ in the $x y$-plane.
-For the determination of the relative angle $Delta theta.alt$, we are using a phase-sensitive measurement based on the time evolution of atoms in the superlattice potential, see @ssec:phase-measure-in-situ.
+For the determination of the relative angle $Delta theta.alt$, we are using a phase-sensitive measurement based on the time evolution of atoms in the superlattice potential, see #tr[@ssec:phase-measure-detect something more specific?].
 In @sec:mod-coupled we already discussed the coupling between the x1064 lattice and the y1064 lattice due to their absolute angles $theta.alt$.
 For the calibration in the superlattice potential we can neglect this coupling because of the different energy scales.
 The transition frequencies as shown in #subref(<fig:mod-super-result>, "a") would correspond to the band index $phy.vb(n) = (1, 8)$ if we set the y1064-lattice depth to $Vy1064 = #qty[30][Erec]$.

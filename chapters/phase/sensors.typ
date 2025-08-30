@@ -16,7 +16,7 @@
 The setup introduced in @sec:phase-setup allows us to control/stabilize the superlattice phase on short time scales from #qty[1][μs] to #qty[1][s].
 If we would run the measurements from @sec:phase-measure continuously, we would however notice that the superlattice phase slowly changes despite the stabilization of the lattice frequencies relative to each other.
 This drift is caused by the (relative) change of the refractive index in the retro-reflecting path.
-While we could repeat the phase calibration from @ssec:phase-measure-resolve or @ssec:phase-measure-in-situ to measure the change of the superlattice phase $phi$, we also need the phase to be controlled/stable during other measurements.
+While we could repeat the phase calibration from @ssec:phase-measure-detect to measure the change of the superlattice phase $phi$, we also need the phase to be controlled/stable during other measurements.
 Being able to predict the superlattice phase $phi$ without the atoms is therefore essential for the operation of the experiment.
 
 
@@ -249,7 +249,7 @@ The equation/theory covers/interpolates the refractive index (at least) from #qt
 With the phase correction based on the temperature, the pressure and the relative humidity as introduced in @ssec:phase-sensors-measure we can test the resulting stability of the superlattice phase $phi$.
 The (same) correction is automatically applied in any sequence involving the superlattice.
 We can therefore "transfer" the stability of the phase, once characterized, to other measurements.
-To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-resolve with a finite horizontal gradient.
+To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-detect with a finite horizontal gradient.
 The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @sssec:phase-measure-resolve-vertical and @sssec:phase-measure-resolve-period #text(red)[ref a figure instead?].
 The horizontal gradient is (again) set to the smallest possible value where the phase-sensitive signal remains within the atom cloud during the measurement.
 During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.

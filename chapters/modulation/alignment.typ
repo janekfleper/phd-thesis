@@ -21,7 +21,7 @@ We are therefore able to reliably find the optimal alignment of the lattices, wh
 === x1064-lattice alignment <ssec:mod-align-x1064>
 
 #notes[
-  - Mention typical position fluctuations? This is relevant in @ssec:phase-measure-resolve.
+  - Mention typical position fluctuations? This is relevant in @ssec:phase-measure-detect.
   - Estimate the sensitivity of the vertical alignment?
   - Where to mention the hysteresis of the piezo mirror mounts for the first time?
   - Where to introduce the contrast of the resonances?

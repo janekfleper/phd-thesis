@@ -90,7 +90,7 @@ We therefore have to simulate the expected signals to estimate the correction th
 Considering these small relative errors, we can use the phase-sensitive signal with the density-assisted tunneling to calibrate the (local) interaction energy $U$ without ever computing the interaction energy with @eq:theory-wannier-interaction-correction.
 We only need to compute the detuning/offset $Delta(phi)$ as a function of the (measured) superlattice phase $phi(x, y)$ using the BPO formalism #text(red)[@ssec:theory-super-wannier].
 #text(red)[Explain this better with the DDS frequency maps for the interaction and the zero-phase...]
-As a reference for the measured interaction frequency $f_U (x, y)$ we can use the zero-phase frequency $f_0 (x, y)$ determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-resolve-in-situ-result.
+As a reference for the measured interaction frequency $f_U (x, y)$ we can use the zero-phase frequency $f_0 (x, y)$ determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-detect-result.
 Subtracting the underlying superlattice phase will (also) automatically correct the measurement for any residual phase gradients.
 
 $

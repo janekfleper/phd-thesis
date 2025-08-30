@@ -108,6 +108,12 @@
 #let hwp = [$lambda slash 2$ waveplate]
 #let qwp = [$lambda slash 4$ waveplate]
 
+// lattice-modulation variables
+#let lms = [lattice-modulation spectroscopy]
+#let slms = [superlattice-modulation spectroscopy]
+#let fmod = $f_"mod"$
+#let tmod = $tau_"mod"$
+
 // superlattice phase parameters
 #let fdds = $f_"DDS"$
 #let fbeat = $f_"beat"$
