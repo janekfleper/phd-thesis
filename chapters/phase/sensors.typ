@@ -250,7 +250,7 @@ With the phase correction based on the temperature, the pressure and the relativ
 The (same) correction is automatically applied in any sequence involving the superlattice.
 We can therefore "transfer" the stability of the phase, once characterized, to other measurements.
 To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-detect with a finite horizontal gradient.
-The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @sssec:phase-measure-resolve-vertical and @sssec:phase-measure-resolve-period #text(red)[ref a figure instead?].
+The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @ssec:phase-measure-gradient and @sssec:phase-measure-resolve-period #text(red)[ref a figure instead?].
 The horizontal gradient is (again) set to the smallest possible value where the phase-sensitive signal remains within the atom cloud during the measurement.
 During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.
 

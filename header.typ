@@ -33,6 +33,11 @@
 #let k2 = $phy.vb(k)_2$
 #let anglez = $alpha$
 
+#let x-axis = [$x$ axis]
+#let y-axis = [$y$ axis]
+#let z-axis = [$z$ axis]
+#let xy-plane = [$x y$ plane]
+
 #let x1064 = $x 1064$
 #let ax1064 = $a_x1064$
 #let wx1064 = $w_x1064$
@@ -116,6 +121,7 @@
 
 // superlattice phase parameters
 #let fdds = $f_"DDS"$
+#let faom = $f_"AOM"$
 #let fbeat = $f_"beat"$
 
 // a dummy function to mark stuff I still want to fix...

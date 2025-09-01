@@ -257,7 +257,7 @@ In each cell, we fit the minimum of the mean population $n_L$ to evaluate the sy
 The resulting phase map of a typical phase measurement with the in-situ detection technique is shown in @fig:phase-measure-detect-result.
 We can observe a #tr[substantial] phase gradient $phy.dv(phi, y)$ across the atom cloud that shifts the symmetry frequency $fdds^0$ by up to #qty[2][MHz].
 In terms of the phase $phi$, this corresponds to a variation of approximately #qty[20][mrad].
-The compensation of the phase gradient to achieve a homogeneous superlattice phase is discussed in #tr[ref gradients subsection].
+The compensation of the phase gradient to achieve a homogeneous superlattice phase is discussed in @ssec:phase-measure-gradient.
 
 For the phase measurement, we usually select a measurement time $tau_0$ that is slightly shorter than the ideal value for the tunneling amplitude $t$ in the center of the lattices according to @fig:phase-measure-theory.
 Due to the inhomogeneity of the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$, the tunneling amplitude $t(x, y)$ always increases with the distance from the optical axis of the lattices.
@@ -277,104 +277,106 @@ In #tr[ref stability subsection], we are characterizing the sequence-to-sequence
 #tr[Add some kind of conclusion?]
 
 
-==== Horizontal gradient <sssec:phase-measure-resolve-horizontal>
+=== Compensation of the phase gradient <ssec:phase-measure-gradient>
 
-#[
-  #set text(red)
-  - Merge this with the sub-sub-section @sssec:phase-measure-resolve-vertical?
-  - Mention that it does not matter which lattice is shifted!
-  - Put the technical details in @sec:super-setup.
+#notes[
+  - Use "gradient" or "gradients" in the subsection title?
   - Find a nice introduction/explanation for the two different angles/axes.
+  - Mention that we need a homogeneous phase for all/most measurements?
+  - Mention the angle $theta.alt$ extracted from the horizontal gradients?
+  - Explain the "mean" superlattice phase behind all the gradients etc...
+  - Anything to add about the horizontal gradient?
+  - Mention contant overall phase during the vertical gradient measurement?
 ]
 
-To change the angle between the x1064 lattice and the x532 lattice we are using two #qty[10][mm] thick glass plates#footnote[#text(red)[Mention the exact part number from Eksma]] in the optical path of the x532 lattice.
-A rotation of the glass plates will displace/shift the x532 lattice beam perpendicular to the optical axis.
-The first glass plate is mounted in a piezo mirror mount#footnote(link("https://www.newport.com/p/AG-M100L", [Newport Agilis™ AG-M100L])) with a range of $plus.minus #num[2]degree$ for each axis.
-This mirror mount offers absolute positioning with an accuracy of $#num[0.05]degree$ by using limit switches as reference points.
-We can control the position of either axis of the mirror mount with the experiment control software to scan the "horizontal" shift and the "vertical" shift of the x532 lattice beam.// relative to the x1064 lattice beam.
-The second glass plate is mounted in a mechanical mirror mount to apply a static displacement of the x532 lattice beam.
+The calibration of the in-situ superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result shows a phase gradient in the direction of the #y-axis.
+Such a phase gradient is the result of a small error in the relative alignment of the #x1064\-lattice beams and the #x532\-lattice beams.
+If the standing-wave patterns of the individual lattices are not parallel, the #tr[symmetry/symmetric] phase $phi = 0$ varies with the position.
+Consequently, the compensation of the phase gradient requires a tilt of the lattice beams at the atom position without affecting their #tr[overall/position] alignment.
+To adjust the angle of the lattice beams around the atom position, we apply a shift perpendicular to the optical axis in front of the forward lens.
+In @fig:super-setup, there are two glass plates in the #x532\-lattice setup to shift the horizontal and vertical positions of the forward-propagating beam#footnote[
+  The compensation of the phase gradient would also work by shifting the #x1064\-lattice beam.
+].
+A rotation of the glass plates displaces the beam in the corresponding direction due to the refraction #tr[at the surfaces/in the optical material/element].
+As long as the surfaces of the glass plates are parallel, the angle of the forward-propagating is conserved.
+The #tr[position] of the #x532\-lattice beams at the atom position is therefore not affected by the rotation of the glass plates.
 
-#text(red)[Evaluate the mean angle $theta.alt$ here again?]
-For most/regular measurements in the superlattice we would like to have a homogeneous phase $phi$ across the atom cloud.
-We are therefore scanning the "horizontal" axis of the glass plate to find the angle where the "in-plane" phase gradient vanishes.
-For each angle of the "horizontal" axis we will run the measurement as shown in @fig:phase-measure-detect-result and evaluate the strength of the gradient.
-The result of this measurement/evaluation is shown in @fig:phase-measure-resolve-horizontal-gradient.
-We can see that the extracted gradients line up nicely as a function of the horizontal angle of the glass plate.
-The solid line shows the expected gradients computed from the optical properties of the glass plate, the focal length of the (forward) 2 inch lens and the pixel size in the atom plane (#text(red)[ref equation for displacement by the glass plate?]).
-The offset of the solid/theory line is chosen to get the best possible match to/with the data points.
-Only the slope of the solid/theory line has an actual meaning.
-The two maps on the right (clearly) show the difference between a finite phase gradient and the optimized horizontal angle.
-In the upper area of the mask around the atom cloud there are quite a few cells missing.
-This was caused by the local phase/frequency being outside of the frequency interval (#text(red)[Mention the actual interval?]).
-The lower map in @fig:phase-measure-resolve-horizontal-gradient shows the optimized horizontal angle where the phase gradient is significantly suppressed.
-The residual phase inhomogeneity is #text(red)[compute this with a mask or just from the shown cells?]
-With the absolute positioning this is the best gradient cancellation we can achieve.
-The x errorbars of the two data points close to the zero-gradient are already overlapping, we would therefore have to rely on the additional relative positioning of the piezo mirror mount.
-This does however rule out the determination/interpolation of the zero-crossing of the gradient from the surrounding angles/positions.
-If we would require a more homogeneous phase map as achieved/shown in @fig:phase-measure-resolve-horizontal-gradient, we would need to find a more sensitive measurement.
-The easiest solution there would be to use a superlattice configuration $(v_l, v_s)$ where the offset/detuning $Delta slash t$ is (even) more sensitive to the superlattice phase $phi$.
+The first glass plate in the #x532\-lattice setup is mounted in a piezo mirror mount with a #tr[pitch] of $plus.minus #num[2]degree$ and an absolute accuracy of $#num[0.05]degree$ for each axis.
+The second glass plate is placed in a regular mirror mount with an adjustable pitch of $plus.minus #num[4]degree$ for the vertical axis.
+We use the second glass plate to apply a static shift to the #x532\-lattice beam, while the first glass plate can be controlled by the experimental sequence to vary the horizontal and vertical shift.
+#tr[According] to the degrees of freedom of the mirror mounts, we compensate the horizontal and vertical component of the phase gradient separately.
+While we can directly resolve the horizontal component of the gradient with the in-situ measurement of the superlattice phase, the vertical component is not #tr[directly] visible since the atom images show the integrated optical density.
+Nevertheless, we found a technique to qualitatively optimize the vertical component of the phase gradient.
 
-#figure(
-  image("figures/2024-11-04_symmetry_gradient_thesis_result.png", width: 70%),
+#floating-figure(
+  image("figures/phase_measure_horizontal_gradient.png", width: 70%),
   caption: [
-    Optimization of the horizontal phase gradient.
-    The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
-    The errorbars along the x-axis indicate the accuracy of $#num[0.05]degree$ of the absolute position of the piezo mirror mount.
-    Each white cell in the maps on the right was either exluded by the initial mask around the atom cloud or the fit was not successful.
+    Compensation of the horizontal component of the phase gradient.
+    The gradient component is linear in the angle $gamma_"hor"$, as expected from the shift of the #x532\-lattice beam due to the refraction in the glass plate.
+    The uncertainties take the $#num[0.05]degree$ accuracy of the piezo mirror mount into account.
+    The dashed line shows the expected gradients based on the properties of the glass plate and the focal length of the forward lens.
+    Empty cells in the insets on the right are either excluded by the initial mask around the atom cloud or the fit of the minimum $f_0$ was not successful.
+    The lattice depths for the measurement #tr[are/were] $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
 
-    #show list: set text(red)
-    - y-label should be the gradient with some rescaling?
-    - x-label should be the angle of the x532-plate
-    - Anything else to write here?
-    - Add lines to the markers corresponding to the images on the right.
-    - Increase size of atom images.
-    - Chooses tighter range for the colorbar of the images?
-    - Mask pixels with large errors in the images?
-    - Compute homogeneity (standard deviation) in the optimized cloud?
+    #notes[
+      - Show the gradient component and the phase maps in MHz or in mrad?
+      - Discuss the deviation of the data from the theory?
+      - Find a nice angle symbol for the glass plate...
+      - Show the evaluation mask in the insets on the right?
+    ]
   ],
-) <fig:phase-measure-resolve-horizontal-gradient>
+  label: <fig:phase-measure-gradient-horizontal>,
+)
 
+For the compensation of the horizontal gradient component, we repeat the measurement of the superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result at several angles $gamma_"hor"$ of the glass plate.
+We evaluate the frequency $f_0 (x, y)$ by fitting a one-dimensional polynomial up to the degree #tr[$1$ or one].
+Analogous to the evaluation of the lattice depth $V(x, y)$ in @sec:mod-eval, the one-dimensional polynomial is expanded in the #xy-plane and can be rotated by the angle $theta.alt$ to account for the rotation of the optical axis of the lattice beams.
+In @fig:phase-measure-gradient-horizontal, the measurement and compensation of the horizontal gradient component is shown.
+We varied the glass-plate angle in steps of $#num[0.4]degree$ to find the zero-crossing of the gradient component at $gamma_"hor" approx #num[1.7]degree$.
+The standard deviation of the zero-phase frequency $f_0 (x, y)$ across the atom cloud is $sigma(f_0) = #qty[0.11][MHz]$.
+This corresponds to $sigma(phi) approx #qty[1.15][mrad]$, which is on par with the sequence-to-sequence stability of the superlattice phase (see #tr[ref stability section/equation?]).
+During the scan of the angle $gamma_"hor"$, the frequency $f_0$ in the center of the atom cloud $(x, y) = (0, 0)$ varies by less than #qty[0.25][MHz].
+We can therefore tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
+While we want the superlattice phase $phi(x, y)$ to be homogeneous in most measurements, there are a few cases where applying a specific horizontal gradient component is useful.
+If the phase $phi$ changes linearly across the atom cloud, the offset $Delta$ shows the same behavior.
+This allows us to realize the offset scan in a single image where the phase measurement results in a local minimum of the atomic density.
+#tr[Only mention the details of this technique in the stability section?]
+In #tr[ref stability section/figure], we use this to quantify the #tr[long-term/sequence-to-sequence] stability of the superlattice phase.
+Instead of taking a series of images to find the zero-phase frequency $f_0$, we can measure the superlattice phase in a single sequence.
+The spatial scan of the offset #tr[$Delta$, $phi$ or $f_0$?] encodes the superlattice phase in the position of the minimum in the atomic density, and we can compute the #tr[mean] zero-phase frequency with the horizontal gradient component.
 
-==== Vertical gradient <sssec:phase-measure-resolve-vertical>
-#[
-  #set text(red)
-  - Mention the (lack of) comparison to a theoretical signal?
-]
-
-Finding the angle where the "vertical" phase gradient vanishes is less straight forward since the images taken with the z-camera show the accumulated optical density of all layers of the $z$-lattice.
-We therefore have to rely on a measurement of the signal strength similar to the lattice alignment in @sec:mod-align #text(red)[Also reference @fig:mod-align-x1064-walking?].
-If we apply a horizontal gradient on purpose, the phase-sensitive measurement will show the signal @fig:phase-measure-theory as a function of the position.
-This will show up as a single line in the atom cloud similar to the resonance lines from/in @ch:mod (#text(red)[ref a specific section here?]).
-From the contrast/strength of the line/signal we can then infer the "vertical" angle where the phase is equal in all planes along the $z$-lattice.
-The result of this measurement is shown in @fig:phase-measure-resolve-vertical-gradient.
-In the atom images we can see the "resonance" lines/signals where the local phase is $phi = 0$ on average across all vertical lattice planes.
-If the local phase $phi = 0$ is reached at the same position in all (vertical) lattice planes, the line/signal strenght will be maximal.
-The optical density images are evaluated with a two-dimensional Gaussian envelope and a one-dimensional Gaussian function that models the phase-sensitive signal.
-The line/signal strength is then defined as the quotient of the line amplitude and the line width/standard deviation.
-In @fig:phase-measure-resolve-vertical-gradient we can see that the optimum is achieved at the angle #text(red)[#num[350] (put the actual angle here...)].
-
-Overall the signal here is less sensitive than the optimization of the horizontal gradient in @fig:phase-measure-resolve-horizontal-gradient, which is a direct cause of the aspect ratio of the atom cloud.
-In the $x y$-plane the atoms often span up to #qty[100][μm] whereas the (individual) planes in the $z$-lattice are only spread over #qty[10][μm].
-It is nevertheless important to cancel the vertical gradient if we are running a measurement across/with all lattice planes.
-After the optimization of the vertical angle we can move the horizontal axis/angle back to the optimum from @fig:phase-measure-resolve-horizontal-gradient.
-Thanks to the absolute positioning capabilities of the piezo mirror mount, we can reliably/quickly apply and cancel a specific horizontal (or vertical) gradient.
-
-#figure(
-  image("figures/2024-11-05_symmetry_vertical_gradient_thesis_result.png", width: 70%),
+#floating-figure(
+  image("figures/phase_measure_vertical_gradient.png", width: 70%),
   caption: [
-    Optimization of the vertical phase gradient.
-    The horizontal phase gradient was set to $approx #qty[0.1][MHz/px]$ to get a narrow line in the optimized case.
+    Compensation of the vertical component of the phase gradient.
+    The signal contrast quantifies the ratio of the amplitude and the width of the signal in the atomic densities.
+    For the angle $gamma_"ver"$, the uncertainties take the $#num[0.05]degree$ accuracy of the piezo mirror mount into account, while the uncertainties of the contrast show the fit errors.
+    The atomic densities in the insets highlight the different signal contrasts for the corresponding data points.
+    The lattice depths for the measurement #tr[are/were] $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$, and the horizontal gradient component was approximately #qty[0.17][MHz/μm].
 
-    #show list: set text(red)
-    - Use the actual angle here on the x-axis.
-    - Add lines from the markers to the optical densities.
-    - Change the evaluation to Lorentzian functions?
-    - Normalize the line/signal strength to 1.0?
-    - Anything to add to this caption?
-    - Add colorbar for the images...
-    - Add x errorbars to take the $#num[0.05]degree$ into account?
+    #notes[
+      - Mention the actual fit function for the signal contrast evaluation?
+      - Add variable and unit to the "optical density"? And call it "atomic density" instead!
+      - Find a better name for the "signal"? Maybe "phase-sensitive signal" or just "phase signal"?
+      - Mention the (lack of) comparison to a theoretical signal?
+    ]
   ],
-) <fig:phase-measure-resolve-vertical-gradient>
+  label: <fig:phase-measure-gradient-vertical>,
+)
+
+The #tr[other/second] technique that relies on a finite horizontal gradient component is the compensation of the vertical gradient component.
+Since the image shows the integrated atomic density of the vertical lattice planes, we can use the shape of the local minimum to optimize the vertical component of the phase gradient#footnote[
+  This technique is equivalent to the vertical alignment procedure of the #x1064 lattice in @ssec:mod-align-x1064, where we use the contrast of the lattice-modulation resonances to infer the overlap of the #x1064\-lattice beams.
+  #tr[Where to mention this sentence? Really in a footnote?].
+].
+If the #tr[mean] superlattice phase is equal in all vertical lattice planes, the local minimum occurs at the same position #tr[$(x, y)$] in each lattice plane and the integrated signal shows the minimal width.
+Conversely, a vertical gradient component causes a shift of the phase measurement in the lattice planes that broadens the integrated signal in the atomic density.
+While we can not #tr[easily/directly] quantify the strength of the vertical gradient component, the technique is sufficient to find the zero-gradient angle of the glass plate.
+In @fig:phase-measure-gradient-vertical, the contrast of the integrated signal shows a maximum at the glass-plate angle $gamma_"ver" approx #num[0.5]degree$.
+Compared to the horizontal gradient component, the measurement of the vertical gradient component is significantly less sensitive.
+This is primarily caused by the overall shape of the atom cloud that spans up to #qty[100][μm] in the #xy-plane, whereas the vertical lattice planes are only occupied over #qty[10][μm].
+While this limits the measurement resolution, it also limits the possible inhomogeneity of the superlattice phase due to the vertical component of the phase gradient.
+Compensating the vertical component based on the contrast of the phase signal is therefore sufficient.
 
 
 ==== Superlattice period <sssec:phase-measure-resolve-period>
@@ -398,7 +400,7 @@ Apart from the (absolute) positional shift (that we cannot resolve anyway) both 
 The atoms are initially prepared on the "lower" sublattice site and then projected to the target phase $phi$.
 We then use the in-situ detection of the symmetric configuration as introduced in @ssec:phase-measure-detect with a finite horizontal phase gradient.
 The (local) phase will then be encoded in the position of the phase-sensitive signal in the atom cloud.
-We already used this technique in @sssec:phase-measure-resolve-vertical to minimize the vertical gradient based on the strength of the phase-sensitive line/signal.
+We already used this technique in @ssec:phase-measure-gradient to minimize the vertical gradient based on the strength of the phase-sensitive line/signal.
 The position of the line/signal was not relevant there and we could just choose a really strong gradient.
 If we want to evaluate the position to measure the superlattice phase $phi$, we have to make sure that the position primarily depends on the phase.
 For the z-imaging we can expect the (imaged) position of the atom cloud to vary by up to #qty[2][px] between sequences.
@@ -432,8 +434,8 @@ $
   k = #qty[0.033(3)][MHz/px]
 $ <eq:phase-measure-resolve-period-gradient>
 
-which is around $1 slash 3$ of the phase gradient used for the optimization of the vertical phase gradient in @sssec:phase-measure-resolve-vertical.
-The lines/signals are therefore wider by a factor of $approx 3$ than the optimized line/signal in @fig:phase-measure-resolve-vertical-gradient (#text(red)[Actually mention this comparison to the vertical gradient optimization?]).
+which is around $1 slash 3$ of the phase gradient used for the optimization of the vertical phase gradient in @ssec:phase-measure-gradient.
+The lines/signals are therefore wider by a factor of $approx 3$ than the optimized line/signal in @fig:phase-measure-gradient-vertical (#text(red)[Actually mention this comparison to the vertical gradient optimization?]).
 For the DDS frequencies of the "target" phases $phi$ we selected $f_1 = #qty[406.4][MHz]$ and $f_2 = #qty[556.3][MHz]$ which are spaced by $approx #qty[150][MHz]$.
 The DDS frequencies for the "preparataion" phase/configuration is lower by #qty[75][MHz] in both cases.
 During the measurement we alternated between $f_1$ and $f_2$ every sequence to eliminate slow drifts of the superlattice phase $phi$.
