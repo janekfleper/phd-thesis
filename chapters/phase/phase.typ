@@ -13,5 +13,5 @@ This modulation allowed us to modify the tunneling and the effective interaction
 
 #include "setup.typ"
 #include "measure.typ"
-#include "sensors.typ"
+#include "stability.typ"
 #include "interaction.typ"

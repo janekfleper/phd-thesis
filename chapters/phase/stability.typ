@@ -50,9 +50,9 @@ With the phase convention chosen in @eq:theory-super-potential, we can express t
 The resulting expression will include @eq:phase-setup-delta-phi (as a static term) and terms for the glass cell, the two lenses and the air (segments)
 
 $
-  phi &= phi_l - 1 / 2 phi_s \
-  &= (k + Delta k) dot integral_0^d phy.dd(z) n_l (z) - k dot integral_0^d phy.dd(z) n_s (z) \
-  &= k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot n_(l, sigma) \
+  phi & = phi_l - 1 / 2 phi_s \
+      & = (k + Delta k) dot integral_0^d phy.dd(z) n_l (z) - k dot integral_0^d phy.dd(z) n_s (z) \
+      & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot n_(l, sigma) \
 $ <eq:phase-sensors-phi>
 
 #text(red)[this paragraph requires quite a bit of improvement...]
@@ -78,7 +78,7 @@ $ <eq:phase-sensors-phi-derivative>
 (#text(red)[use the total derivative here?])
 where the glass segments will expand with/under a higher temperature and the air segments will shrink accordingly.
 We can however neglect all terms but the second one with the derivative $phy.pdv(Delta n_sigma, T)$.
-The other terms are smaller by $3 "to" 4$ orders of magnitude if we consider the (typical) thermal expansion coefficients $alpha$ and the #text(red)[thermal coefficient] $phy.dv(n, T)$ of the glasses (#text(red)[include ref to @tab:super-thermal-theory]).
+The other terms are smaller by $3 "to" 4$ orders of magnitude if we consider the (typical) thermal expansion coefficients $alpha$ and the #text(red)[thermal coefficient] $phy.dv(n, T)$ of the glasses (#text(red)[include ref to @tab:super-thermal-materials]).
 The resulting coefficients for the different segments are collected/listed in @tab:phase-sensors-temperature-coefficients.
 The distance of the "air" only includes the segment between the retro-reflecting mirror and the "retro" lens since we cannot reliably measure the air temperature inside the mu-metal.
 The glass cell (wall) made out of UV fused silica is (only) included in @tab:phase-sensors-temperature-coefficients but not taken into account for the phase correction since we are not able to measure the glass temperature (either).
