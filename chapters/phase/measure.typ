@@ -379,77 +379,51 @@ While this limits the measurement resolution, it also limits the possible inhomo
 Compensating the vertical component based on the contrast of the phase signal is therefore sufficient.
 
 
-==== Superlattice period <sssec:phase-measure-resolve-period>
+=== Measurement of the superlattice period <ssec:phase-measure-period>
 
-#[
-  #set text(red)
-  - This should be a separate subsection? The subsections in this section would then be "resolve", "gradients" and "period"...
-  - Add references to this subsection/result wherever necessary!
+#notes[
   - Use sem instead of std for the error of the period?
-  - Discuss changes to the horizontal gradient strength?
+  - Anything to add to this section (in general)?
+  - Figure out the correct phases in the correct phase convention!
+  - Reference the phase-stability section for the details of the in-situ measurement?
 ]
 
-So far we have only estimated the period of the superlattice phase from the (optical path) distance $d approx #qty[50][cm]$ from the atoms to the retro-reflecting mirror #text(red)[add the correct reference here, probably @sec:super-setup?].
-The resulting period/distance between two adjacent/neighbouring symmetric configuration is #qty[150][MHz].
-Determining/knowing the period with a high precision is necessary for the conversion between the DDS frequency $f_"DDS"$ as the experimental parameter and the superlattice phase $phi$ (and the detuning/offset $Delta slash t$) as the theoretical parameters.
-The most precise/sensitive tool for the measurement of the superlattice period is the phase-sensitive measurement introduced in this section.
-We know that the superlattice potential @eq:theory-super-potential-dimensionless has the same band structure at all phases $phi = n dot pi slash 2, n in ZZ$.
-Measuring the DDS frequency difference between two neighbouring phases will then yield the period of the superlattice.
-The potential sketches in @fig:phase-measure-resolve-period shown the two different superlattice configurations that we are comparing/using.
-Apart from the (absolute) positional shift (that we cannot resolve anyway) both sequences work just like @fig:phase-measure-sequence.
-The atoms are initially prepared on the "lower" sublattice site and then projected to the target phase $phi$.
-We then use the in-situ detection of the symmetric configuration as introduced in @ssec:phase-measure-detect with a finite horizontal phase gradient.
-The (local) phase will then be encoded in the position of the phase-sensitive signal in the atom cloud.
-We already used this technique in @ssec:phase-measure-gradient to minimize the vertical gradient based on the strength of the phase-sensitive line/signal.
-The position of the line/signal was not relevant there and we could just choose a really strong gradient.
-If we want to evaluate the position to measure the superlattice phase $phi$, we have to make sure that the position primarily depends on the phase.
-For the z-imaging we can expect the (imaged) position of the atom cloud to vary by up to #qty[2][px] between sequences.
-We therefore need the (average) changes of the position of the line/signal to be significantly greater.
-Otherwise we would (significantly) overestimate the variation of the phase $phi$.
-The optimal approach is to use the smallest possible in-plane/horizontal phase gradient where the line/signal remains within the atom cloud for all fluctuations of the superlattice phase.
-With a typical atom cloud size of up to #qty[100][px], we can choose the variation of the line/signal position to be greater than the regular position uncertainty of the imaging by one order of magnitude.
+To precisely control the superlattice phase $phi$ with the frequency $f$, we need to know the conversion factor between the two quantities.
+While the measurement of the zero-phase frequency $f_0$ just allows us to set the phase $phi = 0$, any other phase $phi$ requires the calibration of the superlattice period in terms of the frequency $f$.
+With the length $L approx #qty[50][cm]$ of the optical path from the atom position to the retro mirror (see @fig:super-setup), we can already estimate the frequency period to be $Delta f approx #qty[150][MHz]$ based on @eq:phase-setup-delta-phi.
+For a #tr[precise] calibration of the frequency period, we run the phase measurement in @fig:phase-measure-detect-result at the two adjacent phases $phi = 0$ and $phi = pi slash 2$.
+The resulting frequency difference $Delta f$ between the two configurations is the frequency period corresponding to the phase period $pi slash 2$.
 
-#figure(
-  grid(
-    columns: (6.5cm, 1fr),
-    image("figures/phase-measure-period-order0.png"),
-    grid.cell(rowspan: 2, image("figures/2024-12-12_symmetry_period_histogram.png")),
-    image("figures/phase-measure-period-order1.png"),
-  ),
+#floating-figure(
+  image("figures/phase_measure_period.png"),
   caption: [
-    Measurement of the superlattice period.
-    The superlattice configuration for the data taken here was $(v_l, v_s) = (40, 14.4)$.
-    The total number of measurements with the DDS frequencies $f_1$ and $f_2$ was #num[1120].
+    Measurement of the frequency period.
+    *a*, Distribution of the frequency periods in consecutive sequences across #num[1120] measurements.
+    *b*, *c*, Loading and state initialization in the two different superlattice configurations.
+    The phases for the loading are $phi = -pi slash 4$ (*b*) and $phi = pi slash 4$ (*c*) respsectively, and each phase is increased by $pi slash 4$ for the initialization.
+    The superlattice parameters for the #tr[period] measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$, and the #tr[target] frequencies are $f = #qty[406.4][MHz]$ (*b*) and $f = #qty[556.3][MHz]$ (*c*).
 
-    #show list: set text(red)
-    - Add the preparation phases in the first column.
-    - Add the infrared lattice potential to the sketches?
-    - Anything to add to this caption?
+    #notes[
+      - Add the actual evaluated/fitted Gaussian distribution to *a*?
+      - Anything to add to this caption?
+      - Add insets to show the "resonance" data?
+    ]
   ],
-) <fig:phase-measure-resolve-period>
+  label: <fig:phase-measure-period>,
+)
 
-For the measurement of the superlattice period we set the in-plane/horizontal phase gradient to
-
-$
-  k = #qty[0.033(3)][MHz/px]
-$ <eq:phase-measure-resolve-period-gradient>
-
-which is around $1 slash 3$ of the phase gradient used for the optimization of the vertical phase gradient in @ssec:phase-measure-gradient.
-The lines/signals are therefore wider by a factor of $approx 3$ than the optimized line/signal in @fig:phase-measure-gradient-vertical (#text(red)[Actually mention this comparison to the vertical gradient optimization?]).
-For the DDS frequencies of the "target" phases $phi$ we selected $f_1 = #qty[406.4][MHz]$ and $f_2 = #qty[556.3][MHz]$ which are spaced by $approx #qty[150][MHz]$.
-The DDS frequencies for the "preparataion" phase/configuration is lower by #qty[75][MHz] in both cases.
-During the measurement we alternated between $f_1$ and $f_2$ every sequence to eliminate slow drifts of the superlattice phase $phi$.
-The absolute frequency differences between successive sequences/measurements are shown in @fig:phase-measure-resolve-period and the resulting superlattice period is
+As the initial configuration of the phase measurement according to @fig:phase-measure-sequence, we select the phases $phi = -pi slash 4$ and $phi = pi slash 4$, before initializing the oscillations at the phases $phi = 0$ and $phi = pi slash 2$ respectively.
+The two superlattice configurations are illustrated in @fig:phase-measure-period #tr[and...?].
+For the measurement of the #tr[mean] superlattice phase, we apply a small horizontal gradient component where the phase is encoded in the position of the minimum in the atomic density (see @fig:phase-measure-gradient-vertical).
+With the horizontal component of #qty[0.060(6)][MHz/μm], the positions of the minima move across the entire atom cloud to make the measurement as sensitive as possible to the phase.
+This technique allows us to alternate between the two configurations every sequence, which makes the measurement insensitive to #tr[long-term (or really just any?)] drifts.
+The distribution of the frequency differences of consecutive sequences in #subref(<fig:phase-measure-period>, "a") yields the frequency period
 
 $
-  Delta f_"DDS" = #qty[149.79(18)][MHz]
-$ <eq:phase-measure-resolve-period>
+  Delta f = #qty[149.79(18)][MHz]
+$ <eq:phase-measure-period>
 
-where the error denotes the standard deviation.
-From the period $Delta f_"DDS"$ and the corresponding phase $Delta phi = pi slash 2$ we can now compute the conversion factor between the DDS frequencies and the superlattice phases as
-$
-  alpha = #qty[10.487(13)][mrad/MHz] thin .
-$ <eq:phase-measure-resolve-period-conversion>
-
-During the measurement the position of the line/signal varied in/across a range of #qty[25][px], allowing us to neglect changes to the position of the atom cloud/imaging.
-
+which is only slightly lower than the expected value based on the estimated optical path length.
+We can now use $Delta f$ to convert any frequency in #unit[MHz] to a phase in #unit[mrad], which is the physical superlattice parameter and allows a comparison to other experimental setups.
+The uncertainty shows the standard deviation, which is also a measure of the sequence-to-sequence phase stability.
+In #tr[ref the (sub)section], we are going to study the long-term phase stability with the same measurement technique.

@@ -250,7 +250,7 @@ With the phase correction based on the temperature, the pressure and the relativ
 The (same) correction is automatically applied in any sequence involving the superlattice.
 We can therefore "transfer" the stability of the phase, once characterized, to other measurements.
 To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-detect with a finite horizontal gradient.
-The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @ssec:phase-measure-gradient and @sssec:phase-measure-resolve-period #text(red)[ref a figure instead?].
+The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @ssec:phase-measure-gradient and @ssec:phase-measure-period #text(red)[ref a figure instead?].
 The horizontal gradient is (again) set to the smallest possible value where the phase-sensitive signal remains within the atom cloud during the measurement.
 During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.
 
@@ -279,7 +279,7 @@ The atom images are evaluated individually to extract the position $y_0$ of the 
 The phase shown in @fig:phase-sensors-stability is then $phi = k_1 dot y_0$.
 We can see in the upper axes that the measured phase does not show any long-term/slow drifts/changes.
 There are only short-term changes visible with a peak-to-peak amplitude of #qty[5][mrad].
-The contributions to the phase correction are converted from #unit[MHz] to #unit[mrad] using the factor @eq:phase-measure-resolve-period-conversion.
+The contributions to the phase correction are converted from #unit[MHz] to #unit[mrad] using the factor @eq:phase-measure-period.
 The orange data points (in the upper axes) show the expected phase without the phase correction where we can see significant drifts of $>#qty[30][mrad]$.
 These data points are computed by adding the sum of the environmental correction to the measured phases.
 (Actually) Running a measurement without the phase correction is not practical since we would need (to apply) a much stronger horizontal gradient to keep the phase-sensitive signal within the atom cloud.

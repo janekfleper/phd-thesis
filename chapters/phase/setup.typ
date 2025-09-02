@@ -33,7 +33,7 @@ We are therefore only changing the #x1064\-lattice phase to modify the superlatt
 If the #x532\-lattice phase is constant, we can directly use @eq:phase-setup-delta-phi to describe changes of the superlattice phase.
 With $L approx #qty[50][cm]$, the frequency difference corresponding to the phase $Delta phi = pi slash 2$ is $Delta nu approx #qty[150][MHz]$.
 While the formal superlattice period according to @eq:theory-super-potential is $Delta phi = pi$, the band structure already repeats itself every $Delta phi = pi slash 2$.
-#tr[Add some "transition" to the reference of the measurement?] The measurement of the superlattice period is discussed in detail in #tr[@sssec:phase-measure-resolve-period].
+#tr[Add some "transition" to the reference of the measurement?] The measurement of the superlattice period is discussed in detail in #tr[@ssec:phase-measure-period].
 
 #floating-figure(
   control-diagram(),
