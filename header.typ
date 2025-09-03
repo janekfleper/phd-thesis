@@ -8,6 +8,10 @@
   ref(label)
 }
 
+// some custom fancy-units functions
+#let deg(..args, body) = $#num(..args, body)degree$
+#let degC(..args, body) = $#num(..args, body)degree "C"$
+
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
@@ -123,6 +127,17 @@
 #let fdds = $f_"DDS"$
 #let faom = $f_"AOM"$
 #let fbeat = $f_"beat"$
+
+// superlattice stability parameters
+#let RH = $R H$
+#let xco2 = $x_"C"$
+#let phix1064 = $phi_x1064$
+#let phix532 = $phi_x532$
+#let nx1064 = $n_x1064$
+#let nx532 = $n_x532$
+#let kx1064 = $k_x1064$
+#let kx532 = $k_x532$
+#let kpump = $k_"pump"$
 
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body

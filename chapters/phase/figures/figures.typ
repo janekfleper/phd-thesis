@@ -114,3 +114,33 @@
 
 #set page(width: 20cm, height: auto, margin: 0.9em)
 #figure(block(stroke: none, control-diagram(debug: 0)))
+
+#let table-thermal-properties = table(
+  columns: 6,
+  stroke: none,
+  table.header([], [Air], [Lens 1], [Lens 2], [Air], [Glass cell]),
+  table.hline(y: 1),
+  table.vline(x: 1),
+  [$d slash#unit[mm]$], $250$, $9.0$, $3.7$, $230$, $4.0$,
+  $phy.pdv(Delta n_sigma, T) med slash med #qty[1e-8][1/K]$, $1.3$, $-27.4$, $-94.2$, $1.3$, $-61.8$,
+  $phy.pdv(phi, T) med slash #unit[mrad/K]$, $19.2$, $-14.5$, $-20.6$, $17.7$, $-14.6$,
+)
+
+#pagebreak()
+#figure(table-thermal-properties)
+
+#let table-other-properties = table(
+  columns: 4,
+  stroke: none,
+  table.header([], "Pressure", "Relative humidity", [#tr[CO2] concentration]),
+  table.hline(y: 1),
+  table.vline(x: 1),
+  $phy.pdv(phi, xi)$,
+  qty(per-mode: "fraction")[-11.1][mrad/hPa],
+  qty(per-mode: "fraction")[-0.92][mrad/%],
+  qty(per-mode: "fraction")[-5.9][μrad/ppm],
+  // $#num[-0.59] #h(0.2em) #unit[mrad] / #qty[100][ppm]$,
+)
+
+#pagebreak()
+#figure(table-other-properties)
