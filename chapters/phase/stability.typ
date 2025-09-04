@@ -12,6 +12,8 @@
   - Find a cleaner expression for @eq:phase-sensors-phi.
   - Where should the glasses for the lens be mentioned first?
   - Immediately mention the CO2 concentration? Or just in the "limitations"?
+  - Mention the mu-metal anywhere before the @ssec:phase-sensors-measure?
+  - Mention the shielding of the entire retro path?
 ]
 
 The setup introduced in @sec:phase-setup allows us to control/stabilize the superlattice phase on short time scales from #qty[1][μs] to #qty[1][s].
@@ -31,6 +33,7 @@ Being able to predict the superlattice phase $phi$ without the atoms is therefor
   - Where is the mu-metal mentioned first?
   - Already tease the sensors before the subsection?
   - Where to mention the _absolute_ phase changes again? In the next subsection?
+  - Use "outer" and "inner" to refer to the air segments?
 ]
 
 In @eq:phase-setup-delta-phi we assume a constant path length $d$ to control the superlattice phase.
@@ -44,7 +47,7 @@ The wall of the glass cell #tr[itself] is #qty[4][mm] thick, and the atoms are p
 While all segments contribute to the accumulated optical phases of the individual lattices, the segment inside the glass cell is in #tr[a] ultra-high vacuum and can be neglected for the stability of the superlattice phase.
 The other five segments each contribute to the drift of the superlattice phase $phi$.
 For the glass cell and the retro lens, the refractive indices are only sensitive to the temperature $T$.
-In the two air segments, we additionally take the ambient pressure $P$, the relative humidity #RH and the #text(red)[CO2] concentration #xco2 into account.
+In the two air segments, we additionally take the ambient pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2 into account.
 
 With the phase convention chosen in @eq:theory-super-potential, we can express the superlattice phase $phi$ as a function of the phases #phix1064 and #phix532 that both depend on the optical path.
 To take the different wavelengths of the individual lattices into account, we divide the phase #phix532 by $2$ and compute the superlattice phase
@@ -77,7 +80,7 @@ If we compute the sum of all segments, the total temperature coefficient is $phy
 However, the changes of the temperature $T$ are not uniform in all segments.
 In the first air segment between the retro mirror and the retro lens, the peak-to-peak temperature variation is typically #degC[0.2] in one hour.
 Additionally, long-term drifts of the mean temperature over a few days range between #degC[0.1] and #degC[0.2].
-For the two segments in the retro lens, the peak-to-peak temperature stability is better than #degC[0.02], while long-term drifts can also go up to #degC[0.2].
+For the two segments in the retro lens, the peak-to-peak temperature stability is better than #degC[0.02] #tr[(mention limitation by the readout of the RTD?)], while long-term drifts can also go up to #degC[0.2].
 We can therefore expect the superlattice phase to change by #qty[20][mrad] to #qty[30][mrad] due to the first air segment and the retro lens.
 In the second air segment, we can observe peak-to-peak temperature changes up to $Delta T = #degC[2]$ within one experimental sequence.
 Due to the proximity of the lattice beams to the magnetic field coils, the optical path in the second air segment is subject to the thermal cycle of the coils.
@@ -106,14 +109,16 @@ The limitation of the #tr[temperature cycle of the] magnetic field coils on the 
       - Mention the materials in an additional row?
       - Add references directly to the material names? Ciddor for air, Corning for CaF2, Schott for N-BALF4 and glass cell datasheet for UVFS.
       - Use $degree "C"$ as the unit for the temperature coefficients?
+      - Check the correct order of the individual lenses in the achromatic doublet (see @fig:phase-sensors-measure-setup)
+      - Mention the wavelengths again?
     ]
   ],
   label: <tab:phase-sensors-temperature-coefficients>,
 )
 
-Besides the temperature, the accumulated phase in the air segments is also sensitive to the pressure $P$, the relative humidity #RH and the #tr[CO2] concentration #xco2.
+Besides the temperature, the accumulated phase in the air segments is also sensitive to the pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2.
 Since these properties do not affect the #tr[geometrical] distances $d_sigma$, the first term in @eq:phase-sensors-phi-derivative vanishes and we only have to take the derivative of $Delta n$ into account.
-Compared to the temperature, we can also combine the two air segments into a single one since we do not expect any spatial changes of the pressure, the relative humidity or the #tr[CO2] concentration along the optical path.
+Compared to the temperature, we can also combine the two air segments into a single one since we do not expect any spatial changes of the pressure, the relative humidity or the #CO2 concentration along the optical path.
 #tr[mention the simplicity of the sensor measurement and phase correction later...]
 The resulting coefficients for the total length of the air segments are listed in @tab:phase-sensors-other-coefficients.
 For the pressure in the laboratory, we have observed values from #qty[950][hPa] to #qty[1030][hPa] so far.
@@ -122,10 +127,11 @@ The relative humidity is capped at approximately #qty[50][%] by the dehumidifica
 If the air outside of the building is dry, the relative humidity inside the laboratory can be as low as #qty[10][%].
 Within #qty[24][h], we usually observe changes of the relative humidity by #qty[1][%] up to #qty[15][%].
 While the phase coefficient is small compared to the pressure, it is still relevant for the long-term stability of the superlattice phase.
-The phase coefficient of the #tr[CO2] concentration is very small compared to the other two coefficients.
-When the fresh air supply is working and no human is present in the laboratory, the #tr[CO2] concentration usually varies by less than #qty[20][ppm] in #qty[24][h].
-For the superlattice phase this would amount to a drift of approximately #qty[0.1][mrad], which is far below the expected drifts due to the other two environmental parameters.
-We can therefore ignore the #tr[CO2] concentration for the stability of the superlattice phase unless we reach the sub #unit[mrad] regime.
+The phase coefficient of the #CO2 concentration is very small compared to the other two coefficients.
+When the fresh air supply is working and no human is present in the laboratory, the #CO2 concentration is constant within the specified repeatability of the sensor.
+We can therefore limit the variation of the #CO2 concentration to $Delta xCO2 <#qty[20][ppm]$.
+For the superlattice phase this would amount to a maximal drift of #qty[0.1][mrad], which is far below the expected drifts due to the other two environmental parameters.
+We can therefore ignore the #CO2 concentration for the stability of the superlattice phase, unless we reach the sub #unit[mrad] regime.
 
 #floating-figure(
   {
@@ -134,100 +140,101 @@ We can therefore ignore the #tr[CO2] concentration for the stability of the supe
   },
   caption: [
     Environmental coefficients of the air in the retro path.
-    The coefficients are computed with the Ciddor equation #tr[ref ciddor] at the reference values $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$, $RH_0 = #qty[40][%]$ and $xco2 = #qty[450][ppm]$ for a total air distance of #qty[46.6][cm].
+    The coefficients are computed with the Ciddor equation #tr[ref ciddor] at the reference values $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$, $RH_0 = #qty[40][%]$ and $xCO2 = #qty[450][ppm]$ for a total air distance of #qty[46.6][cm].
 
     #notes[
       - Join this table with @tab:phase-sensors-temperature-coefficients?
       - Anything else to add to the caption?
       - Really put the #tr[CO2] coefficient in #unit[ppm] instead of #qty[100][ppm]?
+      - Mention the wavelengths again?
     ]
   ],
   label: <tab:phase-sensors-other-coefficients>,
 )
 
 
-=== Measuring the environmental parameters <ssec:phase-sensors-measure>
+=== Measurement of the environmental parameters <ssec:phase-sensors-measure>
 
-#[
-  #set text(red)
-  - Write environmental properties or parameters?
+#notes[
   - More details on the self-heating of the integrated temperature sensors?
   - Already mention "inside" and "outside" segment earlier?
   - Where to mention when the phase correction is actually applied?
-  - Mention the fudge factor here!
+  - Call it four-wire or 4-wire?
 ]
 
-To (actually) apply the environmental correction of the superlattice phase $phi$ compiled in @tab:phase-sensors-temperature-coefficients and @tab:phase-sensors-other-coefficients we need to set up the corresponding sensors in the retro-reflecting path.
-For the measurement of the temperature we would like to have (at least) one sensor for each air segment and one sensor that measures the (combined) lens temperature.
-If we had (physical) access to the glass cell, we would have also liked to attach a temperature sensor (to it?).
-As already discussed in @ssec:phase-sensors-coefficients this is however not possible.
-The measurement of the other/remaining environmental parameters is simpler as we have to take neither the glasses nor a spatial resolution into account.
-We can therefore place those sensors somewhere convenient near the retro-reflecting path.
+#tr[Already explain the general strategy somewhere else?]
+The strategy for the stabilization of the superlattice phase $phi$ is a correction of the DDS frequency in @fig:phase-setup based on the environmental parameters in the retro path.
+If we can predict the drifts of the superlattice phase, we can achieve a stable superlattice without relying on #tr[repeated/regular] phase measurements with the atoms.
+For the measurement of the environmental parameters, we use a selection of sensors near the optical path of the lattice beams as shown in @fig:phase-sensors-measure-setup.
+The temperature sensors #tr[fully] cover the air segment between the retro lens and the retro mirror, as well as the two segments in the retro lens.
+For the other air segment, we can only measure the temperature close to the Ioffe bars just inside the mu-metal shielding.
+Placing a temperature sensor further towards the atom position was not possible due to a lack of physical access, which also prevented us from attaching a surface-temperature sensor to the glass cell.
+The other environmental sensors are simply placed close to the retro path since we do not expect a spatial variation of the pressure, the relative humidity or the #CO2 concentration.
 
-There are many (cheap) integrated environmental sensors available that can be directly connected to a Raspberry Pi or an Arduino micro controller with I2C or SPI.
-Some of those sensors only measure the temperature, others can measure the temperature, the pressure and the relative humidity in/on a single chip/device.
-Pressure sensors and relative humidity sensors always include a temperature sensor for an internal calibration (#text(red)[really mention this?]).
-These integrated sensors usually have a good resolution but not necessarily a good absolute accuracy.
-For our use case this is however not an issue since we are only interested in the relative changes of the environmental parameters/properties.
-If the temperature measurement is always off by $#num[1]degree"C"$, it does not affect the correction of the superlattice phase.
-The same is/holds true for the other environmental parameters.
-For the temperature we nevertheless decided against using integrated sensors since the measured temperature can be affected by the measurement (action) itself.
-If we measured the temperature repeatedly during/for a few seconds, we could (always) see an increase of the temperature/measurement result#footnote(text(red)[Bosch BMP280 and BME280]).
-This is most likely caused by the electrical power required for/used during the measurement heating up the PCB and therefore also the sensor (area/volume).
-Furthermore these integrated sensors are not designed for the measurement we need for the lens temperature.
-We therefore opted for (passive) resistance-based temperature sensors.
-They/those require an additional device for the readout but they offer a better/higher resolution, can be operated without "self-heating" and are (directly) available for surface/material measurements.
-A good absolute accuracy would require a calibration of these resistance-based temperature sensors.
-As mentioned earlier, this is not significant for the phase correction.
-
-The environmental sensors we built into the retro-path of the x-superlattice are shown in @fig:phase-sensors-measure-setup.
-There are multiple temperature sensors to resolve the spatial variation of the air temperature and a separate sensor to measure the temperature of the lens mount.
-For the air temperature sensors we used _negative-temperature-coefficient_ (NTC) thermistors since they are much more sensitive than _resistance temperature detectors_ (RTDs) #text(red)[ref any whitepaper here? or just give a number/order of magnitude?].
-The temperature sensors indicated by the circles are precision epoxy NTC thermistors#footnote(text(red)[TE Connectivity 44001A]) with a resistance of #qty[100][#sym.Omega] at $#num[25]degree"C"$.
-This resistance is common for platinum RTDs and allowed us to share a high-resolution data logger#footnote(text(red)[Pico Technology PT-104]) with the lens-temperature sensor.
-We used the four-wire resistance measurement for the three NTC thermistors and computed the temperature using the parameters $R_0 = #qty[100][#sym.Omega]$, $beta = #qty[2854][K]$ and $T_0 = #qty[298.15][K]$ #text(red)[ref anything for this beta-equation?].
-The lens-temperature sensor is a platinum RTD#footnote(text(red)[Omega SA1-RTD-4W]) with a resistance of $R_0 = #qty[100][#sym.Omega]$ at $#num[25]degree"C"$.
-This sensor is also connected to the data logger in a four-wire configuration and the temperature is computed internally by the data logger.
-The data logger has a conversion time of #qty[720][ms] per channel, resulting in one measurement every #qty[3][s] for each sensor.
-With a sensing current of #qty[300][μA] #text(red)[ref the communication with the engineer] self-heating of the NTC thermistors and the platinum RTD are negligible #text(red)[ref any whitepaper?].
-The two (circle marker) air-temperature sensors outside of the mu-metal and the lens-temperature sensor are used for the regular phase correction with the coefficients computed/shown in @tab:phase-sensors-temperature-coefficients.
-The (circle) air-temperature sensor inside the mu-metal is discussed again in #text(red)[ref "limitations" subsections] in the context of the limitations of the phase correction.
-
-#text(red)[Mention $beta$ etc...?]
-The temperature sensors indicated by the squares are glass-coated NTC thermistors#footnote(text(red)[Amphenol Advanced Sensors NTC Type FP07]) with an ultra-fast response time of #qty[0.1][s] in still air.
-They have a resistance of #qty[8][k:#sym.Omega] at $#num[25]degree"C"$ and require a (very) low test current to avoid self-heating.
-We are therefore using bench digital multimeters#footnote(text(red)[Keysight 34465A Digital Multimeter]) that also allow a fast readout compared to typical (temperature) data loggers.
-In the low-power mode with a measurement range of #qty[10][k:#sym.Omega] the test current is #qty[10][μA] #text(red)[ref the data sheet here?].
-The dissipated power in the NTC thermistors is $<#qty[1][μW]$ which results in is negligible self-heating given the dissipation constant of #qty[50][μW/(#sym.degree:C)] in (still) air.
-The (typical) temperature traces measured with these NTC thermistors during the experimental sequence are shown in #text(red)[ref "limitations" section, or a figure?].
-We could not see a possible improvement of the phase correction with the temperature data from these sensors #text(red)[actually mention this here?].
-
-The two remaining sensors in @fig:phase-sensors-measure-setup are integrated sensors that are connected to an Arduino micro controller.
-The first sensor measures the pressure#footnote(text(red)[Bosch BMP390]) and is configured at/to the highest resolution, resulting in one measurement every #qty[300][ms].
-The second sensor measures the relative humidity and the #text(red)[CO2] concentration#footnote(text(red)[Sensirion SCD30]) once every #qty[2][s].
-The pressure measurement is used for the phase correction with the coefficient computed/shown in @tab:phase-sensors-other-coefficients.
-For the relative humidity we have to multiply the coefficient @tab:phase-sensors-other-coefficients by a factor of #num[2.5] to get the best phase correction #text(red)[mention this here or in the next subsection?].
-This issue is not related to the sensor itself as we found the same factor with another sensor#footnote(text(red)[Bosch BME280]).
-A possible explanation of/for this factor is/are a (weak) absorption lines of #text(red)[H2O] around/near the wavelength $lambda = #qty[1064.5][nm]$ of the infrared lattice #text(red)[ref ciddor].
-The equation/theory covers/interpolates the refractive index (at least) from #qty[350][nm] to #qty[1300][nm] but does not take (specific) water absorption lines into account.
-
-#figure(
+#floating-figure(
   image("figures/phase-sensors-setup.png"),
   caption: [
-    Layout of the environmental sensors in the retro-reflecting path.
-    There are two temperature sensors (just) inside the mu-metal to the "inside" temperature near the Ioffe bars.
-    Placing a temperature sensors deeper inside the mu-metal is (unfortunately) not possible.
-    There are three other/more air temperature sensors spread in the "outside" segment.
-    For the lens temperature we are using a surface sensor that is attached to the mount of the lens.
+    Layout of the environmental sensors in the retro path.
+    Two air-temperature sensors are located inside the #tr[mu-metal] shielding close to the Ioffe bars, while two more air-temperature sensors are distributed between the retro lens and the retro mirror.
+    #tr[A/One] surface-temperature sensor is attached to the lens mount to measure the temperature of the retro lens #tr[components].
+    Close to the retro path, two environmental sensors are used to measure the pressure, the relative humidity and the #CO2 concentration.
 
-    #show list: set text(red)
-    - Add coordinate system (in upper left corner?)
-    - Add the legend in lower left corner.
-    - Extend the mu-metal shielding (and indicate a "cut" for the sketch?)
-    - Find better names for the different sensor types/models.
-    - Figure out the different markers for the temperature sensors...
+    #notes[
+      - Add coordinate system (in upper left corner?)
+      - Add the legend in lower left corner. Mention all the sensor types here?
+      - Extend the mu-metal shielding (and indicate a "cut" for the sketch?)
+      - Find better names for the different sensor types/models.
+      - Figure out the different markers for the temperature sensors...
+      - Skip the other FT07 sensor outside of the mu-metal...
+    ]
   ],
-) <fig:phase-sensors-measure-setup>
+  label: <fig:phase-sensors-measure-setup>,
+)
+
+For all environmental parameters required for the phase stabilization, digital sensors are available that use $"I"^2"C"$ or SPI to communicate with a single-board computer or a microcontroller.
+While such a setup allows a simple measurement of the environmental parameters, we found some drawbacks when using these types of sensors.
+When we wanted to measure the temperature with a digital sensor, the reading always increased during the first few seconds of repeated measurements#footnote[
+  We observed this behavior when using the sensors Bosch BMP280 and Bosch BME280.
+].
+We intrepreted this as a slight heating of the sensor by the electical power dissipation during the measurement process.
+Since the temperature change was significant compared to the actual temperature changes in the retro path, we decided to use resistance-based temperature sensors instead.
+For the other environmental parameters we use digital sensors, and we could not observe any systematic drifts caused by repeated measurements.
+The first digital sensor#footnote[
+  Bosch BMP390 #tr[add a reference to the data sheet here?]
+] measures the pressure every #qty[300][ms] with a specified relative accuracy of $plus.minus #qty[0.03][hPa]$, which corresponds to $plus.minus #qty[0.33][mrad]$ in terms of the superlattice phase.
+With the second digital sensor#footnote[
+  Sensirion SCD30 #tr[add a reference to the data sheet here?]
+], we measure both the relative humidity as well as the #CO2 concentration every #qty[2][s].
+The repeatability of the sensor readings are specified as $plus.minus #qty[0.1][%]$ and $plus.minus #qty[10][ppm]$ respectively, which is #tr[more than] sufficient for the corresponding changes of the superlattice phase.
+For the both digital sensors the absolute accuracy specifications are significantly worse than the relative accuracys.
+This is however not an issue for the stabilization of the superlattice phase since the environmental coefficients in @tab:phase-sensors-other-coefficients are constant in the parameter ranges that occur in the laboratory.
+
+The temperature sensors we use are passive elements and require additional devices to actually measure their resistance $R(T)$.
+While this increases the complexity of the experimental setup, it allows us to optimize the measurement properties to avoid #tr[a] self-heating of the sensors #tr[ref anything?].
+As the air-temperature sensors, we use negative temperature coefficient (NTC) thermistors that offer the best temperature sensitivity of #tr[find out the coefficient] all passive resistance-based sensors.
+The temperature sensors indicated by the circles in @fig:phase-sensors-measure-setup are precision epoxy NTC thermistors#footnote[
+  TE Connectivity 44001A #tr[data sheet?]
+] with a resistance of #qty[100][#sym.Omega] at #degC[25].
+For the temperature measurement of the #tr[retro] lens mount, we use a platinum resistance temperature detector#footnote[
+  Omega SA1-RTD-4W #tr[data sheet]
+] (RTD) with a resistance of $R_0 = #qty[100][#sym.Omega]$ at #degC[0].
+Using the same reference value for the resistance of all four sensors allows us to use a single data logger#footnote[
+  Pico Technology PT-104 #tr[data sheet?]
+] designed for the high-accuracy readout of platinum RTDs with #tr[four-wire] sensing.
+For the connected NTCs, we configure the data logger to measure the resistance $R$ which we can convert to a temperature after the readout.
+The specified #tr[RMS] noise of the data logger is #degC[0.01] for the direct temperature measurement with an RTD and #degC[0.001] for the temperature computed from the resistance measurement #tr[of/with] the NTCs.
+This level of accuracy requires a readout time of #qty[720][ms] per channel, resulting in a measurement period of approximately #qty[3][s] for each sensor.
+While a higher data rate would seem beneficial for the air-temperature sensors, it would not actually improve the temperature measurement since the time response in air is specified as $<#qty[10][s]$.
+Fast changes of the temperature can therefore not be captured by the #qty[100][#sym.Omega] NTCs we built into the retro path.
+To improve the time resolution of the air-temperature measurement, we also tried glass-coated NTC thermistors#footnote[
+  Amphenol Advanced Sensors FP07 #tr[data sheet?]
+] with a resistance of #qty[8][k:#sym.Omega] and a specified response time of #qty[0.1][s] in still air.
+For the four-wire resistance measurement of the fast NTCs, we use bench digital multimeters#footnote[
+  Keysight 34465A #tr[data sheet?]
+] in the low-power readout mode to avoid #tr[the] self-heating of the NTCs.
+With a readout time of #qty[20][ms], the specified RMS noise of the multimeter is approximately #qty[1][#sym.Omega], which amounts to a temperature uncertainy of less than #degC[0.003].
+#tr[Check the actual noise level here again!]
+The typical reading of the fast NTC during #tr[an/the] experimental sequence at location #tr[A] in @fig:phase-sensors-measure-setup is shown in #tr[ref limitation subsection/figure...].
 
 
 === Phase stability <ssec:phase-sensors-stability>
@@ -242,6 +249,7 @@ The equation/theory covers/interpolates the refractive index (at least) from #qt
   - Find all reported stabilities in bichromatic superlattices.
   - Where to mention that we do not have any really short-term resolution?
   - Add a separate subsection for the limitation? For all the refs from earlier...
+  - Mention the relative humidity fudge factor here!
 ]
 
 With the phase correction based on the temperature, the pressure and the relative humidity as introduced in @ssec:phase-sensors-measure we can test the resulting stability of the superlattice phase $phi$.

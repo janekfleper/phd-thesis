@@ -132,7 +132,7 @@
 #let table-other-properties = table(
   columns: 4,
   stroke: none,
-  table.header([], "Pressure", "Relative humidity", [#tr[CO2] concentration]),
+  table.header([], "Pressure", "Relative humidity", [#CO2 concentration]),
   table.hline(y: 1),
   table.vline(x: 1),
   $phy.pdv(phi, xi)$,
