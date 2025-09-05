@@ -237,10 +237,9 @@ With a readout time of #qty[20][ms], the specified RMS noise of the multimeter i
 The typical reading of the fast NTC during #tr[an/the] experimental sequence at location #tr[A] in @fig:phase-sensors-measure-setup is shown in #tr[ref limitation subsection/figure...].
 
 
-=== Phase stability <ssec:phase-sensors-stability>
+=== Characterization of the phase stability <ssec:phase-sensors-stability>
 
-#[
-  #set text(red)
+#notes[
   - Where to mention how/when the phase correction is applied?
   - Mention the feed-forward as a function of the time?
   - Measure the standard deviation of the atom cloud position?
@@ -250,35 +249,58 @@ The typical reading of the fast NTC during #tr[an/the] experimental sequence at 
   - Where to mention that we do not have any really short-term resolution?
   - Add a separate subsection for the limitation? For all the refs from earlier...
   - Mention the relative humidity fudge factor here!
+  - Explain how the environmental coefficients are used to compute the frequency correction?
 ]
 
-With the phase correction based on the temperature, the pressure and the relative humidity as introduced in @ssec:phase-sensors-measure we can test the resulting stability of the superlattice phase $phi$.
-The (same) correction is automatically applied in any sequence involving the superlattice.
-We can therefore "transfer" the stability of the phase, once characterized, to other measurements.
-To measure the long-term stability of the superlattice phase we are using the in-situ measurement technique introduced in @ssec:phase-measure-detect with a finite horizontal gradient.
-The symmetric phase $phi = 0$ is then encoded in the position of the phase-sensitive signal, as already shown in @ssec:phase-measure-gradient and @ssec:phase-measure-period #text(red)[ref a figure instead?].
-The horizontal gradient is (again) set to the smallest possible value where the phase-sensitive signal remains within the atom cloud during the measurement.
-During/in the calibration of the gradient we measured the strength $k_1 = #qty[0.344(13)][mrad/px]$ which will be used to translate the signal positions to the respective phases.
+Based on the readings of the environmental sensors introduced in @ssec:phase-sensors-measure, we apply a correction to the DDS frequency to stabilize the superlattice phase.
+The digital sensors and the data logger for the temperature sensors run continuously at the specified readout rates without a synchronization to the experimental sequence.
+The server that controls the superlattice phase then applies the frequency correction approximately #qty[5][s] before the atoms are loaded into the optical lattices in the experimental sequence (see @fig:setup-sequence).
+For each sensor, the mean value of the previous #qty[15][s] is used to reduce the impact of noisy readings.
+We are therefore only targeting long-term drifts with the frequency correction.
+While the fast NTC thermistor#tr[s] can resolve temperature changes during the experimental sequence, we could not find any further improvement of the phase stability in the sensor data (see @fig:phase-sensors-stability-limitation).
+From the temperature segments listed in @tab:phase-sensors-temperature-coefficients, we only take the outer air segment and the two segments of the retro lens into account.
+For the outer air segment, we use the mean temperature reading of the NTC thermistors #tr[A] and #tr[B] in @fig:phase-sensors-measure-setup.
+The surface temperature measured by the RTD is used for the two composite #tr[elements/lenses] of the retro lens.
+In the inner air segment, the #qty[100][#sym.Omega] NTC thermistor measures a variation of up to #degC[2] during the experimental sequence (see @fig:phase-sensors-stability-limitation).
+If we would consider this temperature for the entire inner air segment, the corresponding frequency correction significantly exceeds the drifts we can observe for the zero-phase frequency $f_0$.
+Since we can not measure the actual temperature $T(x)$ along the optical path, it does not make sense to use the measured temperature at a single location for the frequency correction.
+For the glass cell, we are not applying a frequency correction either, as we were not able to install a sensor that measures the glass temperature.
+While the glass cell is subject to a similar temperature cycle as the inner air segment, the actual temperature changes in the glass will be delayed compared to the measured air temperature.
+The frequency correction based on the ambient pressure is applied exactly with the environmental coefficient in @tab:phase-sensors-other-coefficients, while we use a fudge factor of $2.5$ for the frequency correction due to the relative humidity.
+We found this fudge factor consistently across several long-term measurements of the phase stability using different humidity sensors.
+While the Ciddor equation of the refractive index of air is valid for wavelengths in the range from below #qty[350][nm] to above #qty[1300][nm], it does not take absorption lines of water in the infrared regime into account #tr[cite ciddor].
+This could affect the refractive index at the wavelength #qty[1064][nm] and change the environmental coefficient of the relative humidity.
+The other environmental parameters would not be affected by this since they are not related to the water vapor in the air.
+For the #CO2 concentration, we do not apply a frequency correction at all since the expected changes are not relevant for the phase stability we can currently achieve.
 
-#figure(
-  image("figures/2025-05-19_symmetry_point_thesis_result.png", width: 70%),
+To quantify the stability of the superlattice phase with the applied frequency correction, we use the phase-sensitive measurement shown in @fig:phase-measure-detect-result with a horizontal gradient component.
+Just like for the measurement of the superlattice period in @ssec:phase-measure-period, we can use this technique measure the mean zero-phase frequency $f_0$ in every sequence.
+We use a small gradient component of #qty[0.615(24)][mrad/μm] to achieve a high sensitivity of the local minimum in the atom density to the superlattice phase.
+An even smaller gradient component would be problematic because the zero-phase frequency could be located #tr[away from/outside of] the atom cloud.
+If we had to exclude all measurements with the maximal phase fluctuations, we would wrongfully improve the measured stability.
+On the other hand, a large gradient component would #tr[restrict/keep] the local minimum close to the center of the atom cloud.
+This would however make the measurement sensitive to fluctuations of the position of the atom cloud, which are typically smaller than #qty[1][μm] between sequences.
+
+#floating-figure(
+  image("figures/phase_stability_result.png"),
   caption: [
-    Stability of the superlattice phase with the environmental correction.
-    The upper axes shows a comparison of the (actually) measured phase (blue) to the expected phase (orange) without the phase correction.
-    In the lower axes the individual contributions of/to the phase correction are shown.
-    The data is/are normalized to start at #qty[0][mrad].
+    Long-term stability of the superlattice phase.
+    *a*, Shot-to-shot fluctuations of the superlattice phase with the environmental corrections (blue).
+    Without the corrections the superlattice phase would have drifted by more than #qty[30][mrad] (red).
+    The insets show the local minimum in the atomic density that is used to determine the phase.
+    *b*, Environmental corrections computed from the sensor readings.
+    While the corrections due to the air temperature and the lens temperature are smaller than #qty[2][mrad], the pressure and the (relative) humidity required corrections by more than #qty[15][mrad].
+    The sensor corrections are shifted to start at #qty[0][mrad].
 
-    #show list: set text(red)
-    - Anything else to add to this caption?
-    - Normalize the second trace in the upper figure to start at 0?
-    - Show the total applied correction instead in the upper figure?
-    - Figure out the correct signs for the phase correction.
-    - Add the CO2 concentration here?
-    - Use different offsets in the lower axes to avoid overlapping data?
-    - Show two atom images as insets?
-    - Comment that the "noise" on the sensors is much smaller than the "noise" on the phase data?
+    #notes[
+      - Anything else to add to this caption?
+      - Normalize the second trace in the upper figure to start at 0?
+      - Show two atom images as insets? Use different images that look "better"?
+      - Comment that the "noise" on the sensors is much smaller than the "noise" on the phase data?
+    ]
   ],
-) <fig:phase-sensors-stability>
+  label: <fig:phase-sensors-stability>,
+)
 
 For the (actual) measurement of the phase stability we repeat the same sequence for an entire night, resulting in around #num[1000] data points.
 The atom images are evaluated individually to extract the position $y_0$ of the phase-sensitive signal.
