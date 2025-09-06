@@ -19,7 +19,7 @@
   let states = (
     (name: <S12>, position: (0, 0), label: $sn(S, 1/2)$),
     // (name: <P12>, position: (0, -2), label: $sn(P, 1/2)$),
-    (name: <P32>, position: (0, -3), label: $sn(P, 3/2)$),
+    (name: <P32>, position: (0, -2.5), label: $sn(P, 3/2)$),
   )
 
   // define the hyperfine-structure states
@@ -36,9 +36,9 @@
 
   // define scales for the hyperfine structure based on the fine-structure state
   let hyperfine-scale = (
-    S12: 0.001,
+    S12: 0.0007,
     P12: 0.006,
-    P32: 0.006,
+    P32: 0.007,
   )
 
   // this dummy edge is used to correctly draw the labels of the states
@@ -48,6 +48,7 @@
       (rel: (x, sign * 0.1), to: name),
       (rel: (x, -sign * 0.1), to: name),
       label,
+      label-pos: 42%,
       stroke: none,
     )
   }
@@ -90,25 +91,43 @@
     // ),
 
     edge(
-      (rel: (0.3 * hfs-width, 0), to: <S12-F92>),
-      (rel: (0.3 * hfs-width, 0), to: <P32-F112>),
-      [cooling],
+      (rel: (0.2 * hfs-width, 0), to: <S12-F92>),
+      (rel: (0.2 * hfs-width, 0.01), to: <P32-F112>),
+      [cooling + imaging],
       "-|>",
       label-side: left,
       label-angle: right,
       label-pos: 63%,
-      stroke: blue + 1pt,
+      stroke: blue + 0.9pt,
     ),
 
     edge(
-      (rel: (0.6 * hfs-width, 0), to: <S12-F72>),
-      (rel: (0.6 * hfs-width, 0), to: <P32-F92>),
+      (rel: (0.4 * hfs-width, 0), to: <S12-F72>),
+      (rel: (0.4 * hfs-width, 0.01), to: <P32-F92>),
       [repumping],
       "-|>",
       label-side: right,
       label-angle: right,
       label-pos: 35%,
-      stroke: blue + 1pt,
+      stroke: blue + 0.9pt,
+    ),
+
+    edge(
+      (rel: (0.8 * hfs-width, -0.01), to: <S12-F92>),
+      (rel: (0.8 * hfs-width, 0.01), to: <S12-F72>),
+      text(0.9em, qty[1285.8][MHz]),
+      "<|-|>",
+      label-side: right,
+      label-angle: top,
+    ),
+
+    edge(
+      (rel: (0.8 * hfs-width, -0.01), to: <P32-F112>),
+      (rel: (0.8 * hfs-width, 0.01), to: <P32-F92>),
+      text(0.9em, qty[44.1][MHz]),
+      "<|-|>",
+      label-side: right,
+      label-angle: top,
     ),
   )
 }
