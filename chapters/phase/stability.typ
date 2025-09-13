@@ -1,10 +1,10 @@
 #import "/header.typ": *
 #import "figures/figures.typ": table-other-properties, table-thermal-properties
 
-== Stabilization of the superlattice phase <sec:phase-sensors>
+== Stabilization of the superlattice phase <sec:phase-stability>
 
 #notes[
-  - Mention the mu-metal anywhere before the @ssec:phase-sensors-measure?
+  - Mention the mu-metal anywhere before the @ssec:phase-stability-sensors?
 ]
 
 The setup introduced in @fig:phase-setup allows us to control the superlattice phase $phi$ during an experimental sequence with the DDS frequency and the AOM frequency.
@@ -23,12 +23,12 @@ We can compare the changes of the refractive index at the wavelengths #qty[1064]
 With the automated correction, we achieve an exceptional long-term stability of the superlattice phase.
 
 
-=== Environmental sensitivity of the superlattice phase <ssec:phase-sensors-coefficients>
+=== Environmental sensitivity of the superlattice phase <ssec:phase-stability-coefficients>
 
 In @eq:phase-setup-delta-phi we assume a constant path length $d$ to control the superlattice phase.
 While this is largely true for the geometical path length between the retro mirror and the atom position, the phase depends on the optical path length that also takes the refractive index into account.
 Since the individual lattices have different wavelengths of #qty[1064][nm] and #qty[532][nm], the refractive indices are not equal.
-If we look at the experimental setup in @fig:phase-sensors-measure-setup, we can split the optical path into six different segments.
+If we look at the experimental setup in @fig:phase-stability-sensors-setup, we can split the optical path into six different segments.
 Starting from the retro mirror, the lattice beams propagate approximately #qty[240][mm] in air up to the retro lens.
 Since the retro lens is an achromatic doublet, we need two segments to take the different materials into account.
 Behind the retro lens, there is another segment of air up to the glass cell, with a length of approximately #qty[220][mm].
@@ -45,26 +45,26 @@ $
   phi & = phix1064 - 1 / 2 phix532 \
       & = (k + Delta k) dot integral_0^d phy.dd(x) nx1064 (x) - k dot integral_0^d phy.dd(x) nx532 (x) \
       & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot n_(x1064,sigma) \
-$ <eq:phase-sensors-phi>
+$ <eq:phase-stability-phi>
 
 where $k$ is the wave vector of the reference laser that pumps the second-harmonic generation cavity in @fig:phase-setup.
 The wave vector of the #x532 lattice is $kx532 = 2k$, and the wave vector of the #x1064 lattice is $kx1064 = k + Delta k$ to take the frequency detuning of the #x1064\-lattice seed laser and the additional frequency shift by the acousto-optical modulator into account.
 Each integral covers the optical path from the retro mirror to the atom position inside the glass cell.
 To further simplify the expression, we use the constant refractive index in each segment $sigma$ to rewrite the integrals as two sums.
-The first term in @eq:phase-sensors-phi computes the accumulated phase due to the difference $Delta n_sigma = nx1064 - nx532$ of the refractive indices in each segment, and the second term takes the change of the superlattice phase due to the frequency detuning of the #x1064 lattice into account.
+The first term in @eq:phase-stability-phi computes the accumulated phase due to the difference $Delta n_sigma = nx1064 - nx532$ of the refractive indices in each segment, and the second term takes the change of the superlattice phase due to the frequency detuning of the #x1064 lattice into account.
 While the second term is essential for the control of the superlattice phase according to @fig:phase-setup, it is significantly smaller than the first term and is therefore negligible for the long-term stability of the superlattice phase.
 To determine the sensitivity of the superlattice phase $phi$ to the temperature, we take the derivative
 
 $
   phy.pdv(phi, T) =
   k dot sum_sigma (phy.pdv(d_sigma, T) dot Delta n_sigma + d_sigma dot phy.pdv(Delta n_sigma, T))
-$ <eq:phase-sensors-phi-derivative>
+$ <eq:phase-stability-phi-derivative>
 
 where the first term in the sum represents the thermal expansion of the optical elements, and the second term takes the changes of the refractive indices into account.
 The first term is smaller than the second term by at least one order of magnitude in all optical materials in the retro path.
 For the air segments, the difference between the terms is even greater at three orders of magnitude.
 We can therefore neglect the first term to compute the temperature sensitivity of the superlattice phase.
-In @tab:phase-sensors-temperature-coefficients, the resulting temperature coefficients $phy.pdv(phi, T)$ are compiled for each segment.
+In @tab:phase-stability-temperature-coefficients, the resulting temperature coefficients $phy.pdv(phi, T)$ are compiled for each segment.
 If we compute the sum of all segments, the total temperature coefficient is $phy.pdv(phi, T) = #qty(per-mode: "slash")[-14.4][mrad/K]$.
 However, the changes of the temperature $T$ are not uniform in all segments.
 In the first air segment between the retro mirror and the retro lens, the peak-to-peak temperature variation is typically #degC[0.2] in one hour.
@@ -75,7 +75,7 @@ In the second air segment, we can observe peak-to-peak temperature changes up to
 Due to the proximity of the lattice beams to the magnetic field coils, the optical path in the second air segment is subject to the thermal cycle of the coils.
 Quantifying the exact temperature $T$ along the optical path is impossible since we can not measure exactly at the position of the lattice beams, and we also expect an inhomogeneous temperature distribution based on the geometry and the location of the magnetic field coils.
 For the glass cell, it was not possible for us to measure the temperature due to a lack of physical access.
-The resulting limitation for the stability of the superlattice phase is discussed in detail in @fig:phase-sensors-stability-limitation.
+The resulting limitation for the stability of the superlattice phase is discussed in detail in @fig:phase-stability-result-limitation.
 
 #floating-figure(
   {
@@ -98,13 +98,13 @@ The resulting limitation for the stability of the superlattice phase is discusse
       - Add references directly to the material names? Ciddor for air, Corning for CaF2, Schott for N-BALF4 and glass cell datasheet for UVFS.
     ]
   ],
-  label: <tab:phase-sensors-temperature-coefficients>,
+  label: <tab:phase-stability-temperature-coefficients>,
 )
 
 Besides the temperature, the accumulated phase in the air segments is also sensitive to the pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2.
-Since these properties do not affect the geometrical distances $d_sigma$, the first term in @eq:phase-sensors-phi-derivative vanishes and we only have to take the derivative of $Delta n$ into account.
+Since these properties do not affect the geometrical distances $d_sigma$, the first term in @eq:phase-stability-phi-derivative vanishes and we only have to take the derivative of $Delta n$ into account.
 Compared to the temperature, we can also combine the two air segments into a single one, since we do not expect any spatial changes of the pressure, the relative humidity or the #CO2 concentration along the optical path.
-The resulting coefficients for the total length of the air segments are listed in @tab:phase-sensors-other-coefficients.
+The resulting coefficients for the total length of the air segments are listed in @tab:phase-stability-other-coefficients.
 For the pressure in the laboratory, we have observed values from #qty[950][hPa] to #qty[1030][hPa].
 If the weather outside of the building changes rapidly, pressure variations can go up to $abs(Delta P) = #qty[20][hPa]$ in a few hours, which amounts to a drift of the superlattice phase by more than #qty[200][mrad].
 The relative humidity is capped at approximately #qty[50][%] by the dehumidification of the fresh air and the additional dehumidifiers inside the laboratory.
@@ -130,11 +130,11 @@ We can therefore ignore the #CO2 concentration for the stability of the superlat
       - Anything else to add to the caption?
     ]
   ],
-  label: <tab:phase-sensors-other-coefficients>,
+  label: <tab:phase-stability-other-coefficients>,
 )
 
 
-=== Measurement of the environmental parameters <ssec:phase-sensors-measure>
+=== Measurement of the environmental parameters <ssec:phase-stability-sensors>
 
 #notes[
   - Already mention "inside" and "outside" segment earlier?
@@ -143,7 +143,7 @@ We can therefore ignore the #CO2 concentration for the stability of the superlat
 
 The strategy for the stabilization of the superlattice phase $phi$ is a correction of the DDS frequency in @fig:phase-setup based on the environmental parameters in the retro path.
 If we can predict the drifts of the superlattice phase, we can achieve a stable superlattice without relying on regular phase measurements with the atoms.
-For the measurement of the environmental parameters, we use a selection of sensors near the optical path of the lattice beams as shown in @fig:phase-sensors-measure-setup.
+For the measurement of the environmental parameters, we use a selection of sensors near the optical path of the lattice beams as shown in @fig:phase-stability-sensors-setup.
 The temperature sensors mainly cover the air segment between the retro lens and the retro mirror, as well as the two segments in the retro lens.
 For the other air segment, we can only measure the temperature close to the Ioffe bars just inside the #mu-metal shielding.
 Placing a temperature sensor further towards the atom position was not possible due to a lack of physical access, which also prevented us from attaching a surface-temperature sensor to the glass cell.
@@ -165,10 +165,10 @@ The other environmental sensors are simply placed close to the retro path since 
       - Figure out the different markers for the temperature sensors...
       - Skip the other FT07 sensor outside of the #mu-metal...
       - Exchange the lenses L1 and L2 in the achromatic doublet...
-      - Add names of the segments from @tab:phase-sensors-temperature-coefficients here?
+      - Add names of the segments from @tab:phase-stability-temperature-coefficients here?
     ]
   ],
-  label: <fig:phase-sensors-measure-setup>,
+  label: <fig:phase-stability-sensors-setup>,
 )
 
 For all environmental parameters required for the phase stabilization, digital sensors are available that use $"I"^2"C"$ or SPI to communicate with a single-board computer or a microcontroller.
@@ -187,12 +187,12 @@ With the second digital sensor#footnote[
 ], we measure both the relative humidity as well as the #CO2 concentration every #qty[2][s].
 The repeatability of the sensor readings are specified as $plus.minus #qty[0.1][%]$ and $plus.minus #qty[10][ppm]$ respectively, which is sufficient for the corresponding changes of the superlattice phase.
 For both digital sensors the absolute accuracy specifications are significantly worse than the relative accuracys.
-This is however not an issue for the stabilization of the superlattice phase since the environmental coefficients in @tab:phase-sensors-other-coefficients are constant in the parameter ranges that occur in the laboratory.
+This is however not an issue for the stabilization of the superlattice phase since the environmental coefficients in @tab:phase-stability-other-coefficients are constant in the parameter ranges that occur in the laboratory.
 
 The temperature sensors we use are passive elements and require additional devices to actually measure their resistance $R(T)$.
 While this increases the complexity of the experimental setup, it allows us to optimize the measurement parameters to avoid self-heating of the sensors @vishay_selecting_2015.
 For the air-temperature sensors, we use negative temperature coefficient (NTC) thermistors to achieve a maximal temperature sensitivity.
-The temperature sensors indicated by the #tr[circles] in @fig:phase-sensors-measure-setup are precision epoxy NTC thermistors#footnote[
+The temperature sensors indicated by the #tr[circles] in @fig:phase-stability-sensors-setup are precision epoxy NTC thermistors#footnote[
   TE Connectivity 44001A
 ] with a resistance of #qty[100][Ohm] at #degC[25].
 For the temperature measurement of the retro-lens mount, we use a platinum resistance temperature detector#footnote[
@@ -213,30 +213,30 @@ For the 4-wire resistance measurement of the fast NTCs, we use bench digital mul
   Keysight 34465A
 ] in the low-power readout mode to avoid self-heating of the NTCs.
 With a readout time of #qty[100][ms], the specified RMS noise of the multimeter is approximately #qty[1][Ohm], which amounts to a temperature uncertainy of less than #degC[0.003].
-The typical reading of the fast NTC inside the #mu-metal (see @fig:phase-sensors-measure-setup) during the experimental sequence is shown in @fig:phase-sensors-stability-limitation.
+The typical reading of the fast NTC inside the #mu-metal (see @fig:phase-stability-sensors-setup) during the experimental sequence is shown in @fig:phase-stability-result-limitation.
 
 
-=== Characterization of the phase stability <ssec:phase-sensors-stability>
+=== Characterization of the phase stability <ssec:phase-stability-result>
 
 #notes[
   - Where to mention that humidity = relative humidity?
 ]
 
-Based on the readings of the environmental sensors introduced in @ssec:phase-sensors-measure, we apply a correction to the DDS frequency to stabilize the superlattice phase.
+Based on the readings of the environmental sensors introduced in @ssec:phase-stability-sensors, we apply a correction to the DDS frequency to stabilize the superlattice phase.
 The digital sensors and the data logger for the temperature sensors run continuously at the specified readout rates without a synchronization to the experimental sequence.
 The server that controls the superlattice phase then applies the frequency correction approximately #qty[5][s] before the atoms are loaded into the optical lattices in the experimental sequence (see @fig:setup-sequence).
 For each sensor, the mean value of the previous #qty[15][s] is used to reduce the impact of noisy readings.
 We are therefore only targeting long-term drifts with the frequency correction.
-While the fast NTC thermistor can resolve temperature changes during the experimental sequence, we could not find any further improvement of the phase stability in the sensor data (see @fig:phase-sensors-stability-limitation).
-From the temperature segments listed in @tab:phase-sensors-temperature-coefficients, we only take the outer air segment and the two components of the retro lens into account.
-For the outer air segment, we use the mean temperature reading of the NTC thermistors #tr[B] and #tr[C] in @fig:phase-sensors-measure-setup.
+While the fast NTC thermistor can resolve temperature changes during the experimental sequence, we could not find any further improvement of the phase stability in the sensor data (see @fig:phase-stability-result-limitation).
+From the temperature segments listed in @tab:phase-stability-temperature-coefficients, we only take the outer air segment and the two components of the retro lens into account.
+For the outer air segment, we use the mean temperature reading of the NTC thermistors #tr[B] and #tr[C] in @fig:phase-stability-sensors-setup.
 The temperature measured by the surface sensor attached to the retro-lens mount is used for the two  retro-lens components.
-In the inner air segment, the #qty[100][Ohm] NTC thermistor measures a variation of up to #degC[2] during the experimental sequence (see @fig:phase-sensors-stability-limitation).
+In the inner air segment, the #qty[100][Ohm] NTC thermistor measures a variation of up to #degC[2] during the experimental sequence (see @fig:phase-stability-result-limitation).
 If we would consider this temperature for the entire inner air segment, the corresponding frequency correction significantly exceeds the drifts we can observe for the zero-phase frequency $f_0$.
 Since we can not measure the actual temperature $T(x)$ along the optical path, it does not make sense to use the measured temperature at a single location for the frequency correction.
 For the glass cell, we are not applying a frequency correction either, as we were not able to install a sensor that measures the glass temperature.
 While the glass cell is subject to a similar temperature cycle as the inner air segment, the actual temperature changes in the glass will be delayed compared to the measured air temperature.
-The frequency correction based on the ambient pressure is applied exactly with the environmental coefficient in @tab:phase-sensors-other-coefficients, while we increase the frequency correction due to the relative humidity by $2.5$.
+The frequency correction based on the ambient pressure is applied exactly with the environmental coefficient in @tab:phase-stability-other-coefficients, while we increase the frequency correction due to the relative humidity by $2.5$.
 // use a fudge factor of $2.5$ for the frequency correction due to the relative humidity.
 We found this fudge factor consistently across several long-term measurements of the phase stability using different humidity sensors.
 While the Ciddor equation of the refractive index of air is valid for wavelengths in the range from below #qty[350][nm] to above #qty[1300][nm], it does not take absorption lines of water in the infrared regime into account @ciddor_refractive_1996.
@@ -249,12 +249,12 @@ Just like for the measurement of the superlattice period in @ssec:phase-measure-
 We use a small gradient component of #qty[0.615(24)][mrad/μm] to achieve a high sensitivity of the local minimum in the atom density to the superlattice phase.
 A gradient component that is too small would be problematic because the zero-phase frequency could be located outside of the atom cloud.
 On the other hand, a large gradient component would restrict the local minimum to the center of the atom cloud and make the measurement sensitive to shot-to-shot fluctuations of the position of the atom cloud.
-In #subref(<fig:phase-sensors-stability>, "a"), the long-term stability of the superlattice phase is shown for around #num[800] repetitions in #qty[17][h].
+In #subref(<fig:phase-stability-result>, "a"), the long-term stability of the superlattice phase is shown for around #num[800] repetitions in #qty[17][h].
 The corresponding standard deviation is
 
 $
   sqrt(Delta phi^2) = #qty[1.27][mrad]
-$ <eq:phase-sensors-stability>
+$ <eq:phase-stability-result>
 
 without a rolling average to correct for long-term drifts.
 With a rolling average over a period of #qty[30][min], we find the long-term drift of the phase to be smaller than #qty[1][mrad].
@@ -263,7 +263,7 @@ As a comparison, the standard deviation of the position of the atom cloud itself
 We can therefore largely neglect the fluctuations of the position of the atom cloud compared to the fluctuations of the superlattice phase.
 On the other hand, we can not completely decouple fluctuations of the  phase and of the gradient component, since both effects contribute to the position of the minimum in the atom cloud.
 Conversely, the calibration of the horizontal gradient component itself is also sensitive to fluctuations of the phase.
-We can therefore only use the standard deviation in @eq:phase-sensors-stability to quantify the combined stability of the mean phase and the horizontal component of the phase gradient.
+We can therefore only use the standard deviation in @eq:phase-stability-result to quantify the combined stability of the mean phase and the horizontal component of the phase gradient.
 Since both contributions ultimately affect the phase $phi(x, y)$ across the entire atom cloud, this is a suitable approach to estimate the phase stability.
 
 #floating-figure(
@@ -284,30 +284,30 @@ Since both contributions ultimately affect the phase $phi(x, y)$ across the enti
       - Comment that the "noise" on the sensors is much smaller than the "noise" on the phase data?
     ]
   ],
-  label: <fig:phase-sensors-stability>,
+  label: <fig:phase-stability-result>,
 )
 
-Based on the environmental corrections in #subref(<fig:phase-sensors-stability>, "b"), we can estimate the raw drift of the superlattice phase during the measurement to be #qty[30][mrad].
+Based on the environmental corrections in #subref(<fig:phase-stability-result>, "b"), we can estimate the raw drift of the superlattice phase during the measurement to be #qty[30][mrad].
 The lens temperature and the air temperature each contribute with less than #qty[2][mrad].
-Due to the opposite signs of the temperature coefficients in @tab:phase-sensors-temperature-coefficients, the traces appear to be mirrored while the actual temperature drift is similar for the air and the retro lens.
+Due to the opposite signs of the temperature coefficients in @tab:phase-stability-temperature-coefficients, the traces appear to be mirrored while the actual temperature drift is similar for the air and the retro lens.
 For the pressure we can see a correction of up to #qty[15][mrad] during the measurement.
 With a corresponding pressure change of #qty[1.5][hPa] this is on the lower end of possible pressure drifts.
 However, we generally observe the same phase stability for much larger pressure drifts by more than #qty[10][hPa] in a few hours.
 The correction due to the humidity also goes up to #qty[15][mrad], which corresponds to a drift of the humidity by approximately #qty[7][%].
-The fudge factor $2.5$ that we apply to the coefficient in @tab:phase-sensors-other-coefficients is already taken into account here.
+The fudge factor $2.5$ that we apply to the coefficient in @tab:phase-stability-other-coefficients is already taken into account here.
 Without this fudge factor, we would have observed a long-term drift of the superlattice phase by more than #qty[10][mrad] during the measurement.
 In general, we find the environmental correction to be very reliable for the pressure and the humidity, while most of the instability is actually caused by the temperature.
 This is a simple consequence of the homogeneity of the environmental parameters in the retro path.
 While we can always expect the pressure and the humidity to be uniform across the entire optical path, this is not true of the temperature.
 Using multiple temperature sensors is already an attempt to handle the inhomogeneity, but even then it is not possible to accurately measure the actual temperature along the lattice beams.
 We have to rely on the active temperature regulation on the experimental table to reduce the drifts as much as possible.
-The phase stability achieved in @fig:phase-sensors-stability therefore requires a good thermal stability of the optical path.
-The limitation of the phase stability due to the temperature cycle of the magnetic field coils in the experimental setup are shown in @fig:phase-sensors-stability-limitation.
+The phase stability achieved in @fig:phase-stability-result therefore requires a good thermal stability of the optical path.
+The limitation of the phase stability due to the temperature cycle of the magnetic field coils in the experimental setup are shown in @fig:phase-stability-result-limitation.
 
 
 ==== Comparison to other experimental setups
 
-The stability of the superlattice phase in @eq:phase-sensors-stability is better than the reported stability in other state-of-the-art tunable bichromatic superlattices#footnote[
+The stability of the superlattice phase in @eq:phase-stability-result is better than the reported stability in other state-of-the-art tunable bichromatic superlattices#footnote[
   The stability of the superlattice phase is always related to its tunability.
   With a shallow-angle setup, a bichromatic superlattice can be built to be inherently stable by choosing equal path lengths for the two arms.
   Any modification of the setup that allows a tunability of the phase, is likely to reduce the stability of the phase.
@@ -331,12 +331,12 @@ To eliminate long-term drifts of the superlattice phase, regular compensation me
 
 ==== Limitation of the phase stability
 
-While the environmental correction applied in @fig:phase-sensors-stability completely removes long-term drifts of the superlattice phase, the shot-to-shot stability is not improved.
+While the environmental correction applied in @fig:phase-stability-result completely removes long-term drifts of the superlattice phase, the shot-to-shot stability is not improved.
 None of the individual corrections even have a sufficient shot-to-shot variation that could further improve the phase.
 To understand the origin of the shot-to-shot fluctuations, we look at the readings of the temperature sensors inside the #mu-metal that are not included in the environmental correction.
-In terms of the optical path, these sensors would represent approximately half of the total path length (see @tab:phase-sensors-temperature-coefficients) and the glass cell.
+In terms of the optical path, these sensors would represent approximately half of the total path length (see @tab:phase-stability-temperature-coefficients) and the glass cell.
 However, we decided against taking these sensors into account for the environmental correction since their readings fluctuate too much on short as well as long timescales, and we could not find a quantitative relation between the sensor readings and the superlattice phase.
-The typical readings are shown in #subref(<fig:phase-sensors-stability-limitation>, "a") as a function of the sequence time.
+The typical readings are shown in #subref(<fig:phase-stability-result-limitation>, "a") as a function of the sequence time.
 Both sensors replicate the thermal cycle of the magnetic field coils used for the Ioffe-Pritchard trap that are the dominant source of heating on the experimental table.
 Based on the peak-to-peak amplitude and the delay relative to the interval of the Ioffe-Pritchard trap in the sequence, it appears that the regular sensor is positioned closer to one of the Ioffe bars than the fast sensor#footnote[
   Due to a lack of physical access and a restricted visibility, we do not know the exact positions of the temperature sensors relative to the Ioffe bars and the lattice beams.
@@ -346,7 +346,7 @@ Based on the peak-to-peak amplitude and the delay relative to the interval of th
   image("figures/phase_stability_limitation.png"),
   caption: [
     Temperature cycle during the experimental sequence.
-    *a*, Readings of the air temperature sensors inside the #mu-metal (see @fig:phase-sensors-measure-setup).
+    *a*, Readings of the air temperature sensors inside the #mu-metal (see @fig:phase-stability-sensors-setup).
     The lower data (orange) shows the regular NTC thermistor and the upper data (green) shows the fast NTC thermistor.
     An offset is applied to the temperature measured with the fast NTC thermistor to improve the readability.
     The shaded areas show the mean temperature and the standard deviation around, while the solid lines show the temperature reading during a single sequence.
@@ -358,22 +358,22 @@ Based on the peak-to-peak amplitude and the delay relative to the interval of th
       - Add the linear fit to axes *b*?
     ]
   ],
-  label: <fig:phase-sensors-stability-limitation>,
+  label: <fig:phase-stability-result-limitation>,
 )
 
 The earliest time during the experimental sequence where we can measure the superlattice phase is at approximately #qty[52.5][s].
 Everything before is reserved for the preparation of the degenerate Fermi gas and the loading into the optical lattices (see @sec:setup-sequence).
-In #subref(<fig:phase-sensors-stability-limitation>, "b") we can see the linear drift of the superlattice phase if we delay the phase measurement by up to #qty[5][s].
-While the slope has the correct sign for a decrease of the air temperature according to @tab:phase-sensors-temperature-coefficients, the readings of the temperature sensors can not accurately predict the drift of the superlattice phase.
+In #subref(<fig:phase-stability-result-limitation>, "b") we can see the linear drift of the superlattice phase if we delay the phase measurement by up to #qty[5][s].
+While the slope has the correct sign for a decrease of the air temperature according to @tab:phase-stability-temperature-coefficients, the readings of the temperature sensors can not accurately predict the drift of the superlattice phase.
 We can however conclude that the air temperature is mainly responsible for the drift of the phase, since we would expect the opposite drift from the temperature coefficient of the glass cell.
 From the phase drift, we can extract the empirical correction
 
 $
   phy.pdv(phi, tau) = #qty[-0.94(9)][mrad/s]
-$ <eq:phase-sensors-stability-slope>
+$ <eq:phase-stability-result-slope>
 
 that we apply during lifetime measurements lasting up to multiple seconds.
-For regular measurements where the atoms are trapped in the superlattice for less than #qty[100][ms], we do not take the time-dependent correction in @eq:phase-sensors-stability-slope into account and just use the correction scheme presented in @fig:phase-sensors-stability.
+For regular measurements where the atoms are trapped in the superlattice for less than #qty[100][ms], we do not take the time-dependent correction in @eq:phase-stability-result-slope into account and just use the correction scheme presented in @fig:phase-stability-result.
 In conclusion, we can not achieve a further improvement of the phase stability with the temperature sensors close to the magnetic field coils for the Ioffe-Pritchard trap.
 However, we can claim that the spatial and temporal variation of the air temperature due to the thermal cycle of the experimental sequence is most likely the limitation of the phase stability.
 Since an accurate measurement of the temperature distribution is not possible, the most promising improvement would be a shielding of the optical path.

@@ -3,7 +3,7 @@
 = Controlling the superlattice phase <ch:phase>
 
 #notes[
-  - Mention that the stabilization introduced in @sec:phase-sensors is already applied in all prior measurements in this chapter...
+  - Mention that the stabilization introduced in @sec:phase-stability is already applied in all prior measurements in this chapter...
 ]
 
 The superlattice phase $phi$ is the third parameter of the superlattice potential in addition to the lattice depths $Vx1064$ and $Vx532$.

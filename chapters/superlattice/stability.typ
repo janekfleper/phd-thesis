@@ -52,7 +52,7 @@ Besides being constant, the waist #wx1064 is also significantly smaller in the f
 This allows us to achieve lattice depths beyond #qty[60][Erec], while maintaining a waist that is still sufficiently large compared to the atom cloud.
 The stronger confinement along the $y$ axis is not an issue since the #y1064 lattice is always frozen when we are working with the in-plane superlattice.
 While we could significantly improve the stability of the lattice depth and the lattice waist, the position still drifts by up to #qty[1][μm] in #qty[5][s].
-We can attribute this to the thermal cycle during the experimental sequence, which is mainly determined by the magnetic field coils (see @sec:setup-sequence and @ssec:phase-sensors-stability).
+We can attribute this to the thermal cycle during the experimental sequence, which is mainly determined by the magnetic field coils (see @sec:setup-sequence and @ssec:phase-stability-result).
 In any case, the drift is negligible compared to the size of the atom cloud and the waist of the #x1064 lattice.
 
 #floating-figure(

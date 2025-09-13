@@ -24,7 +24,7 @@ Despite their water cooling, these coils are the largest thermal loads on the ex
 We therefore aim to set up the experimental sequence with a constant runtime for the individual coils.
 Even then, a true thermal equilibrium is not possible since the coils are only running for a fraction of the sequence.
 We can however achieve a periodic temperature cycle with minimal variations from sequence to sequence.
-This is essential for the stability of the in-plane superlattice phase, which I will discuss in @ssec:phase-sensors-stability.
+This is essential for the stability of the in-plane superlattice phase, which I will discuss in @ssec:phase-stability-result.
 
 #floating-figure(
   experimental-sequence(),
@@ -237,7 +237,7 @@ Since the atoms are no longer confined by the optical lattices, we are also limi
 In @fig:setup-sequence-imaging-tof a time-of-flight image is shown where the atoms occupy the $1^"st"$, $3^"rd"$ and $4^"th"$ Brillouin zone along the $x$ axis.
 The atoms in the $1^"st"$ Brillouin zone occupied the band $n = 1$, while the other atoms occupied the excited bands $n = 3$ and $n = 4$ respectively.
 This is an essential measurement in the superlattice potential to infer the population of the left and right lattice sites in each double well.
-The details for this detection technique are discussed in @sec:phase-floquet.
+The details for this detection technique are discussed in #tr[ref floquet section...].
 
 
 #floating-figure(

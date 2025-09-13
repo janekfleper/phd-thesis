@@ -3,7 +3,7 @@
 == Measurement of the superlattice phase <sec:phase-measure>
 
 #notes[
-  - How to reference the measurement of changes in @sec:phase-sensors?
+  - How to reference the measurement of changes in @sec:phase-stability?
 ]
 
 Besides the lattices depths #Vx1064 and #Vx532, the superlattice phase $phi$ is the remaining parameter to control the superlattice potential.
@@ -290,13 +290,13 @@ Analogous to the evaluation of the lattice depth $V(x, y)$ in @sec:mod-eval, the
 In @fig:phase-measure-gradient-horizontal, the measurement and compensation of the horizontal gradient component is shown.
 We vary the glass-plate angle in steps of $#num[0.4]degree$ to find the zero-crossing of the gradient component at $gamma_"hor" approx #num[1.7]degree$.
 The standard deviation of the zero-phase frequency $f_0 (x, y)$ across the atom cloud is $sigma(f_0) = #qty[0.11][MHz]$.
-This corresponds to $sigma(phi) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-sensors-stability).
+This corresponds to $sigma(phi) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-stability-result).
 During the scan of the angle $gamma_"hor"$, the frequency $f_0$ in the center of the atom cloud $(x, y) = (0, 0)$ varies by less than #qty[0.25][MHz].
 We can therefore tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
 While we want the superlattice phase $phi(x, y)$ to be homogeneous in most measurements, there are a few cases where applying a specific horizontal gradient component is useful.
 If the phase $phi$ changes linearly across the atom cloud, the offset $Delta$ shows the same behavior.
 This allows us to realize the offset scan in a single image where the phase measurement results in a local minimum of the atomic density.
-In @eq:phase-measure-period and @ssec:phase-sensors-stability, we use this technique for a single-shot measurement of the zero-phase frequency $f_0$.
+In @eq:phase-measure-period and @ssec:phase-stability-result, we use this technique for a single-shot measurement of the zero-phase frequency $f_0$.
 The spatial variation of the phase $phi$ due to the horizontal gradient component encodes the offset $Delta slash t = 0$ in the position of the minimum in the atomic density.
 We can therefore directly measure the shot-to-shot fluctuations of the phase, whereas a scan of the frequency as in @fig:phase-measure-detect-result only shows the phase fluctuations on a timescale of approximately #qty[10][min].
 

@@ -145,4 +145,4 @@ While the triplet was air-spaced, the material composition was bad according to 
 Compared to the optical elements in the individual paths, we could observe a crosstalk between the two lattices since the beams are superimposed at the retro lens.
 This prompted us to replace the retro lens by the same model as the forward lens, where we could not observe any thermal lensing.
 Compared to #NBK7 and #NSF11, the optical materials #CAF2 and #NBALF4 have better thermal-lensing properties.
-Besides the focal shift of the lattice beams, the replacement of the retro lens also significantly improved the stability of the superlattice phase (see @ssec:phase-sensors-stability).
+Besides the focal shift of the lattice beams, the replacement of the retro lens also significantly improved the stability of the superlattice phase (see @ssec:phase-stability-result).
