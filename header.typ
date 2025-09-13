@@ -139,6 +139,7 @@
 #let kx1064 = $k_x1064$
 #let kx532 = $k_x532$
 #let kpump = $k_"pump"$
+#let mu-metal = [μ-metal]
 
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body

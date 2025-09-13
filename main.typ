@@ -2,6 +2,7 @@
 #import "@preview/fancy-units:0.1.1": add-macros
 
 #add-macros(
+  Ohm: sym.Omega,
   Erec: [_E_#sub[rec]],
   Erecl: [_E_#sub[rec,l]],
   Erecs: [_E_#sub[rec,s]],

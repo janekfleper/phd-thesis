@@ -4,6 +4,7 @@
 
 #notes[
   - Discuss other superlattice types somewhere else? @sec:super-setup or @sec:phase-setup?
+  - Change the sign in @eq:theory-super-potential to use the correct convention for the superlattice phase.
 ]
 
 An optical superlattice is created by superimposing (at least) two optical lattices to form a potential with a non-trivial unit cell @windpassinger_engineering_2013.

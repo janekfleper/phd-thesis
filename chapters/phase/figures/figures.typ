@@ -108,6 +108,9 @@
       node((3, 1), text(top-edge: "bounds", $phi$), name: <phi>, shape: circle, radius: circle-radius)
       edge(<x532-aom>, "r,b", "-|>", stroke: x532-stroke)
       edge(<x1064-aom>, "r,t", "-|>", stroke: x1064-stroke)
+
+      // separation of the optical tables
+      edge((2.6, -0.235), (2.6, 2.235), stroke: (thickness: 0.6pt, dash: "dashed"))
     },
   )
 }
@@ -121,9 +124,9 @@
   table.header([], [Air], [Lens 1], [Lens 2], [Air], [Glass cell]),
   table.hline(y: 1),
   table.vline(x: 1),
-  [$d slash#unit[mm]$], $250$, $9.0$, $3.7$, $230$, $4.0$,
-  $phy.pdv(Delta n_sigma, T) med slash med #qty[1e-8][1/K]$, $1.3$, $-27.4$, $-94.2$, $1.3$, $-61.8$,
-  $phy.pdv(phi, T) med slash #unit[mrad/K]$, $19.2$, $-14.5$, $-20.6$, $17.7$, $-14.6$,
+  [$d_sigma slash#unit[mm]$], $240$, $9.0$, $3.7$, $220$, $4.0$,
+  $phy.pdv(Delta n_sigma, T) med slash med #qty[1e-6][1/K]$, $0.013$, $-0.274$, $-0.942$, $0.013$, $-0.618$,
+  $phy.pdv(phi, T) med slash #unit[mrad/K]$, $18.4$, $-14.5$, $-20.6$, $16.9$, $-14.6$,
 )
 
 #pagebreak()
