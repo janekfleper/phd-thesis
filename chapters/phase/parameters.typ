@@ -1,9 +1,8 @@
 #import "/header.typ": *
 
-== Interaction measurement/calibration <sec:phase-int>
+== Calibration of the double-well parameters <sec:phase-parameters>
 
-#[
-  #set text(red)
+#notes[
   - Figure out the correct signs for $Delta$, $phi$ etc... Change the sign definition of $phi$ to make all the signs equal?
   - Highlight that initially the DDS frequency is measured? The phase $phi$ is only the final evaluated quantity...
   - Evaluate #asc in each grid individually?
