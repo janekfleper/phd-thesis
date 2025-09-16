@@ -3,131 +3,119 @@
 == Calibration of the double-well parameters <sec:phase-parameters>
 
 #notes[
-  - Figure out the correct signs for $Delta$, $phi$ etc... Change the sign definition of $phi$ to make all the signs equal?
   - Highlight that initially the DDS frequency is measured? The phase $phi$ is only the final evaluated quantity...
-  - Evaluate #asc in each grid individually?
 ]
 
-So far we have done all measurements in this thesis with spin-polarized atoms that do not interact with each other due to the Pauli exclusion principle.
-For calibration measurements this is always/usually easier since a finite interaction energy $U$ introduces an additional energy scale and additional states #text(red)[ref double well theory].
-The measurement of the superlattice phase would therefore get (significantly) more complex since there are three eigenstates that would/could be mixed, and there are (usually) two different time scales that show up in the time evolution.
-If we (however) want to run experiments with interacting particles in double wells and/or in the superlattice, we also need to know the (local) interaction energy $U$.
+The tunneling amplitude $t$ is the primary energy scale to determine the behavior of a single particle in the double-well potential.
+As introduced in @ssec:theory-double-one, the eigenstates only depend on the relative offset $Delta slash t$.
+If the double well is symmetric $(Delta slash t = 0)$, the eigenstates are equal superpositions of the states #ketL and #ketR with an energy gap of $2t$.
+A second particle in the double-well potential extends the system by the on-site interaction energy $U$ that shows up as an additional energy scale (see @fig:theory-double-two-general).
+With a finite interaction, the eigenstates and the energy spectrum depend on the interplay of the tunneling amplitude $t$, the offset $Delta$ and the interaction $U$.
+When working with interacting particles in double-well potentials, it is therefore essential to accurately calibrate all three parameters.
+While we have already extensively covered the calibration of the lattice depths $V(x, y)$, this can not completely replace a direct measurement of the tunneling amplitude $t(x, y)$ and the interaction energy $U(x, y)$.
+Since the tunneling amplitude at $Delta slash t = 0$ depends on the difference of the lattice depths #Vx1064 and #Vx532, it is significantly more sensitive to the individual lattices and their relative alignment than the lattice-modulation spectroscopy.
+For the on-site interaction, the scattering length #asc is uniform across the atom cloud and the local interaction energy $U(x, y)$ depends on the total confinement by all optical lattices.
+In this section, I will present the measurements we use to calibrate the two double-well parameters $t(x, y)$ and $U(x, y)$ with in-situ resolution.
 
-While we could just compute the interaction energy $U$ from the scattering length $a(B)$ near the Feshbach resonances #text(red)[ref theory] and the confinement by the optical lattices, it is always better to calibrate the interaction energy at/for the desired/targeted magnetic field configuration.
-Before the x-superlattice, the calibration of the interaction energy $U$ was done with RF spectroscopy #text(red)[cite Eugenio/Luke and Marcell/Nicola].
-As illustrated in #text(red)[@ssec:setup-sequence-detect, ref figure instead?], the frequency difference $Delta f$ between non-interacting particles and interacting particles is proportional to the difference $Delta U$ of the interaction energies.
-From the Feshbach resonances of the participating hyperfine state pairs we could then determine the magnetic field $B$ and subsequently the scattering length $a(B)$.
-Since the RF pulses require frozen in-plane lattices, the actual interaction strength $U$ in the two-dimensional lattice planes was then computed with @eq:theory-wannier-interaction-correction.
-With $Delta U slash h = cal(O)(#qty[1][kHz])$ the resolution of this measurement is limited by the stability of the magnetic field (and the width of the RF pulse?).
-If the RF pulse that "measures" $Delta U$ is also used for the separation of singles and doubles, there is a also lower limit for the difference $Delta U$.
-With a second RF pulse for the separation of singles and doubles, the calibration of the interaction energy also works for $Delta U slash h = 0$ #text(red)[ref Eugenio].
-#text(red)[Actually discuss this?]
-The downside of this method is the reliance on the theory of the Feshbach resonances.
-Depending on the magnetic field and the "participating" hyperfine state pairs, the difference $Delta U$ can be significantly less sensitive than the interactions $U$ themselves (#text(red)[e.g. U97 and U95 at #qty[215][G]]).
-The (potential) measurement uncertainty would then be significant/large.
-A second source for calibration/measurement errors is the difference in the lattice configurations.
-The measurement of $Delta U$ requires completely frozen lattices, but the interaction $U$ is ultimately computed/used in much shallower lattices.
-Ideally we would like to calibrate the interaction strength $U$ in a lattice configuration that is equal or very close to the configuration where we are ultimately running our measurements.
+#floating-figure(
+  image("figures/phase_parameters_result.png", width: 85%),
+  caption: [
+    In-situ calibration of the double-well parameters $t$ and $U$.
+    *a*, Tunneling amplitude $t(x, y)$ measured with the Rabi oscillations in the symmetric superlattice configuration $phi = 0$.
+    The inset shows a typical oscillation signal with the corresponding fit to extract the oscillation frequency $2t$.
+    The superlattice parameters for the measurement are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$.
+    With an outer tunneling amplitude of $tout slash tin approx 0.18$, we expect a complete dephasing after $4$ to $5$ oscillation periods.
+    The other contributions to the dephasing are the residual superlattice phase and the integration across the different vertical lattice planes.
+    *b*, Interaction energy $U(x, y)$ measured with the density-assisted tunneling between the interaction state #ketLL and the split state #kets.
+    The lattice parameters for the measurement are $Vx1064 = #qty[15][Erec]$, $Vx532 = #qty[12][Erec]$, $Vy1064 = #qty[55][Erec]$ and $Vz532 = #qty[110][Erec]$.
+    The atoms occupy the states #mF(9) and #mF(7) and the magnetic field is set to $B approx #qty[204.9][G]$.
+    In both maps, empty cells are either located outside of the atom cloud or the evaluation failed because of the small signal at the edge of the atom cloud.
 
-In the superlattice potential such a calibration is possible with a technique that is similar to the phase-sensitive measurement @fig:phase-measure-theory.
-Instead of determining the superlattice phase $phi = 0$, we can measure the offset/detuning where
+    #notes[
+      - Add an inset (or multiple) for the interaction measurement?
+      - Move the inset in *a* somewhere else? Or add a background to the x-label?
+      - Divide $t$ and $U$ by $h$ in the colorbar labels...
+    ]
+  ],
+  label: <fig:phase-parameters-result>,
+)
+
+For the calibration of the tunneling amplitude $t(x, y)$, we use the state preparation and the measurement technique introduced in @sec:phase-measure.
+However, instead of varying the frequency $f$ @eq:phase-measure-frequency[], we scan the oscillation time $tau$ to resolve the full time evolution.
+The superlattice phase is set to $phi(x, y) approx 0$ using the zero-phase frequency $f_0$ and a compensated phase gradient (see @ssec:phase-measure-gradient).
+The main limitations for the oscillation are the shot-to-shot fluctuations of the superlattice phase characterized in @ssec:phase-stability-result and the tunneling amplitude #tout between adjacent double wells.
+Compared to the phase-sensitive measurement in @fig:phase-measure-theory, we can not consider the double wells to be isolated from each other.
+Depending on the superlattice parameters, the expected oscillation signal can decay rapidly in just a few periods associated with the tunneling amplitude #tin.
+Additional contributions to the dephasing of the measured oscillations are the inhomogeneity of the #x532\-lattice depth along the #z-axis as well as the confinement by the radial potential of the #y1064 lattice (#tr[ref radial section]).
+As shown in #subref(<fig:phase-parameters-result>, "a"), we can measure the tunneling amplitude $t(x, y)$ with the in-situ detection technique introduced in @ssec:phase-measure-detect.
+Each cell of the grid has a size of $9 times 9$ pixels, and we evaluate the signal $n_L (tau)$ by fitting an oscillation at the frequency $2t$ with an exponential decay to qualitatively take the aforementioned dephasing contributions into account.
+On the optical axis of the #x1064 lattice and the #x532 lattice, the mean tunneling amplitude is $t slash h = #qty[652(14)][Hz]$.
+Towards the outside of the atom cloud, the tunneling amplitude increases due to the decreasing lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$.
+Since the tunneling amplitude is generally more sensitive to the #x532\-lattice depth than to the #x1064\-lattice depth, we always expect the tunneling amplitude to increase away from the optical axis.
+Additionally, the #x532 lattice has a smaller waist than the #x1064 lattice (see @tab:mod-super-result).
+Besides the inhomogeneity along the #y-axis, the tunneling amplitude in #subref(<fig:phase-parameters-result>, "a") also shows a small gradient along the #x-axis.
+We attribute this to the shift of the vertical focus of the forward-propagating #x532\-lattice beam to $x approx #qty[2.5][mm]$ to minimize the effect of the thermal lensing (see @ssec:super-stability-x532).
+While the retro-reflected beam is shifted towards the opposite side of the atom cloud, it has a smaller amplitude due to the losses in the retro path.
+The lattice depth $Vx532(x, y)$ therefore slightly increases as a function of the position $x$.
+For the #x1064 lattice, we do not expect any inhomogeneity along the #x-axis across the atom cloud.
+In the superlattice configuration The dephasing of the oscillation is dominated by the
+
+At the lattice depths $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, the theoretical tunneling amplitude according to the BPO Hamiltonian @eq:theory-super-hamiltonian-bpo[] is $t slash h = #qty[488][Hz]$.
+This value deviates significantly from the measured tunneling amplitude on the optical axis.
+There are a multitude of possible reasons for this deviation.
+Any offset $Delta slash t != 0$ results in an increase of the oscillation frequency acording to @eq:theory-double-one-rabi-parameters.
+We even made use of this property for the measurement of the zero-phase frequency in @fig:phase-measure-theory.
+The shot-to-shot fluctuations of the superlattice phase and a residual phase gradient can therefore only increase the local oscillation frequency.
+A mean deviation of #qty[4][mrad] already corresponds to a mean offset of $Delta slash t approx 0.5$.
+While we determined the shot-to-shot fluctuations to be significantly smaller in @ssec:phase-stability-result, this relied on the single-shot technique with a horizontal phase gradient.
+In global measurements, the residual phase $phi$ is generally greater since we can not perfectly set the zero-phase frequency $f_0$.
+Besides the superlattice phase, the second possible contribution to the increase of the tunneling amplitude are the lattice depths #Vx1064 and #Vx532.
+In the symmetric superlattice configuration, the tunneling amplitude $t$ effectively depends on the difference $Vx532 - Vx1064$.
+This makes the tunneling amplitude significantly more sensitive to the two lattice depths than the band structure we use for the lattice-modulation spectroscopy in @sec:mod-super.
+Since we can only calibrate the lattice depth $Vx532(x, y)$ in the superlattice potential, we can not independently verify the #x532\-lattice potential.
+If the actual #x532\-lattice depth would be lower than #qty[12][Erec] by only #qty[4][%], the theoretical tunneling amplitude already increases to $t slash h = #qty[550][Hz]$.
+Correspondingly, the tunneling amplitude is also very sensitive to the alignment of the #x532 lattice.
+In conclusion, the measurement in #subref(<fig:phase-parameters-result>, "a") shows the importance of the independent calibration of the tunneling amplitude $t(x, y)$ in each superlattice configuration.
+
+To calibrate the interaction energy $U(x, y)$, we prepare the initial state #ketLL in the double-well potentials#footnote[
+  Some double wells are prepared in the state #ketL and some double wells are empty, since we can not achieve a perfect filling of the superlattice.
+  However, only the double wells with two particles in the initial state #ketLL actually contribute to the interaction-sensitive measurement.
+].
+If the particles are strongly interacting $abs(U) slash t >> 1$, we can use the density-assisted tunneling to find the superlattice phase where $2 Delta = -U$ #tr[cite Murmann].
+The actual measurement of the interaction energy is then equivalent to the measurement of the superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result.
+According to the spectrum of two interacting particles in @fig:theory-double-two-general, the oscillation between the states #ketLL and #kets behaves just like the oscillation between the states #ketL and #ketR at $Delta slash t = 0$.
+Therefore, we scan the superlattice frequency $f$ to find the minimum of the occupation $n_(L L) = abs(phy.braket(L L, psi))^2$ after a fixed time $tau$.
+Compared to the phase-sensitive measurement with the polarized atom cloud, we can use the singles-doubles separation introduced in @ssec:setup-sequence-detect to directly resolve the occupation $n_(L L) (x, y)$.
+To compute the corresponding superlattice phase, we subtract the zero-phase frequency $f_0 (x, y)$ from the interaction frequency $f_U (x, y)$ and divide the result by the frequency period @eq:phase-measure-period.
+From the resulting phase
 
 $
-  2 Delta(phi) = - U
-$ <eq:phase-int-condition>
+  phi_U (x, y) = (f_U (x, y) - f_0 (x, y)) / (Delta f)
+$ <eq:phase-parameters-interaction-phi>
 
-which has already been used extensively in superlattices and double wells #text(red)[ref Trotzky/Fölling and Andrea?].
-The tunneling of one of the atoms is then equivalent to the tunneling of the atom/particle in a singly-occupied double well at the symmetric phase $phi = 0$.
-This configuration is shown in @fig:phase-int-theory for repulsive interactions as well as attractive interactions.
-The timescale of this so-called _density-assisted_ tunneling is the (single-particle) tunneling $t$ since the energy splitting at/of the avoided crossings at $plus.minus 2 Delta = U$ is (also) $2t$.
-Any detuning from this "resonance" condition will (again) result in a faster oscillation frequency.
-We can/will therefore measure the phase-sensitive signal developed/introduced in @sec:phase-measure with an offset given by the condition $2 Delta(phi) = - U$.
-#text(red)[Really put this here? Find the best spot for the next few sentences!]
-A look at the double well states that are relevant for the density-assisted tunneling will "confirm" the similarity to the non-interacting tunneling at $phi = 0$.
-The atoms are initially prepared in the state $phy.ket(L L)$ at $phi = pi slash 4$ with a large detuning $abs(Delta) >> abs(U), t$.
-After the preparation at the detuning $2 Delta approx -U$ the actual oscillation happens between the state $phy.ket(L L)$ and the "singlet" state $phy.ket(s) = 1 / sqrt(2) (phy.ket(L R) + phy.ket(R L))$ #text(red)[ref theory double well].
-The superposition of the "split" states captures the fact that either atom can tunnel to the other sublattice site.
-In any case, we have to figure out a technique to detect the (local) population of the states $phy.ket(L L)$ and $phy.ket(s)$ after we stop the evolution at the time $tau$ by changing the superlattice phase back to $phi = pi slash 4$.
-Due to the interaction energy $U$ between particles on the same sublattice site, we can now actually resolve the in-situ contrast.
-With a "regular" singles-doubles separation pulse, the atoms in state $phy.ket(L L)$ will be detected as doubles and the atoms in state $phy.ket(s)$ will be detected as singles.
-We are therefore able to measure the population contrast $cal(C)$ locally (or in-situ at least?).
-There will however always be a significant offset from $cal(C) = 1$ because of the single-occupied double wells.
-Because of the separation of the double wells they do not affect the time evolution of the double-occupied double wells.
-For any reasonably sized interaction $U$ they will simply remain in their (initial) state $phy.ket(L)$.
-We will however detect half of them (#text(red)[explain this in detail?]) as singles as the state $phy.ket(L)$ (and technically also the state $phy.ket(R)$) have the same RF transition frequency as the singlet state $phy.ket(s)$.
+we can compute the offset $Delta(phi)$ and subsequently the interaction energy $U(x, y)$.
+In #subref(<fig:phase-parameters-result>, "b") a typical result is shown for the strongly attractive interaction of the mixture #mix(9, 7).
+At the center of the atom cloud, the mean interaction energy is $U slash h = #qty[-8035(29)][Hz]$.
+Even though we are using the superlattice along the #x-axis for the measurement itself, the lattice depths $Vy1064(x, y)$ and $Vz532(x, y)$ also affect the interaction energy.
+Due to the inhomogeneous lattice depths, the confinement is reduced in all directions towards the edge of the atom cloud and the interaction becomes weaker accordingly.
+The actual shape of $U(x, y)$ ultimately depends on all lattice depths as well as the scattering length #asc.
 
-#figure(
-  image("figures/phase-interaction-sketch.png", width: 80%),
-  caption: [
-    Theory of the calibration of the interaction energy $U$.
-    The double well on the left (right) shows the (prepared) state $phy.ket(L L)$ with repulsive (attractive) interactions.
-    In both cases the offset/detuning is chosen as $2 Delta = -U$ where one of the particles can tunnel to the unoccupied sublattice site.
-
-    #show list: set text(red)
-    - Is there a way to (correctly) visualize this with wavefunctions? Maybe with $phy.ket(L L)$ and the split state?
-    - Really show both interaction cases/signs here?
-    - Anything else to add to this caption?
-    - Show a spectrum here where the points $plus.minus 2 Delta = U$ are marked?
-  ],
-) <fig:phase-int-theory>
-
-Compared to the calibration technique based on the RF transitions, the phase-sensitive/phase-based technique can directly measure the interaction strength $U$.
-There are however two systematic errors that we have to consider.
-If we use the (super)lattice configuration $(v_l, v_s, #text(red)[$v_y$], #text(red)[$v_z$])$ that we are also using for the (later) measurement, the interaction strength $U$ will change with the confinement due to the finite offset/detuning $Delta$.
-For typical lattice configurations and scattering lengths this error is (however) really small.
-As an example we will consider the lattice configuration $v_l = #num[40]$, $v_s = #num[14.4]$, $v_y = #num[60]$ and $v_z = #num[100]$.
-For a scattering length of $asc = #qty[-500][a0]$, the relative error $epsilon_U = abs((U(phi) - U(0)) / U(0))$ is/would (only) be a little below #qty[1.1][%].
-On the repulsive side with $asc = #qty[500][a0]$ this error is even smaller at below #qty[0.6][%].
-The second (possible) error is related to the resonance condition $2 Delta = -U$.
-The statement/assumption that the tunneling atom follows/creates the same signal as @fig:phase-measure-theory is only correct for $abs(U) >> t$.
-If the interaction is/becomes weaker (relative to the tunneling), the smallest energy gap is no longer located at $2 Delta = U$.
-As an example, for $abs(U) = 4t$ the minimal energy gap is located at $#num[1.9] Delta approx U$ (which would constitute an error of #qty[5][%]).
-Furthermore, the contribution of the singlet state $phy.ket(s)$ to the (maximally) excited state $phy.ket(psi_4)$ will increase as $abs(U slash t)$ gets smaller.
-If three (eigen)states are part of/contributing to the time evolution, there will be two time/energy scales and the oscillation is more complicated than in the non-interacting case.
-We therefore have to simulate the expected signals to estimate the correction that we have to apply.
-
-Considering these small relative errors, we can use the phase-sensitive signal with the density-assisted tunneling to calibrate the (local) interaction energy $U$ without ever computing the interaction energy with @eq:theory-wannier-interaction-correction.
-We only need to compute the detuning/offset $Delta(phi)$ as a function of the (measured) superlattice phase $phi(x, y)$ using the BPO formalism #text(red)[@ssec:theory-super-wannier].
-#text(red)[Explain this better with the DDS frequency maps for the interaction and the zero-phase...]
-As a reference for the measured interaction frequency $f_U (x, y)$ we can use the zero-phase frequency $f_0 (x, y)$ determined with a (non-interacting) in-situ measurement as shown in @fig:phase-measure-detect-result.
-Subtracting the underlying superlattice phase will (also) automatically correct the measurement for any residual phase gradients.
-
-$
-  phi(x, y) = alpha dot (f_U (x, y) - f_0 (x, y))
-$ <eq:phase-int-phi>
-
-With the lattice depths $v_l (x, y)$ and $v_s (x, y)$ we can then compute the offset/detuning $Delta(x, y)$ and subsequently the interaction strength $U(x, y)$ with the relation @eq:phase-int-condition.
-The result of such a measurement/evaluation is shown in @fig:phase-int-result-maps.
-We can see that the phase $phi(x, y)$ changes primarily along the x-axis.
-This is caused by the confinement along the z-axis which is provided by the z532-lattice.
-Due to the longer lattice spacing (compared to the xy-plane), the confinement along the z-axis is (already) the weakest.
-With a waist of (only) #qty[115][μm] the z532-lattice depth also decreases the fastest (or all available lattices).
-The "rapid" decrease of the interaction strength $U$ away from the center along the x-axis is therefore expected.
-
-#figure(
-  image("figures/2023-09-28_U_calibration_thesis_map.png", width: 80%),
-  caption: [
-    Result of the interaction calibration with density-assisted tunneling.
-    The lattice depths for this measurement were set to $v_l = 15$ and $v_s = 12$ and the magnetic field was set to $B = #text(red)[???]$.
-    The figure on the left shows the measured phase $phi(x, y)$ where the density-assisted tunneling was resonant.
-    The resulting offset/detuning $Delta(x, y)$ is shown on the right.
-    The mask for both figures is computed based on the density (of doubles) $n(x, y)$.
-    The figures only show the cells where $n(x, y) >= 0.1 n_max$ with $n_max$ being the maximal density in the center of the atom cloud.
-
-    #show list: set text(red)
-    - Really show $phi$ and $Delta$ here? Maybe $phi$ and $U$ would be better?
-    - Mention the magnetic field and the hyperfine states?
-    - How/where to include the units for the respective colorbars?
-    - Show the expected interaction map somewhere?
-    - Show any cuts here to visualize the change along the x-axis?
-  ],
-) <fig:phase-int-result-maps>
-
-With the calibration/measurement of the local interaction $U(x, y)$, we can determine the scattering length #asc in a further evaluation step.
-If we use the calibrated lattice depths from #text(red)[@ch:mod], the scattering length #asc is the only free parameter of the interaction energy.
-Since #asc only depends on the magnetic field $B$, it is expected to be constant across the atom cloud.
-As discussed earlier in this section, the inhomogeneity of the interaction $U(x, y)$ is only caused by the inhomogeneity of the lattice depths.
-A global fit to determine (a scalar) #asc shows that the inhomogeneity of $U(x, y)$ agrees with/matches the confinement by the lattices.
-To estimate the error of the scattering length, we can evaluate the cells individually.
-The standard deviation of the individual scattering lengths can then be used as an estimated error of the entire calibration/measurement.
-#text(red)[Figure out something to finish this section and transition to the Floquet stuff...]
+At the magnetic field $B approx #qty[204.9][G]$, the scattering length of the mixture #mix(9, 7) according to the Feshbach resonances in @fig:setup-k40-fesbhach is $asc slash a_0 approx -286$.
+With the total confinement by the optical lattices and the correction according to @eq:theory-wannier-interaction-correction, the expected interaction energy in the center of the optical lattices is $U slash h approx #qty[-8980][Hz]$.
+In terms of the magnetic field, the difference compared to the measured interaction only corresponds to a deviation of approximately #qty[0.1][G].
+While the residual noise of the magnetic field is only #qty[2.5][mG] @cocchi_analogue_2016, we do not know the absolute value of magnetic field with the same precision in the entire range from #qty[187][G] to #qty[233][G] shown in @fig:setup-k40-fesbhach.
+Therefore, we always have to rely on an independent calibration of the interaction energy.
+If we can run the calibration in the target lattice configuration, we directly use the interaction energy $U(x, y)$ without any further evaluation.
+The systematic error of the interaction energy due at the offset $Delta = - U slash 2$ compared to the symmetric configuration $Delta slash t = 0$ is negligible unless the scattering length exceeds $abs(asc) slash a_0 = 500$.
+In that case, we would need to apply a small correction to take the difference of the confinement between the offsets into account.
+In practice, weak interactions are more difficult to calibrate because of the condition $abs(U) slash t >> 1$.
+If the avoided crossings corresponding to the density-assisted tunneling are not well separated from the symmetric configuration $Delta slash t = 0$, the minimal energy gaps are not located exactly at $Delta = plus.minus U slash 2$.
+For the spectrum shown in @fig:theory-double-two-general where $U slash t = -4$, the interaction-sensitive measurement shows a minimum of the occupation $n_(L L)$ at the offset $Delta slash t approx 2.1$ instead of $Delta slash t = 2$.
+We can still take this deviation into account based on the local tunneling amplitude $t(x, y)$ and the interaction energy $U(x, y)$.
+However, for even weaker interactions, the measurement technique is no longer possible since the time evolution of the initial state #ketLL also involves the other interaction state #ketRR in addition to the split state #kets.
+In that case, there are two overlapping oscillations and we could not differentiate the occupation of the states #ketLL and #ketRR with the singles-doubles separation.
+For weak interactions, we therefore have to use a different lattice configuration for the calibration.
+If we decrease the tunneling amplitude $t$, we can realize the condition $abs(U) slash t >> 1$ without changing the magnetic field or the mixture of hyperfine states.
+While this also affects the confinement by the optical lattices, we can use the measured interaction energy $U(x, y)$ to calibrate the scattering length #asc.
+With the calibrated lattice depths and the scattering length, we can then compute the interaction energy $U(x, y)$ in any lattice configuration.
+Since this is mostly relevant for weak scattering lengths $abs(asc)$, the possible error due to different the lattice configurations is small, since the correction $Delta E(asc)$ in @eq:theory-wannier-interaction-correction will be linear in #asc.
