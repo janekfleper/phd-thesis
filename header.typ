@@ -141,6 +141,16 @@
 #let kpump = $k_"pump"$
 #let mu-metal = [μ-metal]
 
+// Floquet stuff...
+#let H0 = $hat(H)_0$
+#let Heff = $hat(H)_"eff"$
+#let Vmod = $hat(V)$
+#let kick = $hat(K)$
+#let K0 = $K_0$
+#let teff = $t_"eff"$
+#let Ueff = $U_"eff"$
+#let Jn(n) = $cal(J)_#n$
+
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body
 
