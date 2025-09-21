@@ -149,7 +149,15 @@
 #let K0 = $K_0$
 #let teff = $t_"eff"$
 #let Ueff = $U_"eff"$
-#let Jn(n) = $cal(J)_#n$
+#let Jeff = $J_"eff"$
+#let VCT = $V_"CT"$
+#let calC = $cal(C)$
+#let Fpair = $cal(F)_"pair"$
+#let tcorr = $t_"corr"$
+#let DEmin = $Delta E_"min"$
+#let Jn(n) = $J_#n$
+#let teffn(n) = $teff^((#n))$
+#let ateffn(n) = $lr(abs(teff^((#n))), size: #50%)$
 
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body
