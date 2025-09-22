@@ -1,12 +1,7 @@
-#import "@local/fancy-thesis:0.1.0": floating-figure
+#import "@local/fancy-thesis:0.1.0": floating-figure, optional-refs, subref
 #import "@preview/physica:0.9.5" as phy
 #import "@preview/mannot:0.3.0": markrect
 #import "@preview/fancy-units:0.1.1": num, qty, unit
-
-#let subref(label, index) = {
-  show ref: it => link(it.element.location(), it + index)
-  ref(label)
-}
 
 // some custom fancy-units functions
 #let deg(..args, body) = $#num(..args, body)degree$

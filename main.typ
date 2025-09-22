@@ -1,4 +1,4 @@
-#import "@local/fancy-thesis:0.1.0": thesis
+#import "@local/fancy-thesis:0.1.0": optional-refs, thesis
 #import "@preview/fancy-units:0.1.1": add-macros
 
 #add-macros(
@@ -7,6 +7,8 @@
   Erecl: [_E_#sub[rec,l]],
   Erecs: [_E_#sub[rec,s]],
 )
+
+#show ref: optional-refs
 
 #show: thesis.with(
   title: "Ultracold Fermions in an\nUltrastable Optical Superlattice",
