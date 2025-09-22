@@ -127,6 +127,7 @@
 #let RH = $R H$
 #let CO2 = "CO2"
 #let xCO2 = $x_"C"$
+#let I2C = $"I"^2"C"$
 #let phix1064 = $phi_x1064$
 #let phix532 = $phi_x532$
 #let nx1064 = $n_x1064$

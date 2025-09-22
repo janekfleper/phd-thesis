@@ -20,9 +20,7 @@ $ <eq:phase-setup-delta-phi>
 
 where $d$ is the distance from the retro mirror to the atom position in @fig:super-setup.
 While @eq:phase-setup-delta-phi can be applied to both lattices, we are primarily interested in changing the phase of the #x1064 lattice (see @sec:theory-super).
-Changing the phase of either lattice will affect the superlattice potential and the resulting band structure.
-However, the #x532 lattice also affects the positions of the lattice sites.
-We are therefore only actively changing the #x1064\-lattice phase to modify the superlattice potential.
+Since the phase of the #x532 lattice also affects the positions of the lattice sites, we are only actively changing the #x1064\-lattice phase to modify the superlattice potential.
 If the #x532\-lattice phase is constant, we can directly use @eq:phase-setup-delta-phi to describe changes of the superlattice phase.
 With $d approx #qty[50][cm]$, the frequency difference corresponding to the phase $Delta phi = pi slash 2$ is $Delta nu approx #qty[150][MHz]$.
 While the formal superlattice period according to @eq:theory-super-potential is $Delta phi = pi$, the band structure already repeats itself every $Delta phi = pi slash 2$.
@@ -39,7 +37,7 @@ We use this in @ssec:phase-measure-period to measure the superlattice period in 
     The acousto-optical modulator (AOM) in the #x532\-lattice setup is driven by a constant frequency of #qty[80][MHz].
     In the #x1064\-lattice setup, the AOM frequency is tunable with an arbitrary waveform generator (AWG).
     The vertical dashed line indicates the separation of the optical tables.
-    While the entire frequency control is handled on the laser table, the superlattice phase $phi$ actually accumulates on the experimental table.
+    While the entire frequency control is handled on the laser table, the superlattice phase $phi$ accumulates on the experimental table.
   ],
   label: <fig:phase-setup>,
 )
@@ -51,7 +49,7 @@ The pump laser is not actively stabilized since its passive frequency stability 
 An absolute frequency control would only be required to stabilize the phase of the individual lattices.
 In @fig:phase-setup, the setup to control the superlattice phase $phi$ with the frequency difference $Delta nu = nu_"pump" - nu_x1064$ is shown.
 We use an optical phase locked loop (OPLL) to stabilize the frequency $nu_x1064$ relative to the frequency $nu_"pump"$ @telle_phase-locking_1990.
-While we do not need the phases of the forward-propagating lattice beams to be locked in the standing-wave configuration, we observed a significantly better superlattice-phase control compared to a frequency offset lock @klemmer_ultracold_2020.
+While we do not need the phases of the forward-propagating lattice beams to be locked in the standing-wave configuration, we observe a significantly better superlattice-phase control compared to a frequency-offset lock @klemmer_ultracold_2020.
 We measure the beat frequency $Delta nu$ on a photodiode and mix it with the output of a direct digital synthesis (DDS) board#footnote[
   Analog Devices AD9914 Evaluation Board ($fdds <= #qty[1.4][GHz]$)
 ].
@@ -63,21 +61,21 @@ The output signal of the PID regulator in the slow feedback branch is applied to
 While the fast feedback has a very high regulation bandwidth of several #qty[10][MHz], it can only address frequency changes $Delta nu < #qty[1][MHz]$.
 To cover the entire superlattice period of #qty[150][MHz], we need to use the slow feedback branch with a regulation bandwidth of a few #unit[kHz].
 On the DDS board, we can use the digital ramp generator to drive linear ramps between two preset frequencies.
-For rapid changes of the DDS frequency by more than #qty[1][MHz], we apply an auxiliary signal from an arbitrary waveform generator#footnote[
+For rapid changes of the DDS frequency by more than #qty[1][MHz], we use an arbitrary waveform generator #footnote[
   Keysight 33622A Waveform Generator
-] to the piezo actuator that matches the expected output of the slow PID regulator.
+] to apply an auxiliary signal to the piezo actuator that matches the expected output of the slow PID regulator.
 This keeps the beat frequency $Delta nu$ within #qty[1][MHz] of the DDS frequency where the fast feedback loop can remain active.
 
 In addition to the phase locked loop to stabilize the frequency difference $Delta nu$ between the two infrared lasers, each lattice setup features an acousto-optical modulator (AOM) that changes the optical frequency of the lattice beams.
 The AOMs are primarily used for the power regulation of the lattice depths #Vx1064 and #Vx532 according to the experimental sequence (see @sec:setup-lattices).
 In the #x532\-lattice setup, the AOM is driven by a radio-frequency (RF) signal at #qty[80][MHz] in a single-pass configuration.
 The AOM for the #x1064 lattice is set up in a double-pass configuration to allow a variation of the driving frequency without affecting the fiber-coupling efficiency.
-Since the AOM is located behind the photodiode of the phase locked loop, we can change the superlattice phase without the restrictions of the two feedback loops.
-The center frequency of the #x1064\-lattice AOM is #qty[80][MHz] and we usually operate it in the frequency range from #qty[75][MHz] to #qty[85][MHz].
-In the double-pass configuration, this amounts to the frequency difference $Delta nu = plus.minus #qty[10][MHz]$ for the superlattice phase.
+Since the AOM is located behind the photodiode of the optical phase locked loop, we can change the superlattice phase without the restrictions of the two feedback loops.
+The center frequency of the #x1064\-lattice AOM is #qty[80][MHz] and we usually operate it in the frequency range from #qty[70][MHz] to #qty[90][MHz].
+In the double-pass configuration, this amounts to the frequency difference $Delta nu = plus.minus #qty[20][MHz]$ for the superlattice phase.
 We use an arbitrary waveform generator#footnote[
   Spectrum Instrumentation M4i.6631-x8
-] to apply linear phase ramps, as well as jumps or periodic modulations (see #tr[ref Floquet section(s)]) to the superlattice phase.
+] to apply linear phase ramps, as well as jumps or periodic modulations (see @sec:phase-floquet) to the superlattice phase.
 Compared to the linear ramps of the DDS board in the phase locked loop, we are only limited by the #qty[1][μs] response time of the AOM.
 Since the AOM efficiency varies as a function of the driving frequency, the power regulation has to adjust the amplitude of the RF signal accordingly.
-If the changes applied to the AOM frequency are faster than the bandwidth of the power regulation, we already include the amplitude correction in the RF signal (see #tr[ref Floquet section with power feedback]).
+If the changes applied to the AOM frequency are faster than the bandwidth of the power regulation, we already include the amplitude correction in the RF signal.
