@@ -28,9 +28,13 @@
 #let asc = $a_(upright("sc"))$
 #let fita0 = sym.alpha
 
+#let Gsc = $Gamma_"sc"$
+#let Udip = $U_"dip"$
 #let k1 = $phy.vb(k)_1$
 #let k2 = $phy.vb(k)_2$
 #let anglez = $alpha$
+#let uqm(m) = $u_q^#m$
+#let bloch(q, n) = $psi_#q^#n$
 
 #let x-axis = [$x$ axis]
 #let y-axis = [$y$ axis]

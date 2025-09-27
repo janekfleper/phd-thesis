@@ -2,29 +2,29 @@
 
 = Fermionic particles in optical lattices <ch:theory>
 
-#notes[
-  - Reference the sections in the introduction?
-]
+Neutral atoms trapped in optical lattices provide a versatile platform to study many-body quantum systems.
+The foundation of experimental setups with optical lattices is the interaction of atoms with far-detuned light.
+With a single laser beam, we can create an optical dipole trap to confine a cloud of atoms.
+By interfering multiple laser beams, we can form an optical lattice potential that resembles the periodic structure of a solid-state crystal.
+The neutral atoms trapped in the optical lattice potential take on the role of the free electrons in the crystal.
+The main processes in the optical lattice potential are the tunneling of atoms between lattice sites and the interaction of atoms that occupy the same lattice sites.
+Based on these two processes, we can formulate the theoretical model to describe the behavior of atoms in a many-body state.
 
-In this chapter, I will introduce the theoretical concepts behind the measurements presented in this thesis.
-The interaction of far-detuned light with atoms is the foundation of the optical potentials we use to confine the atoms.
-With a single laser beam, we can create an optical dipole trap for an entire atom cloud.
-This is an essential tool for the trapping and cooling of quantum gases (see @sec:setup-prepare).
-Multiple interfering laser beams form optical-lattice potentials that resemble the structure of a solid-state crystal.
-The neutral atoms trapped in the optical-lattice potential take on the role of the free electrons in the crystal.
-We can use the periodicity of the optical lattices to find the eigenstates of a particle with the Bloch theorem.
-While the resulting Bloch waves are completely delocalized over the optical lattice, the Wannier functions provide a basis to describe localized particles.
-If the particles are strongly localized to the lattice sites, we can use the tight-binding approximation to simplify the description of the system.
-Instead of using spatial wavefunctions, each particle is just associated with a specific lattice site.
-The particles can then tunnel to neighboring lattices sites, and they can interact with other particles on the same lattice site.
+In the first section of this chapter, I will introduce the theoretical concepts behind the interaction of far-detuned light and neutral atoms with a focus on optical lattice potentials.
+We use the periodicity of the optical lattices to determine the eigenvalues and eigenstates using Bloch's theorem in @sec:theory-bloch.
+The resulting band structure is a characteristic property of the optical lattices that we use for the calibration of the lattice depths in @ch:mod.
+In deep optical lattice potentials, the particles are typically described by Wannier functions that are strongly localized to the lattice sites.
+The Wannier functions are introduced in @sec:theory-wannier together with the computation of the tunneling amplitude $t$ and the interaction energy $U$.
 
-If we overlap two optical lattices with different lattice periods, we can create an optical superlattice.
-In addition to the depths of both lattices, the relative phase between the two lattices is also tunable.
-Therefore, compared to a regular lattice, the superlattice has a non-trivial unit cell and a complex band structure.
-This requires an elaborate formalism to find the maximally localized Wannier functions.
-In the tight-binding approximation, we can quantify the system with the tunneling amplitudes inside and outside of the unit cell, as well as an energy offset inside the unit cell.
-If the tunneling amplitude outside of the unit cells is small, the superlattice potential resembles an array of weakly coupled double-well potentials.
-The small system size of a double well enables us to determine the exact solution for a single particle and two interacting particles.
+If we overlap two optical lattices with different lattice periods, we can create an optical superlattice potential.
+In addition to the lattice depths, the relative phase between the two lattices is also tunable.
+As presented in @sec:theory-super, the superlattice has a non-trivial unit cell and a complex band structure.
+While Bloch's theorem can be applied directly to the superlattice potential, the computation of the maximally localized Wannier functions requires an elaborate formalism where multiple energy bands are mixed.
+
+Specific configurations of the superlattice potential can be approximated by an array of weakly-coupled double-well potentials.
+The small system size of a double well allows an exact computation of the spectrum for a single particle and two interacting particles.
+In @sec:theory-double, the theoretical description of the double-well potential is derived with a focus on the time evolution of the particles.
+This provides the basis for the calibration and other measurements related to the superlattice phase $phi$ in @ch:phase.
 
 #include "dipole.typ"
 #include "bloch.typ"
