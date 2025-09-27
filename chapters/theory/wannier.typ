@@ -4,11 +4,11 @@
 
 The Bloch waves introduced in @sec:theory-bloch have a discrete quasimomentum $q$ and are therefore completely delocalized over the optical-lattice potential.
 On the other hand, in the Wannier basis, maximally localized wavefunctions are used to describe individual particles in the optical lattice @wannier_structure_1937.
-The Wannier functions can be computed directly from the Bloch waves $psi_q^n (x)$ with the Fourier transformation
+We can compute the Wannier functions from the Bloch waves $bloch(q, n)(x)$ with the Fourier transformation
 
 $
   w_n (x - x_i)
-  = 1 / sqrt(N) sum_(q in #h(0em) "BZ") psi_q^n (x) med ncexp(q x_i)
+  = 1 / sqrt(N) sum_(q in #h(0em) "BZ") bloch(q, n)(x) med ncexp(q x_i)
 $ <eq:theory-wannier-transformation>
 
 where $n$ is the band index and $N$ is the number of sites in the optical lattice.

@@ -74,9 +74,9 @@ The short-lattice potential has double the spatial frequency, which corresponds 
 The resulting Schrödinger equation in the superlattice potential is
 
 $
-  epsilon_n (q) u_q^m = ((q + 2 m)^2 + c_0) u_q^m
-  + c_(+1) u_q^(m-1) + c_(-1) u_q^(m+1)
-  + c_(plus.minus 2) (u_q^(m-2) + u_q^(m+2))
+  epsilon_n (q) uqm(m) = ((q + 2 m)^2 + c_0) uqm(m)
+  + c_(+1) uqm(m-1) + c_(-1) uqm(m+1)
+  + c_(plus.minus 2) (uqm(m-2) + uqm(m+2))
 $ <eq:theory-super-bloch-uq-schroedinger>
 
 with the coefficients $c_0 = 2 v_s - 1/2 v_l$, $c_(plus.minus 1) = -1/4 v_l upright(e)^(minus.plus upright(i) 2 phi)$ and $c_(plus.minus 2) = v_s$.

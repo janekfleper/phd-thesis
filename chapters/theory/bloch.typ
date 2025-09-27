@@ -26,7 +26,7 @@ Bloch's theorem states that the eigenfunctions of the Hamiltonian are plane wave
 The so-called Bloch waves are completely delocalized over the lattice potential and they have the form
 
 $
-  psi_q (x) = u_q (x) dot cexp(q x)
+  bloch(q, "")(x) = u_q (x) dot cexp(q x)
 $ <eq:theory-bloch-waves>
 
 with the quasimomentum $q$ and the periodic functions $u_q (x)$.
@@ -35,7 +35,7 @@ Conversely, the functions $u_q (x)$ are invariant under a spatial translation by
 This property can be used to write the functions as the Fourier series
 
 $
-  u_q (x) = sum_m u_q^m thin cexp(2 m x)
+  u_q (x) = sum_m uqm(m) thin cexp(2 m x)
 $ <eq:theory-bloch-uq-fourier-series>
 
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
@@ -50,11 +50,11 @@ $
 $ <eq:theory-bloch-potential-fourier-series>
 
 Instead of the sum of all $m in ZZ$, the Fourier series of the potential only requires the terms with $m = (-1, 0, 1)$.
-While the coefficient $c_0$ is just a global energy offset, the coefficients $c_(plus.minus 1)$ result in a coupling of the coefficients $u_q^m$ in the Schrödinger equation.
+While the coefficient $c_0$ is just a global energy offset, the coefficients $c_(plus.minus 1)$ result in a coupling of the coefficients $uqm(m)$ in the Schrödinger equation.
 With the Bloch waves @eq:theory-bloch-waves[] and the potential @eq:theory-bloch-potential-fourier-series[], the Schrödinger equation for each index $m$ is
 
 $
-  epsilon_n (q) u_q^m = ((q + 2 m)^2 + 1 / 2 v_0) u_q^m - 1 / 4 v_0 (u_q^(m-1) + u_q^(m+1))
+  epsilon_n (q) uqm(m) = ((q + 2 m)^2 + 1 / 2 v_0) uqm(m) - 1 / 4 v_0 (uqm(m-1) + uqm(m+1))
 $ <eq:theory-bloch-uq-schroedinger>
 
 where $epsilon_n (q)$ are the eigenenergies with the band index $n$.

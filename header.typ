@@ -31,6 +31,8 @@
 #let k1 = $phy.vb(k)_1$
 #let k2 = $phy.vb(k)_2$
 #let anglez = $alpha$
+#let uqm(m) = $u_q^#m$
+#let bloch(q, n) = $psi_#q^#n$
 
 #let x-axis = [$x$ axis]
 #let y-axis = [$y$ axis]
