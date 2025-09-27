@@ -112,8 +112,8 @@
     let cred = red
     line(
       ..xdata.map(x => (x * xscale, potential(x, depth))),
-      stroke: cred + 0.5pt,
-      fill: cred.transparentize(50%),
+      stroke: black + 0.9pt,
+      fill: gradient.linear(cred.transparentize(100%), cred.transparentize(10%), angle: 90deg),
     )
     for x in range(-1, 2) { circle((x * xscale, depth / 4), ..atom-style) }
 
@@ -132,8 +132,8 @@
     let cblue = blue
     line(
       ..xdata.map(x => (x * xscale, potential(x, -depth))),
-      stroke: cblue + 0.5pt,
-      fill: cblue.transparentize(50%),
+      stroke: black + 0.9pt,
+      fill: gradient.linear(cblue.transparentize(100%), cblue.transparentize(10%), angle: -90deg),
     )
     for x in range(-1, 1) { circle(((x + 0.5) * xscale, -0.75 * depth), ..atom-style) }
 

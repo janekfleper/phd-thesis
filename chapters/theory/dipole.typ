@@ -128,7 +128,7 @@ The radial potential is relevant for the trapping of atoms in a three-dimensiona
 I will discuss this further in @sec:mod-radial in the context of the in-plane superlattice.
 
 #floating-figure(
-  lattice-detuning(xscale: 2.4, depth: 3),
+  lattice-detuning(xscale: 2.4, depth: 2.5),
   caption: [
     Trapping atoms in an optical-lattice potential.
     Both optical lattices have the same lattice depth $V_0$ and the same lattice period $a$ according to @eq:theory-lattice-potential.
