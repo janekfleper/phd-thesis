@@ -100,7 +100,7 @@ Regardless of the orientation of the optical axis, it exhibits a very low absorp
 In the orientation that is required for waveplates, the thermo-optical ratio almost vanishes completely.
 Analogous to achromatic doublets, compound waveplates are either air-spaced or optically contacted to avoid heating in the connecting material.
 Optical isolators use a Faraday medium in a magnetic field to rotate the polarization of the laser beam between two polarizing beam-splitters.
-The strength of the Faraday effect is characterized by the Verdet constant in units of #unit(per-mode: "fraction")[rad/(T m)].
+The strength of the Faraday effect is characterized by the Verdet constant in units of #unit[rad/(T m)].
 The most commonly used material in optical isolators is terbium gallium garnet (#TGG).
 It has a large Verdet constant and shows a low absorption at #qty[1064][nm] @stevens_promising_2016.
 However, the absorption increases significantly towards shorter wavelengths @franta_wide_2025.

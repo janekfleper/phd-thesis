@@ -139,9 +139,9 @@
   table.hline(y: 1),
   table.vline(x: 1),
   $phy.pdv(phi, xi)$,
-  qty(per-mode: "fraction")[-11.1][mrad/hPa],
-  qty(per-mode: "fraction")[-0.92][mrad/%],
-  qty(per-mode: "fraction")[-5.9][μrad/ppm],
+  qty[-11.1][mrad/hPa],
+  qty[-0.92][mrad/%],
+  qty[-5.9][μrad/ppm],
   // $#num[-0.59] #h(0.2em) #unit[mrad] / #qty[100][ppm]$,
 )
 
