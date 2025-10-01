@@ -37,10 +37,11 @@
 #let uqm(m) = $u_q^#m$
 #let bloch(q, n) = $psi_#q^#n$
 
-#let x-axis = [$x$ axis]
-#let y-axis = [$y$ axis]
-#let z-axis = [$z$ axis]
-#let xy-plane = [$x y$ plane]
+#let x-axis = [$x$-axis]
+#let y-axis = [$y$-axis]
+#let z-axis = [$z$-axis]
+#let xy-plane = [$x y$-plane]
+#let yz-plane = [$y z$-plane]
 
 #let x1064 = $x 1064$
 #let ax1064 = $a_x1064$
