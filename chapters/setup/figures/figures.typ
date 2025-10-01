@@ -36,9 +36,9 @@
 
   // define scales for the hyperfine structure based on the fine-structure state
   let hyperfine-scale = (
-    S12: 0.0007,
+    S12: 0.0005,
     P12: 0.006,
-    P32: 0.007,
+    P32: 0.008,
   )
 
   // this dummy edge is used to correctly draw the labels of the states
@@ -56,7 +56,7 @@
   diagram(
     debug: debug,
     spacing: 0cm,
-    cell-size: (2cm, 3cm),
+    cell-size: (1.5cm, 1.7cm),
     edge-stroke: 0.6pt,
 
     for state in states {
@@ -75,7 +75,7 @@
     edge(
       (rel: (-0.5 * fs-width, 0), to: <S12>),
       (rel: (-0.5 * fs-width, 0), to: <P32>),
-      qty[766.7][nm],
+      text(0.9em, qty[766.7][nm]),
       "<|-|>",
       label-side: left,
       label-angle: right,
@@ -91,30 +91,30 @@
     // ),
 
     edge(
-      (rel: (0.2 * hfs-width, 0), to: <S12-F92>),
-      (rel: (0.2 * hfs-width, 0.01), to: <P32-F112>),
-      [cooling + imaging],
-      "-|>",
-      label-side: left,
-      label-angle: right,
-      label-pos: 63%,
-      stroke: blue + 0.9pt,
-    ),
-
-    edge(
-      (rel: (0.4 * hfs-width, 0), to: <S12-F72>),
-      (rel: (0.4 * hfs-width, 0.01), to: <P32-F92>),
-      [repumping],
+      (rel: (0.5 * hfs-width, 0), to: <S12-F92>),
+      (rel: (0.5 * hfs-width, 0.01), to: <P32-F112>),
+      text(0.9em, "cooling + imaging"),
       "-|>",
       label-side: right,
       label-angle: right,
-      label-pos: 35%,
-      stroke: blue + 0.9pt,
+      label-pos: 63%,
+      stroke: blue + 0.6pt,
     ),
 
     edge(
-      (rel: (0.8 * hfs-width, -0.01), to: <S12-F92>),
-      (rel: (0.8 * hfs-width, 0.01), to: <S12-F72>),
+      (rel: (0.1 * hfs-width, 0), to: <S12-F72>),
+      (rel: (0.1 * hfs-width, 0.01), to: <P32-F92>),
+      text(0.9em, "repumping"),
+      "-|>",
+      label-side: left,
+      label-angle: right,
+      label-pos: 42.5%,
+      stroke: blue + 0.6pt,
+    ),
+
+    edge(
+      (rel: (0.9 * hfs-width, -0.01), to: <S12-F92>),
+      (rel: (0.9 * hfs-width, 0.01), to: <S12-F72>),
       text(0.9em, qty[1285.8][MHz]),
       "<|-|>",
       label-side: right,
@@ -122,9 +122,9 @@
     ),
 
     edge(
-      (rel: (0.8 * hfs-width, -0.01), to: <P32-F112>),
-      (rel: (0.8 * hfs-width, 0.01), to: <P32-F92>),
-      text(0.9em, qty[44.1][MHz]),
+      (rel: (0.3 * hfs-width, -0.01), to: <P32-F112>),
+      (rel: (0.3 * hfs-width, 0.01), to: <P32-F92>),
+      text(0.9em, qty[44][MHz]),
       "<|-|>",
       label-side: right,
       label-angle: top,
@@ -132,7 +132,10 @@
   )
 }
 
-#figure(block(stroke: black, level-structure(debug: 3)))
+#figure({
+  set text(10pt)
+  block(stroke: black, level-structure(debug: 0))
+})
 #pagebreak()
 
 
