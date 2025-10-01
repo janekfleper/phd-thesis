@@ -65,7 +65,7 @@ The first term is smaller than the second term by at least one order of magnitud
 For the air segments, the difference between the terms is even greater at three orders of magnitude.
 We can therefore neglect the first term to compute the temperature sensitivity of the superlattice phase.
 In @tab:phase-stability-temperature-coefficients, the resulting temperature coefficients $phy.pdv(phi, T)$ are compiled for each segment.
-If we combine all segments, the total temperature coefficient is $phy.pdv(phi, T) = #qty(per-mode: "slash")[-14.4][mrad/K]$.
+If we combine all segments, the total temperature coefficient is $phy.pdv(phi, T) = #iqty[-14.4][mrad/K]$.
 However, the changes of the temperature $T$ are not uniform in all segments.
 In the first air segment between the retro mirror and the retro lens, the peak-to-peak temperature variation is typically #degC[0.2] in one hour.
 Additionally, long-term drifts of the mean temperature over a few days range between #degC[0.1] and #degC[0.2].

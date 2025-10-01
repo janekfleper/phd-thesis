@@ -1,5 +1,10 @@
 #import "@local/fancy-thesis:0.1.0": optional-refs, thesis
-#import "@preview/fancy-units:0.1.1": add-macros
+#import "@local/fancy-units:0.2.0": add-macros, configure, format-qty, format-unit-fraction
+
+#configure(
+  unit-format: format-unit-fraction,
+  qty-format: format-qty.with(separator: sym.wj + h(0.2em) + sym.wj),
+)
 
 #add-macros(
   Ohm: sym.Omega,

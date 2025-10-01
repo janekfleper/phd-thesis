@@ -36,9 +36,9 @@
 
   // define scales for the hyperfine structure based on the fine-structure state
   let hyperfine-scale = (
-    S12: 0.0007,
+    S12: 0.0005,
     P12: 0.006,
-    P32: 0.007,
+    P32: 0.008,
   )
 
   // this dummy edge is used to correctly draw the labels of the states
@@ -56,7 +56,7 @@
   diagram(
     debug: debug,
     spacing: 0cm,
-    cell-size: (2cm, 3cm),
+    cell-size: (1.5cm, 1.7cm),
     edge-stroke: 0.6pt,
 
     for state in states {
@@ -75,7 +75,7 @@
     edge(
       (rel: (-0.5 * fs-width, 0), to: <S12>),
       (rel: (-0.5 * fs-width, 0), to: <P32>),
-      qty[766.7][nm],
+      text(0.9em, qty[766.7][nm]),
       "<|-|>",
       label-side: left,
       label-angle: right,
@@ -91,30 +91,30 @@
     // ),
 
     edge(
-      (rel: (0.2 * hfs-width, 0), to: <S12-F92>),
-      (rel: (0.2 * hfs-width, 0.01), to: <P32-F112>),
-      [cooling + imaging],
-      "-|>",
-      label-side: left,
-      label-angle: right,
-      label-pos: 63%,
-      stroke: blue + 0.9pt,
-    ),
-
-    edge(
-      (rel: (0.4 * hfs-width, 0), to: <S12-F72>),
-      (rel: (0.4 * hfs-width, 0.01), to: <P32-F92>),
-      [repumping],
+      (rel: (0.5 * hfs-width, 0), to: <S12-F92>),
+      (rel: (0.5 * hfs-width, 0.01), to: <P32-F112>),
+      text(0.9em, "cooling + imaging"),
       "-|>",
       label-side: right,
       label-angle: right,
-      label-pos: 35%,
-      stroke: blue + 0.9pt,
+      label-pos: 63%,
+      stroke: blue + 0.6pt,
     ),
 
     edge(
-      (rel: (0.8 * hfs-width, -0.01), to: <S12-F92>),
-      (rel: (0.8 * hfs-width, 0.01), to: <S12-F72>),
+      (rel: (0.1 * hfs-width, 0), to: <S12-F72>),
+      (rel: (0.1 * hfs-width, 0.01), to: <P32-F92>),
+      text(0.9em, "repumping"),
+      "-|>",
+      label-side: left,
+      label-angle: right,
+      label-pos: 42.5%,
+      stroke: blue + 0.6pt,
+    ),
+
+    edge(
+      (rel: (0.9 * hfs-width, -0.01), to: <S12-F92>),
+      (rel: (0.9 * hfs-width, 0.01), to: <S12-F72>),
       text(0.9em, qty[1285.8][MHz]),
       "<|-|>",
       label-side: right,
@@ -122,9 +122,9 @@
     ),
 
     edge(
-      (rel: (0.8 * hfs-width, -0.01), to: <P32-F112>),
-      (rel: (0.8 * hfs-width, 0.01), to: <P32-F92>),
-      text(0.9em, qty[44.1][MHz]),
+      (rel: (0.3 * hfs-width, -0.01), to: <P32-F112>),
+      (rel: (0.3 * hfs-width, 0.01), to: <P32-F92>),
+      text(0.9em, qty[44][MHz]),
       "<|-|>",
       label-side: right,
       label-angle: top,
@@ -132,7 +132,10 @@
   )
 }
 
-#figure(block(stroke: black, level-structure(debug: 3)))
+#figure({
+  set text(10pt)
+  block(stroke: black, level-structure(debug: 0))
+})
 #pagebreak()
 
 
@@ -221,7 +224,7 @@
 
   let occupation-height = 0.2
   let occupation-radius = 0.1
-  let occuptation(state, color, start, end, name: none) = {
+  let occupation(state, color, start, end, name: none) = {
     rect(
       (rel: (start, -occupation-height / 2), to: state + ".start"),
       (rel: (end, occupation-height / 2), to: state + ".start"),
@@ -252,6 +255,7 @@
     im3: t0 + 13 * dt,
     end: timings.at("end"), // final state
   )
+
 
   let arrow-padding = 0.15
   let arrow(initial, final) = {
@@ -284,19 +288,19 @@
       )
     }
 
-    occuptation("mF9", blue, t.at("start"), t.at("rf2-97"), name: "down-0")
-    occuptation("mF7", blue, t.at("rf2-97") + dt, t.at("rf3-75"), name: "down-1")
-    occuptation("mF5", blue, t.at("rf3-75") + dt, t.at("end"), name: "down-2")
+    occupation("mF9", blue, t.at("start"), t.at("rf2-97"), name: "down-0")
+    occupation("mF7", blue, t.at("rf2-97") + dt, t.at("rf3-75"), name: "down-1")
+    occupation("mF5", blue, t.at("rf3-75") + dt, t.at("end"), name: "down-2")
 
-    occuptation("mF7", orange, t.at("start"), t.at("rf1-sd"), name: "up-0")
-    occuptation("mF5", yellow, t.at("rf1-sd") + dt, t.at("rf3-75"), name: "double-0")
-    occuptation("mF7", yellow, t.at("rf3-75") + dt, t.at("rf4-97"), name: "double-1")
-    occuptation("mF9", yellow, t.at("rf4-97") + dt, t.at("im1"), name: "double-2")
+    occupation("mF7", orange, t.at("start"), t.at("rf1-sd"), name: "up-0")
+    occupation("mF5", yellow, t.at("rf1-sd") + dt, t.at("rf3-75"), name: "double-0")
+    occupation("mF7", yellow, t.at("rf3-75") + dt, t.at("rf4-97"), name: "double-1")
+    occupation("mF9", yellow, t.at("rf4-97") + dt, t.at("im1"), name: "double-2")
 
-    occuptation("mF7", red, t.at("rf1-sd") + dt, t.at("rf2-97"), name: "single-0")
-    occuptation("mF9", red, t.at("rf2-97") + dt, t.at("mw1"), name: "single-1")
-    occuptation("shelf", red, t.at("mw1") + dt, t.at("mw2"), name: "single-2")
-    occuptation("mF9", red, t.at("mw2") + dt, t.at("im2"), name: "single-3")
+    occupation("mF7", red, t.at("rf1-sd") + dt, t.at("rf2-97"), name: "single-0")
+    occupation("mF9", red, t.at("rf2-97") + dt, t.at("mw1"), name: "single-1")
+    occupation("shelf", red, t.at("mw1") + dt, t.at("mw2"), name: "single-2")
+    occupation("mF9", red, t.at("mw2") + dt, t.at("im2"), name: "single-3")
 
     arrow("up-0", "double-0")
     arrow("double-0", "double-1")
@@ -309,37 +313,71 @@
     arrow("single-1", "single-2")
     arrow("single-2", "single-3")
 
-    let im-shape = (0.9, 0.45)
-    let image(timing, label, atoms: true) = {
+    // Label the HS1 pulse and the MW pulse
+    content(
+      (rel: (-0.3, 0.3), to: ("up-0.end", 50%, "double-0.start")),
+      box(fill: white, "HS1"),
+    )
+    content(
+      (rel: (0, -0.6), to: "single-2"),
+      "MW",
+    )
+
+    let im-shape = (2.0, 1.0)
+    let atom-image(timing, label, xy) = {
       let x = t.at(timing)
       rect(
-        (x, -0.6),
+        xy,
         (rel: im-shape),
         name: timing,
         anchor: "north-east",
-        stroke: none,
       )
       content(
         timing + ".south",
         (rel: im-shape),
         anchor: "north",
-        image-fill(red, inner: atoms),
+        image-fill(red, inner: true),
       )
       line(
         (x, offset - 0.15),
-        (rel: (0, 0.05), to: timing + ".north"),
+        (x, xy.at(1) + im-shape.at(1) / 2 + 0.05),
         ..arrow-style,
       )
       content(
-        (rel: (0, -0.1), to: timing + ".south"),
-        text(11pt, label),
+        (rel: (0, -0.15), to: timing + ".south"),
+        label,
         anchor: "north",
       )
     }
+    let bright-image(timing, label, xy) = {
+      let x = t.at(timing)
+      rect(
+        xy,
+        (rel: im-shape),
+        name: timing,
+        anchor: "north-east",
+      )
+      content(
+        timing + ".south",
+        (rel: im-shape),
+        anchor: "north",
+        image-fill(red, inner: false),
+      )
+      line(
+        (x, offset + 0.15),
+        (x, xy.at(1) - im-shape.at(1) / 2 - 0.05),
+        ..arrow-style,
+      )
+      content(
+        (rel: (0, 0.15), to: timing + ".north"),
+        box(text(bottom-edge: "baseline", label), fill: white, outset: 1mm),
+        anchor: "south",
+      )
+    }
 
-    image("im1", "OD1")
-    image("im2", "OD2")
-    image("im3", "bright", atoms: false)
+    atom-image("im1", "OD1", (12.3, -0.9))
+    atom-image("im2", "OD2", (14.7, -0.9))
+    bright-image("im3", "bright", (14.7, 2.3))
   })
 }
 
@@ -383,7 +421,7 @@
     set-style(stroke: (paint: red.darken(20%)))
     line(py1064.at(2), py1064.at(3))
     line(py1064.at(3), py1064.at(4))
-    content((rel: (0.5, 0.1), to: py1064.at(3)), Vy1064, anchor: "south")
+    content((rel: (0.2, 0.2), to: py1064.at(3)), text(bottom-edge: "baseline", Vy1064), anchor: "south-west")
 
     // x1064 lattice
     set-style(stroke: (paint: red))
@@ -393,14 +431,14 @@
     line(px1064.at(3), px1064.at(4))
     line(px1064.at(4), px1064.at(5))
     line(px1064.at(5), px1064.at(6))
-    content((rel: (0.5, 0.1), to: px1064.at(3)), Vx1064, anchor: "south")
+    content((rel: (0.2, 0.2), to: px1064.at(3)), text(bottom-edge: "baseline", Vx1064), anchor: "south-west")
 
     // x532 lattice
     set-style(stroke: (paint: green))
     line(px532.at(0), px532.at(1))
     sine-squared(px532.at(1), px532.at(2))
     line(px532.at(2), px532.at(3))
-    content((rel: (2, 0.1), to: px532.at(2)), Vx532, anchor: "south")
+    content((rel: (0.2, -0.6), to: px1064.at(3)), Vx532, anchor: "south-west")
   })
 }
 
@@ -443,35 +481,6 @@
       line(pz532.at(i), pz532.at(i + 1))
     }
     content((rel: (0.5, 0.1), to: pz532.at(2)), Vz532, anchor: "south")
-
-    // label the different segments
-    set-style(stroke: (paint: black, thickness: 0.9pt), mark: (start: "|", end: "|", scale: 1.0))
-    let loading-start = 0
-    let loading-end = start-gap + timings.at("ramp-x532")
-    let loading-width = loading-end - loading-start
-    let experiment-end = timings.at("freeze-x1064")
-    let experiment-width = experiment-end - loading-end
-    let detection-end = width
-    let detection-width = detection-end - experiment-end
-    line(
-      (rel: (loading-start, 0.3), to: "rect.north-west"),
-      (rel: (loading-width, 0)),
-      name: "loading",
-    )
-    line(
-      (rel: (loading-end, 0.3), to: "rect.north-west"),
-      (rel: (experiment-width, 0)),
-      mark: none,
-      name: "experiment",
-    )
-    line(
-      (rel: (experiment-end, 0.3), to: "rect.north-west"),
-      (rel: (detection-width, 0)),
-      name: "detection",
-    )
-    content((rel: (0, 0.35), to: "loading"), "Loading")
-    content((rel: (0, 0.35), to: "experiment"), "Experiment")
-    content((rel: (0, 0.35), to: "detection"), "Detection")
   })
 }
 
@@ -486,6 +495,7 @@
     let height-hfs = 3.5
     let height-xy = 3.5
     let height-confine = 3.5
+    let height-total = height-hfs + height-xy + height-confine
     let pos-hfs = (x: 0, y: 0)
     let pos-xy = (x: 0, y: height-hfs)
     let pos-confine = (x: 0, y: height-hfs + height-xy)
@@ -499,8 +509,34 @@
       freeze-x1064: 7.0,
       end: width - end-gap,
     )
+
+    // Mark the experiment segment with a shaded rectangle
+    let experiment-shift = 0.4
+    let experiment-width = timings.at("freeze-x1064") - timings.at("ramp-x532") - experiment-shift
+    rect(
+      (timings.at("ramp-x532") + experiment-shift, 0),
+      (rel: (experiment-width, height-total)),
+      fill: luma(80%),
+      stroke: none,
+      name: "experiment",
+    )
+
+    // Label the segments
+    content(
+      (rel: (0, 0.35), to: ((0, height-total), 50%, "experiment.north-west")),
+      text(bottom-edge: "baseline", "Loading"),
+    )
+    content(
+      (rel: (0, 0.35), to: "experiment.north"),
+      text(bottom-edge: "baseline", "Experiment"),
+    )
+    content(
+      (rel: (0, 0.35), to: ((width, height-total), 50%, "experiment.north-east")),
+      text(bottom-edge: "baseline", "Detection"),
+    )
+
     let style = (
-      rect: (stroke: black + 0.9pt),
+      rect: (stroke: luma(50%) + 0.5pt),
       atom: (radius: 3mm, shape: (6, 5)),
     )
     let args = (width, start-gap, end-gap, timings, style)
@@ -508,45 +544,52 @@
     experimental-sequence-xy(pos-xy, height-xy, ..args)
     experimental-sequence-confine(pos-confine, height-confine, ..args)
 
-
-    let atom-radius = 2.5mm
+    let atom-radius = 2.0mm
     let atom-shape = (7, 5)
+    let atom-y = -0.9
     content(
-      (rel: (1.2, 2.5), to: "confine.rect.south-west"),
+      (1.5, atom-y),
       name: "atom-dipole",
       atom-cloud(atom-radius, atom-shape, blue.lighten(20%), xscale: 500%, yscale: 500%),
     )
-    line("atom-dipole", (rel: (2, 0.2)), ..arrow-style)
 
     content(
-      (rel: (2.2, 1.2), to: "xy.rect.south-west"),
+      (3.7, atom-y),
       name: "atom-ramp-xy",
       atom-cloud(atom-radius, atom-shape, blue.darken(20%), xscale: 100%, yscale: 100%),
     )
-    line("atom-ramp-xy", (rel: (2.2, -0.5)), ..arrow-style)
 
     content(
-      (rel: (3.2, 2.5), to: "xy.rect.south-west"),
+      (5.3, atom-y),
       name: "atom-freeze-xy",
       atom-cloud(atom-radius, atom-shape, blue.darken(20%), xscale: 80%, yscale: 60%),
     )
-    line("atom-freeze-xy", (rel: (1.4, -0.3)), ..arrow-style)
 
     content(
-      (rel: (6.0, 1.0), to: "confine.rect.south-west"),
+      (6.9, atom-y),
       name: "atom-ramp-x532",
       atom-cloud(atom-radius, atom-shape, blue.darken(20%), kx: 2, xscale: 100%, yscale: 60%),
     )
-    line("atom-ramp-x532", (rel: (-0.1, -3.6)), ..arrow-style)
 
     content(
-      (rel: (8.0, 1.3), to: "confine.rect.south-west"),
+      (8.5, atom-y),
       name: "atom-freeze-x1064",
       atom-cloud(atom-radius, atom-shape, blue.darken(20%), kx: 2, xscale: 60%, yscale: 60%),
     )
-    line("atom-freeze-x1064", (rel: (-0.7, -1.6)), ..arrow-style)
+
+    set-style(stroke: (paint: luma(50%), thickness: 0.9pt, dash: "dashed"))
+    let h1 = -0.1
+    let h2 = -0.3
+    let h3 = -1
+    line((timings.at("ramp-xy"), 0), (rel: (0, h1)), (2.6, h1 + h2), (rel: (0, h3)))
+    line((timings.at("freeze-xy") + 0.2, 0), (rel: (0, h1)), (4.5, h1 + h2), (rel: (0, h3)))
+    line((timings.at("ramp-x532") + 0.4, 0), (rel: (0, h1)), (6.1, h1 + h2), (rel: (0, h3)))
+    line((timings.at("freeze-x1064"), 0), (rel: (0, h1)), (7.7, h1 + h2), (rel: (0, h3)))
   })
 }
 
-#figure(block(stroke: black, experimental-sequence()))
+#figure({
+  set text(10pt)
+  block(stroke: none, experimental-sequence())
+})
 

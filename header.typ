@@ -1,11 +1,12 @@
 #import "@local/fancy-thesis:0.1.0": floating-figure, optional-refs, subref
+#import "@local/fancy-units:0.2.0": format-unit-symbol, num, qty, unit
 #import "@preview/physica:0.9.5" as phy
 #import "@preview/mannot:0.3.0": markrect
-#import "@preview/fancy-units:0.1.1": num, qty, unit
 
 // some custom fancy-units functions
 #let deg(..args, body) = $#num(..args, body)degree$
 #let degC(..args, body) = $#num(..args, body)degree "C"$
+#let iqty = qty.with(unit-format: format-unit-symbol)
 
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
@@ -36,10 +37,11 @@
 #let uqm(m) = $u_q^#m$
 #let bloch(q, n) = $psi_#q^#n$
 
-#let x-axis = [$x$ axis]
-#let y-axis = [$y$ axis]
-#let z-axis = [$z$ axis]
-#let xy-plane = [$x y$ plane]
+#let x-axis = [$x$-axis]
+#let y-axis = [$y$-axis]
+#let z-axis = [$z$-axis]
+#let xy-plane = [$x y$-plane]
+#let yz-plane = [$y z$-plane]
 
 #let x1064 = $x 1064$
 #let ax1064 = $a_x1064$
