@@ -27,7 +27,14 @@
 
 #let K40 = $phy.isotope("K", a: 40)$
 #let asc = $a_(upright("sc"))$
-#let fita0 = sym.alpha
+#let fitr = $rho$
+#let fita0 = $alpha$
+#let fitw0 = $w_0$
+#let fitx0 = $x_0$
+#let fity0 = $y_0$
+#let fitang = $theta.alt$
+#let fitaR = $a_R$
+#let fitsR = $sigma_R$
 
 #let Gsc = $Gamma_"sc"$
 #let Udip = $U_"dip"$
@@ -73,9 +80,6 @@
 #let vz1064 = $v_z1064$
 #let Vz1064 = $V_z1064$
 
-#let band = $epsilon$
-#let cband = $tilde(epsilon)$
-
 #let Vl = $V_l$
 #let Vs = $V_s$
 #let eL = $epsilon_L$
@@ -97,6 +101,12 @@
 #let kett = $phy.ket(t)$
 #let ketdp = $phy.ket(d_+)$
 #let ketdm = $phy.ket(d_-)$
+
+// lattice beam names
+#let forward = "forward-propagating"
+#let retro = "retro-reflected"
+#let zret = $z_"retro"$
+#let zfwd = $z_"forward"$
 
 // thermal lensing parameters
 #let tpower = $p$
@@ -120,9 +130,34 @@
 
 // lattice-modulation variables
 #let lms = [lattice-modulation spectroscopy]
+#let Lms = [Lattice-modulation spectroscopy]
 #let slms = [superlattice-modulation spectroscopy]
+#let Slms = [Superlattice-modulation spectroscopy]
+#let V0 = $V_0$
+#let dV = $delta V$
 #let fmod = $f_"mod"$
+#let fmod2 = $f_"mod"^((2))$
 #let tmod = $tau_"mod"$
+#let Dn = $Delta n$
+#let fnm(n, m) = $f_(#n -> #m)$
+
+#let vr = $phy.vb(r)$
+#let vq = $phy.vb(q)$
+#let vn = $phy.vb(n)$
+#let a1 = $phy.vb(a)_1$
+#let a2 = $phy.vb(a)_2$
+#let a3 = $phy.vb(a)_3$
+#let b1 = $phy.vb(b)_1$
+#let b2 = $phy.vb(b)_2$
+#let m1 = $m_1$
+#let m2 = $m_2$
+#let uq2 = $u_vq$
+#let uqm2(m1, m2) = $u_vq^(#m1 #m2)$
+#let nx = $n_x$
+#let ny = $n_y$
+#let cn = $eta$ // coupled band index
+#let band = $epsilon$
+#let cband = $tilde(epsilon)$
 
 // superlattice phase parameters
 #let fdds = $f_"DDS"$
