@@ -2,15 +2,14 @@
 
 == Modulating the superlattice potential <sec:mod-super>
 
-// From the optical lattices introduced in @sec:setup-lattices, the #x532 lattice was missing from the measurements in this chapter so far.
 For the #x532 lattice, the available optical power limits the lattice depth to $Vx532 = #qty[30][Erec]$.
 As a consequence, the #x532 lattice is not suitable for a calibration with the in-situ #lms due to the width of the excited band $n' = 3$.
 The mean transition frequency at a lattice depth of #qty[30][Erec] is $fnm(1, 3) approx #qty[322][kHz]$ and the corresponding band width is $delta epsilon_3 slash h approx #qty[13][kHz]$.
-Relative to the transition frequency, the band width $delta epsilon_3 slash (h dot fnm(1, 3)) approx #qty[4][%]$ is too wide for the data analysis introduced in @sec:mod-eval.
+The relative band width $delta epsilon_3 slash (h dot fnm(1, 3)) approx #qty[4][%]$ is too wide for the data analysis introduced in @sec:mod-eval.
 We would need to take the occupation of the lowest band and the density of states of both bands into account to evaluate the resonances in the atomic densities.
-Instead, we decided to use the superlattice potential for the calibration of the #x532\-lattice depth.
-The principle of the in-situ #slms is equivalent to the in-situ #lms.
-We excite the atoms from the lowest band $n = 1$ to a narrow band $n'$ via modulation of the lattice depth.
+Instead, we use the superlattice potential for the calibration of the #x532\-lattice depth.
+The principle of the in-situ #lms in the superlattice potential is equivalent to a monochromatic lattice potential.
+We excite the atoms from the lowest band $n = 1$ to a narrow band $n'$ to probe the band structure.
 Additionally, an atom-loss channel is required to make the resonances visible as discussed in @sec:mod-loss.
 In the superlattice potential, we find a suitable configuration at the antisymmetric phase $phi = -pi slash 4$ and the lattice depths $Vx1064 = #qty[60][Erec]$ and $Vx532 = #qty[18][Erec]$ (see #subref(<fig:mod-super-phase>, "a")).
 The excited band $n' = 4$ has the width $delta band_4 approx #qty[0.4][kHz]$ and the transition frequency is $fnm(1, 4) approx #qty[270][kHz]$.
@@ -18,19 +17,19 @@ This is on par with the properties of the band transition $1 -> 3$ in the infrar
 Additionally, the Wannier functions $w_1 (x)$ and $w_4 (x)$ are localized on the same lattice site#footnote[
   This requirement is only relevant in the superlattice potential since the unit cell contains two lattice sites.
 ] and they have the same parity.
-Regarding the atom-loss mechanism, we can use the untrapped band $n'' = 9$ to heat the atoms out of the optical lattice potential.
+Regarding the atom-loss mechanism, the untrapped band $n'' = 9$ is available to heat the atoms out of the optical lattice potential.
 The loss channel $1 -> 4 -> 9$ is resonant for a single modulation frequency over a wide range of lattice depths #Vx1064 and #Vx532.
-A secondary modulation frequency is, therefore, not necessary as long as the highest band that meets all requirements for the in-situ #slms is used.
+A secondary modulation frequency is, therefore, not necessary for the in-situ #slms.
 
-For the calibration of the #x532\-lattice depth, the antisymmetric configuration of the superlattice potential should always be used.
+We use the antisymmetric configuration ($phi = -pi slash 4$) of the superlattice potential for the calibration of the #x532\-lattice depth.
 As indicated in #subref(<fig:mod-super-phase>, "b"), the band structure shows the least sensitivity around the phase $phi = -pi slash 4$.
 Since we can control the superlattice phase $phi$ with an absolute accuracy of a few #unit[mrad] (see @sec:phase-stability), the shot-to-shot fluctuations of the superlattice phase do not affect the calibration of the #x532\-lattice depth#footnote[
   The in-situ #slms could also be used for the calibration of the superlattice phase.
   In this case, measuring around the symmetric configuration ($phi = 0$) is most suitable to maximize the sensitivity of the band structure to the superlattice phase.
 ].
 At the antisymmetric phase $phi = -pi slash 4$, the lower lattice site in the unit cell is effectively the sum of the two potentials (c.f. #subref(<fig:theory-super-potential-phase>, "c")).
-A modulation of either lattice depth #Vx1064 or #Vx532 can be used for the band transition $1 -> 4$.
-However, applying the modulation to the #x532\-lattice depth is significantly more effective due to the shorter lattice period compared to the #x1064 lattice.
+A modulation of either lattice depth #Vx1064 or #Vx532 is suitable for the band transition $1 -> 4$.
+However, applying the modulation to the #x532\-lattice depth is significantly more effective compared to the #x1064\-lattice depth due to the shorter lattice period.
 We achieve a good resonance visibility with the modulation amplitude $dV slash Vx532 approx #tr[???]$ and the modulation time $tmod = #qty[0.75][s]$.
 
 #floating-figure(
@@ -47,15 +46,15 @@ We achieve a good resonance visibility with the modulation amplitude $dV slash V
   label: <fig:mod-super-phase>,
 )
 
-Besides the sensitivity to the superlattice phase $phi$, we also need to check the sensitivity of the band transition $1 -> 4$ to the lattice depth #Vx532.
-Even though the lower lattice site is effectively the sum of the two lattices, we have to check the scaling of the transition frequency #fnm(1, 4) for either lattice depth.
-According @fig:mod-super-scaling, the transition frequency is mainly sensitive to the #x532\-lattice depth around the reference configuration with $Vx1064 = #qty[60][Erec]$ and $Vx532 = #qty[18][Erec]$.
-Nevertheless, we need to take the lattice depth $Vx1064(x, y)$ into account for the data analysis.
+Besides the sensitivity to the superlattice phase $phi$, we also consider the sensitivity of the band transition $1 -> 4$ to the lattice depth #Vx532.
+Even though the lower lattice site is effectively the sum of the two lattices, the scaling of the transition frequency #fnm(1, 4) can show a different behavior.
+According @fig:mod-super-scaling, the transition frequency is mainly sensitive to the #x532\-lattice depth around the reference configuration with $Vx1064 = #qty[60][Erec]$of approximately and $Vx532 = #qty[18][Erec]$.
 We use the result of the #x1064\-lattice calibration in @tab:mod-super-result as the reference data for the computation of the transition frequency $fnm(1, 4)(Vx1064, Vx532, phi)$.
-Additionally, the superlattice phase is set to $phi = -pi slash 4$, leaving only the parameters of the lattice depth $Vx532(x, y)$ and the resonance parameters #fitaR and #fitsR for the fit of the resonances according to the model in @eq:mod-eval-model-resonance.
+The superlattice phase is set to $phi = -pi slash 4$, leaving only the parameters of the lattice depth $Vx532(x, y)$ and the resonance parameters #fitaR and #fitsR for the fit of the resonances according to the model in @eq:mod-eval-model-resonance.
 The general procedure of the #x532\-lattice depth calibration works analogous to the in-situ #lms introduced in @sec:mod-intro and @sec:mod-eval.
-We scan the modulation frequency #fmod across the atom cloud to find the depleted resonances that show the equipotential lines of the superlattice potential.
-For the data analysis, we model the lattice depth $Vx532(x, y)$ with @eq:mod-eval-model-lattice-depth where the angle #fitang is shared with the lattice depth $Vx1064(x, y)$.
+We scan the modulation frequency #fmod across the atom cloud to find the resonances that show the equipotential lines of the superlattice potential.
+For the data analysis, we model the lattice depth $Vx532(x, y)$ with @eq:mod-eval-model-lattice-depth.
+Only the angle #fitang is shared with the lattice depth $Vx1064(x, y)$.
 The other parameters of $Vx532(x, y)$ are independent of the #x1064\-lattice parameters.
 In the first step of the data analysis, we run the combined fit with all atomic densities $n(x, y)$ and the corresponding modulation frequencies #fmod.
 To estimate the errors of the calibration, we run the individual fits according to the procedure described in @ssec:mod-eval-error.
@@ -68,7 +67,7 @@ To estimate the errors of the calibration, we run the individual fits according 
     The superlattice phase is set to the antisymmetric configuration $phi = -pi slash 4$, and the dashed vertical lines indicate the reference values $Vx532 = #qty[18][Erec]$ and $Vx1064 = #qty[60][Erec]$ for the respective lattice depths.
     Around the reference configuration, the transition frequency #fnm(1, 4) is sensitive to the #x532\-lattice depth (*a*), while it is constant as a function of the #x1064\-lattice depth (*b*).
     At the avoided crossings of the bands $3$ and $4$, the assignment of the Wannier functions $w_3 (x)$ and $w_4 (x)$ changes.
-    The relevant transition is then $1 -> 3$, and the sensitivity to the respective lattice depths is unchanged.
+    The relevant transition becomes $1 -> 3$, and the sensitivity to the respective lattice depths is unchanged.
 
     // TODO: Add alpha channel to show the actual overlap with $n = 1$!
   ],
@@ -76,15 +75,15 @@ To estimate the errors of the calibration, we run the individual fits according 
 )
 
 #subref(<fig:mod-super-result>, "a") shows the result of the calibration of the #x532\-lattice depth with the in-situ #slms.
-The transition frequency #fnm(1, 4) according to the superlattice band structure matches the resonances in the atomic density.
+The transition frequency #fnm(1, 4) computed from the superlattice band structure matches the resonances in the atomic density.
 The corresponding lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ are shown in #subref(<fig:mod-super-result>, "b").
-As expected from the waists stated in @ssec:setup-lattices-xy, the #x1064\-lattice beams are slightly wider than the #x532\-lattice beams.
-Furthermore, we can see a small positional shift $delta fity0$ between the two lattices potentials.
-This is a fundamental limitation of the alignment with the shared retro mirror (see @fig:super-setup).
+As stated in @ssec:setup-lattices-xy, the #x1064\-lattice beams are slightly wider than the #x532\-lattice beams.
+Furthermore, we observe a small positional shift $delta fity0$ between the two lattices potentials.
+This is a fundamental limitation of the lattice alignment with the shared retro mirror (see @fig:super-setup)of approximately.
 The mirrors for the #forward beams cannot change the mean position of the lattice potentials.
 With the retro mirror, we are only able to apply equal shifts to the position of the two lattices.
 Therefore, we only adjust the #forward beam of the #x532 lattice after running the #x1064\-lattice alignment procedure introduced in @ssec:mod-align-x1064.
-With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we use the technique shown in @fig:mod-align-x1064-forward for the alignment of both the horizontal and vertical position of the #forward #x532\-lattice beam.
+With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we use the technique shown in @fig:mod-align-x1064-forward for the horizontal and vertical alignment of the #x532\-lattice beams.
 
 #floating-figure(
   image("figures/modulation_superlattice_result.png"),
@@ -111,15 +110,15 @@ As discussed at the beginning of @sec:mod-eval, the measured calibration factor 
 The single-plane tomography (see @ssec:setup-sequence-detect) would be required for an improvement of the lattice calibration.
 Within the context of this thesis, we directly use the measured calibration factor #fita0 in @tab:mod-super-result since all measurements in the superlattice potential also take the weighted average of the vertical lattice planes.
 
-For the position #fity0 we find a difference of $delta fity0 approx #qty[3][μm]$ between the #x1064 lattice and the #x532 lattice.
-This shift is most likely caused by the non-orthogonal transmission of the lattice beams through the glass cell and off-center transmission through the lenses surrounding the glass cell (see @fig:super-setup).
+For the position #fity0 we find the difference $delta fity0 approx #qty[3][μm]$ between the #x1064\-lattice potential and the #x532\-lattice potential.
+This positional shift is most likely caused by the non-orthogonal transmission of the lattice beams through the glass cell and off-center transmission through the lenses surrounding the glass cell (see @fig:super-setup).
 Due to the shared optical path, we could only compensate this shift with a refractive optical element in the retro path.
 This would, however, introduce an additional source for fluctuations of the superlattice phase $phi$ due to the temperature $T$.
 Since the shift $delta fity0$ is significantly smaller than the size of the atom cloud as well as the waists of the respective lattices we decided against a compensation of the positional shift.
 
 Compared to the positions #fity0, the angles #fitang have to be perfectly matched to achieve a homogeneous superlattice phase $phi(x, y)$.
 With the in-situ #slms, we can only determine the absolute angle #fitang in the #xy-plane with an uncertainty of #deg[0.4], which is approximately #qty[7][mrad].
-In comparison, the relative angle $Delta fitang$ between the lattice axes requires an accuracy of approximately #qty[10][μrad] to achieve a homogeneous superlattice phase $phi(x, y)$.
+In comparison, the relative angle $Delta fitang$ between the lattice axes requires an accuracy better than #qty[10][μrad] to achieve a homogeneous superlattice phase $phi(x, y)$.
 In @ssec:phase-measure-detect, we achieve this accuracy with a phase-sensitive measurement based on the time evolution of the atoms in the superlattice potential.
 The angle #fitang determined with the in-situ #slms can, therefore, only be used for the coarse alignment of the lattice beams.
 
@@ -131,8 +130,8 @@ The angle #fitang determined with the in-situ #slms can, therefore, only be used
 
     x1064, num[139.4(17)], num[1.0011(5)], num[-1.60(23)], num[-5.50(17)],
     x532,
-    $#num[116(7)]#hide[1.4]$,
-    $#num[1.028(3)]#hide[1]$,
+    $#num[115(6)]#hide[1.4]$,
+    $#num[1.029(3)]#hide[1]$,
     $#hide[#sym.minus]#num[1.5(5)]#hide[03]$,
     $#num[-5.2(4)]#hide[01]$,
   ),
@@ -145,10 +144,13 @@ The angle #fitang determined with the in-situ #slms can, therefore, only be used
   label: <tab:mod-super-result>,
 )
 
-In conclusion, we were able to apply the in-situ #lms to the superlattice potential to realize the calibration of the #x532\-lattice depth.
-This was required due to the insufficient maximal lattice depth $Vx532 = #qty[30][Erec]$ where the width of the excited band $n' = 3$ prevents the data analysis of the resonances in the atomic densities.
+In conclusion, we are able to apply the in-situ #lms to the superlattice potential for the calibration of the #x532\-lattice depth.
+This is required due to the insufficient maximal lattice depth $Vx532 = #qty[30][Erec]$, where the width of the excited band $n' = 3$ prevents the data analysis of the resonances in the atomic densities.
 Nevertheless, using the in-situ #slms for the calibration of the #x532\-lattice depth is a compromise.
-Ideally, we would like to calibrate the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ independently in the respective lattices.
-The in-situ #slms can then be used to investigate the overlap of the two lattices as they form the superlattice potential.
-Analogous to the calibration of the monochromatic lattices in @sec:mod-eval, the absolute accuracy of the calibrated #x532\-lattice depth would require an investigation of superlattice configurations with various lattice depths #Vx1064 and #Vx532.
-As shown in @fig:mod-super-scaling, the sensitivity of the band structure to the #x532\-lattice depth is achieved over a wide range of the lattice parameters.
+Ideally, we want to calibrate the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ independently in the respective lattices.
+Then, we can use the in-situ #slms to investigate the overlap of the two lattices as they form the superlattice potential.
+One option to overcome the limitation of the measurement in the superlattice potential is to repeat the calibration in different superlattice configurations $(Vx1064, Vx532)$.
+The atom-loss mechanism works with a single modulation frequency for a wide range of superlattice configurations.
+As shown in @fig:mod-super-scaling, the sensitivity of the band structure to the #x532\-lattice depth is consistent over a wide range of the lattice parameters.
+If the calibration factor #fita0 changes as a function of #Vx532 or #Vx1064, it would be an indicator for a systematic error of the #x532\-lattice calibration in the superlattice potential.
+Only then, we can claim the absolute accuracy of the calibration measurement introduced in this section.
