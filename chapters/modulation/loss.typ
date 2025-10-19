@@ -3,143 +3,98 @@
 == Investigation of the atom-loss mechanism <sec:mod-loss>
 
 #notes[
-  - Mention the resonance amplitude before the section?
-  - Use error estimation for the resonance amplitude here?
-  - Compute the overlaps based on the Wannier functions for $3 -> 5$ and $3 -> 6$
-  - Argue that only looking at r13fa (and "ignoring" r13fw) is sufficient?
-  - Explain why the z532 lattice is generally weaker than the infrared lattices?
-  - Discuss why $a_R$ does not go to zero immediately?
+  // - Mention the resonance amplitude before the section?
+  // - Use error estimation for the resonance amplitude here?
 ]
 
-In @sec:mod-intro we have discussed the requirements on the width of the excited band for the calibration of the lattice depth.
-We concluded that the excited band needs to be deeply trapped in the lattice potential to be considered narrow.
-For the x1064 lattice and the y1064 lattice, this condition is fulfilled for the excited band $n' = 3$ at a lattice depth of #qty[60][Erec].
-With a tunneling amplitude of $t slash h = cal(O)(#qty[100][Hz])$ the atoms are not completely frozen in the upper band, but they are not able to leave the lattices either.
-The overall potential is still strongly confining due to the red detuning of the x1064 lattice and the y1064 lattice.
-Therefore, we cannot explain the visible resonances in @fig:mod-intro-images if we only consider the transition $1 -> 3$.
+In @sec:mod-intro, I already discussed the requirement of an untrapped band to lose the excited atoms in the band $n'$.
+For the in-situ #lms in the #x1064 lattice and the #y1064 lattice, we use the lattice depth $V0 = #qty[60][Erec]$ and the band transition $1 -> 3$.
+In the band $n' = 3$, the atoms are not completely frozen with the tunneling amplitude $t slash h approx #qty[40][Hz]$.
+While this is sufficient for the atoms to tunnel in the modulated lattice, the radial potential by the perpendicular in-plane lattice still imposes a strong confinement on the atoms.
+Therefore, if the atoms are only excited to the band $n' = 3$, the in-situ detection does not show depleted resonances.
+To visualize the occupation of the band $n' = 3$ an additional excitation of the atoms to the band $n'' = 6$ is required.
+Above the band $n'' = 6$, the band structure forms a continuous spectrum to heat the atoms out of the three-dimensional potential.
+In this section, I will determine the threshold of the lattice depth #V0 for the atom-loss mechanism with a single modulation frequency.
+Subsequently, I will discuss the generalization of the in-situ #lms for lattice depths $V0 >= #qty[40][Erec]$.
 
-During regular calibration measurements of the lattice depth, we discovered that the amplitude of the resonances is significantly worse at #qty[70][Erec] and #qty[80][Erec].
-This behavior cannot be explained in the context of the transition $1 -> 3$.
-The changes to the band structure compared to the lattice depth of #qty[60][Erec] are insignificant.
-When modulating the z532 lattice at a depth of #qty[100][Erec], the transition $1 -> 3$ is not visible at all.
-We therefore have to use the transition $1 -> 5$ to achieve visible resonances for the lattice-depth calibration.
-To investigate the vanishing transition $1 -> 3$ at lattice depths above #qty[60][Erec], we measured the in-situ lattice modulation spectroscopy as a function of the lattice depth $V_0$ from #qty[50][Erec] to #qty[80][Erec].
-We will look at the x1064 lattice as well as the z532 lattice since we do not know whether the observed behavior is related to the coupling of the x1064 lattice and the y1064 lattice.
-
-To quantify the visibility of the resonances, we are going to use the dimensionless resonance amplitudes $a_R$.
-We introduced the resonance function @eq:mod-eval-model-resonance[] as an empirical model to describe the shape of the resonances in the atom cloud.
-The amplitude $a_R$ and the width $sigma_R$ are not based on any theoretical model.
-We are only using the amplitude $a_R$ to illustrate the changes of the resonance amplitude as a function of the lattice depth $v_0$.
-In #subref(<fig:mod-loss-result>, "a") we can see that the resonance amplitudes show a kink near the lattice depth $V_0 = #qty[65][Erec]$.
-For higher lattice depths the resonance amplitude decreases rapidly, matching the observed amplitude of the resonances.
-In the x1064 lattice, the resonances were already too faint for the evaluation at lattice depths $V_0 > #qty[75][Erec]$
-This was not an issue in the z532 lattice, where the evaluation returned consistent results even for $a_R < #num[0.1]$.
+To investigate the atom-loss mechanism that enables the resonance visibility, we modulate the #x1064 lattice and scan the lattice depth #Vx1064 from #qty[50][Erec] to #qty[75][Erec].
+We do not expect the transition $1 -> 3$ to affect the resonance visibility since the widths of the lower and upper band are only subject to small changes.
+Instead, we attribute all changes of the resonance visibility to the transition $3 -> 6$.
+To quantify the resonance visibility, we use the dimensionless resonance amplitude #fitaR from the fit model in @eq:mod-eval-model-resonance.
+In #subref(<fig:mod-loss-result>, "a"), we observe a rapid decrease of the resonance amplitude above the lattice depth $Vx1064 approx #qty[65][Erec]$.
+This critical lattice depth matches the overlap between the transition frequencies #fnm(1, 3) and #fnm(3, 6) in #subref(<fig:mod-loss-result>, "b").
+Below $Vx1064 approx #qty[65][Erec]$, a single modulation frequency is sufficient for the loss channel $1 -> 3 -> 6$.
+In deeper lattices, the transition $3 -> 6$ is no longer resonant for the modulation frequency #fmod.
+As a consequence, most of the excited atoms remain in the band $n' = 3$ where they are still trapped in the optical lattice.
+The resonance amplitude #fitaR does not decrease in a single step due to the inhomogeneity of the lattice depth $Vx1064(x, y)$.
+While the setpoint #Vx1064 quantifies the lattice depth on the lattice axis, the mean lattice depth is always lower by a few percent.
 
 #floating-figure(
   image("figures/modulation_loss_result.png"),
   caption: [
     Decrease of the resonance amplitude $a_R$ in deep lattices.
-    In *a* we can see the results for the x1064 lattice and the z532 lattice.
-    During the modulation in the x1064 lattice, the depth of the y1064 lattice is set to #qty[30][Erec] and the depth of the z532 lattice is set to #qty[100][Erec].
-    This is the default configuration already introduced in @sec:mod-intro.
-    For the modulation in the z532 lattice, the depth of the x1064 lattice and the y1064 lattice is set to #qty[20][Erec] which maximizes the resonance amplitude for a fixed modulation amplitude.
-    *b* shows the available band transitions in the range of lattice depths.
+    *a*, Resonance amplitude #fitaR as a function of the lattice depth #V0.
+    We observe a significant decrease of the resonance amplitude at $V0 >= #qty[65][Erec]$.
+    The insets highlight the reduced visibility of the resonances.
+    *b*, Available band transitions depending on the lattice depth #V0.
+    The transition $3 -> 6$ can only be accessed by the modulation frequency $fmod = fnm(1, 3)$ up to $V0 approx #qty[65][Erec]$, while the transition $3 -> 5$ is never resonant.
+    In deeper lattices, most of the atoms remain in the higher band $n' = 3$ which reduces the visibility of the resonances.
 
-    #notes[
-      - Select better colors for both axes... #emoji.face.inv
-      - Just use labels for the transitions in *b* instead of the legend?
-      - Improve the ylabel in *b*?
-      - Add more description for axes *b*...
-      - Add some images to show the low-amplitude resonances?
-      - Add the transition $1 -> 4$ to *b*? Remove the transition $3 -> 5$?
-    ]
+    // TODO: Run the individual evaluation here or at least discuss the error bars in *a*?
+    // TODO: Add the transition $1 -> 4$ to *b*? Remove the transition $3 -> 5$?
   ],
   label: <fig:mod-loss-result>,
 )
 
-The kink in #subref(<fig:mod-loss-result>, "a") prompted us to take a closer look at the band structure as a function of the lattice depth $V_0$.
-While the energy associated with the transition $1 -> 3$ is just increasing monotonously with $V_0$, we found something interesting when looking at the possible transitions $3 -> n''$ in #subref(<fig:mod-loss-result>, "b").
-Up to the lattice depth $V_0 approx #qty[65][Erec]$, the transition $3 -> 6$ overlaps with the transition $1 -> 3$.
-Due to the width of the band $n'' = 6$, this overlap exists for a wide range of lattice depths from #qty[30][Erec] to #qty[65][Erec].
-This overlap can explain both the loss of atoms in general, as well as the rapid decrease of the resonance amplitude $a_R$.
-If the modulation frequency $f_"mod"$ is resonant with the transitions $1 -> 3$ and $3 -> 6$ at the same time, the atoms can be completely removed from the lattice.
-Above the band $n'' = 6$ the band structure is a continuous spectrum, and the atoms can be steadily heated out of the lattice potential.
-Since this process only works if the atoms are already in the excited band $n' = 3$, the heating transition $3 -> n''$ does not affect the initial measurement of the local lattice depth.
-We just need this additional transition to an untrapped band to make the local occupation of the excited band visible.
-The lack of overlap between the two transitions at $V_0 > #qty[65][Erec]$ will then rapidly reduce the resonance amplitude $a_R$.
-The atoms will remain trapped in the excited band $n' = 3$, which is not resolvable with the in-situ imaging.
-
-Since we can observe the kink for both the x1064 lattice and the z532 lattice, we can be certain that the loss mechanism does not require the coupling of two lattices.
-We do however have to discuss the odd parity of the transition $3 -> 6$, which can have an effect on the efficiency of the heating process.
-In @sec:mod-intro, we discussed that only transitions with even $Delta n$ are possible when the lattice depth is modulated.
-For the x1064 lattice and the y1064 lattice, we already knew that odd transitions such as $1 -> 4$ are possible #tr[cite Eugenio].
-They will just be significantly weaker than the even transitions such as $1 -> 3$ and $1 -> 5$.
-There are two possible effects that enable odd transitions after all.
-If the lattice has a running-wave component, the modulation $delta v$ will also result in a small perturbation with an odd parity.
-Furthermore, the overall confinement of the atoms will affect the Wannier functions such that their parity is no longer purely even or odd #tr[cite anything?].
-While both effects are small, the resulting matrix elements for odd transitions are sufficient to enable the lattice modulation spectroscopy.
-
-To confirm that the transition $3 -> n''$ is required for the visibility of the resonances, we are going to probe this transition with a secondary modulation frequency $f_"mod"^((2))$.
-This secondary modulation is applied at the same time as the primary modulation.
-If our understanding about the overlap of the transitions $1 -> 3$ and $3 -> 6$ is correct, we should see a recovery of the resonance amplitude at $V_0 > #qty[65][Erec]$ when applying the appropriate secondary modulation frequency.
-To see the isolated effect of the secondary modulation frequency, we are going to conduct the measurement at $Vx1064 = #qty[70][Erec]$ where the gap between the transitions $1 -> 3$ and $3 -> 6$ is already #qty[4][kHz] wide.
-For the primary modulation, we are going to use the default amplitude $delta V slash Vx1064 = #tr[#qty[3][%]]$, where the resonances are barely visible.
-If we would make the primary modulation too strong, we would already have a broadening on the primary transition $1 -> 3$.
-The goal of this measurement is however to keep the primary transition as is, and to investigate the resonance amplitude $a_R$ as a function of the secondary modulation frequency.
-As long as there is no other transition $1 -> n'$ available at the frequency $f_"mod"^((2))$, the secondary modulation will not result in additional resonances and we can use a strong modulation amplitude $delta V^((2)) slash delta V approx 5$.
-
-In #subref(<fig:mod-loss-channels>, "b") we can see the recovery of the atom loss if the secondary modulation frequency $f_"mod"^((2))$ is resonant with one of the available transitions $3 -> n''$ in #subref(<fig:mod-loss-channels>, "a").
-The scan of $f_"mod"^((2))$ starts just above the transition $1 -> 3$ and ends just below the transition $1 -> 4$ at #qty[190][kHz].
-It does not make sense to start this scan with the secondary modulation frequency equal to the primary modulation frequency.
-The transition $1 -> 3$ would get broadened due to the stronger modulation amplitude, and we would have a different initial state compared to the data in #subref(<fig:mod-loss-channels>, "b").
-Instead, we have to use the resonance amplitude from a measurement without the secondary modulation.
-At a lattice depth of $Vx1064 = #qty[71][Erec]$ we measured the resonance amplitude $a_R approx #num[0.1]$, which matches the baseline where the secondary modulation frequency is not resonant.
-We used the expected frequency of the transition $1 -> 4$ as the upper limit for the secondary modulation frequency to avoid an additional loss channel.
-While the transition $1 -> 4$ is suppressed because of its parity, the strong modulation amplitude $delta V^((2))$ is sufficient to create additional resonances in the atom cloud.
-If these resonances would be in the proximity of the primary resonances, we can no longer use the resonance amplitude $a_R$ to quantify the atom loss through the channel $1 -> 3 -> n''$.
-
-Even though the enhancement of the resonance amplitude $a_R$ due to the secondary modulation frequency works as expected, it is generally not worth it to use this for the lattice calibration.
-For the x1064 lattice and the y1064 lattice, there is no upside to calibrating the lattice depth at #qty[70][Erec] or #qty[80][Erec] compared to the usual lattice depth of #qty[60][Erec].
-The width of the excited band $n' = 3$ is already negligible compared to the width of the resonances $sigma_R$.
-An even smaller band width can therefore not improve the calibration.
-The downside of the measurement is the sensitivity to the secondary modulation frequency.
-If we set the lattice depth to $Vx1064 = #qty[80][Erec]$ in the sequence, the local lattice depth $V(x, y)$ can go down to #qty[75][Erec] towards the outside of the atom cloud.
-We therefore have to check that the secondary modulation frequency is resonant across the entire atom cloud.
-If we could use the entire upper band $n'' = 6$ or $n'' = 7$, this would not be an issue.
-The additional gaps due to the coupling of the x1064 lattice and the y1064 lattice can however make the secondary modulation frequency off-resonant again.
-This additional complexity is not worth the effort for regular calibration measurements.
-If we want to run this measurement for lattice depths $V_0 > #qty[65][Erec]$, the recommendation is to use the transition $1 -> 5$ instead.
-Starting from the lattice depth $V_0 approx #qty[85][Erec]$, this transition is sufficiently narrow for the in-situ lattice modulation spectroscopy.
-The corresponding loss channels $1 -> 5 -> 10$ and $1 -> 5 -> 11$ work with a single modulation frequency again.
-For the z532 lattice, we are already using this as at the lattice depth $Vz532 = #qty[100][Erec]$.
-The band structure predicts that the transition $1 -> 5$ can be used up to $V_0 = #qty[220][Erec]$ before the overlap with the transition $5 -> 11$ stops.
-In practice, this range of possible lattice depths should be sufficient to calibrate any optical lattice.
+In @sec:mod-intro, we explain that band transitions with even #Dn are preferred for the modulation of the lattice depth according to @eq:mod-intro-function.
+The even parity of the modulation induces a small overlap of Wannier functions with the same parity, while Wannier functions with the opposite parity remain orthogonal.
+Nevertheless, the band transition $3 -> 6$ is possible here to achieve the atom loss.
+There are two possible effects that enable odd transitions between energy bands.
+If the lattice potential has a running-wave component, the modulation #dV also results in a small perturbation with an odd parity.
+Furthermore, the overall confinement of the atoms in the three-dimensional optical lattice affects the Wannier functions such that their parity is no longer purely even or odd.
+This effect becomes stronger for higher bands since the corresponding Wannier functions are no longer strongly localized to the lattice sizes (see #subref(<fig:mod-intro-theory>, "a")).
+While both effects are small, the resulting matrix elements for odd transitions are sufficient to enable the loss channel $3 -> 6$ for the in-situ #lms.
+However, compared to even transitions such as $1 -> 3$ or $1 -> 5$, the odd transitions remain weaker.
 
 #floating-figure(
   image("figures/modulation_loss_channels.png"),
   caption: [
-    Loss channels as a function of the lattice depth.
-    In *a* the frequencies corresponding to the transitions $3 -> n''$ are shown for an x1064-lattice depth of #qty[70][Erec].
-    For this lattice depth, the expected frequency for the transition $1 -> 3$ is #qty[133][kHz], which is marked by the vertical dashed line.
-    The solid black lines are computed from the one-dimensional band structure, and the colored lines are computed from the coupled band structure with the y1064-lattice depth #qty[25][Erec] and the coupling angle #tr[$alpha = #num[-4.6]degree$].
-    The coupling of the x1064 lattice to the y1064 lattice is responsible for the gap in the transition $3 -> 6$, see @sec:mod-coupled for the details.
-    The shaded regions in *b* show the transitions in *a* without the quasimomentum resolution.
-    We can see that the resonance amplitude $a_R$ follows the available transitions $3 -> n''$.
-    In the gaps of the coupled band structure the atoms are not excited to an untrapped band, resulting in faint resonances.
-    The areas in *c* showcase the available atom-loss channel depending on the lattice depth.
-    Up to #qty[65][Erec] we can just use the transitions $1 -> 3$ with a single modulation frequency.
-    In deeper lattices we have to use the secondary modulation frequency as shown in *a* and *b* to lose the atoms efficiently.
-    Above a lattice depth of #qty[85][Erec] we can use the transition $1 -> 5$ with a single modulation frequency again.
-    We expect the atom loss to work up to a lattice depth of #qty[220][Erec], above which a secondary modulation frequency would be required again.
+    In-situ #lms with a secondary modulation frequency.
+    *a*, Resonance amplitude #fitaR depending on the secondary modulation frequency #fmod2.
+    We apply a constant modulation frequency $fmod = #qty[133.0][kHz]$ (dashed line) corresponding to the lattice depth $Vx1064 = #qty[70][Erec]$ to excite the atoms to the band $n' = 3$.
+    If #fmod2 is resonant for a transition $3 -> n''$, the resonance amplitude goes up to $fitaR = 0.9$.
+    In the band gaps, we observe the same resonance amplitude #fitaR as in the reference measurement without the secondary modulation frequency (solid line).
+    *b*, Band transitions $3 -> 6$ and $3 -> 7$ according to the coupled band structure (see @sec:mod-coupled) with the lattice depth $Vy1064 = #qty[25][Erec]$ and the relative angle $fitang = #deg[-4.9]$.
+    The solid lines show the transitions in the one-dimensional band structure without the coupling.
+    *c*, Regimes for the in-situ #lms.
+    Up to $V0 approx #qty[65][Erec]$, we use the loss channel $1 -> 3 -> 6$ with a single modulation frequency.
+    Above $V0 approx #qty[85][Erec]$, we use the transition $1 -> 5$ where the modulation frequency enables the atom loss through the band $n'' = 10$.
+    In the intermediate regime $#qty[65][Erec] lt.approx V0 lt.approx #qty[85][Erec]$, we have to rely on the secondary modulation frequency to use the in-situ #lms.
 
-    #notes[
-      - How to reference the @sec:mod-coupled?
-      - Should I really combine these two axes?
-      - Annotate the full loss channels $1 -> 3 -> 6$ in *c*?
-      - Show anything for the transition $1 -> 5$ here?
-      - Add a point or line for $a_R$ without the secondary modulation?
-      - Discuss the slight mismatch between the data and the coupled theory?
-    ]
+    // TODO: Anything to add for the description of axes *b*?
+    // TODO: Use Erec for the y-axis in *c* instead? Or mention Erec = 4.405 kHz in the caption?
+    // TODO: Use labels instead of the legend in *c*?
+    // TODO: Mark the regimes in *c*?
   ],
   label: <fig:mod-loss-channels>,
 )
+
+To confirm that the transition $3 -> n''$ is required for the visibility of the resonances, we probe the transition with the secondary modulation#footnote[
+  For technical reasons, the secondary modulation is applied at the same time as the primary modulation.
+] at the frequency #fmod2.
+If our understanding about the loss channel $1 -> 3 -> 6$ is correct, we can see a recovery of the resonance visibility at $V0 > #qty[65][Erec]$ with the appropriate secondary modulation frequency.
+To see the isolated effect of the secondary modulation frequency, we conduct the measurement at $Vx1064 = #qty[70][Erec]$ where the frequencies of the transitions $1 -> 3$ and $3 -> 6$ are already detuned by approximately #qty[4][kHz].
+For the primary modulation, we use the default amplitude $dV slash Vx1064 = #tr[#qty[3][%]]$ where the resonances are barely visible at $Vx1064 = #qty[70][Erec]$.
+Since no other transition $1 -> n'$ is available at the frequency #fmod2, we can use a strong modulation amplitude $dV^((2)) slash dV approx 5$ without affecting the atoms in the lowest band.
+In #subref(<fig:mod-loss-channels>, "a") we observe the recovery of the resonance visibility if the secondary modulation frequency #fmod2 is resonant with one of the available transitions $3 -> n''$ in #subref(<fig:mod-loss-channels>, "b").
+Despite the additional band gaps of the coupled band structure, we can always find a fixed modulation frequency #fmod2 to enable the atom-loss mechanism across the entire atom cloud.
+This is essential to extend the parameter regime of the in-situ #lms as a calibration technique for the lattice depth $V0(x, y)$.
+
+For the #z532 lattice, where we can set the lattice depth to $V0 > #qty[85][Erec]$, we use the band transition $1 -> 5$ instead of the band transition $1 -> 3$ for the in-situ #lms.
+For lattice depths $V0 < #qty[85][Erec]$, using the excited band $n' = 5$ is not recommended since its band width $delta band_5$ is not small compared to the transition frequency #fnm(1, 5).
+As shown in #subref(<fig:mod-intro-theory>, "a"), the band $n' = 5$ is only weakly trapped in the lattice potential at $V0 = #qty[60][Erec]$, and it has a substantial band width compared to the band $n' = 3$.
+In lattices with $V0 > #qty[85][Erec]$, the relative band width is $delta band_5 slash (h dot fnm(1, 5)) <= 0.01$.
+For the band $n' = 5$, the atom-loss mechanism is automatically enabled through the untrapped band $n'' = 10$ (see #subref(<fig:mod-loss-channels>, "c")).
+If we also take the band $n'' = 11$ into account, the in-situ #lms with a single modulation frequency works up to $V0 = #qty[220][Erec]$.
+With these two regimes for the transitions $1 -> 3$ and $1 -> 5$, we can apply the in-situ #lms in a wide range of lattice depths.
+The secondary modulation frequency introduced in this section enables us to seamlessly connect these two regimes.

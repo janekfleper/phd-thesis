@@ -4,6 +4,7 @@ AWG
 Andor
 BOOSTIK
 BPO
+Bravais
 Breit
 CCD
 Ciddor
@@ -84,6 +85,9 @@ eigenfrequency
 eigenfunctions
 eigenstate
 eigenstates
+ellipticity
+equipotential
+excitations
 far-detuned
 fermionic
 foci
