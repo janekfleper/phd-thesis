@@ -3,10 +3,6 @@
 
 == Band structure of coupled lattices <sec:mod-coupled>
 
-#notes[
-  - Use $x$ and $y$ here everywhere instead of #vr? Only @eq:mod-coupled-bloch and @eq:mod-coupled-uq _really_ need the vector #vr anyway...
-]
-
 The #x1064\-lattice axis and the #y1064\-lattice axis are not perpendicular in the #xy-plane, as already mentioned in @ssec:setup-lattices-xy and throughout this chapter.
 Instead, the angle of intersection of the lattice axes deviates by $fitang = #deg[-4.9(5)]$ from perpendicularity (see @tab:mod-eval-results).
 The two lattice potentials are, therefore, not separable and we have to apply Bloch's theorem to the coupled potential in the #xy-plane to find the two-dimensional band structure and the corresponding Bloch waves @ashcroft_solid_1976.
