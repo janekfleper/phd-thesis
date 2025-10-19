@@ -112,6 +112,7 @@ The measured lattice depth in the center is slightly larger than #qty[60][Erec],
     The error bars show the individual fit errors.
 
     // TODO: Somehow add a colorbar?
+    // TODO: Try to improve the spacing here to make the axes larger?
   ],
   label: <fig:mod-eval-x1064-result>,
 )
@@ -173,18 +174,18 @@ The results in @tab:mod-eval-results show the strengths as well as the limitatio
 The main parameter is the calibration factor #fita0 that we use to apply the correct lattice depths in the experimental sequences.
 With a relative uncertainty between #num[5e-4] and #num[2e-3], the precision of the lattice calibration is improved significantly compared to the estimated uncertainty of #num[0.03] with the time-of-flight detection technique @miller_ultracold_2016.
 Additionally, the systematic error due to the inhomogeneity of the lattice depths is much smaller.
-With the time-of-flight detection, the resonant modulation frequency always showed the weighted average of the lattice depth.
+With the time-of-flight detection, the resonant modulation frequency shows the weighted average of the lattice depth.
 In @fig:mod-eval-x1064-result, we can see that the #x1064\-lattice depth decreases by up to #qty[5][%] across the atom cloud.
 For the #y1064 lattice and the #z532 lattice in @fig:mod-eval-other-result result, the lattice depths decrease even further due to the ellipticity of the atomic density $n_0(x, y)$.
-The lattice calibration was, therefore, sensitive to the size of the atom cloud as well as the position of the atom cloud relative to the position of the optical lattices.
+The lattice calibration with the time-of-flight technique is, therefore, sensitive to the size of the atom cloud as well as the position of the atom cloud relative to the position of the optical lattices.
 With the in-situ detection technique, we completely resolve the inhomogeneity in the #xy-plane.
 The systematic error due to the inhomogeneity along the #z-axis is on par with the uncertainties of the calibration factor #fita0 for the lattices in @tab:mod-eval-results.
 
-#tr[
-  For now, the uncertainties of the calibration factors are only valid at the lattice depths #V0 that are used during the lattice modulation.
-  Other lattice depths can show small systematic deviations due to an error of the power calibration that connects the setpoint #V0 and the photodiode signal.
-  To investigate this, we would need to repeat the lattice calibration at different lattice depths #V0 within the requirements for the width of the upper band (see @sec:mod-intro) and the atom-loss mechanism (see @sec:mod-loss).
-]
+// #tr[
+//   For now, the uncertainties of the calibration factors are only valid at the lattice depths #V0 that are used during the lattice modulation.
+//   Other lattice depths can show small systematic deviations due to an error of the power calibration that connects the setpoint #V0 and the photodiode signal.
+//   To investigate this, we would need to repeat the lattice calibration at different lattice depths #V0 within the requirements for the width of the upper band (see @sec:mod-intro) and the atom-loss mechanism (see @sec:mod-loss).
+// ]
 
 #floating-figure(
   table(
@@ -236,5 +237,5 @@ For each modulated lattice, only #qty[10][min] to #qty[15][min] of measurement t
 This technique has enormous potential for the automation of the experimental setup.
 Thanks to the precision of the calibration factor #fita0, we can already detect tiny changes in the lattice depth $V0(x, y)$.
 In @sec:mod-align we use this high sensitivity to optimize the alignment of the lattice beams.
-With electric mirror mounts to move the lattice beams, the automation could also include the alignment procedure.
+With motorized mirror mounts to move the lattice beams, the automation could also include the alignment procedure.
 This would allow a daily optimization and calibration of the optical lattice potentials that is fully autonomous.
