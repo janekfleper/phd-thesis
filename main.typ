@@ -1,7 +1,8 @@
 #import "@local/fancy-thesis:0.1.0": optional-refs, thesis
-#import "@local/fancy-units:0.2.0": add-macros, configure, format-qty, format-unit-fraction
+#import "@local/fancy-units:0.2.0": add-macros, configure, format-qty, format-unit-fraction, relative-uncertainties
 
 #configure(
+  num-transform: relative-uncertainties,
   unit-format: format-unit-fraction,
   qty-format: format-qty.with(separator: sym.wj + h(0.2em) + sym.wj),
 )

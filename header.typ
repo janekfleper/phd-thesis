@@ -1,5 +1,5 @@
 #import "@local/fancy-thesis:0.1.0": floating-figure, optional-refs, subref
-#import "@local/fancy-units:0.2.0": format-unit-symbol, num, qty, unit
+#import "@local/fancy-units:0.2.0": format-unit-power, format-unit-symbol, num, qty, unit
 #import "@preview/physica:0.9.5" as phy
 #import "@preview/mannot:0.3.0": markrect
 
@@ -7,6 +7,8 @@
 #let deg(..args, body) = $#num(..args, body)degree$
 #let degC(..args, body) = $#num(..args, body)degree "C"$
 #let iqty = qty.with(unit-format: format-unit-symbol)
+#let pqty = qty.with(unit-format: format-unit-power)
+#let punit = unit.with(format: format-unit-power)
 
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
@@ -48,6 +50,7 @@
 #let y-axis = [$y$-axis]
 #let z-axis = [$z$-axis]
 #let xy-plane = [$x y$-plane]
+#let xz-plane = [$x z$-plane]
 #let yz-plane = [$y z$-plane]
 
 #let x1064 = $x 1064$
@@ -109,6 +112,7 @@
 #let zfwd = $z_"forward"$
 
 // thermal lensing parameters
+#let ftherm = $f_"thermal"$
 #let tpower = $p$
 #let tmag = sym.gamma
 
