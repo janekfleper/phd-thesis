@@ -27,6 +27,7 @@
   debug: true,
 )
 
+#include "chapters/introduction.typ"
 #include "chapters/theory/theory.typ"
 #include "chapters/setup/setup.typ"
 #include "chapters/superlattice/superlattice.typ"
