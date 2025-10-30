@@ -1,88 +1,176 @@
 #import "/header.typ": *
 
+#show heading.where(level: 2): set heading(numbering: none)
+
+
 = Introduction <ch:intro>
 
 #notes[
-  - Where to introduce difference between analog and digital quantum simulation?
-  - Really mention optical lattices for atomic clocks?
-  - Is the lattice configuration from the Esslinger group really a superlattice?
   - Mention strength of _many_ atoms in optical lattices (compared to tweezers)
   - Already mention the Feshbach resonances before the lattices? E.g. for the cooling?
   - Mention optical lattice with Photon BEC?
   - Quickly mention high-temperature superconductivity?
+  - Mention detection of ultracold atoms in the optical lattices? Single-site resolution?
+  - Mention #K40 earlier than the thesis structure?
 ]
 
-Since the first realization of a degenerate Fermi gases #tr[cite deMarco (1999?)], experimental setups using ultracold fermionic atoms have pushed the boundaries in/of quantum simulations.
-Reaching this regime required earlier advancements in trapping and cooling neutral atoms.
-The development of the magneto-optical trap (or the molasses first?) #tr[cite what?] based on laser cooling #tr[cite what?] set off a series of advancements in cooling techniques.
-Laser cooling uses scattering of near-resonant photons to reduce the momentum of the atoms.
-With alkali atoms, this cooling technique is limited to the Doppler temperature by the linewidths of the available electronic/optical transitions #tr[cite Doppler cooling limit?].
-Lower temperatures can be achieved with evaporative cooling, where the atoms with the highest kinetic energy in the cloud are removed from the trap.
-With continuous thermalization, this technique can achieve significantly lower temperature than laser cooling and the required phase-space density for a degenerate Fermi gas.
-Evaporative cooling can be used in both magnetic traps as well as optical dipole traps.
+The first experimental realization of degenerate Fermi gases using ultracold atoms @demarco_onset_1999 @truscott_observation_2001 #tr[provided the spark for a new research area/field].
+Many years after the #tr[quantum-statistical] description of fermionic particles was developed @fermi_zur_1926 @dirac_theory_1926 and shortly after the prediction of neutral atoms as a suitable platform to study #tr[quantum-statistical phenomena] @stoof_superfluidity_1996 @baranov_critical_1998, the required phase-space densities were achieved after significant advancements #tr[in/of] trapping and cooling techniques.
+The development of laser cooling was the foundation for the Zeeman slower @phillips_laser_1982 and the magneto-optical trap @raab_trapping_1987 to cool atoms down to #tr[sub-millikelvin] temperatures.
+To reach quantum degeneracy, the temperature of the atoms need to be reduced further using evaporative cooling @hess_evaporative_1986 in a magnetic trap #tr[cite Ioffe (1962)] @pritchard_cooling_1983 @mewes_bose-einstein_1996.
+Towards very low temperatures, the necessary thermalization of the atoms #tr[is/was] hindered by the Pauli blocking that prevents s-wave scattering of atoms in the same hyperfine state #tr[cite something?].
+This limitation was overcome by using a two-component Fermi gas @demarco_measurement_1999 or via sympathetic cooling with a Bose-Einstein condensate @timmermans_superfluidity_1998.
+Since its initial realization, the platform of degenerate Fermi gases has been used #tr[in/for] many interesting fields such as the BEC-BCS crossover #tr[cite what?] and #tr[mention something else...]
 
-#tr[Cite Greiner 3D lattice paper here somewhere...]
-The development of optical lattices enabled the quantum simulation of solid state systems where the valence electrons tunnel between the #tr[ions] that make up the crystal structure.
-In an optical lattice, the neutral atoms take on the role of the valence electrons and the potential minima define the lattice sites in place of the ions.
-Optical lattices are created by interfering multiple #tr[far-detuned] laser beams to form a periodic optical pattern.
-The optical dipole potential is proportional to the intensity of the interference pattern, where the sign depends on the detuning of the wavelength of the lattice beams from the optical transitions of the atoms #tr[discuss the frequency instead?].
-#tr[If the wavelength of the lattice beams is shorter (longer) than the optical transition(s), the lattice is blue (red) detuned and the corresponding dipole potential is repulsive (attractive).]
-This forms the basis of the tunability of the optical lattice potential.
-The dynamics and the confinement of the atoms in the optical lattice depend on the lattice depth which can be directly varied through the beam power.
-This is a powerful advantage over (real) solid state systems that are (usually) not tunable.
+A major #tr[point of interest] for ultracold fermionic atoms is the analog quantum simulation of the Fermi-Hubbard #tr[Hamiltonian/model] that models the behavior of electrons in solid-state crystals @hubbard_electron_1963.
+Optical lattices created by interfering multiple laser beams form a periodic potential in place of the crystal lattice, and the atoms in the optical lattice take on the role of the valence electrons in the solid-state crystal @jaksch_cold_1998 #tr[really cite the bosonic paper here? maybe use Hofstetter (2002) instead?].
+Due to their fermionic nature, the atoms obey the same quantum statistics as the electrons and #tr[add some "connection" here...].
+According to the Fermi-Hubbard model, the atoms can tunnel between lattice sites and they experience an interaction energy if they occupy the same lattice site.
+If the system is in the tight-binding regime where the atoms are strongly localized to the lattice sites @slater_simplified_1954, the second quantization is used to specify many-body states by the occupation number #tr[of/on] each lattice site.
+In this approximation, the Fermi-Hubbard model #tr[can be expressed] by a simple Hamiltonian using the fermionic creation and annihilation operators #tr[cite what?].
+Nevertheless, numerical solutions of the Fermi-Hubbard model are generally limited to small systems due to the exponential growth of the Hilbert space #tr[cite what?].
+This is where the analog quantum simulation of the Fermi-Hubbard model using ultracold atoms #tr[shines/comes in] #tr[cite Feynman (1982)?].
+The tunneling amplitude can be tuned with the depth of the optical lattices, and the interaction between the atoms can be changed using magnetic Feshbach resonances @inouye_observation_1998 #tr[cite something with lattices].
+This tunability is the key to explore different #tr[phases] of the Fermi-Hubbard model such as the Mott insulator @jordens_mott_2008 with antiferromagnetic correlations @mazurenko_cold-atom_2017 or bound pairs that undergo Bose-Einstein condensation #tr[cite what?].
 
-The most common type of optical lattice uses two interfering laser beams.
-The lattice period depends on the wavelength of the laser beams as well as their angle of intersection.
-If the lattice is formed with a single laser beam that is reflected onto itself, a standing wave pattern emerges.
-With two individual laser beams, the counterpropagating configuration can be used to create a #tr[moving/conveyor belt] lattice by slightly detuning the frequency of the two beams #tr[cite the first paper here?].
-This can be useful to transport atoms in an optical lattice over macroscopic distances #tr[cite Lukas? Alberti/Meschede?].
-A smaller angle between the interfering laser/lattice beams results in a longer lattice period.
-If the intersection angle is tunable, the optical lattice has a dynamic lattice period that can be changed during the experiment.
-This can be used to improve the loading of the atoms into an optical lattice #tr[cite OG shallow-angle/accordion lattice], or to increase the lattice spacing for an improved detection of the atoms #tr[cite Greiner cryogenic?].
-Compared to counterpropagating beam configurations, a shallow-angle lattice can be constructed with an inherently stable lattice phase.
-If the two laser/lattice beams share (most of) the optical path, their optical phase will accumulate/propagate equally?
+The most common type of optical lattice uses a #tr[cat eye configuration/setup] where a laser beam is reflected onto itself to create a standing-wave potential #tr[cite anything?] from the interference of the counterpropagating beams.
+In this configuration, the phase of the optical lattice is fixed #tr[at/to] the retro-reflecting mirror and accumulates #tr[along/in] the optical path from the retro-reflecting mirror to the atoms.
+If two counterpropagating laser beams with different frequencies are used, the optical lattice can be used as a conveyor belt for the transport of atoms over macroscopic distances @schrader_optical_2001 @matthies_long-distance_2024.
+The accordion lattice based on the shallow-angle interference of two laser beams is another type of dynamic optical lattice @fallani_bose-einstein_2005.
+By varying the angle of intersection, the spatial period of the optical lattice can be tuned.
+This technique has been applied to improve the loading of atoms into a single plane of an optical lattice @ville_loading_2017 and the single-site detection of atoms in a two-dimensional optical lattice @su_fast_2025.
 
-Advanced lattice geometries can be created with more than two lattice beams #tr[cite something general like the Windpassinger review?].
-By interfering three laser/lattice beams at angles of #deg[120] a hexagonal lattice structure (like graphene) can be created #tr[cite something specific here].
-A(nother) common type of (advanced) geometry are optical superlattices, which also have a non-trivial unit cell just like the hexagonal lattice #tr[cite what?].
-There are two (common) approaches to create a superlattice potential.
-The first approach is based on perpendicular lattice beams that interfere to form an optical lattice along their diagonal axis #tr[cite something from the Esslinger group].
-With an additional (independent) optical lattice along one of the two axes, a complex two-dimensional lattice potential can be created.
-Depending on the intensity/power of the three beams, the lattice potential can be tuned from a cubic pattern to an array of dimers which allow a study of atoms in individual double wells.
-This type of lattice potential was also recently used to realize a cryogenic atom cloud to access new regimes in the phase diagram of the Hubbard model #tr[cite Greiner paper].
-A fundamental strength of the kind of lattice potential is the fine control of the confining/radial potential due to the Gaussian envelopes of the laser/lattice beams.
-A redistribution of the atoms is detrimental for/to the temperature of a/the many-body system.
-Being able to conserve the confinement while tuning the lattice geometry is, therefore, essential to achieve (ultra)cold temperatures in optical lattices #tr[cite Jean-Sebastien here already?].
+// Really use the BEC + monochromatic lattice reference as an example for dynamic localization?
+Advanced optical lattice geometries can be created with more than two interfering lattice beams @windpassinger_engineering_2013.
+Three laser beams intersecting in one plane under an angle of #deg[120] form a hexagonal lattice structure that resembles the geometry of graphene @becker_ultracold_2010.
+The interference of perpendicular optical lattices can be used to create adjustable lattice geometries that can be tuned from a checkerboard pattern to an array of double wells and, finally, a regular two-dimensional lattice @tarruell_creating_2012.
+This tunability was recently used for significant improvements of the temperature in an antiferromagnetic Mott insulator @xu_neutral-atom_2025.
 
-#tr[mention bichromatic early in the paragraph?]
-The other/second type of superlattice configuration is based on two superimposed lattices with commensurate lattice periods #tr[cite some OG paper here?].
-The most common configuration uses two lattices with periods differing by the factor two.
-This can be achieved by using commensurate wavelengths #tr[cite?] or with appropriate intersection angles #tr[is there something to cite here?].
-In this thesis, we use the former approach to create a superlattice potential with two lattices at the wavelengths $lambda = #qty[1064][nm]$ and $lambda = #qty[532][nm]$.
-Such a superlattice potential enables the investigation of topological phenomena/systems that are described by the SSH model #tr[cite] or the Rice-Mele model #tr[cite].
-Besides the lattice depths of the individual lattices, the superlattice potential features an additional degree of freedom, namely the superlattice phase.
-By tuning the relative phase of the individual lattices, one/we can adjust the configuration of the superlattice from coupled dimers to a staggered potential.
-This opens up a variety of static and dynamic lattice potentials.
-The bichromatic superlattice potential is mostly suitable for (extended) one-dimensional systems.
-The overlap of the individual lattices results in a strong sensitivity of the confining/radial potential to the superlattice phase.
-In a two-dimensional lattice potential, a change of the confinement leads to a redistribution of the atoms, which is detrimental for their temperature.
+By superimposing commensurate optical lattices, a superlattice potential can be formed @folling_direct_2007.
+The most widespread superlattice configuration uses two optical lattices with periods differing by the factor two.
+While such an optical superlattice is typically implemented in a bichromatic configuration with equal beams paths and wavelengths differing by the factor two @gall_competing_2021 @impertro_local_2024 #tr[cite a few others here], it can also be realized with equal wavelengths and different intersection angles @wili_accordion_2023.
+Besides the two lattice depths, the superlattice potential also depends on the relative phase of the two lattices.
+With the superlattice phase the potential can be tuned from coupled double wells to a staggered potential,
+which enables control of superexchange interactions @trotzky_time-resolved_2008 or the implementation of topological pump @lohse_thouless_2016 @nakajima_topological_2016.
+Additionally, the superlattice phase can be periodically modulated to enable the study effective systems through Floquet engineering which are not accessible in a static superlattice @weitenberg_tailoring_2021.
+Among other things, Floquet driving enables the dynamic localization of atoms @lignier_dynamical_2007 and the modification of magnetic correlations in double wells with strongly-repulsive interactions @gorg_enhancement_2018.
 
-While the lattice depths govern the timescale of the dynamics in the optical lattices through the tunneling amplitude, the interaction of atoms on the same lattice site can be tuned with magnetic Feshbach resonances #tr[cite review Chin and paper Shin?].
-In the case of fermionic atoms, this interaction is restricted to atoms with a different spin according to the Pauli principle, which prevents fermionic particles from occupying the exact same state.
-Close to a Feshbach resonance, the interaction between two atoms can be tuned from the attractive to the repulsive regime, giving access to a rich variety of possible systems/models.
+In bichromatic superlattices, an easily tunable phase is inevitably sensitive to environmental fluctuations.
+Building an optical superlattice with a stable and tunable phase, therefore, requires a lot of technical effort.
+Current approaches range from lattice setups with equal path lengths for an intrinsic phase stability @li_high-powered_2021 to optical paths in an evacuated box to suppress the environmental phase sensitivity @chalopin_optical_2024.
+In this thesis, we explore an active stabilization of the superlattice phase based on environmental sensors.
+#tr[something else to finish the paragraph?]
 
-Besides analog quantum simulators, optical lattices are also useful for digital quantum simulators such as quantum computers using neutral atoms.
-While optical tweezers are used to address and rearrange individual atoms, optical lattices can provide an underlying potential to pin/trap the individual atoms/qubits.
-Compared to (two-dimensional) arrays of optical tweezers, optical lattices are spatially robust and easy? to maintain.
-In the context of quantum computers, the lattices are only/mainly used to confine the atoms without ever allowing tunneling between the lattice sites.
-Nevertheless, a calibration of the lattice potential is essential for a long-term operation of the optical lattice.
-For this, the same calibration techniques can be used as for the "regular" lattices, which we explore in this thesis.
+Something all optical lattices have in common, regardless of their geometry, is the requirement for a calibration measurement to quantify the lattice potential.
+The most common technique uses a modulation of the lattice depth to probe the band structure in the optical lattice @friebel_co_1998.
+The signal detection associated with the #lms is typically done in momentum space using the band-mapping technique @kohl_fermionic_2005.
+In a time-of-flight image, the atoms that were excited to higher bands by the lattice modulation show up in a higher Brillouin zone.
+While this allows a measurement of the momentum-resolved band structure @heinze_multiband_2011, it is not #tr[required] for the calibration of the lattice depth.
+Instead of resolving the momentum of the atoms in the lattice potential, it would be more useful to resolve the lattice depth as a function of the position.
+Due to the intensity profile of the underlying laser beams, optical lattices are generally inhomogeneous.
+However, resolving the spatial profile of the lattice depth is not directly possible with the #lms since the atoms in the higher bands are still trapped in the lattice potential.
+To overcome this limitation, we developed an atom-loss mechanism that enables a calibration of the lattice depth with a spatial resolution and we investigate the limitations of this in-situ calibration technique.
 
-The Fermi Hubbard model provides a minimal description of neutral atoms in an optical lattice #tr[cite OG Hubbard paper?].
-The atoms in the optical lattice can tunnel between the lattice sites and they experience an interaction energy if two atoms of opposite spin occupy the same lattice site.
-In the framework of second quantization, only the occupation of each lattice site is counted instead of using the spatial wavefunction of each atom.
-This provides a significant simplification of the many-body states and the Hamiltonian to describe the dynamics in the Hubbard model.
-Nevertheless, the Fermi Hubbard model can only be solved numerically in very small systems due to the exponentially increasing size of the #tr[basis]?
-Neutral atoms in optical lattices allow us to study the Fermi Hubbard model with an analog quantum simulation.
 
-The idea behind/advantage of quantum simulations using neutral atoms is the tunability of the system parameters/properties (compared to solid state systems) and the scalability compared to the simulation on classical computers #tr[cite Feynman?].
+#pagebreak()
+
+== Thesis structure
+
+#set list(spacing: 1.3em)
+
+In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice.
+The focus will be on the calibration and operation of the optical lattices as the technical foundation of the experimental setup.
+In particular, I will report on the in-plane superlattice that was the center of attention of our experimental efforts in recent years.
+#v(0.9em)
+
+- In @ch:theory, I will introduce the atom-light interaction as the foundation of optical lattices for ultracold atoms.
+  Using Bloch's theorem, I will show the band structure and the Bloch waves of atoms in regular lattice potentials as well as superlattice potentials.
+  Within the unit cells of the superlattice potential, the dynamic behavior of the atoms can be described by a double-well potential.
+  The reduced system size allows an exact numerical solution for interacting particles in a double well.
+
+- In @ch:setup, I will present the experimental setup to cool the fermionic isotope #K40 from room temperature down to a degenerate Fermi gas.
+  As a reference for the later chapters in this thesis, I will introduce the parameters and the geometry of three-dimensional optical lattice.
+  Starting with the loading of the atoms into the optical lattices, I will briefly show the experimental sequence.
+  The available detection techniques to resolve the atomic densities in the experimental sequence are presented at the end of the chapter.
+
+- In @ch:super, I will provide a detailed introduction to the optical setup of the in-plane superlattice.
+  Due to thermally-induced focal shifts by the optical elements, we found a significant instability of the optical lattices that form the in-plane superlattice.
+  I will give a brief introduction to thermal lensing and I will discuss the possible modifications to the optical setup to reduce the focal shifts.
+  To finish the chapter, I will show the improved stability of the lattice parameters in the upgraded optical setups.
+
+- In @ch:mod, I will introduce the in-situ #lms that we developed for the calibration of the lattice depths with a spatial resolution.
+  The data analysis is shown in detail as a benchmark for the calibration technique, and the atom-loss mechanism is discussed to devise parameter regimes for the in-situ #lms.
+  At the end of the chapter, I will introduce the in-situ #lms in the superlattice potential and I will investigate the radial potential of the superlattice.
+
+- In @ch:phase, I will introduce the experimental control of the superlattice phase, followed by in-situ detection of the superlattice phase.
+  For a reliable operation of the superlattice potential we set up an active phase stabilization using environmental sensors.
+  With the stabilized superlattice phase, we calibrate the double-well parameters, and we investigate the Floquet driving of the superlattice potential to enhance the pair tunneling.
+
+- In @ch:outlook, I will reflect on the results of this thesis and the applicability of the developed techniques to other experimental setups.
+  Additionally, I will summarize the possible improvements of the in-situ #lms and the active stabilization of the superlattice phase.
+  To finish this thesis, I will discuss the next possible steps for the in-plane superlattice potential in the experimental setup.
+
+
+== Individual contributions
+
+The results presented in this thesis are the conclusion of four and a half years of working together with Nick Klemmer @klemmer_ultracold_2024 and Valentin Jonas #tr[already cite PhD thesis?] with an experimental setup that was previously built and maintained by three generations of doctoral students.
+Our primary focus was the setup and characterization of the in-plane superlattice, which we ultimately used to enhance the pair tunneling in Floquet-driven double wells.
+In the following, I will present detailed insights about the contributions by the individual team members.
+
+Valentin Jonas and I contributed equally to the work in @ch:super.
+We conducted the initial characterization of the thermal lensing, ran the investigation to find the responsible optical elements and, subsequently, upgraded the optical setups to achieve an excellent stability of the optical lattices that form the in-plane superlattice.
+
+The in-situ #lms presented in @ch:mod is my own work.
+I pushed for the initial experimental investigation as a calibration technique, I developed the data analysis for a robust calibration of the lattice depths, and I figured out the theory behind the atom-loss mechanism and the coupled band structure.
+The improvements to the lattice alignment were developed by me in search for a robust and deterministic alignment procedure.
+In the superlattice potential, I applied the in-situ technique to the existing calibration measurement, and I lead the investigation of the radial potential.
+
+The experimental setup to control the superlattice phase in @ch:phase was a collective effort by Nick Klemmer, Valentin Jonas and me.
+Nick Klemmer was responsible for the maintenance and upgrades of the laser setup, Valentin Jonas implemented the arbitrary waveform generator of the double-pass AOM for the infrared lattice, and I developed the software for the overall phase control.
+I devised the initial phase-sensitive measurement and later developed the in-situ detection of the superlattice phase with Valentin Jonas.
+The hardware and software for the active phase stabilization was set up by me.
+
+For the Floquet driving of the superlattice potential, Valentin Jonas set up the modulation of the superlattice phase with the arbitrary waveform generator, and he implemented the Floquet theory that was essential for the evaluation of the experimental data.
+Nick Klemmer was responsible for running the data analysis and the Monte-Carlo simulations for the error estimation.
+I assisted with the software for the experimental control and the data analysis.
+
+
+== Publications
+
+We published the following journal article the course of this thesis:
+#block(inset: (left: 0.9em), spacing: 0.9em)[
+  #set par(justify: false)
+
+  #text(
+    stroke: black + 0.3pt,
+  )[Flouqet-Driven Crossover from Density-Assisted Tunneling to Enhanced Pair Tunneling]\
+  N. Klemmer#super[\*], J. Fleper#super[\*], V. Jonas, A. Sheihkan, C. Kollath, M. Köhl and A. Bergschneider\
+  #link("https://doi.org/10.1103/PhysRevLett.133.253402", text(blue)[Phys. Rev. Lett. *133*, 253402 (2024)])
+
+]
+
+#super[\*]These authors contributed equally to this work.
+
+
+#pagebreak()
+
+== Software
+
+Beyond the scope of this thesis, I initiated moving the data analysis from Matlab to Python, and I developed a package to streamline the evaluation pipeline from the initial loading of the images to the creation of figures.
+This package implements, among other things, flexible grouping of experimental sequences, flagging of results based on monitoring data, and caching of intermediate results.
+I continuously developed and improved the package throughout the years.
+
+As an extension of the experimental control software, I developed a network-based microservice architecture.
+The core element of this architecture is a server that replicates the experimental control software.
+This control server provides software triggers for clients that need to be controlled based on the current experimental sequence.
+Additionally, the control server makes the experimental sequence data, such as timings, variables and channel events, easily accessible.
+This allows an easy extension of the experimental control by clients that control standalone devices or by clients that run automated data analysis processes.
+
+This thesis is written in Typst #tr[cite GitHub repo] which is a modern typesetting language developed by a startup in Berlin.
+The founders and original developers are Martin Haug and Laurenz Mädje who started working on Typst during their master's theses #tr[cite the theses here].
+For inline styling, it relies on a syntax similar to Markdown #tr[cite something?].
+Most features such as figures, captions, citations, equations, and many more are directly built into the Typst compiler.
+Packages implementing advanced features and templates to streamline the creation of new documents can be found in the Typst Universe #tr[ref universe].
+For this thesis, I used the packages `physica`, `mannot`, `headcount`, `CeTZ` and `fletcher`, as well as the VS code extension `tinymist`.
+Additionally, I developed the package `fancy-units` and the template `fancy-thesis`, both of which are tailored to the requirements for this thesis.
+The source code for this thesis will be publicly available at #tr[https://github.com/janekfleper/phd-thesis].
