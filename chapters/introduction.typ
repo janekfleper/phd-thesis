@@ -175,61 +175,61 @@ For writing this thesis I used the following software:
     table.vline(x: 1),
     table.vline(x: 2),
 
-    `typst`,
+    link("https://github.com/typst/typst")[`typst`],
     `0.14.0`,
     [
       A markup-based typesetting system that is powerful and easy to learn.
     ],
 
-    `tinymist`,
+    link("https://github.com/Myriad-Dreamin/tinymist")[`tinymist`],
     `0.13.30`,
     [
       An integrated language service for Typst.
     ],
 
-    `harper`,
+    link("https://github.com/Automattic/harper")[`harper`],
     `0.70.0`,
     [
-      The grammar checker for developers.
+      Offline, privacy-first grammar checker. Fast, open-source, Rust-powered.
     ],
 
-    `physica`,
+    link("https://typst.app/universe/package/physica")[`physica`],
     `0.9.6`,
     [
       Math constructs for science and engineering: derivative, differential, vector field, matrix, tensor, Dirac braket, hbar, transpose, conjugate, many operators, and more.
     ],
 
-    `mannot`,
+    link("https://typst.app/universe/package/mannot")[`mannot`],
     `0.3.0`,
     [
       A package for marking and annotating in math blocks.
     ],
 
-    `headcount`,
+    link("https://typst.app/universe/package/headcount")[`headcount`],
     `0.1.0`,
     [
       Make counters inherit from the heading counter.
     ],
 
-    `CeTZ`,
+    link("https://typst.app/universe/package/cetz")[`CeTZ`],
     `0.4.2`,
     [
       Drawing with Typst made easy, providing an API inspired by TikZ and Processing. Includes modules for plotting, charts and tree layout.
     ],
 
-    `fletcher`,
+    link("https://typst.app/universe/package/fletcher")[`fletcher`],
     `0.5.8`,
     [
       Draw diagrams with nodes and arrows.
     ],
 
-    [`fancy-units`#super[\*]],
+    link("https://github.com/janekfleper/typst-fancy-units")[`fancy-units`] + super[\*],
     `0.2.0`,
     [
       Format numbers and units with style.
     ],
 
-    [`fancy-thesis`#super[\*]],
+    link("https://github.com/janekfleper/typst-fancy-thesis")[`fancy-thesis`] + super[\*],
     `0.1.0`,
     [
       A simple yet powerful template for your thesis.
@@ -238,4 +238,4 @@ For writing this thesis I used the following software:
     + align(left)[#super[\*]These packages are developed by myself.],
 )
 
-After this thesis is published, the source code will be publicly available @fleper_ultracold_2025.
+After this thesis is published, the source code will be publicly available on GitHub @fleper_ultracold_2025.
