@@ -2,6 +2,8 @@ AOM
 AOMs
 AWG
 Andor
+BCS
+BEC
 BOOSTIK
 BPO
 Bravais
@@ -62,6 +64,7 @@ collimated
 collimator
 counterpropagating
 crosstalk
+cuprates
 cylindrically
 deconfinement
 deconfining
@@ -91,6 +94,7 @@ excitations
 far-detuned
 fermionic
 foci
+graphene
 gyromagnetic
 hyperfine
 iXon
@@ -99,6 +103,7 @@ integrand
 lensing
 linewidth
 micromotion
+millikelvin
 orthonormal
 photodiode
 photodiodes
@@ -118,6 +123,7 @@ spacings
 splitter
 splitters
 superexchange
+superfluidity
 superlattice
 superlattices
 superpositions
