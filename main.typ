@@ -33,5 +33,6 @@
 #include "chapters/superlattice/superlattice.typ"
 #include "chapters/modulation/modulation.typ"
 #include "chapters/phase/phase.typ"
+#include "chapters/outlook.typ"
 
 #bibliography("refs.bib", style: "american-physics-society")
