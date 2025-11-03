@@ -1,7 +1,10 @@
 #import "/header.typ": *
 
-#show heading.where(level: 2): set heading(numbering: none)
-
+// these rules are only applied in this file
+#show heading.where(level: 2): set heading(numbering: none, outlined: false)
+#set list(spacing: 1.3em)
+#show table: set text(10pt)
+#show figure: set block(spacing: 0.9em)
 
 = Introduction <ch:intro>
 
@@ -66,8 +69,6 @@ In this thesis, we explore a lattice modulation technique that provides local re
 #pagebreak()
 
 == Thesis structure
-
-#set list(spacing: 1.3em)
 
 In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice.
 The focus will be on calibrating and operating the optical lattices, which form the technical foundation of the experimental setup.
@@ -162,9 +163,6 @@ Typst uses a markup-based syntax for the simple document styling and integrates 
 Essential features, such as figures, captions, citations, and equations, are built directly into the Typst compiler.
 Packages that implement advanced features and templates to streamline the creation of new documents can be found in the Typst Universe.
 The following software was used to write this thesis:
-
-#show table: set text(10pt)
-#show figure: set block(spacing: 0.9em)
 
 #figure(
   table(
