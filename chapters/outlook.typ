@@ -41,21 +41,41 @@ The excitation from the lowest band to an excited band works for any atomic spec
 Neither the detuning nor the running-wave component matter since they are global energy offsets that do not affect the band structure.
 The only restrictions for the in-situ #lms are related to the possible lattice depths for the atom-loss mechanism.
 
+For the superlattice we introduced the experimental setup to control the superlattice phase on short and long timescales.
+The measurement of the superlattice phase uses the dynamics of singly-occupied double wells around the symmetric configuration ($Delta = 0$).
+This measurement is mainly limited by the compromise between the local measurement of the superlattice phase and the resolution of both lattice sites in the unit cell.
+We have developed an in-situ detection technique based on the targeted removal of atoms from one lattice site in the unit cell, which makes it sensitive to the atom number compared to the contrast between the two lattice sites in the unit cell.
+However, resolving the local superlattice phase was essential for the compensation of the phase gradients and the single-shot measurement of the superlattice phase.
 
-Another approach using the hyperfine states is based on the spin-spiral technique that was used to detect magnetic correlations in the two-dimensional lattice #text(red)[ref setup section? + Nicola].
-Instead of aligning the gradient angle along the diagonal of the x1064-lattice and the y1064-lattice, the magnetic field gradient would be/run parallel to the x1064-lattice.
-To start the spin-spiral/Ramsey measurement a $pi slash 2$-pulse is used to transfer (the spin of) all the atoms onto the $x y$-plane.
-Since the atoms are initially polarized they will all start with the same phase (in the $x y$-plane).
-The evolution/precession/measurement time $tau$ is chosen such that the atoms/spins on each sublattice site accumulate the same phase $phi mod 2 pi$.
-The atoms on the "other" sublattice will then have a (relative) phase offset by $pi$.
-A second $pi slash 2$-pulse will then transfer the atoms/spins back onto the quantization axis where $n_L$ and $n_R$ will occupy different hyperfine states.
-The (separate) densities can then be imaged sequentially as shown in @ssec:setup-sequence-detect.
-While this technique sounds very tempting, it would have been even more difficult to set up than the spin spiral.
-For the measurement of the correlations it was sufficient to imprint a relative spin pattern since the absolute position of the atoms/lattice sites was relevant.
-The slope and the angle of the magnetic field gradient had to be carefully calibrated but the absolute value of the magnetic field along the $z$-axis could change from sequence to sequence.
-In the case of the measurement in the x-superlattice we would need an absolute stability of the magnetic field and the position of the sublattice sites.
-Otherwise the spin spiral/Ramsey technique will randomly/uncontrollably map the sublattice sites to the different hyperfine states.
-Trying to set this up for the phase-sensitive measurement introduced in @ssec:phase-measure-sequence would not have been practical.
+The stabilization of the superlattice phase is based on environmental sensors along the optical path between the position of the atoms and the retro-reflecting mirror.
+We compute the required correction of the phase from the refractive indices and the readings of the environmental sensors.
+With this active correction of the superlattice phase we achieve an excellent phase stability.
+Other experimental setups with a comparable tunability of the superlattice phase rely on a passive stability through equal path lengths @li_high-powered_2021 or an evacuated beam path @chalopin_optical_2024.
+For these superlattice setups, the short- and long-term phase stability is worse compared to our setup.
+Additionally, the passive stability requires significant effort for the development of the hardware.
+In comparison, the active stabilization technique can be used to upgrade an existing optical setup without any changes to the optical elements.
+
+With the excellent control over the superlattice phase, we used Floquet engineering to modify the tunneling amplitudes in the superlattice potential.
+With a near-resonant driving frequency with respect to the interaction energy, we were able to enhance the pair tunneling in the effective system, while suppressing the single-particle tunneling amplitude.
+
+
+== Improving the in-situ superlattice phase measurement
+
+A possible detection technique to resolve the occupation of the two lattice sites in the unit cells of the superlattice potential is based on the experimental scheme to imprint spin patterns in the two-dimensional lattice planes @wurz_coherent_2018.
+In a Ramsey-type sequence, a $pi slash 2$ radio-frequency pulse is used to rotate the spins from the vertical axis of the Bloch sphere onto the equatorial plane.
+With a magnetic field gradient $phy.grad B_z$ in the #xy-plane, the spins accumulate a phase depending on their position $(x, y)$ during the evolution time $tau$.
+If the magnetic field gradient is aligned along the diagonal of the two in-plane lattices, the spin structure factor with the wave vector $phy.vb(q)_"AFM" = (pi slash a, pi slash a)$ can be imprinted to detect antiferromagnetic correlations.
+To conclude the evolution of the spins in the #xy-plane, a second $pi slash 2$ radio-frequency pulse is applied that rotates the spins back to the quantization axis.
+
+If we align the magnetic field gradient along the axis of the in-plane superlattice, we could imprint a spin pattern with a spatial periodicity equal to the lattice period of the infrared lattice.
+The spins of the atoms on the two lattice sites in each unit cell accumulate the relative phase $pi$.
+If all atoms initially occupy the spin state #ketup, the detection maps the atoms on the two different lattices sites per unit cell to the spin states #ketup and #ketdown.
+Then, we can detect both populations in two different atom images at the end of the experimental sequence, and we can compute the contrast between the lattices site in the unit cell.
+Compared to the detection of spin correlations, this technique requires an absolute stability of the magnetic field relative to the superlattice potential from sequence to sequence.
+To imprint a specific spin pattern the magnetic field has to be stable during the evolution time $tau$ of the spins during the Ramsey-type sequence.
+Reliably mapping specific lattice sites to the spin states #ketup and #ketdown is only possible if the magnetic field and the absolute superlattice phase are stable from sequence to sequence.
+We can estimate that the stability of the magnetic field needs to be better than #tr[???] if the gradient magnetic field is set to #tr[#iqty[1][G/cm]] and the evolution time is #tr[#qty[100][ms]].
+For the stabilization of the absolute superlattice phase, we need to apply the environmental correction to the green lattice as well as the infrared lattice.
 
 
 == Preparing $eta$-pairs in the in-plane superlattice
