@@ -57,3 +57,24 @@ In the case of the measurement in the x-superlattice we would need an absolute s
 Otherwise the spin spiral/Ramsey technique will randomly/uncontrollably map the sublattice sites to the different hyperfine states.
 Trying to set this up for the phase-sensitive measurement introduced in @ssec:phase-measure-sequence would not have been practical.
 
+
+== Preparing $eta$-pairs in the in-plane superlattice
+
+The $eta$-pair state is a many-body eigenstate of the strongly-repulsive Hubbard Hamiltonian that consists of doubly-occupied lattice sites with an alternating sign $(-1)^i$ for each lattice site @yang_ensurematheta_1989.
+This state is an excited state of the Hubbard Hamiltonian and it experiences long-range order, which has be associated with superconducting states @fan_entanglement_2005.
+The superlattice potential was proposed as a possible tool for preparing the $eta$-pairs from the band-insulating state with attractive interactions in the infrared lattice @kantian_eta_2010.
+With all sites in the infrared lattice occupied, the green lattice is turned on at an asymmetric superlattice phase $phi != 0$.
+The atoms are transferred to the excited state by switching from attractive to strongly-repulsive interactions.
+In the last step of the preparation, the infrared lattice is turned off adiabatically to remove the energy offset $Delta$ and the different tunneling amplitude $tin != tout$.
+This connects the doubly-occupied sites to the delocalized $eta$-pairs with the momentum $k = pi slash a$.
+
+We are already investigating the preparation of $eta$-pairs in the in-plane superlattice with a slightly different approach.
+For a large energy offset $abs(Delta) > U$, the strongly-repulsive pairs still correspond to the ground state in the double-well potential.
+To transfer the atoms from the ground to the excited state, which connects to the $eta$-pair state in the extended lattice, we diabatically ramp the offset $Delta -> 0$ over the avoided crossing at $plus.minus Delta approx U slash 2$ (c.f. @fig:theory-double-two-general).
+At $Delta = 0$ the excited state approaches $ketdm = (ketLL - ketRR) slash sqrt(2)$ in the double-well potential.
+However, since we remove the energy offset by turning off the infrared lattice, the individual double wells are merged into an extended optical lattice.
+Regardless of the preparation technique, the $eta$-pair state is limited by the initial band insulator at attractive interactions.
+In previous experiments, a filling of approximately #qty[85][%] was achieved in the two-dimensional in-plane lattice after switching to strongly-repulsive interactions @wurz_quantum_2021.
+The remaining sites are either empty or occupied by single atoms, where both cases are expected to be detrimental for preparing the $eta$-pair state @kantian_eta_2010.
+For the detection of the $eta$-pairs, we are exploring a technique based on a large offset $abs(Delta) > U$ in the antisymmetric superlattice configuration ($phi = -pi slash 4$).
+Diabatically turning on the infrared lattice induces coherent oscillations between the states #ketdm and #ketdp in the double wells, with the oscillation amplitude being the indicator for the initial occupation of the $eta$-pair state.
