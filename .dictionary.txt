@@ -50,6 +50,7 @@ acousto
 adiabatically
 afterwards
 anisotropic
+anticonfining
 antisymmetric
 antisymmetry
 aspheric
@@ -102,6 +103,7 @@ inhomogeneity
 integrand
 lensing
 linewidth
+micromirror
 micromotion
 millikelvin
 orthonormal

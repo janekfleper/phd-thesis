@@ -74,6 +74,28 @@ We estimate that the absolute stability of the magnetic field needs to be better
 In comparison, imprinting a spin pattern for detecting correlations only requires a stable magnetic field during the evolution time $tau = cal(O)(#qty[100][ms])$.
 
 
+== Compensating the radial potential
+
+The radial potential of the optical lattices determines the confinement of the atoms in the three-dimensional optical lattice.
+In an optical superlattice, we found the radial potential to be strongly sensitive to the superlattice phase.
+In the antisymmetric configuration ($phi = -pi slash 4$), the radial potential in the ground state is equal to the sum of the individual lattices since the potential minima of the two lattices overlap.
+Towards the symmetric configuration ($phi -> 0$), the confinement by the infrared lattice is reduced since the positions of the atoms are determined by the potential minima of the green lattice.
+Depending on the depths of the individual lattices, the radial potential can even be anticonfining around the symmetric configuration.
+Since the redistribution of the atomic density is expected to be a major contribution to the heating of the system @soni_density_2016, understanding the radial potential is essential to conserve the confinement of the atoms.
+This is a possible cause for the unsuccessful entropy cooling in the vertical superlattice potential @gall_quantum_2020 @wurz_quantum_2021.
+A recent implementation of entropy cooling used a tunable lattice configuration, formed by interfering two perpendicular optical lattices, to realize an antiferromagnetic Mott insulator with a very low temperature @xu_neutral-atom_2025.
+Since the individual lattices have the same detuning, the confinement can be conserved while splitting the band insulator.
+
+Previous attempts to compensate the confinement of the atoms in the center of the optical lattices were done using a digital micromirror device (DMD) @gall_quantum_2020.
+However, we found that the optical potential from the DMD introduces significant disorder to the system @fleper_long-range_2020.
+Since the DMD shares its optical with the high-resolution imaging system, which is detrimental for creating a smooth optical potential that compensates the confinement by the optical lattices.
+As an alternative, we propose to superimpose optical dipole beams along the optical paths of the in-plane optical lattices @reuter_akusto-optische_2024.
+With beam waists between #qty[30][μm] and #qty[40][μm], we need approximately #num[10] beams to cover the atom cloud.
+The intensity and position of the individual dipole beams are controlled with an acousto-optical deflector.
+Compared to the optical potential created by the DMD, the optical dipole beams are not susceptible to disorder on small length scales.
+Implementing the compensation of the radial potential with the optical dipole beams could enable studying of the Floquet driving in a two-dimensional system, which is currently hindered by the strong modulation of the radial potential.
+
+
 == Preparing $eta$-pairs in the in-plane superlattice
 
 The $eta$-pair state is a many-body state that consists of doubly-occupied lattice sites with an alternating sign $(-1)^i$ for each lattice site @yang_ensurematheta_1989.
