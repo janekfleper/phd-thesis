@@ -3,79 +3,79 @@
 
 == Active phase stabilization <sec:phase-stability>
 
-#notes[
-  - Mention the mu-metal anywhere before the @ssec:phase-stability-sensors?
-]
+// TOOO: Mention the mu-metal anywhere before the @ssec:phase-stability-sensors?
 
-The setup introduced in @fig:phase-setup allows us to control the superlattice phase $phi$ during an experimental sequence with the DDS frequency and the AOM frequency.
-Furthermore, the measurement of the phase in @fig:phase-measure-detect-result and the calibration of the frequency period in @ssec:phase-measure-period yield the zero-phase frequency $f_0 (x, y)$ and the period $Delta f$ to realize any phase $phi(f)$.
-A continuous measurement of the phase would nevertheless show a slow drift of the zero-phase frequency $f_0$.
-This is caused by a change of the optical path length between the atom position and the retro mirror.
-While the #x1064\-lattice beams and the #x532\-lattice beams have an identical geometric path length, the optical path length also takes the refractive indices along the beam path into account.
-The variation of the refractive index depends on the wavelength and results in a difference of the accumulated optical phases of the individual lattices up to the atom position, which in turn changes the superlattice phase $phi$.
-In air, the refractive index depends on the temperature, the pressure, the relative humidity and the #CO2 concentration, while the refractive indices of the optical elements only depend on the material temperatures.
+During the experimental sequence, we use the experimental setup in @fig:phase-setup to control the superlattice phase #phase.
+With the zero-phase frequency $f0(x, y)$ and the superlattice period $Delta f$ determined in @sec:phase-measure, we can realize any phase $phase(f)$ using the DDS frequency #fdds and the AOM frequency #faom.
+Despite the relative stabilization of the laser frequencies, we observe a slow drift of the zero-phase frequency #f0 in a long-term measurement of the superlattice phase.
+This drift is caused by a change of the environmental parameters along the optical path between the atom position and the retro mirror.
+Since they are superimposed, the #x1064\-lattice beams and the #x532\-lattice beams have an equal geometrical path length.
+On the other hand, the optical path length also takes the refractive indices along the beam path into account.
+The variation of the refractive index in terms of the environmental parameters depends on the wavelength.
+In the context of a bichromatic superlattice, this results in a difference of the accumulated optical phases of the individual lattices up to the atom position, which in turn changes the superlattice phase $phi$.
+
+For the optical elements, we only have to consider the changes to the refractive indices as a function of the material temperature.
+In contrast, the refractive index in air depends on the temperature, the pressure, the relative humidity and the #CO2 concentration.
 Out of these environmental parameters, only the temperature is actively regulated on the experimental table.
-We have additionally shielded the optical path to improve the temperature stability.
-The air pressure in the laboratory is equal to the air pressure outside of the building, while the relative humidity is slightly reduced by the fresh-air supply and two dehumidifiers inside the laboratory.
-A regulation of the pressure and the humidity would require a hermetically sealed experimental table or an enclosed optical path.
-As neither of these approaches is practical in our experimental setup, we implemented an active stabilization of the superlattice phase based on the readings of environmental sensors along the optical path.
-We can compare the changes of the refractive index at the wavelengths #qty[1064][nm] and #qty[532][nm] to compute the expected drift of the phase $phi$ and the required correction of the frequency #fdds to keep the phase constant.
-With the active correction, we achieve an exceptional long-term stability of the superlattice phase.
+Additionally, we have shielded the optical path to improve the passive temperature stability.
+The air pressure in the laboratory is equal to the air pressure outside of the building, while the relative humidity is lowered by the fresh-air supply and two dehumidifiers.
+A regulation of the pressure and the humidity would require a hermetically sealed experimental table or an enclosed optical path, which is not practical for our experimental setup.
+Instead, we implement an active stabilization of the superlattice phase based on the readings of environmental sensors along the optical path.
+We compute the environmental coefficients of the refractive index for the wavelengths #qty[1064][nm] and #qty[532][nm] to compute the expected drift of the phase #phase and the required correction of the frequency #fdds to stabilize the phase.
 
 
 === Environmental sensitivity of the superlattice phase <ssec:phase-stability-coefficients>
 
-In @eq:phase-setup-delta-phi, we assume a constant path length $d$ to control the superlattice phase.
-While this is largely true for the geometrical path length between the retro mirror and the atom position, the phase depends on the optical path length that also takes the refractive index into account.
-Since the individual lattices have different wavelengths of #qty[1064][nm] and #qty[532][nm], the refractive indices are not equal.
-We can split the optical path in @fig:phase-stability-sensors-setup into six different segments.
-Starting from the retro mirror, the lattice beams propagate approximately #qty[240][mm] in air up to the retro lens.
-Since the retro lens is an achromatic doublet, we need two segments to take the different materials into account.
-Behind the retro lens, there is another air segment up to the glass cell, with a length of approximately #qty[220][mm].
-The wall of the glass cell is #qty[4][mm] thick, and the atoms are located #qty[17][mm] inside the glass cell.
+To compute the environmental correction, we split the optical path (c.f. @fig:phase-stability-sensors-setup) into six different segments.
+Starting from the retro mirror, the lattice beams propagate approximately #qty[240][mm] in the first air segment up to the retro lens.
+Since the retro lens is an achromatic doublet, we use two segments to take the different materials into account.
+Behind the retro lens, there is another air segment up to the glass cell with a length of approximately #qty[220][mm].
+The last two segments in the optical path cover the ultra-high vacuum glass cell.
+The wall of the glass cell is #qty[4][mm] thick, and the atoms are located approximately #qty[17][mm] inside the glass cell.
 While all segments contribute to the accumulated optical phases of the individual lattices, the ultra-high vacuum inside the glass cell makes the last segment insensitive to the environmental parameters.
-The other five segments each contribute to the drift of the superlattice phase $phi$.
-For the glass cell and the retro lens, the refractive indices are only sensitive to the temperature $T$.
-In the two air segments, we additionally take the ambient pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2 into account.
+The other five segments each contribute to the drift of the superlattice phase #phase.
+For the glass cell and the retro lens, the refractive indices are only sensitive to the respective material temperatures $T$.
+In the two air segments, we take the temperature $T$, the pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2 into account.
 
-With the phase convention chosen in @eq:theory-super-potential, we can express the superlattice phase $phi$ as a function of the phases #phix1064 and #phix532 that both depend on the optical path length.
-To take the different wavelengths of the individual lattices into account, we divide the phase #phix532 by $2$ and compute the superlattice phase
+Using the phase convention in @eq:theory-super-potential, we express the superlattice phase #phase as a function of the individual phases #phix1064 and #phix532 that both depend on the optical path length.
+We divide the #x532\-lattice phase by $2$ to take the wavelengths of the individual lattices into account.
+The resulting superlattice phase is
 
 $
-  phi & = phix1064 - 1 / 2 phix532 \
-      & = (k + Delta k) dot integral_0^d phy.dd(x) nx1064 (x) - k dot integral_0^d phy.dd(x) nx532 (x) \
-      & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot n_(x1064,sigma) \
+  phase & = phix1064 - 1 / 2 phix532 \
+        & = (k + Delta k) dot integral_0^d phy.dd(x) nx1064 (x) - k dot integral_0^d phy.dd(x) nx532 (x) \
+        & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot nx1064 \
 $ <eq:phase-stability-phi>
 
 where $k$ is the wave vector of the reference laser that pumps the second-harmonic generation cavity in @fig:phase-setup.
-The wave vector of the #x532 lattice is $kx532 = 2k$, and the wave vector of the #x1064 lattice is $kx1064 = k + Delta k$ to take the frequency detuning of the #x1064\-lattice seed laser and the additional frequency shift by the acousto-optical modulator into account.
-Each integral covers the optical path from the retro mirror to the atom position inside the glass cell.
-To further simplify the expression, we use the constant refractive index in each segment $sigma$ to rewrite the integrals as two sums.
-The first term in @eq:phase-stability-phi computes the accumulated phase due to the difference $Delta n_sigma = nx1064 - nx532$ of the refractive indices in each segment, and the second term takes the change of the superlattice phase due to the frequency detuning of the #x1064 lattice into account.
-While the second term is essential for the control of the superlattice phase according to @fig:phase-setup, it is significantly smaller than the first term and is therefore negligible for the long-term stability of the superlattice phase.
-To determine the sensitivity of the superlattice phase $phi$ to the temperature, we take the derivative
+The wave vector of the #x532 lattice is $kx532 = 2k$, and the wave vector of the #x1064 lattice is $kx1064 = k + Delta k$, where $Delta k$ takes the frequency detuning of the #x1064\-lattice seed laser and the additional frequency shift by the acousto-optical modulator into account.
+Each integral covers the optical path from the retro mirror to the atom position in the glass cell.
+To further simplify the expression, we use the constant refractive indices in each segment $sigma$ to rewrite the integrals as two sums.
+The first term in @eq:phase-stability-phi computes the accumulated superlattice phase due to the difference $Delta n_sigma = nx1064 - nx532$ of the refractive indices in each segment, and the second term takes the change of the superlattice phase due to the frequency detuning of the #x1064 lattice into account.
+While the second term is essential for controlling the superlattice phase according to the diagram in @fig:phase-setup, its derivative with respect to the environmental parameters is smaller by four orders of magnitude compared to the first term.
+Therefore, we neglect the second term in @eq:phase-stability-phi when computing the environmental correction for the superlattice phase.
+The sensitivity of the superlattice phase #phase to the temperature $T$ is given by the derivative
 
 $
   phy.pdv(phi, T) =
   k dot sum_sigma (phy.pdv(d_sigma, T) dot Delta n_sigma + d_sigma dot phy.pdv(Delta n_sigma, T))
 $ <eq:phase-stability-phi-derivative>
 
-where the first term in the sum represents the thermal expansion of the optical elements, and the second term takes the changes of the refractive indices into account.
-The first term is smaller than the second term by at least one order of magnitude in all optical materials in the retro path.
-For the air segments, the difference between the terms is even greater at three orders of magnitude.
-We can therefore neglect the first term to compute the temperature sensitivity of the superlattice phase.
-In @tab:phase-stability-temperature-coefficients, the resulting temperature coefficients $phy.pdv(phi, T)$ are compiled for each segment.
+where the first term in the sum represents the thermal expansion of the optical elements and the second term takes the relative changes of the refractive indices into account.
+In all segments of the optical path, the first term is smaller by at one to three orders of magnitude compared to the second term.
+Therefore, we neglect the first term to compute the temperature sensitivity of the superlattice phase.
+In the case of the other environmental parameters the first term in @eq:phase-stability-phi-derivative vanishes since they do not affect the geometrical path length.
+
+
+In @tab:phase-stability-temperature-coefficients, the temperature coefficients $phy.pdv(phi, T)$ are compiled for each segment.
 If we combine all segments, the total temperature coefficient is $phy.pdv(phi, T) = #iqty[-14.4][mrad/K]$.
 However, the changes of the temperature $T$ are not uniform in all segments.
 In the first air segment between the retro mirror and the retro lens, the peak-to-peak temperature variation is typically #degC[0.2] in one hour.
-Additionally, long-term drifts of the mean temperature over a few days range between #degC[0.1] and #degC[0.2].
+On a timescale of a few days, the mean temperature drifts between #degC[0.1] and #degC[0.2].
 For the retro lens, the peak-to-peak temperature stability is better than #degC[0.02], while long-term drifts can also go up to #degC[0.2].
-We can therefore expect the superlattice phase to change by #qty[20][mrad] to #qty[30][mrad] due to the first air segment and the retro lens.
-In the second air segment, we can observe peak-to-peak temperature changes up to $Delta T = #degC[2]$ within one experimental sequence.
-Due to the proximity of the lattice beams to the magnetic field coils, the second air segment is subject to the thermal cycle of the coils.
-Quantifying the exact temperature $T$ along the optical path is impossible since we can not place a sensor at the position of the lattice beams.
-Additionally, we also expect an inhomogeneous temperature distribution based on the geometry and the location of the magnetic field coils.
-For the glass cell, it was not possible for us to measure the temperature due to a lack of physical access.
+Therefore, we expect the superlattice phase to change between #qty[20][mrad] and #qty[30][mrad] due to the first air segment and the retro lens.
+Due to the proximity of the lattice beams to the magnetic field coils, the second air segment is subject to the thermal cycle of the coils and we observe peak-to-peak temperature changes up to $Delta T = #degC[2]$ within one experimental sequence.
+Additionally, we expect an inhomogeneous temperature distribution based on the geometry and the location of the magnetic field coils.
 The resulting limitation for the stability of the superlattice phase is discussed in detail in @fig:phase-stability-result-limitation.
 
 #floating-figure(
@@ -85,38 +85,30 @@ The resulting limitation for the stability of the superlattice phase is discusse
   },
   caption: [
     Temperature coefficients of the segments in the retro path.
-    The derivative $phy.pdv(Delta n_sigma, T)$ shows that air is significantly less sensitive to the temperature than the optical materials.
-    However, due to the different distances, the actual contributions to the superlattice phase $phi$ are similar in all segments.
-    Most notably, the temperature coefficient $phy.pdv(phi, T)$ in the air segments has a different sign compared to the optical materials.
-    The two lenses that constitute the retro lens are made of #CAF2 and #NBALF4 and have a center thickness of #qty[10][mm] and #qty[2.9][mm] respectively.
-    The actual distances $d_sigma$ are different because the lattice beams are shifted by approximately #qty[10][mm] from the optical axis of the retro lens.
+    The derivatives $phy.pdv(Delta n_sigma, T)$ show that the refractive index of air is significantly less sensitive to the temperature compared to the optical materials.
+    However, the actual contributions to the superlattice phase $phi$ are similar in all segments due to the different distances $d_sigma$.
+    The two lenses made of #CAF2 (lens 1) and #NBALF4 (lens 2) form the achromatic retro lens.
     The reference conditions for the computation of the temperature coefficients are $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$ and $RH_0 = #qty[40][%]$.
     In air, the temperature coefficient is computed with the Ciddor equation @ciddor_refractive_1996.
-    For the optical materials, we use the material properties according to the datasheets to compute the temperature coefficients.
+    The material properties of the retro lens are taken from @daimon_high-accuracy_2002 @corning_optigrade_2024 @schott_tie-31_2018, and the material properties of the glass cell (UVFS) are taken from @malitson_interspecimen_1965 @corning_fused_2015.
 
-    #notes[
-      - Mention the materials in an additional row?
-      - Add references to Corning for CaF2, Schott for N-BALF4 and glass cell datasheet for UVFS.
-    ]
+    // TODO: Mention the materials in an additional row?
+    // TODO: Find the material name for the glass cell? Heraeus Suprasil? And reference the data sheet instead?
   ],
   label: <tab:phase-stability-temperature-coefficients>,
 )
 
-Besides the temperature, the accumulated phase in the air segments is also sensitive to the air pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2.
-Since these parameters do not affect the geometrical distances $d_sigma$, the first term in @eq:phase-stability-phi-derivative vanishes and we only have to take the derivative of $Delta n_sigma$ into account.
-We can also combine the two air segments into a single one, since we do not expect any spatial changes of the pressure, the relative humidity or the #CO2 concentration along the optical path.
-The resulting coefficients for the total length of the air segments are listed in @tab:phase-stability-other-coefficients.
-For the pressure in the laboratory, we have observed values from #qty[950][hPa] to #qty[1030][hPa].
+For the pressure $P$, the relative humidity #RH and the #CO2 concentration #xCO2, we combine the two air segments into one air segment.
+In contrast to the temperature $T$, we expect these parameters to be homogeneous along the optical path.
+The resulting environmental coefficients for the total distance in air are listed in @tab:phase-stability-other-coefficients.
+For the pressure in the laboratory, we have observed values between #qty[950][hPa] and #qty[1030][hPa] in the last few years.
 If the weather outside of the building changes rapidly, pressure variations can go up to $abs(Delta P) = #qty[20][hPa]$ in a few hours, which amounts to a drift of the superlattice phase by more than #qty[200][mrad].
-The relative humidity is capped at approximately #qty[50][%] by the dehumidification of the fresh air and the additional dehumidifiers inside the laboratory.
-If the air outside of the building is dry, the relative humidity inside the laboratory can be as low as #qty[10][%].
-Within #qty[24][h], we usually observe changes of the relative humidity by #qty[1][%] up to #qty[15][%].
-While the phase coefficient is small compared to the pressure, it is still relevant for the long-term stability of the superlattice phase.
-The phase coefficient of the #CO2 concentration is very small compared to the other two coefficients.
-When the fresh air supply is working and no person is present in the laboratory, the #CO2 concentration is constant within the specified repeatability of the sensor.
-We can therefore limit the variation of the #CO2 concentration to $Delta xCO2 <#qty[20][ppm]$.
-For the superlattice phase this would amount to a maximal drift of #qty[0.1][mrad], which is far below the expected drifts due to the other two environmental parameters.
-We can therefore ignore the #CO2 concentration for the stability of the superlattice phase, unless we reach the sub-#unit[mrad] regime.
+The overall range of the relative humidity is $#qty[10][%] < RH < #qty[50][%]$.
+We usually observe changes of the relative humidity between #qty[1][%] and #qty[15][%] within #qty[24][h], where the upper limit amounts to a phase correction by more than #qty[10][mrad].
+The phase coefficient of the #CO2 concentration is very small compared to the pressure and the relative humidity.
+When the fresh air supply is working and no person is present in the laboratory, the #CO2 concentration is constant within the specified repeatability of the sensor, which limits the variation to $Delta xCO2 < #qty[20][ppm]$.
+In terms of the superlattice phase, this corresponds to a maximal drift by #qty[0.1][mrad].
+Therefore, we neglect the #CO2 concentration for the active stabilization of the superlattice phase unless we reach the sub-#unit[mrad] regime.
 
 #floating-figure(
   {
@@ -124,10 +116,11 @@ We can therefore ignore the #CO2 concentration for the stability of the superlat
     table-other-properties
   },
   caption: [
-    Environmental coefficients of the air in the retro path.
-    The coefficients are computed with the Ciddor equation @ciddor_refractive_1996 at the reference values $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$, $RH_0 = #qty[40][%]$ and $xCO2 = #qty[450][ppm]$ for a total distance of #qty[460][mm] in air.
+    Environmental coefficients of air in the retro path.
+    The coefficients are computed using the Ciddor equation @ciddor_refractive_1996 at the reference values $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$, $RH_0 = #qty[40][%]$ and $xCO2 = #qty[450][ppm]$ for a total distance of #qty[460][mm] in air.
   ],
   label: <tab:phase-stability-other-coefficients>,
+  placement: bottom,
 )
 
 
