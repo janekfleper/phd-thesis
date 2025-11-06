@@ -190,115 +190,98 @@ For the superlattice parameters in @fig:phase-measure-detect-result, the phase $
 To reduce the sensitivity of the phase measurement, we typically use the superlattice parameters $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$ where we achieve the ratio $Delta slash t approx 1.3$ at the phase $phi = #qty[10][mrad]$.
 
 
-=== Compensation of the phase gradient <ssec:phase-measure-gradient>
+=== Compensating the phase gradient <ssec:phase-measure-gradient>
 
-The calibration of the in-situ superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result shows a phase gradient in the direction of the #y-axis.
-Such a phase gradient is the result of a small imperfection of the relative alignment of the #x1064\-lattice beams and the #x532\-lattice beams.
+The measurement of the in-situ superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result shows a phase gradient in the direction of the #y-axis, which originates from a small imperfection in the relative alignment of the wavefronts of the #x1064 and #x532 lattice.
 If the standing-wave patterns of the individual lattices are not parallel, the zero-phase frequency $f_0$ varies as a function of the position $(x, y)$.
-Consequently, the compensation of the phase gradient requires a tilt of the lattice beams at the atom position without affecting their overall alignment.
-To adjust the angle of the lattice beams around the atom position, we apply a shift perpendicular to the optical axis in front of the forward lens.
-In @fig:super-setup, there are two glass plates in the #x532\-lattice setup to shift the horizontal and vertical positions of the forward-propagating beam#footnote[
-  The compensation of the phase gradient would also work by shifting the #x1064\-lattice beam.
-].
-A rotation of the glass plates displaces the beam in the corresponding direction due to the refraction at the surfaces.
-As long as the surfaces of the glass plates are parallel, the angle of the forward-propagating beam is conserved.
-The alignment of the #x532\-lattice beams at the atom position is therefore not affected by the rotation of the glass plates.
-
-The first glass plate in the #x532\-lattice setup is mounted in a piezo mirror mount with a range of $plus.minus #num[2]degree$ and an absolute accuracy of $#num[0.05]degree$ for each axis.
-The second glass plate is placed in a regular mirror mount with an adjustable pitch of $plus.minus #num[4]degree$ for the vertical axis.
-We use the second glass plate to apply a static shift to the #x532\-lattice beam, while the first glass plate can be controlled by the experimental sequence to vary the horizontal and vertical shift.
-With the degrees of freedom of the mirror mounts, we compensate the horizontal and vertical component of the phase gradient separately.
-While we can resolve the horizontal component of the gradient with the in-situ measurement of the superlattice phase, the vertical component is not directly visible since the atom images show the integrated optical density.
-Nevertheless, we found a technique to qualitatively optimize the vertical component of the phase gradient.
+Consequently, compensating the phase gradient requires a tilt of the lattice beams without affecting their position relative to the atoms.
+We shift the collimated #x532\-lattice beam#footnote[
+  Compensating the phase gradient also works by shifting the #x1064\-lattice beam.
+] perpendicular to the optical axis using the glass plates shown in @fig:super-setup.
+Rotating the glass plates displaces the collimated beam due to the refraction at the surfaces while conserving its angle.
+Behind the forward lens, this displacement tilts the #x532\-lattice beams without affecting their alignment to the atom position.
+The motorized mirror mount holding one of the glass plates has a range of $plus.minus #deg[2]$ and an absolute accuracy of #deg[0.05] for each axis.
+We can control the motorized mirror mount in the experimental sequence to vary the horizontal and vertical shift of the #x532\-lattice beams for compensating the individual gradient components.
 
 #floating-figure(
   image("figures/phase_measure_horizontal_gradient.png", width: 70%),
   caption: [
-    Compensation of the horizontal component of the phase gradient.
-    The gradient component is linear in the angle $gamma_"hor"$, as expected from the shift of the #x532\-lattice beam due to the refraction in the glass plate.
-    The uncertainties take the $#num[0.05]degree$ accuracy of the piezo mirror mount into account.
+    Compensating the horizontal component of the phase gradient.
+    The gradient component is linear in the angle $gamma_"hor"$, as expected from the shift of the #x532\-lattice beams due to the refraction in the glass plate.
+    The uncertainties take the #deg[0.05] accuracy of the motorized mirror mount into account.
     The dashed line shows the expected gradients based on the properties of the glass plate and the focal length of the forward lens.
     Empty cells in the insets on the right are either excluded by the initial mask around the atom cloud or the fit of the zero-phase frequency $f_0 (x, y)$ was not successful.
     The lattice depths for the measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
   ],
   label: <fig:phase-measure-gradient-horizontal>,
+  placement: bottom,
 )
 
-For the compensation of the horizontal gradient component, we repeat the measurement of the superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result at several angles $gamma_"hor"$ of the glass plate.
-We evaluate the frequency $f_0 (x, y)$ by fitting a one-dimensional polynomial up to the degree one.
-Analogous to the evaluation of the lattice depth $V(x, y)$ in @sec:mod-eval, the one-dimensional polynomial is expanded in the #xy-plane and can be rotated by the angle $theta.alt$ to account for the rotation of the optical axis of the lattice beams.
+For compensating the horizontal gradient component, we repeat the measurement of the superlattice phase $phi(x, y)$ in @fig:phase-measure-detect-result at several angles $gamma_"hor"$ of the glass plate.
+We evaluate the zero-phase frequency $f_0 (x, y)$ by fitting a first-degree polynomial that can be rotated in the #xy-plane.
 In @fig:phase-measure-gradient-horizontal, the measurement and compensation of the horizontal gradient component is shown.
-We vary the glass-plate angle in steps of $#num[0.4]degree$ to find the zero-crossing of the gradient component at $gamma_"hor" approx #num[1.7]degree$.
+We vary the glass-plate angle in steps of #deg[0.4] to find the zero-crossing of the gradient component at $gamma_"hor" approx #deg[1.7]$.
 The standard deviation of the zero-phase frequency $f_0 (x, y)$ across the atom cloud is $sigma(f_0) = #qty[0.11][MHz]$.
 This corresponds to $sigma(phi) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-stability-result).
-During the scan of the angle $gamma_"hor"$, the frequency $f_0$ in the center of the atom cloud $(x, y) = (0, 0)$ varies by less than #qty[0.25][MHz].
-We can therefore tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
-While we want the superlattice phase $phi(x, y)$ to be homogeneous in most measurements, there are a few cases where applying a specific horizontal gradient component is useful.
-If the phase $phi$ changes linearly across the atom cloud, the offset $Delta$ shows the same behavior.
-This allows us to realize the offset scan in a single image where the phase measurement results in a local minimum of the atomic density.
-In @ssec:phase-measure-period and @ssec:phase-stability-result, we use this technique for a single-shot measurement of the zero-phase frequency $f_0$.
-The spatial variation of the phase $phi$ due to the horizontal gradient component encodes the offset $Delta slash t = 0$ in the position of the minimum in the atomic density.
-We can therefore directly measure the shot-to-shot fluctuations of the phase, whereas a scan of the frequency as in @fig:phase-measure-detect-result only shows the phase fluctuations on a timescale of approximately #qty[10][min].
+During the scan of the angle $gamma_"hor"$, the zero-phase frequency $f_0$ in the center of the atom cloud varies by less than #qty[0.25][MHz].
+We can, therefore, tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
 
 #floating-figure(
   image("figures/phase_measure_vertical_gradient.png", width: 70%),
   caption: [
-    Compensation of the vertical component of the phase gradient.
-    The contrast quantifies the ratio of the amplitude and the width of the minimum in the atomic densities.
-    For the angle $gamma_"ver"$, the uncertainties take the $#num[0.05]degree$ accuracy of the piezo mirror mount into account, while the uncertainties of the contrast show the fit errors.
-    The atomic densities in the insets highlight the different contrasts for the corresponding data points.
-    The lattice depths for the measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$, and the horizontal gradient component is approximately #qty[0.17][MHz/μm].
+    Compensating the vertical component of the phase gradient.
+    The contrast shows the ratio of the amplitude and the width of the minimum in the atomic densities, as highlighted by the insets.
+    The uncertainties of the angle $gamma_"ver"$ take the #deg[0.05] accuracy of the motorized mirror mount into account, and the uncertainties of the contrast show the fit errors.
+    The horizontal gradient component is approximately #iqty[0.17][MHz/μm], and the lattice depths are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
   ],
   label: <fig:phase-measure-gradient-vertical>,
+  placement: bottom,
 )
 
-The compensation of the vertical component of the gradient also relies on a finite horizontal gradient component.
-Since the image shows the integrated atomic density of the vertical lattice planes, we can use the shape of the local minimum to optimize the vertical component of the phase gradient#footnote[
-  This technique is equivalent to the vertical alignment procedure of the #x1064 lattice in @ssec:mod-align-x1064, where we use the contrast of the lattice-modulation resonances to infer the overlap of the #x1064\-lattice beams.
+While we want the superlattice phase $phi(x, y)$ to be homogeneous in most measurements, there are a few cases where a finite horizontal gradient component is useful to realize an offset scan in a single image.
+One case is the compensation of the vertical gradient component through the shape of the local minimum around the zero-phase frequency#footnote[
+  This technique is equivalent to the vertical alignment procedure of the #x1064 lattice in @ssec:mod-align-x1064 where we use the contrast of the lattice-modulation resonances to infer the overlap of the #x1064\-lattice beams.
 ].
 If the superlattice phase is equal in all vertical lattice planes, the local minimum occurs at the same position $(x, y)$ in each lattice plane and the integrated signal shows a minimal width.
-Conversely, a vertical gradient component causes a shift of the phase measurement in the lattice planes that broadens the integrated signal in the atomic density.
-While we can not directly quantify the strength of the vertical gradient component, the technique is sufficient to find the zero-gradient angle of the glass plate.
-In @fig:phase-measure-gradient-vertical, the contrast of the integrated signal shows a maximum at the glass-plate angle $gamma_"ver" approx #num[0.5]degree$.
+Conversely, a finite vertical gradient component causes a spatial shift of the phase measurement in the lattice planes that broadens the integrated signal in the atomic density.
+While we cannot infer the strength of the vertical gradient component, the technique is sufficient to find the zero-gradient angle of the glass plate.
+In @fig:phase-measure-gradient-vertical, the contrast is maximal at the glass-plate angle $gamma_"ver" approx #deg[0.5]$.
 Compared to the horizontal gradient component, the measurement of the vertical gradient component is significantly less sensitive.
-This is primarily caused by the overall shape of the atom cloud that spans up to #qty[100][μm] in the #xy-plane, whereas the vertical lattice planes are only occupied over #qty[10][μm].
+This is primarily caused by the overall shape of the atom cloud that spans up to #qty[100][μm] in the #xy-plane and only #qty[10][μm] along the #z-axis.
 While this limits the measurement resolution, it also limits the possible inhomogeneity of the superlattice phase due to the vertical component of the phase gradient.
 
 
-=== Measurement of the superlattice period <ssec:phase-measure-period>
+=== Measuring the superlattice period <ssec:phase-measure-period>
 
-#notes[
-  - Reference the phase-stability section for the details of the in-situ measurement?
-]
+// TODO: Reference the phase-stability section for the details of the in-situ measurement?
 
-To precisely control the superlattice phase $phi$ with the frequency $f$, we need to know the conversion factor between the two quantities.
-While the measurement of the zero-phase frequency $f_0$ just allows us to set the phase $phi = 0$, any other phase $phi$ requires the calibration of the superlattice period in terms of the frequency $f$.
-With the length $d approx #qty[50][cm]$ of the optical path from the atom position to the retro mirror (see @fig:super-setup), we can already estimate the frequency period to be $Delta f approx #qty[150][MHz]$ based on @eq:phase-setup-delta-phi.
-For a calibration of the frequency period, we run the phase measurement in @fig:phase-measure-detect-result at the adjacent phases $phi = 0$ and $phi = pi slash 2$.
-The resulting frequency difference $Delta f$ between the two configurations is the frequency period corresponding to the phase period $pi slash 2$.
+To precisely control the superlattice phase $phi$ through the frequency $f$, we need to determine the conversion factor between the two quantities.
+While the measurement of the zero-phase frequency $f_0$ is sufficient to realize the phase $phi = 0$, any finite phase $phi$ requires a calibration of the superlattice period in terms of the frequency $f$.
+With the distance $d approx #qty[50][cm]$ from the atom position to the retro mirror (see @fig:super-setup), we estimate the frequency period $Delta f approx #qty[150][MHz]$ according to @eq:phase-setup-delta-phi.
 
 #floating-figure(
   image("figures/phase_measure_period.png"),
   caption: [
-    Measurement of the frequency period.
+    Measuring the superlattice period.
     *a*, Distribution of the frequency differences in consecutive sequences across #num[1120] measurements.
     *b*, *c*, Loading and state initialization in the two different superlattice configurations.
-    The phases for the loading are $phi = -pi slash 4$ (*b*) and $phi = pi slash 4$ (*c*) respectively, and each phase is increased by $pi slash 4$ for the initialization.
-    The superlattice parameters for the measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$, and the target frequencies are $f = #qty[406.4][MHz]$ (*b*) and $f = #qty[556.3][MHz]$ (*c*).
+    The loading phases are $phi = -pi slash 4$ (*b*) and $phi = pi slash 4$ (*c*) respectively, and each phase is increased by $pi slash 4$ for the initialization.
+    The target frequencies for the phases $phi = 0$ and $phi = pi slash 2$, where we expect the offset $Delta = 0$, are $f = #qty[406.4][MHz]$ and $f = #qty[556.3][MHz]$, respectively.
+    The superlattice parameters for the measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
 
-    #notes[
-      - Add insets to show the "resonance" data?
-      - Move the distribution to the right and introduce the superlattice configurations first?
-      - Add arrow between the axes *b* and *c* to highlight the initialization with $Delta phi = + pi slash 4$?
-    ]
+    // TODO: Add insets to show the "resonance" data?
+    // TODO: Move the distribution to the right and introduce the superlattice configurations first!
+    // TODO: Add arrow between the axes *b* and *c* to highlight the initialization with $Delta phi = + pi slash 4$
   ],
   label: <fig:phase-measure-period>,
+  placement: bottom,
 )
 
+To measure the frequency period, we run the phase measurement in @fig:phase-measure-detect-result at the adjacent phases $phi = 0$ and $phi = pi slash 2$.
 For the initial configuration of the phase measurement according to @fig:phase-measure-sequence, we select the phases $phi = -pi slash 4$ and $phi = pi slash 4$, before initializing the oscillations at the phases $phi = 0$ and $phi = pi slash 2$ respectively.
 The two corresponding superlattice configurations are illustrated in @fig:phase-measure-period.
-For the measurement of the superlattice phase, we apply a small horizontal gradient component where the phase is encoded in the position of the minimum in the atomic density (see @fig:phase-measure-gradient-vertical).
-With the horizontal component of #qty[0.060(6)][MHz/μm], the positions of the minima move across the entire atom cloud to make the measurement as sensitive to the phase as possible.
+For the single-shot measurement of the superlattice phase, we apply a small horizontal gradient component to encode the phase in the position of the minimum in the atomic density (see @fig:phase-measure-gradient-vertical).
+With the horizontal gradient component of #iqty[0.060(6)][MHz/μm], the positions of the minima span the entire atom cloud to make the measurement as sensitive to the phase as possible.
 This technique allows an alternation between the two configurations every sequence, which makes the measurement insensitive to long-term drifts.
 The distribution of the frequency differences of consecutive sequences in #subref(<fig:phase-measure-period>, tr[a]) yields the frequency period
 
@@ -307,4 +290,4 @@ $
 $ <eq:phase-measure-period>
 
 which is only slightly lower than the value estimated from the optical path length.
-We can now use $Delta f$ to convert any frequency in #unit[MHz] to a phase in #unit[mrad], which is the physical superlattice parameter and allows a comparison to other experimental setups.
+We use $Delta f$ to convert any frequency in #unit[MHz] to a phase in #unit[mrad], which is the physical superlattice parameter that allows a comparison to other experimental setups.
