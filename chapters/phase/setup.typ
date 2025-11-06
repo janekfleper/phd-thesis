@@ -6,20 +6,20 @@
 // TOOD: Compare to the theory and setup sections that stuff is not mentioned twice...
 // TODO: Mention the size of the cloud compared to the retro path length?
 
-The standing-wave configuration of the #x1064 lattice and the #x532 lattice limits the sensitivity of the superlattice phase $phi$ to the retro path in @fig:super-setup.
+The standing-wave configuration of the #x1064 lattice and the #x532 lattice limits the sensitivity of the superlattice phase #phase to the retro path in @fig:super-setup.
 The retro mirror is the reference point for the accumulation of the superlattice phase along the optical path up to the atom position.
 Therefore, the optical phase of the forward-propagating beams does not affect the individual lattice potentials.
 Instead, we use the optical frequency of the individual lattices to tune the superlattice phase.
 A frequency difference $Delta nu$ changes the superlattice phase by
 
 $
-  Delta phi = Delta k dot d = 2 pi (Delta nu) / c dot d
+  Delta phase = Delta k dot d = 2 pi (Delta nu) / c dot d
 $ <eq:phase-setup-delta-phi>
 
 where $d$ is the distance from the retro mirror to the atom position.
 While the phases of both lattices can change the band structure of the superlattice potential, the #x532\-lattice phase also affects the positions of the lattice sites (see @sec:theory-super).
 Therefore, we are primarily interested in changing the phase of the #x1064 lattice to tune the superlattice potential.
-With the path length $d approx #qty[50][cm]$, the frequency difference of the #x1064\-lattice laser corresponding to the superlattice phase $Delta phi = pi slash 2$ is $Delta nu approx #qty[150][MHz]$.
+With the path length $d approx #qty[50][cm]$, the frequency difference of the #x1064\-lattice laser corresponding to the superlattice phase $Delta phase = pi slash 2$ is $Delta nu approx #qty[150][MHz]$.
 
 #floating-figure(
   control-diagram(),
@@ -32,7 +32,7 @@ With the path length $d approx #qty[50][cm]$, the frequency difference of the #x
     The acousto-optical modulator (AOM) in the #x532\-lattice setup is driven by a constant frequency of #qty[80][MHz].
     In the #x1064\-lattice setup, the AOM frequency is controlled by an arbitrary-waveform generator (AWG).
     The vertical dashed line indicates the separation of the optical tables.
-    While the entire frequency control is handled on the laser table, the superlattice phase $phi$ accumulates on the experimental table.
+    While the entire frequency control is handled on the laser table, the superlattice phase #phase accumulates on the experimental table.
 
     // TODO: Add label for the error signal?
   ],
@@ -44,7 +44,7 @@ The pump laser is not actively stabilized since its passive frequency stability 
   The frequency drift at constant room temperature is specified to be #iqty[1][MHz/min].
 ].
 An absolute frequency control would only be required to stabilize the phase of the individual lattices.
-In @fig:phase-setup, the setup to control the superlattice phase $phi$ through the frequency difference $Delta nu = nu_"pump" - nu_x1064$ is shown.
+In @fig:phase-setup, the setup to control the superlattice phase #phase through the frequency difference $Delta nu = nu_"pump" - nu_x1064$ is shown.
 We use an optical phase locked loop (OPLL) to stabilize the frequency $nu_x1064$ relative to the frequency $nu_"pump"$ @telle_phase-locking_1990.
 The reference signal is provided by a direct digital synthesis (DDS) board#footnote[
   Analog Devices AD9914 Evaluation Board ($fdds <= #qty[1.4][GHz]$)
