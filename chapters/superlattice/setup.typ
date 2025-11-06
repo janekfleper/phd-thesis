@@ -73,9 +73,9 @@ Behind the second telescope are two mirrors in motorized mirror mounts#footnote[
 ] for the alignment of the #forward #x532\-lattice beam onto the atoms.
 Due to the proximity of the mirror mounts, they are not suitable to shift the #x532\-lattice beam perpendicular to its optical axis.
 This is relevant to match the wavefront angles of the #x532 lattice and the #x1064 lattice at the position of the atoms.
-Instead, we use two #qty[10][mm] thick windows to apply a horizontal and vertical shift to the collimated #x532\-lattice beam.
+Instead, we use two #qty[10][mm] thick glass plates to apply a horizontal and vertical shift to the collimated #x532\-lattice beam.
 The forward lens converts this shift to the angle of the #x532 lattice at the position of the atoms.
-One window uses a static mirror mount, while the other window uses a motorized mirror mount#footnote[
+One glass plate uses a static mirror mount, while the other glass plate uses a motorized mirror mount#footnote[
   Newport Agilis#sym.trademark AG-M100L
 ] to allow an automated control of the relative wavefront angle.
 Matching the wavefronts of the two lattices is essential for the phase-sensitive measurements presented in @sec:phase-measure.
