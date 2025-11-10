@@ -124,8 +124,8 @@
   table.header([], [Air], [Lens 1], [Lens 2], [Air], [Glass cell]),
   table.hline(y: 1),
   table.vline(x: 1),
-  [$d_sigma slash#unit[mm]$], $240$, $9.0$, $3.7$, $220$, $4.0$,
   $phy.pdv(Delta n_sigma, T) med slash med #qty[1e-6][1/K]$, $0.013$, $-0.274$, $-0.942$, $0.013$, $-0.618$,
+  [$d_sigma slash#unit[mm]$], $240$, $9.0$, $3.7$, $220$, $4.0$,
   $phy.pdv(phi, T) med slash #unit[mrad/K]$, $18.4$, $-14.5$, $-20.6$, $16.9$, $-14.6$,
 )
 
@@ -139,11 +139,168 @@
   table.hline(y: 1),
   table.vline(x: 1),
   $phy.pdv(phi, xi)$,
-  qty[-11.1][mrad/hPa],
-  qty[-0.92][mrad/%],
-  qty[-5.9][μrad/ppm],
+  iqty[-11.1][mrad/hPa],
+  iqty[-0.92][mrad/%],
+  iqty[-5.9][μrad/ppm],
   // $#num[-0.59] #h(0.2em) #unit[mrad] / #qty[100][ppm]$,
 )
 
 #pagebreak()
 #figure(table-other-properties)
+
+#let floquet-sketch(xscale: 3, yscale: 3) = {
+  let xmin = -1
+  let xmax = 1
+  let dx = 0.01
+  let xdata = range(int(xmin / dx), int(xmax / dx) + 1).map(x => x * dx)
+
+  let energy-style = (dash: "dotted", thickness: 0.7pt)
+  let tunneling-style = (angle: 50deg, width: 0.46 * xscale)
+  let arrow-symbol = "triangle"
+
+  let potential(x, vl, vs, phi) = (
+    vs * calc.pow(calc.cos(2 * x * calc.pi), 2) - vl * calc.pow(calc.sin((x - phi) * calc.pi), 2)
+  )
+
+  let draw-potential(color, phase: 0) = cetz.draw.line(
+    ..xdata.map(x => (x * xscale, potential(x, 0.4 * yscale, yscale, phase))),
+    stroke: color + 1.5pt,
+  )
+
+
+  let atom-style = (
+    radius: 0.2,
+    stroke: none,
+    fill: gradient.radial(white, luma(20%), focal-center: auto, center: (40%, 40%)),
+  )
+
+  let draw-single(
+    x,
+    y,
+    radius: 0.2,
+    stroke: none,
+    color: blue,
+  ) = cetz.draw.circle(
+    (x * xscale, y),
+    radius: radius,
+    stroke: stroke,
+    fill: gradient.radial(
+      white,
+      color,
+      focal-center: auto,
+      center: (40%, 40%),
+    ),
+  )
+
+  let draw-double(x, y, alpha: 0%, ..args) = {
+    draw-single(x + 0.02, y, color: red.transparentize(alpha), ..args.named())
+    draw-single(x - 0.02, y, color: blue.transparentize(alpha), ..args.named())
+  }
+
+  let draw-tunneling(x, angle: 45deg, width: 0.9, name: none) = {
+    assert.ne(name, none, message: "The name must not be none!")
+    let color = luma(50%)
+    cetz.draw.set-style(mark: (symbol: arrow-symbol, fill: color))
+
+    let radius = width / 2 / calc.sin(angle)
+    let x0 = x - calc.sin(angle) * radius
+    let y0 = (calc.cos(angle) - 1) * radius
+    cetz.draw.arc(
+      (x0, y0),
+      start: 90deg + angle,
+      stop: 90deg - angle,
+      radius: radius,
+      stroke: color,
+      name: name,
+    )
+  }
+
+  // for the correct vertical alignment of the tunneling amplitudes...
+  show math.equation: set text(top-edge: "x-height", bottom-edge: "baseline")
+
+  let x-shift = 0.23 // the shift of the atoms from the double-well center
+  let y-single = 0.35 * yscale
+  let y-U = 0.15 * yscale
+  let y-Ueff = 0.5 * yscale
+
+  cetz.canvas({
+    import cetz.draw: *
+    set-style(mark: (scale: 0.7))
+
+    // the static double wells
+    draw-potential(black)
+
+    // label the interaction energy...
+    line((0.9 * xscale, y-single), (-0.85 * xscale, y-single), stroke: energy-style)
+    line((0.9 * xscale, y-U), (0.14 * xscale, y-U), stroke: energy-style)
+    line(
+      (0.95 * xscale, y-single),
+      (0.95 * xscale, y-U),
+      mark: (end: arrow-symbol, fill: black),
+      name: "arrow-U",
+    )
+    content((rel: (0.05 * xscale, 0), to: "arrow-U"), $U$, anchor: "west")
+
+    // draw the atoms...
+    draw-single(-0.5 - x-shift, y-single, color: blue)
+    draw-single(-0.5 + x-shift, y-single, color: blue.transparentize(70%))
+    draw-double(0.5 - x-shift, y-U)
+    draw-double(0.5 + x-shift, y-U, alpha: 70%)
+
+    // draw the tunneling arrows...
+    scope({
+      translate(y: 0.8 * yscale)
+      draw-tunneling(-0.5 * xscale, ..tunneling-style, name: "static-single")
+      draw-tunneling(0.5 * xscale, ..tunneling-style, name: "static-double")
+    })
+
+    content((rel: (0, 0.3), to: "static-single.arc-center"), $t$)
+    content((rel: (0, 0.3), to: "static-double.arc-center"), $J = (4t^2) / U$)
+
+
+    // the modulated double wells
+    translate(x: 2 * xscale + 0.9)
+    draw-potential(luma(70%), phase: 0.09)
+    draw-potential(luma(40%), phase: -0.09)
+    draw-potential(black)
+
+    // label the interaction energy...
+    line((0.93 * xscale, y-single), (-0.85 * xscale, y-single), stroke: energy-style)
+    line((0.93 * xscale, y-Ueff), (0.12 * xscale, y-Ueff), stroke: energy-style)
+    line(
+      (0.98 * xscale, y-single),
+      (0.98 * xscale, y-Ueff),
+      mark: (end: arrow-symbol, fill: black),
+      name: "arrow-Ueff",
+    )
+    content((rel: (0.05 * xscale, 0), to: "arrow-Ueff"), $Ueff$, anchor: "west")
+
+    // draw the atoms...
+    draw-single(-0.5 - x-shift, y-single, color: blue)
+    draw-single(-0.5 + x-shift, y-single, color: blue.transparentize(70%))
+    draw-double(0.5 - x-shift, y-Ueff)
+    draw-double(0.5 + x-shift, y-Ueff, alpha: 70%)
+
+    // draw the tunneling arrows...
+    scope({
+      translate(y: 0.8 * yscale)
+      draw-tunneling(-0.5 * xscale, ..tunneling-style, name: "static-single")
+      draw-tunneling(0.5 * xscale, ..tunneling-style, name: "static-double")
+    })
+
+    content((rel: (0, 0.3), to: "static-single.arc-center"), teff)
+    content((rel: (0, 0.3), to: "static-double.arc-center"), Jeff)
+
+    // label the modulation amplitude...
+    line(
+      (0.9 * xscale, -0.095 * yscale),
+      (0.9 * xscale, -0.315 * yscale),
+      mark: (symbol: arrow-symbol, fill: black),
+      name: "amplitude",
+    )
+    content((rel: (0.05 * xscale, 0), to: "amplitude"), $h nu K0$, anchor: "west")
+  })
+}
+
+#set page(width: 20cm, height: auto, margin: 0.9em)
+#figure(block(stroke: none, floquet-sketch()))

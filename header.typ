@@ -164,9 +164,13 @@
 #let cband = $tilde(epsilon)$
 
 // superlattice phase parameters
+#let phase = $phi$
 #let fdds = $f_"DDS"$
 #let faom = $f_"AOM"$
 #let fbeat = $f_"beat"$
+#let tau0 = $tau_0$
+#let f0 = $f_0$
+#let Df = $Delta f$
 
 // superlattice stability parameters
 #let RH = $R H$
@@ -191,7 +195,10 @@
 #let teff = $t_"eff"$
 #let Ueff = $U_"eff"$
 #let Jeff = $J_"eff"$
-#let VCT = $V_"CT"$
+#let VNN = $V^"NN"$
+#let VDE = $V^"DE"$
+#let VCT = $V^"CT"$
+#let VCTeff = $V^"CT"_"eff"$
 #let calC = $cal(C)$
 #let Fpair = $cal(F)_"pair"$
 #let tcorr = $t_"corr"$

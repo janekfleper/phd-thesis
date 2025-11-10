@@ -144,5 +144,6 @@ Measurements up to a few #qty[10][ms] in the frozen lattices were, therefore, no
 However, the thermal lensing resulted in a systematic error of the lattice-depth calibration in both the #1064 lattice and the #x532 lattice.
 At $Vx1064 = #qty[54][Erec]$, the lattice depth was already reduced by approximately #qty[1][%] after #qty[100][ms].
 The reduction of the lattice depth during the lattice calibration was even greater in the #x532 lattice.
-In conclusion, the upgrade of the optical setups of the in-plane superlattice was essential for a reproducible operation of the optical lattices.
-In the context of the superlattice potential, we also find a significant improvement of the stability of the superlattice phase $phi(tau)$ during the experimental sequence in @ssec:phase-stability-result.
+In conclusion, the upgrade of the optical setups was essential for the reliable operation of the optical lattices.
+In the context of the superlattice potential, we also find a significant improvement in the stability of the superlattice phase $phi(tau)$ during the experimental sequence.
+The phase stability is discussed in detail in @ssec:phase-stability-result.
