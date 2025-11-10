@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/figures.typ": floquet-sketch
 
 == Floquet engineering of the superlattice potential <sec:phase-floquet>
 
@@ -13,7 +14,6 @@ Unless noted otherwise, the content in this section is adapted from @klemmer_flo
 
 === Floquet theory <ssec:phase-floquet-theory>
 
-// TODO: Add any figure here to introduce the modulation/the parameters?
 // TOOD: Fix $kick$ in @eq:phase-floquet-theory-evolution...
 
 In the framework of Floquet engineering, we apply a periodic modulation $Vmod(tau + T) = Vmod(tau)$ to a system described by the static Hamiltonian #H0.
@@ -41,6 +41,20 @@ $ <eq:phase-floquet-theory-expansion>
 
 in powers of the inverse modulation frequency $Heff^((n)), kick^((n)) prop 1 slash nu^n$ @rahav_effective_2003 @bukov_floquet_2017 @desbuquois_controlling_2017.
 
+#floating-figure(
+  floquet-sketch(yscale: 3, xscale: 3),
+  caption: [
+    Illustration of Floquet-driven double wells.
+    In static double wells (left), the tunneling amplitude for a single particle is $t$ while a strongly-interacting pair tunnels according to the superexchange constant $J$ @eq:theory-double-two-superexchange[].
+    In Floquet-driven double wells (right), the tunneling amplitudes are rescaled to #teff and #Jeff, respectively, while the interaction energy is #Ueff.
+    This figure is adapted from @klemmer_floquet-driven_2024.
+
+    // TODO: Add *a* and *b* as labels?
+    // TODO: Compute the exact line lengt for the modulation amplitude?
+  ],
+  label: <fig:phase-floquet-sketch>,
+)
+
 We use the superlattice phase #phase to apply a periodic modulation to the superlattice potential.
 In a superlattice configuration where $tout slash tin << 1$, we reduce the system to an individual double well where the modulation is applied to the offset $Delta prop phase$.
 We add the modulation
@@ -51,7 +65,7 @@ $ <eq:phase-floquet-theory-modulation>
 
 to the static offset $Delta$, where #K0 is the dimensionless modulation amplitude.
 Depending on the number of particles in the double well, we use the static Hamiltonians in @eq:theory-double-one-hamiltonian or in @eq:theory-double-two-hamiltonian.
-The two cases are illustrated in #tr[ref Floquet sketch...]
+The two different occupations are illustrated in @fig:phase-floquet-sketch.
 In singly-occupied double-well potentials, the tunneling amplitude $t$ is the primary energy scale.
 Therefore, the condition for the high-frequency expansion in @eq:phase-floquet-theory-expansion is $h nu >> t$, and the tunneling amplitude is modified according to
 
