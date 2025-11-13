@@ -1,7 +1,27 @@
 #import "@local/fancy-thesis:0.1.0": floating-figure, optional-refs, subref
-#import "@local/fancy-units:0.2.0": format-unit-power, format-unit-symbol, num, qty, unit
+#import "@local/fancy-units:0.2.0": (
+  add-macros, configure, format-qty, format-unit-fraction, format-unit-power, format-unit-symbol, num, qty,
+  relative-uncertainties, unit,
+)
 #import "@preview/physica:0.9.5" as phy
 #import "@preview/mannot:0.3.0": markrect
+
+#let fancy-units(body) = {
+  configure(
+    num-transform: relative-uncertainties,
+    unit-format: format-unit-fraction,
+    qty-format: format-qty.with(separator: sym.wj + h(0.2em) + sym.wj),
+  )
+
+  add-macros(
+    Ohm: sym.Omega,
+    Erec: [_E_#sub[rec]],
+    Erecl: [_E_#sub[rec,l]],
+    Erecs: [_E_#sub[rec,s]],
+  )
+
+  body
+}
 
 // some custom fancy-units functions
 #let deg(..args, body) = $#num(..args, body)degree$
