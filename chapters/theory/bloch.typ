@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/band_structure/figure.typ": figure as figure-band-structure
 
 == Bloch's theorem <sec:theory-bloch>
 
@@ -70,7 +71,8 @@ This behavior can be found in all energy bands that are not trapped anymore.
 In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite bandwidth $Delta epsilon_n$ and the Bloch waves $bloch(q, n)(x)$ still follow the shape of the potential $V(x)$.
 
 #floating-figure(
-  image("figures/theory_band_structure.png", width: 90%),
+  figure-band-structure(),
+  // TODO: Reduce x-axis limits to remove the left and right gaps?
   caption: [
     Band structure of an optical lattice potential.
     *a*, Energy bands $epsilon_n (q)$ in the first Brillouin zone $q slash k = [-1, 1)$ of an optical lattice potential with the depth $V_0 = #qty[15][Erec]$.
