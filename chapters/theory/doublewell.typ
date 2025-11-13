@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/doublewell_two_symmetric/figure.typ": figure as figure-doublewell-two-symmetric
 
 #let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm)
 
@@ -118,7 +119,8 @@ In this subsection, I will show the solution for two specific configurations tha
 #floating-figure(
   grid(
     columns: (60%, auto),
-    image("figures/theory_doublewell_two_symmetric.png"),
+    figure-doublewell-two-symmetric(height: 7cm),
+    // TODO: Change y-axis ticks to [-8, -6, ..., 6, 8]?
     block(
       width: 100%,
       {
