@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
+#import "figures/superlattice_band_structure/figure.typ": figure as figure-superlattice-band-structure
 
 == Optical superlattices <sec:theory-super>
 
@@ -70,7 +71,7 @@ For the lowest two bands in #subref(<fig:theory-super-band-structure>, "b"), the
 For both pairs of bands, the Bloch waves show their origin from the bands $tilde(n)$ in the number of nodes per lattice site (c.f. #subref(<fig:theory-bloch-energy-bands>, "b")).
 
 #floating-figure(
-  image("figures/theory_superlattice_band_structure.png", width: 85%),
+  figure-superlattice-band-structure(width: 14.5cm, height: 6.9cm),
   caption: [
     Band structure of a symmetric optical superlattice potential.
     *a*, Energy bands $epsilon_n (q)$ in an optical superlattice potential with $Vl = #qty[16][Erec]$, $Vs = #qty[5][Erec]$ and $phi = 0$.

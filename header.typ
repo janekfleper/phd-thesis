@@ -75,6 +75,8 @@
 
 #let along = $a_"long"$
 #let ashort = $a_"short"$
+#let klong = $k_"long"$
+#let kshort = $k_"short"$
 
 #let x1064 = $x 1064$
 #let ax1064 = $a_x1064$
