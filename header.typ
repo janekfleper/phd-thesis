@@ -53,6 +53,9 @@
 #let xz-plane = [$x z$-plane]
 #let yz-plane = [$y z$-plane]
 
+#let along = $a_"long"$
+#let ashort = $a_"short"$
+
 #let x1064 = $x 1064$
 #let ax1064 = $a_x1064$
 #let wx1064 = $w_x1064$

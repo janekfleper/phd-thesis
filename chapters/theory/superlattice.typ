@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
 
 == Optical superlattices <sec:theory-super>
 
@@ -28,7 +29,7 @@ with the relation $k_s = 2 k_l$ for the lattice vectors, and $#unit[Erec] prop k
 The factor $4$ is required to express the dimensionless lattice depth $v_s$ in units of the recoil energy at $lambda_s = #qty[532][nm]$.
 
 #floating-figure(
-  image("figures/theory_superlattice_phase.png", width: 90%),
+  figure-superlattice-phase(height: 4.4cm),
   caption: [
     Superlattice potential with a tunable phase $phi$.
     The colored lines indicate the potentials of the long lattice (red) and the short lattice (green), while the black line shows the total superlattice potential.
