@@ -1,3 +1,5 @@
+#import "/header.typ": fancy-units
+
 #let abc-style = (
   location: top + left,
   outset: 0.3em,
@@ -24,6 +26,7 @@
 #let figure-style(body) = {
   set text(10pt, font: "New Computer Modern Sans")
   show math.equation: set text(font: "New Computer Modern Sans Math")
+  show: fancy-units
 
   body
 }
