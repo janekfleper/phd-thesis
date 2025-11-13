@@ -1,0 +1,29 @@
+#let abc-style = (
+  location: top + left,
+  outset: 0.3em,
+  fill: white.transparentize(30%),
+  frame: block.with(height: 4mm, width: 4mm),
+  numbering: "a",
+  text-style: (weight: 600),
+)
+
+#let _default-colors = (
+  color.rgb("#1f77b4"),
+  color.rgb("#ff7f0e"),
+  color.rgb("#2ca02c"),
+  color.rgb("#d62728"),
+  color.rgb("#9467bd"),
+  color.rgb("#8c564b"),
+  color.rgb("#e377c2"),
+  color.rgb("#7f7f7f"),
+  color.rgb("#bcbd22"),
+)
+
+#let colors(i) = _default-colors.at(calc.rem(i, _default-colors.len()))
+
+#let figure-style(body) = {
+  set text(10pt, font: "New Computer Modern Sans")
+  show math.equation: set text(font: "New Computer Modern Sans Math")
+
+  body
+}
