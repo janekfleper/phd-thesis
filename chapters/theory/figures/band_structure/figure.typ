@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let yaxis-minor-tick-locs = range(0, 5).map(y => y * 5 + 2.5)
+
 #let axes-0(xlim: (-1.05, 1.05), ylim: (-1.5, 26.5), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -40,25 +42,7 @@
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: (
-      -1.1,
-      -0.8999999999999999,
-      -0.7999999999999999,
-      -0.7,
-      -0.6,
-      -0.3999999999999999,
-      -0.2999999999999998,
-      -0.19999999999999996,
-      -0.09999999999999987,
-      0.10000000000000009,
-      0.20000000000000018,
-      0.30000000000000004,
-      0.40000000000000013,
-      0.6000000000000001,
-      0.7000000000000002,
-      0.8000000000000003,
-      0.9000000000000004,
-    ),
+    locs: range(-3, 4).map(x => x / 4),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
@@ -70,31 +54,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      -1.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0,
-      6.0,
-      7.0,
-      8.0,
-      9.0,
-      11.0,
-      12.0,
-      13.0,
-      14.0,
-      16.0,
-      17.0,
-      18.0,
-      19.0,
-      21.0,
-      22.0,
-      23.0,
-      24.0,
-      26.0,
-      27.0,
-    ),
+    locs: yaxis-minor-tick-locs,
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -218,22 +178,7 @@
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: (
-      -1.6,
-      -1.4,
-      -1.2,
-      -0.7999999999999998,
-      -0.5999999999999999,
-      -0.3999999999999999,
-      -0.19999999999999996,
-      0.20000000000000018,
-      0.40000000000000036,
-      0.6000000000000001,
-      0.8000000000000003,
-      1.2000000000000002,
-      1.4000000000000004,
-      1.6,
-    ),
+    locs: range(-3, 4).map(x => x / 2),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
@@ -245,31 +190,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      -1.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0,
-      6.0,
-      7.0,
-      8.0,
-      9.0,
-      11.0,
-      12.0,
-      13.0,
-      14.0,
-      16.0,
-      17.0,
-      18.0,
-      19.0,
-      21.0,
-      22.0,
-      23.0,
-      24.0,
-      26.0,
-      27.0,
-    ),
+    locs: yaxis-minor-tick-locs,
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
