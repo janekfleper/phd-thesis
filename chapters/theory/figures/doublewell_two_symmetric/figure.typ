@@ -20,13 +20,6 @@
 
   let data = json("data/axes-0.json")
 
-  let spines = (
-    left: (bounds: (100.0%, 0.0%), stroke: black + 0.6pt),
-    right: (bounds: (100.0%, 0.0%), stroke: black + 0.6pt),
-    bottom: (bounds: (0.0%, 100.0%), stroke: black + 0.6pt),
-    top: (bounds: (0.0%, 100.0%), stroke: black + 0.6pt),
-  )
-
   let label-xaxis = (
     position: (50.0%, 111.21%),
     body: place(center + top, text(size: 1em, fill: black, [Interaction $U slash t$])),
@@ -43,8 +36,8 @@
   let xaxis-major-ticks = (
     locs: (-10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0),
     labels: ($−10$, $−8$, $−6$, $−4$, $−2$, $0$, $2$, $4$, $6$, $8$, $10$),
-    tick-style: (direction: "out", line: (length: 4.0pt, angle: 90deg, stroke: black + 0.6pt)),
-    label-style: (pad: 2.0pt, rotation: -0.0deg, text: (size: 1em, fill: black)),
+    tick-style: xaxis-major-tick-style,
+    label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
     locs: (
@@ -73,15 +66,15 @@
       7.0,
       7.5,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
-    tick-style: (direction: "out", line: (length: 2.0pt, angle: 90deg, stroke: black + 0.48pt)),
-    label-style: (pad: 2.0pt, rotation: -0.0deg, text: (size: 1em, fill: black)),
+    labels: (),
+    tick-style: xaxis-minor-tick-style,
+    label-style: xaxis-minor-label-style,
   )
   let yaxis-major-ticks = (
     locs: (-10.0, -7.5, -5.0, -2.5, 0.0, 2.5, 5.0, 7.5, 10.0),
     labels: ($−10$, $−7.5$, $−5$, $−2.5$, $0$, $2.5$, $5$, $7.5$, $10$),
-    tick-style: (direction: "out", line: (length: 4.0pt, angle: 0deg, stroke: black + 0.6pt)),
-    label-style: (pad: 2.0pt, rotation: -0.0deg, text: (size: 1em, fill: black)),
+    tick-style: yaxis-major-tick-style,
+    label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
     locs: (
@@ -116,40 +109,9 @@
       8.5,
       9.0,
     ),
-    labels: (
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-    ),
-    tick-style: (direction: "out", line: (length: 2.0pt, angle: 0deg, stroke: black + 0.48pt)),
-    label-style: (pad: 2.0pt, rotation: -0.0deg, text: (size: 1em, fill: black)),
+    labels: (),
+    tick-style: yaxis-minor-tick-style,
+    label-style: yaxis-minor-label-style,
   )
 
   let stroke-0 = (paint: color.rgb("#0072b2ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
