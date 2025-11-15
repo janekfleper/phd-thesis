@@ -132,10 +132,10 @@
 
 #let color-left = blue
 #let color-right = red
-#let color-singlet = purple
-#let color-triplet = teal
-#let color-double-plus = orange
-#let color-double-minus = olive
+#let color-singlet = green.darken(20%)
+#let color-triplet = fuchsia
+#let color-double-plus = red
+#let color-double-minus = blue
 
 // lattice beam names
 #let forward = "forward-propagating"

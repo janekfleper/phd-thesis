@@ -118,19 +118,25 @@ In this subsection, I will show the solution for two specific configurations tha
 #floating-figure(
   grid(
     columns: (60%, auto),
+    align: horizon,
     figure-doublewell-two-symmetric(height: 7cm),
-    // TODO: Change y-axis ticks to [-8, -6, ..., 6, 8]?
     block(
       width: 100%,
       {
-        [#math.equation(block: true, [Symmetry basis]) <eq:theory-double-two-symmetry-basis>]
+        box(
+          width: 3.5cm,
+          [#math.equation(block: true, [#h(-4em)Symmetry basis]) <eq:theory-double-two-symmetry-basis>],
+        )
         set math.equation(numbering: none)
         show math.equation.where(block: true): set par(leading: 1.5em)
+        let marks = marks.with(outset: 0.3em)
         $
-          marks(kets & = 1 / sqrt(2) (ketLR + ketRL), color: #color-singlet) \
-          marks(kett & = 1 / sqrt(2) (ketLR - ketRL), color: #color-triplet) \
-          marks(ketdp & = 1 / sqrt(2) (ketLL + ketRR), color: #color-double-plus) \
-          marks(ketdm & = 1 / sqrt(2) (ketLL - ketRR), color: #color-double-minus) \
+                marks(kets, color: #color-singlet) quad & = 1 / sqrt(2) (ketLR + ketRL) \
+                marks(kett, color: #color-triplet) quad & = 1 / sqrt(2) (ketLR - ketRL) \
+          marks(ketdm, color: #color-double-minus) quad & = 1 / sqrt(2) (ketLL - ketRR) \
+           marks(ketdp, color: #color-double-plus) quad & = 1 / sqrt(2) (ketLL + ketRR) \
+          // this is just some padding to slightly push the basis up...
+                                               #hide[0]
         $
       },
     ),
@@ -143,7 +149,6 @@ In this subsection, I will show the solution for two specific configurations tha
 
     // TODO: Add arrows to mark the gaps $2t$ and $J$?
     // TODO: Maybe add a double-well potential with some atoms?
-    // TODO: Fix the spacing of the equation (title + boxes)
   ],
   label: <fig:theory-double-two-symmetric>,
 )
@@ -159,7 +164,7 @@ To make the total wavefunction antisymmetric, the spin wavefunctions must have t
 Therefore, the spin wavefunction of the state #kets is the spin singlet $1 / sqrt(2) (phy.ket(arrow.t arrow.b) - phy.ket(arrow.b arrow.t))$, and the spin wavefunction of the state #kett is the spin triplet $1 / sqrt(2) (phy.ket(arrow.t arrow.b) + phy.ket(arrow.b arrow.t))$.
 For the basis states #ketdp and #ketdm, the spatial wavefunction is symmetric and the spin wavefunction is the spin singlet.
 
-The spectrum in @fig:theory-double-two-symmetric shows the eigenenergies $epsilon_n$ in the symmetry basis defined by @eq:theory-double-two-symmetry-basis.
+The spectrum in @fig:theory-double-two-symmetric shows the eigenenergies $epsilon_n$ in the symmetry basis defined in @eq:theory-double-two-symmetry-basis.
 The composition of the eigenstates $phy.ket(psi_2) = ketdm$ and $phy.ket(psi_3) = kett$ does not change with the interaction energy $U$.
 Since the basis state #ketdm only contains the interacting states #ketLL and #ketRR, the eigenenergy is $epsilon_2 = U$.
 In the case of the triplet state #kett, the antisymmetric spin wavefunction prevents a coupling to any of the other basis states.
