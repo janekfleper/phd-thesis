@@ -1,14 +1,5 @@
 #import "/header.typ": fancy-units
 
-#let abc-style = (
-  location: top + left,
-  outset: 0.3em,
-  fill: white.transparentize(30%),
-  frame: block.with(height: 4mm, width: 4mm),
-  numbering: "a",
-  text-style: (weight: 600),
-)
-
 #let _default-colors = (
   color.rgb("#1f77b4"),
   color.rgb("#ff7f0e"),
@@ -22,6 +13,54 @@
 )
 
 #let colors(i) = _default-colors.at(calc.rem(i, _default-colors.len()))
+
+#let abc-style = (
+  location: top + left,
+  outset: 0.3em,
+  fill: white.transparentize(30%),
+  frame: block.with(height: 4mm, width: 4mm),
+  numbering: "a",
+  text-style: (weight: 600),
+)
+
+#let spine-stroke = black + 0.9pt
+#let spines = (
+  left: (bounds: (100.0%, 0.0%), stroke: spine-stroke),
+  right: (bounds: (100.0%, 0.0%), stroke: spine-stroke),
+  bottom: (bounds: (0.0%, 100.0%), stroke: spine-stroke),
+  top: (bounds: (0.0%, 100.0%), stroke: spine-stroke),
+)
+
+#let tick-direction = "out"
+#let major-tick-stroke = black + 0.6pt
+#let minor-tick-stroke = black + 0.48pt
+#let xaxis-major-tick-style = (
+  direction: tick-direction,
+  line: (length: 4.0pt, angle: 90deg, stroke: major-tick-stroke),
+)
+#let xaxis-minor-tick-style = (
+  direction: tick-direction,
+  line: (length: 2.0pt, angle: 90deg, stroke: major-tick-stroke),
+)
+
+#let yaxis-major-tick-style = (
+  direction: tick-direction,
+  line: (length: 4.0pt, angle: 0deg, stroke: major-tick-stroke),
+)
+#let yaxis-minor-tick-style = (
+  direction: tick-direction,
+  line: (length: 2.0pt, angle: 0deg, stroke: major-tick-stroke),
+)
+
+#let label-style = (
+  pad: 2.0pt,
+  rotation: 0.0deg,
+  text: (size: 1em, fill: black),
+)
+#let xaxis-major-label-style = label-style
+#let xaxis-minor-label-style = label-style
+#let yaxis-major-label-style = label-style
+#let yaxis-minor-label-style = label-style
 
 #let figure-style(body) = {
   set text(10pt, font: "New Computer Modern Sans")
