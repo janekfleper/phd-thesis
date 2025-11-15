@@ -7,6 +7,24 @@
 
 #let yaxis-minor-tick-locs = range(-2, 5).map(y => y * 5 + 2.5)
 
+#let draw-unit-cell(p0, p1, fill: black.transparentize(80%), stroke: none) = {
+  let (x0, y0) = p0
+  let (x1, y1) = p1
+  let width = x1 - x0
+  let height = y1 - y0
+  std.place(
+    top + left,
+    dx: x0,
+    dy: y0,
+    rect(
+      width: width,
+      height: height,
+      fill: fill,
+      stroke: stroke,
+    ),
+  )
+}
+
 #let axes-0(xlim: (-1.05, 1.05), ylim: (-10.5, 21.5), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -370,6 +388,7 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
+  draw-unit-cell(transform((-0.5, ylim.at(1))), transform((0.5, ylim.at(0))))
   draw.collection(..collection-1)
   draw.collection(..collection-4)
   draw.collection(..collection-7)
