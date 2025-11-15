@@ -66,7 +66,7 @@
 #let inset-connector-stroke = luma(50%) + 0.9pt
 
 #let figure-style(body) = {
-  set text(10pt, font: "New Computer Modern Sans")
+  set text(9pt, font: "New Computer Modern Sans")
   show math.equation: set text(font: "New Computer Modern Sans Math")
   show: fancy-units
 
