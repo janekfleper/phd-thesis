@@ -30,7 +30,7 @@
       size: 1em,
       fill: black,
       bottom-edge: "descender",
-      [Energy / #unit[Erec]],
+      [$"Energy"slash #unit[Erec]$],
     ))),
   )
   let xaxis-major-ticks = (
@@ -59,7 +59,7 @@
       0.8000000000000003,
       0.9000000000000004,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -95,7 +95,7 @@
       26.0,
       27.0,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )
@@ -234,7 +234,7 @@
       1.4000000000000004,
       1.6,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -270,7 +270,7 @@
       26.0,
       27.0,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )

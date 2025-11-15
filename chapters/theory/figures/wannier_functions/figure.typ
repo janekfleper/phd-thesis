@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let ylabel-text = [$"Energy"slash #unit[Erec]$]
+
 #let axes-0(xlim: (-1.6, 1.6), ylim: (-1.5, 26.5), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -30,7 +32,7 @@
       size: 1em,
       fill: black,
       bottom-edge: "descender",
-      [Energy / #unit[Erec]],
+      ylabel-text,
     ))),
   )
   let xaxis-major-ticks = (
@@ -56,7 +58,7 @@
       1.4000000000000004,
       1.6,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -92,7 +94,7 @@
       26.0,
       27.0,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )
@@ -292,7 +294,7 @@
   )
   let label-yaxis = (
     position: (108.582%, 50.0%),
-    body: rotate(-90.0deg, place(center + top, text(size: 1em, fill: black, [Energy / #unit[Erec]]))),
+    body: rotate(-90.0deg, place(center + top, text(size: 1em, fill: black, ylabel-text))),
   )
   let xaxis-major-ticks = (
     locs: (-2.0, -1.0, 0.0, 1.0, 2.0),
@@ -317,7 +319,7 @@
       1.4000000000000004,
       1.6,
     ),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -357,35 +359,7 @@
       5.800000000000001,
       6.2,
     ),
-    labels: (
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-      $$,
-    ),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )

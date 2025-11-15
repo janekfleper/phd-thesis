@@ -29,6 +29,7 @@ We can usually neglect tunneling over longer distances since it is exponentially
 #floating-figure(
   figure-wannier-functions(),
   // TODO: Reduce x-axis limits to remove the left and right gaps?
+  // TODO: Improve the labels in axes *a*!
   caption: [
     Wannier functions in an optical lattice.
     *a*, Wannier functions $w_n (x)$ offset by the mean energy of the corresponding band $epsilon_n (q)$ in an optical lattice potential with the depth $V_0 = #qty[15][Erec]$.

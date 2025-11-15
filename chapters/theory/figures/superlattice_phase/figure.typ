@@ -5,6 +5,9 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let color-long = red
+#let color-short = green
+
 #let axes-0(xlim: (-1.6, 1.6), ylim: (-17.8, 21.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -41,7 +44,7 @@
   )
   let xaxis-minor-ticks = (
     locs: (-1.75, -1.5, -1.25, -0.75, -0.5, -0.25, 0.25, 0.5, 0.75, 1.25, 1.5, 1.75),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -53,12 +56,12 @@
   )
   let yaxis-minor-ticks = (
     locs: (-18.0, -16.0, -14.0, -12.0, -8.0, -6.0, -4.0, -2.0, 2.0, 4.0, 6.0, 8.0, 12.0, 14.0, 16.0, 18.0, 22.0),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: red, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (paint: color-long, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -67,7 +70,7 @@
     transform: transform,
   )
 
-  let stroke-1 = (paint: green, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-1 = (paint: color-short, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -127,7 +130,7 @@
   )
   let xaxis-minor-ticks = (
     locs: (-1.75, -1.5, -1.25, -0.75, -0.5, -0.25, 0.25, 0.5, 0.75, 1.25, 1.5, 1.75),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -139,12 +142,12 @@
   )
   let yaxis-minor-ticks = (
     locs: (-18.0, -16.0, -14.0, -12.0, -8.0, -6.0, -4.0, -2.0, 2.0, 4.0, 6.0, 8.0, 12.0, 14.0, 16.0, 18.0, 22.0),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: red, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (paint: color-long, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -154,7 +157,7 @@
   )
 
   let stroke-1 = (
-    paint: red,
+    paint: color-long,
     thickness: 0.5pt,
     cap: "butt",
     join: "round",
@@ -168,7 +171,7 @@
     transform: transform,
   )
 
-  let stroke-2 = (paint: green, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-2 = (paint: color-short, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -228,7 +231,7 @@
   )
   let xaxis-minor-ticks = (
     locs: (-1.75, -1.5, -1.25, -0.75, -0.5, -0.25, 0.25, 0.5, 0.75, 1.25, 1.5, 1.75),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
@@ -240,12 +243,12 @@
   )
   let yaxis-minor-ticks = (
     locs: (-18.0, -16.0, -14.0, -12.0, -8.0, -6.0, -4.0, -2.0, 2.0, 4.0, 6.0, 8.0, 12.0, 14.0, 16.0, 18.0, 22.0),
-    labels: ($$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$, $$),
+    labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: red, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (paint: color-long, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -255,7 +258,7 @@
   )
 
   let stroke-1 = (
-    paint: red,
+    paint: color-long,
     thickness: 0.5pt,
     cap: "butt",
     join: "round",
@@ -269,7 +272,7 @@
     transform: transform,
   )
 
-  let stroke-2 = (paint: green, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-2 = (paint: color-short, thickness: 1.5pt, cap: "butt", join: "round", dash: "solid")
   let marker-2 = none
   let line-2 = (
     data: data.at("line-2"),
