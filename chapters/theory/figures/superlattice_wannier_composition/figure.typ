@@ -2,7 +2,6 @@
 #import "/mpl2typ/lib.typ": *
 #import "/style.typ": *
 #import "/header.typ": *
-#show: figure-style
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
