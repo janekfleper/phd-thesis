@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
 #import "figures/superlattice_band_structure/figure.typ": figure as figure-superlattice-band-structure
+#import "figures/superlattice_wannier_composition/figure.typ": figure as figure-superlattice-wannier-composition
 
 == Optical superlattices <sec:theory-super>
 
@@ -119,7 +120,7 @@ Due to the smaller potential barrier inside the unit cell, the amplitude #tin is
 To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x - x_i)$ and $w_R (x - x_(i-1))$ are used, where $i$ is the index of the unit cell.
 
 #floating-figure(
-  image("figures/theory_superlattice_wannier_composition.png", width: 95%),
+  figure-superlattice-wannier-composition(),
   caption: [
     Composition of the maximally localized Wannier functions.
     *a*, The lowest three energy bands $epsilon_n (q)$ as a function of the superlattice phase $phi$ in a superlattice potential with $V_l = #qty[16][Erec]$ and $V_s = #qty[5][Erec]$.
