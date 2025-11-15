@@ -1,6 +1,7 @@
 #import "@preview/cetz:0.4.1"
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import "/header.typ": *
+#import "/style.typ": *
 
 #set page(width: auto, height: auto, margin: 0.9em)
 
@@ -53,6 +54,9 @@
     )
   }
 
+  let transition-stroke = red + 0.6pt
+  show: figure-style
+
   diagram(
     debug: debug,
     spacing: 0cm,
@@ -98,7 +102,7 @@
       label-side: right,
       label-angle: right,
       label-pos: 63%,
-      stroke: blue + 0.6pt,
+      stroke: transition-stroke,
     ),
 
     edge(
@@ -109,7 +113,7 @@
       label-side: left,
       label-angle: right,
       label-pos: 42.5%,
-      stroke: blue + 0.6pt,
+      stroke: transition-stroke,
     ),
 
     edge(
