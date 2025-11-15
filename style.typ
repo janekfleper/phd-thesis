@@ -62,6 +62,9 @@
 #let yaxis-major-label-style = label-style
 #let yaxis-minor-label-style = label-style
 
+#let inset-indicator-stroke = black + 1.2pt
+#let inset-connector-stroke = luma(50%) + 0.9pt
+
 #let figure-style(body) = {
   set text(10pt, font: "New Computer Modern Sans")
   show math.equation: set text(font: "New Computer Modern Sans Math")

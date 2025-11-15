@@ -1,8 +1,7 @@
 #import "/header.typ": *
 #import "figures/doublewell_single/figure.typ": figure as figure-doublewell-single
 #import "figures/doublewell_two_symmetric/figure.typ": figure as figure-doublewell-two-symmetric
-
-#let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm, stroke: 1pt)
+#import "figures/doublewell_two_general/figure.typ": figure as figure-doublewell-two-general
 
 == Interacting fermions in a double-well potential <sec:theory-double>
 
@@ -182,21 +181,13 @@ The same energy gap $J$ also shows up between the strongly attractive ground sta
 While the process itself is not referred to as the superexchange, we can interpret the gap with the equivalent second-order tunneling process between the states #ketdp and #kets.
 
 #floating-figure(
-  grid(
-    rows: 2,
-    row-gutter: 1em,
-    $"Basis:" quad marks(ketLL, color: #blue) wide marks(ketRR, color: #red) wide marks(kets, color: #olive) wide marks(kett, color: #orange)$,
-    image("figures/theory_doublewell_two_general.png", width: 80%),
-  ),
+  figure-doublewell-two-general(width: 14cm, height: 5.8cm),
   caption: [
     Two attractively interacting particles in the double-well potential.
     *a*, Spectrum of two particles with the interaction energy $U slash t = -4$.
     The colors of the eigenenergies $epsilon_n$ indicate the basis states.
     *b*, *c*, Time evolution of the initial state #ketLL at the offsets $Delta slash t = 2.1$ (*b*) and $Delta slash t = 0$ (*c*).
 
-    // TODO: Apply color gradients to the eigenenergies in *a*...
-    // TODO: Match the colors with the other DoD figure.
-    // TODO: Put the legend for the basis inside *a*? Or in a third column to the right?
     // TODO: Add insets of the double-well potential to highlight the definition of $Delta$?
   ],
   label: <fig:theory-double-two-general>,

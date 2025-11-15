@@ -239,6 +239,14 @@
 #let teffn(n) = $teff^((#n))$
 #let ateffn(n) = $lr(abs(teff^((#n))), size: #50%)$
 
+#let marks(body, color: black, stroke: 1.2pt, radius: 1mm, outset: 0.5em) = markrect(
+  body,
+  color: color,
+  stroke: stroke,
+  radius: radius,
+  outset: outset,
+)
+
 // a dummy function to mark stuff I still want to fix...
 #let fix(comment, body) = body
 
