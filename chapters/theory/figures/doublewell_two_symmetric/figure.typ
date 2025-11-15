@@ -25,7 +25,7 @@
     body: place(center + top, text(size: 1em, fill: black, [Interaction $U slash t$])),
   )
   let label-yaxis = (
-    position: (-12.456%, 50.0%),
+    position: (-11%, 50.0%),
     body: rotate(-90.0deg, place(center + bottom, text(
       size: 1em,
       fill: black,
@@ -40,75 +40,19 @@
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: (
-      -7.5,
-      -7.0,
-      -6.5,
-      -5.5,
-      -5.0,
-      -4.5,
-      -3.5,
-      -3.0,
-      -2.5,
-      -1.5,
-      -1.0,
-      -0.5,
-      0.5,
-      1.0,
-      1.5,
-      2.5,
-      3.0,
-      3.5,
-      4.5,
-      5.0,
-      5.5,
-      6.5,
-      7.0,
-      7.5,
-    ),
+    locs: range(-4, 4).map(x => 2 * x + 1),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
   let yaxis-major-ticks = (
-    locs: (-10.0, -7.5, -5.0, -2.5, 0.0, 2.5, 5.0, 7.5, 10.0),
-    labels: ($−10$, $−7.5$, $−5$, $−2.5$, $0$, $2.5$, $5$, $7.5$, $10$),
+    locs: range(-4, 5).map(y => 2 * y),
+    labels: range(-4, 5).map(y => $#(2 * y)$),
     tick-style: yaxis-major-tick-style,
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      -9.0,
-      -8.5,
-      -8.0,
-      -7.0,
-      -6.5,
-      -6.0,
-      -5.5,
-      -4.5,
-      -4.0,
-      -3.5,
-      -3.0,
-      -2.0,
-      -1.5,
-      -1.0,
-      -0.5,
-      0.5,
-      1.0,
-      1.5,
-      2.0,
-      3.0,
-      3.5,
-      4.0,
-      4.5,
-      5.5,
-      6.0,
-      6.5,
-      7.0,
-      8.0,
-      8.5,
-      9.0,
-    ),
+    locs: range(-4, 4).map(y => 2 * y + 1),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -134,7 +78,13 @@
     transform: transform,
   )
 
-  let stroke-1 = (paint: color.rgb("#d55e00ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-1 = (
+    paint: color-triplet,
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-1 = none
   let line-1 = (
     data: data.at("line-1"),
