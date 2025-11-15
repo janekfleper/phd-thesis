@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": level-structure
+#import "figures/k40-hyperfine/figure.typ": figure as figure-k40-hyperfine
 
 == Properties of #K40 <sec:setup-k40>
 
@@ -29,7 +30,7 @@ The relevant optical transitions between the hyperfine states are shown in #subr
   grid(
     columns: (1.2fr, 2fr),
     column-gutter: 1em,
-    level-structure(), image("figures/setup_k40_hyperfine.png", width: 100%),
+    level-structure(), figure-k40-hyperfine(height: 6.7cm),
   ),
   caption: [
     Hyperfine structure of #K40.
