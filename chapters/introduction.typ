@@ -192,7 +192,7 @@ The following software was used to write this thesis:
     ],
 
     link("https://typst.app/universe/package/physica")[`physica`],
-    `0.9.6`,
+    `0.9.7`,
     [
       Math constructs for science and engineering: derivative, differential, vector field, matrix, tensor, Dirac braket, hbar, transpose, conjugate, many operators, and more.
     ],

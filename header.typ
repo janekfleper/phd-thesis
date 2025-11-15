@@ -3,7 +3,7 @@
   add-macros, configure, format-qty, format-unit-fraction, format-unit-power, format-unit-symbol, num, qty,
   relative-uncertainties, unit,
 )
-#import "@preview/physica:0.9.5" as phy
+#import "@preview/physica:0.9.7" as phy
 #import "@preview/mannot:0.3.0": markrect
 
 #let fancy-units(body) = {
