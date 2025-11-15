@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/doublewell_single/figure.typ": figure as figure-doublewell-single
 #import "figures/doublewell_two_symmetric/figure.typ": figure as figure-doublewell-two-symmetric
 
 #let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm)
@@ -66,7 +67,7 @@ In theory, the tunneling amplitude $t$ should therefore be a function of the ene
 We can however neglect this since the oscillation frequency and amplitude in @eq:theory-double-one-rabi-parameters are significantly more sensitive to $Delta$.
 
 #floating-figure(
-  image("figures/theory_doublewell_single.png", width: 90%),
+  figure-doublewell-single(),
   caption: [
     One particle in a double-well potential.
     *a*, Spectrum with the ground state and the excited state as a function of the energy offset $Delta slash t$.
