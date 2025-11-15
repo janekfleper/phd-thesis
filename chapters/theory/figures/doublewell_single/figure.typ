@@ -2,7 +2,6 @@
 #import "/mpl2typ/lib.typ": *
 #import "/style.typ": *
 #import "/header.typ": *
-#show: figure-style
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
@@ -59,7 +58,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
+    paint: color-left,
     thickness: 2.0pt,
     dash: "solid",
   )
@@ -80,7 +79,7 @@
 
   let fill-collection-2 = ()
   let stroke-collection-2 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
+    paint: color-right,
     thickness: 2.0pt,
     dash: "solid",
   )
@@ -102,9 +101,9 @@
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   axes.xaxis-ticks(show-ticks: (), show-labels: (), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (), show-labels: (), ..yaxis-minor-ticks, transform)
-  draw.line(..line-0)
   draw.collection(..collection-1)
   draw.collection(..collection-2)
+  draw.line(..line-0)
   axes.xaxis-ticks(show-ticks: (), show-labels: (), ..xaxis-major-ticks, transform)
   axes.yaxis-ticks(show-ticks: (), show-labels: (), ..yaxis-major-ticks, transform)
 }
@@ -209,7 +208,18 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: color.rgb("#0072b2ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: gradient.linear(
+      color-left,
+      color-left,
+      color-right,
+      color-right,
+    ),
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -218,7 +228,18 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color.rgb("#d55e00ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: gradient.linear(
+      color-right,
+      color-right,
+      color-left,
+      color-left,
+    ),
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -231,7 +252,7 @@
     position: transform((5.2, -6.2)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(0), bottom-edge: "descender", ketg),
+      text(size: 1em, fill: black, bottom-edge: "descender", ketg),
     ),
   )
 
@@ -239,7 +260,7 @@
     position: transform((5.2, 6.2)),
     body: place(
       right + top,
-      text(size: 1em, fill: colors(1), kete),
+      text(size: 1em, fill: black, kete),
     ),
   )
 
@@ -367,7 +388,7 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: blue, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (paint: color-left, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -376,7 +397,7 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: red, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (paint: color-right, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -389,7 +410,7 @@
     position: transform((6, 0.04)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: blue, bottom-edge: "descender", ketL),
+      text(size: 1em, fill: color-left, bottom-edge: "descender", ketL),
     ),
   )
 
@@ -397,7 +418,7 @@
     position: transform((6, 0.96)),
     body: place(
       right + top,
-      text(size: 1em, fill: red, ketR),
+      text(size: 1em, fill: color-right, ketR),
     ),
   )
 

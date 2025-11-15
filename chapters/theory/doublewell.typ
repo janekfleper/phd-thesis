@@ -2,7 +2,7 @@
 #import "figures/doublewell_single/figure.typ": figure as figure-doublewell-single
 #import "figures/doublewell_two_symmetric/figure.typ": figure as figure-doublewell-two-symmetric
 
-#let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm)
+#let marks(body, color: black) = markrect(body, color: color, outset: 0.5em, radius: 1mm, stroke: 1pt)
 
 == Interacting fermions in a double-well potential <sec:theory-double>
 
@@ -76,8 +76,7 @@ We can however neglect this since the oscillation frequency and amplitude in @eq
     *b*, Composition of the ground state in the basis ${ketL, ketR}$.
     For the excited state, the composition is inverted due to the symmetry of the double-well potential with respect to $Delta$.
 
-    // TODO: Add color gradients to *a*...
-    // TODO: Add particles + tunneling + Delta to the inset (CeTZ)
+    // TODO: Add particles + tunneling + Delta to the inset (CeTZ)?
   ],
   label: <fig:theory-double-one>,
   placement: bottom,
@@ -129,10 +128,10 @@ In this subsection, I will show the solution for two specific configurations tha
         set math.equation(numbering: none)
         show math.equation.where(block: true): set par(leading: 1.5em)
         $
-          marks(kets & = 1 / sqrt(2) (ketLR + ketRL), color: #blue) \
-          marks(kett & = 1 / sqrt(2) (ketLR - ketRL), color: #red) \
-          marks(ketdp & = 1 / sqrt(2) (ketLL + ketRR), color: #purple) \
-          marks(ketdm & = 1 / sqrt(2) (ketLL - ketRR), color: #olive) \
+          marks(kets & = 1 / sqrt(2) (ketLR + ketRL), color: #color-singlet) \
+          marks(kett & = 1 / sqrt(2) (ketLR - ketRL), color: #color-triplet) \
+          marks(ketdp & = 1 / sqrt(2) (ketLL + ketRR), color: #color-double-plus) \
+          marks(ketdm & = 1 / sqrt(2) (ketLL - ketRR), color: #color-double-minus) \
         $
       },
     ),
@@ -143,8 +142,8 @@ In this subsection, I will show the solution for two specific configurations tha
     In the symmetry basis, the split states and the interacting states are combined in symmetric and antisymmetric superpositions.
     This allows a simple representation of the eigenstates in the symmetric double well, as indicated by the colors of the eigenenergies $epsilon_n$.
 
-    // TODO: Apply a color gradient to the energies $epsilon_1$ and $epsilon_4$...
     // TODO: Add arrows to mark the gaps $2t$ and $J$?
+    // TODO: Maybe add a double-well potential with some atoms?
     // TODO: Fix the spacing of the equation (title + boxes)
   ],
   label: <fig:theory-double-two-symmetric>,

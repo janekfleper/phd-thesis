@@ -114,7 +114,18 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: color.rgb("#0072b2ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (
+    paint: gradient.linear(
+      color-double-plus,
+      color-double-plus,
+      color-singlet,
+      color-singlet,
+    ),
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -132,7 +143,13 @@
     transform: transform,
   )
 
-  let stroke-2 = (paint: color.rgb("#009e73ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-2 = (
+    paint: color-double-minus,
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -141,7 +158,18 @@
     transform: transform,
   )
 
-  let stroke-3 = (paint: color.rgb("#cc79a7ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-3 = (
+    paint: gradient.linear(
+      color-singlet,
+      color-singlet,
+      color-double-plus,
+      color-double-plus,
+    ),
+    thickness: 2.0pt,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-3 = none
   let line-3 = (
     data: data.at("line-3"),

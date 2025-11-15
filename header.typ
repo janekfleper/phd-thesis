@@ -130,6 +130,13 @@
 #let ketdp = $phy.ket(d_+)$
 #let ketdm = $phy.ket(d_-)$
 
+#let color-left = blue
+#let color-right = red
+#let color-singlet = purple
+#let color-triplet = teal
+#let color-double-plus = orange
+#let color-double-minus = olive
+
 // lattice beam names
 #let forward = "forward-propagating"
 #let retro = "retro-reflected"
