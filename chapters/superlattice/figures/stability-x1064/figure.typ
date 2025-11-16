@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let xlim = (-0.30, 5.3)
+
 #let label-xaxis = (
   position: (50.0%, 116.131%),
   body: place(
@@ -13,7 +15,20 @@
   ),
 )
 
-#let axes-0(xlim: (-0.2499, 5.2501), ylim: (0.939, 1.011), dpi: 100.0) = {
+#let xaxis-major-ticks = (
+  locs: (-2.0, 0.0, 2.0, 4.0, 6.0),
+  labels: ($−2$, $0$, $2$, $4$, $6$),
+  tick-style: xaxis-major-tick-style,
+  label-style: xaxis-major-label-style,
+)
+#let xaxis-minor-ticks = (
+  locs: range(1, 7, step: 2),
+  labels: (),
+  tick-style: xaxis-minor-tick-style,
+  label-style: xaxis-minor-label-style,
+)
+
+#let axes-0(xlim: xlim, ylim: (0.936, 1.004), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -38,18 +53,7 @@
       ),
     ),
   )
-  let xaxis-major-ticks = (
-    locs: (-2.0, 0.0, 2.0, 4.0, 6.0),
-    labels: ($−2$, $0$, $2$, $4$, $6$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (0.5, 1.0, 1.5, 2.5, 3.0, 3.5, 4.5, 5.0, 5.5),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+
   let yaxis-major-ticks = (
     locs: (0.92, 0.9400000000000001, 0.9600000000000001, 0.98, 1.0, 1.02),
     labels: ($0.92$, $0.94$, $0.96$, $0.98$, $1$, $1.02$),
@@ -57,19 +61,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      0.9450000000000001,
-      0.9500000000000001,
-      0.9550000000000001,
-      0.9650000000000001,
-      0.9700000000000001,
-      0.9750000000000001,
-      0.9850000000000001,
-      0.9900000000000001,
-      0.9950000000000001,
-      1.0050000000000001,
-      1.0100000000000002,
-    ),
+    locs: range(0, 5).map(y => y * 0.02 + 0.93),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -77,9 +69,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-initial,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -90,8 +82,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-initial,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -111,9 +103,9 @@
 
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#d55e00ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -124,8 +116,8 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-3 = transform
@@ -192,7 +184,7 @@
 }
 
 
-#let axes-1(xlim: (-0.2499, 5.2501), ylim: (133.0, 203.0), dpi: 100.0) = {
+#let axes-1(xlim: xlim, ylim: (133.0, 203.0), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -217,18 +209,7 @@
       ),
     ),
   )
-  let xaxis-major-ticks = (
-    locs: (-2.0, 0.0, 2.0, 4.0, 6.0),
-    labels: ($−2$, $0$, $2$, $4$, $6$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (0.5, 1.0, 1.5, 2.5, 3.0, 3.5, 4.5, 5.0, 5.5),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+
   let yaxis-major-ticks = (
     locs: (120.0, 140.0, 160.0, 180.0, 200.0, 220.0),
     labels: ($120$, $140$, $160$, $180$, $200$, $220$),
@@ -236,7 +217,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (135.0, 145.0, 150.0, 155.0, 165.0, 170.0, 175.0, 185.0, 190.0, 195.0, 205.0),
+    locs: range(150, 210, step: 20),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -244,9 +225,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-initial,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -257,8 +238,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-initial,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -278,9 +259,9 @@
 
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#d55e00ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -291,8 +272,8 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-3 = transform
@@ -326,7 +307,7 @@
 }
 
 
-#let axes-2(xlim: (-0.2499, 5.2501), ylim: (-2.55, 1.55), dpi: 100.0) = {
+#let axes-2(xlim: xlim, ylim: (-2.55, 1.55), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -351,18 +332,7 @@
       ),
     ),
   )
-  let xaxis-major-ticks = (
-    locs: (-2.0, 0.0, 2.0, 4.0, 6.0),
-    labels: ($−2$, $0$, $2$, $4$, $6$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (0.5, 1.0, 1.5, 2.5, 3.0, 3.5, 4.5, 5.0, 5.5),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+
   let yaxis-major-ticks = (
     locs: (-3.0, -2.0, -1.0, 0.0, 1.0, 2.0),
     labels: ($−3$, $−2$, $−1$, $0$, $1$, $2$),
@@ -370,26 +340,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      -2.6,
-      -2.4,
-      -2.2,
-      -1.7999999999999998,
-      -1.5999999999999999,
-      -1.4,
-      -1.2,
-      -0.7999999999999998,
-      -0.5999999999999996,
-      -0.3999999999999999,
-      -0.19999999999999973,
-      0.20000000000000018,
-      0.40000000000000036,
-      0.6000000000000001,
-      0.8000000000000003,
-      1.2000000000000002,
-      1.4000000000000004,
-      1.6000000000000005,
-    ),
+    locs: range(0, 5).map(y => y - 2.5),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -397,9 +348,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-initial,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -410,8 +361,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-initial,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -431,9 +382,9 @@
 
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#d55e00ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -444,8 +395,8 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-3 = transform

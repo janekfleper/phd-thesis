@@ -15,6 +15,20 @@
   ),
 )
 
+#let xaxis-major-ticks = (
+  locs: range(14, 26, step: 2),
+  labels: range(14, 26, step: 2).map(x => $#x$),
+  tick-style: xaxis-major-tick-style,
+  label-style: xaxis-major-label-style,
+)
+
+#let xaxis-minor-ticks = (
+  locs: range(15, 25, step: 2),
+  labels: (),
+  tick-style: xaxis-minor-tick-style,
+  label-style: xaxis-minor-label-style,
+)
+
 #let inset-label-xaxis = (
   position: (50.0%, 150%),
   body: place(
@@ -23,7 +37,21 @@
   ),
 )
 
-#let inset-0(xlim: (-0.2499, 5.2501), ylim: (1.009, 1.021), dpi: 100.0) = {
+#let inset-xaxis-major-ticks = (
+  locs: (0, 1, 2, 3, 4, 5),
+  labels: ($0$, $1$, $2$, $3$, $4$, $5$),
+  tick-style: xaxis-major-tick-style,
+  label-style: xaxis-major-label-style,
+)
+
+#let inset-xaxis-minor-ticks = (
+  locs: range(0, 5).map(x => x + 0.5),
+  labels: (),
+  tick-style: xaxis-minor-tick-style,
+  label-style: xaxis-minor-label-style,
+)
+
+#let inset-0(xlim: (-0.2499, 5.2501), ylim: (1.008, 1.022), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -39,41 +67,8 @@
   let data = json("data/inset-0.json")
 
   let label-xaxis = inset-label-xaxis
-  let xaxis-major-ticks = (
-    locs: (0, 1, 2, 3, 4, 5),
-    labels: ($0$, $1$, $2$, $3$, $4$, $5$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (
-      -0.2,
-      0.2,
-      0.4,
-      0.6000000000000001,
-      0.8,
-      1.2000000000000002,
-      1.4000000000000001,
-      1.6,
-      1.8,
-      2.2,
-      2.4000000000000004,
-      2.6,
-      2.8000000000000003,
-      3.2,
-      3.4000000000000004,
-      3.6,
-      3.8000000000000003,
-      4.2,
-      4.4,
-      4.6000000000000005,
-      4.800000000000001,
-      5.2,
-    ),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+  let xaxis-major-ticks = inset-xaxis-major-ticks
+  let xaxis-minor-ticks = inset-xaxis-minor-ticks
   let yaxis-major-ticks = (
     locs: (1.0, 1.01, 1.02, 1.03),
     labels: ($1$, $1.01$, $1.02$, $1.03$),
@@ -81,7 +76,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (1.008, 1.012, 1.014, 1.016, 1.018),
+    locs: (1.015,),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -89,9 +84,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: colors(1),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -102,8 +97,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -133,7 +128,7 @@
 }
 
 
-#let inset-1(xlim: (-0.2499, 5.2501), ylim: (111.5, 123.5), dpi: 100.0) = {
+#let inset-1(xlim: (-0.2499, 5.2501), ylim: (108.5, 123.5), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -149,49 +144,16 @@
   let data = json("data/inset-1.json")
 
   let label-xaxis = inset-label-xaxis
-  let xaxis-major-ticks = (
-    locs: (0, 1, 2, 3, 4, 5),
-    labels: ($0$, $1$, $2$, $3$, $4$, $5$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (
-      -0.2,
-      0.2,
-      0.4,
-      0.6000000000000001,
-      0.8,
-      1.2000000000000002,
-      1.4000000000000001,
-      1.6,
-      1.8,
-      2.2,
-      2.4000000000000004,
-      2.6,
-      2.8000000000000003,
-      3.2,
-      3.4000000000000004,
-      3.6,
-      3.8000000000000003,
-      4.2,
-      4.4,
-      4.6000000000000005,
-      4.800000000000001,
-      5.2,
-    ),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+  let xaxis-major-ticks = inset-xaxis-major-ticks
+  let xaxis-minor-ticks = inset-xaxis-minor-ticks
   let yaxis-major-ticks = (
-    locs: (110.0, 115.0, 120.0, 125.0),
-    labels: ($110$, $115$, $120$, $125$),
+    locs: (110.0, 120.0),
+    labels: ($110$, $120$),
     tick-style: yaxis-major-tick-style,
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (112.0, 113.0, 114.0, 116.0, 117.0, 118.0, 119.0, 121.0, 122.0, 123.0, 124.0),
+    locs: (115.0,),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -199,9 +161,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: colors(1),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -212,8 +174,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -243,7 +205,7 @@
 }
 
 
-#let axes-0(xlim: xlim, ylim: (0.675, 1.025), dpi: 100.0) = {
+#let axes-0(xlim: xlim, ylim: (0.678, 1.022), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -268,38 +230,7 @@
       ),
     ),
   )
-  let xaxis-major-ticks = (
-    locs: (12.5, 15.0, 17.5, 20.0, 22.5, 25.0),
-    labels: ($12.5$, $15$, $17.5$, $20$, $22.5$, $25$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (
-      13.5,
-      14.0,
-      14.5,
-      15.5,
-      16.0,
-      16.5,
-      17.0,
-      18.0,
-      18.5,
-      19.0,
-      19.5,
-      20.5,
-      21.0,
-      21.5,
-      22.0,
-      23.0,
-      23.5,
-      24.0,
-      24.5,
-    ),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+
   let yaxis-major-ticks = (
     locs: (0.65, 0.7000000000000001, 0.75, 0.8, 0.8500000000000001, 0.9, 0.9500000000000001, 1.0, 1.05),
     labels: ($0.65$, $0.7$, $0.75$, $0.8$, $0.85$, $0.9$, $0.95$, $1$, $1.05$),
@@ -307,37 +238,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (
-      0.67,
-      0.68,
-      0.6900000000000001,
-      0.7100000000000001,
-      0.7200000000000001,
-      0.7300000000000001,
-      0.7400000000000001,
-      0.7600000000000001,
-      0.7700000000000001,
-      0.7800000000000001,
-      0.7900000000000001,
-      0.8100000000000002,
-      0.8200000000000002,
-      0.8300000000000002,
-      0.8400000000000002,
-      0.8600000000000002,
-      0.8700000000000002,
-      0.8800000000000002,
-      0.8900000000000002,
-      0.9100000000000003,
-      0.9200000000000003,
-      0.9300000000000003,
-      0.9400000000000003,
-      0.9600000000000003,
-      0.9700000000000003,
-      0.9800000000000003,
-      0.9900000000000003,
-      1.0100000000000002,
-      1.0200000000000005,
-    ),
+    locs: range(0, 6).map(y => y * 0.05 + 0.725),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -345,9 +246,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-initial,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -358,8 +259,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-initial,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -377,19 +278,32 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let properties-inset-0 = (position: (30.0%, 2.0%), shape: (68.0%, 20.0%))
+  // Add this just for the legend...
+  let stroke-line-2 = none
+  let marker-line-2 = markers.circle(
+    markersize,
+    fill: color-stability-final,
+    stroke: black + linewidth-very-narrow,
+  )
+  let stroke-collection-3 = (
+    paint: color-stability-final,
+    thickness: linewidth-narrow,
+    dash: "solid",
+  )
+
+  let properties-inset-0 = (position: (38.0%, 2.0%), shape: (60.0%, 20.0%))
 
   let legend-style = (
     location: bottom + left,
     title: none,
     columns: 1,
     row-gutter: 0.5em,
-    item-gutter: 0.5em,
+    item-gutter: 0.0em,
     column-gutter: 1.5em,
     handle-length: 2.0em,
     handle-height: 1.0em,
     fill: color.rgb(100.0%, 100.0%, 100.0%, 80.0%),
-    stroke: color.rgb(0.0%, 0.0%, 0.0%, 80.0%),
+    stroke: none,
     frame: block.with(),
   )
   let legend-items = (
@@ -401,7 +315,15 @@
       ),
       label: [initial],
     ),
-  )
+    (
+      handle: legend.errorbar.with(
+        data: (stroke: stroke-line-2, marker: marker-line-2),
+        caps: (:),
+        bars: (y: stroke-collection-3),
+      ),
+      label: [final],
+    ),
+  ).rev()
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
@@ -444,38 +366,7 @@
       ),
     ),
   )
-  let xaxis-major-ticks = (
-    locs: (12.5, 15.0, 17.5, 20.0, 22.5, 25.0),
-    labels: ($12.5$, $15$, $17.5$, $20$, $22.5$, $25$),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (
-      13.5,
-      14.0,
-      14.5,
-      15.5,
-      16.0,
-      16.5,
-      17.0,
-      18.0,
-      18.5,
-      19.0,
-      19.5,
-      20.5,
-      21.0,
-      21.5,
-      22.0,
-      23.0,
-      23.5,
-      24.0,
-      24.5,
-    ),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
+
   let yaxis-major-ticks = (
     locs: (80.0, 100.0, 120.0, 140.0, 160.0, 180.0, 200.0),
     labels: ($80$, $100$, $120$, $140$, $160$, $180$, $200$),
@@ -483,7 +374,7 @@
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: (95.0, 105.0, 110.0, 115.0, 125.0, 130.0, 135.0, 145.0, 150.0, 155.0, 165.0, 170.0, 175.0, 185.0),
+    locs: range(110, 190, step: 20),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
@@ -491,9 +382,9 @@
 
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    fill: color-stability-initial,
+    stroke: black + linewidth-very-narrow,
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -504,8 +395,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 100.0%),
-    thickness: 2.0pt,
+    paint: color-stability-initial,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -523,7 +414,7 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let properties-inset-1 = (position: (10.0%, 2.0%), shape: (68.0%, 20.0%))
+  let properties-inset-1 = (position: (10.0%, 2.0%), shape: (60.0%, 20.0%))
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
