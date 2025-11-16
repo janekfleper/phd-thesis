@@ -42,8 +42,6 @@ With $Delta fity0 < #qty[1][μm]$ after #qty[5][s], the change of the position i
     *c*, Lattice position $fity0(tau)$ with an equal linear drift in both optical setups.
     The setpoints of the lattice depths in the initial and final optical setup are #qty[54][Erec] and #qty[60][Erec] respectively, and the modulation time is $tmod = #qty[100][ms]$.
     The uncertainties of the lattice parameters are computed with the procedure introduced in @ssec:mod-eval-error.
-
-    // TODO: Move the *abc* indices outside of the axes? Just above the y-labels?
   ],
   label: <fig:super-stability-x1064>,
 )
@@ -102,10 +100,6 @@ At the lattice depth $Vx532 = #qty[24][Erec]$, we estimate that the focal shifts
     The insets show the calibration factor $fita0(tau)$ and the horizontal waist $wx532^y (tau)$, after the upgrade of the optical setup, at the lattice depth $Vx532 = #qty[18][Erec]$.
     We use the superlattice parameters $Vx1064 = #qty[60][Erec]$ and $phi = - pi slash 4$, and the modulation time $tmod = #qty[500][ms]$ for both measurements.
     The uncertainties of the parameters #fita0 and $wx532^y$ in the initial and final configuration are computed with the procedure introduced in @ssec:mod-eval-error.
-
-    // TODO: Really use the width 90%?
-    // TOOD: Add labels or legend for "initial" and "final"?
-    // TODO: Move the inset in *b* to the lower right corner? This would move it close to #qty[115][μm] ...
   ],
   label: <fig:super-stability-x532>,
 )
