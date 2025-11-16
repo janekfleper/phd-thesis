@@ -61,7 +61,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: black, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -73,7 +79,7 @@
   let fill-1 = color.rgb(0.0%, 44.706%, 69.804%, 50.0%)
   let stroke-1 = (
     paint: color.rgb(0.0%, 44.706%, 69.804%, 50.0%),
-    thickness: 1pt,
+    thickness: linewidth-very-narrow,
     dash: "solid",
   )
   let transform-1 = transform
@@ -91,7 +97,13 @@
     offset-transform: offset-transform-1,
   )
 
-  let stroke-2 = (paint: colors(0), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-2 = (
+    paint: colors(0),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -103,7 +115,7 @@
   let fill-3 = color.rgb(83.529%, 36.863%, 0.0%, 50.0%)
   let stroke-3 = (
     paint: color.rgb(83.529%, 36.863%, 0.0%, 50.0%),
-    thickness: 1pt,
+    thickness: linewidth-very-narrow,
     dash: "solid",
   )
   let transform-3 = transform
@@ -121,7 +133,13 @@
     offset-transform: offset-transform-3,
   )
 
-  let stroke-4 = (paint: colors(1), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-4 = (
+    paint: colors(1),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-4 = none
   let line-4 = (
     data: data.at("line-4"),
@@ -133,7 +151,7 @@
   let fill-5 = color.rgb(0.0%, 61.961%, 45.098%, 50.0%)
   let stroke-5 = (
     paint: color.rgb(0.0%, 61.961%, 45.098%, 50.0%),
-    thickness: 1pt,
+    thickness: linewidth-very-narrow,
     dash: "solid",
   )
   let transform-5 = transform
@@ -151,7 +169,13 @@
     offset-transform: offset-transform-5,
   )
 
-  let stroke-6 = (paint: colors(2), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-6 = (
+    paint: colors(2),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-6 = none
   let line-6 = (
     data: data.at("line-6"),
@@ -163,7 +187,7 @@
   let fill-7 = color.rgb(80.0%, 47.451%, 65.49%, 50.0%)
   let stroke-7 = (
     paint: color.rgb(80.0%, 47.451%, 65.49%, 50.0%),
-    thickness: 1pt,
+    thickness: linewidth-very-narrow,
     dash: "solid",
   )
   let transform-7 = transform
@@ -181,7 +205,13 @@
     offset-transform: offset-transform-7,
   )
 
-  let stroke-8 = (paint: colors(3), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-8 = (
+    paint: colors(3),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-8 = none
   let line-8 = (
     data: data.at("line-8"),
@@ -283,16 +313,28 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-0 = (paint: color.luma(50.0%), thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-0 = (
+    paint: black,
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-0 = none
   let line-0 = (
-    data: data.at("line-0"),
+    data: ((xlim.at(0), 2.161), (xlim.at(1), 2.161)),
     stroke: stroke-0,
     marker: marker-0,
     transform: transform,
   )
 
-  let stroke-1 = (paint: black, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-1 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -301,7 +343,13 @@
     transform: transform,
   )
 
-  let stroke-2 = (paint: colors(0), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-2 = (
+    paint: colors(0),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -312,7 +360,7 @@
 
   let stroke-3 = (
     paint: colors(0),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),

@@ -45,7 +45,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: color-singlet, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: color-singlet,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -54,7 +60,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color-right, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: color-right,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -63,7 +75,13 @@
     transform: transform,
   )
 
-  let stroke-line-2 = (paint: color-left, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-2 = (
+    paint: color-left,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -131,7 +149,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: color-singlet, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: color-singlet,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -140,7 +164,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color-right, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: color-right,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -149,7 +179,13 @@
     transform: transform,
   )
 
-  let stroke-line-2 = (paint: color-left, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-2 = (
+    paint: color-left,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -244,7 +280,7 @@
       ..((color-left,) * 3),
       ..((color-right,) * 3),
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -259,7 +295,7 @@
 
   let stroke-line-1 = (
     paint: color-triplet,
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -281,7 +317,7 @@
       color-singlet,
       color-singlet,
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -300,7 +336,7 @@
       ..((color-singlet,) * 2),
       ..((color-left,) * 2),
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",

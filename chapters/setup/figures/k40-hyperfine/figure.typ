@@ -62,7 +62,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: blue, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: blue,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -71,7 +77,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -80,7 +92,13 @@
     transform: transform,
   )
 
-  let stroke-line-2 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-2 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -89,7 +107,13 @@
     transform: transform,
   )
 
-  let stroke-line-3 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-3 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-3 = none
   let line-3 = (
     data: data.at("line-3"),
@@ -98,7 +122,13 @@
     transform: transform,
   )
 
-  let stroke-line-4 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-4 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-4 = none
   let line-4 = (
     data: data.at("line-4"),
@@ -107,7 +137,13 @@
     transform: transform,
   )
 
-  let stroke-line-5 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-5 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-5 = none
   let line-5 = (
     data: data.at("line-5"),
@@ -116,7 +152,13 @@
     transform: transform,
   )
 
-  let stroke-line-6 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-6 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-6 = none
   let line-6 = (
     data: data.at("line-6"),
@@ -125,7 +167,13 @@
     transform: transform,
   )
 
-  let stroke-line-7 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-7 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-7 = none
   let line-7 = (
     data: data.at("line-7"),
@@ -134,7 +182,13 @@
     transform: transform,
   )
 
-  let stroke-line-8 = (paint: blue, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-8 = (
+    paint: blue,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-8 = none
   let line-8 = (
     data: data.at("line-8"),
@@ -143,7 +197,13 @@
     transform: transform,
   )
 
-  let stroke-line-9 = (paint: blue, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-9 = (
+    paint: blue,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-9 = none
   let line-9 = (
     data: data.at("line-9"),
@@ -152,7 +212,13 @@
     transform: transform,
   )
 
-  let stroke-line-10 = (paint: blue, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-10 = (
+    paint: blue,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-10 = none
   let line-10 = (
     data: data.at("line-10"),
@@ -161,7 +227,13 @@
     transform: transform,
   )
 
-  let stroke-line-11 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-11 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-11 = none
   let line-11 = (
     data: data.at("line-11"),
@@ -170,7 +242,13 @@
     transform: transform,
   )
 
-  let stroke-line-12 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-12 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-12 = none
   let line-12 = (
     data: data.at("line-12"),
@@ -179,7 +257,13 @@
     transform: transform,
   )
 
-  let stroke-line-13 = (paint: color.luma(50.0%), thickness: 0.4pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-13 = (
+    paint: color.luma(50.0%),
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-13 = none
   let line-13 = (
     data: data.at("line-13"),
@@ -188,7 +272,13 @@
     transform: transform,
   )
 
-  let stroke-line-14 = (paint: black, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-14 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-14 = none
   let line-14 = (
     data: data.at("line-14"),
@@ -197,7 +287,13 @@
     transform: transform,
   )
 
-  let stroke-line-15 = (paint: black, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-15 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-15 = none
   let line-15 = (
     data: data.at("line-15"),
@@ -206,7 +302,13 @@
     transform: transform,
   )
 
-  let stroke-line-16 = (paint: black, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-16 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-16 = none
   let line-16 = (
     data: data.at("line-16"),
@@ -215,7 +317,13 @@
     transform: transform,
   )
 
-  let stroke-line-17 = (paint: black, thickness: 1.2pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-17 = (
+    paint: black,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-17 = none
   let line-17 = (
     data: data.at("line-17"),

@@ -48,7 +48,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: black, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: black,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -60,7 +66,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: color-left,
-    thickness: 2.0pt,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -81,7 +87,7 @@
   let fill-collection-2 = ()
   let stroke-collection-2 = (
     paint: color-right,
-    thickness: 2.0pt,
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-2 = transform
@@ -174,7 +180,7 @@
       color-right,
       color-right,
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -194,7 +200,7 @@
       color-left,
       color-left,
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -308,7 +314,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: color-left, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: color-left,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
     data: data.at("line-0"),
@@ -317,7 +329,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color-right, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: color-right,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),

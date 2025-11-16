@@ -25,7 +25,7 @@
   let data = json("data/axes-0.json")
 
   let label-xaxis = (
-    position: (50.0%, 109.429%),
+    position: (50.0%, 111%),
     body: place(
       center + top,
       text(size: 1em, fill: black, [Magnetic field $B slash #unit[G]$]),
@@ -48,26 +48,7 @@
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: (
-      188.0,
-      192.0,
-      194.0,
-      196.0,
-      198.0,
-      202.0,
-      204.0,
-      206.0,
-      208.0,
-      212.0,
-      214.0,
-      216.0,
-      218.0,
-      222.0,
-      224.0,
-      226.0,
-      228.0,
-      232.0,
-    ),
+    locs: range(0, 4).map(x => x * 10 + 195),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
@@ -85,16 +66,28 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (paint: color.luma(50.0%), thickness: 0.5pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: black,
+    thickness: linewidth-very-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = none
   let line-0 = (
-    data: data.at("line-0"),
+    data: ((xlim.at(0), 0), (xlim.at(1), 0)),
     stroke: stroke-line-0,
     marker: marker-line-0,
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: color-75, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: color-75,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -103,7 +96,13 @@
     transform: transform,
   )
 
-  let stroke-line-2 = (paint: color-75, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-2 = (
+    paint: color-75,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
@@ -114,7 +113,7 @@
 
   let stroke-line-3 = (
     paint: color-75,
-    thickness: 2.0pt,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),
@@ -127,7 +126,13 @@
     transform: transform,
   )
 
-  let stroke-line-4 = (paint: color-95, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-4 = (
+    paint: color-95,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-4 = none
   let line-4 = (
     data: data.at("line-4"),
@@ -136,7 +141,13 @@
     transform: transform,
   )
 
-  let stroke-line-5 = (paint: color-95, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-5 = (
+    paint: color-95,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-5 = none
   let line-5 = (
     data: data.at("line-5"),
@@ -147,7 +158,7 @@
 
   let stroke-line-6 = (
     paint: color-95,
-    thickness: 2.0pt,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),
@@ -160,7 +171,13 @@
     transform: transform,
   )
 
-  let stroke-line-7 = (paint: color-97, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-7 = (
+    paint: color-97,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-7 = none
   let line-7 = (
     data: data.at("line-7"),
@@ -169,7 +186,13 @@
     transform: transform,
   )
 
-  let stroke-line-8 = (paint: color-97, thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-8 = (
+    paint: color-97,
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-8 = none
   let line-8 = (
     data: data.at("line-8"),
@@ -180,7 +203,7 @@
 
   let stroke-line-9 = (
     paint: color-97,
-    thickness: 2.0pt,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),

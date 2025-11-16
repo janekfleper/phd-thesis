@@ -14,6 +14,10 @@
 
 #let colors(i) = _default-colors.at(calc.rem(i, _default-colors.len()))
 
+#let linewidth = 2pt
+#let linewidth-narrow = 1.5pt
+#let linewidth-very-narrow = 0.9pt
+
 #let abc-style = (
   location: top + left,
   outset: 0.3em,

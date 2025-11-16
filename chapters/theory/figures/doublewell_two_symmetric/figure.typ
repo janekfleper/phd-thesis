@@ -65,7 +65,7 @@
       color-singlet,
       color-singlet,
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -80,7 +80,7 @@
 
   let stroke-1 = (
     paint: color-triplet,
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -95,7 +95,7 @@
 
   let stroke-2 = (
     paint: color-double-minus,
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -115,7 +115,7 @@
       color-double-plus,
       color-double-plus,
     ),
-    thickness: 2.0pt,
+    thickness: linewidth,
     cap: "butt",
     join: "round",
     dash: "solid",
