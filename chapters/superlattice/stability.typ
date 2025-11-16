@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/stability-x1064/figure.typ": figure as figure-stability-x1064
 
 == Characterizing the lattice depths <sec:super-stability>
 
@@ -29,7 +30,7 @@ The lattice position $fity0(tau)$ increases linearly during the holding time.
 With $Delta fity0 < #qty[1][μm]$ after #qty[5][s], the change of the position is too small to affect the lattice depth.
 
 #floating-figure(
-  image("figures/superlattice_stability_x1064.png"),
+  figure-stability-x1064(width: 16cm),
   caption: [
     Reduction of the thermal lensing in the #x1064\-lattice setup.
     *a*, Calibration factor $fita0(tau)$ to quantify the measured lattice depth $Vx1064(tau) = alpha(tau) Vx1064$ relative to the setpoint in the experimental sequence.
@@ -41,7 +42,6 @@ With $Delta fity0 < #qty[1][μm]$ after #qty[5][s], the change of the position i
     The setpoints of the lattice depths in the initial and final optical setup are #qty[54][Erec] and #qty[60][Erec] respectively, and the modulation time is $tmod = #qty[100][ms]$.
     The uncertainties of the lattice parameters are computed with the procedure introduced in @ssec:mod-eval-error.
 
-    // TODO: Rename y-label to calibration factor...
     // TODO: Move the *abc* indices outside of the axes? Just above the y-labels?
   ],
   label: <fig:super-stability-x1064>,
