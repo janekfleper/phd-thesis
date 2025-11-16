@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/stability-x1064/figure.typ": figure as figure-stability-x1064
+#import "figures/stability-x532/figure.typ": figure as figure-stability-x532
 
 == Characterizing the lattice depths <sec:super-stability>
 
@@ -90,7 +91,7 @@ With the horizontal and vertical waists of $wx532^y approx #qty[120][μm]$ and $
 At the lattice depth $Vx532 = #qty[24][Erec]$, we estimate that the focal shifts of the horizontal and vertical axis must be comparable to the respective Rayleigh lengths to reduce the lattice depth by #qty[30][%].
 
 #floating-figure(
-  image("figures/superlattice_stability_x532_insets.png", width: 100%),
+  figure-stability-x532(height: 7.2cm),
   caption: [
     Reduction of the thermal lensing in the #x532\-lattice setup.
     *a*, Calibration factor #fita0 as a function of the setpoint #Vx532 after the holding time $tau = #qty[3][s]$ to measure the steady state of the thermal lensing.
