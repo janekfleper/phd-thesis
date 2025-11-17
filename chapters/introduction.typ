@@ -34,7 +34,7 @@ This technique has been used to improve the loading of atoms into a single plane
 Advanced optical lattice geometries can be created with more than two interfering lattice beams @windpassinger_engineering_2013.
 For example, three laser beams intersecting at #deg[120] angles in one plane form a triangular lattice resembling the geometry of graphene @becker_ultracold_2010,
 while interfering perpendicular optical lattices form a two-dimensional optical lattice that is tunable to a checkerboard, square, triangular, dimer and honeycomb geometry @tarruell_creating_2012.
-A triangular lattice geometry is suitable to study phenomena such as frustrated magnets @eckardt_frustrated_2010, and a honeycomb lattice can be used to engineer advanced band structures featuring Dirac points #tr[cite what?].
+A triangular lattice geometry is suitable to study phenomena such as frustrated magnets @eckardt_frustrated_2010, and a honeycomb lattice can be used to engineer advanced band structures featuring Dirac points @hasan_topological_2010.
 Tuning the lattice geometry from a checkerboard pattern to a dimerized lattice enables an adiabatic splitting of a band insulator into a Mott insulator @lubasch_adiabatic_2011.
 Recently, this technique was employed to achieve a significant improvement in the temperature of an antiferromagnetic Mott insulator @xu_neutral-atom_2025.
 
