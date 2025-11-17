@@ -8,10 +8,7 @@
 
 = Introduction <ch:intro>
 
-// TODO: Mention K40 anywhere in the actual introduction?
-// TODO: Add a few more citations for bichromatic superlattices
 // TODO: Add citation for Valentins PhD thesis
-// TODO: Add a comparison of optical lattices to tweezers?
 
 One major area of interest in ultracold fermionic atoms is analog quantum simulation of the Fermi-Hubbard model, which describes the behavior of electrons in solid-state crystals @hubbard_electron_1963.
 The valence electrons can tunnel between the lattice sites that are formed by the ions in the crystal, and the electrons experience an interaction energy when they occupy the same lattice site.
@@ -153,6 +150,9 @@ Typst uses a markup-based syntax for the simple document styling and integrates 
 Essential features, such as figures, captions, citations, and equations, are built directly into the Typst compiler.
 Packages that implement advanced features and templates to streamline the creation of new documents can be found in the Typst Universe.
 The following software was used to write this thesis:
+
+// TODO: Make sure all the package versions are up to date!
+// TODO: Add mpl2typ here...
 
 #figure(
   table(
