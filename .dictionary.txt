@@ -82,6 +82,7 @@ diabatically
 diagonalization
 diagonalize
 dichroic
+dimerized
 dispersive
 eigenbasis
 eigenenergies
