@@ -65,27 +65,17 @@ This permits a reliable alignment of the lattice beams and a precise calibration
 For stabilizing the superlattice phase, we implement an active stabilization technique based on environmental sensors along the optical path.
 We achieve an excellent phase stability that provides the foundation for enhancing pair tunneling in Floquet-driven double wells.
 
-#pagebreak()
-
-== Thesis structure
-
-In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice.
-The focus will be on calibrating and operating the optical lattices, which form the technical foundation of the experimental setup.
-Specifically, I will report on the in-plane superlattice, which as been the focus of our experimental efforts in recent years.
 #v(0.9em)
 
 - In @ch:theory, I will introduce the atom-light interaction as the foundation of optical lattices with ultracold atoms.
-  Using Bloch's theorem, I will show the band structure and the Bloch waves of atoms within regular and superlattice potentials.
   Within the unit cells of the superlattice potential, the dynamic behavior of the atoms can be described by a double-well potential.
   The reduced system size enables an exact numerical solution for interacting particles in a double well.
 
 - In @ch:setup, I will present the experimental setup used to cool the fermionic isotope #K40 from room temperature to a degenerate Fermi gas.
-  For reference in later chapters of this thesis, I will introduce the parameters and geometry of the three-dimensional optical lattice.
-  Starting with loading the atoms into the optical lattice, I will briefly describe the experimental sequence.
-  Available detection techniques for resolving the atomic densities in the experimental sequence are presented at the end of the chapter.
+  Starting with loading the atoms into the optical lattice, I will briefly describe the experimental sequence and the available detection techniques for resolving the atomic densities.
 
 - In @ch:super, I will provide a detailed introduction to the optical setup of the in-plane superlattice.
-  Due to thermally induced focal shifts by the optical elements, we observed significant instability in the optical lattices forming the in-plane superlattice.
+  Due to thermally-induced focal shifts by the optical elements, we observed significant instability in the optical lattices forming the in-plane superlattice.
   I will briefly introduce thermal lensing and discuss the possible modifications to the optical setup that could reduce the focal shifts.
   To conclude the chapter, I will show the improved stability of the lattice parameters in the upgraded optical setups.
 
