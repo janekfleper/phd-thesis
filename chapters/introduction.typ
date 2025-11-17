@@ -98,8 +98,8 @@ The results presented in this thesis are the conclusion of four and a half years
 We primarily focused on setting up and characterizing the in-plane superlattice, which we ultimately used to enhance the pair tunneling in Floquet-driven double wells.
 Below, I will present detailed insights into the contributions of each team member.
 
-Valentin Jonas and I contributed equally to the experimental work in @ch:super.
-We conducted the initial characterization of the thermal lensing, identified the responsible optical elements, and upgraded the optical setups to achieve excellent stability of the optical lattices forming the in-plane superlattice.
+The upgrade of the optical setups of the in-plane superlattice in @ch:super was led by me, while Valentin Jonas and I contributed equally to the experimental work.
+We characterized the thermal lensing, identified the responsible optical elements, and upgraded the optical setups to achieve excellent stability of the optical lattices forming the in-plane superlattice.
 
 The in-situ #lms presented in @ch:mod is my own work.
 I pushed for the initial experimental investigation as a calibration technique, developed the data analysis for the robust calibration of the lattice depths, and figured out the theory behind the atom-loss mechanism and the coupled band structure.
@@ -113,7 +113,8 @@ I set up the hardware and software for the active phase stabilization.
 
 For the Floquet driving of the superlattice potential, Valentin Jonas set up the modulation of the superlattice phase with the arbitrary waveform generator and implemented the Floquet theory that was essential for the evaluation of the experimental data.
 Nick Klemmer was responsible for running the data analysis and the Monte-Carlo simulations for the error estimation.
-I assisted with the software for the experimental control and the data analysis.
+My main contribution was the development of the calibration measurements for the parameters of the optical lattices and the stabilization of the superlattice phase.
+Additionally, I assisted with the software for the experimental control and the data analysis.
 
 
 == Publications
