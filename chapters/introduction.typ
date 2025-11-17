@@ -19,10 +19,8 @@ For strongly-repulsive interactions, the Fermi-Hubbard model predicts the Mott i
 Numerical solutions to the Fermi-Hubbard model are generally limited to small systems due to the exponential growth of the Hilbert space with respect to the number of particles @feynman_simulating_1982.
 This is where analog quantum simulation of the Fermi-Hubbard model using optical lattices and ultracold atoms shines.
 Optical lattices, formed by multiple interfering laser beams, create a periodic potential in place of the solid-state crystal, and the atoms in the optical lattice take on the role of the valence electrons @jessen_optical_1996.
-At very low temperatures, the fermionic atoms obey the same quantum-statistical behavior as electrons.
-Reaching these temperatures required significant advancements in trapping and cooling techniques.
-The development of laser cooling @hansch_cooling_1975 @ashkin_cooling_1979 laid the foundation for the Zeeman slower @phillips_laser_1982 and the magneto-optical trap @raab_trapping_1987 that cool atoms down to sub-millikelvin temperatures.
-A further reduction of the temperature was achieved using evaporative cooling @hess_evaporative_1986 in a magnetic trap @pritchard_cooling_1983 @mewes_bose-einstein_1996, which ultimately lead to the first experimental realization of degenerate Fermi gases using ultracold atoms @demarco_onset_1999 @truscott_observation_2001.
+Reaching very low temperatures where fermionic atoms obey the same quantum-statistical behavior as electrons required significant advancements in trapping and cooling techniques.
+The development of laser cooling @hansch_cooling_1975 @ashkin_cooling_1979 @phillips_laser_1982 @raab_trapping_1987 and evaporative cooling @hess_evaporative_1986 @pritchard_cooling_1983 @mewes_bose-einstein_1996 lead to the first experimental realization of degenerate Fermi gases using ultracold atoms @demarco_onset_1999 @truscott_observation_2001.
 
 Optical lattices provide defect-free potentials for ultracold atoms with versatile geometries and tunable parameters @bloch_ultracold_2005.
 The tunneling amplitude can be adjusted through the depth of the optical lattices, and the interaction between the atoms can be modified using magnetic Feshbach resonances @inouye_observation_1998.
