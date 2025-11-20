@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/introduction/figure.typ": figure as figure-introduction
 #import "figures/x1064-images/figure.typ": figure as figure-x1064-images
 
 == Introduction to #lms <sec:mod-intro>
@@ -40,7 +41,7 @@ Due to the width of the band $n'' = 6$ (see #subref(<fig:mod-intro-theory>, "a")
 The loss mechanism is discussed in detail in @sec:mod-loss, where we use a lattice depth $V0 >= #qty[65][Erec]$ and a second modulation frequency to confirm the requirement of the untrapped band $n''$.
 
 #floating-figure(
-  image("figures/modulation_introduction.png", width: 100%),
+  figure-introduction(),
   caption: [
     Wannier functions and energy bands in an optical lattice potential.
     *a*, Wannier functions $w_n (x)$ and energy bands $epsilon_n (q)$ for the band indices $n <= 6$ in an optical lattice with the depth $V0 = #qty[60][Erec]$ and the modulation amplitude $dV = #qty[2][Erec]$ (shaded area).
