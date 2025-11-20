@@ -70,8 +70,6 @@ To estimate the errors of the calibration, we run the individual fits according 
     Around the reference configuration, the transition frequency #fnm(1, 4) is sensitive to the #x532\-lattice depth (*a*), while it is constant as a function of the #x1064\-lattice depth (*b*).
     At the avoided crossings of the bands $3$ and $4$, the assignment of the Wannier functions $w_3 (x)$ and $w_4 (x)$ changes.
     The relevant transition becomes $1 -> 3$, and the sensitivity to the respective lattice depths is unchanged.
-
-    // TODO: Add alpha channel to show the actual overlap with $n = 1$!
   ],
   label: <fig:mod-super-scaling>,
 )

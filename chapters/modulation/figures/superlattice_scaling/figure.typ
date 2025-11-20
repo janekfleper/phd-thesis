@@ -5,6 +5,15 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+// use a slightly smaller transparency for the other bands...
+#let transparency = 80%
+#let color-n2 = colors(1).transparentize(transparency)
+#let color-n5 = colors(4).transparentize(transparency)
+#let color-n6 = colors(5).transparentize(transparency)
+
+// this is the transparency for the bands 3 and 4...
+#let transparency = 90%
+
 #let yaxis-major-ticks = (
   locs: (50.0, 100.0, 150.0, 200.0, 250.0, 300.0, 350.0, 400.0, 450.0, 500.0),
   labels: ($50$, $100$, $150$, $200$, $250$, $300$, $350$, $400$, $450$, $500$),
@@ -83,7 +92,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(1),
+    paint: color-n2,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -98,7 +107,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1),
+    paint: color-n2,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -112,9 +121,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(50%)
+  let fill-collection-3 = color-n2.transparentize(50%)
   let stroke-collection-3 = (
-    paint: colors(1).transparentize(50%),
+    paint: color-n2.transparentize(50%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -133,8 +142,13 @@
     offset-transform: offset-transform-collection-3,
   )
 
+  let colors-n3 = (colors(2),) * 3 + (colors(2).transparentize(transparency),) * 5
+  let gradient-n3 = gradient.linear(..colors-n3)
+  let gradient-n3-alpha = gradient.linear(
+    ..colors-n3.map(c => c.transparentize(50%)),
+  )
   let stroke-line-4 = (
-    paint: colors(2),
+    paint: gradient-n3,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -149,7 +163,7 @@
   )
 
   let stroke-line-5 = (
-    paint: colors(2),
+    paint: gradient-n3,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -163,9 +177,9 @@
     transform: transform,
   )
 
-  let fill-collection-6 = colors(2).transparentize(50%)
+  let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
-    paint: colors(2).transparentize(50%),
+    paint: gradient-n3-alpha,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -184,8 +198,13 @@
     offset-transform: offset-transform-collection-6,
   )
 
+  let colors-n4 = (colors(3).transparentize(transparency),) * 3 + (colors(3),) * 5
+  let gradient-n4 = gradient.linear(..colors-n4)
+  let gradient-n4-alpha = gradient.linear(
+    ..colors-n4.map(c => c.transparentize(50%)),
+  )
   let stroke-line-7 = (
-    paint: colors(3),
+    paint: gradient-n4,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -200,7 +219,7 @@
   )
 
   let stroke-line-8 = (
-    paint: colors(3),
+    paint: gradient-n4,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -214,9 +233,9 @@
     transform: transform,
   )
 
-  let fill-collection-9 = colors(3).transparentize(50%)
+  let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
-    paint: colors(3).transparentize(50%),
+    paint: gradient-n4-alpha,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -236,7 +255,7 @@
   )
 
   let stroke-line-10 = (
-    paint: colors(4),
+    paint: color-n5,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -251,7 +270,7 @@
   )
 
   let stroke-line-11 = (
-    paint: colors(4),
+    paint: color-n5,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -265,9 +284,9 @@
     transform: transform,
   )
 
-  let fill-collection-12 = colors(4).transparentize(50%)
+  let fill-collection-12 = color-n5.transparentize(50%)
   let stroke-collection-12 = (
-    paint: colors(4).transparentize(50%),
+    paint: color-n5.transparentize(50%),
     thickness: 0.6pt,
     dash: "solid",
   )
@@ -287,7 +306,7 @@
   )
 
   let stroke-line-13 = (
-    paint: colors(5),
+    paint: color-n6,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -302,7 +321,7 @@
   )
 
   let stroke-line-14 = (
-    paint: colors(5),
+    paint: color-n6,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -316,9 +335,9 @@
     transform: transform,
   )
 
-  let fill-collection-15 = colors(5).transparentize(50%)
+  let fill-collection-15 = color-n6.transparentize(50%)
   let stroke-collection-15 = (
-    paint: colors(5).transparentize(50%),
+    paint: color-n6.transparentize(50%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -465,7 +484,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(1),
+    paint: color-n2,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -480,7 +499,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1),
+    paint: color-n2,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -494,9 +513,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(50%)
+  let fill-collection-3 = color-n2.transparentize(50%)
   let stroke-collection-3 = (
-    paint: colors(1).transparentize(50%),
+    paint: color-n2.transparentize(50%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -515,8 +534,13 @@
     offset-transform: offset-transform-collection-3,
   )
 
+  let colors-n3 = (colors(2),) * 7 + (colors(2).transparentize(transparency),) * 5
+  let gradient-n3 = gradient.linear(..colors-n3)
+  let gradient-n3-alpha = gradient.linear(
+    ..colors-n3.map(c => c.transparentize(50%)),
+  )
   let stroke-line-4 = (
-    paint: colors(2),
+    paint: gradient-n3,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -531,7 +555,7 @@
   )
 
   let stroke-line-5 = (
-    paint: colors(2),
+    paint: gradient-n3,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -545,9 +569,9 @@
     transform: transform,
   )
 
-  let fill-collection-6 = colors(2).transparentize(50%)
+  let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
-    paint: colors(2).transparentize(50%),
+    paint: gradient-n3-alpha,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -566,8 +590,13 @@
     offset-transform: offset-transform-collection-6,
   )
 
+  let colors-n4 = (colors(3).transparentize(transparency),) * 7 + (colors(3),) * 5
+  let gradient-n4 = gradient.linear(..colors-n4)
+  let gradient-n4-alpha = gradient.linear(
+    ..colors-n4.map(c => c.transparentize(50%)),
+  )
   let stroke-line-7 = (
-    paint: colors(3),
+    paint: gradient-n4,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -582,7 +611,7 @@
   )
 
   let stroke-line-8 = (
-    paint: colors(3),
+    paint: gradient-n4,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -596,9 +625,9 @@
     transform: transform,
   )
 
-  let fill-collection-9 = colors(3).transparentize(50%)
+  let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
-    paint: colors(3).transparentize(50%),
+    paint: gradient-n4-alpha,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -618,7 +647,7 @@
   )
 
   let stroke-line-10 = (
-    paint: colors(4),
+    paint: color-n5,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -633,7 +662,7 @@
   )
 
   let stroke-line-11 = (
-    paint: colors(4),
+    paint: color-n5,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -647,9 +676,9 @@
     transform: transform,
   )
 
-  let fill-collection-12 = colors(4).transparentize(50%)
+  let fill-collection-12 = color-n5.transparentize(50%)
   let stroke-collection-12 = (
-    paint: colors(4).transparentize(50%),
+    paint: color-n5.transparentize(50%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -669,7 +698,7 @@
   )
 
   let stroke-line-13 = (
-    paint: colors(5),
+    paint: color-n6,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -684,7 +713,7 @@
   )
 
   let stroke-line-14 = (
-    paint: colors(5),
+    paint: color-n6,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -698,9 +727,9 @@
     transform: transform,
   )
 
-  let fill-collection-15 = colors(5).transparentize(50%)
+  let fill-collection-15 = color-n6.transparentize(50%)
   let stroke-collection-15 = (
-    paint: colors(5).transparentize(50%),
+    paint: color-n6.transparentize(50%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
