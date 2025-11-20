@@ -1,6 +1,7 @@
 #import "/header.typ": *
+#import "figures/alignment_x1064_vertical/figure.typ": figure as figure-alignment-x1064-vertical
 
-== Improvement of the alignment procedure <sec:mod-align>
+== Improving the alignment procedure <sec:mod-align>
 
 The in-situ #lms is the essential tool for the alignment of the lattice beams.
 The direct feedback from the atoms about the local lattice depth significantly improves all steps of the lattice-alignment procedure#footnote[
@@ -47,15 +48,12 @@ The vertical position of the #forward beam is optimized when the resonances do n
 We follow the same steps for the vertical alignment of the #retro beam to determine the local optimum of the vertical alignment.
 
 #floating-figure(
-  image("figures/alignment_x1064_vertical.png"),
+  figure-alignment-x1064-vertical(),
   caption: [
     Optimization of the #x1064\-lattice depth at a constant modulation frequency.
     The atomic densities show the resonances of the in-situ #lms at the modulation frequency $fmod = #qty[110][kHz]$.
     From *a* to *d*, the vertical position of the forward-propagating #x1064\-lattice beam is changed in equal steps.
     The lattice depth is set to $Vx1064 = #qty[55][Erec]$ where the expected transition frequency in the center of the optical lattice is $fnm(1, 3) = #qty[115.7][kHz]$.
-
-    // TODO: Reduce the ROI?
-    // TODO: Fix the height of the colorbar...
   ],
   label: <fig:mod-align-x1064-forward>,
 )
