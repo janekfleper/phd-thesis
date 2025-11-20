@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/superlattice_scaling/figure.typ": figure as figure-superlattice-scaling
 #import "figures/superlattice_result/figure.typ": figure as figure-superlattice-result
 
 == Modulating the superlattice potential <sec:mod-super>
@@ -62,7 +63,7 @@ To estimate the errors of the calibration, we run the individual fits according 
 
 
 #floating-figure(
-  image("figures/modulation_superlattice_scaling.png"),
+  figure-superlattice-scaling(),
   caption: [
     Sensitivity of the in-situ #slms.
     The superlattice phase is set to the antisymmetric configuration $phi = -pi slash 4$, and the dashed vertical lines indicate the reference values $Vx532 = #qty[18][Erec]$ and $Vx1064 = #qty[60][Erec]$ for the respective lattice depths.
