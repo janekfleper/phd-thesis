@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/x1064-images/figure.typ": figure as figure-x1064-images
 
 == Introduction to #lms <sec:mod-intro>
 
@@ -79,7 +80,7 @@ The inhomogeneity of the lattice depth also causes the resonances to broaden tow
 Both effects match the expected behavior of the intensity profile of the Gaussian lattice beams.
 
 #floating-figure(
-  image("figures/modulation_x1064-images.png", width: 100%),
+  figure-x1064-images(),
   caption: [
     In-situ #lms of the #x1064 lattice.
     The modulation frequency is scanned from #qty[118.0][kHz] (*a*) to #qty[122.5][kHz] (*j*) in steps of #qty[0.5][kHz].

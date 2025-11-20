@@ -17,6 +17,8 @@
 #let color-stability-initial = blue
 #let color-stability-final = orange
 
+#let gradient-atomic-density = std.gradient.linear(white, blue, angle: -90deg)
+
 #let linewidth = 2pt
 #let linewidth-narrow = 1.5pt
 #let linewidth-very-narrow = 0.9pt
