@@ -96,6 +96,7 @@ We can, therefore, operate the optical lattices for longer times without a relev
 
     // TODO: Already introduce the resonance contrast somewhere else?
     // TODO: Add colors for the y-label of *c* to *e*.
+    // TODO: Add yaxis-labels to each axes *c* to *e*?
   ],
   label: <fig:mod-align-x1064-walking>,
 )
