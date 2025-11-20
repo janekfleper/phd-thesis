@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/alignment_x1064_vertical/figure.typ": figure as figure-alignment-x1064-vertical
+#import "figures/alignment_x1064_walking/figure.typ": figure as figure-alignment-x1064-walking
 #import "figures/alignment_z532_left_right/figure.typ": figure as figure-alignment-z532-left-right
 #import "figures/alignment_z532_up_down/figure.typ": figure as figure-alignment-z532-up-down
 
@@ -79,7 +80,7 @@ While the possible improvement of the lattice depth (see #subref(<fig:mod-align-
 We can, therefore, operate the optical lattices for longer times without a relevant decrease of the lattice depth $V0(x, y)$.
 
 #floating-figure(
-  image("figures/alignment_x1064_walking.png", width: 90%),
+  figure-alignment-x1064-walking(),
   caption: [
     Optimization of the vertical #x1064\-lattice alignment.
     *a*, Optimal position of the #retro beam as a function of the #forward beam position.
