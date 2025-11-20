@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/fit_model/figure.typ": figure as figure-fit-model
 
 #pagebreak()
 
@@ -49,7 +50,7 @@ based on the electric field of a Gaussian laser beam in @eq:theory-dipole-gaussi
 With the lattice depth $V0(fitr)$ and the band structure in @fig:mod-intro-theory, we compute the local transition frequency $fnm(1, 3)(V0)$ in #unit[kHz] (see #subref(<fig:mod-eval-model>, "a-d")).
 
 #floating-figure(
-  image("figures/modulation_evaluation_fit_model.png"),
+  figure-fit-model(),
   caption: [
     Fit model for the data analysis of the in-situ resonances.
     *a* - *d*, Transition frequency $fnm(1, 3)(V0)$ computed from the local lattice depth $V0(y)$.
