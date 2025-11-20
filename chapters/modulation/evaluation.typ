@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/fit_model/figure.typ": figure as figure-fit-model
+#import "figures/other_lattices/figure.typ": figure as figure-other-lattices
 
 #pagebreak()
 
@@ -143,7 +144,7 @@ We only take the images with $fmod < #qty[122.0][kHz]$ into account for the comp
 The resulting fit parameters are compiled in @tab:mod-eval-results.
 
 #floating-figure(
-  image("figures/modulation_other-lattices.png"),
+  figure-other-lattices(),
   caption: [
     Calibration of the #y1064 lattice and the #z532 lattice.
     *a*, Resonances and fit result for the #y1064 lattice at $Vy1064 = #qty[60][Erec]$.
@@ -151,8 +152,8 @@ The resulting fit parameters are compiled in @tab:mod-eval-results.
     The atomic densities are normalized by the reference density $n_0(x, y)$ and the mean is computed in the interval $#qty[-15][μm] < y < #qty[15][μm]$.
     The solid lines show the result of the combined fit for each lattice.
 
-    // TODO: Fix the y-ticks of both axes...
     // TODO: Somehow add a colorbar?
+    // TODO: Fix the pcolormesh plotting...
   ],
   label: <fig:mod-eval-other-result>,
 )
