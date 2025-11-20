@@ -1,7 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": level-structure
-#import "figures/k40-hyperfine/figure.typ": figure as figure-k40-hyperfine
-#import "figures/k40-feshbach/figure.typ": figure as figure-k40-feshbach
+#import "figures/k40_hyperfine/figure.typ": figure as figure-k40-hyperfine
+#import "figures/k40_feshbach/figure.typ": figure as figure-k40-feshbach
 
 == Properties of #K40 <sec:setup-k40>
 

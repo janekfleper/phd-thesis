@@ -1,6 +1,6 @@
 #import "/header.typ": *
 #import "figures/introduction/figure.typ": figure as figure-introduction
-#import "figures/x1064-images/figure.typ": figure as figure-x1064-images
+#import "figures/x1064_images/figure.typ": figure as figure-x1064-images
 
 == Introduction to #lms <sec:mod-intro>
 
