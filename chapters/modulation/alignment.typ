@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/alignment_x1064_vertical/figure.typ": figure as figure-alignment-x1064-vertical
+#import "figures/alignment_z532_left_right/figure.typ": figure as figure-alignment-z532-left-right
 
 == Improving the alignment procedure <sec:mod-align>
 
@@ -124,15 +125,13 @@ If the lattice potential $Vz532(x, y)$ is centered at $y = 0$, the resonances ar
 The alignment procedure is again limited by the mechanical mirror mount, and we estimate the precision of the optimized position along the #y-axis to be $delta y tilde.eq #qty[10][μm]$.
 
 #floating-figure(
-  image("figures/alignment_z532_left-right.png"),
+  figure-alignment-z532-left-right(),
   caption: [
     Optimization of the #z532\-lattice position along the #x-axis.
     *a*, Initial position of the #z532 lattice after the alignment of the individual lattice beams.
     We optimize the #z532\-lattice position until the resonances are centered around $x = 0$ (*d*).
     The atom cloud always moves in the opposite direction of the resonances because of the deconfinement by the radial potential of the #z532 lattice.
     For all images, the setpoint of the lattice depth is $Vz532 = #qty[100][Erec]$ and the modulation frequency is $fmod = #qty[80][kHz]$.
-
-    // TODO: Fix height of the colorbar...
   ],
   label: <fig:mod-align-z532-left-right>,
 )
