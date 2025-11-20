@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/superlattice_result/figure.typ": figure as figure-superlattice-result
 
 == Modulating the superlattice potential <sec:mod-super>
 
@@ -86,7 +87,7 @@ Therefore, we only adjust the #forward beam of the #x532 lattice after running t
 With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we use the technique shown in @fig:mod-align-x1064-forward for the horizontal and vertical alignment of the #x532\-lattice beams.
 
 #floating-figure(
-  image("figures/modulation_superlattice_result.png"),
+  figure-superlattice-result(),
   caption: [
     Calibration of the #x532\-lattice depth with the superlattice potential.
     *a*, Mean atomic densities in the interval $#qty[-5][μm] < x < #qty[5][μm]$ normalized by the reference density $n_0 (x, y)$.
@@ -94,7 +95,7 @@ With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we 
     *b*, Lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ averaged in the same interval as the data in *a*.
     The $y$-axes are scaled to correctly display the different waists.
 
-    // TODO: Set x-ticks in *a* to match the measured frequencies.
+    // TODO: Add legend to *b* instead of the colored y-labels?
   ],
   label: <fig:mod-super-result>,
 )

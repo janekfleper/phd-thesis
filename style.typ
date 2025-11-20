@@ -17,6 +17,9 @@
 #let color-stability-initial = blue
 #let color-stability-final = orange
 
+#let color-x1064 = red
+#let color-x532 = green.darken(20%)
+
 #let gradient-atomic-density = std.gradient.linear(white, blue, angle: -90deg)
 #let gradient-modulation-resonance = std.gradient.linear(white, green.darken(40%))
 
