@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/alignment_x1064_vertical/figure.typ": figure as figure-alignment-x1064-vertical
 #import "figures/alignment_z532_left_right/figure.typ": figure as figure-alignment-z532-left-right
+#import "figures/alignment_z532_up_down/figure.typ": figure as figure-alignment-z532-up-down
 
 == Improving the alignment procedure <sec:mod-align>
 
@@ -137,15 +138,13 @@ The alignment procedure is again limited by the mechanical mirror mount, and we 
 )
 
 #floating-figure(
-  image("figures/alignment_z532_up-down.png"),
+  figure-alignment-z532-up-down(),
   caption: [
     Optimization of the #z532\-lattice position along the #y-axis.
     *a*, Initial position of the #z532 lattice after the alignment along the #x-axis (see #subref(<fig:mod-align-z532-up-down>, "d")).
     We move the #z532\-lattice potential along the #y-axis until the resonances are parallel (*d*).
     The atom cloud does not move because the deconfinement by the radial potential of the #z532 lattice is negligible compared to the confinement of the #x1064 lattice.
     For all images, the setpoint of the lattice depth is $Vz532 = #qty[100][Erec]$ and the modulation frequency is $fmod = #qty[80][kHz]$.
-
-    // TODO: Fix height of the colorbar...
   ],
   label: <fig:mod-align-z532-up-down>,
 )
