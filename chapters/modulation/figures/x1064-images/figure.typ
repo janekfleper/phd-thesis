@@ -75,8 +75,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-0.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-0-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -108,8 +106,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-1.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-1-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -139,8 +135,6 @@
   }
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
-
-  let data = json("data/axes-2.json")
 
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-2-quad-mesh-0.png")
 
@@ -172,8 +166,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-3.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-3-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -204,8 +196,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-4.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-4-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -235,8 +225,6 @@
   }
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
-
-  let data = json("data/axes-5.json")
 
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-5-quad-mesh-0.png")
 
@@ -270,8 +258,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-6.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-6-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -302,8 +288,6 @@
   }
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
-
-  let data = json("data/axes-7.json")
 
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-7-quad-mesh-0.png")
 
@@ -336,8 +320,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/axes-8.json")
-
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-8-quad-mesh-0.png")
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -368,8 +350,6 @@
   }
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
-
-  let data = json("data/axes-9.json")
 
   let quad-mesh-0 = image(width: 100%, height: 100%, "data/axes-9-quad-mesh-0.png")
 
