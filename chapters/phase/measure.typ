@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/measure_technique/figure.typ": figure as figure-measure-technique
+#import "figures/measure_signal/figure.typ": figure as figure-measure-signal
 
 == Measuring the superlattice phase <sec:phase-measure>
 
@@ -155,7 +156,7 @@ Despite its sensitivity to the total atom number, we are now exclusively using t
 The benefits of resolving the local occupation $n_L (x, y)$ far outweigh the robustness of the contrast @eq:phase-measure-detect-contrast[].
 
 #floating-figure(
-  image("figures/phase_measure_signal.png", width: 80%),
+  figure-measure-signal(),
   caption: [
     In-situ calibration of the superlattice phase.
     The grid shows the zero-phase frequency $f0(x, y)$ corresponding to the local symmetric configuration $phase(x, y) = 0$.
@@ -163,6 +164,9 @@ The benefits of resolving the local occupation $n_L (x, y)$ far outweigh the rob
     For the evaluation, we apply a mask to the atom images to only include grid cells with a finite atomic density after the loading of the atoms in the lattices.
     The superlattice parameters for the phase measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
     The corresponding tunneling amplitude in the center of the cloud is $t slash h approx #qty[860][Hz]$, and we typically use oscillation times #tau0 between #qty[200][μs] and #qty[250][μs].
+
+    // TODO: Use the correct colormap (thermal) here...
+    // TODO: Increase the figure size again and remove some text?
   ],
   label: <fig:phase-measure-detect-result>,
 )
