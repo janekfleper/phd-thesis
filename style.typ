@@ -33,6 +33,7 @@
 #let linewidth-very-narrow = 0.9pt
 
 #let markersize = 3pt
+#let markersize-small = 2pt
 
 #let abc-style = (
   location: top + left,

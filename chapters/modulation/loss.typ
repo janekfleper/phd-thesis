@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/loss_result/figure.typ": figure as figure-loss-result
+#import "figures/loss_channels/figure.typ": figure as figure-loss-channels
 
 == Investigation of the atom-loss mechanism <sec:mod-loss>
 
@@ -55,7 +56,7 @@ While both effects are small, the resulting matrix elements for odd transitions 
 However, compared to even transitions such as $1 -> 3$ or $1 -> 5$, the odd transitions remain weaker.
 
 #floating-figure(
-  image("figures/modulation_loss_channels.png"),
+  figure-loss-channels(),
   caption: [
     In-situ #lms with a secondary modulation frequency.
     *a*, Resonance amplitude #fitaR depending on the secondary modulation frequency #fmod2.
@@ -70,9 +71,7 @@ However, compared to even transitions such as $1 -> 3$ or $1 -> 5$, the odd tran
     In the intermediate regime $#qty[65][Erec] lt.approx V0 lt.approx #qty[85][Erec]$, we have to rely on the secondary modulation frequency to use the in-situ #lms.
 
     // TODO: Anything to add for the description of axes *b*?
-    // TODO: Use Erec for the y-axis in *c* instead? Or mention Erec = 4.405 kHz in the caption?
-    // TODO: Use labels instead of the legend in *c*?
-    // TODO: Mark the regimes in *c*?
+    // TODO: Make the vertical line in *a* and *b* solid?
   ],
   label: <fig:mod-loss-channels>,
 )
