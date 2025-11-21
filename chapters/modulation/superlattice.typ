@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
 #import "figures/superlattice_scaling/figure.typ": figure as figure-superlattice-scaling
 #import "figures/superlattice_result/figure.typ": figure as figure-superlattice-result
 
@@ -35,15 +36,13 @@ However, applying the modulation to the #x532\-lattice depth is significantly mo
 We achieve a good resonance visibility with the modulation amplitude $dV slash Vx532 approx #tr[???]$ and the modulation time $tmod = #qty[0.75][s]$.
 
 #floating-figure(
-  image("figures/modulation_superlattice_phase.png", width: 90%),
+  figure-superlattice-phase(),
   caption: [
     Phase configuration for the in-situ #slms.
     *a*, Antisymmetric configuration of the superlattice potential (black) with the lattice depths $Vx1064 = #qty[60][Erec]$ and $Vx532 = #qty[18][Erec]$.
     The Wannier functions are computed directly from the Bloch waves of the bands $n = 1$ to $n = 4$, and the mean energy of the corresponding bands $epsilon_n (q)$ is used as the offset.
     *b*, Sensitivity of the band structure to the superlattice phase $phi$.
     Around the antisymmetric configuration ($phi = -pi slash 4$), the band structure is the least sensitive to the superlattice phase.
-
-    // TODO: Use labels instead of a legend?
   ],
   label: <fig:mod-super-phase>,
 )
