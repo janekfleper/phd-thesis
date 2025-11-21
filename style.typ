@@ -23,6 +23,9 @@
 #let gradient-atomic-density = std.gradient.linear(white, blue, angle: -90deg)
 #let gradient-modulation-resonance = std.gradient.linear(white, green.darken(40%))
 
+#let gutter = 3mm
+#let gutter-narrow = 2mm
+
 #let fill-mask = black.transparentize(80%)
 
 #let linewidth = 2pt

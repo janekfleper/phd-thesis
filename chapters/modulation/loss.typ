@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/loss_result/figure.typ": figure as figure-loss-result
 
 == Investigation of the atom-loss mechanism <sec:mod-loss>
 
@@ -30,7 +31,7 @@ The resonance amplitude #fitaR does not decrease in a single step due to the inh
 While the setpoint #Vx1064 quantifies the lattice depth on the lattice axis, the mean lattice depth is always lower by a few percent.
 
 #floating-figure(
-  image("figures/modulation_loss_result.png"),
+  figure-loss-result(),
   caption: [
     Decrease of the resonance amplitude $a_R$ in deep lattices.
     *a*, Resonance amplitude #fitaR as a function of the lattice depth #V0.
@@ -39,9 +40,6 @@ While the setpoint #Vx1064 quantifies the lattice depth on the lattice axis, the
     *b*, Available band transitions depending on the lattice depth #V0.
     The transition $3 -> 6$ can only be accessed by the modulation frequency $fmod = fnm(1, 3)$ up to $V0 approx #qty[65][Erec]$, while the transition $3 -> 5$ is never resonant.
     In deeper lattices, most of the atoms remain in the higher band $n' = 3$ which reduces the visibility of the resonances.
-
-    // TODO: Run the individual evaluation here or at least discuss the error bars in *a*?
-    // TODO: Add the transition $1 -> 4$ to *b*? Remove the transition $3 -> 5$?
   ],
   label: <fig:mod-loss-result>,
 )
