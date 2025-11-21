@@ -45,7 +45,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-10%, 50.0%),
+    position: (-12%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -633,7 +633,7 @@
       grid(
         columns: (1fr, 1fr),
         rows: (1fr,),
-        column-gutter: (2.552%,),
+        column-gutter: 3mm,
         row-gutter: (),
         axes.cell(
           position: (0, 0),
