@@ -116,7 +116,7 @@
 }
 
 
-#let axes-0(xlim: (-6.6, 6.6), ylim: (-6.6910387833280405, 6.6910387833280405), dpi: 100.0) = {
+#let axes-0(xlim: (-6.3, 6.3), ylim: (-6.6910387833280405, 6.6910387833280405), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -248,7 +248,7 @@
 }
 
 
-#let axes-1(xlim: (-6.6, 6.6), ylim: (-0.04251665810767906, 1.042516658107679), dpi: 100.0) = {
+#let axes-1(xlim: (-6.3, 6.3), ylim: (-0.04251665810767906, 1.042516658107679), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -293,16 +293,7 @@
     label-style: xaxis-minor-label-style,
   )
   let yaxis-major-ticks = (
-    locs: (
-      -0.2,
-      0.0,
-      0.2,
-      0.4000000000000001,
-      0.6000000000000001,
-      0.8,
-      1.0000000000000002,
-      1.2000000000000002,
-    ),
+    locs: (-0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2),
     labels: ($−0.2$, $0$, $0.2$, $0.4$, $0.6$, $0.8$, $1$, $1.2$),
     tick-style: yaxis-major-tick-style,
     label-style: yaxis-major-label-style,

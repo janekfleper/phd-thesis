@@ -5,7 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
-#let axes-0(xlim: (-8.2, 8.2), ylim: (-8.8, 8.8), dpi: 100.0) = {
+#let axes-0(xlim: (-8.1, 8.1), ylim: (-8.8, 8.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale

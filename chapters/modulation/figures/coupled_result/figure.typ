@@ -24,7 +24,7 @@
   label-style: xaxis-major-label-style,
 )
 #let xaxis-minor-ticks = (
-  locs: (30, 50, 70),
+  locs: (30, 50, 70, 90),
   labels: (),
   tick-style: xaxis-minor-tick-style,
   label-style: xaxis-minor-label-style,

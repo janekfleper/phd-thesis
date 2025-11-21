@@ -22,7 +22,7 @@
   label-style: yaxis-minor-label-style,
 )
 
-#let axes-0(xlim: (-1.55, 1.55), ylim: ylim, dpi: 100.0) = {
+#let axes-0(xlim: (-1.52, 1.52), ylim: ylim, dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -368,7 +368,7 @@
 }
 
 
-#let axes-1(xlim: (-2.0, 67.0), ylim: ylim, dpi: 100.0) = {
+#let axes-1(xlim: (-2.0, 65.0), ylim: ylim, dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale

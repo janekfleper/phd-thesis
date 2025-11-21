@@ -6,6 +6,7 @@
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
 #let a0 = 70%
+#let xlim = (15.0, 85.0)
 
 #let label-xaxis = (
   position: (50.0%, 100% + 2.2em),
@@ -37,7 +38,7 @@
   label-style: xaxis-major-label-style,
 )
 #let xaxis-minor-ticks = (
-  locs: (30, 50, 70),
+  locs: (30, 50, 70, 90),
   labels: (),
   tick-style: xaxis-minor-tick-style,
   label-style: xaxis-minor-label-style,
@@ -55,7 +56,7 @@
   label-style: yaxis-minor-label-style,
 )
 
-#let axes-0(xlim: (14.0, 91.0), ylim: (79.0, 161.0), dpi: 100.0) = {
+#let axes-0(xlim: xlim, ylim: (79.0, 161.0), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -274,7 +275,7 @@
 }
 
 
-#let axes-1(xlim: (14.0, 91.0), ylim: (-0.04671650433797497, 1.045302839182738), dpi: 100.0) = {
+#let axes-1(xlim: xlim, ylim: (-0.04671650433797497, 1.045302839182738), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -348,7 +349,7 @@
 }
 
 
-#let axes-2(xlim: (14.0, 91.0), ylim: (-0.04107145294272894, 1.032421935113593), dpi: 100.0) = {
+#let axes-2(xlim: xlim, ylim: (-0.04107145294272894, 1.032421935113593), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -422,7 +423,7 @@
 }
 
 
-#let axes-3(xlim: (14.0, 91.0), ylim: (-0.04811381650782009, 1.0481397105671653), dpi: 100.0) = {
+#let axes-3(xlim: xlim, ylim: (-0.04811381650782009, 1.0481397105671653), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale

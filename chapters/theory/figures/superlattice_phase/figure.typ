@@ -28,7 +28,7 @@
   )
 }
 
-#let axes-0(xlim: (-1.6, 1.6), ylim: (-17.8, 21.8), dpi: 100.0) = {
+#let axes-0(xlim: (-1.55, 1.55), ylim: (-17.8, 21.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -142,7 +142,7 @@
 }
 
 
-#let axes-1(xlim: (-1.6, 1.6), ylim: (-17.8, 21.8), dpi: 100.0) = {
+#let axes-1(xlim: (-1.55, 1.55), ylim: (-17.8, 21.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -262,7 +262,7 @@
 }
 
 
-#let axes-2(xlim: (-1.6, 1.6), ylim: (-17.8, 21.8), dpi: 100.0) = {
+#let axes-2(xlim: (-1.55, 1.55), ylim: (-17.8, 21.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale

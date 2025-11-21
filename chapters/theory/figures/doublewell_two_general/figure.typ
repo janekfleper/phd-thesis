@@ -207,7 +207,7 @@
 }
 
 
-#let axes-0(xlim: (-6.3, 6.3), ylim: (-16.824674507221165, 8.94502204393815), dpi: 100.0) = {
+#let axes-0(xlim: (-6.1, 6.1), ylim: (-16.824674507221165, 8.94502204393815), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
