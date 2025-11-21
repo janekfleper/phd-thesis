@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": coupled-lattice
+#import "figures/coupled_theory/figure.typ": figure as figure-coupled-theory
 
 == Band structure of coupled lattices <sec:mod-coupled>
 
@@ -84,7 +85,7 @@ In the coupled lattice potential, these three bands are mixed to yield the coupl
 The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 approx #qty[50][Erec], #qty[60][Erec] "and" #qty[70][Erec]$ respectively.
 
 #floating-figure(
-  image("figures/modulation_coupled_theory.png", width: 90%),
+  figure-coupled-theory(),
   caption: [
     Transitions in the coupled band structure.
     *a*, Available band transitions around the lattice configuration $Vx1064 = Vy1064 = #qty[60][Erec]$.
@@ -93,17 +94,12 @@ The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 
     In the one-dimensional potential, we use the transition to the excited band $vn = (3, 1)$ (solid black line) when modulating the #x1064 lattice.
     The other black lines show the transitions with a similar frequency to other excited bands.
     In the coupled band structure, the energy bands $cband_eta$ are a mixture of the uncoupled energy bands $band_vn$.
-    #tr[
-      The transparency of the coupled energy bands indicates the amplitude of the transition from the lowest band with $cn = 1$.
-    ]
-    // Around the lattice depth $Vy1064 = #qty[60][Erec]$, we observe three avoided crossings.
+    The transparency of the coupled energy bands indicates the amplitude of the transition from the lowest band with $cn = 1$.
     *b* - *d*, Composition of the states corresponding to the coupled energy bands $cband_eta$.
     The colors and strokes follow the legend in *a*.
 
-    // TODO: Place the legend above the axes *a*? Or use labels instead of the legend?
-    // TODO: Add the overlap with the lattice modulation $1 -> 3$ as an alpha channel in *a*!
-    // TODO: Add labels in *b* to *d* with the value of eta?
     // TODO: Anything to add about the composition details?
+    // TODO: Only place a single yaxis-label for axes *b* to *d*?
   ],
   label: <fig:mod-coupled-theory>,
 )
