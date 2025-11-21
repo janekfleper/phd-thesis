@@ -727,26 +727,26 @@
   )
 
   let text-5 = (
-    position: transform((0.12, -6.8)),
+    position: transform((0.114, -5.4)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(0), [$n = 1$]),
+      text-box(text(size: 1em, fill: black, [$n = 1$])),
     ),
   )
 
   let text-6 = (
-    position: transform((0.12, 4.1)),
+    position: transform((0.114, 2.5)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(1), [$n = 2$]),
+      text-box(text(size: 1em, fill: black, [$n = 2$])),
     ),
   )
 
   let text-7 = (
-    position: transform((0.12, 10)),
+    position: transform((0.114, 8.8)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(2), [$n = 3$]),
+      text-box(text(size: 1em, fill: black, [$n = 3$])),
     ),
   )
 
@@ -913,18 +913,18 @@
   )
 
   let text-4 = (
-    position: transform((0.12, 0.05)),
+    position: transform((0.114, 0.00)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(0), [$n = 1$]),
+      text-box(text(size: 1em, fill: black, [$n = 1$])),
     ),
   )
 
   let text-5 = (
-    position: transform((0.12, 0.9)),
+    position: transform((0.114, 0.95)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(1), [$n = 2$]),
+      text-box(text(size: 1em, fill: black, [$n = 2$])),
     ),
   )
 

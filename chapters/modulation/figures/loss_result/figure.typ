@@ -309,12 +309,7 @@
     position: transform((80, y)),
     body: place(
       right + bottom,
-      rotate(-0deg, box(
-        fill: white.transparentize(30%),
-        stroke: black + linewidth-very-narrow,
-        outset: 0.3em,
-        text(size: 1em, fill: black, label),
-      )),
+      text-box(text(size: 1em, fill: black, label)),
     ),
   )
 

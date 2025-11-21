@@ -151,7 +151,7 @@
   )
   let marker-line-10 = none
   let line-10 = (
-    data: data.at("line-10"),
+    data: ylim.map(y => (133, y)),
     stroke: stroke-line-10,
     marker: marker-line-10,
     transform: transform,
@@ -341,18 +341,18 @@
   )
 
   let text-10 = (
-    position: transform((141, -0.94)),
+    position: transform((150, -0.94)),
     body: place(
-      left + bottom,
-      text(size: 1em, fill: black, [$3 -> 6$]),
+      center + bottom,
+      text-box(text(size: 1em, fill: black, [$3 -> 6$])),
     ),
   )
 
   let text-11 = (
-    position: transform((175.5, -0.94)),
+    position: transform((180, -0.94)),
     body: place(
-      left + bottom,
-      text(size: 1em, fill: black, [$3 -> 7$]),
+      center + bottom,
+      text-box(text(size: 1em, fill: black, [$3 -> 7$])),
     ),
   )
 
@@ -581,12 +581,7 @@
     position: transform((101, y)),
     body: place(
       right + bottom,
-      rotate(-0deg, box(
-        fill: white.transparentize(30%),
-        stroke: black + linewidth-very-narrow,
-        outset: 0.3em,
-        text(size: 1em, fill: black, label),
-      )),
+      text-box(text(size: 1em, fill: black, label)),
     ),
   )
 

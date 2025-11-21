@@ -214,18 +214,24 @@
   )
 
   let text-2 = (
-    position: transform((5.2, -6.2)),
+    position: transform((5.8, -5.8)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: black, bottom-edge: "descender", ketg),
+      text-box(
+        inset: 0.2em,
+        text(size: 1em, fill: black, bottom-edge: "descender", ketg),
+      ),
     ),
   )
 
   let text-3 = (
-    position: transform((5.2, 6.2)),
+    position: transform((5.8, 5.8)),
     body: place(
       right + top,
-      text(size: 1em, fill: black, kete),
+      text-box(
+        inset: 0.2em,
+        text(size: 1em, fill: black, bottom-edge: "descender", kete),
+      ),
     ),
   )
 
@@ -336,18 +342,24 @@
   )
 
   let text-2 = (
-    position: transform((6, 0.04)),
+    position: transform((5.8, 0.0)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: color-left, bottom-edge: "descender", ketL),
+      text-box(
+        inset: 0.2em,
+        text(size: 1em, fill: black, bottom-edge: "descender", ketL),
+      ),
     ),
   )
 
   let text-3 = (
-    position: transform((6, 0.96)),
+    position: transform((5.8, 1.00)),
     body: place(
       right + top,
-      text(size: 1em, fill: color-right, ketR),
+      text-box(
+        inset: 0.2em,
+        text(size: 1em, fill: black, bottom-edge: "descender", ketR),
+      ),
     ),
   )
 

@@ -220,24 +220,19 @@
     transform: transform,
   )
 
-  let text-9 = (
-    position: transform((1.48, 4.1)),
-    body: place(right + bottom, text(size: 1em, fill: colors(0), [$n = 1$])),
+  let label-band(label, y) = (
+    position: transform((1.46, y)),
+    body: place(
+      right + bottom,
+      text-box(text(size: 1em, fill: black, label)),
+    ),
   )
 
-  let text-10 = (
-    position: transform((1.48, 10.8)),
-    body: place(right + bottom, text(size: 1em, fill: colors(1), [$n = 2$])),
-  )
-
-  let text-11 = (
-    position: transform((1.48, 15.7)),
-    body: place(right + bottom, text(size: 1em, fill: colors(2), [$n = 3$])),
-  )
-
-  let text-12 = (
-    position: transform((1.48, 19.2)),
-    body: place(right + bottom, text(size: 1em, fill: colors(3), [$n = 4$])),
+  let labels = (
+    label-band($n = 1$, 3.1),
+    label-band($n = 2$, 9.7),
+    label-band($n = 3$, 15),
+    label-band($n = 4$, 20.3),
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -257,10 +252,7 @@
   axes.spines(spines)
   draw.text(..label-xaxis)
   draw.text(..label-yaxis)
-  draw.text(..text-9)
-  draw.text(..text-10)
-  draw.text(..text-11)
-  draw.text(..text-12)
+  for label in labels { draw.text(..label) }
   axes.abc(..abc-style, 1)
 }
 
