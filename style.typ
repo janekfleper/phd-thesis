@@ -86,6 +86,12 @@
 #let inset-indicator-stroke = black + 1.2pt
 #let inset-connector-stroke = luma(50%) + 0.9pt
 
+#let text-box = box.with(
+  fill: white.transparentize(20%),
+  stroke: black + linewidth-very-narrow,
+  outset: 0.2em,
+)
+
 #let figure-style(body) = {
   set text(9pt, font: "New Computer Modern Sans")
   show math.equation: set text(font: "New Computer Modern Sans Math")

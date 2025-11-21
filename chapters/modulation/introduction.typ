@@ -49,8 +49,6 @@ The loss mechanism is discussed in detail in @sec:mod-loss, where we use a latti
     The parity of the Wannier functions alternates with the band index $n$.
     *b*, Width of the energy bands depending on the lattice depth #V0.
     The diagonal line indicates the maximum #V0 of the lattice potential, and the dashed vertical line marks the lattice depth $V0 = #qty[60][Erec]$ in *a*.
-
-    // TODO: Use annotations instead of the legend?
   ],
   label: <fig:mod-intro-theory>,
 )

@@ -324,52 +324,21 @@
     transform: transform,
   )
 
-  let text-25 = (
-    position: transform((1.48, 10)),
+  let label-band(label, y) = (
+    position: transform((1.44, y)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(0), [$n = 1$]),
+      text-box(text(size: 1em, fill: black, label)),
     ),
   )
 
-  let text-26 = (
-    position: transform((1.48, 24)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(1), [$n = 2$]),
-    ),
-  )
-
-  let text-27 = (
-    position: transform((1.48, 38)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(2), [$n = 3$]),
-    ),
-  )
-
-  let text-28 = (
-    position: transform((1.48, 48)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(3), [$n = 4$]),
-    ),
-  )
-
-  let text-29 = (
-    position: transform((1.48, 60)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(4), [$n = 5$]),
-    ),
-  )
-
-  let text-30 = (
-    position: transform((1.48, 65)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(5), [$n = 6$]),
-    ),
+  let labels = (
+    label-band($n = 1$, 6.4),
+    label-band($n = 2$, 20.8),
+    label-band($n = 3$, 34),
+    label-band($n = 4$, 45.6),
+    label-band($n = 5$, 55.4),
+    label-band($n = 6$, 64.2),
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -394,12 +363,7 @@
   axes.spines(spines)
   draw.text(..label-xaxis)
   draw.text(..label-yaxis)
-  draw.text(..text-25)
-  draw.text(..text-26)
-  draw.text(..text-27)
-  draw.text(..text-28)
-  draw.text(..text-29)
-  draw.text(..text-30)
+  for label in labels { draw.text(..label) }
   axes.abc(..abc-style, 1)
 }
 
@@ -443,9 +407,9 @@
     label-style: xaxis-minor-label-style,
   )
 
-  let fill-collection-1 = colors(0).transparentize(50%)
+  let fill-collection-1 = colors(0)
   let stroke-collection-1 = (
-    paint: colors(0).transparentize(50%),
+    paint: colors(0).transparentize(20%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -481,7 +445,7 @@
 
   let fill-collection-3 = colors(1).transparentize(50%)
   let stroke-collection-3 = (
-    paint: colors(1).transparentize(50%),
+    paint: colors(1).transparentize(40%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
