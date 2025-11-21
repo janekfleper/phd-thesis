@@ -1197,7 +1197,7 @@
         columns: (2fr, .955fr),
         rows: (1fr, 1fr, 1fr),
         column-gutter: 12%,
-        row-gutter: 3mm,
+        row-gutter: gutter,
         axes.cell(
           position: (0, 0),
           shape: (1, 2),

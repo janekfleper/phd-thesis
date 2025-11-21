@@ -968,7 +968,7 @@
         columns: (1fr,),
         rows: (1fr, 1fr),
         column-gutter: (),
-        row-gutter: (3.116%,),
+        row-gutter: gutter,
         axes.cell(
           position: (0, 0),
           shape: (1, 1),

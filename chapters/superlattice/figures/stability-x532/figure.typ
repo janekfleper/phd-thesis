@@ -446,7 +446,7 @@
       grid(
         columns: (1fr, 1fr),
         rows: (1fr,),
-        column-gutter: (1.745%,),
+        column-gutter: gutter,
         row-gutter: (),
         axes.cell(
           position: (0, 0),

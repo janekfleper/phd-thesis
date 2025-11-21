@@ -238,7 +238,7 @@
       grid(
         columns: (1fr, 1fr, 1fr, 1fr, 2mm),
         rows: (1fr,),
-        column-gutter: 2mm,
+        column-gutter: gutter-narrow,
         row-gutter: (),
         axes.cell(
           position: (0, 0),

@@ -512,8 +512,8 @@
       grid(
         columns: (2.2fr, 1.0fr),
         rows: (1fr, 1fr, 1fr),
-        column-gutter: 3mm,
-        row-gutter: 3mm,
+        column-gutter: gutter,
+        row-gutter: gutter,
         axes.cell(
           position: (0, 0),
           shape: (1, 3),

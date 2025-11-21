@@ -118,7 +118,7 @@
   let data = json("data/inset-1.json")
 
   let label-xaxis = (
-    position: (50.0%, 124.209%),
+    position: (50.0%, 100% + 2em),
     body: place(
       center + top,
       text(size: 1em, fill: black, [Time $tau slash (h slash t)$]),
@@ -223,7 +223,7 @@
   let data = json("data/axes-0.json")
 
   let label-xaxis = (
-    position: (50.0%, 111.62%),
+    position: (50.0%, 100% + 2.0em),
     body: place(
       center + top,
       text(size: 1em, fill: black, [Offset $Delta slash t$]),
@@ -357,9 +357,15 @@
     )
   })
 
-  let properties-inset-0 = (position: (103.0%, 0.0%), shape: (60.0%, 48.0%))
+  let properties-inset-0 = (
+    position: (100.0% + gutter, 0.0%),
+    shape: (60.0%, 50.0% - gutter / 2),
+  )
 
-  let properties-inset-1 = (position: (103.0%, 52.0%), shape: (60.0%, 48.0%))
+  let properties-inset-1 = (
+    position: (100.0% + gutter, 50.0% + gutter / 2),
+    shape: (60.0%, 50.0% - gutter / 2),
+  )
 
   let indicator-inset-0 = (
     target: (
