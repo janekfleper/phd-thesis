@@ -8,6 +8,11 @@
 #let ylabel-text = [$"Energy"slash #unit[Erec]$]
 #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)
 
+#let label-xaxis = (
+  position: (50.0%, 110%),
+  body: place(center + top, text(size: 1em, fill: black, [Position $x slash a$])),
+)
+
 #let axes-0(xlim: (-1.55, 1.55), ylim: (-1.5, 26.5), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -23,10 +28,6 @@
 
   let data = json("data/axes-0.json")
 
-  let label-xaxis = (
-    position: (50.0%, 111.21%),
-    body: place(center + top, text(size: 1em, fill: black, [Position $x slash a$])),
-  )
   let label-yaxis = (
     position: (-11.655%, 50.0%),
     body: rotate(-90.0deg, place(center + bottom, text(
@@ -272,10 +273,6 @@
 
   let data = json("data/axes-1.json")
 
-  let label-xaxis = (
-    position: (50.0%, 111.21%),
-    body: place(center + top, text(size: 1em, fill: black, [Position $x slash a$])),
-  )
   let label-yaxis = (
     position: (108.582%, 50.0%),
     body: rotate(-90.0deg, place(center + top, text(size: 1em, fill: black, ylabel-text))),

@@ -28,6 +28,14 @@
   )
 }
 
+#let label-xaxis = (
+  position: (50.0%, 119%),
+  body: place(
+    center + top,
+    text(size: 1em, fill: black, [Position $x slash along$]),
+  ),
+)
+
 #let axes-0(xlim: (-1.55, 1.55), ylim: (-17.8, 21.8), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
@@ -43,10 +51,6 @@
 
   let data = json("data/axes-0.json")
 
-  let label-xaxis = (
-    position: (50.0%, 119.131%),
-    body: place(center + top, text(size: 1em, fill: black, [Position $x slash along$])),
-  )
   let label-yaxis = (
     position: (-20.155%, 50.0%),
     body: rotate(-90.0deg, place(center + bottom, text(
@@ -157,10 +161,6 @@
 
   let data = json("data/axes-1.json")
 
-  let label-xaxis = (
-    position: (50.0%, 119.131%),
-    body: place(center + top, text(size: 1em, fill: black, [Position $x slash along$])),
-  )
   let xaxis-major-ticks = (
     locs: (-2.0, -1.0, 0.0, 1.0, 2.0),
     labels: ($−2$, $−1$, $0$, $1$, $2$),
@@ -277,10 +277,6 @@
 
   let data = json("data/axes-2.json")
 
-  let label-xaxis = (
-    position: (50.0%, 119.131%),
-    body: place(center + top, text(size: 1em, fill: black, [Position $x slash along$])),
-  )
   let xaxis-major-ticks = (
     locs: (-2.0, -1.0, 0.0, 1.0, 2.0),
     labels: ($−2$, $−1$, $0$, $1$, $2$),
