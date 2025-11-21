@@ -95,7 +95,7 @@
 
   let stroke-line-0 = (
     paint: black,
-    thickness: linewidth,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -110,7 +110,7 @@
 
   let stroke-line-1 = (
     paint: black,
-    thickness: linewidth,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),
@@ -125,7 +125,7 @@
 
   let stroke-line-2 = (
     paint: black,
-    thickness: linewidth,
+    thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
     dash: (array: (2.0pt, 3.3pt), phase: 0.0pt),
