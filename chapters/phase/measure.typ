@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/measure_technique/figure.typ": figure as figure-measure-technique
 
 == Measuring the superlattice phase <sec:phase-measure>
 
@@ -123,7 +124,7 @@ between the states #ketL and #ketR.
 Compared to the individual occupations $n_L$ and $n_R$, the contrast is insensitive to small fluctuations of the atom number between experimental sequences.
 
 #floating-figure(
-  image("figures/phase_measure_in-situ_technique.png"),
+  figure-measure-technique(),
   caption: [
     Technique for the in-situ detection of the double-well occupation.
     *a*, Energy bands and Wannier functions up to $n = 7$ in a superlattice potential with the parameters $Vx1064 = #qty[60][Erec]$, $Vx532 = #qty[18][Erec]$ and $phase = pi slash 4$.
@@ -132,12 +133,6 @@ Compared to the individual occupations $n_L$ and $n_R$, the contrast is insensit
     *b*, *c*, Transition frequencies from the bands $n = 3$ (*b*) and $n = 1$ (*c*) as a function of the radius $rho$ from the optical axis of the lattice beams.
     The dotted vertical line indicates the typical size of the atom cloud.
     The dashed horizontal line shows the modulation frequency $fmod = #qty[185][kHz]$ to drive the band transition $3 -> 7$, while the atoms in the band $n = 1$ are not affected.
-
-    // TODO: Change the x-axis of b and c to "Radius / μm"?
-    // TODO: Reduce atom-cloud radius to 35 μm and limit x-axis to [-2, 42]
-    // TODO: Find a better color cycle! Ideally one with 7 unique colors?
-    // TODO: Perfectly match the y-axis for *a*, *b* and *c*...
-    // TODO: Find better spots for the *abc* labels?
   ],
   label: <fig:phase-measure-detect-technique>,
 )
