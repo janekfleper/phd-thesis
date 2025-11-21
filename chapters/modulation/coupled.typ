@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": coupled-lattice
 #import "figures/coupled_theory/figure.typ": figure as figure-coupled-theory
+#import "figures/coupled_result/figure.typ": figure as figure-coupled-result
 
 == Band structure of coupled lattices <sec:mod-coupled>
 
@@ -141,7 +142,7 @@ The calibration factor $fita0$ matches the theory again, and the waists #fitw0 a
 Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided crossings, we attribute the slightly increased waist to the breakdown of the fit model again.
 
 #floating-figure(
-  image("figures/modulation_coupled_result.png", width: 100%),
+  figure-coupled-result(),
   caption: [
     Lattice-depth calibration in the coupled band structure.
     *a*, Calibration factor #fita0 determined with the one-dimensional band structure.
@@ -156,6 +157,8 @@ Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided cros
 
     // TODO: Synchronize colors with @fig:mod-eval-x1064-result and @fig:mod-coupled-theory.
     // TODO: Add label/legend for the coupled energy bands $cband_2$ and $cband_4$.
+    // TODO: Find a better color for the mean waist in *b*?
+    // TODO: Improve the figure position in the document!
   ],
   label: <fig:mod-coupled-result>,
 )
