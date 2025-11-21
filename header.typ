@@ -28,6 +28,7 @@
 #let degC(..args, body) = $#num(..args, body)degree "C"$
 #let iqty = qty.with(unit-format: format-unit-symbol)
 #let pqty = qty.with(unit-format: format-unit-power)
+#let iunit = unit.with(format: format-unit-symbol)
 #let punit = unit.with(format: format-unit-power)
 
 #let cexp(body) = $upright(e)^(upright(i) #body)$
@@ -203,6 +204,8 @@
 #let tau0 = $tau_0$
 #let f0 = $f_0$
 #let Df = $Delta f$
+#let ghor = $gamma_"hor"$
+#let gver = $gamma_"ver"$
 
 // superlattice stability parameters
 #let RH = $R H$

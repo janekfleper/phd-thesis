@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/measure_technique/figure.typ": figure as figure-measure-technique
 #import "figures/measure_signal/figure.typ": figure as figure-measure-signal
+#import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
 
 == Measuring the superlattice phase <sec:phase-measure>
 
@@ -203,10 +204,10 @@ The motorized mirror mount holding one of the glass plates has a range of $plus.
 We can control the motorized mirror mount in the experimental sequence to vary the horizontal and vertical shift of the #x532\-lattice beams for compensating the individual gradient components.
 
 #floating-figure(
-  image("figures/phase_measure_horizontal_gradient.png", width: 70%),
+  figure-horizontal-gradient(),
   caption: [
     Compensating the horizontal component of the phase gradient.
-    The gradient component is linear in the angle $gamma_"hor"$, as expected from the shift of the #x532\-lattice beams due to the refraction in the glass plate.
+    The gradient component is linear in the angle #ghor, as expected from the shift of the #x532\-lattice beams due to the refraction in the glass plate.
     The uncertainties take the #deg[0.05] accuracy of the motorized mirror mount into account.
     The dashed line shows the expected gradients based on the properties of the glass plate and the focal length of the forward lens.
     Empty cells in the insets on the right are either excluded by the initial mask around the atom cloud or the fit of the zero-phase frequency $f0(x, y)$ is not successful.
@@ -216,13 +217,13 @@ We can control the motorized mirror mount in the experimental sequence to vary t
   placement: bottom,
 )
 
-For compensating the horizontal gradient component, we repeat the measurement of the superlattice phase $phase(x, y)$ in @fig:phase-measure-detect-result at several angles $gamma_"hor"$ of the glass plate.
+For compensating the horizontal gradient component, we repeat the measurement of the superlattice phase $phase(x, y)$ in @fig:phase-measure-detect-result at several angles #ghor of the glass plate.
 We evaluate the zero-phase frequency $f0(x, y)$ by fitting a first-degree polynomial that can be rotated in the #xy-plane.
 In @fig:phase-measure-gradient-horizontal, the measurement and compensation of the horizontal gradient component is shown.
-We vary the glass-plate angle in steps of #deg[0.4] to find the zero-crossing of the gradient component at $gamma_"hor" approx #deg[1.7]$.
+We vary the glass-plate angle in steps of #deg[0.4] to find the zero-crossing of the gradient component at $ghor approx #deg[1.7]$.
 The standard deviation of the zero-phase frequency $f0(x, y)$ across the atom cloud is $sigma(f0) = #qty[0.11][MHz]$.
 This corresponds to $sigma(phase) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-stability-result).
-During the scan of the angle $gamma_"hor"$, the zero-phase frequency #f0 in the center of the atom cloud varies by less than #qty[0.25][MHz].
+During the scan of the angle #ghor, the zero-phase frequency #f0 in the center of the atom cloud varies by less than #qty[0.25][MHz].
 We can, therefore, tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
 
 #floating-figure(
@@ -230,7 +231,7 @@ We can, therefore, tune the horizontal gradient component without significantly 
   caption: [
     Compensating the vertical component of the phase gradient.
     The contrast shows the ratio of the amplitude and the width of the minimum in the atomic densities, as highlighted by the insets.
-    The uncertainties of the angle $gamma_"ver"$ take the #deg[0.05] accuracy of the motorized mirror mount into account, and the uncertainties of the contrast show the fit errors.
+    The uncertainties of the angle #gver take the #deg[0.05] accuracy of the motorized mirror mount into account, and the uncertainties of the contrast show the fit errors.
     The horizontal gradient component is approximately #iqty[0.17][MHz/μm], and the lattice depths are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
   ],
   label: <fig:phase-measure-gradient-vertical>,
@@ -244,7 +245,7 @@ One case is the compensation of the vertical gradient component through the shap
 If the superlattice phase is equal in all vertical lattice planes, the local minimum occurs at the same position $(x, y)$ in each lattice plane and the integrated signal shows a minimal width.
 Conversely, a finite vertical gradient component causes a spatial shift of the phase measurement in the lattice planes that broadens the integrated signal in the atomic density.
 While we cannot infer the strength of the vertical gradient component, the technique is sufficient to find the zero-gradient angle of the glass plate.
-In @fig:phase-measure-gradient-vertical, the contrast is maximal at the glass-plate angle $gamma_"ver" approx #deg[0.5]$.
+In @fig:phase-measure-gradient-vertical, the contrast is maximal at the glass-plate angle $gver approx #deg[0.5]$.
 Compared to the horizontal gradient component, the measurement of the vertical gradient component is significantly less sensitive.
 This is primarily caused by the overall shape of the atom cloud that spans up to #qty[100][μm] in the #xy-plane and only #qty[10][μm] along the #z-axis.
 While this limits the measurement resolution, it also limits the possible inhomogeneity of the superlattice phase due to the vertical component of the phase gradient.
