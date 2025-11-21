@@ -59,7 +59,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Transition frequency $fnm(1, n) slash #unit[kHz]$]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Transition frequency $fnm(1, n) slash#unit[kHz]$]),
       ),
     ),
   )
@@ -356,44 +356,20 @@
     offset-transform: offset-transform-collection-15,
   )
 
-  let text-16 = (
-    position: transform((22.1, 138)),
+  let label-band(label, y) = (
+    position: transform((21.8, y)),
     body: place(
       right + bottom,
-      text(size: 1em, fill: colors(1), [$n = 2$]),
+      text-box(text(size: 1em, fill: black, label)),
     ),
   )
 
-  let text-17 = (
-    position: transform((22.1, 225)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(2), [$n = 3$]),
-    ),
-  )
-
-  let text-18 = (
-    position: transform((22.1, 278)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(3), [$n = 4$]),
-    ),
-  )
-
-  let text-19 = (
-    position: transform((22.1, 348)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(4), [$n = 5$]),
-    ),
-  )
-
-  let text-20 = (
-    position: transform((22.1, 425)),
-    body: place(
-      right + bottom,
-      text(size: 1em, fill: colors(5), [$n = 6$]),
-    ),
+  let labels = (
+    label-band($n = 2$, 152),
+    label-band($n = 3$, 242),
+    label-band($n = 4$, 289),
+    label-band($n = 5$, 360),
+    label-band($n = 6$, 400),
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
@@ -420,11 +396,7 @@
   axes.spines(spines)
   draw.text(..label-xaxis)
   draw.text(..label-yaxis)
-  draw.text(..text-16)
-  draw.text(..text-17)
-  draw.text(..text-18)
-  draw.text(..text-19)
-  draw.text(..text-20)
+  for label in labels { draw.text(..label) }
   axes.abc(..abc-style, 1)
 }
 
