@@ -1,7 +1,7 @@
 #import "/header.typ": *
-#import "figures/doublewell_single/figure.typ": figure as figure-doublewell-single
-#import "figures/doublewell_two_symmetric/figure.typ": figure as figure-doublewell-two-symmetric
-#import "figures/doublewell_two_general/figure.typ": figure as figure-doublewell-two-general
+#import "figures/doublewell_single/figure.typ": figure as figure-single
+#import "figures/doublewell_two_symmetric/figure.typ": figure as figure-two-symmetric
+#import "figures/doublewell_two_general/figure.typ": figure as figure-two-general
 
 == Interacting fermions in a double-well potential <sec:theory-double>
 
@@ -66,7 +66,7 @@ In theory, the tunneling amplitude $t$ should therefore be a function of the ene
 We can however neglect this since the oscillation frequency and amplitude in @eq:theory-double-one-rabi-parameters are significantly more sensitive to $Delta$.
 
 #floating-figure(
-  figure-doublewell-single(),
+  figure-single(),
   caption: [
     One particle in a double-well potential.
     *a*, Spectrum with the ground state and the excited state as a function of the energy offset $Delta slash t$.
@@ -119,7 +119,7 @@ In this subsection, I will show the solution for two specific configurations tha
   grid(
     columns: (60%, auto),
     align: horizon,
-    figure-doublewell-two-symmetric(height: 7cm),
+    figure-two-symmetric(height: 7cm),
     block(
       width: 100%,
       {
@@ -186,7 +186,7 @@ The same energy gap $J$ also shows up between the strongly attractive ground sta
 While the process itself is not referred to as the superexchange, we can interpret the gap with the equivalent second-order tunneling process between the states #ketdp and #kets.
 
 #floating-figure(
-  figure-doublewell-two-general(width: 14cm, height: 5.8cm),
+  figure-two-general(width: 14cm, height: 5.8cm),
   caption: [
     Two attractively interacting particles in the double-well potential.
     *a*, Spectrum of two particles with the interaction energy $U slash t = -4$.

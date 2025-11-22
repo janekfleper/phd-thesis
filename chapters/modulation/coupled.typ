@@ -1,7 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": coupled-lattice
-#import "figures/coupled_theory/figure.typ": figure as figure-coupled-theory
-#import "figures/coupled_result/figure.typ": figure as figure-coupled-result
+#import "figures/coupled_theory/figure.typ": figure as figure-theory
+#import "figures/coupled_result/figure.typ": figure as figure-result
 
 == Band structure of coupled lattices <sec:mod-coupled>
 
@@ -86,7 +86,7 @@ In the coupled lattice potential, these three bands are mixed to yield the coupl
 The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 approx #qty[50][Erec], #qty[60][Erec] "and" #qty[70][Erec]$ respectively.
 
 #floating-figure(
-  figure-coupled-theory(),
+  figure-theory(),
   caption: [
     Transitions in the coupled band structure.
     *a*, Available band transitions around the lattice configuration $Vx1064 = Vy1064 = #qty[60][Erec]$.
@@ -142,7 +142,7 @@ The calibration factor $fita0$ matches the theory again, and the waists #fitw0 a
 Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided crossings, we attribute the slightly increased waist to the breakdown of the fit model again.
 
 #floating-figure(
-  figure-coupled-result(),
+  figure-result(),
   caption: [
     Lattice-depth calibration in the coupled band structure.
     *a*, Calibration factor #fita0 determined with the one-dimensional band structure.

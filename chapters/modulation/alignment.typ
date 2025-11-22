@@ -1,8 +1,8 @@
 #import "/header.typ": *
-#import "figures/alignment_x1064_vertical/figure.typ": figure as figure-alignment-x1064-vertical
-#import "figures/alignment_x1064_walking/figure.typ": figure as figure-alignment-x1064-walking
-#import "figures/alignment_z532_left_right/figure.typ": figure as figure-alignment-z532-left-right
-#import "figures/alignment_z532_up_down/figure.typ": figure as figure-alignment-z532-up-down
+#import "figures/alignment_x1064_vertical/figure.typ": figure as figure-x1064-vertical
+#import "figures/alignment_x1064_walking/figure.typ": figure as figure-x1064-walking
+#import "figures/alignment_z532_left_right/figure.typ": figure as figure-z532-left-right
+#import "figures/alignment_z532_up_down/figure.typ": figure as figure-z532-up-down
 
 == Improving the alignment procedure <sec:mod-align>
 
@@ -51,7 +51,7 @@ The vertical position of the #forward beam is optimized when the resonances do n
 We follow the same steps for the vertical alignment of the #retro beam to determine the local optimum of the vertical alignment.
 
 #floating-figure(
-  figure-alignment-x1064-vertical(),
+  figure-x1064-vertical(),
   caption: [
     Optimization of the #x1064\-lattice depth at a constant modulation frequency.
     The atomic densities show the resonances of the in-situ #lms at the modulation frequency $fmod = #qty[110][kHz]$.
@@ -80,7 +80,7 @@ While the possible improvement of the lattice depth (see #subref(<fig:mod-align-
 We can, therefore, operate the optical lattices for longer times without a relevant decrease of the lattice depth $V0(x, y)$.
 
 #floating-figure(
-  figure-alignment-x1064-walking(),
+  figure-x1064-walking(),
   caption: [
     Optimization of the vertical #x1064\-lattice alignment.
     *a*, Optimal position of the #retro beam as a function of the #forward beam position.
@@ -128,7 +128,7 @@ If the lattice potential $Vz532(x, y)$ is centered at $y = 0$, the resonances ar
 The alignment procedure is again limited by the mechanical mirror mount, and we estimate the precision of the optimized position along the #y-axis to be $delta y tilde.eq #qty[10][μm]$.
 
 #floating-figure(
-  figure-alignment-z532-left-right(),
+  figure-z532-left-right(),
   caption: [
     Optimization of the #z532\-lattice position along the #x-axis.
     *a*, Initial position of the #z532 lattice after the alignment of the individual lattice beams.
@@ -140,7 +140,7 @@ The alignment procedure is again limited by the mechanical mirror mount, and we 
 )
 
 #floating-figure(
-  figure-alignment-z532-up-down(),
+  figure-z532-up-down(),
   caption: [
     Optimization of the #z532\-lattice position along the #y-axis.
     *a*, Initial position of the #z532 lattice after the alignment along the #x-axis (see #subref(<fig:mod-align-z532-up-down>, "d")).

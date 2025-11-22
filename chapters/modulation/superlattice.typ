@@ -1,7 +1,7 @@
 #import "/header.typ": *
-#import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
-#import "figures/superlattice_scaling/figure.typ": figure as figure-superlattice-scaling
-#import "figures/superlattice_result/figure.typ": figure as figure-superlattice-result
+#import "figures/superlattice_phase/figure.typ": figure as figure-phase
+#import "figures/superlattice_scaling/figure.typ": figure as figure-scaling
+#import "figures/superlattice_result/figure.typ": figure as figure-result
 
 == Modulating the superlattice potential <sec:mod-super>
 
@@ -36,7 +36,7 @@ However, applying the modulation to the #x532\-lattice depth is significantly mo
 We achieve a good resonance visibility with the modulation amplitude $dV slash Vx532 approx #tr[???]$ and the modulation time $tmod = #qty[0.75][s]$.
 
 #floating-figure(
-  figure-superlattice-phase(),
+  figure-phase(),
   caption: [
     Phase configuration for the in-situ #slms.
     *a*, Antisymmetric configuration of the superlattice potential (black) with the lattice depths $Vx1064 = #qty[60][Erec]$ and $Vx532 = #qty[18][Erec]$.
@@ -62,7 +62,7 @@ To estimate the errors of the calibration, we run the individual fits according 
 
 
 #floating-figure(
-  figure-superlattice-scaling(),
+  figure-scaling(),
   caption: [
     Sensitivity of the in-situ #slms.
     The superlattice phase is set to the antisymmetric configuration $phi = -pi slash 4$, and the dashed vertical lines indicate the reference values $Vx532 = #qty[18][Erec]$ and $Vx1064 = #qty[60][Erec]$ for the respective lattice depths.
@@ -85,7 +85,7 @@ Therefore, we only adjust the #forward beam of the #x532 lattice after running t
 With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we use the technique shown in @fig:mod-align-x1064-forward for the horizontal and vertical alignment of the #x532\-lattice beams.
 
 #floating-figure(
-  figure-superlattice-result(),
+  figure-result(),
   caption: [
     Calibration of the #x532\-lattice depth with the superlattice potential.
     *a*, Mean atomic densities in the interval $#qty[-5][μm] < x < #qty[5][μm]$ normalized by the reference density $n_0 (x, y)$.

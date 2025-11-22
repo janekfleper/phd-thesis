@@ -1,6 +1,6 @@
 #import "/header.typ": *
-#import "figures/loss_result/figure.typ": figure as figure-loss-result
-#import "figures/loss_channels/figure.typ": figure as figure-loss-channels
+#import "figures/loss_result/figure.typ": figure as figure-result
+#import "figures/loss_channels/figure.typ": figure as figure-channels
 
 == Investigation of the atom-loss mechanism <sec:mod-loss>
 
@@ -32,7 +32,7 @@ The resonance amplitude #fitaR does not decrease in a single step due to the inh
 While the setpoint #Vx1064 quantifies the lattice depth on the lattice axis, the mean lattice depth is always lower by a few percent.
 
 #floating-figure(
-  figure-loss-result(),
+  figure-result(),
   caption: [
     Decrease of the resonance amplitude $a_R$ in deep lattices.
     *a*, Resonance amplitude #fitaR as a function of the lattice depth #V0.
@@ -56,7 +56,7 @@ While both effects are small, the resulting matrix elements for odd transitions 
 However, compared to even transitions such as $1 -> 3$ or $1 -> 5$, the odd transitions remain weaker.
 
 #floating-figure(
-  figure-loss-channels(),
+  figure-channels(),
   caption: [
     In-situ #lms with a secondary modulation frequency.
     *a*, Resonance amplitude #fitaR depending on the secondary modulation frequency #fmod2.

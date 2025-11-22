@@ -1,6 +1,6 @@
 #import "/header.typ": *
-#import "figures/measure_technique/figure.typ": figure as figure-measure-technique
-#import "figures/measure_signal/figure.typ": figure as figure-measure-signal
+#import "figures/measure_technique/figure.typ": figure as figure-technique
+#import "figures/measure_signal/figure.typ": figure as figure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
 #import "figures/measure_vertical_gradient/figure.typ": figure as figure-vertical-gradient
 
@@ -127,7 +127,7 @@ between the states #ketL and #ketR.
 Compared to the individual occupations $n_L$ and $n_R$, the contrast is insensitive to small fluctuations of the atom number between experimental sequences.
 
 #floating-figure(
-  figure-measure-technique(),
+  figure-technique(),
   caption: [
     Technique for the in-situ detection of the double-well occupation.
     *a*, Energy bands and Wannier functions up to $n = 7$ in a superlattice potential with the parameters $Vx1064 = #qty[60][Erec]$, $Vx532 = #qty[18][Erec]$ and $phase = pi slash 4$.
@@ -158,7 +158,7 @@ Despite its sensitivity to the total atom number, we are now exclusively using t
 The benefits of resolving the local occupation $n_L (x, y)$ far outweigh the robustness of the contrast @eq:phase-measure-detect-contrast[].
 
 #floating-figure(
-  figure-measure-signal(),
+  figure-signal(),
   caption: [
     In-situ calibration of the superlattice phase.
     The grid shows the zero-phase frequency $f0(x, y)$ corresponding to the local symmetric configuration $phase(x, y) = 0$.

@@ -1,5 +1,5 @@
 #import "/header.typ": *
-#import "figures/wannier_functions/figure.typ": figure as figure-wannier-functions
+#import "figures/wannier_functions/figure.typ": figure as figure-functions
 
 == Wannier functions <sec:theory-wannier>
 
@@ -27,9 +27,7 @@ While the tunneling amplitude is defined for arbitrary lattice sites $i != j$, t
 We can usually neglect tunneling over longer distances since it is exponentially suppressed compared to $t_1$.
 
 #floating-figure(
-  figure-wannier-functions(),
-  // TODO: Reduce x-axis limits to remove the left and right gaps?
-  // TODO: Improve the labels in axes *a*!
+  figure-functions(),
   caption: [
     Wannier functions in an optical lattice.
     *a*, Wannier functions $w_n (x)$ offset by the mean energy of the corresponding band $epsilon_n (q)$ in an optical lattice potential with the depth $V_0 = #qty[15][Erec]$.

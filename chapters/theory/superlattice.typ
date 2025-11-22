@@ -1,7 +1,7 @@
 #import "/header.typ": *
-#import "figures/superlattice_phase/figure.typ": figure as figure-superlattice-phase
-#import "figures/superlattice_band_structure/figure.typ": figure as figure-superlattice-band-structure
-#import "figures/superlattice_wannier_composition/figure.typ": figure as figure-superlattice-wannier-composition
+#import "figures/superlattice_phase/figure.typ": figure as figure-phase
+#import "figures/superlattice_band_structure/figure.typ": figure as figure-band-structure
+#import "figures/superlattice_wannier_composition/figure.typ": figure as figure-wannier-composition
 
 == Optical superlattices <sec:theory-super>
 
@@ -31,7 +31,7 @@ with the relation $k_s = 2 k_l$ for the lattice vectors, and $#unit[Erec] prop k
 The factor $4$ is required to express the dimensionless lattice depth $v_s$ in units of the recoil energy at $lambda_s = #qty[532][nm]$.
 
 #floating-figure(
-  figure-superlattice-phase(height: 4.4cm),
+  figure-phase(height: 4.4cm),
   caption: [
     Superlattice potential with a tunable phase $phi$.
     The colored lines indicate the potentials of the long lattice (red) and the short lattice (green), while the black line shows the total superlattice potential.
@@ -72,7 +72,7 @@ For the lowest two bands in #subref(<fig:theory-super-band-structure>, "b"), the
 For both pairs of bands, the Bloch waves show their origin from the bands $tilde(n)$ in the number of nodes per lattice site (c.f. #subref(<fig:theory-bloch-energy-bands>, "b")).
 
 #floating-figure(
-  figure-superlattice-band-structure(width: 14.5cm, height: 6.9cm),
+  figure-band-structure(width: 14.5cm, height: 6.9cm),
   caption: [
     Band structure of a symmetric optical superlattice potential.
     *a*, Energy bands $epsilon_n (q)$ in an optical superlattice potential with $Vl = #qty[16][Erec]$, $Vs = #qty[5][Erec]$ and $phi = 0$.
@@ -120,7 +120,7 @@ Due to the smaller potential barrier inside the unit cell, the amplitude #tin is
 To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x - x_i)$ and $w_R (x - x_(i-1))$ are used, where $i$ is the index of the unit cell.
 
 #floating-figure(
-  figure-superlattice-wannier-composition(),
+  figure-wannier-composition(),
   caption: [
     Composition of the maximally localized Wannier functions.
     *a*, The lowest three energy bands $epsilon_n (q)$ as a function of the superlattice phase $phi$ in a superlattice potential with $V_l = #qty[16][Erec]$ and $V_s = #qty[5][Erec]$.

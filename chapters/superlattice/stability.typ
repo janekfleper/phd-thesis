@@ -1,6 +1,6 @@
 #import "/header.typ": *
-#import "figures/stability-x1064/figure.typ": figure as figure-stability-x1064
-#import "figures/stability-x532/figure.typ": figure as figure-stability-x532
+#import "figures/stability-x1064/figure.typ": figure as figure-x1064
+#import "figures/stability-x532/figure.typ": figure as figure-x532
 
 == Characterizing the lattice depths <sec:super-stability>
 
@@ -31,7 +31,7 @@ The lattice position $fity0(tau)$ increases linearly during the holding time.
 With $Delta fity0 < #qty[1][μm]$ after #qty[5][s], the change of the position is too small to affect the lattice depth.
 
 #floating-figure(
-  figure-stability-x1064(width: 16cm),
+  figure-x1064(width: 16cm),
   caption: [
     Reduction of the thermal lensing in the #x1064\-lattice setup.
     *a*, Calibration factor $fita0(tau)$ to quantify the measured lattice depth $Vx1064(tau) = alpha(tau) Vx1064$ relative to the setpoint in the experimental sequence.
@@ -89,7 +89,7 @@ With the horizontal and vertical waists of $wx532^y approx #qty[120][μm]$ and $
 At the lattice depth $Vx532 = #qty[24][Erec]$, we estimate that the focal shifts of the horizontal and vertical axis must be comparable to the respective Rayleigh lengths to reduce the lattice depth by #qty[30][%].
 
 #floating-figure(
-  figure-stability-x532(height: 7.2cm),
+  figure-x532(height: 7.2cm),
   caption: [
     Reduction of the thermal lensing in the #x532\-lattice setup.
     *a*, Calibration factor #fita0 as a function of the setpoint #Vx532 after the holding time $tau = #qty[3][s]$ to measure the steady state of the thermal lensing.
