@@ -77,8 +77,6 @@
 
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
-  let data = json("data/inset-1.json")
-
   let label-xaxis = (
     position: (50.0%, 100.0% + 2.2em),
     body: place(
