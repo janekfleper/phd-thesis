@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/parameters_result/figure.typ": figure as figure-result
 
 == Calibrating the double-well parameters <sec:phase-parameters>
 
@@ -43,7 +44,7 @@ A systematic error in the #x532\-lattice calibration or an imperfect alignment c
 If the actual #x532\-lattice depth is lower than #qty[12][Erec] by #qty[4][%], the theoretical tunneling amplitude increases to $t slash h = #qty[550][Hz]$, which highlights the importance of an independent calibration of the tunneling amplitude $t(x, y)$.
 
 #floating-figure(
-  image("figures/phase_parameters_result.png", width: 85%),
+  figure-result(),
   caption: [
     Local calibration of the double-well parameters $t$ and $U$.
     *a*, Tunneling amplitude $t(x, y)$ measured with the Rabi oscillations in the symmetric superlattice configuration $phase = 0$.
@@ -55,7 +56,7 @@ If the actual #x532\-lattice depth is lower than #qty[12][Erec] by #qty[4][%], t
     In *a* and *b*, empty cells are located outside of the atom cloud or the local evaluation failed.
 
     // TODO: Add an inset (or multiple) for the interaction measurement?
-    // TODO: Move the inset in *a* somewhere else? Below the atom cloud is probably the best option? Or add a background to the x-label?
+    // TODO: Improve the visibility of the inset-connector stroke?
   ],
   label: <fig:phase-parameters-result>,
 )
