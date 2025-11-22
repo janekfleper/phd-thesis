@@ -392,7 +392,7 @@
   block(
     width: width,
     height: height,
-    stroke: black,
+    stroke: white + 0.0pt,
     fill: white,
     grid-0(),
   )
