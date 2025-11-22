@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": table-other-properties, table-thermal-properties
 #import "figures/stability_result/figure.typ": figure as figure-result
+#import "figures/stability_limitation/figure.typ": figure as figure-limitation
 
 == Active phase stabilization <sec:phase-stability>
 
@@ -311,7 +312,7 @@ The regular NTC thermistor is positioned closer to the Ioffe bars than the fast 
 ], which results in the different peak-to-peak amplitude of the readings and the delay relative to the interval of the Ioffe-Pritchard trap in the sequence.
 
 #floating-figure(
-  image("figures/phase_stability_limitation.png"),
+  figure-limitation(),
   caption: [
     Temperature cycle during the experimental sequence.
     *a*, Air-temperature readings inside the #mu-metal (see @fig:phase-stability-sensors-setup).
