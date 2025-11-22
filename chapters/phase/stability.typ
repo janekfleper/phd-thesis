@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": table-other-properties, table-thermal-properties
+#import "figures/stability_result/figure.typ": figure as figure-result
 
 == Active phase stabilization <sec:phase-stability>
 
@@ -227,7 +228,7 @@ While the Ciddor equation for the refractive index of air is valid for wavelengt
 This can affect the refractive index at #qty[1064][nm], thereby changing the environmental coefficient.
 
 #floating-figure(
-  image("figures/phase_stability_result.png"),
+  figure-result(),
   caption: [
     Long-term stability of the superlattice phase.
     *a*, Shot-to-shot fluctuations of the superlattice phase with the active stabilization (blue).
@@ -237,8 +238,6 @@ This can affect the refractive index at #qty[1064][nm], thereby changing the env
     The superlattice parameters for the phase measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
     *b*, Environmental corrections computed from the sensor readings.
     The data are shifted to start at #qty[0][mrad].
-
-    // TODO: Comment that the "noise" on the sensors is much smaller than the "noise" on the phase data?
   ],
   label: <fig:phase-stability-result>,
 )
