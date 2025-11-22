@@ -2,6 +2,7 @@
 #import "figures/measure_technique/figure.typ": figure as figure-measure-technique
 #import "figures/measure_signal/figure.typ": figure as figure-measure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
+#import "figures/measure_vertical_gradient/figure.typ": figure as figure-vertical-gradient
 
 == Measuring the superlattice phase <sec:phase-measure>
 
@@ -227,7 +228,7 @@ During the scan of the angle #ghor, the zero-phase frequency #f0 in the center o
 We can, therefore, tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
 
 #floating-figure(
-  image("figures/phase_measure_vertical_gradient.png", width: 70%),
+  figure-vertical-gradient(),
   caption: [
     Compensating the vertical component of the phase gradient.
     The contrast shows the ratio of the amplitude and the width of the minimum in the atomic densities, as highlighted by the insets.
