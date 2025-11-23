@@ -486,6 +486,7 @@
     pattern: "..",
     stroke: black + 0.3pt,
     fill: theory-color(color),
+    size: (20pt, 20pt),
   )
 
   // first order stuff...
@@ -999,6 +1000,62 @@
     ),
   )
 
+  let legend-style = (
+    location: top + center,
+    title: none,
+    columns: 2,
+    outset: 0.3em,
+    row-gutter: 0.5em,
+    item-gutter: 0.5em,
+    column-gutter: -0.5em,
+    handle-length: 2.0em,
+    handle-height: 1.0em,
+    fill: color.rgb(100.0%, 100.0%, 100.0%, 80.0%),
+    stroke: none,
+    frame: block.with(),
+  )
+
+  let legend-handle(color, marker) = legend.errorbar.with(
+    data: (
+      stroke: none,
+      marker: marker(markersize, ..marker-colors(color)),
+    ),
+    caps: (:),
+    bars: (
+      y: (
+        paint: error-color(color),
+        thickness: linewidth-narrow,
+        dash: "solid",
+      ),
+    ),
+  )
+
+  let legend-color = luma(70%)
+  let legend-items = (
+    (
+      handle: legend-handle(legend-color, markers.circle),
+      label: [],
+    ),
+    (
+      handle: legend.rectangle.with(
+        fill: legend-color,
+        stroke: black + linewidth-very-narrow,
+      ),
+      label: [$l = 1$],
+    ),
+    (
+      handle: legend-handle(legend-color, markers.thin-diamond),
+      label: [],
+    ),
+    (
+      handle: legend.rectangle.with(
+        fill: theory-hatch(legend-color),
+        stroke: black + linewidth-very-narrow,
+      ),
+      label: [$l = 2$],
+    ),
+  )
+
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   {
     draw.collection(..collection-11)
@@ -1044,6 +1101,7 @@
   axes.inset(..properties-inset-1, inset-1())
   axes.inset(..properties-inset-2, inset-2())
   axes.inset(..properties-inset-3, inset-3())
+  legend.legend(..legend-style, ..legend-items)
 }
 
 

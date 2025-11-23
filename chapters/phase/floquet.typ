@@ -243,8 +243,6 @@ The fit parameters to adjust the theoretical signals to the measured oscillation
     This figure is adapted from @klemmer_floquet-driven_2024.
 
     // TODO: Find nicer colors for the spectrum!
-    // TODO: Use abs(U) in the x-label?
-    // TODO: Add a legend for the data points and the theory?
   ],
   label: <fig:phase-floquet-crossover-spectrum>,
 )
