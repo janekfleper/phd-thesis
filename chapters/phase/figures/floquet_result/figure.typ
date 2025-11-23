@@ -248,32 +248,56 @@
   )
 
   let legend-style = (
-    location: top + left,
+    location: (6%, 4%),
     title: none,
-    columns: 1,
+    columns: 2,
+    inset: 0.1em,
     row-gutter: 0.5em,
     item-gutter: 0.5em,
-    column-gutter: 1.5em,
+    column-gutter: -0.5em,
     handle-length: 2.0em,
     handle-height: 1.0em,
     fill: color.rgb(100.0%, 100.0%, 100.0%, 80.0%),
-    stroke: color.rgb(0.0%, 0.0%, 0.0%, 80.0%),
+    stroke: none,
     frame: block.with(),
   )
+
+  let legend-handle(color, marker, markersize) = legend.errorbar.with(
+    data: (
+      stroke: none,
+      marker: marker(markersize, ..marker-colors(color)),
+    ),
+    caps: (:),
+    bars: (
+      y: (
+        paint: error-color(color),
+        thickness: linewidth-narrow,
+        dash: "solid",
+      ),
+    ),
+  )
+
+  let legend-color = luma(70%)
   let legend-items = (
     (
-      handle: legend.errorbar.with(
-        data: (stroke: stroke-line-2, marker: marker-line-2),
-        caps: (:),
-        bars: (y: stroke-collection-3),
+      handle: legend-handle(legend-color, markers.circle, markersize),
+      label: [],
+    ),
+    (
+      handle: legend.rectangle.with(
+        fill: legend-color,
+        stroke: black + linewidth-very-narrow,
       ),
       label: [$l = 1$],
     ),
     (
-      handle: legend.errorbar.with(
-        data: (stroke: stroke-line-5, marker: marker-line-5),
-        caps: (:),
-        bars: (y: stroke-collection-6),
+      handle: legend-handle(legend-color, markers.thin-diamond, markersize-thin-diamond),
+      label: [],
+    ),
+    (
+      handle: legend.rectangle.with(
+        fill: hatch.hatch(..floquet-theory-hatch(legend-color)),
+        stroke: black + linewidth-very-narrow,
       ),
       label: [$l = 2$],
     ),
@@ -447,6 +471,21 @@
     transform: transform-collection-6,
     compute-scale: compute-scale-collection-6,
     offset-transform: offset-transform-collection-6,
+  )
+
+  let legend-style = (
+    location: (1%, 12%),
+    title: none,
+    columns: 2,
+    inset: 0.1em,
+    row-gutter: 0.5em,
+    item-gutter: 0.5em,
+    column-gutter: -0.5em,
+    handle-length: 2.0em,
+    handle-height: 1.0em,
+    fill: color.rgb(100.0%, 100.0%, 100.0%, 80.0%),
+    stroke: none,
+    frame: block.with(),
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
