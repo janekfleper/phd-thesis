@@ -2,6 +2,7 @@
 #import "figures/figures.typ": floquet-sketch
 #import "figures/floquet_bessel/figure.typ": figure as figure-bessel
 #import "figures/floquet_spectrum/figure.typ": figure as figure-spectrum
+#import "figures/floquet_result/figure.typ": figure as figure-result
 
 == Floquet engineering of the superlattice potential <sec:phase-floquet>
 
@@ -264,7 +265,7 @@ In the time evolution, this is expressed as a beat of two different frequencies 
 We can observe this beating in the two near-resonant oscillation signals at $h nu slash abs(U) approx 0.65$ and $h nu slash abs(U) approx 1.05$.
 
 #floating-figure(
-  image("figures/phase_floquet_result.png", width: 80%),
+  figure-result(),
   caption: [
     Pair tunneling in the Floquet-driven double wells.
     The different orders $l$ are overlapped as a function of the effective interaction $Ueff = U + l h nu$ in @eq:phase-floquet-theory-near.
@@ -278,9 +279,7 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
     This figure is adapted from @klemmer_floquet-driven_2024.
 
     // TODO: Add all the "exponents" $(l)$ to the tunneling amplitudes #teff etc...
-    // TODO: Show the static theory in *a* above the Floquet theory?
-    // TODO: Change y-label of *b* to $VCT^"eff"$?
-    // TODO: Use abs(U) for the x-axis label...
+    // TODO: Add a description/legend for the oscillations in *d* and *e*?
   ],
   label: <fig:phase-floquet-crossover-result>,
 )
