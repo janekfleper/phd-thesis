@@ -642,7 +642,7 @@
   // second order stuff...
   let stroke-line-9 = none
   let marker-line-9 = markers.thin-diamond(
-    markersize,
+    markersize-thin-diamond,
     ..marker-colors(colors(2)),
   )
   let line-9 = (
@@ -717,7 +717,7 @@
 
   let stroke-line-13 = none
   let marker-line-13 = markers.thin-diamond(
-    markersize,
+    markersize-thin-diamond,
     ..marker-colors(colors(3)),
   )
   let line-13 = (
@@ -792,7 +792,7 @@
 
   let stroke-line-17 = none
   let marker-line-17 = markers.thin-diamond(
-    markersize,
+    markersize-thin-diamond,
     ..marker-colors(colors(4)),
   )
   let line-17 = (
@@ -1001,7 +1001,7 @@
     frame: block.with(),
   )
 
-  let legend-handle(color, marker) = legend.errorbar.with(
+  let legend-handle(color, marker, markersize) = legend.errorbar.with(
     data: (
       stroke: none,
       marker: marker(markersize, ..marker-colors(color)),
@@ -1019,7 +1019,7 @@
   let legend-color = luma(70%)
   let legend-items = (
     (
-      handle: legend-handle(legend-color, markers.circle),
+      handle: legend-handle(legend-color, markers.circle, markersize),
       label: [],
     ),
     (
@@ -1030,7 +1030,7 @@
       label: [$l = 1$],
     ),
     (
-      handle: legend-handle(legend-color, markers.thin-diamond),
+      handle: legend-handle(legend-color, markers.thin-diamond, markersize-thin-diamond),
       label: [],
     ),
     (

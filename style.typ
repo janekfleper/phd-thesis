@@ -35,6 +35,7 @@
 
 #let markersize = 3pt
 #let markersize-small = 2pt
+#let markersize-thin-diamond = 3.7pt // use a larger markersize for markers.thin-diamond...
 
 #let marker-colors(color) = (
   fill: color.lighten(20%),
