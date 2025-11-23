@@ -1,6 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": floquet-sketch
 #import "figures/floquet_bessel/figure.typ": figure as figure-bessel
+#import "figures/floquet_spectrum/figure.typ": figure as figure-spectrum
 
 == Floquet engineering of the superlattice potential <sec:phase-floquet>
 
@@ -229,7 +230,7 @@ Additionally, we can read the parameters #teff, #Ueff and #VCTeff directly from 
 The fit parameters to adjust the theoretical signals to the measured oscillation signals $calC(tau)$ are the #x532\-lattice depth #Vx532 in the center of the atom cloud and the scattering length #asc.
 
 #floating-figure(
-  image("figures/phase_floquet_spectrum.png", width: 80%),
+  figure-spectrum(),
   caption: [
     Floquet spectrum of the effective Hamiltonian.
     We evaluate the oscillation signals (insets) with the Floquet theory to find the matrix elements of the effective Hamiltonian for the doubly-occupied double well.
