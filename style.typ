@@ -36,6 +36,20 @@
 #let markersize = 3pt
 #let markersize-small = 2pt
 
+#let marker-colors(color) = (
+  fill: color.lighten(20%),
+  stroke: color.darken(20%) + linewidth-very-narrow,
+)
+#let error-color(color) = color.darken(20%)
+#let theory-color(color) = color.lighten(20%)
+
+#let floquet-theory-hatch(color) = (
+  pattern: "..",
+  stroke: black + 0.3pt,
+  fill: theory-color(color),
+  size: (20pt, 20pt),
+)
+
 #let abc-style = (
   location: top + left,
   outset: 0.3em,

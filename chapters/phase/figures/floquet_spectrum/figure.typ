@@ -461,13 +461,6 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let marker-colors(color) = (
-    fill: color.lighten(20%),
-    stroke: color.darken(20%) + linewidth-very-narrow,
-  )
-  let error-color(color) = color.darken(20%)
-  let theory-color(color) = color.lighten(20%)
-
   let theory-alpha-first(color) = {
     let transparency = (100%,) * 3 + (0%,) * 4
     std.gradient.linear(
@@ -481,13 +474,6 @@
       ..transparency.map(a => color.transparentize(a)),
     )
   }
-
-  let theory-hatch(color) = hatch.hatch(
-    pattern: "..",
-    stroke: black + 0.3pt,
-    fill: theory-color(color),
-    size: (20pt, 20pt),
-  )
 
   // first order stuff...
   let stroke-line-0 = none
@@ -687,7 +673,7 @@
     offset-transform: offset-transform-collection-10,
   )
 
-  let fill-collection-11 = theory-hatch(colors(2))
+  let fill-collection-11 = hatch.hatch(..floquet-theory-hatch(colors(2)))
   let stroke-collection-11 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -708,7 +694,7 @@
     offset-transform: offset-transform-collection-11,
   )
 
-  let fill-collection-12 = theory-hatch(colors(2))
+  let fill-collection-12 = hatch.hatch(..floquet-theory-hatch(colors(2)))
   let stroke-collection-12 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -762,7 +748,7 @@
     offset-transform: offset-transform-collection-14,
   )
 
-  let fill-collection-15 = theory-hatch(colors(3))
+  let fill-collection-15 = hatch.hatch(..floquet-theory-hatch(colors(3)))
   let stroke-collection-15 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -783,7 +769,7 @@
     offset-transform: offset-transform-collection-15,
   )
 
-  let fill-collection-16 = theory-hatch(colors(3))
+  let fill-collection-16 = hatch.hatch(..floquet-theory-hatch(colors(3)))
   let stroke-collection-16 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -837,7 +823,7 @@
     offset-transform: offset-transform-collection-18,
   )
 
-  let fill-collection-19 = theory-hatch(colors(4))
+  let fill-collection-19 = hatch.hatch(..floquet-theory-hatch(colors(4)))
   let stroke-collection-19 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -858,7 +844,7 @@
     offset-transform: offset-transform-collection-19,
   )
 
-  let fill-collection-20 = theory-hatch(colors(4))
+  let fill-collection-20 = hatch.hatch(..floquet-theory-hatch(colors(4)))
   let stroke-collection-20 = (
     paint: black,
     thickness: linewidth-very-narrow,
@@ -1049,7 +1035,7 @@
     ),
     (
       handle: legend.rectangle.with(
-        fill: theory-hatch(legend-color),
+        fill: hatch.hatch(..floquet-theory-hatch(legend-color)),
         stroke: black + linewidth-very-narrow,
       ),
       label: [$l = 2$],
