@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": floquet-sketch
+#import "figures/floquet_bessel/figure.typ": figure as figure-bessel
 
 == Floquet engineering of the superlattice potential <sec:phase-floquet>
 
@@ -156,7 +157,7 @@ The details about the experimental sequence to realize the Floquet driving can b
 
 
 #floating-figure(
-  image("figures/phase_floquet_bessel.png"),
+  figure-bessel(),
   caption: [
     Effective tunneling amplitudes in Floquet-driven double wells.
     *a*, Time evolution of singly-occupied (orange) and doubly-occupied (blue) static double wells with $Delta slash t approx 0$.
@@ -171,7 +172,8 @@ The details about the experimental sequence to realize the Floquet driving can b
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the interaction energy is $U slash t approx -9$.
     This figure is adapted from @klemmer_floquet-driven_2024.
 
-    // TODO: Move the *abc* labels outside of the axes...
+    // Make the colors darker? Or just the blue "more blue"?
+    // TODO: Move the *abc* labels outside of the axes?
   ],
   label: <fig:phase-floquet-setup>,
 )
