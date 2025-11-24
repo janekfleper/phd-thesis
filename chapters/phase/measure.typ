@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/measure_theory/figure.typ": figure as figure-theory
 #import "figures/measure_technique/figure.typ": figure as figure-technique
 #import "figures/measure_signal/figure.typ": figure as figure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
@@ -34,17 +35,18 @@ For loading the atoms into the optical lattices, we use the regular sequence sho
 Just before the experimental segment, we employ an imaging pulse to remove the atoms in the state #mF(9).
 
 #floating-figure(
-  image("figures/phase_measure_symmetry_signal.png", width: 80%),
+  figure-theory(),
   caption: [
-    Principle of the measurement of the superlattice phase #phase.
-    The three configurations *a* to *c* show the energy offsets $Delta slash t = -1, 0 "and" 0.5$ respectively, together with the corresponding double-well potential and the time evolution of the initial state #ketL.
+    Measuring the superlattice phase #phase.
+    The occupation of the state #ketL is measured at time $tau0 dot t slash h = 0.25$ to find the symmetric configuration where $Delta slash t = 0$.
+    *a* - *c*, Time evolution of the initial state #ketL in configurations with the energy offsets $Delta slash t = -1, 0.5 "and" 0$, respectively, and the corresponding double-well potentials.
     In the two cases where $Delta slash t != 0$, the oscillation is faster and the amplitude is smaller compared to the time evolution at $Delta slash t = 0$.
-    At the fixed time $tau0 dot t slash h = 0.25$ indicated by the vertical dashed lines, the occupation of the state #ketL therefore varies significantly.
-    In *d*, the resulting occupation at time #tau0 is shown as a function of $Delta slash t$.
-    The local minima at $Delta slash t approx plus.minus 2.6$ occur when the second minimum of the oscillations occurs at the measurement time #tau0.
-    Since they are smaller than the minimum at $Delta slash t = 0$ by one order of magnitude, we can neglect them for the phase measurement.
+    At the fixed time #tau0, indicated by the dashed vertical lines, the occupation of the state #ketL varies significantly.
+    When the second minimum of the oscillations coincides with the measurement time #tau0, local minima show up at $Delta slash t approx plus.minus 2.6$ in the phase-sensitive signal.
+    Since their amplitude is smaller by one order of magnitude, we can always tell the secondary minima apart from the primary minimum at $Delta slash t = 0$.
 
-    // TODO: Move *a*, *b* and *c* to the right... And add inset indicators/zooms instead of the labels?
+    // TODO: Fix the colors...
+    // TODO: Move the abc labels somewhere else in the oscillations?
   ],
   label: <fig:phase-measure-theory>,
 )
