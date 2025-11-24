@@ -130,7 +130,7 @@ Compared to the individual occupations $n_L$ and $n_R$, the contrast is insensit
   figure-technique(),
   caption: [
     Technique for the in-situ detection of the double-well occupation.
-    *a*, Energy bands and Wannier functions up to $n = 7$ in a superlattice potential with the parameters $Vx1064 = #qty[60][Erec]$, $Vx532 = #qty[18][Erec]$ and $phase = pi slash 4$.
+    *a*, Energy bands and Wannier functions up to $n = 7$ in a superlattice potential with the parameters $Vx1064 = #qty[60][Erec]$, $Vx532 = #qty[18][Erec]$ and $phase = - pi slash 4$.
     The Wannier functions $w_n (x)$ are offset by the mean band energies $overline(band_n)$.
     Based on the Wannier functions, we associate the double-well states #ketL and #ketR with the bands $n = 1$ and $n = 3$ respectively.
     *b*, *c*, Transition frequencies from the bands $n = 3$ (*b*) and $n = 1$ (*c*) as a function of the radius $rho$ from the optical axis of the lattice beams.
