@@ -2,6 +2,7 @@
 #import "/mpl2typ/lib.typ": *
 #import "/style.typ": *
 #import "/header.typ": *
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
@@ -65,7 +66,6 @@
     transform: transform,
   )
 
-  std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
@@ -117,7 +117,6 @@
     transform: transform,
   )
 
-  std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
   draw.line(..line-1)
 }
@@ -168,7 +167,6 @@
     transform: transform,
   )
 
-  std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
   draw.line(..line-1)
 }
@@ -234,7 +232,6 @@
     transform: transform,
   )
 
-  std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
@@ -295,4 +292,50 @@
   )
 }
 
+#let fletcher-figure() = {
+  let axes = block.with(width: 3cm, height: 2.4cm)
+  let dx = 0.4
+  let y0 = 0.8
+
+  let arrow(x, width, label-bottom, label-top) = {
+    edge(
+      (x - width / 2, y0),
+      (x + width / 2, y0),
+      "-|>",
+      label: text(bottom-edge: "baseline", label-bottom),
+      label-sep: 0.2em,
+      label-side: right,
+    )
+    edge(
+      (x - width / 2, y0),
+      (x + width / 2, y0),
+      "-|>",
+      stroke: none,
+      label: text(bottom-edge: "baseline", label-top),
+      label-sep: 0.4em,
+      label-side: left,
+    )
+  }
+
+  diagram(
+    debug: 0,
+    spacing: 0.5cm,
+    edge-stroke: linewidth-narrow,
+    node-shape: rect,
+    mark-scale: 0.7,
+
+    node((0, 0), axes(axes-0()), name: <axes-0>),
+    node((1, 0), axes(axes-1()), name: <axes-1>),
+    node((2, 0), axes(axes-2()), name: <axes-2>),
+    node((3, 0), axes(axes-3()), name: <axes-3>),
+
+    arrow(0.5, 0.7, "Initialization", $- pi slash 4 -> phase$),
+    arrow(1.5, 0.7, "Time evolution", $ketL -> phy.ket(psi(tau0))$),
+    arrow(2.5, 0.7, "Projection", $phase -> -pi slash 4$),
+  )
+}
+
 #figure()
+#pagebreak()
+#fletcher-figure()
+

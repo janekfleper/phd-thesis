@@ -1,6 +1,6 @@
 #import "/header.typ": *
 #import "figures/measure_theory/figure.typ": figure as figure-theory
-#import "figures/measure_sequence/figure.typ": figure as figure-sequence
+#import "figures/measure_sequence/figure.typ": fletcher-figure as figure-sequence
 #import "figures/measure_technique/figure.typ": figure as figure-technique
 #import "figures/measure_signal/figure.typ": figure as figure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
@@ -92,10 +92,7 @@ This phase ramp is also diabatic to conserve the composition of the final state.
     Initially, only the left well is occupied by loading the superlattice at the antisymmetric phase $phase = -pi slash 4$.
     After the initialization at the offset $Delta(phase)$, the two sites are connected by the tunneling amplitude $t$.
     During the time evolution, the atom oscillates between the left and the right site with the parameters in @eq:theory-double-one-rabi-parameters.
-    To stop the oscillation after the time #tau0, we use a diabatic phase ramp back to $phase = -pi slash 4$ to project the state $phy.ket(psi(tau = tau0))$ onto the states #ketL and #ketR.
-
-    // TODO: Add arrows between the double wells to indicate the phase ramps + time evolution?
-    // TODO: Add *abc* here? Or make it I, II, III and IV?
+    To stop the oscillation after the time #tau0, we use a diabatic phase ramp back to the antisymmetric configuration $phase = -pi slash 4$ to project the state $phy.ket(psi(tau = tau0))$ onto the states #ketL and #ketR.
   ],
   label: <fig:phase-measure-sequence>,
 )
