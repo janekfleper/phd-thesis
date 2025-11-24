@@ -606,7 +606,7 @@
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
-    dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),
+    dash: "dotted",
   )
   let marker-line-15 = none
   let line-15 = (
@@ -621,7 +621,7 @@
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
-    dash: (array: (2.0pt, 3.3pt), phase: 0.0pt),
+    dash: (6pt, 3pt),
   )
   let marker-line-16 = none
   let line-16 = (
@@ -851,7 +851,7 @@
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
-    dash: (array: (7.4pt, 3.2pt), phase: 0.0pt),
+    dash: "dotted",
   )
   let marker-line-9 = none
   let line-9 = (
@@ -866,7 +866,7 @@
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
-    dash: (array: (2.0pt, 3.3pt), phase: 0.0pt),
+    dash: (6pt, 3pt),
   )
   let marker-line-10 = none
   let line-10 = (
