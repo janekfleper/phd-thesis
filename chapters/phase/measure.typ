@@ -3,6 +3,7 @@
 #import "figures/measure_signal/figure.typ": figure as figure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
 #import "figures/measure_vertical_gradient/figure.typ": figure as figure-vertical-gradient
+#import "figures/measure_period/figure.typ": figure as figure-period
 
 == Measuring the superlattice phase <sec:phase-measure>
 
@@ -261,7 +262,7 @@ While the measurement of the zero-phase frequency #f0 is sufficient to realize t
 With the distance $d approx #qty[50][cm]$ from the atom position to the retro mirror (see @fig:super-setup), we estimate the frequency period $Df approx #qty[150][MHz]$ according to @eq:phase-setup-delta-phi.
 
 #floating-figure(
-  image("figures/phase_measure_period.png"),
+  figure-period(),
   caption: [
     Measuring the superlattice period.
     *a*, Distribution of the frequency differences in consecutive sequences across #num[1120] measurements.
@@ -269,10 +270,6 @@ With the distance $d approx #qty[50][cm]$ from the atom position to the retro mi
     The loading phases are $phase = -pi slash 4$ (*b*) and $phase = pi slash 4$ (*c*) respectively, and each phase is increased by $pi slash 4$ for the initialization.
     The target frequencies for the phases $phase = 0$ and $phase = pi slash 2$, where we expect the offset $Delta = 0$, are $f = #qty[406.4][MHz]$ and $f = #qty[556.3][MHz]$, respectively.
     The superlattice parameters for the measurement are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
-
-    // TODO: Add insets to show the "resonance" data?
-    // TODO: Move the distribution to the right and introduce the superlattice configurations first!
-    // TODO: Add arrow between the axes *b* and *c* to highlight the initialization with $Delta phi = + pi slash 4$
   ],
   label: <fig:phase-measure-period>,
   placement: bottom,
