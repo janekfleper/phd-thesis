@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/measure_theory/figure.typ": figure as figure-theory
+#import "figures/measure_sequence/figure.typ": figure as figure-sequence
 #import "figures/measure_technique/figure.typ": figure as figure-technique
 #import "figures/measure_signal/figure.typ": figure as figure-signal
 #import "figures/measure_horizontal_gradient/figure.typ": figure as figure-horizontal-gradient
@@ -85,7 +86,7 @@ We achieve this with a phase ramp back to $phase = -pi slash 4$ to project the f
 This phase ramp is also diabatic to conserve the composition of the final state.
 
 #floating-figure(
-  image("figures/phase_preparation_and_projection.png", width: 100%),
+  figure-sequence(),
   caption: [
     State initialization and projection for the phase measurement.
     Initially, only the left well is occupied by loading the superlattice at the antisymmetric phase $phase = -pi slash 4$.
