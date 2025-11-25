@@ -1,6 +1,5 @@
-#import "@preview/cetz:0.4.1"
+#import "@preview/cetz:0.4.2"
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
-#import "@preview/physica:0.9.5" as phy
 #import "/header.typ": *
 
 #let lattice-configurations(

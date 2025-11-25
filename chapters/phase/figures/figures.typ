@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.4.1"
+#import "@preview/cetz:0.4.2"
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import fletcher.shapes: triangle
 #import "/header.typ": *

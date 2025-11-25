@@ -1,5 +1,4 @@
-#import "@preview/cetz:0.4.1"
-#import "@preview/physica:0.9.5" as phy
+#import "@preview/cetz:0.4.2"
 #import "/header.typ": *
 
 #let coupled-lattice(ax: 1, ay: 1, nx: 4, ny: 4, theta: -10deg, dx: 5%, dy: 5%) = {

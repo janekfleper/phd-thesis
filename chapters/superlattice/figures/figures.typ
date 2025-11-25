@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.4.1"
+#import "@preview/cetz:0.4.2"
 #import "/header.typ": *
 
 #set page(width: auto, height: auto, margin: 0.9em)
