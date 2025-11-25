@@ -64,7 +64,7 @@
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: (-30.0, -25.0, -15.0, -10.0, -5.0, 5.0, 10.0, 15.0, 25.0, 30.0),
+    locs: range(4).map(x => x * 20 - 30),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
