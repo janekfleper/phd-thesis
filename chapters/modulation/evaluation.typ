@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/fit_model/figure.typ": figure as figure-fit-model
+#import "figures/x1064_result/figure.typ": figure as figure-x1064-result
 #import "figures/other_lattices/figure.typ": figure as figure-other-lattices
 
 #pagebreak()
@@ -105,16 +106,13 @@ In #subref(<fig:mod-eval-x1064-result>, "a"), the fit result matches the positio
 The measured lattice depth in the center is slightly larger than #qty[60][Erec], resulting in a calibration factor $fita0 > 1$.
 
 #floating-figure(
-  image("figures/modulation_x1064-result.png"),
+  figure-x1064-result(),
   caption: [
     Resonances and fit parameters of the x1064-lattice calibration.
     *a*, Mean atomic densities in the interval $#qty[-5][μm] < x < #qty[5][μm]$ normalized by the reference density $n_0(x, y)$.
     The solid line shows the fit result for the lattice depth @eq:mod-eval-model-lattice-depth[].
     *b* - *e*, Fit parameters #fitw0, #fita0, #fity0 and #fitang for the individual images and the combined fit (solid line).
     The error bars show the individual fit errors.
-
-    // TODO: Somehow add a colorbar?
-    // TODO: Try to improve the spacing here to make the axes larger?
   ],
   label: <fig:mod-eval-x1064-result>,
 )
