@@ -339,7 +339,7 @@
       stroke: none,
       fill: none,
       grid(
-        columns: (2.0fr, 0.9fr, 0.1fr),
+        columns: (2.0fr, 0.9fr, gutter),
         rows: (1fr,),
         column-gutter: 4mm,
         row-gutter: (),

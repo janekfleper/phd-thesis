@@ -425,7 +425,7 @@
       stroke: none,
       fill: none,
       grid(
-        columns: (1.0fr, 1.0fr, 1.0fr, 1.0fr, 1.0fr, 0.1fr),
+        columns: (1.0fr, 1.0fr, 1.0fr, 1.0fr, 1.0fr, gutter),
         rows: (1fr, 1fr),
         column-gutter: gutter-narrow,
         row-gutter: gutter-narrow,

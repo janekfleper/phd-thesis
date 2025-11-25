@@ -357,7 +357,7 @@
       fill: none,
       grid(
         columns: (1fr, 1fr),
-        rows: (0.05fr, 1.0fr),
+        rows: (gutter, 1.0fr),
         column-gutter: gutter,
         row-gutter: gutter,
         axes.cell(

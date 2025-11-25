@@ -338,7 +338,7 @@
       stroke: none,
       fill: none,
       grid(
-        columns: (0.1fr, 2.0fr),
+        columns: (gutter, 2.0fr),
         rows: (1fr,),
         column-gutter: (20.0%,),
         row-gutter: (),
