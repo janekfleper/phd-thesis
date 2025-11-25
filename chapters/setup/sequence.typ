@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": experimental-sequence
+#import "figures/imaging_tof/figure.typ": figure as figure-imaging-tof
 
 == Experimental sequence <sec:setup-sequence>
 
@@ -192,7 +193,7 @@ This is an essential measurement in the superlattice potential to infer the popu
 
 
 #floating-figure(
-  image("figures/setup_imaging_tof.png"),
+  figure-imaging-tof(),
   caption: [
     Band mapping and time-of-flight imaging.
     The optical lattices are turned off in #qty[1][ms] to map the band index $n$ to the corresponding Brillouin zone.
