@@ -142,3 +142,41 @@
     },
   )
 }
+
+#let glasscell(
+  pos,
+  angle,
+  width,
+  height,
+  thickness,
+  fill: auto,
+  stroke: auto,
+  name: none,
+) = {
+  let _fill = if fill == auto { default-fill } else { fill }
+  let _stroke = if stroke == auto { default-stroke } else { stroke }
+
+  import cetz.draw: *
+  group(
+    name: name,
+    anchor: "center",
+    {
+      set-origin(pos)
+      rotate(z: angle)
+
+      set-style(fill: _fill, stroke: _stroke)
+      rect(
+        (height / 2, height / 2),
+        (rel: (-width, -thickness)),
+      )
+      rect(
+        (height / 2, -height / 2),
+        (rel: (-width, thickness)),
+      )
+      rect(
+        (height / 2, -height / 2 + thickness),
+        (rel: (-thickness, height - 2 * thickness)),
+      )
+    },
+  )
+}
