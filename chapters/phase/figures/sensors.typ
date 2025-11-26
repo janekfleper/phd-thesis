@@ -113,7 +113,7 @@
     )
 
     // the mirrors...
-    mirror("pos-dichroic", 45deg, 0.2, 2, name: "dichroic")
+    mirror("pos-dichroic", 45deg, 0.3, 2, backside: false, name: "dichroic")
     mirror("pos-retro", -90deg, 0.2, 1, name: "retro")
 
     // the retro double lens with the mount
