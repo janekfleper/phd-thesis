@@ -189,6 +189,7 @@
     content((rel: (0.3, 0.5), to: "mu-metal-lower.south"), "outside", anchor: "west")
     content((rel: (-0.3, 0.5), to: "mu-metal-lower.south"), "inside", anchor: "east")
 
+    // the legend for the sensor models
     let rect-sensor = std.rect.with(width: 0.3cm, height: 0.3cm, radius: 2pt, stroke: linewidth-very-narrow)
     let circle-sensor = std.circle.with(radius: 0.15cm, stroke: linewidth-very-narrow)
     let surface-sensor = std.rect.with(
@@ -207,6 +208,17 @@
       rect-sensor(fill: other-sensor-color), [Humidity & #CO2 sensor],
     )
     content((-13, -2.2), legend, anchor: "north-west")
+
+    // the coordinate system...
+    scope({
+      set-origin((-13.7, 1.7))
+      set-style(mark: (end: ">", fill: black), stroke: (thickness: linewidth-very-narrow, cap: "round"))
+      line((-0.1, 0), (1, 0), name: "x")
+      line((0, 0.1), (0, -1), name: "y")
+
+      content(("x.start", 115%, "x.end"), $x$)
+      content(("y.start", 115%, "y.end"), $y$)
+    })
   })
 }
 
