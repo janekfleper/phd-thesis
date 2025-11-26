@@ -89,6 +89,8 @@
       set-origin(pos)
       rotate(z: angle)
       set-origin((0, height / 2))
+      line((0, 0), (0, -height), stroke: blue, name: "surface")
+
       rect(
         (0, 0),
         (width, -height),
