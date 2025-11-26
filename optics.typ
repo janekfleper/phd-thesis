@@ -72,6 +72,7 @@
   width,
   height,
   backside: true,
+  transparent: false,
   fill: auto,
   name: none,
 ) = {
@@ -91,18 +92,9 @@
       set-origin((0, height / 2))
       line((0, 0), (0, -height), stroke: blue, name: "surface")
 
-      rect(
-        (0, 0),
-        (width, -height),
-        fill: _fill,
-      )
-      if backside {
-        rect(
-          (width - 0.05, 0),
-          (width, -height),
-          fill: black,
-        )
-      }
+      if not transparent { rect((0, 0), (width, -height), fill: white) }
+      rect((0, 0), (width, -height), fill: _fill)
+      if backside { rect((width - 0.05, 0), (width, -height), fill: black) }
     },
   )
 }
