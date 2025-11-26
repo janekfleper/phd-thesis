@@ -147,7 +147,7 @@
       set-origin(pos)
       rotate(z: angle)
 
-      set-style(fill: _fill)
+      set-style(fill: _fill.transparentize(70%))
       rect(
         (height / 2, height / 2),
         (rel: (-width, -thickness)),

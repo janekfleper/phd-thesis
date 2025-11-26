@@ -128,7 +128,7 @@
     sensor-fast((-5.4, 0.6), 0.3, color: temperature-sensor-color, name: "Tfast")
 
     // the glasscell
-    glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(70%), name: "glasscell")
+    glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(0%), name: "glasscell")
 
     // the pinch coils
     let x0 = -10
