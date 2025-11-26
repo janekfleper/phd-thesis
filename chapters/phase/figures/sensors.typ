@@ -42,6 +42,15 @@
     rect((x0 - 0.7, radius), (x0 + 0.5, radius + mount-thickness), fill: metal-color, name: "mount-upper")
     rect((x0 - 0.7, -radius), (x0 + 0.5, -radius - mount-thickness), fill: metal-color, name: "mount-lower")
 
+    let sensor-width = 0.4
+    let sensor-thickness = 0.1
+    rect(
+      (x0 - sensor-width, radius + mount-thickness),
+      (x0, radius + mount-thickness + sensor-thickness),
+      fill: red,
+      name: "sensor-lens",
+    )
+
     // the glasscell
     glasscell((-10, -0.5), -90deg, 3, 1.5, 0.2, fill: luma(70%), name: "glasscell")
 
@@ -61,6 +70,7 @@
     content((rel: (0, -0.3), to: "retro.south"), "Retro mirror")
     content((rel: (0, -0.3), to: "glasscell.south"), "Glass cell")
     content((rel: (-0.9, -0.3), to: "ioffe-lower-2.south-east"), "Ioffe bars")
+    content((rel: (0, 0.3), to: "sensor-lens.north"), $T_"Lens"$)
   })
 }
 
