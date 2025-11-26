@@ -77,6 +77,8 @@
   let metal-color = color.rgb("#b6b6b6")
   let copper-color = color.rgb("b87333")
   let temperature-sensor-color = red
+  let pressure-sensor-color = blue.lighten(40%)
+  let other-sensor-color = green.lighten(40%)
 
   cetz.canvas({
     import cetz.draw: *
@@ -140,8 +142,8 @@
 
     // the other environmental sensors
     let sensor-shape = rect.with(radius: 2pt)
-    sensor-other((-2.2, -1.8), 0.6, shape: sensor-shape, color: blue.lighten(40%), label: $P$)
-    sensor-other((-2.2, -2.8), 0.9, shape: sensor-shape, color: green.lighten(40%), label: [#RH\ #CO2])
+    sensor-other((-2.2, -1.8), 0.6, shape: sensor-shape, color: pressure-sensor-color, label: $P$)
+    sensor-other((-2.2, -2.8), 0.9, shape: sensor-shape, color: other-sensor-color, label: [#RH\ #CO2])
 
     // the glasscell
     glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(0%), name: "glasscell")
@@ -186,6 +188,25 @@
     content((rel: (0, -0.3), to: "mu-metal-lower.south"), mu-metal)
     content((rel: (0.3, 0.5), to: "mu-metal-lower.south"), "outside", anchor: "west")
     content((rel: (-0.3, 0.5), to: "mu-metal-lower.south"), "inside", anchor: "east")
+
+    let rect-sensor = std.rect.with(width: 0.3cm, height: 0.3cm, radius: 2pt, stroke: linewidth-very-narrow)
+    let circle-sensor = std.circle.with(radius: 0.15cm, stroke: linewidth-very-narrow)
+    let surface-sensor = std.rect.with(
+      width: sensor-width * 1cm,
+      height: sensor-thickness * 1cm,
+      stroke: linewidth-very-narrow,
+    )
+    let legend = std.table(
+      columns: 2,
+      stroke: none,
+      align: (center + horizon, left + horizon),
+      rect-sensor(fill: temperature-sensor-color), "Regular NTC thermistor",
+      circle-sensor(fill: temperature-sensor-color), "Fast NTC thermistor",
+      surface-sensor(fill: temperature-sensor-color), "Surface RTD",
+      rect-sensor(fill: pressure-sensor-color), "Pressure sensor",
+      rect-sensor(fill: other-sensor-color), [Humidity & #CO2 sensor],
+    )
+    content((-13, -2.2), legend, anchor: "north-west")
   })
 }
 
