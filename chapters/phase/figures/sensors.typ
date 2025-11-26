@@ -75,6 +75,29 @@
     anchor("pos-dichroic", (0, 0))
     anchor("pos-doublet", (-3.5, 0))
     anchor("pos-glasscell", (-10, -0.5))
+    anchor("pos-0", (rel: (0.2, 0), to: "pos-retro"))
+    anchor("pos-1", (rel: (-0.3, 0.3), to: "pos-dichroic"))
+    anchor("pos-2", (rel: (0, 0.3), to: "pos-doublet"))
+    anchor("pos-3", (rel: (0, 0.5), to: "pos-glasscell"))
+
+    // the lattice beams...
+    let beam-focus = 0.04
+    let beam-radius = 0.1
+    let angle-focus = 180deg + calc.asin(0.3 / 6.5)
+    bichromatic-beam("pos-0", "pos-1", beam-radius, 90deg, color-x1064, color-x532)
+    bichromatic-beam("pos-1", "pos-2", beam-radius, 180deg, color-x1064, color-x532)
+    bichromatic-beam-focus(
+      "pos-2",
+      "pos-3",
+      150%,
+      beam-radius,
+      beam-focus,
+      angle-focus,
+      color-x1064,
+      color-x532,
+      (start: 45%, stop: 55%),
+      (start: 46%, stop: 56.6%),
+    )
 
     // the mirrors...
     mirror("pos-dichroic", 45deg, 0.2, 2, name: "dichroic")
