@@ -58,6 +58,17 @@
   })
 }
 
+#let sensor-other(pos, size, shape: cetz.draw.rect, color: none, label: none, name: none) = {
+  assert.ne(color, none, message: "The fill color must not be none...")
+
+  import cetz.draw: *
+  scope({
+    set-origin(pos)
+    shape((-size / 2, -size / 2), (size / 2, size / 2), fill: color, name: name)
+    if label != none { content((0, 0), align(center, label)) }
+  })
+}
+
 
 #let figure() = {
   show: figure-style
@@ -123,9 +134,14 @@
 
     // the standalone temperature sensors
     sensor-slow((-5.6, -0.4), 0.3, color: temperature-sensor-color, name: "TA")
-    sensor-slow((-1.5, -1), 0.3, color: temperature-sensor-color, name: "TB")
+    sensor-slow((-2.2, -0.4), 0.3, color: temperature-sensor-color, name: "TB")
     sensor-slow((-1, -3.5), 0.3, color: temperature-sensor-color, name: "TC")
     sensor-fast((-5.4, 0.6), 0.3, color: temperature-sensor-color, name: "Tfast")
+
+    // the other environmental sensors
+    let sensor-shape = rect.with(radius: 2pt)
+    sensor-other((-2.2, -1.8), 0.6, shape: sensor-shape, color: blue.lighten(40%), label: $P$)
+    sensor-other((-2.2, -2.8), 0.9, shape: sensor-shape, color: green.lighten(40%), label: [#RH\ #CO2])
 
     // the glasscell
     glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(0%), name: "glasscell")
