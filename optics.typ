@@ -191,27 +191,29 @@
   )
 }
 
-#let bichromatic-beam-focus(pos0, pos1, length, radius, focus, angle, C0, C1, g0, g1) = {
   let dx0 = calc.round(calc.sin(angle), digits: 1) * radius
   let dy0 = calc.round(calc.cos(angle), digits: 1) * radius
   let dx1 = calc.round(calc.sin(angle), digits: 1) * focus
   let dy1 = calc.round(calc.cos(angle), digits: 1) * focus
+#let bichromatic-beam-focus(pos0, pos1, length, radius, focus, angle, gangle, C0, C1, g0, g1) = {
   let dx2 = calc.abs(length - 100%) / 100% * (dx0 - dx1) + dx1
   let dy2 = calc.abs(length - 100%) / 100% * (dy0 - dy1) + dy1
+  let gangle0 = -gangle + 90deg
+  let gangle1 = -gangle - 90deg
 
   let fill0 = std.gradient.linear(
     (C0, 0%),
     (C0, g0.at("start")),
     (C0.transparentize(100%), g0.at("stop")),
     (C0.transparentize(100%), 100%),
-    angle: -angle + 90deg,
+    angle: gangle0,
   )
   let fill1 = std.gradient.linear(
     (C1, 0%),
     (C1, g1.at("start")),
     (C1.transparentize(100%), g1.at("stop")),
     (C1.transparentize(100%), 100%),
-    angle: -angle - 90deg,
+    angle: gangle1,
   )
 
   import cetz.draw: *

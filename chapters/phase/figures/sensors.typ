@@ -105,6 +105,7 @@
       beam-radius,
       beam-focus,
       angle-focus,
+      angle-focus,
       color-x1064,
       color-x532,
       (start: 45%, stop: 55%),
