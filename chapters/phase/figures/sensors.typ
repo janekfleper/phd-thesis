@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "/optics.typ": *
+#import "/style.typ": *
 
 #let ioffe-bar(pos, width, length, fill: none, name: none) = {
   assert.ne(fill, none, message: "The fill color must not be none...")
@@ -41,6 +42,7 @@
 
 
 #let figure() = {
+  show: figure-style
   // TODO: Use motorized mirror mount for the retro mirror?
 
   let metal-color = color.rgb("#b6b6b6")
@@ -49,7 +51,7 @@
 
   cetz.canvas({
     import cetz.draw: *
-    set-style(mark: (scale: 0.7))
+    set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
 
     // the mirrors...
     mirror((0, 0), 45deg, 0.2, 2, name: "dichroic")

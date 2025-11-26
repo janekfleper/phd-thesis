@@ -3,7 +3,6 @@
 
 #let alphas = (40%, 90%, 40%)
 #let default-fill = luma(0)
-#let default-stroke = black + 0.9pt
 
 #let lens(
   pos,
@@ -13,7 +12,6 @@
   R1,
   R2,
   fill: auto,
-  stroke: auto,
   name: none,
 ) = {
   if fill == auto { fill = default-fill }
@@ -21,7 +19,6 @@
     ..alphas.map(a => fill.transparentize(a)),
     angle: 90deg - angle,
   )
-  let _stroke = if stroke == auto { default-stroke } else { stroke }
 
   import cetz.draw: *
   group(
@@ -35,7 +32,6 @@
       merge-path(
         close: true,
         fill: _fill,
-        stroke: _stroke,
         {
           if R1 == none {
             line((0, 0), (0, -height), name: "S1")
@@ -77,7 +73,6 @@
   height,
   backside: true,
   fill: auto,
-  stroke: auto,
   name: none,
 ) = {
   if fill == auto { fill = default-fill }
@@ -85,7 +80,6 @@
     ..alphas.map(a => fill.transparentize(a)),
     angle: 90deg - angle,
   )
-  let _stroke = if stroke == auto { default-stroke } else { stroke }
 
   import cetz.draw: *
   group(
@@ -99,14 +93,12 @@
         (0, 0),
         (width, -height),
         fill: _fill,
-        stroke: _stroke,
       )
       if backside {
         rect(
           (width - 0.05, 0),
           (width, -height),
           fill: black,
-          stroke: _stroke,
         )
       }
     },
@@ -118,7 +110,6 @@
   angle,
   height,
   fill: auto,
-  stroke: auto,
   name: none,
 ) = {
   let t1 = 0.3
@@ -150,11 +141,9 @@
   height,
   thickness,
   fill: auto,
-  stroke: auto,
   name: none,
 ) = {
   let _fill = if fill == auto { default-fill } else { fill }
-  let _stroke = if stroke == auto { default-stroke } else { stroke }
 
   import cetz.draw: *
   group(
@@ -164,7 +153,7 @@
       set-origin(pos)
       rotate(z: angle)
 
-      set-style(fill: _fill, stroke: _stroke)
+      set-style(fill: _fill)
       rect(
         (height / 2, height / 2),
         (rel: (-width, -thickness)),
