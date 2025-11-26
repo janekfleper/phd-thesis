@@ -2,9 +2,9 @@
 #import "/optics.typ": *
 #import "/style.typ": *
 
-#let ioffe-bar(pos, width, length, fill: none, name: none) = {
-  assert.ne(fill, none, message: "The fill color must not be none...")
-  let colors = (fill,) * 20 + (fill.darken(50%),) * 1
+#let ioffe-bar(pos, width, length, color: none, name: none) = {
+  assert.ne(color, none, message: "The fill color must not be none...")
+  let colors = (color,) * 20 + (color.darken(50%),) * 1
 
   import cetz.draw: *
   group(
@@ -15,6 +15,24 @@
         (0, width / 2),
         (-length, -width / 2),
         fill: std.gradient.linear(..colors),
+      )
+    },
+  )
+}
+
+#let pinch-coil(pos, width, length, color: none, name: none) = {
+  assert.ne(color, none, message: "The fill color must not be none...")
+  let colors = (color.darken(50%), color, color.darken(50%))
+
+  import cetz.draw: *
+  group(
+    name: name,
+    {
+      set-origin(pos)
+      rect(
+        (width / 2, length / 2),
+        (-width / 2, -length / 2),
+        fill: std.gradient.linear(..colors, angle: 90deg),
       )
     },
   )
@@ -84,14 +102,23 @@
     // the glasscell
     glasscell((-10, -0.5), -90deg, 3, 1.5, 0.2, fill: luma(70%), name: "glasscell")
 
+    // the pinch coils
+    let x0 = -10
+    let width = 0.15
+    let length = 1.3
+    let offset = 1
+    for i in range(7) {
+      pinch-coil((x0 + offset + i * width, 0), width, length, color: copper-color, name: "pinch-" + str(i))
+    }
+
     // the Ioffe bars
     let x0 = -6
     let width = 0.15
-    let length = 8
+    let length = 7
     for i in range(3) {
       let y0 = (i + 3) * width
-      ioffe-bar((x0, y0), width, length, fill: copper-color, name: "ioffe-upper-" + str(i))
-      ioffe-bar((x0, -y0), width, length, fill: copper-color, name: "ioffe-lower-" + str(i))
+      ioffe-bar((x0, y0), width, length, color: copper-color, name: "ioffe-upper-" + str(i))
+      ioffe-bar((x0, -y0), width, length, color: copper-color, name: "ioffe-lower-" + str(i))
     }
 
     // the mu-metal
@@ -105,7 +132,8 @@
     content((rel: (0, -0.3 - mount-thickness), to: "doublet.L2.south"), "L2")
     content((rel: (0, -0.3), to: "retro.south"), "Retro mirror")
     content((rel: (0, -0.3), to: "glasscell.south"), "Glass cell")
-    content((rel: (-0.9, -0.3), to: "ioffe-lower-2.south-east"), "Ioffe bars")
+    content((rel: (-0.9, 0.3), to: "ioffe-upper-2.north-east"), "Ioffe bars")
+    content((rel: (0, -0.4), to: "pinch-4.south"), "Pinch coil")
     content((rel: (0, 0.3), to: "sensor-lens.north"), $T_"Lens"$)
     content((rel: (0, -0.3), to: "TA.south"), $T_"A"$)
     content((rel: (0, -0.3), to: "TB.south"), $T_"B"$)
