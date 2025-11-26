@@ -198,3 +198,51 @@
     },
   )
 }
+
+#let bichromatic-beam-focus(pos0, pos1, length, radius, focus, angle, C0, C1, g0, g1) = {
+  let dx0 = calc.round(calc.sin(angle), digits: 1) * radius
+  let dy0 = calc.round(calc.cos(angle), digits: 1) * radius
+  let dx1 = calc.round(calc.sin(angle), digits: 1) * focus
+  let dy1 = calc.round(calc.cos(angle), digits: 1) * focus
+  let dx2 = calc.abs(length - 100%) / 100% * (dx0 - dx1) + dx1
+  let dy2 = calc.abs(length - 100%) / 100% * (dy0 - dy1) + dy1
+
+  let fill0 = std.gradient.linear(
+    (C0, 0%),
+    (C0, g0.at("start")),
+    (C0.transparentize(100%), g0.at("stop")),
+    (C0.transparentize(100%), 100%),
+    angle: -angle + 90deg,
+  )
+  let fill1 = std.gradient.linear(
+    (C1, 0%),
+    (C1, g1.at("start")),
+    (C1.transparentize(100%), g1.at("stop")),
+    (C1.transparentize(100%), 100%),
+    angle: -angle - 90deg,
+  )
+
+  import cetz.draw: *
+  merge-path(
+    close: true,
+    fill: fill0,
+    stroke: none,
+    {
+      line(pos0, (pos0, length, pos1))
+      line((), (rel: (-dx2, -dy2)))
+      line((), (rel: (-dx1, -dy1), to: pos1))
+      line((), (rel: (-dx0, -dy0), to: pos0))
+    },
+  )
+  merge-path(
+    close: true,
+    fill: fill1,
+    stroke: none,
+    {
+      line(pos0, (pos0, length, pos1))
+      line((), (rel: (dx2, dy2)))
+      line((), (rel: (dx1, dy1), to: pos1))
+      line((), (rel: (dx0, dy0), to: pos0))
+    },
+  )
+}
