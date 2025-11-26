@@ -66,7 +66,7 @@
     rect((x0 - 0.7, radius), (x0 + 0.5, radius + mount-thickness), fill: metal-color, name: "mount-upper")
     rect((x0 - 0.7, -radius), (x0 + 0.5, -radius - mount-thickness), fill: metal-color, name: "mount-lower")
 
-    let sensor-width = 0.4
+    let sensor-width = 0.5
     let sensor-thickness = 0.1
     rect(
       (x0 - sensor-width, radius + mount-thickness),
@@ -94,6 +94,12 @@
       ioffe-bar((x0, -y0), width, length, fill: copper-color, name: "ioffe-lower-" + str(i))
     }
 
+    // the mu-metal
+    let x0 = -4.8
+    let thickness = 0.15
+    rect((x0 - thickness, 0.5), (x0, 2), fill: metal-color, name: "mu-metal-upper")
+    rect((x0 - thickness, -0.5), (x0, -3), fill: metal-color, name: "mu-metal-lower")
+
     // all the labels...
     content((rel: (0, -0.3 - mount-thickness), to: "doublet.L1.south"), "L1")
     content((rel: (0, -0.3 - mount-thickness), to: "doublet.L2.south"), "L2")
@@ -105,6 +111,9 @@
     content((rel: (0, -0.3), to: "TB.south"), $T_"B"$)
     content((rel: (0, -0.3), to: "TC.south"), $T_"C"$)
     content((rel: (0, 0.3), to: "Tfast.north"), $T_"fast"$)
+    content((rel: (0, -0.3), to: "mu-metal-lower.south"), mu-metal)
+    content((rel: (0.3, 0.5), to: "mu-metal-lower.south"), "outside", anchor: "west")
+    content((rel: (-0.3, 0.5), to: "mu-metal-lower.south"), "inside", anchor: "east")
   })
 }
 
