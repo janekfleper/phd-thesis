@@ -71,14 +71,19 @@
     import cetz.draw: *
     set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
 
+    anchor("pos-retro", (-0.5, -5))
+    anchor("pos-dichroic", (0, 0))
+    anchor("pos-doublet", (-3.5, 0))
+    anchor("pos-glasscell", (-10, -0.5))
+
     // the mirrors...
-    mirror((0, 0), 45deg, 0.2, 2, name: "dichroic")
-    mirror((0, -5), -90deg, 0.2, 1, name: "retro")
+    mirror("pos-dichroic", 45deg, 0.2, 2, name: "dichroic")
+    mirror("pos-retro", -90deg, 0.2, 1, name: "retro")
 
     // the retro double lens with the mount
     let x0 = -3.5
     let radius = 0.75
-    doublet((x0, 0), 00deg, radius * 2, name: "doublet")
+    doublet("pos-doublet", 0deg, radius * 2, name: "doublet")
 
     let mount-thickness = 0.1
     rect((x0 - 0.7, radius), (x0 + 0.5, radius + mount-thickness), fill: metal-color, name: "mount-upper")
@@ -100,7 +105,7 @@
     sensor-fast((-5.4, 0.6), 0.3, color: temperature-sensor-color, name: "Tfast")
 
     // the glasscell
-    glasscell((-10, -0.5), -90deg, 3, 1.5, 0.2, fill: luma(70%), name: "glasscell")
+    glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(70%), name: "glasscell")
 
     // the pinch coils
     let x0 = -10
