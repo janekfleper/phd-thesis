@@ -169,3 +169,30 @@
     },
   )
 }
+
+#let bichromatic-beam(pos0, pos1, radius, angle, C0, C1) = {
+  let dx = calc.cos(angle) * radius
+  let dy = calc.sin(angle) * radius
+
+  import cetz.draw: *
+  merge-path(
+    close: true,
+    fill: std.gradient.linear(C0, C0.transparentize(100%), angle: angle + 180deg),
+    stroke: none,
+    {
+      line(pos0, pos1)
+      line((), (rel: (-dx, dy)))
+      line((), (rel: (-dx, dy), to: pos0))
+    },
+  )
+  merge-path(
+    close: true,
+    fill: std.gradient.linear(C1, C1.transparentize(100%), angle: angle),
+    stroke: none,
+    {
+      line(pos0, pos1)
+      line((), (rel: (dx, -dy)))
+      line((), (rel: (dx, -dy), to: pos0))
+    },
+  )
+}
