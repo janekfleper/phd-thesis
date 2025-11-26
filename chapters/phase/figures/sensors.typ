@@ -84,12 +84,12 @@
     import cetz.draw: *
     set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
 
-    anchor("pos-retro", (-0.5, -5))
-    anchor("pos-dichroic", (0, 0))
+    anchor("pos-retro", (-0.3, -5))
+    anchor("pos-dichroic", (-0.3, 0.3))
     anchor("pos-doublet", (-3.5, 0))
     anchor("pos-glasscell", (-10, -0.5))
-    anchor("pos-0", (rel: (0.2, 0), to: "pos-retro"))
-    anchor("pos-1", (rel: (-0.3, 0.3), to: "pos-dichroic"))
+    anchor("pos-0", (rel: (0, 0), to: "pos-retro"))
+    anchor("pos-1", (rel: (0, 0), to: "pos-dichroic"))
     anchor("pos-2", (rel: (0, 0.3), to: "pos-doublet"))
     anchor("pos-3", (rel: (0, 0.5), to: "pos-glasscell"))
 
