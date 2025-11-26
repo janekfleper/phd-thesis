@@ -1,5 +1,6 @@
 #import "/header.typ": *
 #import "figures/figures.typ": table-other-properties, table-thermal-properties
+#import "figures/sensors.typ": figure as figure-sensors
 #import "figures/stability_result/figure.typ": figure as figure-result
 #import "figures/stability_limitation/figure.typ": figure as figure-limitation
 
@@ -96,6 +97,7 @@ The resulting limitation for the stability of the superlattice phase is discusse
 
     // TODO: Mention the materials in an additional row?
     // TODO: Find the material name for the glass cell? Heraeus Suprasil? And reference the data sheet instead?
+    // TODO: Match the lenses with the sensors figure...
   ],
   label: <tab:phase-stability-temperature-coefficients>,
 )
@@ -140,20 +142,20 @@ For measuring the pressure, the relative humidity and the #CO2 concentration, we
 As we expect these parameters to be homogeneous, measuring them at specific positions is not necessary.
 
 #floating-figure(
-  image("figures/phase-sensors-setup.png"),
+  figure-sensors(),
   caption: [
     Layout of the environmental sensors in the retro path.
     Two air-temperature sensors are distributed between the retro lens and the retro mirror.
-    A surface-temperature sensor is attached to the lens mount to measure the temperature of the retro lens components.
+    A surface-temperature sensor is attached to the lens mount to measure the temperature of the retro-lens components.
     Close to the retro path, two environmental sensors are used to measure the pressure, the relative humidity and the #CO2 concentration.
     Two air-temperature sensors are located inside the #mu-metal shielding close to the Ioffe bars.
+    The pinch coil is omitted and the Ioffe bars are shortened to the left of the glass cell.
+    The figure is not to scale.
 
-    // TODO: Add coordinate system (in lower left corner?)
-    // TODO: Add a scale? Or at least a comment regarding the scale?
-    // TODO: Add the legend in the lower center. Mention all the sensor models/types!
-    // TODO: Mentioned all the detailed information about the sensor types here!
-    // TODO: Skip the other FT07 sensor outside of the #mu-metal...
-    // TOOD: Exchange the lenses L1 and L2 in the achromatic doublet...
+    // TODO: Use motorized mirror mount for the retro mirror?
+    // TODO: Really keep the coordinate system?
+    // TODO: Mention all the detailed information about the sensor types here?
+    // TODO: Remove the "other" sensors from the legend?
   ],
   label: <fig:phase-stability-sensors-setup>,
   placement: bottom,

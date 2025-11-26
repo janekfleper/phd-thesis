@@ -72,7 +72,6 @@
 
 #let figure() = {
   show: figure-style
-  // TODO: Use motorized mirror mount for the retro mirror?
 
   let metal-color = color.rgb("#b6b6b6")
   let copper-color = color.rgb("b87333")
