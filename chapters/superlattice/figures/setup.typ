@@ -23,6 +23,7 @@
   let PBS2 = (0.5, -6)
   let PBS3 = (-1.9, -6)
   let iso = (-0.7, -6)
+  let pickoff = (4, -4.5)
   let M1 = (0, -3)
   let M2 = (4, -3)
   let M3 = (4, -6)
@@ -46,6 +47,7 @@
       isolator(iso, 0deg, 1.5, 0.7, name: "iso")
       mirror(M1, -135deg, t1, h1, name: "M1")
       mirror(M2, 45deg, t1, h1, name: "M2")
+      mirror(pickoff, 135deg, t1, h1, transparent: true, backside: false, name: "pickoff")
       mirror(M3, -45deg, t1, h1, name: "M3")
       mirror(M4, 135deg, t1, h1, name: "M4")
       mirror(M5, -135deg, t1, h1, name: "M5")
@@ -58,6 +60,13 @@
         beam(overlap, "M1.surface", beam-radius, -90deg, color-x1064)
         beam("M1.surface", "M2.surface", beam-radius, 0deg, color-x1064)
         beam("M2.surface", "M3.surface", beam-radius, -90deg, color-x1064)
+        beam(
+          "pickoff.surface",
+          (rel: (1, 0), to: "pickoff.surface"),
+          beam-radius,
+          0deg,
+          color-x1064.transparentize(50%),
+        )
         beam("M3.surface", "M4.surface", beam-radius, 0deg, color-x1064)
         beam("M4.surface", "M5.surface", beam-radius, -90deg, color-x1064)
         beam("M5.surface", "L2", beam-radius, 0deg, color-x1064)
@@ -68,6 +77,9 @@
         beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, 0deg, color-x1064)
       })
 
+      // some arrows...
+      line((rel: (0.4, -0.4), to: "pickoff"), (rel: (0.6, 0)), mark: (end: ">", fill: black))
+
       // the labels...
       content(
         (rel: (label-pad, 0), to: "relay-lens.east"),
@@ -76,6 +88,7 @@
       )
       content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
       content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm])
+      content((rel: (1 + label-pad, -0.2), to: "pickoff.surface"), [Power\ regulation], anchor: "west")
     },
   )
 }
