@@ -100,6 +100,38 @@
   )
 }
 
+#let plate(
+  pos,
+  angle,
+  width,
+  height,
+  transparent: true,
+  fill: auto,
+  name: none,
+) = {
+  if fill == auto { fill = default-fill }
+  let _fill = std.gradient.linear(
+    ..alphas.map(a => fill.transparentize(a)),
+    angle: 90deg - angle,
+  )
+
+  import cetz.draw: *
+  group(
+    name: name,
+    anchor: "center",
+    {
+      set-origin(pos)
+      rotate(z: angle)
+      set-origin((-width / 2, height / 2))
+      line((0, 0), (0, -height), stroke: none, name: "S1")
+      line((0, 0), (width, -height), stroke: none, name: "S2")
+
+      if not transparent { on-layer(-0.9, { rect((0, 0), (width, -height), fill: white) }) }
+      rect((0, 0), (width, -height), fill: _fill)
+    },
+  )
+}
+
 #let cube(
   pos,
   angle,
