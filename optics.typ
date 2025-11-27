@@ -147,6 +147,7 @@
     {
       set-origin(pos)
       rotate(z: angle)
+      anchor("atoms", (-height / 3, 0))
 
       set-style(fill: _fill.transparentize(70%))
       rect(
