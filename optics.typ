@@ -192,11 +192,11 @@
   )
 }
 
-  let dx0 = calc.round(calc.sin(angle), digits: 1) * radius
-  let dy0 = calc.round(calc.cos(angle), digits: 1) * radius
-  let dx1 = calc.round(calc.sin(angle), digits: 1) * focus
-  let dy1 = calc.round(calc.cos(angle), digits: 1) * focus
 #let bichromatic-beam-focus(pos0, pos1, length, radius, focus, angle, gangle, C0, C1, g0, g1) = {
+  let dx0 = -calc.round(calc.sin(angle), digits: 0) * radius
+  let dy0 = calc.round(calc.cos(angle), digits: 0) * radius
+  let dx1 = -calc.round(calc.sin(angle), digits: 0) * focus
+  let dy1 = calc.round(calc.cos(angle), digits: 0) * focus
   let dx2 = calc.abs(length - 100%) / 100% * (dx0 - dx1) + dx1
   let dy2 = calc.abs(length - 100%) / 100% * (dy0 - dy1) + dy1
   let gangle0 = -gangle + 90deg
