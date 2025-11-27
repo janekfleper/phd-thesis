@@ -193,6 +193,19 @@
   )
 }
 
+#let beam-corner(pos, width, height, angle, C0) = {
+  import cetz.draw: *
+  merge-path(
+    close: true,
+    fill: std.gradient.linear(C0, C0.transparentize(100%), angle: angle + 90deg),
+    stroke: none,
+    {
+      line(pos, (rel: (width, 0)))
+      line((), (rel: (0, height)))
+    },
+  )
+}
+
 #let bichromatic-beam-focus(pos0, pos1, length, radius, focus, angle, gangle, C0, C1, g0, g1) = {
   let dx0 = -calc.round(calc.sin(angle), digits: 0) * radius
   let dy0 = calc.round(calc.cos(angle), digits: 0) * radius
