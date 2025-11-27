@@ -78,7 +78,11 @@
       })
 
       // some arrows...
-      line((rel: (0.4, -0.4), to: "pickoff"), (rel: (0.6, 0)), mark: (end: ">", fill: black))
+      line(
+        (rel: (label-pad, -label-pad), to: "pickoff.surface"),
+        (rel: (1 - label-pad, 0)),
+        mark: (end: ">", fill: black),
+      )
 
       // the labels...
       content(
@@ -88,7 +92,11 @@
       )
       content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
       content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm])
-      content((rel: (1 + label-pad, -0.2), to: "pickoff.surface"), [Power\ regulation], anchor: "west")
+      content(
+        (rel: (1 + label-pad, -label-pad / 2), to: "pickoff.surface"),
+        [Power\ regulation],
+        anchor: "west",
+      )
     },
   )
 }
