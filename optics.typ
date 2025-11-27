@@ -166,6 +166,44 @@
   )
 }
 
+#let beam(pos0, pos1, radius, angle, C) = {
+  let dx = calc.sin(angle) * radius
+  let dy = calc.cos(angle) * radius
+  let Ct = C.transparentize(100%)
+
+  import cetz.draw: *
+  merge-path(
+    close: true,
+    fill: std.gradient.linear(Ct, C, Ct, angle: angle + 90deg),
+    stroke: none,
+    {
+      line((rel: (dx, dy), to: pos0), (rel: (dx, dy), to: pos1))
+      line((), (rel: (-2 * dx, -2 * dy)))
+      line((), (rel: (-dx, -dy), to: pos0))
+    },
+  )
+}
+
+#let beam-focus(pos0, pos1, R0, R1, angle, C) = {
+  let dx0 = calc.sin(angle) * R0
+  let dy0 = calc.cos(angle) * R0
+  let dx1 = calc.sin(angle) * R1
+  let dy1 = calc.cos(angle) * R1
+  let Ct = C.transparentize(100%)
+
+  import cetz.draw: *
+  merge-path(
+    close: true,
+    fill: std.gradient.linear(Ct, C, Ct, angle: angle + 90deg),
+    stroke: none,
+    {
+      line((rel: (dx0, dy0), to: pos0), (rel: (dx1, dy1), to: pos1))
+      line((), (rel: (-2 * dx1, -2 * dy1)))
+      line((), (rel: (-dx0, -dy0), to: pos0))
+    },
+  )
+}
+
 #let bichromatic-beam(pos0, pos1, radius, angle, C0, C1) = {
   let dx = calc.sin(angle) * radius
   let dy = calc.cos(angle) * radius
