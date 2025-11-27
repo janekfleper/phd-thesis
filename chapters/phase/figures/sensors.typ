@@ -93,8 +93,8 @@
     anchor("pos-3", (rel: (0, 0.5), to: "pos-glasscell"))
 
     // the lattice beams...
-    let beam-focus = 0.04
     let beam-radius = 0.1
+    let beam-radius-focus = 0.04
     let angle-focus = 180deg + calc.asin(0.3 / 6.5)
     bichromatic-beam("pos-0", "pos-1", beam-radius, 90deg, color-x1064, color-x532)
     bichromatic-beam("pos-1", "pos-2", beam-radius, 180deg, color-x1064, color-x532)
@@ -103,7 +103,7 @@
       "pos-3",
       150%,
       beam-radius,
-      beam-focus,
+      beam-radius-focus,
       angle-focus,
       angle-focus,
       color-x1064,
