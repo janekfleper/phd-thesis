@@ -2,7 +2,73 @@
 #import "/optics.typ": *
 #import "/style.typ": *
 
+#let t1 = 0.2
+#let t2 = 0.3
+#let h1 = 1
+#let h2 = 2
 #let label-pad = 0.3
+
+#let setup-x1064() = {
+  import cetz.draw: *
+
+  let overlap = (0, 0)
+  let relay-lens = (0, -2)
+  let fiber-lens = (-1, -10)
+  let fiber = (-1.5, -10)
+  let L1 = (2.5, -8)
+  let L2 = (0.5, -8)
+  let focus = (0.5, -8)
+  let M1 = (0, -3)
+  let M2 = (4, -3)
+  let M3 = (4, -6)
+  let M4 = (-2, -6)
+  let M5 = (-2, -8)
+  let M6 = (4, -8)
+  let M7 = (4, -10)
+
+  group(
+    name: "x1064",
+    {
+      // the optical elements...
+      lens(relay-lens, 90deg, 0.2, h1, 10, -6, name: "relay-lens")
+      lens(fiber-lens, 0deg, 0.15, h1 / 2, 10, -1, name: "fiber-lens")
+      lens(L1, 0deg, 0.2, h1, none, -3, name: "L1")
+      lens(L2, 0deg, 0.3, h1, -1, none, name: "L2")
+      mirror(M1, -135deg, t1, h1, name: "M1")
+      mirror(M2, 45deg, t1, h1, name: "M2")
+      mirror(M3, -45deg, t1, h1, name: "M3")
+      mirror(M4, 135deg, t1, h1, name: "M4")
+      mirror(M5, -135deg, t1, h1, name: "M5")
+      mirror(M6, 45deg, t1, h1, name: "M6")
+      mirror(M7, -45deg, t1, h1, name: "M7")
+
+      // the lattice beams...
+      let beam-radius = 0.1
+      on-layer(-1, {
+        beam(overlap, "M1.surface", beam-radius, -90deg, color-x1064)
+        beam("M1.surface", "M2.surface", beam-radius, 0deg, color-x1064)
+        beam("M2.surface", "M3.surface", beam-radius, -90deg, color-x1064)
+        beam("M3.surface", "M4.surface", beam-radius, 0deg, color-x1064)
+        beam("M4.surface", "M5.surface", beam-radius, -90deg, color-x1064)
+        beam("M5.surface", "L2", beam-radius, 0deg, color-x1064)
+        beam-focus("L1", focus, 2 * beam-radius, beam-radius, 0deg, color-x1064)
+        beam("L1", "M6.surface", 2 * beam-radius, 0deg, color-x1064)
+        beam("M6.surface", "M7.surface", 2 * beam-radius, -90deg, color-x1064)
+        beam("M7.surface", "fiber-lens", 2 * beam-radius, 0deg, color-x1064)
+        beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, 0deg, color-x1064)
+      })
+
+      // the labels...
+      content(
+        (rel: (label-pad, 0), to: "relay-lens.east"),
+        text(bottom-edge: "baseline", "Relay lens"),
+        anchor: "west",
+      )
+      content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
+      content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm])
+    },
+  )
+}
 
 #let figure() = {
   show: figure-style
@@ -20,10 +86,6 @@
     let retro-mirror = (2, 12)
 
     // the optical elements...
-    let t1 = 0.2
-    let t2 = 0.3
-    let h1 = 1
-    let h2 = 2
     mirror(overlap, 45deg, t2, h2, backside: false, transparent: true, name: "overlap")
     mirror(forward-dichroic, -135deg, t2, h2, backside: false, transparent: true, name: "forward-dichroic")
     mirror(retro-dichroic, 135deg, t2, h2, backside: false, transparent: true, name: "retro-dichroic")
@@ -88,6 +150,8 @@
     content((rel: (label-pad, 0), to: "retro-mirror.east"), "Retro mirror", anchor: "west")
     content((rel: (0, label-pad), to: "p5b"), "Beam monitoring")
     content((rel: (0, -label-pad), to: "p1b"), "Beam monitoring")
+
+    setup-x1064()
   })
 }
 
