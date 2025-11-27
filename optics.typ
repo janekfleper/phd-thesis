@@ -90,9 +90,10 @@
       set-origin(pos)
       rotate(z: angle)
       set-origin((0, height / 2))
-      line((0, 0), (0, -height), stroke: blue, name: "surface")
+      line((0, 0), (0, -height), stroke: none, name: "surface")
 
       if not transparent { rect((0, 0), (width, -height), fill: white) }
+      on-layer(-0.9, { rect((0, 0), (width, -height), fill: white) })
       rect((0, 0), (width, -height), fill: _fill)
       if backside { rect((width - 0.05, 0), (width, -height), fill: black) }
     },
