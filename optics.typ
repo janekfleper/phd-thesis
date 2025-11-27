@@ -100,6 +100,59 @@
   )
 }
 
+#let cube(
+  pos,
+  angle,
+  size,
+  transparent: true,
+  fill: auto,
+  name: none,
+) = {
+  let _fill = if fill == auto { default-fill } else { fill }
+
+  import cetz.draw: *
+  group(
+    name: name,
+    anchor: "center",
+    {
+      set-origin(pos)
+      rotate(z: angle)
+      set-origin((-size / 2, size / 2))
+
+      if not transparent { rect((0, 0), (size, -size), fill: white) }
+      rect((0, 0), (size, -size), fill: _fill.transparentize(70%))
+      line((0, 0), (size, -size))
+    },
+  )
+}
+
+#let isolator(
+  pos,
+  angle,
+  length,
+  height,
+  transparent: true,
+  fill: auto,
+  name: none,
+) = {
+  let _fill = if fill == auto { default-fill } else { fill }
+
+  import cetz.draw: *
+  group(
+    name: name,
+    anchor: "center",
+    {
+      set-origin(pos)
+      rotate(z: angle)
+      set-origin((-length / 2, height / 2))
+
+      if not transparent { rect((0, 0), (length, -height), fill: white) }
+      rect((0, 0), (length, -height), fill: _fill.transparentize(70%))
+      line((length / 4, -height / 2), (3 * length / 4, -height / 2), mark: (end: ">", fill: black))
+    },
+  )
+}
+
 #let doublet(
   pos,
   angle,
