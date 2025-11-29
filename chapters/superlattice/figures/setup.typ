@@ -41,7 +41,7 @@
       lens(fiber-lens, 0deg, 0.15, h1 / 2, 10, -1, name: "fiber-lens")
       lens(L1, 0deg, 0.2, h1, none, -3, name: "L1")
       lens(L2, 0deg, 0.3, h1, -1, none, name: "L2")
-      plate(HWP, 0deg, t1, h1)
+      plate(HWP, 0deg, t1, h1, name: "HWP")
       cube(PBS1, 90deg, 0.7, name: "PBS1")
       cube(PBS2, 90deg, 0.7, name: "PBS2")
       cube(PBS3, 90deg, 0.7, name: "PBS3")
@@ -79,6 +79,12 @@
         beam-focus(fiber, "fiber-lens", 0.01, factor * beam-radius, 0deg, color)
       })
 
+      cetz.decorations.brace(
+        (rel: (0, 0.1), to: "PBS3.north-west"),
+        (rel: (0, 0.1), to: "PBS2.north-east"),
+        name: "iso-brace",
+      )
+
       // some arrows...
       line(
         (rel: (label-pad, -label-pad), to: "pickoff.surface"),
@@ -92,6 +98,8 @@
         text(bottom-edge: "baseline", "Relay lens"),
         anchor: "west",
       )
+      content((rel: (0, label-pad), to: "HWP.north"), text(bottom-edge: "baseline", $lambda slash 2$), anchor: "south")
+      content((rel: (0, label-pad), to: "iso-brace.spike"), "Isolator")
       content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
       content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm])
       content(
