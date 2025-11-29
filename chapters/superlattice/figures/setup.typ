@@ -57,6 +57,7 @@
 
       // the lattice beams...
       let beam-radius = 0.1
+      let factor = 2
       on-layer(-1, {
         beam(overlap, "M1.surface", beam-radius, -90deg, color)
         beam("M1.surface", "M2.surface", beam-radius, 0deg, color)
@@ -71,11 +72,11 @@
         beam("M3.surface", "M4.surface", beam-radius, 0deg, color)
         beam("M4.surface", "M5.surface", beam-radius, -90deg, color)
         beam("M5.surface", "L2", beam-radius, 0deg, color)
-        beam-focus("L1", focus, 2 * beam-radius, beam-radius, 0deg, color)
-        beam("L1", "M6.surface", 2 * beam-radius, 0deg, color)
-        beam("M6.surface", "M7.surface", 2 * beam-radius, -90deg, color)
-        beam("M7.surface", "fiber-lens", 2 * beam-radius, 0deg, color)
-        beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, 0deg, color)
+        beam-focus("L1", focus, factor * beam-radius, beam-radius, 0deg, color)
+        beam("L1", "M6.surface", factor * beam-radius, 0deg, color)
+        beam("M6.surface", "M7.surface", factor * beam-radius, -90deg, color)
+        beam("M7.surface", "fiber-lens", factor * beam-radius, 0deg, color)
+        beam-focus(fiber, "fiber-lens", 0.01, factor * beam-radius, 0deg, color)
       })
 
       // some arrows...
