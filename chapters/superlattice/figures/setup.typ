@@ -223,6 +223,7 @@
 
   cetz.canvas({
     import cetz.draw: *
+    scale(x: 0.7, y: 0.7)
     set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
 
     let overlap = (0, 0)
