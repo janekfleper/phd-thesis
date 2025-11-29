@@ -101,6 +101,123 @@
   )
 }
 
+#let setup-x532() = {
+  import cetz.draw: *
+  let color = color-x532
+
+  let overlap = (0, 0)
+  let P1 = (2.5, 0)
+  let P2 = (3.2, 0)
+  let fiber-lens = (15, -4)
+  let fiber = (15, -3)
+  let L1 = (6.5, -1)
+  let L2 = (8.5, -1)
+  let L3 = (9.5, -1)
+  let L4 = (11.5, -1)
+  let HWP = (13, -6)
+  let PBS1 = (13, -2.8)
+  let PBS2 = (13, -5.2)
+  let iso = (13, -4)
+  let M1 = (5.5, 0)
+  let M2 = (5.5, -1)
+  let M3 = (13, -1)
+  let M3b = (13, 0)
+  let M4 = (13, -8)
+  let M5 = (15, -8)
+
+  let lens-label(lens, label) = {
+    content(
+      (rel: (0, -label-pad / 2), to: lens + ".south"),
+      std.rotate(-45deg, reflow: true, label),
+      anchor: "north-east",
+    )
+  }
+
+  group(
+    name: "x532",
+    {
+      // the optical elements...
+      lens(fiber-lens, -90deg, 0.15, 0.8 * h1, 10, -0.9, name: "fiber-lens")
+      lens(L1, 0deg, 0.3, h1, none, 1, name: "L1")
+      lens(L2, 0deg, 0.2, h1, none, -3, name: "L2")
+      lens(L3, 0deg, 0.3, h1, 3, none, name: "L3")
+      lens(L4, 0deg, 0.3, h1, none, 1, name: "L4")
+      plate(HWP, 90deg, t1, h1, name: "HWP")
+      cube(PBS1, 90deg, 0.7, name: "PBS1")
+      cube(PBS2, 90deg, 0.7, name: "PBS2")
+      isolator(iso, 90deg, 1.5, 0.7, name: "iso")
+      plate(P1, -5deg, t2, h1, name: "P1")
+      plate(P2, -10deg, t2, h1, name: "P2")
+      mirror(M1, 45deg, t1, h1, name: "M1")
+      mirror(M2, -135deg, t1, h1, name: "M2")
+      mirror(M3, 45deg, t1, h1, backside: false, name: "M3")
+      mirror(M3b, 135deg, t1, h1, background-layer: -0.7, name: "M3b")
+      mirror(M4, -135deg, t1, h1, name: "M4")
+      mirror(M5, -45deg, t1, h1, name: "M5")
+
+      // the lattice beams...
+      let beam-radius = 0.1
+      let factor = 2
+      on-layer(-1, {
+        beam(overlap, "M1.surface", beam-radius, 0deg, color)
+        beam("M1.surface", "M2.surface", beam-radius, -90deg, color)
+        beam("M2.surface", "L1", beam-radius, 0deg, color)
+        beam-focus("L1", "L2", beam-radius, 2 * beam-radius, 0deg, color)
+        beam("L2", "M3.surface", factor * beam-radius, 0deg, color)
+        beam("M3.surface", "M4.surface", factor * beam-radius, -90deg, color)
+        beam("M4.surface", "M5.surface", factor * beam-radius, 0deg, color)
+        beam("M5.surface", "fiber-lens", factor * beam-radius, -90deg, color)
+        beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, -90deg, color)
+      })
+
+      on-layer(-0.8, {
+        beam("M3.surface", "M3b.surface", factor * beam-radius, 90deg, color.transparentize(50%))
+        beam("M3b.surface", (rel: (1, 0), to: "M3b.surface"), factor * beam-radius, 0deg, color.lighten(50%))
+        beam-corner("M3.surface", factor * beam-radius, -factor * beam-radius, -90deg, color.lighten(50%))
+      })
+
+      cetz.decorations.brace(
+        (rel: (-0.1, 0), to: "PBS2.south-west"),
+        (rel: (-0.1, 0), to: "PBS1.north-west"),
+        name: "iso-brace",
+      )
+
+      // some arrows...
+      line(
+        (rel: (label-pad, -label-pad), to: "M3b.surface"),
+        (rel: (1 - label-pad, 0)),
+        mark: (end: ">", fill: black),
+      )
+
+      lens-label("L1", qty[-50][mm])
+      lens-label("L2", qty[125][mm])
+      lens-label("L3", qty[150][mm])
+      lens-label("L4", qty[-50][mm])
+      content(
+        (rel: (0, label-pad / 2), to: ("L1.north", 50%, "L2.north")),
+        align(center, [Spherical\ telescope]),
+        anchor: "south",
+      )
+      content(
+        (rel: (0, label-pad / 2), to: ("L3.north", 50%, "L4.north")),
+        align(center, [Cylindrical\ telescope]),
+        anchor: "south",
+      )
+      content(
+        (rel: (-label-pad, 0), to: "HWP.west"),
+        text(bottom-edge: "baseline", $lambda slash 2$),
+        anchor: "east",
+      )
+      content((rel: (0, label-pad), to: ("P1.north", 50%, "P2.north")), "Glass plates")
+      content((rel: (-label-pad, 0), to: "iso-brace.spike"), "Isolator", anchor: "east")
+      content(
+        (rel: (1 + label-pad, -label-pad / 2), to: "M3b.surface"),
+        [Power\ regulation],
+        anchor: "west",
+      )
+    },
+  )
+}
 #let figure() = {
   show: figure-style
 
@@ -183,6 +300,7 @@
     content((rel: (0, -label-pad), to: "p1b"), "Beam monitoring")
 
     setup-x1064()
+    setup-x532()
   })
 }
 
