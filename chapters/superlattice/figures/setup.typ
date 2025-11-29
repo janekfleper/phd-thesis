@@ -10,6 +10,7 @@
 
 #let setup-x1064() = {
   import cetz.draw: *
+  let color = color-x1064
 
   let overlap = (0, 0)
   let relay-lens = (0, -2)
@@ -57,24 +58,24 @@
       // the lattice beams...
       let beam-radius = 0.1
       on-layer(-1, {
-        beam(overlap, "M1.surface", beam-radius, -90deg, color-x1064)
-        beam("M1.surface", "M2.surface", beam-radius, 0deg, color-x1064)
-        beam("M2.surface", "M3.surface", beam-radius, -90deg, color-x1064)
+        beam(overlap, "M1.surface", beam-radius, -90deg, color)
+        beam("M1.surface", "M2.surface", beam-radius, 0deg, color)
+        beam("M2.surface", "M3.surface", beam-radius, -90deg, color)
         beam(
           "pickoff.surface",
           (rel: (1, 0), to: "pickoff.surface"),
           beam-radius,
           0deg,
-          color-x1064.transparentize(50%),
+          color.transparentize(50%),
         )
-        beam("M3.surface", "M4.surface", beam-radius, 0deg, color-x1064)
-        beam("M4.surface", "M5.surface", beam-radius, -90deg, color-x1064)
-        beam("M5.surface", "L2", beam-radius, 0deg, color-x1064)
-        beam-focus("L1", focus, 2 * beam-radius, beam-radius, 0deg, color-x1064)
-        beam("L1", "M6.surface", 2 * beam-radius, 0deg, color-x1064)
-        beam("M6.surface", "M7.surface", 2 * beam-radius, -90deg, color-x1064)
-        beam("M7.surface", "fiber-lens", 2 * beam-radius, 0deg, color-x1064)
-        beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, 0deg, color-x1064)
+        beam("M3.surface", "M4.surface", beam-radius, 0deg, color)
+        beam("M4.surface", "M5.surface", beam-radius, -90deg, color)
+        beam("M5.surface", "L2", beam-radius, 0deg, color)
+        beam-focus("L1", focus, 2 * beam-radius, beam-radius, 0deg, color)
+        beam("L1", "M6.surface", 2 * beam-radius, 0deg, color)
+        beam("M6.surface", "M7.surface", 2 * beam-radius, -90deg, color)
+        beam("M7.surface", "fiber-lens", 2 * beam-radius, 0deg, color)
+        beam-focus(fiber, "fiber-lens", 0.01, 2 * beam-radius, 0deg, color)
       })
 
       // some arrows...
