@@ -102,10 +102,11 @@
 
       // the labels...
       content(
-        (rel: (label-pad, 0), to: "relay-lens.east"),
+        (rel: (-label-pad, 0), to: "relay-lens.west"),
         text(bottom-edge: "baseline", "Relay lens"),
-        anchor: "west",
+        anchor: "east",
       )
+      content((rel: (label-pad, 0), to: "relay-lens.east"), qty[750][mm], anchor: "west")
       content((rel: (0, label-pad), to: "HWP.north"), text(bottom-edge: "baseline", $lambda slash 2$), anchor: "south")
       content((rel: (0, label-pad), to: "iso-brace.spike"), "Isolator")
       content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
@@ -317,8 +318,10 @@
 
     // the labels...
     content((rel: (label-pad, 0), to: "forward-lens.east"), "Forward lens", anchor: "west")
+    content((rel: (-label-pad, 0), to: "forward-lens.west"), qty[250][mm], anchor: "east")
     content((rel: (label-pad, 0), to: "glasscell.east"), "Glass cell", anchor: "west")
     content((rel: (label-pad, 0), to: "retro-lens.east"), "Retro lens", anchor: "west")
+    content((rel: (-label-pad, 0), to: "retro-lens.west"), qty[250][mm], anchor: "east")
     content((rel: (label-pad, 0), to: "retro-mirror.east"), "Retro mirror", anchor: "west")
     content((rel: (0, label-pad), to: "p5b"), "Beam monitoring")
     content((rel: (0, -label-pad), to: "p1b"), "Beam monitoring")
