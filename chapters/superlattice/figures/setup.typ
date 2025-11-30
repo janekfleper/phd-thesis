@@ -2,8 +2,8 @@
 #import "/optics.typ": *
 #import "/style.typ": *
 
-#let t1 = 0.2
-#let t2 = 0.3
+#let t1 = 0.3
+#let t2 = 0.4
 #let h1 = 1
 #let h2 = 2
 #let label-pad = 0.3
@@ -249,7 +249,7 @@
     mirror(forward-dichroic, -135deg, t2, h2, backside: false, transparent: true, name: "forward-dichroic")
     mirror(retro-dichroic, 135deg, t2, h2, backside: false, transparent: true, name: "retro-dichroic")
     mirror(retro-mirror, 0deg, t1, h1, backside: true, name: "retro-mirror")
-    glasscell(glass-cell, 0deg, 3, 1.5, 0.2, fill: luma(0%), name: "glasscell")
+    glasscell(glass-cell, 0deg, 3, 1.5, 0.25, fill: luma(0%), name: "glasscell")
 
     // fix gradients of doublets...
     doublet(forward-lens, -90deg, h2, name: "forward-lens")
@@ -263,8 +263,8 @@
     anchor("p4", (rel: (-0.4, 0), to: "retro-lens"))
     anchor("p5", "retro-dichroic.surface")
     anchor("p6", "retro-mirror.surface")
-    anchor("p5b", (rel: (0, 1), to: "retro-dichroic.surface"))
-    anchor("p1b", (rel: (0, -1), to: "forward-dichroic.surface"))
+    anchor("p5b", (rel: (0, 1.2), to: "retro-dichroic.surface"))
+    anchor("p1b", (rel: (0, -1.2), to: "forward-dichroic.surface"))
 
     // the lattice beams...
     let beam-focus = 0.04
@@ -299,8 +299,8 @@
     })
 
     // some arrows...
-    line((rel: (-label-pad, 0.4), to: "p5"), (rel: (0, 0.6)), mark: (end: ">", fill: black))
-    line((rel: (-label-pad, -0.4), to: "p1"), (rel: (0, -0.6)), mark: (end: ">", fill: black))
+    line((rel: (-label-pad, 0.5), to: "p5"), (rel: (0, 0.7)), mark: (end: ">", fill: black))
+    line((rel: (-label-pad, -0.5), to: "p1"), (rel: (0, -0.7)), mark: (end: ">", fill: black))
 
     // the labels...
     content((rel: (label-pad, 0), to: "forward-lens.east"), "Forward lens", anchor: "west")
