@@ -95,6 +95,12 @@
         mark: (end: ">", fill: black),
       )
       line(
+        (rel: (-label-pad, 0), to: fiber),
+        (rel: (-1 + label-pad, 0)),
+        mark: (start: ">", fill: black),
+        name: "start",
+      )
+      line(
         (rel: (label-pad, label-pad), to: "dth.east"),
         (rel: (1 - label-pad, 0)),
         mark: (start: ">", fill: black),
@@ -116,6 +122,7 @@
         [Power\ regulation],
         anchor: "west",
       )
+      content((rel: (-label-pad, 0), to: "start.end"), [#x1064 lattice], anchor: "east")
       content(
         (rel: (1 + label-pad, label-pad / 2), to: "dth.east"),
         [Horizontal\ dipole trap],
@@ -212,6 +219,12 @@
         (rel: (1 - label-pad, 0)),
         mark: (end: ">", fill: black),
       )
+      line(
+        (rel: (0, label-pad), to: fiber),
+        (rel: (0, 1 - label-pad)),
+        mark: (start: ">", fill: black),
+        name: "start",
+      )
 
       lens-label("L1", qty[-50][mm])
       lens-label("L2", qty[125][mm])
@@ -239,6 +252,7 @@
         [Power\ regulation],
         anchor: "west",
       )
+      content((rel: (0, label-pad), to: "start.end"), align(center, [#x532\ lattice]), anchor: "south")
     },
   )
 }
