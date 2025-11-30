@@ -13,25 +13,26 @@
   let color = color-x1064
 
   let overlap = (0, 0)
-  let relay-lens = (0, -2)
-  let fiber-lens = (-1, -10)
-  let fiber = (-1.5, -10)
-  let L1 = (2.5, -8)
-  let L2 = (0.5, -8)
-  let focus = (0.5, -8)
-  let HWP = (1.5, -6)
-  let PBS1 = (2.5, -6)
-  let PBS2 = (0.5, -6)
-  let PBS3 = (-1.9, -6)
-  let iso = (-0.7, -6)
-  let pickoff = (4, -4.5)
-  let M1 = (0, -3)
-  let M2 = (4, -3)
-  let M3 = (4, -6)
-  let M4 = (-3, -6)
-  let M5 = (-3, -8)
-  let M6 = (4, -8)
-  let M7 = (4, -10)
+  let dth = (0, -1.8)
+  let relay-lens = (0, -3)
+  let fiber-lens = (-0.7, -11)
+  let fiber = (-1.2, -11)
+  let L1 = (2.5, -9)
+  let L2 = (0.5, -9)
+  let focus = (0.5, -9)
+  let HWP = (1.5, -7)
+  let PBS1 = (2.5, -7)
+  let PBS2 = (0.5, -7)
+  let PBS3 = (-1.9, -7)
+  let iso = (-0.7, -7)
+  let pickoff = (4, -5.5)
+  let M1 = (0, -4)
+  let M2 = (4, -4)
+  let M3 = (4, -7)
+  let M4 = (-3, -7)
+  let M5 = (-3, -9)
+  let M6 = (4, -9)
+  let M7 = (4, -11)
 
   group(
     name: "x1064",
@@ -42,6 +43,7 @@
       lens(L1, 0deg, 0.2, h1, none, -3, name: "L1")
       lens(L2, 0deg, 0.3, h1, -1, none, name: "L2")
       plate(HWP, 0deg, t1, h1, name: "HWP")
+      cube(dth, 0deg, 1.4, name: "dth")
       cube(PBS1, 90deg, 0.7, name: "PBS1")
       cube(PBS2, 90deg, 0.7, name: "PBS2")
       cube(PBS3, 90deg, 0.7, name: "PBS3")
@@ -60,6 +62,7 @@
       let factor = 2
       on-layer(-1, {
         beam(overlap, "M1.surface", beam-radius, -90deg, color)
+        beam("dth", (rel: (1, 0), to: "dth.east"), beam-radius, 0deg, color)
         beam("M1.surface", "M2.surface", beam-radius, 0deg, color)
         beam("M2.surface", "M3.surface", beam-radius, -90deg, color)
         beam(
@@ -91,6 +94,11 @@
         (rel: (1 - label-pad, 0)),
         mark: (end: ">", fill: black),
       )
+      line(
+        (rel: (label-pad, label-pad), to: "dth.east"),
+        (rel: (1 - label-pad, 0)),
+        mark: (start: ">", fill: black),
+      )
 
       // the labels...
       content(
@@ -107,6 +115,11 @@
         [Power\ regulation],
         anchor: "west",
       )
+      content(
+        (rel: (1 + label-pad, label-pad / 2), to: "dth.east"),
+        [Horizontal\ dipole trap],
+        anchor: "west",
+      )
     },
   )
 }
@@ -118,22 +131,22 @@
   let overlap = (0, 0)
   let P1 = (2.5, 0)
   let P2 = (3.2, 0)
-  let fiber-lens = (15, -4)
-  let fiber = (15, -3)
+  let fiber-lens = (15, -5.5)
+  let fiber = (15, -4.5)
   let L1 = (6.5, -1)
   let L2 = (8.5, -1)
   let L3 = (9.5, -1)
   let L4 = (11.5, -1)
-  let HWP = (13, -6)
-  let PBS1 = (13, -2.8)
-  let PBS2 = (13, -5.2)
-  let iso = (13, -4)
+  let HWP = (13, -7.5)
+  let PBS1 = (13, -4.3)
+  let PBS2 = (13, -6.7)
+  let iso = (13, -5.5)
   let M1 = (5.5, 0)
   let M2 = (5.5, -1)
   let M3 = (13, -1)
   let M3b = (13, 0)
-  let M4 = (13, -8)
-  let M5 = (15, -8)
+  let M4 = (13, -9)
+  let M5 = (15, -9)
 
   let lens-label(lens, label) = {
     content(
