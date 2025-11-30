@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/lattices.typ": figure as figure-lattices
 
 == Optical lattices <sec:setup-lattices>
 
@@ -11,14 +12,13 @@ In this section, I will introduce the individual lattice configurations and the 
 Unless noted otherwise, the optical setups to create the lattices are unchanged compared to earlier theses.
 
 #floating-figure(
-  image("figures/alpha_lattices.png", width: 75%),
+  figure-lattices(),
   caption: [
     Beam configuration of the optical lattices.
     The #z532 lattice uses a shallow-angle configuration, while the in-plane lattices are created from counterpropagating beams.
     The lattice beams intersect at the position of the atoms inside the glass cell to achieve the maximum lattice depths.
 
-    // TODO: Remove the z1064 lattice
-    // TODO: Add arrows, labels and a coordinate system...
+    // TODO: Only use one label for the z532 lattice?
   ],
   label: <fig:setup-lattices>,
   placement: bottom,
