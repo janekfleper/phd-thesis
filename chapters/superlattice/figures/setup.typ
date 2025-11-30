@@ -237,12 +237,12 @@
     set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
 
     let overlap = (0, 0)
-    let forward-dichroic = (-3.6, 0)
+    let forward-dichroic = (-3.7, 0)
     let forward-lens = (-4, 2)
-    let glass-cell = (-3.5, 6)
-    let retro-lens = (-4, 10)
-    let retro-dichroic = (-4.4, 12)
-    let retro-mirror = (2, 12)
+    let glass-cell = (-3.5, 5)
+    let retro-lens = (-4, 8)
+    let retro-dichroic = (-4.3, 10)
+    let retro-mirror = (0, 10)
 
     // the optical elements...
     mirror(overlap, 45deg, t2, h2, backside: false, transparent: true, name: "overlap")
@@ -258,9 +258,9 @@
     // the lattice beam anchors...
     anchor("p0", "overlap.surface")
     anchor("p1", "forward-dichroic.surface")
-    anchor("p2", (rel: (0.4, 0), to: "forward-lens"))
+    anchor("p2", (rel: (0.3, 0), to: "forward-lens"))
     anchor("p3", "glasscell.atoms")
-    anchor("p4", (rel: (-0.4, 0), to: "retro-lens"))
+    anchor("p4", (rel: (-0.3, 0), to: "retro-lens"))
     anchor("p5", "retro-dichroic.surface")
     anchor("p6", "retro-mirror.surface")
     anchor("p5b", (rel: (0, 1.2), to: "retro-dichroic.surface"))
