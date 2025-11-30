@@ -297,8 +297,8 @@
         angle-focus + 0.1deg,
         color-x1064,
         color-x532,
-        (start: 47.0%, stop: 52.9%),
-        (start: 47.0%, stop: 52.9%),
+        (start: 46.0%, stop: 53.9%),
+        (start: 46.0%, stop: 53.9%),
       )
       bichromatic-beam("p4", "p5", beam-radius, -90deg, color-x1064, color-x532)
       bichromatic-beam("p5", "p6", beam-radius, 0deg, color-x1064, color-x532)
