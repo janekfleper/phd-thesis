@@ -115,8 +115,8 @@
       content((rel: (label-pad, 0), to: "relay-lens.east"), qty[750][mm], anchor: "west")
       content((rel: (0, label-pad), to: "HWP.north"), text(bottom-edge: "baseline", $lambda slash 2$), anchor: "south")
       content((rel: (0, label-pad), to: "iso-brace.spike"), "Isolator")
-      content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm])
-      content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm])
+      content((rel: (0, -label-pad), to: "L1.south"), qty[150][mm], anchor: "north")
+      content((rel: (0, -label-pad), to: "L2.south"), qty[-75][mm], anchor: "north")
       content(
         (rel: (1 + label-pad, -label-pad / 2), to: "pickoff.surface"),
         [Power\ regulation],
