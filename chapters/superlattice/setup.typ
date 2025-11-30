@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/setup.typ": figure as figure-setup
 
 == Experimental setup <sec:super-setup>
 
@@ -15,7 +16,7 @@ The optical isolator#footnote[
   Conoptics M714 (#TGG)
 ] behind the telescope prevents the #retro beam from realizing an additional standing-wave potential.
 With a #hwp and a polarizing beam splitter (PBS) we rotate and clean the beam polarization, which is essential to maximize the interference of the lattice beams.
-The photodiode monitors a fraction of the beam for the power regulation.
+A photodiode monitors a fraction of the beam for the power regulation.
 The last mirror in the #x1064\-lattice setup is used for the lattice alignment#footnote[
   Newport Agilis#sym.trademark AG-M100N, see @ssec:mod-align-x1064 for the automation of the #x1064\-lattice alignment.
 ].
@@ -24,27 +25,28 @@ With the relay lens, we can continuously shift the focus around the atom positio
 This allows us to match the foci of the #forward lattice beams and the horizontal dipole trap through the forward lens.
 
 #floating-figure(
-  image("figures/superlattice_setup.png"),
+  figure-setup(),
   caption: [
     Experimental setup of the in-plane superlattice.
     The setup shows all relevant optics on the experimental table.
-    Around the glass cell, the optical elements are shared with the horizontal dipole trap (see @sec:setup-prepare-dipole) and the imaging system along the #x-axis (see @ssec:setup-sequence-detect).
-    The imaging light with the wavelength $lambda_"D2" = #qty[766.7][nm]$ is transmitted by the dichroic mirrors around the glass cell.
-    The forward and retro lens have an anti-reflection coating designed for the wavelengths #qty[532][nm], #qty[766.7][nm] and #qty[1064][nm], just like the outer surfaces of the glass cell.
-    The inner surfaces of the glass cell are uncoated, which results in a reflectivity of approximately #qty[4][%] at each inner surface.
-    Between the relay lens and the following dichroic mirror, the horizontal dipole trap is overlapped with the #x1064 lattice using a PBS.
+    Around the glass cell, the optical elements are shared with the horizontal dipole trap (see @sec:setup-prepare-dipole).
+    The forward and retro lens have an anti-reflection coating designed for the wavelengths #qty[532][nm], #qty[766.7][nm] (imaging) and #qty[1064][nm], just like the outer surfaces of the glass cell.
+    The inner surfaces of the glass cell are uncoated, resulting in a reflectivity of approximately #qty[4][%] at each inner surface.
+    Behind the relay lens, the horizontal dipole trap is overlapped with the #x1064 lattice using a PBS.
+    The cylindrical telescope in the optical path of the #x532 lattice expands the beam along the #z-axis, leaving the beam shape in the #xy-plane unaffected.
     To improve the visibility, neither the beam diameters nor the distances are drawn to scale.
 
-    // TODO: Make sure the beams are off-center in the forward and retro lens
-    // TODO: Make sure the angle of the beams relative to the glass cell is obvious...
-    // TODO: Indicate x-imaging path and horizontal dipole trap path?
-    // TODO: Add/Mention optical paths for the forward and retro beam-profiling cameras?
     // TODO: Add a legend for the lenses and/or their properties?
-    // TODO: Add the PBS to overlap the #x1064 lattice and the horizontal dipole trap?
     // TODO: Assign numbers/labels to the mirrors and lenses?
-    // TODO: Reduce details in the caption?
+    // TODO: Reduce details in the caption? Or add some more information?
     // TODO: Add some highlighting for the retro path?
     // TODO: Actually add a shift behind the glass plates?
+    // TODO: Add photodiodes for the power regulation?
+    // TODO: Add indicators for initial beam diameters?
+    // TODO: Fix all beam overlaps at dichroic mirrors...
+    // TODO: Fix all beam overlaps at concave lenses...
+    // TODO: Add a coordinate system...
+    // TODO: Add fibers?
   ],
   label: <fig:super-setup>,
 )
