@@ -50,7 +50,7 @@
       size: 1em,
       fill: black,
       bottom-edge: "descender",
-      [$"Energy"slash #unit[Erec]$],
+      [Energy $epsilon slash #unit[Erec]$],
     ))),
   )
   let xaxis-major-ticks = (

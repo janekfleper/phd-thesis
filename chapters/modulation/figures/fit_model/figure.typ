@@ -314,7 +314,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Resonance $R slash #unit[a.u.]$]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Resonance $R$]),
       ),
     ),
   )

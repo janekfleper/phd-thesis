@@ -50,7 +50,7 @@
           size: 1em,
           fill: black,
           bottom-edge: "descender",
-          [Energy$slash (h dot #unit[kHz])$],
+          [Energy $epsilon slash (h dot #unit[kHz])$],
         ),
       ),
     ),

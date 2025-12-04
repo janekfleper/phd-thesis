@@ -14,7 +14,7 @@
     text(size: 1em, fill: black, [$Vx532 slash #unit[Erec]$]),
   ),
 )
-#let label-yaxis-text = [Trap frequency $f slash#unit[Hz]$]
+#let label-yaxis-text = [Radial trap frequency $f slash#unit[Hz]$]
 
 #let inset-0(xlim: (-10.0, 130.0), ylim: (-7.0, 13.0), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
@@ -44,7 +44,7 @@
       -90.0deg,
       place(
         center + top,
-        text(size: 1em, fill: black, [$y slash#unit[px]$]),
+        text(size: 1em, fill: black, [$y slash#unit[μm]$]),
       ),
     ),
   )

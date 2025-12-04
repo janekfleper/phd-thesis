@@ -85,7 +85,7 @@
           size: 1em,
           fill: black,
           bottom-edge: "descender",
-          [Phase $phase slash #unit[mrad]$],
+          [Phase $phase slash#unit[mrad]$],
         ),
       ),
     ),
@@ -229,7 +229,12 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Correction / mrad]),
+        text(
+          size: 1em,
+          fill: black,
+          bottom-edge: "descender",
+          [Correction $delta phase slash#unit[mrad]$],
+        ),
       ),
     ),
   )

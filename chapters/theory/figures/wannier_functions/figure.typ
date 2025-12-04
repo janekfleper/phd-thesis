@@ -5,7 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
-#let ylabel-text = [$"Energy"slash #unit[Erec]$]
+#let ylabel-text = [Energy $epsilon slash #unit[Erec]$]
 #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)
 
 #let label-xaxis = (

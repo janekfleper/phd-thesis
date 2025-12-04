@@ -205,7 +205,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Waist $wx1064 slash #unit[μm]$]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Waist $wx1064 slash#unit[μm]$]),
       ),
     ),
   )
@@ -328,7 +328,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Position $fity0 slash #unit[μm]$]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Position $fity0 slash#unit[μm]$]),
       ),
     ),
   )

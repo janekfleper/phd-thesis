@@ -213,7 +213,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-17%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -228,7 +228,7 @@
     ),
   )
   let secondary-label-yaxis = (
-    position: (165.104%, 50.0%),
+    position: (168%, 50.0%),
     body: rotate(
       -90.0deg,
       place(

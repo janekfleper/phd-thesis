@@ -11,7 +11,7 @@
   position: (50.0%, 115%),
   body: place(
     center + top,
-    text(size: 1em, fill: black, [Sequence time / seconds]),
+    text(size: 1em, fill: black, [Sequence time $tau slash s$]),
   ),
 )
 
@@ -36,7 +36,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Temperature / °C]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Temperature $T slash degree "C"$]),
       ),
     ),
   )

@@ -46,7 +46,7 @@
         text(
           size: 1em,
           fill: black,
-          [Frequency difference $abs(f_(n+1) - f_n) slash #unit[MHz]$],
+          [Frequency difference $abs(f_(n+1) - f_n) slash#unit[MHz]$],
         ),
       ),
     ),
