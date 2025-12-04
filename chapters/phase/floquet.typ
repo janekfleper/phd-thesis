@@ -226,7 +226,7 @@ For the interaction energy $U(x, y)$, we employ the calibration method introduce
 However, instead of directly using the measured interaction energy, we use the generalized evaluation to determine the scattering length $asc(B)$, thereby allowing a variation of the scattering length as a fit parameter.
 Finally, we calibrate the initial atomic density $n(x, y)$ of the doubly-occupied sites in the #x1064 lattice as the weights for the global average.
 In total, the evaluation takes the parameters $t(x, y)$, $tcorr(x, y)$, $Delta(x, y)$, $U(x, y)$, $K0(x, y)$, $nu$ and $n(x, y)$ into account, and we fit the effective Hamiltonian #Heff in @eq:phase-floquet-theory-expansion up to the order $1 slash nu^3$ and the Bessel function $Jn(n <= 3)$.
-With an exact diagonalization of the effective Hamiltonian, we find the eigenvalues $epsilon_1$ to $epsilon_4$ (c.f. @fig:theory-double-two-symmetric) and we compute the time evolution starting from the initial state #ketLL.
+With an exact diagonalization of the effective Hamiltonian, we find the eigenvalues $epsilon_1$ to $epsilon_4$ (compare @fig:theory-double-two-symmetric) and we compute the time evolution starting from the initial state #ketLL.
 Additionally, we can read the parameters #teff, #Ueff and #VCTeff directly from the effective Hamiltonian.
 The fit parameters to adjust the theoretical signals to the measured oscillation signals $calC(tau)$ are the #x532\-lattice depth #Vx532 in the center of the atom cloud and the scattering length #asc.
 

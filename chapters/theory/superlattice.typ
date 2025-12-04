@@ -69,7 +69,7 @@ In the band structure of the short lattice potential, the bands corresponding to
 With the long lattice potential, new band gaps open up at $q = plus.minus k_l = plus.minus k_s slash 2$.
 In the first Brillouin zone of the long lattice, the bands $tilde(n)$ are then split into pairs of bands with the indices $n$.
 For the lowest two bands in #subref(<fig:theory-super-band-structure>, "b"), the pair structure is still visible as the gap between the bands is significantly smaller than the gap to the third band.
-For both pairs of bands, the Bloch waves show their origin from the bands $tilde(n)$ in the number of nodes per lattice site (c.f. #subref(<fig:theory-bloch-energy-bands>, "b")).
+For both pairs of bands, the Bloch waves show their origin from the bands $tilde(n)$ in the number of nodes per lattice site (compare #subref(<fig:theory-bloch-energy-bands>, "b")).
 
 #floating-figure(
   figure-band-structure(width: 14.5cm, height: 6.9cm),

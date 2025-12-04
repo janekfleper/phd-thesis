@@ -32,7 +32,7 @@ The lattice beams are powered by a laser#footnote[
   Coherent Verdi V10
 ] at the wavelength $lambda approx #qty[532][nm]$, making the optical lattice potential blue detuned relative to the D1 and D2 line of #K40.
 To take the lattice axis and the wavelength into account, I will refer to this lattice as the #z532 lattice.
-The angle of intersection (c.f. @fig:theory-lattice-intersection-angle) is $anglez = #num[14.5(1)]degree$, resulting in the lattice period $az532 = #qty[1.06(1)][μm]$ according to @eq:theory-lattice-period.
+The angle of intersection (compare @fig:theory-lattice-intersection-angle) is $anglez = #num[14.5(1)]degree$, resulting in the lattice period $az532 = #qty[1.06(1)][μm]$ according to @eq:theory-lattice-period.
 The lattice beams are circular with a waist of $wz532 approx #qty[120][μm]$ at the position of the atoms.
 However, due to the shallow-angle configuration, the effective waist along the #y-axis is greater by a factor of $2$.
 The radial potential of the #z532 lattice is deconfining due to the blue detuning, preventing the lattice from confining atoms without the optical dipole trap or a red-detuned optical lattice.
@@ -52,7 +52,7 @@ The #z1064 lattice is only mentioned here for the sake of completeness, and to h
 In the #xy-plane, there are two red-detuned optical lattices with the wavelength $lambda approx #qty[1064][nm]$.
 Together with the #z532 lattice, these two lattices were part of the initial setup to study the two-dimensional Fermi-Hubbard model.
 Following the naming convention based on the lattice axis and the wavelength, I will refer to them as #x1064 lattice and #y1064 lattice.
-Both lattices use a standing-wave configuration and the resulting lattice periods are $ax1064 = ay1064 approx #qty[0.532][μm]$ (c.f. @fig:theory-lattice-intersection-angle).
+Both lattices use a standing-wave configuration and the resulting lattice periods are $ax1064 = ay1064 approx #qty[0.532][μm]$ (compare @fig:theory-lattice-intersection-angle).
 To avoid reflections off the inner surfaces of the glass cell, the lattice axes are not perpendicular to the glass cell.
 Furthermore, spatial constraints by the vacuum system and the Ioffe-Pritchard trap lead to an intersection angle of $theta approx 85 degree$ in the #xy-plane @cocchi_analogue_2016 @miller_ultracold_2016.
 This results in a weak coupling of the band structures of the two lattices (see @sec:mod-coupled).

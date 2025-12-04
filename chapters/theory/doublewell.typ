@@ -205,7 +205,7 @@ The interacting states #ketLL and #ketRR are part of the original basis of the H
 
 Around the offset $Delta = 0$, the composition of the ground state $phy.ket(psi_1)$ rapidly switches between the states #ketLL and #ketRR due to the attractive interaction.
 The corresponding energy of two particles in the lower well is $epsilon_1 approx U - 2 abs(Delta)$.
-At $Delta = 0$, the double-well potential is symmetric, and the ground state is mainly composed of the state #ketdp (c.f. @fig:theory-double-two-symmetric).
+At $Delta = 0$, the double-well potential is symmetric, and the ground state is mainly composed of the state #ketdp (compare @fig:theory-double-two-symmetric).
 The neighboring eigenstate is $phy.ket(psi_2) = ketdm$ with the opposite parity of the state #ketdp.
 A coupling between the two states #ketdp and #ketdm is only possible with a second-order tunneling process that involves the singlet state #kets.
 In #subref(<fig:theory-double-two-general>, "c"), a small occupation of the singlet state #kets mediates the slow oscillation between the states #ketLL and #ketRR.

@@ -29,7 +29,7 @@ We compute the environmental coefficients of the refractive index for the wavele
 
 === Environmental sensitivity of the superlattice phase <ssec:phase-stability-coefficients>
 
-To compute the environmental correction, we split the optical path (c.f. @fig:phase-stability-sensors-setup) into six different segments.
+To compute the environmental correction, we split the optical path (compare @fig:phase-stability-sensors-setup) into six different segments.
 Starting from the retro mirror, the lattice beams propagate approximately #qty[240][mm] in the first air segment up to the retro lens.
 Since the retro lens is an achromatic doublet, we use two segments to take the different materials into account.
 Behind the retro lens, there is another air segment up to the glass cell with a length of approximately #qty[220][mm].

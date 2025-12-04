@@ -19,7 +19,7 @@ We are, therefore, able to reliably find the optimal alignment of the lattices, 
 
 The similarity of the #x1064 lattice and the #y1064 lattice extends to their respective alignment procedures.
 Both lattices potentials are red detuned and use a standing-wave configuration.
-The lattice beams have the waists $wx1064 approx #qty[140][μm]$ and $wy1064 approx #qty[160][μm]$ respectively (c.f. @tab:mod-eval-results).
+The lattice beams have the waists $wx1064 approx #qty[140][μm]$ and $wy1064 approx #qty[160][μm]$ respectively (compare @tab:mod-eval-results).
 For the alignment of the #retro beams, both lattices have a motorized mirror mount#footnote[
   Newport Agilis AG-M100N
 ] to hold the retro mirror.

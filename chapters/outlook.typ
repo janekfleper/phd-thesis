@@ -104,7 +104,7 @@ This connects the doubly-occupied sites to the delocalized $eta$-pairs with mome
 
 We are currently investigating the preparation of $eta$-pairs in the in-plane superlattice using a slightly different approach.
 For a large energy offset $abs(Delta) > U$, the strongly-repulsive pairs correspond to the ground state in the double-well potentials.
-To transfer the atoms from the ground state to the excited state, which connects to the $eta$-pair state in the extended lattice, we diabatically ramp the offset $Delta -> 0$ over the avoided crossing at $plus.minus Delta approx U slash 2$ (c.f. @fig:theory-double-two-general).
+To transfer the atoms from the ground state to the excited state, which connects to the $eta$-pair state in the extended lattice, we diabatically ramp the offset $Delta -> 0$ over the avoided crossing at $plus.minus Delta approx U slash 2$ (compare @fig:theory-double-two-general).
 At $Delta = 0$, the excited state is equal to $ketdm = (ketLL - ketRR) slash sqrt(2)$ in the double-well potential.
 However, by turning off the infrared lattice, we remove the energy offset, merging the individual double wells into an extended optical lattice.
 Regardless of the preparation technique, the $eta$-pair state is limited by the initial band insulator at attractive interactions.

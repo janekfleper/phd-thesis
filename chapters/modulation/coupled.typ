@@ -39,7 +39,7 @@ $
                              & + sum_(m1' m2') V_(m1' m2') dot uqm2(m1 - m1'\,, m2 - m2') eqc
 $ <eq:mod-coupled-schroedinger>
 
-where the sum over #m1 and #m2 as well as the complex exponential function are already eliminated (c.f. @sec:theory-bloch).
+where the sum over #m1 and #m2 as well as the complex exponential function are already eliminated (compare @sec:theory-bloch).
 For the two-dimensional potential @eq:mod-coupled-potential[], we compute the coefficients $V_(m1' m2')$ of the Fourier series numerically for all indices $m1'$ and $m2'$ that we consider for the matrix form of the Schrödinger equation.
 Compared to the one-dimensional potential in @eq:theory-bloch-potential-fourier-series, none of the coefficients vanish unless the relative angle is $fitang = #deg[0]$.
 Instead of the index $m$, the rows and columns of the matrix are labeled with the index tuple $(m1, m2)$.
@@ -102,7 +102,7 @@ The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 
   label: <fig:mod-coupled-theory>,
 )
 
-Since the excitation to a higher band is still based on the overlap of the Wannier functions due to the perturbation of the lattice potential (c.f. @sec:mod-intro), the optimal band transition corresponds to the index changes $Delta nx = 2$ and $Delta ny = 0$.
+Since the excitation to a higher band is still based on the overlap of the Wannier functions due to the perturbation of the lattice potential (compare @sec:mod-intro), the optimal band transition corresponds to the index changes $Delta nx = 2$ and $Delta ny = 0$.
 For the in-situ #lms, the transition from the lowest band with index $cn = 1$, therefore, relies on the contribution from the uncoupled band $vn = (3, 1)$.
 In #subref(<fig:mod-coupled-theory>, "b-d") the composition of the coupled states corresponding to the energy bands $cband_2$, $cband_3$ and $cband_4$ is shown#footnote[
   Since we only consider the lowest band with $cn = 1$ and the excited bands in @fig:mod-coupled-theory, we use the indices $cn = 2, 3 "and "4$.
