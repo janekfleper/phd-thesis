@@ -44,7 +44,7 @@
       -90.0deg,
       place(
         center + top,
-        text(size: 1em, fill: black, [y / px]),
+        text(size: 1em, fill: black, [$y slash#unit[px]$]),
       ),
     ),
   )
