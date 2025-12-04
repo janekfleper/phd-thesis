@@ -92,18 +92,18 @@ We concluded that the Wannier functions conserve the shape of the corresponding 
 As shown for the monochromatic lattice potential in @fig:theory-wannier, this matched our expectation for a wavefunction that is localized to a single lattice site.
 However, in a symmetric superlattice, the Wannier functions computed with @eq:theory-wannier-transformation for each band $n$ are spread across both lattice sites in the unit cell.
 While they are valid Wannier functions, they are not localized to a single lattice site in the unit cell.
-In general, finding the maximally localized Wannier functions requires minimizing the spatial variance $sigma_x^2 = phy.expval(x^2) - phy.expval(x)^2$ using numerical methods @marzari_maximally_1997 @marzari_maximally_2012.
+In general, finding the maximally-localized Wannier functions requires minimizing the spatial variance $sigma_x^2 = phy.expval(x^2) - phy.expval(x)^2$ using numerical methods @marzari_maximally_1997 @marzari_maximally_2012.
 However, in one-dimensional systems the maximally localized Wannier functions can be derived with the band-projected position operator @kivelson_wannier_1982.
 The application to optical lattices was worked out in @bissbort_dynamical_2012, and the calculation for the specific case of the superlattice potential is shown in @gorg_ultracold_2014.
 In this section, I will present an intuitive derivation for the symmetric superlattice configuration and show the qualitative results as a function of the superlattice phase.
 
-If we only consider the Bloch waves from one band with index $n$, the Wannier functions spanning the entire unit cell are already the maximally localized ones.
+If we only consider the Bloch waves from one band with index $n$, the Wannier functions spanning the entire unit cell are already the maximally-localized ones.
 It is not possible for a superposition of the Bloch waves from a single band to have a smaller spatial variance $sigma_x^2$.
-The approach to find the maximally localized Wannier functions takes multiple bands into account @bissbort_dynamical_2012.
+The approach to find the maximally-localized Wannier functions takes multiple bands into account @bissbort_dynamical_2012.
 The number of bands has to be equal to the number of separate Wannier functions inside the unit cell.
 In the superlattice potential @eq:theory-super-potential-dimensionless[], we therefore use two bands at a time.
 For the Bloch waves in the symmetric configuration shown in #subref(<fig:theory-super-band-structure>, "b"), we can expect an equal mixture of the lowest two bands to localize the Wannier functions to the left or right lattice site of the unit cell.
-If the Wannier functions $w_1 (x)$ and $w_2 (x)$ are computed with @eq:theory-wannier-transformation, the maximally localized Wannier functions are
+If the Wannier functions $w_1 (x)$ and $w_2 (x)$ are computed with @eq:theory-wannier-transformation, the maximally-localized Wannier functions are
 
 $
   w_L (x) = 1 / sqrt(2) (w_1 (x) + w_2 (x)) quad "and" quad w_R (x) = 1 / sqrt(2) (w_1 (x) - w_2 (x)) eqd
@@ -122,13 +122,13 @@ To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x -
 #floating-figure(
   figure-wannier-composition(),
   caption: [
-    Composition of the maximally localized Wannier functions.
+    Composition of the maximally-localized Wannier functions.
     *a*, The lowest three energy bands $epsilon_n (q)$ as a function of the superlattice phase $phi$ in a superlattice potential with $V_l = #qty[16][Erec]$ and $V_s = #qty[5][Erec]$.
     The gap between the lowest two bands is maximal in the antisymmetric configuration ($phi = -pi slash 4$) and minimal in the symmetric configuration ($phi = 0$).
     Conversely, the gap between the bands $n = 2$ and $n = 3$ is minimal at $phi = -pi slash 4$ and maximal at $phi = 0$.
     The insets show the Wannier functions $w_1 (x)$ and $w_2 (x)$ at $phi = -pi slash 10$ and $phi = 0$.
     The Wannier functions $w_n (x)$ are computed from the Bloch waves of the individual bands $n = 1$ and $n = 2$, as indicated by the energy offsets.
-    *b*, Composition of the maximally localized Wannier function $w_L (x)$ in terms of the Wannier functions $w_1 (x)$ and $w_2 (x)$.
+    *b*, Composition of the maximally-localized Wannier function $w_L (x)$ in terms of the Wannier functions $w_1 (x)$ and $w_2 (x)$.
     In the symmetric configuration ($phi = 0$), the Wannier functions $w_n (x)$ contribute equally, as already stated in @eq:theory-super-wannier-superposition.
     For a superlattice phase $phi < 0$, the contribution of the second band decreases until $w_L (x) approx w_1 (x)$.
     The insets show the Wannier functions $w_L (x)$ (solid) and $w_R (x)$ (dashed) at $phi = -pi slash 10$ and $phi = 0$ respectively.
@@ -140,7 +140,7 @@ To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x -
 )
 
 In an asymmetric superlattice, the degeneracy of the lattice sites inside the unit cell is lifted.
-This causes the Wannier functions of the individual bands to become more localized until they are equal to the maximally localized Wannier functions $w_L (x)$ and $w_R (x)$.
+This causes the Wannier functions of the individual bands to become more localized until they are equal to the maximally-localized Wannier functions $w_L (x)$ and $w_R (x)$.
 To visualize this change, the composition of the Wannier function $w_L (x)$ as a function of the superlattice phase $phi$ is shown in #subref(<fig:theory-super-wannier-mixing>, "b").
 Depending on the sign of the superlattice phase, the Wannier function $w_L (x)$ approaches either $w_1 (x)$ or $w_2 (x)$.
 At the phase $phi = -pi slash 10$ in @fig:theory-super-wannier-mixing, the insets only show subtle differences between $w_L (x)$ and $w_1 (x)$ as well as $w_R (x)$ and $w_2 (x)$.
@@ -148,9 +148,9 @@ In the opposite configuration $phi = pi slash 10$, the association of the Wannie
 While $w_L (x)$ and $w_R (x)$ are always localized on the left and right lattices sites, the Wannier functions $w_1 (x)$ and $w_2 (x)$ are localized on the lower and upper lattice sites respectively.
 This is a consequence of the different bases that are used to compute the Wannier functions.
 The Bloch waves and the Wannier functions $w_n (x)$ are sorted by their corresponding energy bands.
-With the band-projected position operator, the eigenvalues are the positions $x_(L,R)^i$ and the maximally localized Wannier functions are sorted from left to right in the unit cell.
+With the band-projected position operator, the eigenvalues are the positions $x_(L,R)^i$ and the maximally-localized Wannier functions are sorted from left to right in the unit cell.
 
-Besides the computation of the maximally localized Wannier functions, we can also use the eigenvectors of the band-projected position operator to find the associated tunneling amplitudes and the on-site energies @gorg_ultracold_2014.
+Besides the computation of the maximally-localized Wannier functions, we can also use the eigenvectors of the band-projected position operator to find the associated tunneling amplitudes and the on-site energies @gorg_ultracold_2014.
 As an example, we consider a superlattice potential with the system size $N = 2$.
 In the eigenbasis of the band-projected position operator, the Hamiltonian of a single particle in the superlattice potential is
 
@@ -167,15 +167,15 @@ with the on-site energies $epsilon_(L,R)^i$ in each unit cell $i$, and the tunne
 The empty off-diagonal elements are higher-order tunneling amplitudes that are exponentially suppressed compared to #tin and #tout.
 
 The composition of the Wannier function $w_L (x)$ in #subref(<fig:theory-super-wannier-mixing>, "b") shows that the mixing of the corresponding bands largely follows the avoided crossing at $phi = 0$ in the band structure.
-If the gap between the coupled bands becomes large, we expect the maximally localized Wannier functions to converge towards the individual Wannier functions $w_n (x)$.
+If the gap between the coupled bands becomes large, we expect the maximally-localized Wannier functions to converge towards the individual Wannier functions $w_n (x)$.
 However, the mixing changes again if one of the bands is part of another avoided crossing.
 This is often the case for the band $n = 2$ when it approaches the band $n = 3$ at an asymmetric phase $phi$.
-As a result, the computation of the maximally localized Wannier functions with the individual bands $n = 1$ and $n = 2$ breaks down towards the antisymmetric configuration $phi = -pi slash 4$.
-For the maximally localized Wannier function $w_L (x)$, we can directly use the Wannier function $w_1 (x)$ to avoid this issue.
+As a result, the computation of the maximally-localized Wannier functions with the individual bands $n = 1$ and $n = 2$ breaks down towards the antisymmetric configuration $phi = -pi slash 4$.
+For the maximally-localized Wannier function $w_L (x)$, we can directly use the Wannier function $w_1 (x)$ to avoid this issue.
 The mixture of the bands $n = 2$ and $n = 3$ then yields the Wannier function $w_R (x)$ and the Wannier function $w'_L (x)$ of the first excited state on the left lattice site.
 Handling the changing pairs of bands automatically would require mixing more than two bands in the setup of the band-projected position operator.
 This is mentioned in @gorg_ultracold_2014 to generalize the formalism with more than two Wannier functions per unit cell.
 The downside of this approach is an additional projection of the Wannier functions depending on their position inside the unit cell.
 If the superlattice phase $phi$ changes, this can require a discrete change in the association of the Wannier functions to the left or right lattice site.
-Since we only expect continuous changes of the maximally localized Wannier function, this association based on the positions of the Wannier functions is questionable.
+Since we only expect continuous changes of the maximally-localized Wannier function, this association based on the positions of the Wannier functions is questionable.
 We therefore decided to manually select the pairs of bands that are close to each other in the band structure, which is also the approach recommended in @gorg_ultracold_2014.

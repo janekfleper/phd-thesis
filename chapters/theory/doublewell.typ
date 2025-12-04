@@ -25,10 +25,10 @@ This is the reference for all measurements related to the superlattice phase $ph
 === One particle in a double well <ssec:theory-double-one>
 
 A single particle can only be located on the left or right site.
-The corresponding basis states, in place of the maximally localized Wannier functions $w_L (x)$ and $w_R (x)$, are #ketL and #ketR.
+The corresponding basis states, in place of the maximally-localized Wannier functions $w_L (x)$ and $w_R (x)$, are #ketL and #ketR.
 Instead of the on-site energies #eL and #eR, we only consider the energy offset $2 Delta = eL - eR$.
 We ignore the mean energy $(eL + eR) slash 2$ inside the double well since it only contributes to the global phase of the system.
-Analogous to the maximally localized Wannier functions, the two states #ketL and #ketR are coupled by the tunneling amplitude $t := tin$.
+Analogous to the maximally-localized Wannier functions, the two states #ketL and #ketR are coupled by the tunneling amplitude $t := tin$.
 This model is illustrated in the inset of #subref(<fig:theory-double-one>, "a") inside a unit cell of the underlying superlattice potential#footnote[
   In general, the underlying potential can have any shape as long as it features two minima. Only the parameters $t$ and $Delta$ are relevant, and all detailed information about the potential is lost.
 ].
@@ -48,7 +48,7 @@ $ <eq:theory-double-one-eigenstate-plus-minus>
 with the corresponding eigenenergies $epsilon_g = -t$ and $epsilon_e = +t$.
 A particle localized on either site is in an equal superposition of the eigenstates #ketg and #kete.
 The resulting time evolution of the system is described by a coherent Rabi oscillation between the states #ketL and #ketR with the oscillation frequency $f = 2 t slash h$.
-For the maximally localized Wannier functions in the symmetric superlattice potential in @eq:theory-super-wannier-superposition, we can find the equivalent time evolution based on the band gap $Delta epsilon$.
+For the maximally-localized Wannier functions in the symmetric superlattice potential in @eq:theory-super-wannier-superposition, we can find the equivalent time evolution based on the band gap $Delta epsilon$.
 If the double well has an offset $Delta != 0$, the gap between the eigenenergies grows as indicated in #subref(<fig:theory-double-one>, "a").
 At the same time, the ground (excited) state approaches the basis state corresponding to the site with the lower (higher) energy as shown in #subref(<fig:theory-double-one>, "b").
 The growing energy gap results in an increase of the oscillation frequency, while the unequal superposition of the eigenstates reduces the amplitude of the Rabi oscillation.
@@ -59,9 +59,9 @@ $
 $ <eq:theory-double-one-rabi-parameters>
 
 For a large offset $abs(Delta) >> t$, the coupling between the sites vanishes and the eigenenergies approach $epsilon_g = minus Delta$ and $epsilon_e = plus Delta$.
-This behavior of the eigenstates in the double-well potential matches the composition of the maximally localized Wannier functions for an asymmetric phase $phi$ in #subref(<fig:theory-super-wannier-mixing>, "b").
+This behavior of the eigenstates in the double-well potential matches the composition of the maximally-localized Wannier functions for an asymmetric phase $phi$ in #subref(<fig:theory-super-wannier-mixing>, "b").
 The only difference between the double-well potential described by the Hamiltonian @eq:theory-double-one-hamiltonian[] and the actual unit cell of the superlattice potential is the change of the confinement in an asymmetric configuration.
-Since the maximally localized Wannier functions depend on the exact shape of the lattice sites, the overlap with the other lattice site in the unit cell is different for $phi != 0$.
+Since the maximally-localized Wannier functions depend on the exact shape of the lattice sites, the overlap with the other lattice site in the unit cell is different for $phi != 0$.
 In theory, the tunneling amplitude $t$ should therefore be a function of the energy offset $Delta(phi)$.
 We can however neglect this since the oscillation frequency and amplitude in @eq:theory-double-one-rabi-parameters are significantly more sensitive to $Delta$.
 
