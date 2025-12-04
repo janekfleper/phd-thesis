@@ -1,10 +1,11 @@
 #import "@preview/cetz:0.4.2"
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import "/header.typ": *
+#import "/style.typ": *
 
 #let lattice-configurations(
   height: 6.5cm,
-  color: red,
+  color: color-red-detuned,
   n-samples: 6,
   lattice-period: 0.5cm,
   lattice-width: 4cm,
@@ -23,6 +24,7 @@
     )),
   )
 
+  show: figure-style
   grid(
     columns: (1fr, 1.7fr),
     rows: height,
@@ -32,7 +34,8 @@
       debug: debug,
       spacing: 0cm,
       cell-size: (lattice-period, 0.3cm),
-      edge-stroke: 0.6pt,
+      edge-stroke: linewidth-very-narrow,
+      mark-scale: 0.7,
       node-fill: lattice-gradient,
 
       edge(
@@ -41,6 +44,7 @@
         $#h(0.25em) a = display(lambda / 2)$,
         "|-|",
         label-side: right,
+        label-sep: 0.9em,
         floating: true,
       ),
       edge((-3.0, -1), (-0.1, -1), $phy.vb(k)_1$, "-|>", floating: true),
@@ -55,7 +59,8 @@
       debug: debug,
       spacing: 0cm,
       cell-size: (lattice-width, lattice-period-shallow),
-      edge-stroke: 0.6pt,
+      edge-stroke: linewidth-very-narrow,
+      mark-scale: 0.7,
       node-fill: lattice-gradient,
 
       node((-0.9, -ky), name: <k1-start>),
@@ -104,14 +109,15 @@
   // to make sure the lattice period a is centered relative to the horizontal line...
   show math.equation: set text(top-edge: "x-height")
 
+  show: figure-style
   cetz.canvas({
     import cetz.draw: *
 
     // the red-detuned lattice
-    let cred = red
+    let cred = color-red-detuned
     line(
       ..xdata.map(x => (x * xscale, potential(x, depth))),
-      stroke: black + 0.9pt,
+      stroke: cred.darken(20%) + linewidth-narrow,
       fill: gradient.linear(cred.transparentize(100%), cred.transparentize(10%), angle: 90deg),
     )
     for x in range(-1, 2) { circle((x * xscale, depth / 4), ..atom-style) }
@@ -121,17 +127,17 @@
       (xscale * xmax + 0.2, 0),
       (xscale * xmax + 0.2, depth),
       mark: (symbol: "bar", scale: 1.5),
-      stroke: 0.9pt,
+      stroke: linewidth-very-narrow,
       name: "V0",
     )
     content("V0", markrect($V_0$, outset: 0.4em, fill: white, stroke: none))
 
     // the blue-detuned lattice
     translate(x: xscale * (xmax - xmin) + 0.4, y: depth)
-    let cblue = blue
+    let cblue = color-blue-detuned
     line(
       ..xdata.map(x => (x * xscale, potential(x, -depth))),
-      stroke: black + 0.9pt,
+      stroke: cblue.darken(20%) + linewidth-narrow,
       fill: gradient.linear(cblue.transparentize(100%), cblue.transparentize(10%), angle: -90deg),
     )
     for x in range(-1, 1) { circle(((x + 0.5) * xscale, -0.75 * depth), ..atom-style) }
@@ -142,7 +148,7 @@
       (-xscale, y0),
       (0, y0),
       mark: (symbol: "bar", scale: 1.5),
-      stroke: 0.9pt,
+      stroke: linewidth-very-narrow,
       name: "a",
     )
     content("a", box($a$, fill: white, inset: 0.4em))
