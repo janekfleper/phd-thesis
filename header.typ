@@ -111,6 +111,8 @@
 
 #let Vl = $V_l$
 #let Vs = $V_s$
+#let vl = $v_l$
+#let vs = $v_s$
 #let eL = $epsilon_L$
 #let eR = $epsilon_R$
 #let tin = $t_"in"$
@@ -171,6 +173,7 @@
 #let slms = [superlattice-modulation spectroscopy]
 #let Slms = [Superlattice-modulation spectroscopy]
 #let V0 = $V_0$
+#let v0 = $v_0$
 #let dV = $delta V$
 #let fmod = $f_"mod"$
 #let fmod2 = $f_"mod"^((2))$
@@ -195,6 +198,12 @@
 #let cn = $eta$ // coupled band index
 #let band = $epsilon$
 #let cband = $tilde(epsilon)$
+
+// radial potential
+#let Vrad = $V_"rad"$
+#let vrad = $v_"rad"$
+#let Rl = $R_l$
+#let Rs = $R_s$
 
 // superlattice phase parameters
 #let phase = $phi$

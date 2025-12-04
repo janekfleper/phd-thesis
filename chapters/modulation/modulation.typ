@@ -44,3 +44,4 @@ Therefore, in @sec:mod-super we calibrate the #x532\-lattice depth in the antisy
 #include "coupled.typ"
 #include "alignment.typ"
 #include "superlattice.typ"
+#include "radial.typ"
