@@ -71,7 +71,7 @@ The resulting period is $a = lambda slash 2$, where $lambda = 2 pi slash abs(phy
 For a general intersection angle $2 dot anglez$ between the wavevectors #k1 and #k2, the expression for the period is
 
 $
-  a = lambda / (2 sin anglez) eqd
+  a = lambda / (2 sin anglez) eqp
 $ <eq:theory-lattice-period>
 
 At $anglez = 90degree$, the counterpropagating case with $a = lambda slash 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.

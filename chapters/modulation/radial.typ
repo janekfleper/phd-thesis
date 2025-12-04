@@ -69,7 +69,7 @@ The harmonic approximation is valid unless $vl (rho) >> vs (rho)$ where the latt
 In units of the recoil energy #unit[Erec], the zero-point energy amounts to
 
 $
-  epsilon_0^plus.minus = sqrt(16 vs (rho) plus.minus vl (rho)) eqd
+  epsilon_0^plus.minus = sqrt(16 vs (rho) plus.minus vl (rho)) eqp
 $ <eq:mod-radial-zero-point>
 
 The prefactor $4 dot 4 = 16$ of the lattice depths is composed of the ratios between the recoil energies and the squared lattice periods of the short and long lattice, respectively.

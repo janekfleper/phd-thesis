@@ -55,7 +55,7 @@ The growing energy gap results in an increase of the oscillation frequency, whil
 The general expressions for the frequency and the amplitude of the oscillation are
 
 $
-  f = 2 sqrt(t^2 + Delta^2) slash h quad "and" quad A = t^2 / (t^2 + Delta^2) eqd
+  f = 2 sqrt(t^2 + Delta^2) slash h quad "and" quad A = t^2 / (t^2 + Delta^2) eqp
 $ <eq:theory-double-one-rabi-parameters>
 
 For a large offset $abs(Delta) >> t$, the coupling between the sites vanishes and the eigenenergies approach $epsilon_g = minus Delta$ and $epsilon_e = plus Delta$.
@@ -108,7 +108,7 @@ $
     -t, 0, 0, -t;
     -t, 0, 0, -t;
     0, -t, -t, U - 2 Delta;
-  ) eqd
+  ) eqp
 $ <eq:theory-double-two-hamiltonian>
 
 We can find the eigenenergies and the eigenstates as a function of the interaction $U slash t$ and the offset $Delta slash t$ by numerical diagonalization of the Hamiltonian.

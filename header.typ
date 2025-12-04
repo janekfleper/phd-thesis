@@ -34,7 +34,7 @@
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
-#let eqd = $med dot$
+#let eqp = $med .$
 #let eqc = $med comma$
 
 #let sn(L, J) = {

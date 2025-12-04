@@ -6,7 +6,7 @@
 We want to find the eigenfunctions in the potential @eq:theory-lattice-potential[] to describe the behavior of a particle in the optical lattice.
 The corresponding Hamiltonian of a single particle is
 $
-  hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V_0 dot sin^2(k x) eqd
+  hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V_0 dot sin^2(k x) eqp
 $ <eq:theory-bloch-hamiltonian>
 
 To make the Hamiltonian dimensionless, we express the energy in units of the recoil energy $#unit[Erec] = (phy.hbar^2 k^2) / (2 m)$, where $phy.hbar k$ is the momentum of a single photon and $m$ is the mass of the particle.
@@ -14,7 +14,7 @@ Additionally, we rescale the position $k x -> x$ such that $x$ is dimensionless,
 The resulting Hamiltonian is
 
 $
-  hat(H) slash #unit[Erec] = hat(h) = -phy.dv(, x, 2) + v_0 dot sin^2(x) eqd
+  hat(H) slash #unit[Erec] = hat(h) = -phy.dv(, x, 2) + v_0 dot sin^2(x) eqp
 $ <eq:theory-bloch-hamiltonian-dimensionless>
 
 Bloch's theorem states that the eigenfunctions of the Hamiltonian are plane waves multiplied by a function with the same periodicity as the lattice potential @ashcroft_solid_1976.
@@ -41,7 +41,7 @@ The coefficients $c_m$ are revealed by rewriting $sin^2(x)$ in terms of complex 
 $
   V(x) slash #unit[Erec] & = v_0 dot sin^2(x)
   = v_0 dot (1 / 2 - 1 / 2 cos(2 x))
-  = underbrace(1 / 2 v_0, c_0) med underbrace(- 1 / 4 v_0, c_(plus.minus 1)) (cexp(2 x) + ncexp(2 x)) eqd
+  = underbrace(1 / 2 v_0, c_0) med underbrace(- 1 / 4 v_0, c_(plus.minus 1)) (cexp(2 x) + ncexp(2 x)) eqp
 $ <eq:theory-bloch-potential-fourier-series>
 
 Instead of the sum of all $m in ZZ$, the Fourier series of the potential only requires the terms with $m = (-1, 0, 1)$.

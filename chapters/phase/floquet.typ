@@ -209,7 +209,7 @@ $
     0, VNN, VDE, 0;
     0, VDE, VNN, 0;
     VCT, 0, 0, 0;
-  ) eqd
+  ) eqp
 $ <eq:phase-floquet-crossover-hamiltonian>
 
 We neglect the higher-order corrections in the static Hamiltonian @eq:theory-double-two-hamiltonian[] since they are smaller than the tunneling amplitude $t$ by several orders of magnitude.
