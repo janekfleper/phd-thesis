@@ -79,7 +79,7 @@ With a linear scaling of the thermal lensing with the setpoint #Vx532, the expec
 Instead, we measure the calibration factor $fita0 approx #num[0.925]$ in the steady state at the lattice depth $Vx532 = #qty[14][Erec]$.
 
 The change of the horizontal waist as a function of the lattice depth in #subref(<fig:super-stability-x532>, "b") is not complementary to the calibration factor #fita0.
-Starting at $wx532^y = #qty[141(7)][μm]$ for $Vx532 = #qty[14][Erec]$, the waist decreases to #qty[114+-12][μm] before it increases to #qty[160+-8][μm] again.
+Starting at $wx532^y = #qty[141(7)][μm]$ for $Vx532 = #qty[14][Erec]$, the waist decreases to #qty[114(12)][μm] before it increases to #qty[160(8)][μm] again.
 We interpret this as a shift of the horizontal foci of the #forward and #retro beams through the position of the atoms.
 The initial foci are too far away from their respective lenses and they are shifted to the opposite side of the atom cloud by the thermal lensing.
 At $Vx532 approx #qty[17][Erec]$, the foci are closest to the atom position in the steady state of the thermal lensing after a #qty[3][s] holding time.
