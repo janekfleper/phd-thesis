@@ -88,9 +88,9 @@ Despite the additional band gaps of the coupled band structure, we can always fi
 This is essential to extend the parameter regime of the in-situ #lms as a calibration technique for the lattice depth $V(x, y)$.
 
 For the #z532 lattice, where we can set the lattice depth to $V0 > #qty[85][Erec]$, we use the band transition $1 -> 5$ instead of the band transition $1 -> 3$ for the in-situ #lms.
-For lattice depths $V0 < #qty[85][Erec]$, using the excited band $n' = 5$ is not recommended since its band width $delta band_5$ is not small compared to the transition frequency #fnm(1, 5).
-As shown in #subref(<fig:mod-intro-theory>, "a"), the band $n' = 5$ is only weakly trapped in the lattice potential at $V0 = #qty[60][Erec]$, and it has a substantial band width compared to the band $n' = 3$.
-In lattices with $V0 > #qty[85][Erec]$, the relative band width is $delta band_5 slash (h dot fnm(1, 5)) <= 0.01$.
+For lattice depths $V0 < #qty[85][Erec]$, using the excited band $n' = 5$ is not recommended since its bandwidth $delta band_5$ is not small compared to the transition frequency #fnm(1, 5).
+As shown in #subref(<fig:mod-intro-theory>, "a"), the band $n' = 5$ is only weakly trapped in the lattice potential at $V0 = #qty[60][Erec]$, and it has a substantial bandwidth compared to the band $n' = 3$.
+In lattices with $V0 > #qty[85][Erec]$, the relative bandwidth is $delta band_5 slash (h dot fnm(1, 5)) <= 0.01$.
 For the band $n' = 5$, the atom-loss mechanism is automatically enabled through the untrapped band $n'' = 10$ (see #subref(<fig:mod-loss-channels>, "c")).
 If we also take the band $n'' = 11$ into account, the in-situ #lms with a single modulation frequency works up to $V0 = #qty[220][Erec]$.
 With these two regimes for the transitions $1 -> 3$ and $1 -> 5$, we can apply the in-situ #lms in a wide range of lattice depths.

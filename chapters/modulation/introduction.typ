@@ -21,15 +21,15 @@ As a result, the modulation can excite atoms to higher bands if #Dn is even#foot
   In practice, excitations with $Dn = 1$ are only suppressed compared to excitations with $Dn = 2$, but not completely forbidden @cocchi_analogue_2016.
   This is discussed in more detail in @sec:mod-loss in the context of the loss mechanism.
 ] and the energy $h dot fmod$ is equal to the gap $Delta epsilon = epsilon_n' - epsilon_n$ between the bands.
-In the Wannier picture, we consider the mean energy of the bands, which is appropriate as long as the gap $Delta epsilon$ is much larger than the respective band widths $delta epsilon_n$.
+In the Wannier picture, we consider the mean energy of the bands, which is appropriate as long as the gap $Delta epsilon$ is much larger than the respective bandwidths $delta epsilon_n$.
 
 If the atoms initially occupy the lowest band $n = 1$, the band with index $n' = 3$ is the first higher band that is suitable for the even parity of the modulation.
 To realize a band structure where the width of the two bands is negligible compared to the energy gap, we need a lattice depth $V0 >= #qty[40][Erec]$ (see #subref(<fig:mod-intro-theory>, "b")).
-In this regime, the band width $delta epsilon_3$ is smaller than the energy gap $Delta epsilon = epsilon_3 - epsilon_1$ by at least two orders of magnitude#footnote[
+In this regime, the bandwidth $delta epsilon_3$ is smaller than the energy gap $Delta epsilon = epsilon_3 - epsilon_1$ by at least two orders of magnitude#footnote[
   Compared to any higher band, the width of the first band is always negligible (see @fig:theory-bloch-energy-bands).
 ].
 While the narrow bands are generally desirable for the #lms as a calibration technique, they are an essential condition for the in-situ measurement of the lattice depth $V(x, y)$.
-If the band widths are not negligible, the equipotential lines we measure in the atomic densities are broadened.
+If the bandwidths are not negligible, the equipotential lines we measure in the atomic densities are broadened.
 This would impose a limitation on the precision of the measurement, and we would need to consider the density of states of the energy bands $band_n (q)$.
 
 As already discussed in the introduction of this chapter, the in-situ detection requires a loss of the atoms that are excited to the higher band $n' = 3$.
@@ -63,7 +63,7 @@ The interaction energy $U$ would introduce additional energy levels, while we on
 
 The optical setup of each lattice features a power regulation with a photodiode on the experimental table and an acousto-optical modulator (AOM) on the laser table.
 We apply the modulation to the amplitude of the radio-frequency signal that drives the AOM.
-For all lattices in the experimental setup, the possible modulation frequencies #fmod are much greater than the band width of the power regulation.
+For all lattices in the experimental setup, the possible modulation frequencies #fmod are much greater than the bandwidth of the power regulation.
 We can, therefore, apply the modulation without affecting the power regulation.
 Depending on the modulated lattice, we use a modulation amplitude $dV slash V0$ between #qty[1][%] and #qty[10][%] for a modulation time up to $tau_"mod" = #qty[1][s]$.
 We select the modulation amplitude #dV to achieve a good visibility of the resonances in the atom cloud.

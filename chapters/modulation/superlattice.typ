@@ -7,8 +7,8 @@
 
 For the #x532 lattice, the available optical power limits the lattice depth to $Vx532 = #qty[30][Erec]$.
 As a consequence, the #x532 lattice is not suitable for a calibration with the in-situ #lms due to the width of the excited band $n' = 3$.
-The mean transition frequency at a lattice depth of #qty[30][Erec] is $fnm(1, 3) approx #qty[322][kHz]$ and the corresponding band width is $delta epsilon_3 slash h approx #qty[13][kHz]$.
-The relative band width $delta epsilon_3 slash (h dot fnm(1, 3)) approx #qty[4][%]$ is too wide for the data analysis introduced in @sec:mod-eval.
+The mean transition frequency at a lattice depth of #qty[30][Erec] is $fnm(1, 3) approx #qty[322][kHz]$ and the corresponding bandwidth is $delta epsilon_3 slash h approx #qty[13][kHz]$.
+The relative bandwidth $delta epsilon_3 slash (h dot fnm(1, 3)) approx #qty[4][%]$ is too wide for the data analysis introduced in @sec:mod-eval.
 We would need to take the occupation of the lowest band and the density of states of both bands into account to evaluate the resonances in the atomic densities.
 Instead, we use the superlattice potential for the calibration of the #x532\-lattice depth.
 The principle of the in-situ #lms in the superlattice potential is equivalent to a monochromatic lattice potential.
