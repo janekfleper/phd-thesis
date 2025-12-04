@@ -17,6 +17,9 @@
 #let color-stability-initial = blue
 #let color-stability-final = orange
 
+#let color-red-detuned = red
+#let color-blue-detuned = blue
+
 #let color-x1064 = red
 #let color-x532 = green.darken(20%)
 

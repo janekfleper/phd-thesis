@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "figures/radial.typ": figure as figure-radial
 #import "figures/radial_result/figure.typ": figure as figure-result
 
 == Radial potential of a bichromatic superlattice <sec:mod-radial>
@@ -87,7 +88,7 @@ Therefore, the radial potential $vrad^plus (rho)$ is typically confining, wherea
 For any superlattice phase $-pi slash 4 < phase < pi slash 4$, we need to determine the atom position $phy.expval(x)$ and the radial potential numerically through the BPO formalism for the maximally-localized Wannier fucntions.
 
 #floating-figure(
-  image("figures/radial_potential_vplus_vminus.png", width: 70%),
+  figure-radial(),
   caption: [
     Radial potential in an antisymmetric superlattice configuration.
     *a*, Superlattice potential $v^+$ of the lower lattice site in the double well where the intensity of the long lattice is maximal.
@@ -109,9 +110,7 @@ The #z532 lattice is frozen#footnote[
   We can neglect the contribution by the #z532 lattice to the radial potential along the #y-axis.
   This is not the case for the #x-axis where the deconfinement by the #z532 lattice has to be taken into account when calibrating the radial potential of the #y1064 lattice.
 ] and the in-plane lattices are set to the target configuration we want to study.
-This measurement technique can only be used for the calibration of confining radial potentials#footnote[
-  #tr[For measuring a deconfining radial potential we could use the horizontal dipole trap to...]
-].
+This measurement technique can only be used for the calibration of confining radial potentials.
 In the case of a bichromatic superlattice this is a significant limitation since we expect the radial potential to become deconfining between the two configurations $phase = -pi slash 4$ and $phase = +pi slash 4$.
 
 #floating-figure(
