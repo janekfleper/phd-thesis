@@ -67,7 +67,7 @@ The #y1064\-lattice laser#footnote[
   Innolight Mephisto MOPA #qty[20][W]
 ], on the other hand, should have a constant frequency without requiring external feedback.
 Due to losses in the optical paths, the power ratios $gamma = P_"retro" slash P_"forward"$ for the lattices are $gamma_x1064 approx 0.84$ and $gamma_y1064 approx 0.77$.
-We can typically achieve lattice depths up to #qty[90][Erec] with both lattices.
+We can typically achieve lattice depths up to #qty[80][Erec] with both lattices.
 
 The #x1064 lattice is superimposed with the #x532 lattice to create a superlattice potential along the #x-axis.
 As indicated by the name, the wavelength of the #x532 lattice is $lambda approx #qty[532][nm]$.
