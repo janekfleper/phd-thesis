@@ -1,6 +1,7 @@
 #import "@local/fancy-thesis:0.1.0": optional-refs, thesis
 #import "/header.typ": fancy-units
 
+#set math.equation(number-align: bottom)
 #show ref: optional-refs
 #show: fancy-units
 

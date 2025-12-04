@@ -34,13 +34,10 @@ $ <eq:mod-coupled-uq>
 with the indices $m1, m2 in ZZ$.
 In dimensionless units where the lattice period is $a = pi$ and the energy is normalized by the recoil energy #unit[Erec], the resulting Schrödinger equation is
 
-#[
-  #set math.equation(number-align: bottom)
-  $
-    cband_cn (vq) uqm2(m1, m2) & = [(q_x + 2m1)^2 + (q_y + 2 / (cos fitang) (m2 + m1 sin fitang))^2] uqm2(m1, m2) \
-                               & + sum_(m1' m2') V_(m1' m2') dot uqm2(m1 - m1'\,, m2 - m2') eqc
-  $ <eq:mod-coupled-schroedinger>
-]
+$
+  cband_cn (vq) uqm2(m1, m2) & = [(q_x + 2m1)^2 + (q_y + 2 / (cos fitang) (m2 + m1 sin fitang))^2] uqm2(m1, m2) \
+                             & + sum_(m1' m2') V_(m1' m2') dot uqm2(m1 - m1'\,, m2 - m2') eqc
+$ <eq:mod-coupled-schroedinger>
 
 where the sum over #m1 and #m2 as well as the complex exponential function are already eliminated (c.f. @sec:theory-bloch).
 For the two-dimensional potential @eq:mod-coupled-potential[], we compute the coefficients $V_(m1' m2')$ of the Fourier series numerically for all indices $m1'$ and $m2'$ that we consider for the matrix form of the Schrödinger equation.
