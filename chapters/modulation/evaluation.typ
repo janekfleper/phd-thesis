@@ -93,7 +93,7 @@ Since the resonance function @eq:mod-eval-model-resonance[] is defined with a po
 The resulting function is
 
 $
-  n(x, y) = n_0(x, y) dot (1 - R) thin
+  n(x, y) = n_0(x, y) dot (1 - R) eqc
 $ <eq:mod-eval-model>
 
 where the resonance function is always applied relative to the local atomic density $n_0(x, y)$ (see #subref(<fig:mod-eval-model>, "i-l")).

@@ -15,7 +15,8 @@ While this is a classical model, it correctly predicts the polarizability $alpha
 The resulting expressions for the dipole potential and the scattering rate are
 
 $
-  Udip (phy.vb(r)) & prop Gamma / Delta I(phy.vb(r)) quad "and" quad Gsc (phy.vb(r)) & prop (Gamma / Delta)^2 I(phy.vb(r))
+  Udip (phy.vb(r)) prop Gamma / Delta I(phy.vb(r)) quad "and"
+  quad Gsc (phy.vb(r)) prop (Gamma / Delta)^2 I(phy.vb(r)) eqc
 $ <eq:theory-dipole-terms>
 
 where $Delta = omega - omega_0$ is the detuning of the driving frequency relative to the eigenfrequency of the oscillator.
@@ -36,7 +37,7 @@ The electric field of a Gaussian beam close to the focal position can be written
 
 $
   phy.vb(E)(phy.vb(r), t) =
-  phy.vb(E)_0 exp(-rho^2 / w_0^2) exp lr((i (omega t - phy.vb(k) dot phy.vb(r))), size: #150%)
+  phy.vb(E)_0 exp(-rho^2 / w_0^2) exp lr((i (omega t - phy.vb(k) dot phy.vb(r))), size: #150%) eqc
 $ <eq:theory-dipole-gaussian>
 
 where $rho$ is the radial distance from the optical axis and $w_0$ is the beam waist @saleh_fundamentals_2019.
@@ -51,7 +52,7 @@ The interference pattern of two laser beams with equal vectors $phy.vb(E)_0$ and
 
 $
   I(phy.vb(r)) =
-  2 abs(phy.vb(E)_0)^2 lr((1 + cos((phy.vb(k)_2 - phy.vb(k)_1) dot phy.vb(r))), size: #150%)
+  2 abs(phy.vb(E)_0)^2 lr((1 + cos((phy.vb(k)_2 - phy.vb(k)_1) dot phy.vb(r))), size: #150%) eqc
 $ <eq:theory-lattice-intensity>
 
 where $phy.vb(k)_1$ and $phy.vb(k)_2$ are the wavevectors of the two beams @hecht_optics_2016.
@@ -70,7 +71,7 @@ The resulting period is $a = lambda slash 2$, where $lambda = 2 pi slash abs(phy
 For a general intersection angle $2 dot anglez$ between the wavevectors #k1 and #k2, the expression for the period is
 
 $
-  a = lambda / (2 sin anglez) thin .
+  a = lambda / (2 sin anglez) eqd
 $ <eq:theory-lattice-period>
 
 At $anglez = 90degree$, the counterpropagating case with $a = lambda slash 2$ is recovered, which is also the minimum of the period $a$ for a fixed wavelength $lambda$.

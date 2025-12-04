@@ -13,7 +13,7 @@ The two contributions can be expressed in terms of the Gaussian lattice profile 
 In a red-detuned optical lattice, the radial potential is
 
 $
-  vrad(rho) = Vrad(rho) slash #unit[Erec] = underbrace(- (1 + R) dot v(rho), "local intensity") + underbrace(sqrt(v(rho)), "zero point")
+  vrad(rho) = Vrad(rho) slash #unit[Erec] = underbrace(- (1 + R) dot v(rho), "local intensity") + underbrace(sqrt(v(rho)), "zero point") eqc
 $ <eq:mod-radial-potential-red>
 
 where $R$ is the running-wave coefficient due to the intensity imbalance between the interfering lattice beams @miller_ultracold_2016.
@@ -21,7 +21,7 @@ In the in-plane lattices, we find the intensity of the #retro beam to be reduced
 The running-wave coefficient is defined as
 
 $
-  R = (1 - sqrt(gamma))^2 / (4 sqrt(gamma)) med ,
+  R = (1 - sqrt(gamma))^2 / (4 sqrt(gamma)) eqc
 $ <eq:mod-radial-running-wave>
 
 which becomes $R = 0$ in an optical lattice without a power imbalance ($gamma = 1$).
@@ -54,7 +54,7 @@ In the antisymmetric configuration ($phase = plus.minus pi slash 4$) the atom po
 ] is $x mod 1 = pi slash 4$, which simplifies @eq:mod-radial-potential-local to
 
 $
-  v^plus.minus (rho) = 4 vs (rho) Rs - vl (rho) [Rl + cos^2(pi slash 4 plus.minus pi slash 4)] med ,
+  v^plus.minus (rho) = 4 vs (rho) Rs - vl (rho) [Rl + cos^2(pi slash 4 plus.minus pi slash 4)] eqc
 $ <eq:mod-radial-potential-local-antisymmetric>
 
 where only the running-wave component of the short lattice contributes.
@@ -69,7 +69,7 @@ The harmonic approximation is valid unless $vl (rho) >> vs (rho)$ where the latt
 In units of the recoil energy #unit[Erec], the zero-point energy amounts to
 
 $
-  epsilon_0^plus.minus = sqrt(16 vs (rho) plus.minus vl (rho)) med .
+  epsilon_0^plus.minus = sqrt(16 vs (rho) plus.minus vl (rho)) eqd
 $ <eq:mod-radial-zero-point>
 
 The prefactor $4 dot 4 = 16$ of the lattice depths is composed of the ratios between the recoil energies and the squared lattice periods of the short and long lattice, respectively.
@@ -79,7 +79,7 @@ $
   vrad^plus.minus (rho) =
   4 vs (rho) Rs
   - vl (rho) [Rl + (1 plus.minus 1) slash 2]
-  + sqrt(16 vs (rho) plus.minus vl (rho)) med ,
+  + sqrt(16 vs (rho) plus.minus vl (rho)) eqc
 $ <eq:mod-radial-potential-antisymmetric>
 
 where the contributions by the first and last term are deconfining.
@@ -135,7 +135,7 @@ Then, we fit the oscillation frequencies $f$ by computing the radial potential a
 With this fit, we find the beam waists
 
 $
-  wx1064 = #qty[138.4(7)][μm] quad "and" quad wx532 = #qty[119.0(11)][μm] med ,
+  wx1064 = #qty[138.4(7)][μm] quad "and" quad wx532 = #qty[119.0(11)][μm] eqc
 $ <eq:mod-radial-result>
 
 which are in agreement with the results obtained using the in-situ #lms (compare @tab:mod-super-result).

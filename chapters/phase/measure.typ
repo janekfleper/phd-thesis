@@ -18,7 +18,7 @@ As introduced in @sec:phase-setup, we tune the superlattice phase #phase through
 The total frequency detuning of the #x1064 lattice is
 
 $
-  f = fdds + 2 dot faom
+  f = fdds + 2 dot faom eqc
 $ <eq:phase-measure-frequency>
 
 where the factor $2$ takes the double-pass configuration of the AOM into account.
@@ -284,7 +284,7 @@ This technique allows an alternation between the two configurations every sequen
 The distribution of the frequency differences of consecutive sequences in #subref(<fig:phase-measure-period>, tr[a]) yields the frequency period
 
 $
-  Df = #qty[149.79(18)][MHz]
+  Df = #qty[149.79(18)][MHz] eqc
 $ <eq:phase-measure-period>
 
 which is only slightly lower than the value estimated from the optical path length.

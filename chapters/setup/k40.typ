@@ -69,7 +69,7 @@ This interaction is characterized by the scattering length #asc that depends on 
 In an external magnetic field, the scattering length can be tuned by a Feshbach resonance
 
 $
-  asc = a_"bg" (1 - Delta / (B - B_0))
+  asc = a_"bg" (1 - Delta / (B - B_0)) eqc
 $ <eq:setup-k40-feshbach>
 
 where $a_"bg"$ is the background scattering length, $Delta$ is the resonance width and $B_0$ is the resonance position @chin_feshbach_2010.

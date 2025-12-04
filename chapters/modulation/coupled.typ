@@ -12,7 +12,7 @@ In two dimensions, the Bravais lattice is spanned by the vectors #a1 and #a2 (se
 The corresponding two-dimensional lattice potential is
 
 $
-  V(vr) = Vx1064 dot sin^2(x cos fitang + y sin fitang) + Vy1064 dot sin^2(fitang)
+  V(vr) = Vx1064 dot sin^2(x cos fitang + y sin fitang) + Vy1064 dot sin^2(fitang) eqc
 $ <eq:mod-coupled-potential>
 
 where the #x1064 lattice is rotated by the relative angle #fitang.
@@ -38,7 +38,7 @@ In dimensionless units where the lattice period is $a = pi$ and the energy is no
   #set math.equation(number-align: bottom)
   $
     cband_cn (vq) uqm2(m1, m2) & = [(q_x + 2m1)^2 + (q_y + 2 / (cos fitang) (m2 + m1 sin fitang))^2] uqm2(m1, m2) \
-                               & + sum_(m1' m2') V_(m1' m2') dot uqm2(m1 - m1'\,, m2 - m2')
+                               & + sum_(m1' m2') V_(m1' m2') dot uqm2(m1 - m1'\,, m2 - m2') eqc
   $ <eq:mod-coupled-schroedinger>
 ]
 

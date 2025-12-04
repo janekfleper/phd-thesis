@@ -47,7 +47,7 @@ The resulting superlattice phase is
 $
   phase & = phix1064 - 1 / 2 phix532 \
         & = (k + Delta k) dot integral_0^d phy.dd(x) nx1064 (x) - k dot integral_0^d phy.dd(x) nx532 (x) \
-        & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot nx1064 \
+        & = k dot sum_sigma d_sigma dot Delta n_sigma + Delta k dot sum_sigma d_sigma dot nx1064 eqc
 $ <eq:phase-stability-phi>
 
 where $k$ is the wave vector of the reference laser that pumps the second-harmonic generation cavity in @fig:phase-setup.
@@ -61,7 +61,7 @@ The sensitivity of the superlattice phase #phase to the temperature $T$ is given
 
 $
   phy.pdv(phase, T) =
-  k dot sum_sigma (phy.pdv(d_sigma, T) dot Delta n_sigma + d_sigma dot phy.pdv(Delta n_sigma, T))
+  k dot sum_sigma (phy.pdv(d_sigma, T) dot Delta n_sigma + d_sigma dot phy.pdv(Delta n_sigma, T)) eqc
 $ <eq:phase-stability-phi-derivative>
 
 where the first term in the sum represents the thermal expansion of the optical elements and the second term takes the relative changes of the refractive indices into account.
@@ -335,7 +335,7 @@ While the sign of the slope matches a decreasing air temperature according to th
 From the mean phase drift, we extract the empirical correction
 
 $
-  phy.pdv(phase, tau) = #qty[-0.94(9)][mrad/s] med ,
+  phy.pdv(phase, tau) = #qty[-0.94(9)][mrad/s] eqc
 $ <eq:phase-stability-result-slope>
 
 which we apply to all sequences where the atoms are trapped in the superlattice for longer than #qty[100][ms].

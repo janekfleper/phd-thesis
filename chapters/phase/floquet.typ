@@ -23,7 +23,7 @@ In the framework of Floquet engineering, we apply a periodic modulation $Vmod(ta
 The total Hamiltonian of the system is
 
 $
-  hat(H)(tau) = H0 + Vmod(tau) thin ,
+  hat(H)(tau) = H0 + Vmod(tau) eqc
 $ <eq:phase-floquet-theory-hamiltonian>
 
 where the periodicity $hat(H)(tau + T) = hat(H)(tau)$ is inherited from the modulation.
@@ -31,7 +31,7 @@ According to Floquet theory, the modulated system is described by an effective, 
 Using the effective Hamiltonian and the kick operator, we express the time evolution operator as
 
 $
-  U(tau_i -> tau_f) = e^(-i kick(tau_f)) e^(-i (tau_f - tau_i) Heff) e^(i kick(tau_i)) thin ,
+  U(tau_i -> tau_f) = e^(-i kick(tau_f)) e^(-i (tau_f - tau_i) Heff) e^(i kick(tau_i)) eqc
 $ <eq:phase-floquet-theory-evolution>
 
 where the kick operator $kick(tau + T) = kick(tau)$ has the same periodicity as the modulation and averages to zero over one modulation period.
@@ -209,7 +209,7 @@ $
     0, VNN, VDE, 0;
     0, VDE, VNN, 0;
     VCT, 0, 0, 0;
-  ) .
+  ) eqd
 $ <eq:phase-floquet-crossover-hamiltonian>
 
 We neglect the higher-order corrections in the static Hamiltonian @eq:theory-double-two-hamiltonian[] since they are smaller than the tunneling amplitude $t$ by several orders of magnitude.
@@ -295,7 +295,7 @@ While the correlated tunneling amplitude #VCT is much smaller than the tunneling
 The total pair-tunneling amplitude in the near-resonant Floquet theory is
 
 $
-  Jeff approx (4 teff^2) / Ueff + (-1)^l dot 2 VCTeff
+  Jeff approx (4 teff^2) / Ueff + (-1)^l dot 2 VCTeff eqc
 $ <eq:phase-floquet-crossover-tunneling>
 
 where the first term corresponds to the superexchange constant based on the effective parameters #teff and #Ueff.

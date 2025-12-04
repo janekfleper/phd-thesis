@@ -106,7 +106,7 @@ For the Bloch waves in the symmetric configuration shown in #subref(<fig:theory-
 If the Wannier functions $w_1 (x)$ and $w_2 (x)$ are computed with @eq:theory-wannier-transformation, the maximally localized Wannier functions are
 
 $
-  w_L (x) = 1 / sqrt(2) (w_1 (x) + w_2 (x)) quad "and" quad w_R (x) = 1 / sqrt(2) (w_1 (x) - w_2 (x)) thin .
+  w_L (x) = 1 / sqrt(2) (w_1 (x) + w_2 (x)) quad "and" quad w_R (x) = 1 / sqrt(2) (w_1 (x) - w_2 (x)) eqd
 $ <eq:theory-super-wannier-superposition>
 
 This mixture of the Wannier functions is illustrated in @fig:theory-super-wannier-mixing.

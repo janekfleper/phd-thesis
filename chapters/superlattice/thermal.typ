@@ -18,7 +18,7 @@ The dominant effects from the temperature gradient are a geometrical expansion o
 In total, we quantify the optical effects due to the temperature gradient $Delta T$ with the coefficient
 
 $
-  G = alpha (n_0 - 1) + phy.dv(n, T)
+  G = alpha (n_0 - 1) + phy.dv(n, T) eqc
 $ <eq:super-thermal-G>
 
 where $n_0$ is the refractive index of the optical material @laskin_selection_2022.

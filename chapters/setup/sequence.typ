@@ -154,7 +154,7 @@ The absorption by the atoms reduces the photon count in the resonant imaging pul
 We then compute the optical density of the atoms with the expression
 
 $
-  "OD"(x, y) = sigma_0 dot n(x, y) = -ln((I_"atom" (x, y)) / (I_"bright" (x, y)))
+  "OD"(x, y) = sigma_0 dot n(x, y) = -ln((I_"atom" (x, y)) / (I_"bright" (x, y))) eqc
 $ <eq:setup-sequence-detect-imaging-od>
 
 where $I_"atom" (x, y)$ and $I_"bright" (x, y)$ are the atom and bright image respectively.
@@ -169,7 +169,7 @@ Once calibrated, the evaluation can be applied to all images with the same param
 Instead of @eq:setup-sequence-detect-imaging-od, we then use the expression
 
 $
-  "OD"(x, y) = sigma_0 dot n(x, y) = -alpha ln((I_"atom" (x, y)) / (I_"bright" (x, y))) + (I_"bright" (x, y) - I_"atom" (x, y)) / I_0^"sat"
+  "OD"(x, y) = sigma_0 dot n(x, y) = -alpha ln((I_"atom" (x, y)) / (I_"bright" (x, y))) + (I_"bright" (x, y) - I_"atom" (x, y)) / I_0^"sat" eqc
 $ <eq:setup-sequence-detect-imaging-saturated-od>
 
 where the second term takes the saturation of the imaging transition into account, and the deviations from an ideal two-level system are captured by the parameter $alpha$.

@@ -34,6 +34,9 @@
 #let cexp(body) = $upright(e)^(upright(i) #body)$
 #let ncexp(body) = $upright(e)^(- upright(i) #body)$
 
+#let eqd = $med dot$
+#let eqc = $med comma$
+
 #let sn(L, J) = {
   show math.frac: it => $it.num slash it.denom$
   $attach(#L, tl: 2, br: #J)$

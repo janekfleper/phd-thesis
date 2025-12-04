@@ -35,7 +35,7 @@ This model is illustrated in the inset of #subref(<fig:theory-double-one>, "a") 
 With the basis states ${ketL = vec(1, 0), ketR = vec(0, 1)}$, the Hamiltonian of a single particle in a double well is
 
 $
-  hat(H) = mat(Delta, -t; -t, -Delta)
+  hat(H) = mat(Delta, -t; -t, -Delta) eqc
 $ <eq:theory-double-one-hamiltonian>
 
 which is equivalent to the Hamiltonian @eq:theory-super-hamiltonian-bpo[] with the system size $N = 1$.
@@ -55,7 +55,7 @@ The growing energy gap results in an increase of the oscillation frequency, whil
 The general expressions for the frequency and the amplitude of the oscillation are
 
 $
-  f = 2 sqrt(t^2 + Delta^2) slash h quad "and" quad A = t^2 / (t^2 + Delta^2) thin .
+  f = 2 sqrt(t^2 + Delta^2) slash h quad "and" quad A = t^2 / (t^2 + Delta^2) eqd
 $ <eq:theory-double-one-rabi-parameters>
 
 For a large offset $abs(Delta) >> t$, the coupling between the sites vanishes and the eigenenergies approach $epsilon_g = minus Delta$ and $epsilon_e = plus Delta$.
@@ -108,7 +108,7 @@ $
     -t, 0, 0, -t;
     -t, 0, 0, -t;
     0, -t, -t, U - 2 Delta;
-  ) .
+  ) eqd
 $ <eq:theory-double-two-hamiltonian>
 
 We can find the eigenenergies and the eigenstates as a function of the interaction $U slash t$ and the offset $Delta slash t$ by numerical diagonalization of the Hamiltonian.
@@ -177,7 +177,7 @@ This gap is a result of the second-order tunneling process between the split sta
 The corresponding energy scale is the superexchange constant
 
 $
-  J = (4t^2) / U thin ,
+  J = (4t^2) / U
 $ <eq:theory-double-two-superexchange>
 
 that is computed with the second-order perturbation theory @auerbach_interacting_2012.

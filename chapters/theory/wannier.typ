@@ -9,7 +9,7 @@ We can compute the Wannier functions from the Bloch waves $bloch(q, n)(x)$ with 
 
 $
   w_n (x - x_i)
-  = 1 / sqrt(N) sum_(q in #h(0em) "BZ") bloch(q, n)(x) med ncexp(q x_i)
+  = 1 / sqrt(N) sum_(q in #h(0em) "BZ") bloch(q, n)(x) med ncexp(q x_i) eqc
 $ <eq:theory-wannier-transformation>
 
 where $n$ is the band index and $N$ is the number of sites in the optical lattice.
@@ -51,7 +51,7 @@ If two particles with the same spatial wavefunction $w(phy.vb(r))$ and opposite 
 $
   U
   = (4 pi phy.hbar^2 asc) / m
-  integral phy.dd(phy.vb(r), 3) abs(w(phy.vb(r)))^4
+  integral phy.dd(phy.vb(r), 3) abs(w(phy.vb(r)))^4 eqc
 $ <eq:theory-wannier-interaction-strength>
 
 where #asc is the scattering length that characterizes the magnitude and sign of the interaction#sym.space.nobreak@jaksch_cold_1998.
