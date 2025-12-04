@@ -269,6 +269,7 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
   caption: [
     Pair tunneling in the Floquet-driven double wells.
     The different orders $l$ are overlapped as a function of the effective interaction $Ueff = U + l h nu$ in @eq:phase-floquet-theory-near.
+    The shaded areas show the parameters according to the near-resonant Floquet theory, and the uncertainties are computed using Monte-Carlo simulations.
     *a*, Minimal energy gap between the three eigenstates shown in @fig:phase-floquet-crossover-spectrum.
     The solid line shows the minimal energy gap in the static spectrum as a function of the interaction energy $U slash t$.
     *b*, Correlated-tunneling amplitude extracted from the effective Hamiltonian.
