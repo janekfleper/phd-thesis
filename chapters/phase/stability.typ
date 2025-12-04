@@ -70,8 +70,8 @@ Therefore, we neglect the first term to compute the temperature sensitivity of t
 In the case of the other environmental parameters the first term in @eq:phase-stability-phi-derivative vanishes since they do not affect the geometrical path length.
 
 
-In @tab:phase-stability-temperature-coefficients, the temperature coefficients $phy.pdv(phase, T)$ are compiled for each segment.
-If we combine all segments, the total temperature coefficient is $phy.pdv(phase, T) = #iqty[-14.4][mrad/K]$.
+In @tab:phase-stability-temperature-coefficients, the temperature coefficients $phy.pdv(phase, T, style: "horizontal")$ are compiled for each segment.
+If we combine all segments, the total temperature coefficient is $phy.pdv(phase, T, style: "horizontal") = #iqty[-14.4][mrad/K]$.
 However, the changes of the temperature $T$ are not uniform in all segments.
 In the first air segment between the retro mirror and the retro lens, the peak-to-peak temperature variation is typically #degC[0.2] in one hour.
 On a timescale of a few days, the mean temperature drifts between #degC[0.1] and #degC[0.2].
@@ -88,7 +88,7 @@ The resulting limitation for the stability of the superlattice phase is discusse
   },
   caption: [
     Temperature coefficients of the segments in the retro path.
-    The derivatives $phy.pdv(Delta n_sigma, T)$ show that the refractive index of air is significantly less sensitive to the temperature compared to the optical materials.
+    The derivatives $phy.pdv(Delta n_sigma, T, style: "horizontal")$ show that the refractive index of air is significantly less sensitive to the temperature compared to the optical materials.
     However, the actual contributions to the superlattice phase #phase are similar in all segments due to the different distances $d_sigma$.
     The two lenses made of #CAF2 (lens 1) and #NBALF4 (lens 2) form the achromatic retro lens.
     The reference conditions for the computation of the temperature coefficients are $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$ and $RH_0 = #qty[40][%]$.

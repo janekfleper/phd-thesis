@@ -106,8 +106,8 @@ By increasing the center frequency to $f_"75" + Delta U slash h$, we can then on
 The separation of singles and doubles allows us to image the corresponding atomic densities $n_S (x, y)$ and $n_D (x, y)$ individually.
 
 Besides the singles-doubles separation, the HS1 pulse can also be used to transfer atoms in a single plane of the vertical lattice @gall_quantum_2020 @wurz_quantum_2021.
-This technique requires a strong magnetic field gradient $phy.pdv(B_z, z)$ to change the resonant transition frequency as a function of the vertical position.
-With the fast Feshbach coils in an anti-Helmholtz configuration, we can create a magnetic field gradient up to $phy.pdv(B_z, z) = #qty[33.3][G/cm]$.
+This technique requires a strong magnetic field gradient $phy.pdv(B_z, z, style: "horizontal")$ to change the resonant transition frequency as a function of the vertical position.
+With the fast Feshbach coils in an anti-Helmholtz configuration, we can create a magnetic field gradient up to $phy.pdv(B_z, z, style: "horizontal") = #iqty[33.3][G/cm]$.
 This results in a frequency difference of approximately #qty[640][Hz] between neighboring lattice planes.
 Due to magnetic field noise, this detuning between the planes does not allow a reliable transfer of a single plane.
 By initially loading the atoms into the #z1064 lattice, only every second plane of the #z532 lattice can be occupied.
