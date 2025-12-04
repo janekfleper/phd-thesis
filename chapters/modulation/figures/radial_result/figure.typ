@@ -455,11 +455,11 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  axes.inset-indicator(..indicator-inset-0)
   draw.collection(..collection-8)
   draw.collection(..collection-9)
   draw.collection(..collection-10)
   draw.collection(..collection-11)
+  axes.inset-indicator(..indicator-inset-0)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)
   draw.collection(..collection-1)
