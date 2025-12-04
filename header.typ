@@ -25,7 +25,7 @@
 
 // some custom fancy-units functions
 #let deg(..args, body) = $#num(..args, body)degree$
-#let degC(..args, body) = $#num(..args, body)degree "C"$
+#let degC(..args, body) = $#num(..args, body)#h(0.2em)degree "C"$
 #let iqty = qty.with(unit-format: format-unit-symbol)
 #let pqty = qty.with(unit-format: format-unit-power)
 #let iunit = unit.with(format: format-unit-symbol)
