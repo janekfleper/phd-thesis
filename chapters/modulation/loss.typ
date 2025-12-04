@@ -85,7 +85,7 @@ For the primary modulation, we use the default amplitude $dV slash Vx1064 = #tr[
 Since no other transition $1 -> n'$ is available at the frequency #fmod2, we can use a strong modulation amplitude $dV^((2)) slash dV approx 5$ without affecting the atoms in the lowest band.
 In #subref(<fig:mod-loss-channels>, "a") we observe the recovery of the resonance visibility if the secondary modulation frequency #fmod2 is resonant with one of the available transitions $3 -> n''$ in #subref(<fig:mod-loss-channels>, "b").
 Despite the additional band gaps of the coupled band structure, we can always find a fixed modulation frequency #fmod2 to enable the atom-loss mechanism across the entire atom cloud.
-This is essential to extend the parameter regime of the in-situ #lms as a calibration technique for the lattice depth $V0(x, y)$.
+This is essential to extend the parameter regime of the in-situ #lms as a calibration technique for the lattice depth $V(x, y)$.
 
 For the #z532 lattice, where we can set the lattice depth to $V0 > #qty[85][Erec]$, we use the band transition $1 -> 5$ instead of the band transition $1 -> 3$ for the in-situ #lms.
 For lattice depths $V0 < #qty[85][Erec]$, using the excited band $n' = 5$ is not recommended since its band width $delta band_5$ is not small compared to the transition frequency #fnm(1, 5).

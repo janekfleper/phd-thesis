@@ -28,7 +28,7 @@ To realize a band structure where the width of the two bands is negligible compa
 In this regime, the band width $delta epsilon_3$ is smaller than the energy gap $Delta epsilon = epsilon_3 - epsilon_1$ by at least two orders of magnitude#footnote[
   Compared to any higher band, the width of the first band is always negligible (see @fig:theory-bloch-energy-bands).
 ].
-While the narrow bands are generally desirable for the #lms as a calibration technique, they are an essential condition for the in-situ measurement of the lattice depth $V0(x, y)$.
+While the narrow bands are generally desirable for the #lms as a calibration technique, they are an essential condition for the in-situ measurement of the lattice depth $V(x, y)$.
 If the band widths are not negligible, the equipotential lines we measure in the atomic densities are broadened.
 This would impose a limitation on the precision of the measurement, and we would need to consider the density of states of the energy bands $band_n (q)$.
 
@@ -71,7 +71,7 @@ We select the modulation amplitude #dV to achieve a good visibility of the reson
 For the infrared in-plane lattices, we use the lattice depth $V0 = #qty[60][Erec]$ for the modulated lattice and #qty[30][Erec] for the other lattice to minimize the effects of the coupled band structure (see @sec:mod-coupled).
 With $#unit[Erec] slash h = #qty[4.4][kHz]$, the expected transition frequency in the center of the optical lattice is $f_(1->3) approx #qty[121.6][kHz]$.
 Based on the waists of the #x1064 lattice and the #y1064 lattice, we expect the modulation frequency to change by $delta fmod approx #qty[5][kHz]$ across the atom cloud.
-For a calibration of the lattice depth $V0(x, y)$, we scan the modulation amplitude in steps of #qty[0.5][kHz] up to the frequency $fmod = #qty[122.5][kHz]$.
+For a calibration of the lattice depth $V(x, y)$, we scan the modulation amplitude in steps of #qty[0.5][kHz] up to the frequency $fmod = #qty[122.5][kHz]$.
 In @fig:mod-intro-images, the series of in-situ images is shown for the modulation of the #x1064 lattice.
 For the lowest modulation frequency $fmod = #qty[118.0][kHz]$, we observe narrow resonances near the edge of the atom cloud.
 The resonances move towards the lattice axis with increasing step sizes as the modulation frequency is incremented.

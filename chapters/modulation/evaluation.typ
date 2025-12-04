@@ -7,9 +7,9 @@
 
 == Data analysis for the lattice-depth calibration <sec:mod-eval>
 
-From the series of images in @fig:mod-intro-images, we want to determine the parameters of the lattice depth $V0(x, y)$.
+From the series of images in @fig:mod-intro-images, we want to determine the parameters of the lattice depth $V(x, y)$.
 To minimize the number of fit parameters, we make two presumptions about the profile of the lattice depth.
-We use a one-dimensional Gaussian function that is extruded along the lattice axis to model the lattice depth $V0(x, y)$.
+We use a one-dimensional Gaussian function that is extruded along the lattice axis to model the lattice depth $V(x, y)$.
 For the standing-wave lattices, the variation of the lattice depth along the lattice axis depends on the Rayleigh length.
 Even the shortest Rayleigh length $z_R approx #qty[1.2][mm]$, corresponding to the waist $wx532^z approx #qty[50][μm]$, is larger by one order of magnitude compared to the typical diameter of the atom cloud at #qty[100][μm].
 As a result, the equipotential lines appear to be straight and we only vary the lattice depth perpendicular to the lattice axis for the fit model.
@@ -35,7 +35,7 @@ Even for the #x532 lattice, the variation along the #z-axis is much smaller than
 
 === Development of the fit model <ssec:mod-eval-model>
 
-Based on the aforementioned presumptions to simplify the fit model, the lattice depth $V0(x, y)$ only requires four parameters.
+Based on the aforementioned presumptions to simplify the fit model, the lattice depth $V(x, y)$ only requires four parameters.
 The calibration factor #fita0 quantifies the deviation of the measured lattice depth on the lattice axis from the setpoint #V0.
 To model the lattice depth perpendicular to the lattice axis, we use a one-dimensional Gaussian function with the beam waist #fitw0 and, depending on the modulated lattice, the center position #fitx0 or #fity0.
 The fourth parameter is the angle #fitang to rotate the lattice axis in the #xy-plane.
@@ -45,17 +45,17 @@ To generalize the fit model, we use the radius #fitr to quantify the distance fr
 The resulting function for the lattice depth is
 
 $
-  V0(fitr) = fita0 dot V0 dot exp(-2 fitr^2 / fitw0^2)
+  V(fitr) = fita0 dot V0 dot exp(-2 fitr^2 / fitw0^2)
 $ <eq:mod-eval-model-lattice-depth>
 
 based on the electric field of a Gaussian laser beam in @eq:theory-dipole-gaussian.
-With the lattice depth $V0(fitr)$ and the band structure in @fig:mod-intro-theory, we compute the local transition frequency $fnm(1, 3)(V0)$ in #unit[kHz] (see #subref(<fig:mod-eval-model>, "a-d")).
+With the lattice depth $V(fitr)$ and the band structure in @fig:mod-intro-theory, we compute the local transition frequency $fnm(1, 3)(V)$ in #unit[kHz] (see #subref(<fig:mod-eval-model>, "a-d")).
 
 #floating-figure(
   figure-fit-model(),
   caption: [
     Fit model for the data analysis of the in-situ resonances.
-    *a* - *d*, Transition frequency $fnm(1, 3)(V0)$ computed from the local lattice depth $V0(y)$.
+    *a* - *d*, Transition frequency $fnm(1, 3)(V)$ computed from the local lattice depth $V(y)$.
     The horizontal shaded areas show the modulation frequency that is scanned from #qty[116.0][kHz] (*a*) to #qty[122.0][kHz] (*d*) in steps of #qty[2.0][kHz].
     The setpoint of the lattice depth is $V0 = #qty[60][Erec]$ and the waist of the lattice beams is $w_0 = #qty[140][μm]$.
     *e* - *h*, Resonance function $R(fmod)$ corresponding to the modulation frequencies in *a* - *d*.
@@ -74,16 +74,16 @@ With the lattice depth $V0(fitr)$ and the band structure in @fig:mod-intro-theor
 The resonances are parameterized by a Gaussian function#footnote[
   The shape of the resonances is not crucial, we could use another symmetric distribution here.
 ] centered at the modulation frequency #fmod.
-With the transition frequency #fnm(1, 3) as a function of the local lattice depth $V0(fitr)$, we directly obtain the resonances in position space from the following model function
+With the transition frequency #fnm(1, 3) as a function of the local lattice depth $V(fitr)$, we directly obtain the resonances in position space from the following model function
 
 $
-  R(fitr) = fitaR dot exp(-(fnm(1, 3)(V0) - fmod)^2 / (2 fitsR^2))
+  R(fitr) = fitaR dot exp(-(fnm(1, 3)(V) - fmod)^2 / (2 fitsR^2))
 $ <eq:mod-eval-model-resonance>
 
 with the dimensionless amplitude #fitaR and the width #fitsR.
 The resulting resonances for different modulation frequencies are shown in #subref(<fig:mod-eval-model>, "e-h").
 Starting at $y approx plus.minus #qty[30][μm]$, the resonance spacing increases and the resonances become wider towards the center for constant steps of the modulation frequency.
-The same behavior is observed in the overlap of the modulation frequency and the transition frequency $fnm(1, 3)(V0)$ in #subref(<fig:mod-eval-model>, "a-d").
+The same behavior is observed in the overlap of the modulation frequency and the transition frequency $fnm(1, 3)(V)$ in #subref(<fig:mod-eval-model>, "a-d").
 
 To finalize the fit model, we need to take the underlying atomic density $n_0(x, y)$ into account.
 We use a two-dimensional Gaussian function in the #xy-plane to qualitatively model the shape of the atom cloud#footnote[
@@ -97,11 +97,11 @@ $
 $ <eq:mod-eval-model>
 
 where the resonance function is always applied relative to the local atomic density $n_0(x, y)$ (see #subref(<fig:mod-eval-model>, "i-l")).
-With this fit model, we assume that the atomic density $n_0(x, y)$ and the lattice depth $V0(x, y)$ do not change during the series of images in @fig:mod-intro-images.
+With this fit model, we assume that the atomic density $n_0(x, y)$ and the lattice depth $V(x, y)$ do not change during the series of images in @fig:mod-intro-images.
 Since the total measurement time for the calibration of one optical lattice is only #qty[10][min] to #qty[15][min], both conditions are typically met if the experimental setup is in a thermal equilibrium.
 
 Prior to the fit, we apply an elliptical mask to the atomic densities to discard the outer area where the mean atomic density is zero.
-The mask does not affect the parameters of the lattice depth $V0(x, y)$ since the resonances are not visible outside of the atom cloud.
+The mask does not affect the parameters of the lattice depth $V(x, y)$ since the resonances are not visible outside of the atom cloud.
 In #subref(<fig:mod-eval-x1064-result>, "a"), the fit result matches the positions of the normalized resonances down to the modulation frequency #qty[118.0][kHz].
 The measured lattice depth in the center is slightly larger than #qty[60][Erec], resulting in a calibration factor $fita0 > 1$.
 
@@ -125,12 +125,12 @@ Additionally, the errors of the parameters from the combined fit with all images
 Therefore, we repeat the fit with the model @eq:mod-eval-model[] for each image individually.
 For these individual fits, we cannot optimize the calibration factor #fita0 and the waist #fitw0 at the same time since they would be completely correlated.
 Instead, we fix the value of #fita0 from the combined fit to determine the waist $w_0$ with the individual fits, and vice versa.
-The fit parameters #fity0 and #fitang are always varied since the position and the rotation of the lattice depth $V0(x, y)$ can be determined reliably from a single image.//, as long as resonances are visible.
+The fit parameters #fity0 and #fitang are always varied since the position and the rotation of the lattice depth $V(x, y)$ can be determined reliably from a single image.//, as long as resonances are visible.
 
 The comparison of the combined and individual fit results is shown in #subref(<fig:mod-eval-x1064-result>, "b-e").
 For all fit parameters, the individual results are scattered evenly around the combined results.
 If the lattice depth could not be modeled by a Gaussian function, either the waist #fitw0 or the calibration factor #fita0 would have changed systematically as a function of the modulation frequency.
-We therefore conclude that the fit model @eq:mod-eval-model-lattice-depth[] is suitable to describe the lattice depth $V0(x, y)$.
+We therefore conclude that the fit model @eq:mod-eval-model-lattice-depth[] is suitable to describe the lattice depth $V(x, y)$.
 The waist #fitw0 varies by a few #unit[μm] across the scan of the modulation frequency.
 This parameter is mainly limited by the small radius of the atom cloud $fitr approx #qty[25][μm]$ compared to the #x1064\-lattice waist of $fitw0 approx #qty[140][μm]$.
 For the calibration factor #fita0, we can observe a variation on the order of #num[e-3], which highlights the precision of the lattice calibration with the in-situ #lms.
@@ -221,7 +221,7 @@ With the trap frequencies, the lattice waists #fitw0 can be determined with unce
 For the lattice positions #fitx0 or #fity0 the reference measurement is also based on the radial potential of the lattices.
 If we only use one of the two infrared in-plane lattices, the position of the atom cloud perpendicular to the lattice axes shows the position #fitx0 or #fity0 since the potential minimum is located at the maximum of the intensity.
 This measurement takes around #qty[10][min] for each axis and achieves the same precision as the in-situ #lms.
-While the lattice depth #V0 is only proportional to the intensity of the interfering term in the optical lattice potential, the measured positions are equal as long as the lattice beams are perfectly aligned.
+While the lattice depth $V$ is only proportional to the intensity of the interfering term in the optical lattice potential, the measured positions are equal as long as the lattice beams are perfectly aligned.
 For the #z532 lattice we cannot use the radial potential to accurately determine the lattice position $(fitx0, fity0)$ since the optical potential is repulsive.
 Instead, we needed to infer the lattice position from the combined potential with the #y1064 lattice or the dimple beam, resulting in a much lower accuracy compared to the infrared lattices.
 This was also a significant limitation for the alignment of the #z532 lattice (see @ssec:mod-align-z532).
@@ -232,10 +232,10 @@ From the positions of the minima in the atomic density, we can infer the lattice
 To achieve a good signal-to-noise ratio, this measurement requires averaging for several hours.
 Compared to the in-situ #lms, the uncertainties of the angles $fitang_x1064$ and $fitang_y1064$ are lower by one order of magnitude.
 
-In conclusion, we developed a calibration technique for the lattice depth $V0(x, y)$ based on the in-situ #lms that combines several measurements at a fraction of the runtime.
+In conclusion, we developed a calibration technique for the lattice depth $V(x, y)$ based on the in-situ #lms that combines several measurements at a fraction of the runtime.
 For each modulated lattice, only #qty[10][min] to #qty[15][min] of measurement time are necessary to determine the calibration factor #fita0, the beam waist #fitw0, the lattice position #fitx0 or #fity0 and the angle #fitang in the #xy-plane.
 This technique has enormous potential for the automation of the experimental setup.
-Thanks to the precision of the calibration factor #fita0, we can already detect tiny changes in the lattice depth $V0(x, y)$.
+Thanks to the precision of the calibration factor #fita0, we can already detect tiny changes in the lattice depth $V(x, y)$.
 In @sec:mod-align we use this high sensitivity to optimize the alignment of the lattice beams.
 With motorized mirror mounts to move the lattice beams, the automation could also include the alignment procedure.
 This would allow a daily optimization and calibration of the optical lattice potentials that is fully autonomous.

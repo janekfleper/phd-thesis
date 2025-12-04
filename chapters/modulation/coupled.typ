@@ -122,7 +122,7 @@ Additionally, the transitions to the other coupled energy bands are detuned by a
 
 The main purpose of the investigation of the coupled band structure in this section is to find the optimal configuration for the in-situ #lms of the #x1064 lattice and the #y1064 lattice.
 Due to the computational runtime of the coupled band structure, we are not able to use it for the data analysis according to @sec:mod-eval.
-Instead, we use the one-dimensional band structure to compute the reference data for the transition frequency $fnm(1, 3)(V0)$.
+Instead, we use the one-dimensional band structure to compute the reference data for the transition frequency $fnm(1, 3)(V)$.
 Depending on the lattice depth of the other infrared in-plane lattice, we apply a correction to take the coupled band structure into account.
 @fig:mod-coupled-result shows the calibration factor #fita0 and the waist #fitw0 of the modulated #x1064 lattice as a function of the lattice depth #Vy1064.
 We observe that the measured calibration factor #fita0 matches the predicted band transitions according to the coupled band structure.
@@ -132,7 +132,7 @@ In the intermediate regime $#qty[40][Erec] < Vy1064 <= #qty[50][Erec]$ we observ
 However, the measured calibration factors are slightly smaller than the prediction for the transition to the coupled band $cband_4$.
 At the same time, the waist increases from #qty[145][μm] to #qty[170][μm] and its uncertainty increases as well.
 This indicates the breakdown of the data analysis based on the one-dimensional theory close to the avoided crossings in #subref(<fig:mod-coupled-theory>, "a").
-The fit model for the lattice depth $V0(fitr)$ in @eq:mod-eval-model-lattice-depth assumes a constant calibration factor #fita0 across the atom cloud.
+The fit model for the lattice depth $V(fitr)$ in @eq:mod-eval-model-lattice-depth assumes a constant calibration factor #fita0 across the atom cloud.
 However, at $Vy1064 > #qty[40][Erec]$, the calibration factor #fita0 of the #x1064 lattice increases with the distance #fitr from the lattice axis since the ratio $Vy1064 slash Vx1064$ increases.
 This is wrongly interpreted as an increase of the waist #fitw0 by the fit model.
 Additionally, the equipotential lines become elliptical (see inset in #subref(<fig:mod-coupled-result>, "a") since the ratio $Vy1064 slash Vx1064$ also changes due to the inhomogeneity of the #y1064 lattice.

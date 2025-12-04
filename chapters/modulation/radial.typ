@@ -4,8 +4,8 @@
 
 == Radial potential of a bichromatic superlattice <sec:mod-radial>
 
-The local lattice depth #V0 determines the band structure along the lattice axis, which in turn governs the tunneling amplitude of the atoms in an optical lattice.
-On the other hand, the radial potential describes the potential perpendicular to the lattice axis due to the Gaussian envelope of the underlying lattice beams.
+The local lattice depth $V(x, y)$ determines the band structure along the lattice axis, which in turn governs the tunneling amplitude of the atoms in an optical lattice.
+In contrast, the radial potential describes the potential perpendicular to the lattice axis due to the Gaussian envelope of the underlying lattice beams.
 While the radial potential does not affect the dynamics along the lattice axis, it is significant for the confinement of the atoms in an optical lattice.
 
 The radial potential depends on the local intensity and the zero-point energy @greiner_ultracold_2003.

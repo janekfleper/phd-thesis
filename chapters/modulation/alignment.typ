@@ -64,8 +64,8 @@ We follow the same steps for the vertical alignment of the #retro beam to determ
 To find the global optimum, we walk the #forward beam and the #retro beam with the motorized mirror mounts.
 We can control the motorized mirror mounts through variables in the experimental sequence to make the measurement fully autonomous.
 To overcome the hysteresis of the motorized mirror mounts, we track the beam positions during the measurement with two cameras (see @fig:super-setup).
-The concept behind the optimization of the vertical lattice alignment is based on the inhomogeneity of the lattice depth $V0(x, y, z)$, even though the atomic densities $n(x, y)$ show the integrated signal of the individual lattice planes.
-If the lattice depth $V0(x, y, z)$ does not change between the lattice planes, the resonances have the maximum contrast.
+The concept behind the optimization of the vertical lattice alignment is based on the inhomogeneity of the lattice depth $V(x, y, z)$, even though the atomic densities $n(x, y)$ show the integrated signal of the individual lattice planes.
+If the lattice depth $V(x, y, z)$ does not change between the lattice planes, the resonances have the maximum contrast.
 On the other hand, a variation of the lattice depth along the #z-axis results in broader resonances.
 The optimal alignment of the lattice beams is, therefore, achieved when both the lattice depth and the resonance contrast are optimized.
 We use the calibration factor #fita0 and the ratio $fitaR slash fitsR$ respectively to quantify these two parameters.
@@ -77,7 +77,7 @@ Here, the global optimum of the vertical lattice alignment is realized when the 
 With an estimated uncertainty of $delta z tilde.eq #qty[1][μm]$, the precision of the vertical lattice alignment is on par with the horizontal lattice alignment.
 Compared to the former alignment procedure @miller_ultracold_2016, this is an improvement by one order of magnitude.
 While the possible improvement of the lattice depth (see #subref(<fig:mod-align-x1064-walking>, "b")) is small compared to the simple optimization in @fig:mod-align-x1064-forward, the new alignment procedure makes the lattice alignment significantly more robust to temporal drifts of the lattice beams.
-We can, therefore, operate the optical lattices for longer times without a relevant decrease of the lattice depth $V0(x, y)$.
+We can, therefore, operate the optical lattices for longer times without a relevant decrease of the lattice depth $V(x, y)$.
 
 #floating-figure(
   figure-x1064-walking(),

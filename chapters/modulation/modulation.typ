@@ -17,7 +17,7 @@ With a scan of the modulation frequency, we can find the resonance frequency for
 In this chapter, I will introduce an advanced version of the #lms that does not rely on the band-mapping technique to quantify the occupation of the energy bands.
 We found a mechanism to remove the atoms in the higher bands from the optical lattice potential without turning the lattices off.
 After the excitation of the atoms from the lowest band to a higher band, we further excite them to an untrapped band to achieve the atom loss.
-This allows the in-situ detection of the atomic density to measure the local lattice depth $V_0(x, y)$.
+This allows the in-situ detection of the atomic density to measure the local lattice depth $V(x, y)$.
 Since optical lattices are usually created by interfering Gaussian laser beams, the lattice depth decreases with the distance from the optical axis of the lattice beams.
 At a single modulation frequency, we directly observe the loss of atoms along the equipotential lines of the optical lattice potential.
 With a scan of the modulation frequency across the atom cloud, we determine the maximum lattice depth in the center, the waist of the underlying lattice beams and the position of the optical lattice.
