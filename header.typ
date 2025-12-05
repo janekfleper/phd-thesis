@@ -163,7 +163,7 @@
 #let NSF11 = "N-SF11"
 #let NBAF10 = "N-BAF10"
 #let NBALF4 = "N-BALF4"
-#let SiO2 = "SiO2"
+#let SiO2 = $"SiO"_2$
 #let TGG = "TGG"
 
 // waveplate names...
@@ -221,7 +221,7 @@
 
 // superlattice stability parameters
 #let RH = $R H$
-#let CO2 = "CO2"
+#let CO2 = $"CO"_2$
 #let xCO2 = $x_"C"$
 #let I2C = $"I"^2"C"$
 #let phix1064 = $phi_x1064$
