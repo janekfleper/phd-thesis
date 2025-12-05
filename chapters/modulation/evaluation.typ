@@ -161,8 +161,7 @@ We set the lattice depths $Vy1064 = #qty[60][Erec]$ and $Vx1064 = #qty[30][Erec]
 The visual overlap of the normalized resonances and the fit model @eq:mod-eval-model-lattice-depth[] is shown in #subref(<fig:mod-eval-other-result>, "a"), and the calibration result computed from the individual fits is listed in @tab:mod-eval-results.
 To estimate the calibration uncertainty we only consider the images with $fmod <= #qty[118.5][kHz]$.
 
-For the calibration of the #z532 lattice we use the lattice depth $Vz532 = #qty[100][Erec]$.
-This is the default lattice depth in the experimental sequence (c.f. @fig:setup-sequence).
+For the calibration of the #z532 lattice we use the lattice depth $Vz532 = #qty[100][Erec]$, which is the default value in the experimental sequence (compare @fig:setup-sequence).
 To achieve a good resonance visibility, we use the band transition $1 -> 5$ instead of the band transition $1 -> 3$ (see @sec:mod-loss).
 Furthermore, we set the #x1064 lattice and the #y1064 lattice to the depth #qty[20][Erec] to minimize the overall confinement.
 With $#unit[Erec]slash h = #qty[1.1][kHz]$, the expected modulation frequency in the center of the #z532 lattice is $fmod approx #qty[75][kHz]$.
