@@ -179,7 +179,7 @@ The minimum of the occupation $n_L$ shows the zero-phase frequency #f0 where the
 To evaluate the spatial variation of the phase, we divide the atom images into a grid with the cell size $#qty[9][px] times #qty[9][px]$.
 In each cell, we fit the minimum of the mean occupation $n_L$ to evaluate the zero-phase frequency $f0(x, y)$ across the atom cloud.
 The resulting in-situ superlattice phase is shown in @fig:phase-measure-detect-result.
-We observe a substantial phase gradient $phy.dv(phase, y)$ across the atom cloud that shifts the zero-phase frequency #f0 by up to #qty[2][MHz].
+We observe a substantial phase gradient $phy.dv(phase, y, style: "horizontal")$ across the atom cloud that shifts the zero-phase frequency #f0 by up to #qty[2][MHz].
 In terms of the phase #phase, this corresponds to a variation by approximately #qty[20][mrad].
 The compensation of the phase gradient to achieve a homogeneous superlattice phase is discussed in @ssec:phase-measure-gradient.
 

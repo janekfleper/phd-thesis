@@ -24,9 +24,9 @@ $ <eq:super-thermal-G>
 where $n_0$ is the refractive index of the optical material @laskin_selection_2022.
 The _coefficient of thermal expansion_ (CTE) $alpha$ is positive for most optical materials#footnote[
   Corning Ultra-Low Expansion (ULE#super[®]) Glass @corning_ultra-low_2016 and SCHOTT ZERODUR#super[®] @schott_zerodur_2024 are examples for glasses with a near-zero thermal expansion $alpha = #pqty[0+-10e-9][1/K]$.
-], while the coefficient $phy.dv(n, T)$ can either be positive or negative.
+], while the coefficient $phy.dv(n, T, style: "horizontal")$ can either be positive or negative.
 // For all optical materials with $phy.dv(n, T) > 0$, the coefficient $G$ is also positive.
-If the coefficient $phy.dv(n, T)$ is negative, $G$ ranges from weakly positive to weakly negative.
+If the coefficient $phy.dv(n, T, style: "horizontal")$ is negative, $G$ ranges from weakly positive to weakly negative.
 Certain materials show an athermal behavior $(G approx 0)$ where the two contributions to the thermal lensing in @eq:super-thermal-G compensate each other.
 In case $G$ is negative, the optical material can be used to compensate the thermal lensing in composite optics @rall_simulation_2022.
 
