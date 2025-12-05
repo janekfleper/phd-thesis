@@ -146,8 +146,8 @@
 // lattice beam names
 #let forward = "forward-propagating"
 #let retro = "retro-reflected"
-#let zret = $z_"retro"$
-#let zfwd = $z_"forward"$
+#let zret = $z_"ret"$
+#let zfwd = $z_"fwd"$
 
 // thermal lensing parameters
 #let ftherm = $f_"thermal"$
