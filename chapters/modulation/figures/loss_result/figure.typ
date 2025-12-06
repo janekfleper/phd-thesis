@@ -133,7 +133,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: error-color(color-data),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-1 = transform

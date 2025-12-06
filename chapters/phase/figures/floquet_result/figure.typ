@@ -154,7 +154,7 @@
   let fill-collection-3 = ()
   let stroke-collection-3 = (
     paint: error-color(colors(0)),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-3 = transform
@@ -208,7 +208,7 @@
   let fill-collection-6 = ()
   let stroke-collection-6 = (
     paint: error-color(colors(0)),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-6 = transform
@@ -271,7 +271,7 @@
     bars: (
       y: (
         paint: error-color(color),
-        thickness: linewidth-narrow,
+        thickness: error-linewidth,
         dash: "solid",
       ),
     ),
@@ -381,7 +381,7 @@
   let fill-collection-2 = ()
   let stroke-collection-2 = (
     paint: error-color(colors(0)),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-2 = transform
@@ -435,7 +435,7 @@
   let fill-collection-5 = ()
   let stroke-collection-5 = (
     paint: error-color(colors(0)),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-5 = transform
@@ -585,7 +585,7 @@
   let fill-collection-2 = ()
   let stroke-collection-2 = (
     paint: error-color(color-U9),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-2 = transform
@@ -618,7 +618,7 @@
   let fill-collection-4 = ()
   let stroke-collection-4 = (
     paint: error-color(color-U9),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-4 = transform
@@ -651,7 +651,7 @@
   let fill-collection-6 = ()
   let stroke-collection-6 = (
     paint: error-color(color-U6),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-6 = transform
@@ -684,7 +684,7 @@
   let fill-collection-8 = ()
   let stroke-collection-8 = (
     paint: error-color(color-U6),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-8 = transform
@@ -717,7 +717,7 @@
   let fill-collection-10 = ()
   let stroke-collection-10 = (
     paint: error-color(color-U18),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-10 = transform

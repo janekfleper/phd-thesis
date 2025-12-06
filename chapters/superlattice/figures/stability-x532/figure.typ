@@ -97,7 +97,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: error-color(color-stability-final),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -173,7 +173,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: error-color(color-stability-final),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -257,7 +257,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: error-color(color-stability-initial),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -283,7 +283,7 @@
   )
   let stroke-collection-3 = (
     paint: error-color(color-stability-final),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
 
@@ -391,7 +391,7 @@
   let fill-collection-1 = ()
   let stroke-collection-1 = (
     paint: error-color(color-stability-initial),
-    thickness: linewidth-narrow,
+    thickness: error-linewidth,
     dash: "solid",
   )
   let transform-collection-1 = transform
