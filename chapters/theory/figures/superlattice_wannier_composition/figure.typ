@@ -860,8 +860,13 @@
     label-style: yaxis-minor-label-style,
   )
 
+  let step-0 = (33%, 20%)
   let stroke-line-0 = (
-    paint: colors(1),
+    paint: gradient.linear(..gradient-colors(
+      colors(1).transparentize(100%),
+      step-0,
+      colors(1),
+    )),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -876,7 +881,11 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: gradient.linear(..gradient-colors(
+      colors(0).transparentize(100%),
+      step-0,
+      colors(0),
+    )),
     thickness: linewidth,
     cap: "butt",
     join: "round",
