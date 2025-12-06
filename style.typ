@@ -27,6 +27,13 @@
 #let gradient-modulation-resonance = std.gradient.linear(white, green.darken(40%))
 #let colormap-phase = color.map.turbo
 
+#let gradient-single(initial, final, center, width: 10%) = (
+  (initial, 0%),
+  (initial, center - width / 2),
+  (final, center + width / 2),
+  (final, 100%),
+)
+
 #let gutter = 3mm
 #let gutter-narrow = 2mm
 

@@ -112,10 +112,10 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let colors-n3 = (colors(2),) * 3 + (colors(2).transparentize(transparency),) * 5
+  let colors-n3 = gradient-single(colors(2), colors(2).transparentize(transparency), 35%)
   let gradient-n3 = gradient.linear(..colors-n3)
   let gradient-n3-alpha = gradient.linear(
-    ..colors-n3.map(c => c.transparentize(50%)),
+    ..colors-n3.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
   )
   let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
@@ -138,10 +138,10 @@
     offset-transform: offset-transform-collection-6,
   )
 
-  let colors-n4 = (colors(3).transparentize(transparency),) * 3 + (colors(3),) * 5
+  let colors-n4 = gradient-single(colors(3).transparentize(transparency), colors(3), 35%)
   let gradient-n4 = gradient.linear(..colors-n4)
   let gradient-n4-alpha = gradient.linear(
-    ..colors-n4.map(c => c.transparentize(fill-alpha)),
+    ..colors-n4.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
   )
   let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
@@ -316,10 +316,10 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let colors-n3 = (colors(2),) * 7 + (colors(2).transparentize(transparency),) * 5
+  let colors-n3 = gradient-single(colors(2).transparentize(transparency), colors(2), 59%)
   let gradient-n3 = gradient.linear(..colors-n3)
   let gradient-n3-alpha = gradient.linear(
-    ..colors-n3.map(c => c.transparentize(50%)),
+    ..colors-n3.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
   )
   let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
@@ -342,10 +342,10 @@
     offset-transform: offset-transform-collection-6,
   )
 
-  let colors-n4 = (colors(3).transparentize(transparency),) * 7 + (colors(3),) * 5
+  let colors-n4 = gradient-single(colors(3), colors(3).transparentize(transparency), 59%)
   let gradient-n4 = gradient.linear(..colors-n4)
   let gradient-n4-alpha = gradient.linear(
-    ..colors-n4.map(c => c.transparentize(50%)),
+    ..colors-n4.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
   )
   let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
