@@ -152,7 +152,7 @@
       text(
         size: 1em,
         fill: black,
-        [Tunneling amplitude $t med slash med (h dot #unit[Hz])$],
+        [Tunneling amplitude $t slash (h dot #unit[Hz])$],
       ),
     ),
   )
@@ -194,7 +194,7 @@
       text(
         size: 1em,
         fill: black,
-        [Interaction energy $U slash med (h dot #unit[Hz])$],
+        [Interaction energy $U slash (h dot #unit[Hz])$],
       ),
     ),
   )

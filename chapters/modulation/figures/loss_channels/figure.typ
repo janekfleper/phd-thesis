@@ -595,11 +595,11 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.collection(..collection-1)
   draw.collection(..collection-2)
+  draw.collection(..collection-5)
   draw.collection(..collection-3)
   draw.collection(..collection-4)
-  draw.collection(..collection-5)
+  draw.collection(..collection-1)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-minor-ticks, transform)
   draw.line(..line-6)

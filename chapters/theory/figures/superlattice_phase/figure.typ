@@ -10,7 +10,9 @@
 #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)
 #let yaxis-minor-tick-locs = range(-3, 5).map(y => y * 5)
 
-#let draw-unit-cell(p0, p1, fill: black.transparentize(80%), stroke: none) = {
+#let draw-unit-cell(p0, p1, fill: none, stroke: none) = {
+  if fill == none { fill = fill-mask }
+  if stroke == none { stroke = fill-mask }
   let (x0, y0) = p0
   let (x1, y1) = p1
   let width = x1 - x0

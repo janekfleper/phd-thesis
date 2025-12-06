@@ -317,12 +317,13 @@
     )
   }
 
+  show: figure-style
   diagram(
     debug: 0,
     spacing: 0.5cm,
-    edge-stroke: linewidth-narrow,
+    edge-stroke: linewidth-very-narrow,
     node-shape: rect,
-    mark-scale: 0.7,
+    mark-scale: 0.9,
 
     node((0, 0), axes(axes-0()), name: <axes-0>),
     node((1, 0), axes(axes-1()), name: <axes-1>),

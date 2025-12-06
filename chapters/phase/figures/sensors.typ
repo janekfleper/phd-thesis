@@ -81,7 +81,7 @@
 
   cetz.canvas({
     import cetz.draw: *
-    set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.7))
+    set-style(stroke: black + linewidth-very-narrow, mark: (scale: 0.9))
 
     anchor("pos-retro", (-0.3, -5))
     anchor("pos-dichroic", (-0.3, 0.3))

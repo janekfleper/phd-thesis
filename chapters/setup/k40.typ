@@ -1,5 +1,5 @@
 #import "/header.typ": *
-#import "figures/figures.typ": level-structure
+#import "figures/figures.typ": figure-level-structure
 #import "figures/k40_hyperfine/figure.typ": figure as figure-k40-hyperfine
 #import "figures/k40_feshbach/figure.typ": figure as figure-k40-feshbach
 
@@ -31,7 +31,7 @@ The relevant optical transitions between the hyperfine states are shown in #subr
   grid(
     columns: (1.2fr, 2fr),
     column-gutter: 1em,
-    level-structure(), figure-k40-hyperfine(height: 6.7cm),
+    figure-level-structure(), figure-k40-hyperfine(height: 6.7cm),
   ),
   caption: [
     Hyperfine structure of #K40.
@@ -41,8 +41,6 @@ The relevant optical transitions between the hyperfine states are shown in #subr
     *b*, $m_F$ states of the ground state $sn(S, 1/2)$ as a function of the external magnetic field $B$.
     In the lower hyperfine manifold $phy.ket(F = 9 slash 2)$, the upper four $m_F$ states (black) are used for the magnetic evaporation (see @sec:setup-prepare-ioffe).
     The lowest three $m_F$ states (blue) in the lower manifold and the state $m_F = -7 slash 2$ in the upper manifold are used for the detection and the imaging.
-
-    // TODO: Add *abc* labels...
   ],
   label: <fig:setup-k40-hfs>,
 )

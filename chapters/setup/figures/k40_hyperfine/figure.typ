@@ -412,6 +412,7 @@
   draw.text(..text-21)
   draw.text(..text-22)
   draw.text(..text-23)
+  axes.abc(..abc-style, 2)
 }
 
 

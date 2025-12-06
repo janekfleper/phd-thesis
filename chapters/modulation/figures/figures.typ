@@ -1,14 +1,16 @@
 #import "@preview/cetz:0.4.2"
 #import "/header.typ": *
+#import "/style.typ": *
 
 #let coupled-lattice(ax: 1, ay: 1, nx: 4, ny: 4, theta: -10deg, dx: 5%, dy: 5%) = {
   // to make sure the lattice period a is centered relative to the horizontal line...
   show math.equation: set text(top-edge: "x-height")
 
-  let grid-stroke = red.darken(20%) + 0.7pt
-  let arrow-stroke = 1.4pt
+  let grid-stroke = color-x1064 + linewidth-very-narrow
+  let arrow-stroke = linewidth-narrow
   let arrow-style = (mark: (end: "triangle", fill: black, scale: 0.9))
 
+  show: figure-style
   cetz.canvas({
     import cetz.draw: *
 
@@ -62,21 +64,22 @@
       ((nx - 0.4) * ax, 0),
       ((nx - 0.4) * ax, ay),
       name: "a",
-      mark: (start: "|", end: "|", scale: 1.0),
+      stroke: linewidth-very-narrow,
+      mark: (start: "|", end: "|", scale: 1.5),
     )
     content((rel: (0.2, 0), to: "a.mid"), $a$)
 
     // lattice angle
     let radius = (ny - 1) * ay * 0.9
-    line((0, 0), (0, (ny - 1) * ay), stroke: (dash: "dashed", thickness: 0.7pt))
+    line((0, 0), (0, (ny - 1) * ay), stroke: (dash: "dashed", thickness: linewidth-very-narrow))
     arc((0, radius), radius: radius, start: 90deg, stop: 90deg + theta, name: "arc", stroke: 0.4pt)
     content((rel: (-0.03, -0.3), to: "arc.mid"), fitang)
 
     // coordinate system
     group(name: "coordinates", {
       translate((-0.6, -0.6))
-      line((-0.2, 0), (1, 0), name: "ex", ..arrow-style)
-      line((0, -0.2), (0, 1), name: "ey", ..arrow-style)
+      line((-0.2, 0), (1, 0), name: "ex", stroke: linewidth-very-narrow, ..arrow-style)
+      line((0, -0.2), (0, 1), name: "ey", stroke: linewidth-very-narrow, ..arrow-style)
       content((rel: (0.2, 0), to: "ex.end"), $x$)
       content((rel: (0, 0.2), to: "ey.end"), $y$)
     })

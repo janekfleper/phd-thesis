@@ -144,10 +144,9 @@
     transform: transform,
   )
 
-  let fill-color = colors(1).transparentize(fill-alpha)
-  let fill-collection-3 = fill-color
+  let fill-collection-3 = colors(1).transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: fill-color,
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -167,7 +166,7 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-2)
+  // draw.line(..line-2)
   draw.collection(..collection-3)
   axes.xaxis-ticks(show-ticks: (top,), show-labels: (top,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)
@@ -243,10 +242,9 @@
     transform: transform,
   )
 
-  let fill-color = colors(1).transparentize(fill-alpha)
-  let fill-collection-3 = fill-color
+  let fill-collection-3 = colors(1).transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: fill-color,
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -266,7 +264,7 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-2)
+  // draw.line(..line-2)
   draw.collection(..collection-3)
   axes.xaxis-ticks(show-ticks: (top,), show-labels: (top,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)
@@ -341,10 +339,9 @@
     transform: transform,
   )
 
-  let fill-color = colors(1).transparentize(fill-alpha)
-  let fill-collection-3 = fill-color
+  let fill-collection-3 = colors(1).transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: fill-color,
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -364,7 +361,7 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-2)
+  // draw.line(..line-2)
   draw.collection(..collection-3)
   axes.xaxis-ticks(show-ticks: (top,), show-labels: (top,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)
@@ -439,10 +436,9 @@
     transform: transform,
   )
 
-  let fill-color = colors(1).transparentize(fill-alpha)
-  let fill-collection-3 = fill-color
+  let fill-collection-3 = colors(1).transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: fill-color,
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -462,7 +458,7 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-2)
+  // draw.line(..line-2)
   draw.collection(..collection-3)
   axes.xaxis-ticks(show-ticks: (top,), show-labels: (top,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)

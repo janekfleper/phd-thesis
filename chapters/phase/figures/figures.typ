@@ -2,6 +2,7 @@
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import fletcher.shapes: triangle
 #import "/header.typ": *
+#import "/style.typ": *
 
 #set text(10pt)
 
@@ -33,14 +34,16 @@
     line((-0.3, 0), (0.3, 0))
   })
 
+  show: figure-style
   diagram(
     debug: debug,
     spacing: 0cm,
     cell-size: (2.7cm, 1.5cm),
-    node-stroke: black,
+    node-stroke: linewidth-very-narrow + black,
     node-corner-radius: 2pt,
-    edge-stroke: 0.6pt,
+    edge-stroke: linewidth-very-narrow,
     edge-corner-radius: 2pt,
+    mark-scale: 0.9,
     label-sep: 0.2em,
 
     {
@@ -74,7 +77,7 @@
         "-|>",
         label: "fast",
         label-pos: 28%,
-        label-sep: 0pt,
+        label-sep: 1pt,
         label-side: right,
       )
       edge(
@@ -83,7 +86,7 @@
         "-|>",
         label: "slow",
         label-pos: 30%,
-        label-sep: 0pt,
+        label-sep: 1pt,
         label-side: right,
       )
       edge(<slow-plus>, (rel: (0.2, 0.0), to: <x1064.center>), "-|>")
@@ -110,7 +113,7 @@
       edge(<x1064-aom>, "r,t", "-|>", stroke: x1064-stroke)
 
       // separation of the optical tables
-      edge((2.6, -0.235), (2.6, 2.235), stroke: (thickness: 0.6pt, dash: "dashed"))
+      edge((2.6, -0.235), (2.6, 2.235), stroke: (thickness: linewidth-very-narrow, dash: "dashed"))
     },
   )
 }
@@ -223,9 +226,10 @@
   let y-U = 0.15 * yscale
   let y-Ueff = 0.5 * yscale
 
+  show: figure-style
   cetz.canvas({
     import cetz.draw: *
-    set-style(mark: (scale: 0.7))
+    set-style(mark: (scale: 0.9))
 
     // the static double wells
     draw-potential(black)
@@ -293,8 +297,8 @@
 
     // label the modulation amplitude...
     line(
-      (0.9 * xscale, -0.095 * yscale),
-      (0.9 * xscale, -0.315 * yscale),
+      (0.9 * xscale, -0.085 * yscale),
+      (0.9 * xscale, -0.325 * yscale),
       mark: (symbol: arrow-symbol, fill: black),
       name: "amplitude",
     )

@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let text-box = text-box.with(stroke: none, fill: none)
+
 #let xaxis-label = [Offset $Delta slash t$]
 #let xaxis-minor-tick-locs = range(-3, 3).map(x => x * 2 + 1)
 
@@ -204,7 +206,7 @@
   )
 
   let text-2 = (
-    position: transform((5.8, -5.8)),
+    position: transform((5.3, -6.3)),
     body: place(
       right + bottom,
       text-box(
@@ -215,7 +217,7 @@
   )
 
   let text-3 = (
-    position: transform((5.8, 5.8)),
+    position: transform((5.3, 6.3)),
     body: place(
       right + top,
       text-box(
@@ -332,7 +334,7 @@
   )
 
   let text-2 = (
-    position: transform((5.8, 0.0)),
+    position: transform((6.0, 0.03)),
     body: place(
       right + bottom,
       text-box(
@@ -343,7 +345,7 @@
   )
 
   let text-3 = (
-    position: transform((5.8, 1.00)),
+    position: transform((6.0, 0.97)),
     body: place(
       right + top,
       text-box(

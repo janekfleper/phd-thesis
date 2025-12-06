@@ -119,7 +119,7 @@ In this subsection, I will show the solution for two specific configurations tha
   grid(
     columns: (60%, auto),
     align: horizon,
-    figure-two-symmetric(height: 7cm),
+    figure-two-symmetric(height: 7.2cm),
     block(
       width: 100%,
       {
@@ -145,7 +145,7 @@ In this subsection, I will show the solution for two specific configurations tha
     Two particles in the symmetric double-well potential.
     The spectrum is symmetric with respect to the left and right lattice site if the offset is $Delta = 0$.
     In the symmetry basis, the split states and the interacting states are combined in symmetric and antisymmetric superpositions.
-    This allows a simple representation of the eigenstates in the symmetric double well, as indicated by the colors of the eigenenergies $epsilon_n$.
+    This allows a simple representation of the eigenstates as indicated by the colors of the eigenenergies $epsilon_n$.
 
     // TODO: Add arrows to mark the gaps $2t$ and $J$?
     // TODO: Maybe add a double-well potential with some atoms?

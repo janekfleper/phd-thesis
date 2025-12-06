@@ -49,6 +49,7 @@
 #let linewidth = 2pt
 #let linewidth-narrow = 1.5pt
 #let linewidth-very-narrow = 0.9pt
+#let linewidth-very-very-narrow = 0.5pt
 #let error-linewidth = linewidth-narrow
 
 #let markersize = 3pt

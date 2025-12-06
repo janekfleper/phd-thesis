@@ -6,7 +6,7 @@
 
 #let phase-ramp = cetz.canvas({
   import cetz.draw: *
-  set-style(mark: (scale: 0.7))
+  set-style(mark: (scale: 0.9))
 
   line(
     (0cm, 0),
@@ -265,7 +265,6 @@
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
-  // axes.spines(spines)
   axes.abc(..abc-style, location: (1.15em, 0.3em), fill: none, 2)
 }
 
@@ -334,8 +333,6 @@
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
-  // axes.spines(spines)
-  // axes.abc(..abc-style, 3)
 }
 
 
@@ -403,7 +400,6 @@
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
-  // axes.spines(spines)
   axes.abc(..abc-style, location: (1.15em, 0.3em), fill: none, 3)
 }
 
@@ -472,8 +468,6 @@
   draw.line(..line-0)
   draw.line(..line-1)
   draw.line(..line-2)
-  // axes.spines(spines)
-  // axes.abc(..abc-style, 5)
 }
 
 

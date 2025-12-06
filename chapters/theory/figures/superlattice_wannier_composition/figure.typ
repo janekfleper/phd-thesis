@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let text-box = text-box.with(stroke: none, fill: none)
+
 // #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)
 #let xaxis-minor-tick-locs = range(-5, 4).map(x => x / 20 - 0.025)
 
@@ -596,7 +598,7 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-5.515%, 50.0%),
+    position: (-6%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -735,7 +737,7 @@
   )
 
   let text-5 = (
-    position: transform((0.114, -5.4)),
+    position: transform((0.114, -4.2)),
     body: place(
       right + bottom,
       text-box(text(size: 1em, fill: black, [$n = 1$])),
@@ -743,7 +745,7 @@
   )
 
   let text-6 = (
-    position: transform((0.114, 2.5)),
+    position: transform((0.114, 1.2)),
     body: place(
       right + bottom,
       text-box(text(size: 1em, fill: black, [$n = 2$])),
@@ -751,7 +753,7 @@
   )
 
   let text-7 = (
-    position: transform((0.114, 8.8)),
+    position: transform((0.114, 10.1)),
     body: place(
       right + bottom,
       text-box(text(size: 1em, fill: black, [$n = 3$])),
@@ -806,7 +808,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-6.213%, 50.0%),
+    position: (-6%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -930,7 +932,7 @@
   )
 
   let text-4 = (
-    position: transform((0.114, 0.00)),
+    position: transform((0.114, 0.05)),
     body: place(
       right + bottom,
       text-box(text(size: 1em, fill: black, [$n = 1$])),
@@ -938,7 +940,7 @@
   )
 
   let text-5 = (
-    position: transform((0.114, 0.95)),
+    position: transform((0.114, 0.91)),
     body: place(
       right + bottom,
       text-box(text(size: 1em, fill: black, [$n = 2$])),

@@ -2,6 +2,7 @@
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import "/header.typ": *
 #import "/style.typ": *
+#import "/mpl2typ/lib.typ": axes
 
 #set page(width: auto, height: auto, margin: 0.9em)
 
@@ -13,8 +14,8 @@
   let gap = 0.3
   let hfs-width = 1
 
-  let state-stroke = black + 1pt
-  let gap-stroke = black + 0.5pt
+  let state-stroke = black + linewidth-very-narrow
+  let gap-stroke = black + linewidth-very-very-narrow
 
   // define the fine-structure states
   let states = (
@@ -54,14 +55,15 @@
     )
   }
 
-  let transition-stroke = red + 0.6pt
+  let transition-stroke = red + linewidth-very-narrow
   show: figure-style
 
   diagram(
     debug: debug,
     spacing: 0cm,
     cell-size: (1.5cm, 1.7cm),
-    edge-stroke: 0.6pt,
+    edge-stroke: linewidth-very-narrow,
+    mark-scale: 0.7,
 
     for state in states {
       node(state.position, name: state.name)
@@ -136,9 +138,20 @@
   )
 }
 
+#let figure-level-structure(stroke: none, debug: 0) = {
+  block(
+    fill: none,
+    stroke: stroke,
+    {
+      level-structure(debug: 0)
+      axes.abc(..abc-style, 1)
+    },
+  )
+}
+
 #figure({
   set text(10pt)
-  block(stroke: black, level-structure(debug: 0))
+  figure-level-structure(stroke: black)
 })
 #pagebreak()
 
