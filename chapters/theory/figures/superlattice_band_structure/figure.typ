@@ -7,7 +7,9 @@
 
 #let yaxis-minor-tick-locs = range(-2, 5).map(y => y * 5 + 2.5)
 
-#let draw-unit-cell(p0, p1, fill: black.transparentize(80%), stroke: none) = {
+#let draw-unit-cell(p0, p1, fill: none, stroke: none) = {
+  if fill == none { fill = fill-mask }
+  if stroke == none { stroke = fill-mask }
   let (x0, y0) = p0
   let (x1, y1) = p1
   let width = x1 - x0
@@ -333,9 +335,10 @@
     transform: transform,
   )
 
-  let fill-7 = color.rgb(83.529%, 36.863%, 0.0%, 50.0%)
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-7 = fill-color
   let stroke-7 = (
-    paint: color.rgb(83.529%, 36.863%, 0.0%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -384,9 +387,10 @@
     transform: transform,
   )
 
-  let fill-10 = color.rgb(0.0%, 44.706%, 69.804%, 50.0%)
+  let fill-color = colors(0).transparentize(fill-alpha)
+  let fill-10 = fill-color
   let stroke-10 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
