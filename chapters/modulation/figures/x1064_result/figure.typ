@@ -170,7 +170,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(2)),
+    paint: error-color(colors(1)),
     thickness: linewidth-narrow,
     dash: "solid",
   )
