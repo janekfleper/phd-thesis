@@ -27,12 +27,18 @@
 #let gradient-modulation-resonance = std.gradient.linear(white, green.darken(40%))
 #let colormap-phase = color.map.turbo
 
-#let gradient-single(initial, final, center, width: 10%) = (
-  (initial, 0%),
-  (initial, center - width / 2),
-  (final, center + width / 2),
-  (final, 100%),
-)
+#let gradient-colors(..args) = {
+  let args = args.pos()
+  ((args.at(0), 0%),)
+  for i in range(calc.div-euclid(args.len(), 2)) {
+    let (position, width) = args.at(i * 2 + 1)
+    (
+      (args.at(i * 2), position - width / 2),
+      (args.at((i + 1) * 2), position + width / 2),
+    )
+  }
+  ((args.at(-1), 100%),)
+}
 
 #let gutter = 3mm
 #let gutter-narrow = 2mm

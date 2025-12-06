@@ -174,12 +174,7 @@
   )
 
   let stroke-line-0 = (
-    paint: gradient.linear(
-      color-left,
-      color-left,
-      color-right,
-      color-right,
-    ),
+    paint: gradient.linear(..gradient-colors(color-left, (45%, 20%), color-right)),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -194,12 +189,7 @@
   )
 
   let stroke-line-1 = (
-    paint: gradient.linear(
-      color-right,
-      color-right,
-      color-left,
-      color-left,
-    ),
+    paint: gradient.linear(..gradient-colors(color-right, (45%, 20%), color-left)),
     thickness: linewidth,
     cap: "butt",
     join: "round",

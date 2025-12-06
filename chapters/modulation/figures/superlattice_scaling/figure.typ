@@ -112,7 +112,11 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let colors-n3 = gradient-single(colors(2), colors(2).transparentize(transparency), 35%)
+  let colors-n3 = gradient-colors(
+    colors(2),
+    (35%, 10%),
+    colors(2).transparentize(transparency),
+  )
   let gradient-n3 = gradient.linear(..colors-n3)
   let gradient-n3-alpha = gradient.linear(
     ..colors-n3.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
@@ -138,7 +142,11 @@
     offset-transform: offset-transform-collection-6,
   )
 
-  let colors-n4 = gradient-single(colors(3).transparentize(transparency), colors(3), 35%)
+  let colors-n4 = gradient-colors(
+    colors(3).transparentize(transparency),
+    (33%, 10%),
+    colors(3),
+  )
   let gradient-n4 = gradient.linear(..colors-n4)
   let gradient-n4-alpha = gradient.linear(
     ..colors-n4.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
@@ -316,7 +324,11 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let colors-n3 = gradient-single(colors(2).transparentize(transparency), colors(2), 59%)
+  let colors-n3 = gradient-colors(
+    colors(2).transparentize(transparency),
+    (59%, 10%),
+    colors(2),
+  )
   let gradient-n3 = gradient.linear(..colors-n3)
   let gradient-n3-alpha = gradient.linear(
     ..colors-n3.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),
@@ -342,7 +354,11 @@
     offset-transform: offset-transform-collection-6,
   )
 
-  let colors-n4 = gradient-single(colors(3), colors(3).transparentize(transparency), 59%)
+  let colors-n4 = gradient-colors(
+    colors(3),
+    (59%, 10%),
+    colors(3).transparentize(transparency),
+  )
   let gradient-n4 = gradient.linear(..colors-n4)
   let gradient-n4-alpha = gradient.linear(
     ..colors-n4.map(c => (c.at(0).transparentize(fill-alpha), c.at(1))),

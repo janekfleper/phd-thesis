@@ -461,19 +461,17 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let theory-alpha-first(color) = {
-    let transparency = (100%,) * 3 + (0%,) * 4
-    std.gradient.linear(
-      ..transparency.map(a => color.transparentize(a)),
-    )
-  }
+  let theory-alpha-first(color) = std.gradient.linear(..gradient-colors(
+    color.transparentize(100%),
+    (40%, 20%),
+    color,
+  ))
 
-  let theory-alpha-second(color) = {
-    let transparency = (100%,) * 3 + (0%,) * 1
-    std.gradient.linear(
-      ..transparency.map(a => color.transparentize(a)),
-    )
-  }
+  let theory-alpha-second(color) = std.gradient.linear(..gradient-colors(
+    color.transparentize(100%),
+    (80%, 20%),
+    color,
+  ))
 
   // first order stuff...
   let stroke-line-0 = none

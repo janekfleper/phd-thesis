@@ -139,8 +139,10 @@
     transform: transform,
   )
 
+  let step-0 = (47%, 15%)
+  let step-1 = (60%, 9%)
+
   let C0 = colors(0)
-  let alpha-C0 = (80%, 80%, 80%, 80%, 80%, 0%, 0%, 0%)
   let stroke-line-4 = (
     paint: C0,
     thickness: linewidth,
@@ -150,7 +152,11 @@
   )
   let gradient-stroke-line-4 = (
     ..stroke-line-4,
-    paint: gradient.linear(..alpha-C0.map(a => C0.transparentize(a))),
+    paint: gradient.linear(..gradient-colors(
+      C0.transparentize(80%),
+      step-1,
+      C0,
+    )),
   )
   let marker-line-4 = none
   let line-4 = (
@@ -161,7 +167,6 @@
   )
 
   let C1 = colors(1)
-  let alpha-C1 = (80%, 60%, 50%, 30%, 10%, 50%, 60%, 70%)
   let stroke-line-5 = (
     paint: colors(1),
     thickness: linewidth,
@@ -171,7 +176,13 @@
   )
   let gradient-stroke-line-5 = (
     ..stroke-line-5,
-    paint: gradient.linear(..alpha-C1.map(a => C1.transparentize(a))),
+    paint: gradient.linear(..gradient-colors(
+      C1.transparentize(80%),
+      step-0,
+      C1,
+      step-1,
+      C1.transparentize(70%),
+    )),
   )
   let marker-line-5 = none
   let line-5 = (
@@ -182,7 +193,6 @@
   )
 
   let C2 = colors(2)
-  let alpha-C2 = (0%, 0%, 0%, 20%, 40%, 60%, 80%, 90%)
   let stroke-line-6 = (
     paint: colors(2),
     thickness: linewidth,
@@ -192,7 +202,11 @@
   )
   let gradient-stroke-line-6 = (
     ..stroke-line-6,
-    paint: gradient.linear(..alpha-C2.map(a => C2.transparentize(a))),
+    paint: gradient.linear(..gradient-colors(
+      C2,
+      step-0,
+      C2.transparentize(90%),
+    )),
   )
   let marker-line-6 = none
   let line-6 = (

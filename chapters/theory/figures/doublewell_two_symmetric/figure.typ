@@ -59,12 +59,7 @@
   )
 
   let stroke-0 = (
-    paint: gradient.linear(
-      color-double-plus,
-      color-double-plus,
-      color-singlet,
-      color-singlet,
-    ),
+    paint: gradient.linear(..gradient-colors(color-double-plus, (45%, 30%), color-singlet)),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -109,12 +104,7 @@
   )
 
   let stroke-3 = (
-    paint: gradient.linear(
-      color-singlet,
-      color-singlet,
-      color-double-plus,
-      color-double-plus,
-    ),
+    paint: gradient.linear(..gradient-colors(color-singlet, (45%, 30%), color-double-plus)),
     thickness: linewidth,
     cap: "butt",
     join: "round",

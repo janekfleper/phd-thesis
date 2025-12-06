@@ -110,19 +110,19 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let theory-alpha-first(color) = {
-    let transparency = (100%,) * 2 + (0%,) * 5
-    std.gradient.linear(
-      ..transparency.map(a => color.transparentize(a)),
-    )
-  }
+  let theory-alpha-first(color) = std.gradient.linear(..gradient-colors(
+    color.transparentize(100%),
+    (20%, 15%),
+    color,
+  ))
 
-  let theory-alpha-second(color) = {
-    let transparency = (0%,) * 3 + (100%,) * 5 + (0%,) * 1
-    std.gradient.linear(
-      ..transparency.map(a => color.transparentize(a)),
-    )
-  }
+  let theory-alpha-second(color) = std.gradient.linear(..gradient-colors(
+    color,
+    (25%, 15%),
+    color.transparentize(100%),
+    (95%, 8%),
+    color,
+  ))
 
   let stroke-line-1 = (
     paint: color.luma(30.0%),
@@ -358,12 +358,13 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let theory-alpha-second(color) = {
-    let transparency = (0%,) * 2 + (100%,) * 7 + (0%,) * 1
-    std.gradient.linear(
-      ..transparency.map(a => color.transparentize(a)),
-    )
-  }
+  let theory-alpha-second(color) = std.gradient.linear(..gradient-colors(
+    color,
+    (15%, 10%),
+    color.transparentize(100%),
+    (95%, 8%),
+    color,
+  ))
 
   let stroke-line-1 = none
   let marker-line-1 = markers.thin-diamond(
