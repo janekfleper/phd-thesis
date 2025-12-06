@@ -267,36 +267,6 @@
     label-style: xaxis-minor-label-style,
   )
 
-  let stroke-line-0 = (
-    paint: colors(0),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-0 = none
-  let line-0 = (
-    data: data.at("line-0"),
-    stroke: stroke-line-0,
-    marker: marker-line-0,
-    transform: transform,
-  )
-
-  let stroke-line-1 = (
-    paint: colors(0),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-1 = none
-  let line-1 = (
-    data: data.at("line-1"),
-    stroke: stroke-line-1,
-    marker: marker-line-1,
-    transform: transform,
-  )
-
   let fill-collection-2 = colors(0).transparentize(fill-alpha)
   let stroke-collection-2 = (
     paint: colors(0),
@@ -316,36 +286,6 @@
     transform: transform-collection-2,
     compute-scale: compute-scale-collection-2,
     offset-transform: offset-transform-collection-2,
-  )
-
-  let stroke-line-3 = (
-    paint: colors(1),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-3 = none
-  let line-3 = (
-    data: data.at("line-3"),
-    stroke: stroke-line-3,
-    marker: marker-line-3,
-    transform: transform,
-  )
-
-  let stroke-line-4 = (
-    paint: colors(1),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-4 = none
-  let line-4 = (
-    data: data.at("line-4"),
-    stroke: stroke-line-4,
-    marker: marker-line-4,
-    transform: transform,
   )
 
   let fill-collection-5 = colors(1).transparentize(fill-alpha)
@@ -369,36 +309,6 @@
     offset-transform: offset-transform-collection-5,
   )
 
-  let stroke-line-6 = (
-    paint: colors(2),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-6 = none
-  let line-6 = (
-    data: data.at("line-6"),
-    stroke: stroke-line-6,
-    marker: marker-line-6,
-    transform: transform,
-  )
-
-  let stroke-line-7 = (
-    paint: colors(2),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-7 = none
-  let line-7 = (
-    data: data.at("line-7"),
-    stroke: stroke-line-7,
-    marker: marker-line-7,
-    transform: transform,
-  )
-
   let fill-collection-8 = colors(2).transparentize(fill-alpha)
   let stroke-collection-8 = (
     paint: colors(2),
@@ -418,36 +328,6 @@
     transform: transform-collection-8,
     compute-scale: compute-scale-collection-8,
     offset-transform: offset-transform-collection-8,
-  )
-
-  let stroke-line-9 = (
-    paint: colors(3),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-9 = none
-  let line-9 = (
-    data: data.at("line-9"),
-    stroke: stroke-line-9,
-    marker: marker-line-9,
-    transform: transform,
-  )
-
-  let stroke-line-10 = (
-    paint: colors(3),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-10 = none
-  let line-10 = (
-    data: data.at("line-10"),
-    stroke: stroke-line-10,
-    marker: marker-line-10,
-    transform: transform,
   )
 
   let fill-collection-11 = colors(3).transparentize(fill-alpha)
@@ -471,36 +351,6 @@
     offset-transform: offset-transform-collection-11,
   )
 
-  let stroke-line-12 = (
-    paint: colors(4),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-12 = none
-  let line-12 = (
-    data: data.at("line-12"),
-    stroke: stroke-line-12,
-    marker: marker-line-12,
-    transform: transform,
-  )
-
-  let stroke-line-13 = (
-    paint: colors(4),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-13 = none
-  let line-13 = (
-    data: data.at("line-13"),
-    stroke: stroke-line-13,
-    marker: marker-line-13,
-    transform: transform,
-  )
-
   let fill-collection-14 = colors(4).transparentize(fill-alpha)
   let stroke-collection-14 = (
     paint: colors(4),
@@ -520,36 +370,6 @@
     transform: transform-collection-14,
     compute-scale: compute-scale-collection-14,
     offset-transform: offset-transform-collection-14,
-  )
-
-  let stroke-line-15 = (
-    paint: colors(5),
-    thickness: linewidth-very-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-15 = none
-  let line-15 = (
-    data: data.at("line-15"),
-    stroke: stroke-line-15,
-    marker: marker-line-15,
-    transform: transform,
-  )
-
-  let stroke-line-16 = (
-    paint: colors(5),
-    thickness: linewidth-narrow,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-16 = none
-  let line-16 = (
-    data: data.at("line-16"),
-    stroke: stroke-line-16,
-    marker: marker-line-16,
-    transform: transform,
   )
 
   let fill-collection-17 = colors(5).transparentize(fill-alpha)
@@ -597,18 +417,6 @@
   draw.collection(..collection-17)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (), ..yaxis-minor-ticks, transform)
-  draw.line(..line-0)
-  draw.line(..line-1)
-  draw.line(..line-3)
-  draw.line(..line-4)
-  draw.line(..line-6)
-  draw.line(..line-7)
-  draw.line(..line-9)
-  draw.line(..line-10)
-  draw.line(..line-12)
-  draw.line(..line-13)
-  draw.line(..line-15)
-  draw.line(..line-16)
   draw.line(..line-18)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-major-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (), ..yaxis-major-ticks, transform)
