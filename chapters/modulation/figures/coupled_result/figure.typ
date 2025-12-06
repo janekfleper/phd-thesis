@@ -49,7 +49,7 @@
     p0: (0, ylim.at(1)),
     p1: (70, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
@@ -57,7 +57,7 @@
     p0: (110, ylim.at(1)),
     p1: (180, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
@@ -88,7 +88,7 @@
     p0: (0, ylim.at(1)),
     p1: (70, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
@@ -96,7 +96,7 @@
     p0: (110, ylim.at(1)),
     p1: (180, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
@@ -127,7 +127,7 @@
     p0: (0, ylim.at(1)),
     p1: (70, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
@@ -135,7 +135,7 @@
     p0: (110, ylim.at(1)),
     p1: (180, ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 

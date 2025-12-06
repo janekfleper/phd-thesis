@@ -177,7 +177,7 @@
     p0: (xlim2.at(0), ylim.at(1)),
     p1: (xlim2.at(1), ylim.at(0)),
     fill: fill-mask,
-    stroke: none,
+    stroke: fill-mask,
     transform: transform,
   )
 
