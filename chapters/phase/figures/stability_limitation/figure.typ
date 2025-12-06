@@ -65,9 +65,10 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let fill-collection-0 = colors(2).transparentize(50%)
+  let fill-color = colors(2).transparentize(fill-alpha)
+  let fill-collection-0 = fill-color
   let stroke-collection-0 = (
-    paint: colors(2).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -101,9 +102,10 @@
     transform: transform,
   )
 
-  let fill-collection-2 = colors(1).transparentize(50%)
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-2 = fill-color
   let stroke-collection-2 = (
-    paint: colors(1).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

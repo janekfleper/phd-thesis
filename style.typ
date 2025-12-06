@@ -31,6 +31,7 @@
 #let gutter-narrow = 2mm
 
 #let fill-mask = black.transparentize(80%)
+#let fill-alpha = 50%
 
 #let linewidth = 2pt
 #let linewidth-narrow = 1.5pt

@@ -95,11 +95,12 @@
     label-style: yaxis-minor-label-style,
   )
 
+  let fill-color = colors(6).transparentize(fill-alpha)
   let patch-0 = (
     p0: (xlim.at(0), 230.1757616323394),
     p1: (xlim.at(1), 263.73652052421056),
-    fill: colors(6).transparentize(50%),
-    stroke: colors(6).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -118,11 +119,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(5).transparentize(fill-alpha)
   let patch-2 = (
     p0: (xlim.at(0), 198.60418053185484),
     p1: (xlim.at(1), 182.95939076952482),
-    fill: colors(5).transparentize(50%),
-    stroke: colors(5).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -141,11 +143,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(4).transparentize(fill-alpha)
   let patch-4 = (
     p0: (xlim.at(0), 159.62200505311358),
     p1: (xlim.at(1), 166.07693296888436),
-    fill: colors(4).transparentize(50%),
-    stroke: colors(4).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -164,11 +167,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(3).transparentize(fill-alpha)
   let patch-6 = (
     p0: (xlim.at(0), 87.94066594104295),
     p1: (xlim.at(1), 87.55602598531341),
-    fill: colors(3).transparentize(50%),
-    stroke: colors(3).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -187,11 +191,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(2).transparentize(fill-alpha)
   let patch-8 = (
     p0: (xlim.at(0), 60.40529567432023),
     p1: (xlim.at(1), 60.51058175388426),
-    fill: colors(2).transparentize(50%),
-    stroke: colors(2).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -210,11 +215,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(1).transparentize(fill-alpha)
   let patch-10 = (
     p0: (xlim.at(0), -38.84585098874768),
     p1: (xlim.at(1), -38.84616703624476),
-    fill: colors(1).transparentize(50%),
-    stroke: colors(1).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -233,11 +239,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(0).transparentize(fill-alpha)
   let patch-12 = (
     p0: (xlim.at(0), -186.16715896454957),
     p1: (xlim.at(1), -186.16715833210657),
-    fill: colors(0).transparentize(50%),
-    stroke: colors(0).transparentize(50%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 
@@ -376,9 +383,9 @@
     transform: transform,
   )
 
-  let fill-collection-2 = colors(6).transparentize(50%)
+  let fill-collection-2 = colors(6).transparentize(fill-alpha)
   let stroke-collection-2 = (
-    paint: colors(6).transparentize(50%),
+    paint: colors(6),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -427,9 +434,9 @@
     transform: transform,
   )
 
-  let fill-collection-5 = colors(5).transparentize(50%)
+  let fill-collection-5 = colors(5).transparentize(fill-alpha)
   let stroke-collection-5 = (
-    paint: colors(5).transparentize(50%),
+    paint: colors(5),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -478,9 +485,9 @@
     transform: transform,
   )
 
-  let fill-collection-8 = colors(4).transparentize(50%)
+  let fill-collection-8 = colors(4).transparentize(fill-alpha)
   let stroke-collection-8 = (
-    paint: colors(4).transparentize(50%),
+    paint: colors(4),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -529,9 +536,9 @@
     transform: transform,
   )
 
-  let fill-collection-11 = colors(3).transparentize(50%)
+  let fill-collection-11 = colors(3).transparentize(fill-alpha)
   let stroke-collection-11 = (
-    paint: colors(3).transparentize(50%),
+    paint: colors(3),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -580,9 +587,9 @@
     transform: transform,
   )
 
-  let fill-collection-14 = colors(2).transparentize(50%)
+  let fill-collection-14 = colors(2).transparentize(fill-alpha)
   let stroke-collection-14 = (
-    paint: colors(2).transparentize(50%),
+    paint: colors(2),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -723,9 +730,9 @@
     transform: transform,
   )
 
-  let fill-collection-2 = colors(2).transparentize(50%)
+  let fill-collection-2 = colors(2).transparentize(fill-alpha)
   let stroke-collection-2 = (
-    paint: colors(2).transparentize(50%),
+    paint: colors(2),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -774,9 +781,9 @@
     transform: transform,
   )
 
-  let fill-collection-5 = colors(1).transparentize(50%)
+  let fill-collection-5 = colors(1).transparentize(fill-alpha)
   let stroke-collection-5 = (
-    paint: colors(1).transparentize(50%),
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -825,9 +832,9 @@
     transform: transform,
   )
 
-  let fill-collection-8 = colors(0).transparentize(50%)
+  let fill-collection-8 = colors(0).transparentize(fill-alpha)
   let stroke-collection-8 = (
-    paint: colors(0).transparentize(50%),
+    paint: colors(0),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

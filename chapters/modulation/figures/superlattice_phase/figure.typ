@@ -297,9 +297,9 @@
     transform: transform,
   )
 
-  let fill-collection-2 = colors(0).transparentize(50%)
+  let fill-collection-2 = colors(0).transparentize(fill-alpha)
   let stroke-collection-2 = (
-    paint: colors(0).transparentize(50%),
+    paint: colors(0),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -348,9 +348,9 @@
     transform: transform,
   )
 
-  let fill-collection-5 = colors(1).transparentize(50%)
+  let fill-collection-5 = colors(1).transparentize(fill-alpha)
   let stroke-collection-5 = (
-    paint: colors(1).transparentize(50%),
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -399,9 +399,9 @@
     transform: transform,
   )
 
-  let fill-collection-8 = colors(2).transparentize(50%)
+  let fill-collection-8 = colors(2).transparentize(fill-alpha)
   let stroke-collection-8 = (
-    paint: colors(2).transparentize(50%),
+    paint: colors(2),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -450,9 +450,9 @@
     transform: transform,
   )
 
-  let fill-collection-11 = colors(3).transparentize(50%)
+  let fill-collection-11 = colors(3).transparentize(fill-alpha)
   let stroke-collection-11 = (
-    paint: colors(3).transparentize(50%),
+    paint: colors(3),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -501,9 +501,9 @@
     transform: transform,
   )
 
-  let fill-collection-14 = colors(4).transparentize(50%)
+  let fill-collection-14 = colors(4).transparentize(fill-alpha)
   let stroke-collection-14 = (
-    paint: colors(4).transparentize(50%),
+    paint: colors(4),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -524,7 +524,7 @@
 
   let stroke-line-15 = (
     paint: colors(5),
-    thickness: linewidth-narrow,
+    thickness: linewidth-very-narrow,
     cap: "butt",
     join: "round",
     dash: "solid",
@@ -552,9 +552,9 @@
     transform: transform,
   )
 
-  let fill-collection-17 = colors(5).transparentize(50%)
+  let fill-collection-17 = colors(5).transparentize(fill-alpha)
   let stroke-collection-17 = (
-    paint: colors(5).transparentize(50%),
+    paint: colors(5),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

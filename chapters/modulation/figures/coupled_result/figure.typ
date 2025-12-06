@@ -234,9 +234,10 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color.rgb(0.0%, 61.961%, 45.098%, 50.0%)
+  let fill-color = colors(2).transparentize(fill-alpha + 10%)
+  let fill-collection-3 = fill-color
   let stroke-collection-3 = (
-    paint: color.rgb(0.0%, 61.961%, 45.098%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -270,9 +271,10 @@
     transform: transform,
   )
 
-  let fill-collection-5 = color.rgb(0.0%, 44.706%, 69.804%, 50.0%)
+  let fill-color = colors(0).transparentize(fill-alpha + 10%)
+  let fill-collection-5 = fill-color
   let stroke-collection-5 = (
-    paint: color.rgb(0.0%, 44.706%, 69.804%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -422,11 +424,12 @@
     transform: transform,
   )
 
+  let fill-color = colors(0).transparentize(fill-alpha + 10%)
   let patch-1 = (
     p0: (xlim.at(0), 146.6),
     p1: (xlim.at(1), 141.6),
-    fill: color.rgb(0.0%, 44.706%, 69.804%, 30.0%),
-    stroke: color.rgb(0.0%, 44.706%, 69.804%, 30.0%) + linewidth-very-narrow,
+    fill: fill-color,
+    stroke: fill-color + linewidth-very-narrow,
     transform: transform,
   )
 

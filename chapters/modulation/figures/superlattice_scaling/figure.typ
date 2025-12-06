@@ -121,9 +121,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-n2.transparentize(50%)
+  let fill-collection-3 = color-n2.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: color-n2.transparentize(50%),
+    paint: color-n2.transparentize(-30%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -179,7 +179,7 @@
 
   let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
-    paint: gradient-n3-alpha,
+    paint: gradient-n3,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -201,7 +201,7 @@
   let colors-n4 = (colors(3).transparentize(transparency),) * 3 + (colors(3),) * 5
   let gradient-n4 = gradient.linear(..colors-n4)
   let gradient-n4-alpha = gradient.linear(
-    ..colors-n4.map(c => c.transparentize(50%)),
+    ..colors-n4.map(c => c.transparentize(fill-alpha)),
   )
   let stroke-line-7 = (
     paint: gradient-n4,
@@ -235,7 +235,7 @@
 
   let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
-    paint: gradient-n4-alpha,
+    paint: gradient-n4,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -284,10 +284,10 @@
     transform: transform,
   )
 
-  let fill-collection-12 = color-n5.transparentize(50%)
+  let fill-collection-12 = color-n5.transparentize(fill-alpha)
   let stroke-collection-12 = (
-    paint: color-n5.transparentize(50%),
-    thickness: 0.6pt,
+    paint: color-n5.transparentize(-30%),
+    thickness: linewidth-very-narrow,
     dash: "solid",
   )
   let transform-collection-12 = transform
@@ -335,9 +335,9 @@
     transform: transform,
   )
 
-  let fill-collection-15 = color-n6.transparentize(50%)
+  let fill-collection-15 = color-n6.transparentize(fill-alpha)
   let stroke-collection-15 = (
-    paint: color-n6.transparentize(50%),
+    paint: color-n6.transparentize(-30%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -485,9 +485,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-n2.transparentize(50%)
+  let fill-collection-3 = color-n2.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: color-n2.transparentize(50%),
+    paint: color-n2.transparentize(-30%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -543,7 +543,7 @@
 
   let fill-collection-6 = gradient-n3-alpha
   let stroke-collection-6 = (
-    paint: gradient-n3-alpha,
+    paint: gradient-n3,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -599,7 +599,7 @@
 
   let fill-collection-9 = gradient-n4-alpha
   let stroke-collection-9 = (
-    paint: gradient-n4-alpha,
+    paint: gradient-n4,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -648,9 +648,9 @@
     transform: transform,
   )
 
-  let fill-collection-12 = color-n5.transparentize(50%)
+  let fill-collection-12 = color-n5.transparentize(fill-alpha)
   let stroke-collection-12 = (
-    paint: color-n5.transparentize(50%),
+    paint: color-n5.transparentize(-30%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -699,9 +699,9 @@
     transform: transform,
   )
 
-  let fill-collection-15 = color-n6.transparentize(50%)
+  let fill-collection-15 = color-n6.transparentize(fill-alpha)
   let stroke-collection-15 = (
-    paint: color-n6.transparentize(50%),
+    paint: color-n6.transparentize(-30%),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

@@ -131,7 +131,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1).transparentize(50.0%),
+    paint: colors(1).transparentize(fill-alpha),
     thickness: linewidth,
     cap: "butt",
     join: "round",

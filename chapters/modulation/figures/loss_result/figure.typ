@@ -242,7 +242,7 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let fill-collection-0 = colors(0)
+  let fill-collection-0 = colors(0).transparentize(fill-alpha)
   let stroke-collection-0 = (
     paint: colors(0),
     thickness: linewidth-very-narrow,
@@ -263,9 +263,9 @@
     offset-transform: offset-transform-collection-0,
   )
 
-  let fill-collection-1 = colors(5).transparentize(50%)
+  let fill-collection-1 = colors(5).transparentize(fill-alpha)
   let stroke-collection-1 = (
-    paint: colors(5).transparentize(50%),
+    paint: colors(5),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -284,9 +284,9 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let fill-collection-2 = colors(1).transparentize(50%)
+  let fill-collection-2 = colors(1).transparentize(fill-alpha)
   let stroke-collection-2 = (
-    paint: colors(1).transparentize(50%),
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

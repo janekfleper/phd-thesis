@@ -72,9 +72,10 @@
     label-style: xaxis-minor-label-style,
   )
 
-  let fill-collection-1 = colors(0).transparentize(50%)
+  let fill-color = colors(0).transparentize(fill-alpha)
+  let fill-collection-1 = fill-color
   let stroke-collection-1 = (
-    paint: colors(0).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -144,9 +145,10 @@
     offset-transform: offset-transform-collection-4,
   )
 
-  let fill-collection-5 = colors(1).transparentize(50%)
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-5 = fill-color
   let stroke-collection-5 = (
-    paint: colors(1).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -180,9 +182,10 @@
     transform: transform,
   )
 
-  let fill-collection-9 = colors(2).transparentize(50%)
+  let fill-color = colors(2).transparentize(fill-alpha)
+  let fill-collection-9 = fill-color
   let stroke-collection-9 = (
-    paint: colors(2).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -216,9 +219,10 @@
     transform: transform,
   )
 
-  let fill-collection-13 = colors(3).transparentize(50%)
+  let fill-color = colors(3).transparentize(fill-alpha)
+  let fill-collection-13 = fill-color
   let stroke-collection-13 = (
-    paint: colors(3).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -252,9 +256,10 @@
     transform: transform,
   )
 
-  let fill-collection-17 = colors(4).transparentize(50%)
+  let fill-color = colors(4).transparentize(fill-alpha)
+  let fill-collection-17 = fill-color
   let stroke-collection-17 = (
-    paint: colors(4).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -288,9 +293,10 @@
     transform: transform,
   )
 
-  let fill-collection-21 = colors(5).transparentize(50%)
+  let fill-color = colors(5).transparentize(fill-alpha)
+  let fill-collection-21 = fill-color
   let stroke-collection-21 = (
-    paint: colors(5).transparentize(50%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -407,9 +413,9 @@
     label-style: xaxis-minor-label-style,
   )
 
-  let fill-collection-1 = colors(0)
+  let fill-collection-1 = colors(0).transparentize(fill-alpha)
   let stroke-collection-1 = (
-    paint: colors(0).transparentize(20%),
+    paint: colors(0),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -429,7 +435,7 @@
   )
 
   let stroke-line-2 = (
-    paint: color.luma(50.0%),
+    paint: color.luma(30.0%),
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -443,9 +449,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(50%)
+  let fill-collection-3 = colors(1).transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: colors(1).transparentize(40%),
+    paint: colors(1),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -464,9 +470,9 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let fill-collection-5 = colors(2).transparentize(50%)
+  let fill-collection-5 = colors(2).transparentize(fill-alpha)
   let stroke-collection-5 = (
-    paint: colors(2).transparentize(50%),
+    paint: colors(2),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -485,9 +491,9 @@
     offset-transform: offset-transform-collection-5,
   )
 
-  let fill-collection-7 = colors(3).transparentize(50%)
+  let fill-collection-7 = colors(3).transparentize(fill-alpha)
   let stroke-collection-7 = (
-    paint: colors(3).transparentize(50%),
+    paint: colors(3),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -506,9 +512,9 @@
     offset-transform: offset-transform-collection-7,
   )
 
-  let fill-collection-9 = colors(4).transparentize(50%)
+  let fill-collection-9 = colors(4).transparentize(fill-alpha)
   let stroke-collection-9 = (
-    paint: colors(4).transparentize(50%),
+    paint: colors(4),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -527,9 +533,9 @@
     offset-transform: offset-transform-collection-9,
   )
 
-  let fill-collection-11 = colors(5).transparentize(50%)
+  let fill-collection-11 = colors(5).transparentize(fill-alpha)
   let stroke-collection-11 = (
-    paint: colors(5).transparentize(50%),
+    paint: colors(5),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

@@ -229,9 +229,10 @@
     transform: transform,
   )
 
-  let fill-1 = color.rgb(80.0%, 47.451%, 65.49%, 50.0%)
+  let fill-color = colors(3).transparentize(fill-alpha)
+  let fill-1 = fill-color
   let stroke-1 = (
-    paint: color.rgb(80.0%, 47.451%, 65.49%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -280,9 +281,10 @@
     transform: transform,
   )
 
-  let fill-4 = color.rgb(0.0%, 61.961%, 45.098%, 50.0%)
+  let fill-color = colors(2).transparentize(fill-alpha)
+  let fill-4 = fill-color
   let stroke-4 = (
-    paint: color.rgb(0.0%, 61.961%, 45.098%, 50.0%),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
