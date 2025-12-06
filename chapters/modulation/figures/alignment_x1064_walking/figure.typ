@@ -379,12 +379,12 @@
       position: (4.22, 0.181),
       shape: (0.001, 0.001),
       transform: transform,
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-indicator-stroke,
     ),
     source: properties-inset-0,
     connectors: (
       anchors: (bottom + left, top + right),
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-connector-stroke,
     ),
   )
 
@@ -393,12 +393,12 @@
       position: (-10.92, -0.835),
       shape: (0.001, 0.001),
       transform: transform,
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-indicator-stroke,
     ),
     source: properties-inset-1,
     connectors: (
       anchors: (top + left, top + right),
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-connector-stroke,
     ),
   )
 
@@ -407,12 +407,12 @@
       position: (-10.92, -18.468999999999998),
       shape: (0.001, 0.001),
       transform: transform,
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-indicator-stroke,
     ),
     source: properties-inset-2,
     connectors: (
       anchors: (bottom + left, top + left),
-      stroke: color.rgb(0.0%, 0.0%, 0.0%, 50.0%) + 1.5pt,
+      stroke: inset-connector-stroke,
     ),
   )
 
