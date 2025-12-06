@@ -49,8 +49,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: colors(1).lighten(20%),
-    stroke: colors(1).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -62,8 +61,7 @@
   let stroke-line-1 = none
   let marker-line-1 = markers.circle(
     markersize,
-    fill: colors(0).lighten(20%),
-    stroke: colors(0).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(0)),
   )
   let line-1 = (
     data: data.at("line-1"),
@@ -110,8 +108,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: colors(1).lighten(20%),
-    stroke: colors(1).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -123,8 +120,7 @@
   let stroke-line-1 = none
   let marker-line-1 = markers.circle(
     markersize,
-    fill: colors(0).lighten(20%),
-    stroke: colors(0).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(0)),
   )
   let line-1 = (
     data: data.at("line-1"),
@@ -216,8 +212,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: colors(1).lighten(20%),
-    stroke: colors(1).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -227,7 +222,7 @@
   )
 
   let stroke-line-1 = (
-    paint: color.rgb(80.392%, 48.235%, 0.0%, 100.0%).transparentize(25.0%),
+    paint: colors(1).transparentize(25.0%),
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -244,8 +239,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    fill: colors(0).lighten(20%),
-    stroke: colors(0).darken(20%) + linewidth-very-narrow,
+    ..marker-colors(colors(0)),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -255,7 +249,7 @@
   )
 
   let stroke-line-3 = (
-    paint: color.rgb(5.098%, 38.431%, 89.412%, 100.0%).transparentize(25.0%),
+    paint: colors(0).transparentize(25.0%),
     thickness: linewidth,
     cap: "butt",
     join: "round",

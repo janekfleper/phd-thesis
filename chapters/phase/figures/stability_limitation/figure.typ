@@ -133,8 +133,7 @@
   )
   let marker-line-3 = markers.circle(
     markersize,
-    fill: colors(1),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-3 = (
     data: data.at("line-3"),
@@ -253,8 +252,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: colors(0),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -265,8 +263,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: colors(0),
-    thickness: linewidth,
+    paint: error-color(colors(0)),
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform

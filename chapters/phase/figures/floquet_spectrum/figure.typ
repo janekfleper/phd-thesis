@@ -99,8 +99,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     linewidth,
-    fill: colors(0),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -111,8 +110,8 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: colors(0),
-    thickness: linewidth,
+    paint: error-color(colors(0)),
+    thickness: linewidth-narrow,
     dash: "solid",
   )
   let transform-collection-1 = transform
@@ -145,9 +144,10 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1)
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = fill-color
   let stroke-collection-3 = (
-    paint: colors(1),
+    paint: fill-color,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -195,6 +195,11 @@
 
   let data = json("data/inset-1.json")
 
+  let stroke-line-0 = none
+  let marker-line-0 = markers.circle(
+    linewidth,
+    ..marker-colors(colors(0)),
+  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -202,6 +207,12 @@
     transform: transform,
   )
 
+  let fill-collection-1 = ()
+  let stroke-collection-1 = (
+    paint: error-color(colors(0)),
+    thickness: linewidth-narrow,
+    dash: "solid",
+  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -217,6 +228,14 @@
     offset-transform: offset-transform-collection-1,
   )
 
+  let stroke-line-2 = (
+    paint: colors(1).transparentize(fill-alpha),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
+  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -224,6 +243,13 @@
     transform: transform,
   )
 
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = fill-color
+  let stroke-collection-3 = (
+    paint: fill-color,
+    thickness: linewidth-very-narrow,
+    dash: "solid",
+  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -267,6 +293,11 @@
 
   let data = json("data/inset-2.json")
 
+  let stroke-line-0 = none
+  let marker-line-0 = markers.circle(
+    linewidth,
+    ..marker-colors(colors(0)),
+  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -274,6 +305,12 @@
     transform: transform,
   )
 
+  let fill-collection-1 = ()
+  let stroke-collection-1 = (
+    paint: error-color(colors(0)),
+    thickness: linewidth-narrow,
+    dash: "solid",
+  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -289,6 +326,14 @@
     offset-transform: offset-transform-collection-1,
   )
 
+  let stroke-line-2 = (
+    paint: colors(1).transparentize(fill-alpha),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
+  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -296,6 +341,13 @@
     transform: transform,
   )
 
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = fill-color
+  let stroke-collection-3 = (
+    paint: fill-color,
+    thickness: linewidth-very-narrow,
+    dash: "solid",
+  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -339,6 +391,11 @@
 
   let data = json("data/inset-3.json")
 
+  let stroke-line-0 = none
+  let marker-line-0 = markers.circle(
+    linewidth,
+    ..marker-colors(colors(0)),
+  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -346,6 +403,12 @@
     transform: transform,
   )
 
+  let fill-collection-1 = ()
+  let stroke-collection-1 = (
+    paint: error-color(colors(0)),
+    thickness: linewidth-narrow,
+    dash: "solid",
+  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -361,6 +424,14 @@
     offset-transform: offset-transform-collection-1,
   )
 
+  let stroke-line-2 = (
+    paint: colors(1).transparentize(fill-alpha),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
+  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -368,6 +439,13 @@
     transform: transform,
   )
 
+  let fill-color = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = fill-color
+  let stroke-collection-3 = (
+    paint: fill-color,
+    thickness: linewidth-very-narrow,
+    dash: "solid",
+  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {

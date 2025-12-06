@@ -48,11 +48,16 @@
 
   let data = json("data/inset-0.json")
 
-  let stroke-line-0 = (paint: color.rgb("#0072b2ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: colors(0),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = markers.circle(
     markersize,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -61,7 +66,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: red, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: red,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),
@@ -104,11 +115,16 @@
     ),
   )
 
-  let stroke-line-0 = (paint: color.rgb("#0072b2ff"), thickness: 2.0pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-0 = (
+    paint: colors(0),
+    thickness: linewidth,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-0 = markers.circle(
-    3.0pt,
-    fill: color.rgb("#0072b2ff"),
-    stroke: black + 1.0pt,
+    markersize,
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -117,7 +133,13 @@
     transform: transform,
   )
 
-  let stroke-line-1 = (paint: red, thickness: 0.9pt, cap: "butt", join: "round", dash: "solid")
+  let stroke-line-1 = (
+    paint: red,
+    thickness: linewidth-narrow,
+    cap: "butt",
+    join: "round",
+    dash: "solid",
+  )
   let marker-line-1 = none
   let line-1 = (
     data: data.at("line-1"),

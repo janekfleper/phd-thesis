@@ -402,8 +402,7 @@
   )
   let marker-line-1 = markers.circle(
     markersize,
-    fill: colors(1),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-1 = (
     data: data.at("line-1"),
@@ -421,8 +420,7 @@
   )
   let marker-line-3 = markers.circle(
     markersize,
-    fill: colors(1),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-3 = (
     data: data.at("line-3"),
@@ -440,8 +438,7 @@
   )
   let marker-line-5 = markers.circle(
     markersize,
-    fill: colors(1),
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(colors(1)),
   )
   let line-5 = (
     data: data.at("line-5"),

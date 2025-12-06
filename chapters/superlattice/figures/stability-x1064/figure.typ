@@ -70,8 +70,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: color-stability-initial,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-initial),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -82,7 +81,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color-stability-initial,
+    paint: error-color(color-stability-initial),
     thickness: linewidth-narrow,
     dash: "solid",
   )
@@ -104,8 +103,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    fill: color-stability-final,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-final),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -116,7 +114,7 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color-stability-final,
+    paint: error-color(color-stability-final),
     thickness: linewidth-narrow,
     dash: "solid",
   )
@@ -226,8 +224,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: color-stability-initial,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-initial),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -238,7 +235,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color-stability-initial,
+    paint: error-color(color-stability-initial),
     thickness: linewidth-narrow,
     dash: "solid",
   )
@@ -260,8 +257,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    fill: color-stability-final,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-final),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -272,7 +268,7 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color-stability-final,
+    paint: error-color(color-stability-final),
     thickness: linewidth-narrow,
     dash: "solid",
   )
@@ -349,8 +345,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    fill: color-stability-initial,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-initial),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -361,7 +356,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: color-stability-initial,
+    paint: error-color(color-stability-initial),
     thickness: linewidth-narrow,
     dash: "solid",
   )
@@ -383,8 +378,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    fill: color-stability-final,
-    stroke: black + linewidth-very-narrow,
+    ..marker-colors(color-stability-final),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -395,7 +389,7 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: color-stability-final,
+    paint: error-color(color-stability-final),
     thickness: linewidth-narrow,
     dash: "solid",
   )
