@@ -64,11 +64,9 @@ With the lattice depth $V(fitr)$ and the band structure in @fig:mod-intro-theory
     The width of the resonances decreases towards the center at $y = 0$, while their amplitude decreases if $fmod > max(fnm(1, 3))$.
     *i* - *l*, Atomic density $n(y)$ with the resonance functions in *e* - *h*.
     A modulation frequency near the center of the lattice potential depletes a significant area of the atom cloud, whereas smaller frequencies only create thin resonances.
-    // This behavior qualitatively matches the series of images in @fig:mod-intro-images.
-
-    // TODO: Name y-label of the third row "Atomic density $n$"
   ],
   label: <fig:mod-eval-model>,
+  placement: bottom,
 )
 
 The resonances are parameterized by a Gaussian function#footnote[
