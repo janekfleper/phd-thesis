@@ -506,7 +506,7 @@
           size: 1em,
           fill: black,
           bottom-edge: "descender",
-          $max(fita0)$,
+          [Maximum $fita0(zret)$],
         ),
       ),
     ),

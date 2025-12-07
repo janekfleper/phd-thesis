@@ -93,10 +93,6 @@ We can, therefore, operate the optical lattices for longer times without a relev
     *c* - *e*, Individual results of the lattice calibration as a function of the #retro beam position.
     The maximum of the calibration factor (blue) is always at $zret approx #qty[0][μm]$, while the maximum of the resonance contrast (orange) depends on the #forward beam position.
     For all measurements, the modulation parameters are $Vx1064 = #qty[60][Erec]$, $tau_"mod" = #qty[0.75][s]$ and $dV slash Vx1064 = #tr(qty[3][%])$.
-
-    // TODO: Already introduce the resonance contrast somewhere else?
-    // TODO: Add colors for the y-label of *c* to *e*.
-    // TODO: Add yaxis-labels to each axes *c* to *e*?
   ],
   label: <fig:mod-align-x1064-walking>,
 )
