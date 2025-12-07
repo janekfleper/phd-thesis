@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
+
 #let xaxis-major-ticks = (
   locs: range(4).map(x => x * 20),
   labels: range(4).map(x => x * 20).map(x => $#x$),

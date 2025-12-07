@@ -5,8 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
 #let ylim = (-3.0, 73.0)
-
 #let label-xaxis-y0 = 110%
 
 #let yaxis-major-ticks = (

@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
+
 #let yaxis-major-ticks = (
   locs: (-300.0, -200.0, -100.0, 0.0, 100.0, 200.0, 300.0),
   labels: ($−300$, $−200$, $−100$, $0$, $100$, $200$, $300$),

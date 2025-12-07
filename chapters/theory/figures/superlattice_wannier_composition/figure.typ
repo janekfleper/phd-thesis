@@ -5,6 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
 #let text-box = text-box.with(stroke: none, fill: none)
 
 // #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)

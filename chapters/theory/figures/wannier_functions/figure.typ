@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
+#let color-wannier = blue
 #let ylabel-text = [Energy $epsilon slash #unit[Erec]$]
 #let xaxis-minor-tick-locs = range(-3, 4).map(x => x / 2)
 
@@ -337,7 +339,7 @@
   )
 
   let stroke-2 = (
-    paint: colors(0),
+    paint: color-wannier,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -352,7 +354,7 @@
   )
 
   let stroke-3 = (
-    paint: colors(0),
+    paint: color-wannier,
     thickness: linewidth,
     cap: "butt",
     join: "round",

@@ -13,6 +13,7 @@
 )
 
 #let colors(i) = _default-colors.at(calc.rem(i, _default-colors.len()))
+#let band-colors(i) = colors(i + 0)
 
 #let color-stability-initial = blue
 #let color-stability-final = orange

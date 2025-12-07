@@ -5,6 +5,8 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
+
 // use a slightly smaller transparency for the other bands...
 #let transparency = 80%
 #let color-n2 = colors(1).transparentize(transparency)

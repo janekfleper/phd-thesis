@@ -5,6 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let colors = band-colors
 #let yaxis-minor-tick-locs = range(0, 5).map(y => y * 5 + 2.5)
 
 #let axes-0(xlim: (-1.05, 1.05), ylim: (-1.5, 26.5), dpi: 100.0) = {
