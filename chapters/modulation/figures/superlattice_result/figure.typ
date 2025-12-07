@@ -131,7 +131,7 @@
           size: 1em,
           fill: black,
           bottom-edge: "descender",
-          [Lattice depth $#text(color-x532, Vx532) slash #unit[Erec]$],
+          [Lattice depth $Vx532 slash #unit[Erec]$],
         ),
       ),
     ),
@@ -201,7 +201,7 @@
         text(
           size: 1em,
           fill: black,
-          [Lattice depth $#text(color-x1064, Vx1064) slash #unit[Erec]$],
+          [Lattice depth $Vx1064 slash #unit[Erec]$],
         ),
       ),
     ),

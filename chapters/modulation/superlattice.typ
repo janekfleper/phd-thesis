@@ -89,11 +89,9 @@ With the band transition $1 -> 4$ and a constant modulation frequency #fmod, we 
   caption: [
     Calibration of the #x532\-lattice depth with the superlattice potential.
     *a*, Mean atomic densities in the interval $#qty[-5][μm] < x < #qty[5][μm]$ normalized by the reference density $n_0 (x, y)$.
-    The solid line shows the fit result of the transition frequency #fnm(1, 4) based on the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ as well as the phase $phi slash pi = -#num[0.250(4)]$.
-    *b*, Lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ averaged in the same interval as the data in *a*.
+    The solid line shows the fit result of the transition frequency #fnm(1, 4) computed from $Vx1064(x, y)$, $Vx532(x, y)$, and $phi slash pi = -#num[0.250(4)]$.
+    *b*, Lattice depths $Vx1064(x, y)$ (red) and $Vx532(x, y)$ (green) averaged in the same interval as the data in *a*.
     The $y$-axes are scaled to correctly display the different waists.
-
-    // TODO: Add legend to *b* instead of the colored y-labels?
   ],
   label: <fig:mod-super-result>,
 )
