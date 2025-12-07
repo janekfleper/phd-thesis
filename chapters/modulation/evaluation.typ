@@ -147,9 +147,6 @@ The resulting fit parameters are compiled in @tab:mod-eval-results.
     *b*, Resonances and fit result for the #z532 lattice at $Vz532 = #qty[100][Erec]$.
     The atomic densities are normalized by the reference density $n_0(x, y)$ and the mean is computed in the interval $#qty[-15][μm] < y < #qty[15][μm]$.
     The solid lines show the result of the combined fit for each lattice.
-
-    // TODO: Somehow add a colorbar?
-    // TODO: Fix the pcolormesh plotting...
   ],
   label: <fig:mod-eval-other-result>,
 )
