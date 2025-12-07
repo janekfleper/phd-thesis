@@ -93,9 +93,6 @@ For any superlattice phase $-pi slash 4 < phase < pi slash 4$, we need to determ
     Radial potential in an antisymmetric superlattice configuration.
     *a*, Superlattice potential $v^+$ of the lower lattice site in the double well where the intensity of the long lattice is maximal.
     *b*, Superlattice potential $v^-$ of the upper lattice site where the intensity of both lattices is minimal.
-
-    // TODO: Merge this into one figure? And then reference the "lower" and "upper" well?
-    // TODO: Add an atom to the lattice site? Just like in fig:theory-lattice-detuning?
   ],
   label: <fig:mod-radial-vplus-vminus>,
   // placement: bottom,

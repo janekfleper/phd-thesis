@@ -46,6 +46,10 @@
       ..xdata.map(x => (x * xscale, potential-long(x, -vl, phase) + potential-short(x, vs))),
       stroke: linewidth-narrow + black,
     )
+
+    // the trapped atom
+    let offset = potential-long(0, -vl, phase)
+    circle((0, 0.7 + offset), ..atom-style)
   })
 }
 

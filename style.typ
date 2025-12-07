@@ -142,6 +142,13 @@
   outset: 0.2em,
 )
 
+// for CeTZ drawings
+#let atom-style = (
+  radius: 0.2,
+  stroke: none,
+  fill: gradient.radial(white, luma(20%), focal-center: auto, center: (40%, 40%)),
+)
+
 #let figure-style(body) = {
   set text(9pt, font: "New Computer Modern Sans")
   show math.equation: set text(font: "New Computer Modern Sans Math")

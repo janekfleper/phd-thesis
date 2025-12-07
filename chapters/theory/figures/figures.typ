@@ -100,12 +100,6 @@
   let xdata = range(int(xmin / dx), int(xmax / dx) + 1).map(x => x * dx)
   let potential(x, depth) = depth * calc.pow(calc.sin(x * calc.pi), 2)
 
-  let atom-style = (
-    radius: 0.2,
-    stroke: none,
-    fill: gradient.radial(white, luma(20%), focal-center: auto, center: (40%, 40%)),
-  )
-
   // to make sure the lattice period a is centered relative to the horizontal line...
   show math.equation: set text(top-edge: "x-height")
 
