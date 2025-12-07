@@ -72,7 +72,6 @@ In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a fi
 
 #floating-figure(
   figure-band-structure(),
-  // TODO: Reduce x-axis limits to remove the left and right gaps?
   caption: [
     Band structure of an optical lattice potential.
     *a*, Energy bands $epsilon_n (q)$ in the first Brillouin zone $q slash k = [-1, 1)$ of an optical lattice potential with the depth $V_0 = #qty[15][Erec]$.
