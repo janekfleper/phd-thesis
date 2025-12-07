@@ -6,7 +6,6 @@
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
 #let colors = band-colors
-#let color-data = blue
 
 #let xaxis-major-ticks = (
   locs: (120.0, 140.0, 160.0, 180.0, 200.0),

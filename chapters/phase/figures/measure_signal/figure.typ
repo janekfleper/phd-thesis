@@ -49,7 +49,7 @@
   let data = json("data/inset-0.json")
 
   let stroke-line-0 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -57,7 +57,7 @@
   )
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -67,7 +67,7 @@
   )
 
   let stroke-line-1 = (
-    paint: red,
+    paint: color-fit,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -116,7 +116,7 @@
   )
 
   let stroke-line-0 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -124,7 +124,7 @@
   )
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -134,7 +134,7 @@
   )
 
   let stroke-line-1 = (
-    paint: red,
+    paint: color-fit,
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",

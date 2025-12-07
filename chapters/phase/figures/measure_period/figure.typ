@@ -87,8 +87,8 @@
   )
 
   let patch-properties = (
-    fill: colors(0),
-    stroke: black + linewidth-very-narrow,
+    fill: color-data.lighten(30%),
+    stroke: color-data.darken(30%) + linewidth-very-narrow,
     transform: transform,
   )
   let patch-0 = (
@@ -232,7 +232,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -247,7 +247,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -300,7 +300,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -315,7 +315,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -367,7 +367,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -382,7 +382,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -435,7 +435,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -450,7 +450,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(0),
+    paint: color-data,
     thickness: linewidth,
     cap: "butt",
     join: "round",

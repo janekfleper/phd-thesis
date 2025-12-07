@@ -6,7 +6,6 @@
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
 #let colors = band-colors
-#let color-data = blue
 
 #let label-xaxis = (
   position: (50.0%, 100% + 2.2em),

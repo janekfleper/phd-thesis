@@ -5,6 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let color-theory = luma(40%)
 #let yaxis-label-position = 100% + 6.3cm
 
 #let Ueff-label-xaxis = (
@@ -125,7 +126,7 @@
   ))
 
   let stroke-line-1 = (
-    paint: color.luma(30.0%),
+    paint: color.luma(0.0%),
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -142,7 +143,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -153,7 +154,7 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -172,9 +173,10 @@
     offset-transform: offset-transform-collection-3,
   )
 
-  let fill-collection-4 = theory-alpha-first(colors(0))
+  let color-collection-4 = color-theory.lighten(30%)
+  let fill-collection-4 = theory-alpha-first(color-collection-4)
   let stroke-collection-4 = (
-    paint: theory-alpha-first(black),
+    paint: theory-alpha-first(color-theory),
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -196,7 +198,7 @@
   let stroke-line-5 = none
   let marker-line-5 = markers.thin-diamond(
     markersize-thin-diamond,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-5 = (
     data: data.at("line-5"),
@@ -207,7 +209,7 @@
 
   let fill-collection-6 = ()
   let stroke-collection-6 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -226,9 +228,10 @@
     offset-transform: offset-transform-collection-6,
   )
 
-  let fill-collection-7 = hatch.hatch(..floquet-theory-hatch(colors(0)))
+  let color-collection-7 = color-theory.lighten(30%)
+  let fill-collection-7 = hatch.hatch(..floquet-theory-hatch(color-collection-7))
   let stroke-collection-7 = (
-    paint: black,
+    paint: color-theory,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -262,42 +265,34 @@
     frame: block.with(),
   )
 
-  let legend-handle(color, marker, markersize) = legend.errorbar.with(
-    data: (
-      stroke: none,
-      marker: marker(markersize, ..marker-colors(color)),
-    ),
-    caps: (:),
-    bars: (
-      y: (
-        paint: error-color(color),
-        thickness: error-linewidth,
-        dash: "solid",
-      ),
-    ),
-  )
-
-  let legend-color = luma(70%)
   let legend-items = (
     (
-      handle: legend-handle(legend-color, markers.circle, markersize),
+      handle: legend.errorbar.with(
+        data: (stroke: stroke-line-2, marker: marker-line-2),
+        caps: (:),
+        bars: (y: stroke-collection-3),
+      ),
       label: [],
     ),
     (
       handle: legend.rectangle.with(
-        fill: legend-color,
-        stroke: black + linewidth-very-narrow,
+        fill: color-theory.lighten(30%),
+        stroke: color-theory + linewidth-very-narrow,
       ),
       label: [$l = 1$],
     ),
     (
-      handle: legend-handle(legend-color, markers.thin-diamond, markersize-thin-diamond),
+      handle: legend.errorbar.with(
+        data: (stroke: stroke-line-5, marker: marker-line-5),
+        caps: (:),
+        bars: (y: stroke-collection-6),
+      ),
       label: [],
     ),
     (
       handle: legend.rectangle.with(
-        fill: hatch.hatch(..floquet-theory-hatch(legend-color)),
-        stroke: black + linewidth-very-narrow,
+        fill: hatch.hatch(..floquet-theory-hatch(color-theory.lighten(30%))),
+        stroke: color-theory + linewidth-very-narrow,
       ),
       label: [$l = 2$],
     ),
@@ -369,7 +364,7 @@
   let stroke-line-1 = none
   let marker-line-1 = markers.thin-diamond(
     markersize-thin-diamond,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-1 = (
     data: data.at("line-1"),
@@ -380,7 +375,7 @@
 
   let fill-collection-2 = ()
   let stroke-collection-2 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -399,9 +394,9 @@
     offset-transform: offset-transform-collection-2,
   )
 
-  let fill-collection-3 = hatch.hatch(..floquet-theory-hatch(colors(0)))
+  let fill-collection-3 = hatch.hatch(..floquet-theory-hatch(color-theory.lighten(30%)))
   let stroke-collection-3 = (
-    paint: black,
+    paint: color-theory,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -423,7 +418,7 @@
   let stroke-line-4 = none
   let marker-line-4 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-4 = (
     data: data.at("line-4"),
@@ -434,7 +429,7 @@
 
   let fill-collection-5 = ()
   let stroke-collection-5 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -453,9 +448,9 @@
     offset-transform: offset-transform-collection-5,
   )
 
-  let fill-collection-6 = theory-color(colors(0))
+  let fill-collection-6 = theory-color(color-theory.lighten(30%))
   let stroke-collection-6 = (
-    paint: black,
+    paint: color-theory,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -566,9 +561,9 @@
     label-style: yaxis-minor-label-style,
   )
 
-  let color-U9 = colors(0).darken(20%)
-  let color-U6 = colors(0).lighten(20%)
-  let color-U18 = colors(0)
+  let color-U9 = color-data
+  let color-U6 = color-data.lighten(30%)
+  let color-U18 = color-data.darken(30%)
 
   let stroke-line-1 = none
   let marker-line-1 = markers.thin-diamond(
@@ -735,9 +730,9 @@
     offset-transform: offset-transform-collection-10,
   )
 
-  let fill-collection-11 = color.luma(50%)
+  let fill-collection-11 = color-theory.lighten(30%)
   let stroke-collection-11 = (
-    paint: black,
+    paint: color-theory,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

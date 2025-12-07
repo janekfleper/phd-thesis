@@ -15,6 +15,10 @@
 #let colors(i) = _default-colors.at(calc.rem(i, _default-colors.len()))
 #let band-colors(i) = colors(i + 0)
 
+#let color-data = blue
+#let color-fit = red
+#let color-theory = red
+
 #let color-red-detuned = red
 #let color-blue-detuned = blue
 

@@ -99,7 +99,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     linewidth,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -110,7 +110,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -130,7 +130,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1).transparentize(fill-alpha),
+    paint: color-fit.transparentize(fill-alpha),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -144,9 +144,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = color-fit.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: colors(1),
+    paint: color-fit,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -197,7 +197,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     linewidth,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -208,7 +208,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -228,7 +228,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1).transparentize(fill-alpha),
+    paint: color-fit.transparentize(fill-alpha),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -242,9 +242,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = color-fit.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: colors(1),
+    paint: color-fit,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -294,7 +294,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     linewidth,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -305,7 +305,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -325,7 +325,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1).transparentize(fill-alpha),
+    paint: color-fit.transparentize(fill-alpha),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -339,9 +339,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = color-fit.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: colors(1),
+    paint: color-fit,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )
@@ -391,7 +391,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     linewidth,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -402,7 +402,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -422,7 +422,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1).transparentize(fill-alpha),
+    paint: color-fit.transparentize(fill-alpha),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -436,9 +436,9 @@
     transform: transform,
   )
 
-  let fill-collection-3 = colors(1).transparentize(fill-alpha)
+  let fill-collection-3 = color-fit.transparentize(fill-alpha)
   let stroke-collection-3 = (
-    paint: colors(1),
+    paint: color-fit,
     thickness: linewidth-very-narrow,
     dash: "solid",
   )

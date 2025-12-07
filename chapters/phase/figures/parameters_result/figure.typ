@@ -98,7 +98,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -108,7 +108,7 @@
   )
 
   let stroke-line-1 = (
-    paint: red,
+    paint: color-fit,
     thickness: linewidth,
     cap: "butt",
     join: "round",

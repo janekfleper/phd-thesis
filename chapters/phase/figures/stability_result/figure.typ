@@ -106,7 +106,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize-small,
-    ..marker-colors(blue),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
