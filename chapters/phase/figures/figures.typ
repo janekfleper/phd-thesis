@@ -59,7 +59,7 @@
       node(<mix>, draw-mixer(radius: circle-radius), stroke: none)
       edge(<pump>, <pd>, "-|>", stroke: x1064-stroke, label: $nu_"pump"$, label-side: left)
       edge(<x1064-amp>, (1, 1), <pd>, "-|>", stroke: x1064-stroke, label: $nu_x1064$, label-side: right, label-pos: 25%)
-      edge(<dds>, <mix>, "-|>", label: fdds, label-side: left)
+      edge(<dds>, <mix>, "-|>", label: fdds, label-side: left, label-sep: 0.4em)
       edge(<pd>, <mix>, "-|>", label: $Delta nu$)
 
       // feedback loops
@@ -68,7 +68,16 @@
       node((rel: (0.2, 1.4), to: <x1064.center>), name: <slow-plus>, shape: circle, radius: circle-radius)
       node(<slow-plus>, draw-plus(radius: 0.25), stroke: none)
       node((rel: (0.8, 0.0), to: <slow-plus>), [AWG], name: <slow-awg>)
-      edge(<mix>, (rel: (-0.5, 0.0), to: <fast-pid>), <fast-pid>, "-|>")
+      edge(
+        <mix>,
+        (rel: (-0.5, 0.0), to: <fast-pid>),
+        <fast-pid>,
+        "-|>",
+        label: [error\ signal],
+        label-side: left,
+        label-sep: 0.4em,
+        label-pos: 22%,
+      )
       edge(<mix>, (rel: (-0.5, 0.0), to: <slow-pid>), <slow-pid>, "-|>")
       edge(
         <fast-pid>,

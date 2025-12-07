@@ -33,8 +33,6 @@ With the path length $d approx #qty[50][cm]$, the frequency difference of the #x
     In the #x1064\-lattice setup, the AOM frequency is controlled by an arbitrary-waveform generator (AWG).
     The vertical dashed line indicates the separation of the optical tables.
     While the entire frequency control is handled on the laser table, the superlattice phase #phase accumulates on the experimental table.
-
-    // TODO: Add label for the error signal?
   ],
   label: <fig:phase-setup>,
 )
