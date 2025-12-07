@@ -12,7 +12,7 @@
   position: (50.0%, 100% + 2em),
   body: place(
     center + top,
-    text(size: 1em, fill: black, [Effective interaction $Ueff slash abs(teff)$]),
+    text(size: 1em, fill: black, [Effective interaction $Ueff slash ateffn(l)$]),
   ),
 )
 
@@ -80,7 +80,7 @@
           size: 1em,
           fill: black,
           bottom-edge: "descender",
-          [$E_"min" slash 2 abs(teff)$],
+          [$E_"min" slash 2 ateffn(l)$],
         ),
       ),
     ),
@@ -91,7 +91,7 @@
       -90.0deg,
       place(
         center + top,
-        text(size: 1em, fill: black, [Correlated tunneling $VCTeff slash abs(teff)$]),
+        text(size: 1em, fill: black, [Correlated tunneling $VCTeff slash ateffn(l)$]),
       ),
     ),
   )

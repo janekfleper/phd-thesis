@@ -270,9 +270,6 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
     *d*, Enhanced pair-tunneling amplitude at $Ueff slash ateffn(2) = 6$ compared to the time evolution in a static double well with $U slash t = 6$ in *e*.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the modulation amplitude is $K0 = 2.4$ to suppress the single-particle tunneling.
     This figure is adapted from @klemmer_floquet-driven_2024.
-
-    // TODO: Add all the "exponents" $(l)$ to the tunneling amplitudes #teff etc...
-    // TODO: Reduce size and color of hatch/dots...
   ],
   label: <fig:phase-floquet-crossover-result>,
 )
