@@ -280,8 +280,6 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
     This figure is adapted from @klemmer_floquet-driven_2024.
 
     // TODO: Add all the "exponents" $(l)$ to the tunneling amplitudes #teff etc...
-    // TODO: Add a description/legend for the oscillations in *d* and *e*?
-    // TODO: Fix colors of oscillations in *d* and *e*. Match with fig:theory-double-two-general?
     // TODO: Reduce size and color of hatch/dots...
   ],
   label: <fig:phase-floquet-crossover-result>,

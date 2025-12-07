@@ -254,9 +254,10 @@
 #let teffn(n) = $teff^((#n))$
 #let ateffn(n) = $lr(abs(teff^((#n))), size: #50%)$
 
-#let marks(body, color: black, stroke: 1.2pt, radius: 1mm, outset: 0.5em) = markrect(
+#let marks(body, color: black, fill: none, stroke: 1.2pt, radius: 1mm, outset: 0.5em) = markrect(
   body,
   color: color,
+  fill: fill,
   stroke: stroke,
   radius: radius,
   outset: outset,

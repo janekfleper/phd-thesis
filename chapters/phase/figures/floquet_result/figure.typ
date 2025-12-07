@@ -837,7 +837,7 @@
   let yaxis-minor-ticks = time-yaxis-minor-ticks
 
   let stroke-line-1 = (
-    paint: colors(2),
+    paint: color-left,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -852,7 +852,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(6),
+    paint: color-right,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -882,8 +882,8 @@
   )
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-1)
   draw.line(..line-2)
+  draw.line(..line-1)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-minor-ticks, transform)
   draw.line(..line-3)
@@ -923,7 +923,7 @@
   let yaxis-minor-ticks = time-yaxis-minor-ticks
 
   let stroke-line-1 = (
-    paint: colors(2),
+    paint: color-left,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -938,7 +938,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(6),
+    paint: color-right,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -967,9 +967,12 @@
     transform: transform,
   )
 
+  let marks = marks.with(outset: 0.3em)
+  let basis-states = $marks(marks(ketLL, color: #color-left) quad marks(ketRR, color: #color-right)quad marks(kets, color: #black), fill: #white.transparentize(10%), stroke: #none, outset: #0.5em)$
+
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  draw.line(..line-1)
   draw.line(..line-2)
+  draw.line(..line-1)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-minor-ticks, transform)
   draw.line(..line-3)
@@ -977,6 +980,7 @@
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-major-ticks, transform)
   axes.spines(spines)
   draw.text(..label-xaxis)
+  std.place(horizon + right, dx: -4%, basis-states)
   axes.abc(..abc-style, 5)
 }
 
