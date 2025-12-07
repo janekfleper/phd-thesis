@@ -59,7 +59,7 @@ Since we operate the lattice beams with a small numerical aperture, we neglect h
     ] $a$ quantify the effective strength of the thermal lensing due to absorption in the bulk material.
     Based on these two coefficients, the most suitable materials to minimize thermal lensing are UV-grade fused silica (#UVFS), calcium fluoride (#CAF2), and crystalline quartz (#SiO2).
     The material properties of #UVFS for the coefficient $rho$ are taken from @malitson_interspecimen_1965 @corning_fused_2015.
-    Since the absorption in #UVFS depends on the OH content in the specific optical material, it varies between different variants of fused silica @humbach_analysis_1996 @nurnberg_bulk_2015.
+    The absorption in #UVFS depends on the OH content in the specific variant of the optical material @humbach_analysis_1996 @nurnberg_bulk_2015.
     The material properties of #NBK7 and #NBALF4 are taken from @schott_tie-31_2018.
     The material properties of #CAF2 are taken from @daimon_high-accuracy_2002 @corning_optigrade_2024.
     The material properties of #SiO2 for the coefficient $rho$ are taken from @ghosh_dispersion-equation_1999 @toyoda_temperature_1983.
@@ -67,8 +67,6 @@ Since we operate the lattice beams with a small numerical aperture, we neglect h
     We use the same upper limit for #qty[532][nm] and #qty[1064][nm] here due to the lack of available data in the literature.
     Only the perpendicular orientation of the crystal that is used for waveplates is shown here.
     The material properties of terbium gallium garnet (TGG) are taken from @franta_wide_2025 @stevens_promising_2016 @furuse_thermo-optic_2015.
-
-    // TODO: Highlight the rows to make it easier to see the different wavelengths?
   ],
   label: <tab:super-thermal-materials>,
 )
