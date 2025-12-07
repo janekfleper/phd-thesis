@@ -9,8 +9,8 @@
 /* Figure for the control diagram of the superlattice phase */
 
 #let control-diagram(debug: 0) = {
-  let x1064-stroke = red
-  let x532-stroke = green.darken(20%)
+  let x1064-stroke = color-x1064
+  let x532-stroke = color-x532
   let circle-radius = 0.4cm
 
   let draw-mixer(radius: 0.3) = cetz.canvas({
