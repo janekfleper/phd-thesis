@@ -358,7 +358,7 @@
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (), ..xaxis-major-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-major-ticks, transform)
   axes.spines(spines)
-  draw.text(..label-yaxis)
+  // draw.text(..label-yaxis)
   axes.abc(..abc-style, 2)
 }
 
@@ -507,7 +507,7 @@
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-major-ticks, transform)
   axes.spines(spines)
   draw.text(..label-xaxis)
-  draw.text(..label-yaxis)
+  // draw.text(..label-yaxis)
   axes.abc(..abc-style, 4)
 }
 

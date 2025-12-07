@@ -95,9 +95,6 @@ The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 
     The transparency of the coupled energy bands indicates the amplitude of the transition from the lowest band with $cn = 1$.
     *b* - *d*, Composition of the states corresponding to the coupled energy bands $cband_eta$.
     The colors and strokes follow the legend in *a*.
-
-    // TODO: Anything to add about the composition details?
-    // TODO: Only place a single yaxis-label for axes *b* to *d*?
   ],
   label: <fig:mod-coupled-theory>,
 )
