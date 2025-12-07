@@ -63,15 +63,12 @@ However, compared to even transitions such as $1 -> 3$ or $1 -> 5$, the odd tran
     We apply a constant modulation frequency $fmod = #qty[133.0][kHz]$ (dashed line) corresponding to the lattice depth $Vx1064 = #qty[70][Erec]$ to excite the atoms to the band $n' = 3$.
     If #fmod2 is resonant for a transition $3 -> n''$, the resonance amplitude goes up to $fitaR = 0.9$.
     In the band gaps, we observe the same resonance amplitude #fitaR as in the reference measurement without the secondary modulation frequency (solid line).
-    *b*, Band transitions $3 -> 6$ and $3 -> 7$ according to the coupled band structure (see @sec:mod-coupled) with the lattice depth $Vy1064 = #qty[25][Erec]$ and the relative angle $fitang = #deg[-4.9]$.
-    The solid lines show the transitions in the one-dimensional band structure without the coupling.
+    *b*, Spectrum of the band transitions $3 -> 6$ and $3 -> 7$ according to the coupled band structure (see @sec:mod-coupled) with the lattice depth $Vy1064 = #qty[25][Erec]$ and the relative angle $fitang = #deg[-4.9]$.
+    The black lines show the transitions in the one-dimensional band structure without the coupling.
     *c*, Regimes for the in-situ #lms.
     Up to $V0 approx #qty[65][Erec]$, we use the loss channel $1 -> 3 -> 6$ with a single modulation frequency.
     Above $V0 approx #qty[85][Erec]$, we use the transition $1 -> 5$ where the modulation frequency enables the atom loss through the band $n'' = 10$.
     In the intermediate regime $#qty[65][Erec] lt.approx V0 lt.approx #qty[85][Erec]$, we have to rely on the secondary modulation frequency to use the in-situ #lms.
-
-    // TODO: Anything to add for the description of axes *b*?
-    // TODO: Make the vertical line in *a* and *b* solid?
   ],
   label: <fig:mod-loss-channels>,
 )
