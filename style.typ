@@ -78,9 +78,10 @@
 
 #let floquet-theory-hatch(color) = (
   pattern: "..",
-  stroke: black + 0.3pt,
+  stroke: none,
   fill: theory-color(color),
-  size: (20pt, 20pt),
+  size: (12pt, 12pt),
+  scale: 0.3,
 )
 
 #let abc-style = (

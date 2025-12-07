@@ -5,6 +5,15 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+// the original colors for the Floquet spectrum selected by the Chefin :)
+#let colors(i) = (
+  color.rgb("#a6611a"),
+  color.rgb("d6b158"),
+  color.rgb("018571"),
+).at(i)
+
+#let fill-lighten = 30%
+
 // set the global ticks for all insets here...
 #let xaxis-major-ticks = (
   locs: (0, 2, 4),
@@ -35,19 +44,18 @@
 #let stroke-line-0 = none
 #let marker-line-0 = markers.circle(
   linewidth,
-  fill: colors(0),
-  stroke: black + linewidth-very-narrow,
+  ..marker-colors(color-data),
 )
 
 #let fill-collection-1 = ()
 #let stroke-collection-1 = (
-  paint: colors(0),
-  thickness: linewidth,
+  paint: error-color(color-data),
+  thickness: error-linewidth,
   dash: "solid",
 )
 
 #let stroke-line-2 = (
-  paint: colors(1).transparentize(50.0%),
+  paint: color-fit.transparentize(fill-alpha),
   thickness: linewidth,
   cap: "butt",
   join: "round",
@@ -55,12 +63,21 @@
 )
 #let marker-line-2 = none
 
-#let fill-collection-3 = colors(1)
+#let fill-collection-3 = color-fit.transparentize(fill-alpha)
 #let stroke-collection-3 = (
-  paint: colors(1),
+  paint: color-fit,
   thickness: linewidth-very-narrow,
   dash: "solid",
 )
+
+#let stroke-vertical-line = (
+  paint: color.luma(20.0%),
+  thickness: linewidth-very-narrow,
+  cap: "butt",
+  join: "round",
+  dash: (array: (3.33pt, 1.44pt), phase: 0.0pt),
+)
+#let marker-vertical-line = none
 
 #let inset-0(xlim: (-0.2, 5.2), ylim: (-0.75, 1.15), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
@@ -96,11 +113,6 @@
     ),
   )
 
-  let stroke-line-0 = none
-  let marker-line-0 = markers.circle(
-    linewidth,
-    ..marker-colors(color-data),
-  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -108,12 +120,6 @@
     transform: transform,
   )
 
-  let fill-collection-1 = ()
-  let stroke-collection-1 = (
-    paint: error-color(color-data),
-    thickness: error-linewidth,
-    dash: "solid",
-  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -129,14 +135,6 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let stroke-line-2 = (
-    paint: color-fit.transparentize(fill-alpha),
-    thickness: linewidth,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -144,12 +142,6 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-fit.transparentize(fill-alpha)
-  let stroke-collection-3 = (
-    paint: color-fit,
-    thickness: linewidth-very-narrow,
-    dash: "solid",
-  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -194,11 +186,6 @@
 
   let data = json("data/inset-1.json")
 
-  let stroke-line-0 = none
-  let marker-line-0 = markers.circle(
-    linewidth,
-    ..marker-colors(color-data),
-  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -206,12 +193,6 @@
     transform: transform,
   )
 
-  let fill-collection-1 = ()
-  let stroke-collection-1 = (
-    paint: error-color(color-data),
-    thickness: error-linewidth,
-    dash: "solid",
-  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -227,14 +208,6 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let stroke-line-2 = (
-    paint: color-fit.transparentize(fill-alpha),
-    thickness: linewidth,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -242,12 +215,6 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-fit.transparentize(fill-alpha)
-  let stroke-collection-3 = (
-    paint: color-fit,
-    thickness: linewidth-very-narrow,
-    dash: "solid",
-  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -291,11 +258,6 @@
 
   let data = json("data/inset-2.json")
 
-  let stroke-line-0 = none
-  let marker-line-0 = markers.circle(
-    linewidth,
-    ..marker-colors(color-data),
-  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -303,12 +265,6 @@
     transform: transform,
   )
 
-  let fill-collection-1 = ()
-  let stroke-collection-1 = (
-    paint: error-color(color-data),
-    thickness: error-linewidth,
-    dash: "solid",
-  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -324,14 +280,6 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let stroke-line-2 = (
-    paint: color-fit.transparentize(fill-alpha),
-    thickness: linewidth,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -339,12 +287,6 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-fit.transparentize(fill-alpha)
-  let stroke-collection-3 = (
-    paint: color-fit,
-    thickness: linewidth-very-narrow,
-    dash: "solid",
-  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -388,11 +330,6 @@
 
   let data = json("data/inset-3.json")
 
-  let stroke-line-0 = none
-  let marker-line-0 = markers.circle(
-    linewidth,
-    ..marker-colors(color-data),
-  )
   let line-0 = (
     data: data.at("line-0"),
     stroke: stroke-line-0,
@@ -400,12 +337,6 @@
     transform: transform,
   )
 
-  let fill-collection-1 = ()
-  let stroke-collection-1 = (
-    paint: error-color(color-data),
-    thickness: error-linewidth,
-    dash: "solid",
-  )
   let transform-collection-1 = transform
   let compute-scale-collection-1 = compute-scale
   let offset-transform-collection-1 = point => {
@@ -421,14 +352,6 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let stroke-line-2 = (
-    paint: color-fit.transparentize(fill-alpha),
-    thickness: linewidth,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-2 = none
   let line-2 = (
     data: data.at("line-2"),
     stroke: stroke-line-2,
@@ -436,12 +359,6 @@
     transform: transform,
   )
 
-  let fill-collection-3 = color-fit.transparentize(fill-alpha)
-  let stroke-collection-3 = (
-    paint: color-fit,
-    thickness: linewidth-very-narrow,
-    dash: "solid",
-  )
   let transform-collection-3 = transform
   let compute-scale-collection-3 = compute-scale
   let offset-transform-collection-3 = point => {
@@ -551,7 +468,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(2)),
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -562,7 +479,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(2)),
+    paint: error-color(colors(0)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -581,10 +498,10 @@
     offset-transform: offset-transform-collection-1,
   )
 
-  let fill-collection-2 = theory-alpha-first(colors(2))
+  let fill-collection-2 = theory-alpha-first(colors(0).lighten(fill-lighten))
   let stroke-collection-2 = (
-    paint: theory-alpha-first(black),
-    thickness: linewidth-very-narrow,
+    paint: theory-alpha-first(black.lighten(fill-lighten)),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-2 = transform
@@ -605,7 +522,7 @@
   let stroke-line-3 = none
   let marker-line-3 = markers.circle(
     markersize,
-    ..marker-colors(colors(3)),
+    ..marker-colors(colors(1)),
   )
   let line-3 = (
     data: data.at("line-3"),
@@ -616,7 +533,7 @@
 
   let fill-collection-4 = ()
   let stroke-collection-4 = (
-    paint: error-color(colors(3)),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -635,10 +552,10 @@
     offset-transform: offset-transform-collection-4,
   )
 
-  let fill-collection-5 = theory-alpha-first(colors(3))
+  let fill-collection-5 = theory-alpha-first(colors(1).lighten(fill-lighten))
   let stroke-collection-5 = (
-    paint: theory-alpha-first(black),
-    thickness: linewidth-very-narrow,
+    paint: theory-alpha-first(black.lighten(fill-lighten)),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-5 = transform
@@ -659,7 +576,7 @@
   let stroke-line-6 = none
   let marker-line-6 = markers.circle(
     markersize,
-    ..marker-colors(colors(4)),
+    ..marker-colors(colors(2)),
   )
   let line-6 = (
     data: data.at("line-6"),
@@ -670,7 +587,7 @@
 
   let fill-collection-7 = ()
   let stroke-collection-7 = (
-    paint: error-color(colors(4)),
+    paint: error-color(colors(2)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -689,10 +606,10 @@
     offset-transform: offset-transform-collection-7,
   )
 
-  let fill-collection-8 = theory-alpha-first(colors(4))
+  let fill-collection-8 = theory-alpha-first(colors(2).lighten(fill-lighten))
   let stroke-collection-8 = (
-    paint: theory-alpha-first(black),
-    thickness: linewidth-very-narrow,
+    paint: theory-alpha-first(black.lighten(fill-lighten)),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-8 = transform
@@ -715,7 +632,7 @@
   let stroke-line-9 = none
   let marker-line-9 = markers.thin-diamond(
     markersize-thin-diamond,
-    ..marker-colors(colors(2)),
+    ..marker-colors(colors(0)),
   )
   let line-9 = (
     data: data.at("line-9"),
@@ -726,7 +643,7 @@
 
   let fill-collection-10 = ()
   let stroke-collection-10 = (
-    paint: error-color(colors(2)),
+    paint: error-color(colors(0)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -745,10 +662,10 @@
     offset-transform: offset-transform-collection-10,
   )
 
-  let fill-collection-11 = hatch.hatch(..floquet-theory-hatch(colors(2)))
+  let fill-collection-11 = hatch.hatch(..floquet-theory-hatch(colors(0).lighten(fill-lighten)))
   let stroke-collection-11 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-11 = transform
@@ -766,10 +683,10 @@
     offset-transform: offset-transform-collection-11,
   )
 
-  let fill-collection-12 = hatch.hatch(..floquet-theory-hatch(colors(2)))
+  let fill-collection-12 = hatch.hatch(..floquet-theory-hatch(colors(0).lighten(fill-lighten)))
   let stroke-collection-12 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-12 = transform
@@ -790,7 +707,7 @@
   let stroke-line-13 = none
   let marker-line-13 = markers.thin-diamond(
     markersize-thin-diamond,
-    ..marker-colors(colors(3)),
+    ..marker-colors(colors(1)),
   )
   let line-13 = (
     data: data.at("line-13"),
@@ -801,7 +718,7 @@
 
   let fill-collection-14 = ()
   let stroke-collection-14 = (
-    paint: error-color(colors(3)),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -820,10 +737,10 @@
     offset-transform: offset-transform-collection-14,
   )
 
-  let fill-collection-15 = hatch.hatch(..floquet-theory-hatch(colors(3)))
+  let fill-collection-15 = hatch.hatch(..floquet-theory-hatch(colors(1).lighten(fill-lighten)))
   let stroke-collection-15 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-15 = transform
@@ -841,10 +758,10 @@
     offset-transform: offset-transform-collection-15,
   )
 
-  let fill-collection-16 = hatch.hatch(..floquet-theory-hatch(colors(3)))
+  let fill-collection-16 = hatch.hatch(..floquet-theory-hatch(colors(1).lighten(fill-lighten)))
   let stroke-collection-16 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-16 = transform
@@ -865,7 +782,7 @@
   let stroke-line-17 = none
   let marker-line-17 = markers.thin-diamond(
     markersize-thin-diamond,
-    ..marker-colors(colors(4)),
+    ..marker-colors(colors(2)),
   )
   let line-17 = (
     data: data.at("line-17"),
@@ -876,7 +793,7 @@
 
   let fill-collection-18 = ()
   let stroke-collection-18 = (
-    paint: error-color(colors(4)),
+    paint: error-color(colors(2)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -895,10 +812,10 @@
     offset-transform: offset-transform-collection-18,
   )
 
-  let fill-collection-19 = hatch.hatch(..floquet-theory-hatch(colors(4)))
+  let fill-collection-19 = hatch.hatch(..floquet-theory-hatch(colors(2).lighten(fill-lighten)))
   let stroke-collection-19 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-19 = transform
@@ -916,10 +833,10 @@
     offset-transform: offset-transform-collection-19,
   )
 
-  let fill-collection-20 = hatch.hatch(..floquet-theory-hatch(colors(4)))
+  let fill-collection-20 = hatch.hatch(..floquet-theory-hatch(colors(2).lighten(fill-lighten)))
   let stroke-collection-20 = (
-    paint: black,
-    thickness: linewidth-very-narrow,
+    paint: black.lighten(fill-lighten),
+    thickness: linewidth-very-very-narrow,
     dash: "solid",
   )
   let transform-collection-20 = transform
@@ -937,63 +854,31 @@
     offset-transform: offset-transform-collection-20,
   )
 
-  let stroke-line-21 = (
-    paint: luma(50%),
-    thickness: linewidth-very-narrow,
-    cap: "butt",
-    join: "round",
-    dash: (array: (3.33pt, 1.44pt), phase: 0.0pt),
-  )
-  let marker-line-21 = none
   let line-21 = (
     data: ylim.map(y => (data.at("line-21").at(0).at(0), y)),
-    stroke: stroke-line-21,
-    marker: marker-line-21,
+    stroke: stroke-vertical-line,
+    marker: marker-vertical-line,
     transform: transform,
   )
 
-  let stroke-line-23 = (
-    paint: color.luma(50.0%),
-    thickness: linewidth-very-narrow,
-    cap: "butt",
-    join: "round",
-    dash: (array: (3.33pt, 1.44pt), phase: 0.0pt),
-  )
-  let marker-line-23 = none
   let line-23 = (
     data: ylim.map(y => (data.at("line-23").at(0).at(0), y)),
-    stroke: stroke-line-23,
-    marker: marker-line-23,
+    stroke: stroke-vertical-line,
+    marker: marker-vertical-line,
     transform: transform,
   )
 
-  let stroke-line-25 = (
-    paint: color.luma(50.0%),
-    thickness: linewidth-very-narrow,
-    cap: "butt",
-    join: "round",
-    dash: (array: (3.33pt, 1.44pt), phase: 0.0pt),
-  )
-  let marker-line-25 = none
   let line-25 = (
     data: ylim.map(y => (data.at("line-25").at(0).at(0), y)),
-    stroke: stroke-line-25,
-    marker: marker-line-25,
+    stroke: stroke-vertical-line,
+    marker: marker-vertical-line,
     transform: transform,
   )
 
-  let stroke-line-27 = (
-    paint: color.luma(50.0%),
-    thickness: linewidth-very-narrow,
-    cap: "butt",
-    join: "round",
-    dash: (array: (3.33pt, 1.44pt), phase: 0.0pt),
-  )
-  let marker-line-27 = none
   let line-27 = (
     data: ylim.map(y => (data.at("line-27").at(0).at(0), y)),
-    stroke: stroke-line-27,
-    marker: marker-line-27,
+    stroke: stroke-vertical-line,
+    marker: marker-vertical-line,
     transform: transform,
   )
 
@@ -1088,7 +973,7 @@
     ),
   )
 
-  let legend-color = luma(70%)
+  let legend-color = luma(50%)
   let legend-items = (
     (
       handle: legend-handle(legend-color, markers.circle, markersize),
@@ -1096,8 +981,8 @@
     ),
     (
       handle: legend.rectangle.with(
-        fill: legend-color,
-        stroke: black + linewidth-very-narrow,
+        fill: legend-color.lighten(fill-lighten),
+        stroke: black + linewidth-very-very-narrow,
       ),
       label: [$l = 1$],
     ),
@@ -1107,8 +992,8 @@
     ),
     (
       handle: legend.rectangle.with(
-        fill: hatch.hatch(..floquet-theory-hatch(legend-color)),
-        stroke: black + linewidth-very-narrow,
+        fill: hatch.hatch(..floquet-theory-hatch(legend-color.lighten(fill-lighten))),
+        stroke: black + linewidth-very-very-narrow,
       ),
       label: [$l = 2$],
     ),
