@@ -5,9 +5,9 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
-#let color-97 = blue
-#let color-95 = red
-#let color-75 = green.darken(20%)
+#let color-97 = colors(0)
+#let color-95 = colors(1)
+#let color-75 = colors(2)
 
 #let axes-0(xlim: (187.0, 233.0), ylim: (-650.0, 650.0), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%

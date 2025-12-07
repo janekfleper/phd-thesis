@@ -1,7 +1,7 @@
 #import "/header.typ": *
 #import "figures/figures.typ": figure-level-structure
-#import "figures/k40_hyperfine/figure.typ": figure as figure-k40-hyperfine
-#import "figures/k40_feshbach/figure.typ": figure as figure-k40-feshbach
+#import "figures/k40_hyperfine/figure.typ": figure as figure-hyperfine
+#import "figures/k40_feshbach/figure.typ": figure as figure-feshbach
 
 == Properties of #K40 <sec:setup-k40>
 
@@ -31,7 +31,7 @@ The relevant optical transitions between the hyperfine states are shown in #subr
   grid(
     columns: (1.2fr, 2fr),
     column-gutter: 1em,
-    figure-level-structure(), figure-k40-hyperfine(height: 6.7cm),
+    figure-level-structure(), figure-hyperfine(height: 6.7cm),
   ),
   caption: [
     Hyperfine structure of #K40.
@@ -82,13 +82,11 @@ Strongly repulsive interactions are available in the range $#qty[190][G] < B < #
 Around the zero-crossing at $B approx #qty[210][G]$, we can continuously tune the interactions from the strongly attractive regime to the background scattering length $a_"bg" slash a_0 = #num[167]$.
 
 #floating-figure(
-  figure-k40-feshbach(width: 11cm, height: 6.5cm),
+  figure-feshbach(width: 11cm, height: 6.5cm),
   caption: [
     Magnetic Feshbach resonances in #K40.
     The Feshbach resonances are computed from the coupled-channel parameters in @ludewig_feshbach_2012.
     The dashed vertical lines indicate the resonance positions $B_0$.
-
-    // TODO: Find better colors?
   ],
   label: <fig:setup-k40-fesbhach>,
   placement: bottom,
