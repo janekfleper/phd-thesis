@@ -236,8 +236,6 @@ The fit parameters to adjust the theoretical signals to the measured oscillation
     To completely suppress the single-particle tunneling, the modulation amplitude is set to $K0 = 2.4$.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the interaction energy is $U slash t approx -9$.
     This figure is adapted from @klemmer_floquet-driven_2024.
-
-    // TODO: Find nicer colors for the spectrum!
   ],
   label: <fig:phase-floquet-crossover-spectrum>,
 )
