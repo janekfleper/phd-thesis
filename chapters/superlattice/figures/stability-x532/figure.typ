@@ -85,7 +85,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(color-stability-final),
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -96,7 +96,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(color-stability-final),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -161,7 +161,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(color-stability-final),
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -172,7 +172,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(color-stability-final),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -245,7 +245,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(color-stability-initial),
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -256,7 +256,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(color-stability-initial),
+    paint: error-color(colors(0)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -279,10 +279,10 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    ..marker-colors(color-stability-final),
+    ..marker-colors(colors(1)),
   )
   let stroke-collection-3 = (
-    paint: error-color(color-stability-final),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -379,7 +379,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(color-stability-initial),
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -390,7 +390,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(color-stability-initial),
+    paint: error-color(colors(0)),
     thickness: error-linewidth,
     dash: "solid",
   )
