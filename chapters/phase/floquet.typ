@@ -51,9 +51,6 @@ in powers of the inverse modulation frequency $Heff^((n)), kick^((n)) prop 1 sla
     In static double wells (left), the tunneling amplitude for a single particle is $t$ while a strongly-interacting pair tunnels according to the superexchange constant $J$ @eq:theory-double-two-superexchange[].
     In Floquet-driven double wells (right), the tunneling amplitudes are rescaled to #teff and #Jeff, respectively, while the interaction energy is #Ueff.
     This figure is adapted from @klemmer_floquet-driven_2024.
-
-    // TODO: Add *a* and *b* as labels?
-    // TODO: Compute the exact line lengt for the modulation amplitude?
   ],
   label: <fig:phase-floquet-sketch>,
 )
