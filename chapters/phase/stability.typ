@@ -94,10 +94,6 @@ The resulting limitation for the stability of the superlattice phase is discusse
     The reference conditions for the computation of the temperature coefficients are $T_0 = #degC[24]$, $P_0 = #qty[1013.3][hPa]$ and $RH_0 = #qty[40][%]$.
     In air, the temperature coefficient is computed with the Ciddor equation @ciddor_refractive_1996.
     The material properties of the retro lens are taken from @daimon_high-accuracy_2002 @corning_optigrade_2024 @schott_tie-31_2018, and the material properties of the glass cell (UVFS) are taken from @malitson_interspecimen_1965 @corning_fused_2015.
-
-    // TODO: Mention the materials in an additional row?
-    // TODO: Find the material name for the glass cell? Heraeus Suprasil? And reference the data sheet instead?
-    // TODO: Match the lenses with the sensors figure...
   ],
   label: <tab:phase-stability-temperature-coefficients>,
 )

@@ -136,9 +136,9 @@
   table.header([], [Air], [Lens 1], [Lens 2], [Air], [Glass cell]),
   table.hline(y: 1),
   table.vline(x: 1),
-  $phy.pdv(Delta n_sigma, T) med slash med #qty[1e-6][1/K]$, $0.013$, $-0.274$, $-0.942$, $0.013$, $-0.618$,
+  $phy.pdv(Delta n_sigma, T) slash #qty[1e-6][1/K]$, $0.013$, $-0.274$, $-0.942$, $0.013$, $-0.618$,
   [$d_sigma slash#unit[mm]$], $240$, $9.0$, $3.7$, $220$, $4.0$,
-  $phy.pdv(phi, T) med slash #unit[mrad/K]$, $18.4$, $-14.5$, $-20.6$, $16.9$, $-14.6$,
+  $phy.pdv(phi, T) slash #unit[mrad/K]$, $18.4$, $-14.5$, $-20.6$, $16.9$, $-14.6$,
 )
 
 #pagebreak()

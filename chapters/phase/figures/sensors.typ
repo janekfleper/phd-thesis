@@ -174,8 +174,8 @@
     rect((x0 - thickness, -0.5), (x0, -3), fill: metal-color, name: "mu-metal-lower")
 
     // all the labels...
-    content((rel: (0, -0.3 - mount-thickness), to: "doublet.L1.south"), "L1")
-    content((rel: (0, -0.3 - mount-thickness), to: "doublet.L2.south"), "L2")
+    content((rel: (0, -0.3 - mount-thickness), to: "doublet.L1.south"), "L2")
+    content((rel: (0, -0.3 - mount-thickness), to: "doublet.L2.south"), "L1")
     content((rel: (0, -0.3), to: "retro.south"), "Retro mirror")
     content((rel: (0, -0.3), to: "glasscell.south"), "Glass cell")
     content((rel: (-0.9, 0.3), to: "ioffe-upper-2.north-east"), "Ioffe bars")
