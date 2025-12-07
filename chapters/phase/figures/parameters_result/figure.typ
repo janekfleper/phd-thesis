@@ -280,7 +280,7 @@
     source: properties-inset-0,
     connectors: (
       anchors: (top + left, top + right),
-      stroke: inset-connector-stroke,
+      stroke: inset-connector-stroke-dark,
     ),
   )
 

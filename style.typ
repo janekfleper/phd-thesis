@@ -131,6 +131,7 @@
 
 #let inset-indicator-stroke = black + 1.2pt
 #let inset-connector-stroke = luma(50%) + 0.9pt
+#let inset-connector-stroke-dark = luma(20%) + 0.9pt
 
 #let text-box = box.with(
   fill: white.transparentize(20%),

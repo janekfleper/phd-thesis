@@ -313,7 +313,7 @@
     source: properties-inset-0,
     connectors: (
       anchors: (bottom + left, top + left),
-      stroke: inset-connector-stroke,
+      stroke: inset-connector-stroke-dark,
     ),
   )
 
@@ -327,7 +327,7 @@
     source: properties-inset-1,
     connectors: (
       anchors: (bottom + left, top + left),
-      stroke: inset-connector-stroke,
+      stroke: inset-connector-stroke-dark,
     ),
   )
 
