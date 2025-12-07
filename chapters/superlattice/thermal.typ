@@ -1,4 +1,5 @@
 #import "/header.typ": *
+#import "/style.typ": figure-style
 #import "figures/figures.typ": table-optical-properties, thermal-lensing-simulation
 
 == Introduction to thermal lensing <sec:super-thermal>
@@ -126,16 +127,13 @@ With $delta prop f^2$ and $p prop w_0^(-2)$, the focal shift @eq:super-thermal-s
 The best option to reduce the focal shift is an improvement of the properties of the optical element that causes the thermal lensing.
 
 #floating-figure(
-  thermal-lensing-simulation(),
+  figure-style(thermal-lensing-simulation()),
   caption: [
     Optical setup for the simulation of the thermally-induced focal shift.
     The beam is initially collimated with the radius $r = w_0$ and the angle $theta.alt = 0$.
     The thermal lens slightly focuses the beam before it is demagnified by the factor $tmag = f_1 slash f_2$ in the telescope.
     After the propagation of the distance $d$, the beam is focused onto the position of the atoms by a lens with the focal length $f$.
     The dashed lines indicate the propagating beam without the thermal lens.
-
-    // TODO: Add the radius $r$ and the angle $theta$ around the final lens $f$.
-    // TODO: Make the "real" lenses look nicer.
   ],
   label: <fig:super-thermal-simulation-setup>,
 )
