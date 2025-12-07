@@ -170,9 +170,6 @@ The details about the experimental sequence to realize the Floquet driving can b
     The dashed lines show the Bessel functions $Jn(0)(K0)$ and $Jn(1)(K0)$, and the dotted vertical line marks the amplitude $K0 = 2.4$ used in *b*.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the interaction energy is $U slash t approx -9$.
     This figure is adapted from @klemmer_floquet-driven_2024.
-
-    // Make the colors darker? Or just the blue "more blue"?
-    // TODO: Move the *abc* labels outside of the axes?
   ],
   label: <fig:phase-floquet-setup>,
 )

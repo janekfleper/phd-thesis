@@ -170,7 +170,7 @@
       -90.0deg,
       place(
         center + top,
-        text(size: 1em, fill: black, [Tunneling amplitude $teff slash t$]),
+        text(size: 1em, fill: black, [Tunneling amplitude $abs(teff) slash t$]),
       ),
     ),
   )
