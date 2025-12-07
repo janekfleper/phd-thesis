@@ -54,9 +54,6 @@ If the actual #x532\-lattice depth is lower than #qty[12][Erec] by #qty[4][%], t
     The parameters for the measurement are $Vx1064 = #qty[15][Erec]$, $Vx532 = #qty[12][Erec]$, $Vy1064 = #qty[55][Erec]$ and $Vz532 = #qty[110][Erec]$.
     The atoms occupy the states #mF(9) and #mF(7) and the magnetic field is set to $B approx #qty[204.9][G]$.
     In *a* and *b*, empty cells are located outside of the atom cloud or the local evaluation failed.
-
-    // TODO: Add an inset (or multiple) for the interaction measurement?
-    // TODO: Improve the visibility of the inset-connector stroke?
   ],
   label: <fig:phase-parameters-result>,
 )
