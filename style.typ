@@ -23,9 +23,20 @@
 #let color-x1064 = red
 #let color-x532 = green.darken(20%)
 
-#let gradient-atomic-density = std.gradient.linear(white, blue, angle: -90deg)
-#let gradient-modulation-resonance = std.gradient.linear(white, green.darken(40%))
-#let colormap-phase = color.map.turbo
+#let gradient-atomic-density = std.gradient.linear(
+  color.rgb(96.9%, 98.4%, 100.0%),
+  color.rgb(87.1%, 92.2%, 96.9%),
+  color.rgb(77.6%, 85.9%, 93.7%),
+  color.rgb(62.0%, 79.2%, 88.2%),
+  color.rgb(42.0%, 68.2%, 83.9%),
+  color.rgb(25.9%, 57.3%, 77.6%),
+  color.rgb(12.9%, 44.3%, 71.0%),
+  color.rgb(3.1%, 31.8%, 61.2%),
+  color.rgb(3.1%, 18.8%, 42.0%),
+  angle: -90deg,
+)
+#let gradient-modulation-resonance = std.gradient.linear(white, navy.lighten(20%))
+#let colormap-phase = color.map.plasma
 
 #let gradient-colors(..args) = {
   let args = args.pos()

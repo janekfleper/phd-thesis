@@ -86,9 +86,6 @@ Both effects match the expected behavior of the intensity profile of the Gaussia
     The resonances show the equipotential lines where the energy gap between the bands $n = 1$ and $n' = 3$ in the lattice potential $Vx1064(x, y)$ is equal to $h dot fmod$.
     The lattice depth is set to $#Vx1064 = #qty[60][Erec]$, the modulation time is set to $tau_"mod" = #qty[0.75][s]$ and the modulation amplitude is set to $dV slash Vx1064 = #tr[#qty[3][%]]$.
     The angle of the resonances in the #xy-plane matches the expected angle of the #x1064\-lattice axis relative to the camera frame.
-
-    // TODO: Only use a single label for the y-axis and the x-axis?
-    // TODO: Use a different colormap?
   ],
   label: <fig:mod-intro-images>,
   placement: bottom,
