@@ -45,9 +45,6 @@ Just before the experimental segment, we employ an imaging pulse to remove the a
     At the fixed time #tau0, indicated by the dashed vertical lines, the occupation of the state #ketL varies significantly.
     When the second minimum of the oscillations coincides with the measurement time #tau0, local minima show up at $Delta slash t approx plus.minus 2.6$ in the phase-sensitive signal.
     Since their amplitude is smaller by one order of magnitude, we can always tell the secondary minima apart from the primary minimum at $Delta slash t = 0$.
-
-    // TODO: Fix the colors...
-    // TODO: Move the abc labels somewhere else in the oscillations?
   ],
   label: <fig:phase-measure-theory>,
 )

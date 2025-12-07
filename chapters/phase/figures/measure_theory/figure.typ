@@ -5,6 +5,12 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
+#let ylim = (-13.0, 23.0)
+#let abc-style = (..abc-style, location: bottom + left, outset: 0.2em, fill: none)
+
+// just use the blue for everything...
+#let colors(i) = color-left
+
 #let xaxis-major-ticks = (
   locs: (-1.0, 0.0, 1.0, 2.0),
   labels: ($−1$, $0$, $1$, $2$),
@@ -30,7 +36,7 @@
   label-style: yaxis-minor-label-style,
 )
 
-#let inset-0(xlim: (-0.51, 0.51), ylim: (-12.0, 22.0), dpi: 100.0) = {
+#let inset-0(xlim: (-0.51, 0.51), ylim: ylim, dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -119,15 +125,15 @@
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
-  draw.collection(..collection-1)
-  draw.collection(..collection-2)
+  // draw.collection(..collection-1)
+  // draw.collection(..collection-2)
   draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 1)
 }
 
 
-#let inset-1(xlim: (-0.51, 0.51), ylim: (-12.0, 22.0), dpi: 100.0) = {
+#let inset-1(xlim: (-0.51, 0.51), ylim: ylim, dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -216,15 +222,15 @@
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
-  draw.collection(..collection-1)
-  draw.collection(..collection-2)
+  // draw.collection(..collection-1)
+  // draw.collection(..collection-2)
   draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 2)
 }
 
 
-#let inset-2(xlim: (-0.51, 0.51), ylim: (-12.0, 22.0), dpi: 100.0) = {
+#let inset-2(xlim: (-0.51, 0.51), ylim: ylim, dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -313,8 +319,8 @@
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.line(..line-0)
-  draw.collection(..collection-1)
-  draw.collection(..collection-2)
+  // draw.collection(..collection-1)
+  // draw.collection(..collection-2)
   draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 3)
@@ -379,7 +385,7 @@
   )
 
   let stroke-line-0 = (
-    paint: colors(0),
+    paint: luma(30%),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -451,10 +457,12 @@
   let properties-inset-1 = (position: (70.0%, 55.0%), shape: (25.0%, 25.0%))
   let properties-inset-2 = (position: (8.0%, 73.0%), shape: (25.0%, 25.0%))
 
+  let shape = (4% / xscale, 4% / yscale)
+  let shape = (1e-5, 1e-5)
   let indicator-inset-0 = (
     target: (
-      position: (-1, 0.683446164489646),
-      shape: (1e-05, 1e-05),
+      position: (-1 - shape.at(0) / 2, 0.683446164489646 + shape.at(1) / 2),
+      shape: shape,
       transform: transform,
       stroke: inset-indicator-stroke,
     ),
@@ -467,8 +475,8 @@
 
   let indicator-inset-1 = (
     target: (
-      position: (0.5, 0.2271970304747089),
-      shape: (1e-05, 1e-05),
+      position: (0.5 - shape.at(0) / 2, 0.2271970304747089 + shape.at(1) / 2),
+      shape: shape,
       transform: transform,
       stroke: inset-indicator-stroke,
     ),
@@ -481,8 +489,8 @@
 
   let indicator-inset-2 = (
     target: (
-      position: (0, 1e-05),
-      shape: (1e-05, 1e-05),
+      position: (0 - shape.at(0) / 2, 1e-05 + shape.at(1) / 2),
+      shape: shape,
       transform: transform,
       stroke: inset-indicator-stroke,
     ),
