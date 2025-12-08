@@ -11,9 +11,11 @@
     name: name,
     {
       set-origin(pos)
-      rect(
-        (0, width / 2),
-        (-length, -width / 2),
+      line(
+        (-length, width / 2),
+        (rel: (length, 0)),
+        (rel: (0, -width)),
+        (rel: (-length, 0)),
         fill: std.gradient.linear(..colors),
       )
     },
@@ -96,21 +98,23 @@
     let beam-radius = 0.1
     let beam-radius-focus = 0.04
     let angle-focus = 180deg + calc.asin(0.3 / 6.5)
-    bichromatic-beam("pos-0", "pos-1", beam-radius, 90deg, color-x1064, color-x532)
-    bichromatic-beam("pos-1", "pos-2", beam-radius, 180deg, color-x1064, color-x532)
-    bichromatic-beam-focus(
-      "pos-2",
-      "pos-3",
-      150%,
-      beam-radius,
-      beam-radius-focus,
-      angle-focus,
-      angle-focus,
-      color-x1064,
-      color-x532,
-      (start: 45%, stop: 55%),
-      (start: 46%, stop: 56.6%),
-    )
+    on-layer(-1, {
+      bichromatic-beam("pos-0", "pos-1", beam-radius, 90deg, color-x1064, color-x532)
+      bichromatic-beam("pos-1", "pos-2", beam-radius, 180deg, color-x1064, color-x532)
+      bichromatic-beam-focus(
+        "pos-2",
+        "pos-3",
+        150%,
+        beam-radius,
+        beam-radius-focus,
+        angle-focus,
+        angle-focus,
+        color-x1064,
+        color-x532,
+        (start: 45%, stop: 55%),
+        (start: 46%, stop: 56.6%),
+      )
+    })
 
     // the mirrors...
     mirror("pos-dichroic", 45deg, 0.3, 2, backside: false, name: "dichroic")
@@ -143,7 +147,13 @@
     // the other environmental sensors
     let sensor-shape = rect.with(radius: 2pt)
     sensor-other((-2.2, -1.8), 0.6, shape: sensor-shape, color: pressure-sensor-color, label: $P$)
-    sensor-other((-2.2, -2.8), 0.9, shape: sensor-shape, color: other-sensor-color, label: [#RH\ #CO2])
+    sensor-other(
+      (-2.2, -2.8),
+      0.9,
+      shape: sensor-shape,
+      color: other-sensor-color,
+      label: par(leading: 1mm, [#RH\ #xCO2]),
+    )
 
     // the glasscell
     glasscell("pos-glasscell", -90deg, 3, 1.5, 0.2, fill: luma(0%), name: "glasscell")
@@ -154,7 +164,8 @@
     let length = 1.3
     let offset = 1
     for i in range(7) {
-      pinch-coil((x0 + offset + i * width, 0), width, length, color: copper-color, name: "pinch-" + str(i))
+      pinch-coil((x0 + offset + i * width, 0), width, length, color: copper-color, name: "pinch-pump-" + str(i))
+      pinch-coil((x0 - offset - i * width, 0), width, length, color: copper-color, name: "pinch-stage-" + str(i))
     }
 
     // the Ioffe bars
@@ -170,8 +181,28 @@
     // the mu-metal
     let x0 = -4.8
     let thickness = 0.15
-    rect((x0 - thickness, 0.5), (x0, 2), fill: metal-color, name: "mu-metal-upper")
-    rect((x0 - thickness, -0.5), (x0, -3), fill: metal-color, name: "mu-metal-lower")
+    let height-upper = 1.25
+    line(
+      (x0, 1.75),
+      (rel: (0, -height-upper)),
+      (rel: (-thickness, 0)),
+      (rel: (0, height-upper)),
+      fill: metal-color,
+      name: "mu-metal-upper",
+    )
+    line(
+      (x0 - 3.0, -4.5),
+      (rel: (1.5, 0)),
+      (rel: (1.5, 1.5)),
+      (rel: (0, 2.5)),
+      (rel: (-thickness, 0)),
+      (rel: (0, -2.5 + thickness / 2)),
+      (rel: (-1.5 + thickness / 2, -1.5 + thickness / 2)),
+      (x0 - 3.0, -4.5 + thickness),
+      fill: metal-color,
+      name: "mu-metal-lower",
+    )
+    anchor("in-out", (x0 - thickness / 2, -3.0))
 
     // all the labels...
     content((rel: (0, -0.3 - mount-thickness), to: "doublet.L1.south"), "L2")
@@ -179,15 +210,15 @@
     content((rel: (0, -0.3), to: "retro.south"), "Retro mirror")
     content((rel: (0, -0.3), to: "glasscell.south"), "Glass cell")
     content((rel: (-0.9, 0.3), to: "ioffe-upper-2.north-east"), "Ioffe bars")
-    content((rel: (0, -0.4), to: "pinch-4.south"), "Pinch coil")
+    content((rel: (0, -0.4), to: "pinch-pump-4.south"), "Pinch coil")
     content((rel: (0, 0.3), to: "sensor-lens.north"), $T_"Lens"$)
     content((rel: (0, -0.3), to: "TA.south"), $T_"A"$)
     content((rel: (0, -0.3), to: "TB.south"), $T_"B"$)
     content((rel: (0, -0.3), to: "TC.south"), $T_"C"$)
     content((rel: (0, 0.3), to: "Tfast.north"), $T_"fast"$)
-    content((rel: (0, -0.3), to: "mu-metal-lower.south"), mu-metal)
-    content((rel: (0.3, 0.5), to: "mu-metal-lower.south"), "outside", anchor: "west")
-    content((rel: (-0.3, 0.5), to: "mu-metal-lower.south"), "inside", anchor: "east")
+    content((rel: (0.2, -0.15), to: "mu-metal-lower.start"), mu-metal, anchor: "north-west")
+    content((rel: (0.3, 0.5), to: "in-out"), "outside", anchor: "west")
+    content((rel: (-0.3, 0.5), to: "in-out"), "inside", anchor: "east")
 
     // the legend for the sensor models
     let rect-sensor = std.rect.with(width: 0.3cm, height: 0.3cm, radius: 2pt, stroke: linewidth-very-narrow)
@@ -207,7 +238,7 @@
       rect-sensor(fill: pressure-sensor-color), "Pressure sensor",
       rect-sensor(fill: other-sensor-color), [Humidity & #CO2 sensor],
     )
-    content((-13, -2.2), legend, anchor: "north-west")
+    content((-13, -2.2), std.rect(inset: 0.3em, legend), anchor: "north-west")
 
     // the coordinate system...
     scope({

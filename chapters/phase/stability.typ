@@ -147,11 +147,6 @@ As we expect these parameters to be homogeneous, measuring them at specific posi
     Two air-temperature sensors are located inside the #mu-metal shielding close to the Ioffe bars.
     The pinch coil is omitted and the Ioffe bars are shortened to the left of the glass cell.
     The figure is not to scale.
-
-    // TODO: Use motorized mirror mount for the retro mirror?
-    // TODO: Really keep the coordinate system?
-    // TODO: Mention all the detailed information about the sensor types here?
-    // TODO: Remove the "other" sensors from the legend?
   ],
   label: <fig:phase-stability-sensors-setup>,
   placement: bottom,
