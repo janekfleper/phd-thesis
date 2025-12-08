@@ -321,8 +321,14 @@
   )
 }
 
-#let beam-corner(pos, width, height, angle, C0) = {
+#let beam-corner(pos, width, height, angle, C0, background: false) = {
   import cetz.draw: *
+  if background {
+    merge-path(close: true, fill: white, stroke: none, {
+      line(pos, (rel: (width, 0)))
+      line((), (rel: (0, height)))
+    })
+  }
   merge-path(
     close: true,
     fill: std.gradient.linear(C0, C0.transparentize(100%), angle: angle + 90deg),
