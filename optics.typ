@@ -11,13 +11,15 @@
   height,
   R1,
   R2,
+  gangle: auto,
   fill: auto,
   name: none,
 ) = {
+  if gangle == auto { gangle = angle }
   if fill == auto { fill = default-fill }
   let _fill = std.gradient.linear(
     ..alphas.map(a => fill.transparentize(a)),
-    angle: 90deg - angle,
+    angle: 90deg - gangle,
   )
 
   import cetz.draw: *
@@ -189,6 +191,7 @@
   pos,
   angle,
   height,
+  gangle: auto,
   fill: auto,
   name: none,
 ) = {
@@ -200,16 +203,18 @@
   let (R11, R12) = (20, 3)
   let (R21, R22) = (3, -4)
 
+  if gangle == auto { gangle = angle }
   import cetz.draw: *
   group(
     name: name,
+    fill: red,
     anchor: "center",
     {
       set-origin(pos)
       rotate(z: angle)
       set-origin((-(t1 + t2 + dt) / 2, 0))
-      lens(pos1, 0deg, t1, height, R11, R12, name: "L1")
-      lens(pos2, 0deg, t2, height, R21, R22, name: "L2")
+      lens(pos1, 0deg, t1, height, R11, R12, gangle: gangle, name: "L1")
+      lens(pos2, 0deg, t2, height, R21, R22, gangle: gangle, name: "L2")
     },
   )
 }
