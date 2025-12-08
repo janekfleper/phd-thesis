@@ -240,13 +240,17 @@
       anchor("atoms", (-height / 3, 0))
 
       set-style(fill: _fill.transparentize(70%))
-      rect(
-        (height / 2, height / 2),
-        (rel: (-width, -thickness)),
+      line(
+        (-width + height / 2, height / 2),
+        (rel: (width, 0)),
+        (rel: (0, -thickness)),
+        (rel: (-width, 0)),
       )
-      rect(
-        (height / 2, -height / 2),
-        (rel: (-width, thickness)),
+      line(
+        (-width + height / 2, -height / 2),
+        (rel: (width, 0)),
+        (rel: (0, thickness)),
+        (rel: (-width, 0)),
       )
       rect(
         (height / 2, -height / 2 + thickness),
