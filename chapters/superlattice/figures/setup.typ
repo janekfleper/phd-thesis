@@ -82,6 +82,17 @@
         beam-focus(fiber, "fiber-lens", 0.01, factor * beam-radius, 0deg, color)
       })
 
+      on-layer(-0.8, {
+        beam-corner(
+          (rel: (beam-radius, -beam-radius), to: overlap),
+          -beam-radius,
+          beam-radius,
+          -90deg,
+          color,
+          background: true,
+        )
+      })
+
       cetz.decorations.brace(
         (rel: (0, 0.1), to: "PBS3.north-west"),
         (rel: (0, 0.1), to: "PBS2.north-east"),
@@ -274,10 +285,10 @@
 
     // the optical elements...
     mirror(overlap, 45deg, t2, h2, backside: false, transparent: true, name: "overlap")
-    mirror(forward-dichroic, -135deg, t2, h2, backside: false, transparent: true, name: "forward-dichroic")
-    mirror(retro-dichroic, 135deg, t2, h2, backside: false, transparent: true, name: "retro-dichroic")
+    mirror(forward-dichroic, -135deg, t2, h2, backside: false, transparent: false, name: "forward-dichroic")
+    mirror(retro-dichroic, 135deg, t2, h2, backside: false, transparent: false, name: "retro-dichroic")
     mirror(retro-mirror, 0deg, t1, h1, backside: true, name: "retro-mirror")
-    glasscell(glass-cell, 0deg, 3, 1.5, 0.25, fill: luma(0%), name: "glasscell")
+    glasscell(glass-cell, 0deg, 3, 1.5, 0.25, name: "glasscell")
 
     // fix gradients of doublets...
     doublet(forward-lens, -90deg, h2, name: "forward-lens")
@@ -339,6 +350,17 @@
     content((rel: (label-pad, 0), to: "retro-mirror.east"), "Retro mirror", anchor: "west")
     content((rel: (0, label-pad), to: "p5b"), "Beam monitoring")
     content((rel: (0, -label-pad), to: "p1b"), "Beam monitoring")
+
+    // the coordinate system...
+    scope({
+      set-origin((rel: (-2, 0), to: "glasscell"))
+      set-style(mark: (end: ">", fill: black), stroke: (thickness: linewidth-very-narrow, cap: "round"))
+      line((0, -0.1), (0, 1), name: "x")
+      line((-0.1, 0), (1, 0), name: "y")
+
+      content(("x.start", 110%, "x.end"), $x$, anchor: "south")
+      content(("y.start", 110%, "y.end"), $y$, anchor: "west")
+    })
 
     setup-x1064()
     setup-x532()

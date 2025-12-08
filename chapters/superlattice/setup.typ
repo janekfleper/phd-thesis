@@ -34,19 +34,8 @@ This allows us to match the foci of the #forward lattice beams and the horizonta
     The inner surfaces of the glass cell are uncoated, resulting in a reflectivity of approximately #qty[4][%] at each inner surface.
     Behind the relay lens, the horizontal dipole trap is overlapped with the #x1064 lattice using a PBS.
     The cylindrical telescope in the optical path of the #x532 lattice expands the beam along the #z-axis, leaving the beam shape in the #xy-plane unaffected.
+    The transmissions through the dichroic mirrors around the glass cell are used to monitor the beam positions in the virtual atom plane.
     To improve the visibility, neither the beam diameters nor the distances are drawn to scale.
-
-    // TODO: Add a legend for the lenses and/or their properties?
-    // TODO: Assign numbers/labels to the mirrors and lenses?
-    // TODO: Reduce details in the caption? Or add some more information?
-    // TODO: Add some highlighting for the retro path?
-    // TODO: Actually add a shift behind the glass plates?
-    // TODO: Add photodiodes for the power regulation?
-    // TODO: Add indicators for initial beam diameters?
-    // TODO: Fix all beam overlaps at dichroic mirrors...
-    // TODO: Fix all beam overlaps at concave lenses...
-    // TODO: Add a coordinate system...
-    // TODO: Add fibers?
   ],
   label: <fig:super-setup>,
 )
