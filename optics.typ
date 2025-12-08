@@ -2,7 +2,7 @@
 #import "/header.typ": *
 
 #let alphas = (40%, 90%, 40%)
-#let default-fill = luma(0)
+#let default-fill = blue
 
 #let lens(
   pos,
