@@ -2,7 +2,7 @@
 #import "/mpl2typ/lib.typ": *
 #import "/style.typ": *
 #import "/header.typ": *
-#import "@preview/cetz:0.4.1"
+#import "@preview/cetz:0.4.2"
 
 #let phase-ramp = cetz.canvas({
   import cetz.draw: *
