@@ -148,11 +148,6 @@ Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided cros
     The horizontal line and the shaded area show the last calibrated value at $Vy1064 = #qty[30][Erec]$.
     The error bars in *a* and *b* show the uncertainties according to the procedure introduced in @ssec:mod-eval-error.
     The insets in *a* show the mask $#qty[-10][μm] < x < #qty[10][μm]$ we apply for the data analysis of the atomic densities.
-
-    // TODO: Synchronize colors with @fig:mod-eval-x1064-result and @fig:mod-coupled-theory.
-    // TODO: Add label/legend for the coupled energy bands $cband_2$ and $cband_4$.
-    // TODO: Find a better color for the mean waist in *b*?
-    // TODO: Improve the figure position in the document!
   ],
   label: <fig:mod-coupled-result>,
 )

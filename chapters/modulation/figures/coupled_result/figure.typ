@@ -188,7 +188,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(red),
+    ..marker-colors(color-data),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -199,7 +199,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(red),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -219,7 +219,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(2),
+    paint: colors(3),
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -233,7 +233,7 @@
     transform: transform,
   )
 
-  let fill-color = colors(2).transparentize(fill-alpha + 10%)
+  let fill-color = colors(3).transparentize(fill-alpha + 10%)
   let fill-collection-3 = fill-color
   let stroke-collection-3 = (
     paint: fill-color,
@@ -256,7 +256,7 @@
   )
 
   let stroke-line-4 = (
-    paint: colors(0),
+    paint: colors(1),
     thickness: linewidth-narrow,
     cap: "butt",
     join: "round",
@@ -270,7 +270,7 @@
     transform: transform,
   )
 
-  let fill-color = colors(0).transparentize(fill-alpha + 10%)
+  let fill-color = colors(1).transparentize(fill-alpha + 10%)
   let fill-collection-5 = fill-color
   let stroke-collection-5 = (
     paint: fill-color,
@@ -340,6 +340,38 @@
     ),
   )
 
+  let legend-style = (
+    location: (10%, 0.2%),
+    title: none,
+    columns: 1,
+    outset: 0.3em,
+    row-gutter: 0.5em,
+    item-gutter: 0.5em,
+    column-gutter: 1.0em,
+    handle-length: 2.0em,
+    handle-height: 1.0em,
+    fill: none,
+    stroke: none,
+    frame: block.with(),
+  )
+
+  let legend-items = (
+    (
+      handle: legend.rectangle.with(
+        fill: fill-collection-3,
+        stroke: fill-collection-3 + linewidth-very-narrow,
+      ),
+      label: [$eta = 4$],
+    ),
+    (
+      handle: legend.rectangle.with(
+        fill: fill-collection-5,
+        stroke: fill-collection-5 + linewidth-very-narrow,
+      ),
+      label: [$eta = 2$],
+    ),
+  )
+
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   draw.collection(..collection-3)
   draw.collection(..collection-5)
@@ -363,6 +395,7 @@
   axes.inset(..properties-inset-1, inset-1())
   axes.inset(..properties-inset-2, inset-2())
   axes.abc(..abc-style, 1)
+  legend.legend(..legend-style, ..legend-items)
 }
 
 
@@ -409,7 +442,7 @@
   )
 
   let stroke-line-0 = (
-    paint: colors(0).transparentize(30.0%),
+    paint: color-data.transparentize(30.0%),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -423,7 +456,7 @@
     transform: transform,
   )
 
-  let fill-color = colors(0).transparentize(fill-alpha + 10%)
+  let fill-color = color-data.transparentize(fill-alpha + 10%)
   let patch-1 = (
     p0: (xlim.at(0), 146.6),
     p1: (xlim.at(1), 141.6),
@@ -435,7 +468,7 @@
   let stroke-line-2 = none
   let marker-line-2 = markers.circle(
     markersize,
-    ..marker-colors(colors(0)),
+    ..marker-colors(color-data),
   )
   let line-2 = (
     data: data.at("line-2"),
@@ -446,7 +479,7 @@
 
   let fill-collection-3 = ()
   let stroke-collection-3 = (
-    paint: error-color(colors(0)),
+    paint: error-color(color-data),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -469,7 +502,7 @@
   draw.rectangle(..patch-1)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-minor-ticks, transform)
-  // draw.line(..line-0)
+  draw.line(..line-0)
   draw.collection(..collection-3)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-major-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-major-ticks, transform)
