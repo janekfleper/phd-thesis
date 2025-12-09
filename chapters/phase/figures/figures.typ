@@ -176,14 +176,7 @@
 
   let draw-potential(color, phase: 0) = cetz.draw.line(
     ..xdata.map(x => (x * xscale, potential(x, 0.4 * yscale, yscale, phase))),
-    stroke: color + 1.5pt,
-  )
-
-
-  let atom-style = (
-    radius: 0.2,
-    stroke: none,
-    fill: gradient.radial(white, luma(20%), focal-center: auto, center: (40%, 40%)),
+    stroke: color + linewidth-narrow,
   )
 
   let draw-single(
