@@ -142,9 +142,9 @@
   let step-0 = (47%, 15%)
   let step-1 = (60%, 9%)
 
-  let C0 = colors(0)
+  let C1 = colors(1)
   let stroke-line-4 = (
-    paint: C0,
+    paint: C1,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -153,9 +153,9 @@
   let gradient-stroke-line-4 = (
     ..stroke-line-4,
     paint: gradient.linear(..gradient-colors(
-      C0.transparentize(80%),
+      C1.transparentize(80%),
       step-1,
-      C0,
+      C1,
     )),
   )
   let marker-line-4 = none
@@ -166,9 +166,9 @@
     transform: transform,
   )
 
-  let C1 = colors(1)
+  let C2 = colors(2)
   let stroke-line-5 = (
-    paint: colors(1),
+    paint: C2,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -177,11 +177,11 @@
   let gradient-stroke-line-5 = (
     ..stroke-line-5,
     paint: gradient.linear(..gradient-colors(
-      C1.transparentize(80%),
+      C2.transparentize(80%),
       step-0,
-      C1,
+      C2,
       step-1,
-      C1.transparentize(70%),
+      C2.transparentize(70%),
     )),
   )
   let marker-line-5 = none
@@ -192,9 +192,9 @@
     transform: transform,
   )
 
-  let C2 = colors(2)
+  let C3 = colors(3)
   let stroke-line-6 = (
-    paint: colors(2),
+    paint: C3,
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -203,9 +203,9 @@
   let gradient-stroke-line-6 = (
     ..stroke-line-6,
     paint: gradient.linear(..gradient-colors(
-      C2,
+      C3,
       step-0,
-      C2.transparentize(90%),
+      C3.transparentize(90%),
     )),
   )
   let marker-line-6 = none
@@ -305,7 +305,7 @@
   let data = json("data/axes-1.json")
 
   let stroke-line-0 = (
-    paint: colors(2),
+    paint: colors(3),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -320,7 +320,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(2),
+    paint: colors(3),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -335,7 +335,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(2),
+    paint: colors(3),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -379,7 +379,7 @@
   let data = json("data/axes-2.json")
 
   let stroke-line-0 = (
-    paint: colors(1),
+    paint: colors(2),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -394,7 +394,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(1),
+    paint: colors(2),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -409,7 +409,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1),
+    paint: colors(2),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -453,7 +453,7 @@
   let data = json("data/axes-3.json")
 
   let stroke-line-0 = (
-    paint: colors(0),
+    paint: colors(1),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -468,7 +468,7 @@
   )
 
   let stroke-line-1 = (
-    paint: colors(0),
+    paint: colors(1),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -483,7 +483,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(0),
+    paint: colors(1),
     thickness: linewidth,
     cap: "butt",
     join: "round",
