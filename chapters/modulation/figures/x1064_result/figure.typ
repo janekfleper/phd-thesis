@@ -159,7 +159,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(1)),
+    ..marker-colors(colors(0)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -170,7 +170,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(1)),
+    paint: error-color(colors(0)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -190,7 +190,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(1),
+    paint: colors(0),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -259,7 +259,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(2)),
+    ..marker-colors(colors(1)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -270,7 +270,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(2)),
+    paint: error-color(colors(1)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -290,7 +290,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(2),
+    paint: colors(1),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -364,7 +364,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(3)),
+    ..marker-colors(colors(2)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -375,7 +375,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(3)),
+    paint: error-color(colors(2)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -395,7 +395,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(3),
+    paint: colors(2),
     thickness: linewidth,
     cap: "butt",
     join: "round",
@@ -464,7 +464,7 @@
   let stroke-line-0 = none
   let marker-line-0 = markers.circle(
     markersize,
-    ..marker-colors(colors(4)),
+    ..marker-colors(colors(3)),
   )
   let line-0 = (
     data: data.at("line-0"),
@@ -475,7 +475,7 @@
 
   let fill-collection-1 = ()
   let stroke-collection-1 = (
-    paint: error-color(colors(4)),
+    paint: error-color(colors(3)),
     thickness: error-linewidth,
     dash: "solid",
   )
@@ -495,7 +495,7 @@
   )
 
   let stroke-line-2 = (
-    paint: colors(4),
+    paint: colors(3),
     thickness: linewidth,
     cap: "butt",
     join: "round",
