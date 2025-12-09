@@ -160,7 +160,7 @@
 
 #let arrow-style = (
   mark: (end: "triangle", fill: black, scale: 0.7),
-  stroke: 0.5pt,
+  stroke: linewidth-very-narrow,
 )
 
 #let sine-squared(start, stop, ..args) = {
@@ -236,7 +236,7 @@
     (height: offset + spacing, name: "mF7", label: mF(7)),
     (height: offset + 2 * spacing, name: "mF5", label: mF(5)),
     (height: offset + 3 * spacing, name: "mF3", label: mF(3)),
-    (height: height - offset, name: "shelf", label: $FmF(7/2, -7/2)$),
+    (height: height - offset, name: "shelf", label: $FmF(7/2, -7/2) med$),
   )
 
   let occupation-height = 0.2
@@ -246,8 +246,8 @@
       (rel: (start, -occupation-height / 2), to: state + ".start"),
       (rel: (end, occupation-height / 2), to: state + ".start"),
       radius: occupation-radius,
-      fill: color.lighten(50%),
-      stroke: black + 0.3pt,
+      fill: color.lighten(20%),
+      stroke: color.darken(20%) + linewidth-very-very-narrow,
     )
     line(
       (rel: (start + occupation-radius, 0), to: state + ".start"),
@@ -274,7 +274,7 @@
   )
 
 
-  let arrow-padding = 0.15
+  let arrow-padding = 0.13
   let arrow(initial, final) = {
     line(
       (initial + ".end", arrow-padding, final + ".start"),
@@ -290,7 +290,7 @@
       line(
         (rel: (start-gap, l.height), to: "rect.south-west"),
         (rel: (-end-gap, l.height), to: "rect.south-east"),
-        stroke: luma(50%) + 0.3pt,
+        stroke: black + linewidth-very-very-narrow,
       )
       line(
         (rel: (0, l.height), to: "rect.south-west"),
@@ -305,19 +305,23 @@
       )
     }
 
-    occupation("mF9", blue, t.at("start"), t.at("rf2-97"), name: "down-0")
-    occupation("mF7", blue, t.at("rf2-97") + dt, t.at("rf3-75"), name: "down-1")
-    occupation("mF5", blue, t.at("rf3-75") + dt, t.at("end"), name: "down-2")
+    let color-up = blue
+    let color-down = red
+    let color-single = color.rgb("#64a860") //purple
+    let color-double = color.rgb("#9970c1")
+    occupation("mF9", color-up, t.at("start"), t.at("rf2-97"), name: "down-0")
+    occupation("mF7", color-up, t.at("rf2-97") + dt, t.at("rf3-75"), name: "down-1")
+    occupation("mF5", color-up, t.at("rf3-75") + dt, t.at("end"), name: "down-2")
 
-    occupation("mF7", orange, t.at("start"), t.at("rf1-sd"), name: "up-0")
-    occupation("mF5", yellow, t.at("rf1-sd") + dt, t.at("rf3-75"), name: "double-0")
-    occupation("mF7", yellow, t.at("rf3-75") + dt, t.at("rf4-97"), name: "double-1")
-    occupation("mF9", yellow, t.at("rf4-97") + dt, t.at("im1"), name: "double-2")
+    occupation("mF7", color-down, t.at("start"), t.at("rf1-sd"), name: "up-0")
+    occupation("mF5", color-double, t.at("rf1-sd") + dt, t.at("rf3-75"), name: "double-0")
+    occupation("mF7", color-double, t.at("rf3-75") + dt, t.at("rf4-97"), name: "double-1")
+    occupation("mF9", color-double, t.at("rf4-97") + dt, t.at("im1"), name: "double-2")
 
-    occupation("mF7", red, t.at("rf1-sd") + dt, t.at("rf2-97"), name: "single-0")
-    occupation("mF9", red, t.at("rf2-97") + dt, t.at("mw1"), name: "single-1")
-    occupation("shelf", red, t.at("mw1") + dt, t.at("mw2"), name: "single-2")
-    occupation("mF9", red, t.at("mw2") + dt, t.at("im2"), name: "single-3")
+    occupation("mF7", color-single, t.at("rf1-sd") + dt, t.at("rf2-97"), name: "single-0")
+    occupation("mF9", color-single, t.at("rf2-97") + dt, t.at("mw1"), name: "single-1")
+    occupation("shelf", color-single, t.at("mw1") + dt, t.at("mw2"), name: "single-2")
+    occupation("mF9", color-single, t.at("mw2") + dt, t.at("im2"), name: "single-3")
 
     arrow("up-0", "double-0")
     arrow("double-0", "double-1")
@@ -431,17 +435,17 @@
     rect((0, 0), (width, height), name: "rect", ..style.at("rect"))
 
     translate(y: offset)
-    line((0, 0), (width, 0), stroke: 0.1pt) // mark the zero-level
-    set-style(stroke: (thickness: 1pt, cap: "round"))
+    line((0, 0), (width, 0), stroke: linewidth-very-very-narrow) // mark the zero-level
+    set-style(stroke: (thickness: linewidth-narrow, cap: "round"))
 
     // y1064 lattice
-    set-style(stroke: (paint: red.darken(20%)))
+    set-style(stroke: (paint: color-x1064, thickness: linewidth-very-narrow))
     line(py1064.at(2), py1064.at(3))
     line(py1064.at(3), py1064.at(4))
     content((rel: (0.2, 0.2), to: py1064.at(3)), text(bottom-edge: "baseline", Vy1064), anchor: "south-west")
 
     // x1064 lattice
-    set-style(stroke: (paint: red))
+    set-style(stroke: (paint: color-x1064, thickness: linewidth-narrow))
     line(px1064.at(0), px1064.at(1))
     sine-squared(px1064.at(1), px1064.at(2))
     line(px1064.at(2), px1064.at(3))
@@ -451,7 +455,7 @@
     content((rel: (0.2, 0.2), to: px1064.at(3)), text(bottom-edge: "baseline", Vx1064), anchor: "south-west")
 
     // x532 lattice
-    set-style(stroke: (paint: green))
+    set-style(stroke: (paint: color-x532))
     line(px532.at(0), px532.at(1))
     sine-squared(px532.at(1), px532.at(2))
     line(px532.at(2), px532.at(3))
@@ -482,18 +486,18 @@
     rect((0, 0), (width, height), name: "rect", ..style.at("rect"))
 
     translate(y: offset)
-    line((0, 0), (width, 0), stroke: 0.1pt) // mark the zero-level
-    set-style(stroke: (thickness: 1pt, cap: "round"))
+    line((0, 0), (width, 0), stroke: linewidth-very-very-narrow) // mark the zero-level
+    set-style(stroke: (thickness: linewidth-narrow, cap: "round"))
 
     // dipole trap
-    set-style(stroke: (paint: red))
+    set-style(stroke: (paint: color-x1064))
     line(pdipole.at(0), pdipole.at(1))
     sine-squared(pdipole.at(1), pdipole.at(2))
     line(pdipole.at(2), pdipole.at(3))
     content((rel: (1.6, 0.1), to: pdipole.at(0)), "Dipole trap", anchor: "south-west")
 
     // z532 lattice
-    set-style(stroke: (paint: green))
+    set-style(stroke: (paint: color-x532))
     for i in range(pz532.len() - 1) {
       line(pz532.at(i), pz532.at(i + 1))
     }
@@ -504,6 +508,7 @@
 #let experimental-sequence() = {
   let width = 16
 
+  show: figure-style
   cetz.canvas({
     import cetz.draw: *
 
@@ -512,10 +517,10 @@
     let height-hfs = 3.5
     let height-xy = 3.5
     let height-confine = 3.5
-    let height-total = height-hfs + height-xy + height-confine
+    let height-total = height-hfs + height-xy + height-confine + 0.4
     let pos-hfs = (x: 0, y: 0)
-    let pos-xy = (x: 0, y: height-hfs)
-    let pos-confine = (x: 0, y: height-hfs + height-xy)
+    let pos-xy = (x: 0, y: height-hfs + 0.2)
+    let pos-confine = (x: 0, y: height-hfs + height-xy + 0.4)
 
     let timings = (
       start: start-gap,
@@ -533,8 +538,8 @@
     rect(
       (timings.at("ramp-x532") + experiment-shift, 0),
       (rel: (experiment-width, height-total)),
-      fill: luma(80%),
-      stroke: none,
+      fill: fill-mask,
+      stroke: fill-mask + linewidth-very-narrow,
       name: "experiment",
     )
 
@@ -552,10 +557,7 @@
       text(bottom-edge: "baseline", "Detection"),
     )
 
-    let style = (
-      rect: (stroke: luma(50%) + 0.5pt),
-      atom: (radius: 3mm, shape: (6, 5)),
-    )
+    let style = (rect: (stroke: spine-stroke))
     let args = (width, start-gap, end-gap, timings, style)
     experimental-sequence-hfs(pos-hfs, height-hfs, ..args)
     experimental-sequence-xy(pos-xy, height-xy, ..args)
@@ -594,7 +596,7 @@
       atom-cloud(atom-radius, atom-shape, blue.darken(20%), kx: 2, xscale: 60%, yscale: 60%),
     )
 
-    set-style(stroke: (paint: luma(50%), thickness: 0.9pt, dash: "dashed"))
+    set-style(stroke: (paint: luma(30%), thickness: linewidth-very-narrow, dash: "dashed"))
     let h1 = -0.1
     let h2 = -0.3
     let h3 = -1

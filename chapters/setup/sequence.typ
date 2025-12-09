@@ -33,17 +33,12 @@ This is essential for the stability of the in-plane superlattice phase (see @sse
     The total confinement in the #xy-plane is conserved until the #x1064 lattice and the #y1064 lattice are initially frozen.
     During the experiment segment, the superlattice phase is usually close to the symmetric configuration ($phi = 0$), where the superlattice potential is an array of weakly-coupled double wells.
     The actual parameters of the superlattice depend on the specific measurement (see @ch:mod and @ch:phase).
-    After the experiment is done, the rest of the sequence is spent on the detection segment (see @ssec:setup-sequence-detect).
+    After the experiment is done, the rest of the sequence is spent on detecting the atoms (see @ssec:setup-sequence-detect).
     We start the detection by freezing the #x1064 lattice to completely disable the tunneling of the atoms.
-    This allows us to manipulate the $m_F$ states of the atoms in preparation for the imaging.
-    With the first radio-frequency pulse (HS1), the doubly-occupied sites (yellow) are separated from the singly-occupied sites (red).
-    The atoms on the singly-occupied sites are then shelved to the state $FmF(7/2, -7/2)$ while the doubly-occupied sites are imaged in OD1.
-    In each sequence, we can capture two atom images and the bright image that just shows the intensity of the imaging pulse.
-
-    // TODO: Change a few colors? For the atom clouds and the images?
-    // TODO: Change the outer frame color?
-    // TODO: Indicate weakly-coupled double wells in the fourth potential sketch?
-    // TODO: Indicate sweep direction for the RF pulses? And label the swaps/sweeps?
+    This allows us to manipulate the $m_F$ states of the atoms in preparation for the imaging pulses.
+    With the first radio-frequency pulse (HS1), the doubly-occupied sites (purple) are separated from the singly-occupied sites (green).
+    Then, the atoms on the singly-occupied sites are shelved to the state $FmF(7/2, -7/2)$ while the doubly-occupied sites are imaged in OD1.
+    In each sequence, we can capture two atom images and the bright image that shows the intensity distribution of the imaging pulse.
   ],
   label: <fig:setup-sequence>,
 )
