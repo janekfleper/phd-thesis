@@ -242,7 +242,7 @@
 
     // the coordinate system...
     scope({
-      set-origin((-13.7, 1.7))
+      set-origin((-13.7, 1.55))
       set-style(mark: (end: ">", fill: black), stroke: (thickness: linewidth-very-narrow, cap: "round"))
       line((-0.1, 0), (1, 0), name: "x")
       line((0, 0.1), (0, -1), name: "y")
