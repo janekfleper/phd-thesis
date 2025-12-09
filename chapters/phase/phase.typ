@@ -2,8 +2,6 @@
 
 = Controlling the superlattice phase <ch:phase>
 
-// TODO: Mention that the stabilization introduced in @sec:phase-stability is already applied in all prior measurements in this chapter...
-
 The superlattice phase $phi$ controls the relative phase between the infrared (#qty[1064][nm]) lattice and the green (#qty[532][nm]) lattice that form the in-plane superlattice potential.
 In this chapter, I will present the experimental setup to control the superlattice phase and introduce the measurements for calibrating the local phase $phase(x, y)$.
 The standing-wave configuration of the individual lattices makes the phase easily tunable through the optical frequencies of the lattices.

@@ -200,9 +200,6 @@ This is an essential measurement in the superlattice potential to infer the popu
     The expansion time is only $tau_"TOF" = #qty[6][ms]$ to allow a measurement up the $4^"th"$ Brillouin zone along the #x-axis.
     Since the width of the camera sensor is nearly maxed out, a longer expansion time would further reduce the maximal band index $n$ we can detect.
     Along the #y-axis, we can only measure up to the $2^"nd"$ Brillouin zone.
-
-    // TODO: Find an image that actually has atoms in the higher Brillouin zones...
-    // TODO: Label the different Brillouin zones?
   ],
   label: <fig:setup-sequence-imaging-tof>,
 )

@@ -3,8 +3,6 @@
 
 == Calibrating the double-well parameters <sec:phase-parameters>
 
-// TODO: Highlight that initially the DDS frequency is measured? The phase $phi$ is only the final evaluated quantity...
-
 The tunneling amplitude $t$ is the primary energy scale to govern the behavior of a single particle in the double-well potential.
 As introduced in @ssec:theory-double-one, the eigenstates only depend on the relative energy offset $Delta slash t$.
 For two particles, the system is extended by the on-site interaction energy $U$ (see @fig:theory-double-two-general).

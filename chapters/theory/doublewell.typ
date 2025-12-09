@@ -144,9 +144,6 @@ In this subsection, I will show the solution for two specific configurations tha
     The spectrum is symmetric with respect to the left and right lattice site if the offset is $Delta = 0$.
     In the symmetry basis, the split states and the interacting states are combined in symmetric and antisymmetric superpositions.
     This allows a simple representation of the eigenstates as indicated by the colors of the eigenenergies $epsilon_n$.
-
-    // TODO: Add arrows to mark the gaps $2t$ and $J$?
-    // TODO: Maybe add a double-well potential with some atoms?
   ],
   label: <fig:theory-double-two-symmetric>,
 )
@@ -190,8 +187,6 @@ While the process itself is not referred to as the superexchange, we can interpr
     *a*, Spectrum of two particles with the interaction energy $U slash t = -4$.
     The colors of the eigenenergies $epsilon_n$ indicate the basis states.
     *b*, *c*, Time evolution of the initial state #ketLL at the offsets $Delta slash t = 2.1$ (*b*) and $Delta slash t = 0$ (*c*).
-
-    // TODO: Add insets of the double-well potential to highlight the definition of $Delta$?
   ],
   label: <fig:theory-double-two-general>,
 )

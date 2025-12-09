@@ -133,8 +133,6 @@ To compute the amplitude of the outer tunneling, the Wannier functions $w_L (x -
     For a superlattice phase $phi < 0$, the contribution of the second band decreases until $w_L (x) approx w_1 (x)$.
     The insets show the Wannier functions $w_L (x)$ (solid) and $w_R (x)$ (dashed) at $phi = -pi slash 10$ and $phi = 0$ respectively.
     The energy offsets are the weighted averages of the bands $epsilon_1 (q)$ and $epsilon_2 (q)$.
-
-    // TODO: Add arrows from the insets to the dashed/dotted lines?
   ],
   label: <fig:theory-super-wannier-mixing>,
 )

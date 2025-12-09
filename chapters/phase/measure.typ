@@ -9,8 +9,6 @@
 
 == Measuring the superlattice phase <sec:phase-measure>
 
-// TODO: Already reference something related to the phase stability in @sec:phase-stability?
-
 The superlattice phase #phase is the remaining parameter to control the superlattice potential besides the lattice depths #Vx1064 and #Vx532.
 In @ch:mod, we use the in-situ #lms to measure the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$ with a local resolution.
 Consequently, we also want to calibrate the superlattice phase $phase(x, y)$ to obtain full control over the superlattice potential.
@@ -248,8 +246,6 @@ While this limits the measurement resolution, it also limits the possible inhomo
 
 
 === Measuring the superlattice period <ssec:phase-measure-period>
-
-// TODO: Reference the phase-stability section for the details of the in-situ measurement?
 
 To precisely control the superlattice phase #phase through the frequency $f$, we need to determine the conversion factor between the two quantities.
 While the measurement of the zero-phase frequency #f0 is sufficient to realize the phase $phase = 0$, any finite phase #phase requires a calibration of the superlattice period in terms of the frequency $f$.

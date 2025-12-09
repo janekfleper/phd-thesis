@@ -126,8 +126,6 @@ Therefore, we neglect the #CO2 concentration for the active stabilization of the
 
 === Measuring the environmental parameters <ssec:phase-stability-sensors>
 
-// TODO: Move some of the technical details about the sensors to the figure!
-
 The environmental sensors along the optical path from the retro mirror to the atom position are shown in @fig:phase-stability-sensors-setup.
 We use multiple environmental sensors to cover the different segments and parameters.
 In the air segment between the retro lens and the retro mirror, we place two air-temperature sensors close to the lattice beams.

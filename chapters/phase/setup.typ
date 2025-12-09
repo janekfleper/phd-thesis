@@ -3,9 +3,6 @@
 
 == Experimental setup <sec:phase-setup>
 
-// TOOD: Compare to the theory and setup sections that stuff is not mentioned twice...
-// TODO: Mention the size of the cloud compared to the retro path length?
-
 The standing-wave configuration of the #x1064 lattice and the #x532 lattice limits the sensitivity of the superlattice phase #phase to the retro path in @fig:super-setup.
 The retro mirror is the reference point for the accumulation of the superlattice phase along the optical path up to the atom position.
 Therefore, the optical phase of the forward-propagating beams does not affect the individual lattice potentials.
