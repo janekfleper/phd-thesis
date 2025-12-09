@@ -235,7 +235,6 @@
     (height: offset, name: "mF9", label: mF(9)),
     (height: offset + spacing, name: "mF7", label: mF(7)),
     (height: offset + 2 * spacing, name: "mF5", label: mF(5)),
-    (height: offset + 3 * spacing, name: "mF3", label: mF(3)),
     (height: height - offset, name: "shelf", label: $FmF(7/2, -7/2) med$),
   )
 

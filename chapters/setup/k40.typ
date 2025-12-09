@@ -59,7 +59,7 @@ $
   phy.ket(N) eq.triple FmF(9/2, -N/2)
 $ <eq:setup-k40-hfs-naming>
 
-to refer to these states as #mF(9), #mF(7), #mF(5) and #mF(3).
+to refer to these states as #mF(9), #mF(7) and #mF(5).
 All other states are always labeled explicitly with the quantum numbers $F$ and $m_F$.
 
 As already mentioned for the interaction strength $U$ in @eq:theory-wannier-interaction-strength, two atoms interact if they are close to each other.
