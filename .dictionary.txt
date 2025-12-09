@@ -31,6 +31,8 @@ Majorana
 NKT
 NTC
 NTCs
+OD1
+OD2
 PID
 Paschen
 Pritchard
