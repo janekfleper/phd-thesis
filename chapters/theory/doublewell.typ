@@ -74,8 +74,6 @@ We can however neglect this since the oscillation frequency and amplitude in @eq
     The corresponding energy offset is #box[$Delta slash t approx #num[-1.8]$].
     *b*, Composition of the ground state in the basis ${ketL, ketR}$.
     For the excited state, the composition is inverted due to the symmetry of the double-well potential with respect to $Delta$.
-
-    // TODO: Add particles + tunneling + Delta to the inset (CeTZ)?
   ],
   label: <fig:theory-double-one>,
   placement: bottom,

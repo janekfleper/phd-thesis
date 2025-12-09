@@ -2,6 +2,7 @@
 #import "/mpl2typ/lib.typ": *
 #import "/style.typ": *
 #import "/header.typ": *
+#import "@preview/cetz:0.4.2"
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
@@ -10,111 +11,104 @@
 #let xaxis-label = [Offset $Delta slash t$]
 #let xaxis-minor-tick-locs = range(-3, 3).map(x => x * 2 + 1)
 
-#let inset-0(xlim: (-0.55, 0.55), ylim: (-12.228698317275027, 21.31468245190743), dpi: 100.0) = {
-  let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
-  let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
-  let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
-  let yshift = 50% - (ylim.at(0) + ylim.at(1)) / 2 * yscale
+#let doublewell-sketch(xscale: 2, yscale: 1.4) = {
+  let xmin = -1
+  let xmax = 0
+  let dx = 0.01
+  let xdata = range(int(xmin / dx), int(xmax / dx) + 1).map(x => x * dx)
 
-  let transform(point) = {
-    let (x, y) = point
-    return (x * xscale + xshift, 100% - (y * yscale + yshift))
+  let energy-style = (dash: "dotted", thickness: 0.7pt)
+  let tunneling-style = (angle: 50deg, width: 0.46 * xscale)
+  let arrow-symbol = "triangle"
+
+  let potential(x, vl, vs, phi) = (
+    vs * calc.pow(calc.cos(2 * x * calc.pi), 2) - vl * calc.pow(calc.sin((x - phi) * calc.pi), 2)
+  )
+
+  let draw-potential(color, phase: 0) = cetz.draw.line(
+    ..xdata.map(x => (x * xscale, potential(x, 0.4 * yscale, yscale, phase))),
+    stroke: color + linewidth-narrow,
+  )
+
+  let draw-single(
+    x,
+    y,
+    radius: 0.16,
+    stroke: none,
+    color: blue,
+  ) = cetz.draw.circle(
+    (x * xscale, y),
+    radius: radius,
+    stroke: stroke,
+    fill: gradient.radial(
+      white,
+      color,
+      focal-center: auto,
+      center: (40%, 40%),
+    ),
+  )
+
+  let draw-tunneling(x, angle: 45deg, width: 0.9, name: none) = {
+    assert.ne(name, none, message: "The name must not be none!")
+    let color = luma(50%)
+    cetz.draw.set-style(mark: (symbol: arrow-symbol, fill: color))
+
+    let radius = width / 2 / calc.sin(angle)
+    let x0 = x - calc.sin(angle) * radius
+    let y0 = (calc.cos(angle) - 1) * radius
+    cetz.draw.arc(
+      (x0, y0),
+      start: 90deg + angle,
+      stop: 90deg - angle,
+      radius: radius,
+      stroke: color,
+      name: name,
+    )
   }
 
-  let compute-scale(size) = calc.sqrt(size) * dpi / 72
+  // for the correct vertical alignment of the tunneling amplitudes...
+  show math.equation: set text(top-edge: "x-height", bottom-edge: "baseline")
 
-  let data = json("data/inset-0.json")
+  let x-shift = 0.24 // the shift of the atoms from the double-well center
+  let y-single = 0.35 * yscale
+  let y-delta = -0.16 * yscale
+  let y-left = y-single - y-delta
+  let y-right = y-single + y-delta
 
-  let xaxis-major-ticks = (
-    locs: (0, 0, 0, 0, 0),
-    labels: (),
-    tick-style: xaxis-major-tick-style,
-    label-style: xaxis-major-label-style,
-  )
-  let xaxis-minor-ticks = (
-    locs: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-    labels: (),
-    tick-style: xaxis-minor-tick-style,
-    label-style: xaxis-minor-label-style,
-  )
-  let yaxis-major-ticks = (
-    locs: (0, 0, 0, 0),
-    labels: (),
-    tick-style: yaxis-major-tick-style,
-    label-style: yaxis-major-label-style,
-  )
-  let yaxis-minor-ticks = (
-    locs: (0, 0, 0, 0, 0),
-    labels: (),
-    tick-style: yaxis-minor-tick-style,
-    label-style: yaxis-minor-label-style,
-  )
+  show: figure-style
+  cetz.canvas({
+    import cetz.draw: *
+    set-style(mark: (scale: 0.7))
 
-  let stroke-line-0 = (
-    paint: black,
-    thickness: linewidth,
-    cap: "butt",
-    join: "round",
-    dash: "solid",
-  )
-  let marker-line-0 = none
-  let line-0 = (
-    data: data.at("line-0"),
-    stroke: stroke-line-0,
-    marker: marker-line-0,
-    transform: transform,
-  )
+    // the static double wells
+    draw-potential(black, phase: 0.14)
 
-  let fill-collection-1 = ()
-  let stroke-collection-1 = (
-    paint: color-left,
-    thickness: linewidth-narrow,
-    dash: "solid",
-  )
-  let transform-collection-1 = transform
-  let compute-scale-collection-1 = compute-scale
-  let offset-transform-collection-1 = point => {
-    let (x, y) = point
-    ((x * 0.01 + 0.0) * 72pt, (y * 0.01 + 0.0) * -72pt)
-  }
-  let collection-1 = (
-    data: data.at("collection-1"),
-    fill: fill-collection-1,
-    stroke: stroke-collection-1,
-    transform: transform-collection-1,
-    compute-scale: compute-scale-collection-1,
-    offset-transform: offset-transform-collection-1,
-  )
+    // label the on-site energies...
+    line((0.04 * xscale, y-left), (-0.85 * xscale, y-left), stroke: energy-style, name: "energy-left")
+    line((0.04 * xscale, y-right), (-0.40 * xscale, y-right), stroke: energy-style, name: "energy-right")
 
-  let fill-collection-2 = ()
-  let stroke-collection-2 = (
-    paint: color-right,
-    thickness: linewidth-narrow,
-    dash: "solid",
-  )
-  let transform-collection-2 = transform
-  let compute-scale-collection-2 = compute-scale
-  let offset-transform-collection-2 = point => {
-    let (x, y) = point
-    ((x * 0.01 + 0.0) * 72pt, (y * 0.01 + 0.0) * -72pt)
-  }
-  let collection-2 = (
-    data: data.at("collection-2"),
-    fill: fill-collection-2,
-    stroke: stroke-collection-2,
-    transform: transform-collection-2,
-    compute-scale: compute-scale-collection-2,
-    offset-transform: offset-transform-collection-2,
-  )
+    // draw the atoms...
+    draw-single(-0.5 - x-shift, y-single - y-delta, color: luma(20%).transparentize(70%))
+    draw-single(-0.5 + x-shift, y-single + y-delta, color: luma(20%))
 
-  std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
-  axes.xaxis-ticks(show-ticks: (), show-labels: (), ..xaxis-minor-ticks, transform)
-  axes.yaxis-ticks(show-ticks: (), show-labels: (), ..yaxis-minor-ticks, transform)
-  draw.collection(..collection-1)
-  draw.collection(..collection-2)
-  draw.line(..line-0)
-  axes.xaxis-ticks(show-ticks: (), show-labels: (), ..xaxis-major-ticks, transform)
-  axes.yaxis-ticks(show-ticks: (), show-labels: (), ..yaxis-major-ticks, transform)
+    // draw the tunneling arrows...
+    scope({
+      translate(y: 0.9 * yscale)
+      draw-tunneling(-0.5 * xscale, ..tunneling-style, name: "static-single")
+    })
+
+    content((rel: (0, 0.2), to: "static-single.arc-center"), $t$)
+    // content((rel: (0, 0.3), to: "static-double.arc-center"), $J = (4t^2) / U$)
+
+    // label the modulation amplitude...
+    line(
+      (rel: (0.1, 0), to: "energy-right.start"),
+      (rel: (0.1, 0), to: "energy-left.start"),
+      mark: (end: arrow-symbol, fill: black),
+      name: "delta",
+    )
+    content((rel: (0.06 * xscale, -0.02 * yscale), to: "delta"), $2 Delta$, anchor: "west")
+  })
 }
 
 
@@ -205,31 +199,11 @@
     transform: transform,
   )
 
-  let text-2 = (
-    position: transform((5.3, -6.3)),
-    body: place(
-      right + bottom,
-      text-box(
-        inset: 0.2em,
-        text(size: 1em, fill: black, bottom-edge: "descender", ketg),
-      ),
-    ),
-  )
-
-  let text-3 = (
-    position: transform((5.3, 6.3)),
-    body: place(
-      right + top,
-      text-box(
-        inset: 0.2em,
-        text(size: 1em, fill: black, bottom-edge: "descender", kete),
-      ),
-    ),
-  )
-
-  let properties-inset-0 = (position: (3.0%, 35.0%), shape: (30.0%, 30.0%))
+  let marks = marks.with(outset: 0.3em)
+  let basis-states = $marks(ketL, color: #color-left) quad marks(ketR, color: #color-right)$
 
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
+  std.place(bottom + center, dy: -6%, basis-states)
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (left,), show-labels: (left,), ..yaxis-minor-ticks, transform)
   draw.line(..line-0)
@@ -239,9 +213,7 @@
   axes.spines(spines)
   draw.text(..label-xaxis)
   draw.text(..label-yaxis)
-  draw.text(..text-2)
-  draw.text(..text-3)
-  axes.inset(..properties-inset-0, inset-0())
+  std.place(dx: 28%, dy: 3%, doublewell-sketch(xscale: 1.95))
   axes.abc(..abc-style, 1)
 }
 
@@ -333,28 +305,6 @@
     transform: transform,
   )
 
-  let text-2 = (
-    position: transform((6.0, 0.03)),
-    body: place(
-      right + bottom,
-      text-box(
-        inset: 0.2em,
-        text(size: 1em, fill: black, bottom-edge: "descender", ketL),
-      ),
-    ),
-  )
-
-  let text-3 = (
-    position: transform((6.0, 0.97)),
-    body: place(
-      right + top,
-      text-box(
-        inset: 0.2em,
-        text(size: 1em, fill: black, bottom-edge: "descender", ketR),
-      ),
-    ),
-  )
-
   std.place(rect(width: 100%, height: 100%, fill: white, stroke: none))
   axes.xaxis-ticks(show-ticks: (bottom,), show-labels: (bottom,), ..xaxis-minor-ticks, transform)
   axes.yaxis-ticks(show-ticks: (right,), show-labels: (right,), ..yaxis-minor-ticks, transform)
@@ -365,8 +315,6 @@
   axes.spines(spines)
   draw.text(..label-xaxis)
   draw.text(..label-yaxis)
-  draw.text(..text-2)
-  draw.text(..text-3)
   axes.abc(..abc-style, 2)
 }
 
