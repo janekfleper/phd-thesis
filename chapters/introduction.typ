@@ -2,91 +2,92 @@
 
 // these rules are only applied in this file
 #show heading.where(level: 2): set heading(numbering: none, outlined: false)
-#set list(spacing: 1.3em)
+#set list(spacing: 0.9em)
 #show table: set text(10pt)
 #show figure: set block(spacing: 0.9em)
 
 = Introduction <ch:intro>
 
 // TODO: Add citation for Valentins PhD thesis
+// TODO: Find a better citation for the radial trap frequencies...
 
-One major area of interest in ultracold fermionic atoms is analog quantum simulation of the Fermi-Hubbard model, which describes the behavior of electrons in solid-state crystals @hubbard_electron_1963.
+One major area of interest in ultracold fermionic atoms is the analog quantum simulation of many-body physics.
+In solid-state crystals, the behavior of electrons can be described by the Fermi-Hubbard model @hubbard_electron_1963.
 The valence electrons can tunnel between the lattice sites that are formed by the ions in the crystal, and the electrons experience an interaction energy when they occupy the same lattice site.
-For strongly-repulsive interactions, the Fermi-Hubbard model predicts the Mott insulator @mott_metal-insulator_1968 and a d-wave superconducting phase @anderson_resonating_1987, which has been proposed to be related to high-temperature superconductivity @lee_doping_2006.
+For strongly-repulsive interactions, the Fermi-Hubbard model predicts the Mott-insulating phase where electrons are localized in the lattice and the occupation of a lattice site by multiple electrons is suppressed @mott_metal-insulator_1968.
+In the context of high-temperature superconductivity @lee_doping_2006, the prediction of a d-wave superconducting phase @anderson_resonating_1987 is still debated.
 Numerical solutions to the Fermi-Hubbard model are generally limited to small systems due to the exponential growth of the Hilbert space with respect to the number of particles @feynman_simulating_1982.
 This is where analog quantum simulation of the Fermi-Hubbard model using optical lattices and ultracold atoms shines.
-Optical lattices, formed by multiple interfering laser beams, create a periodic potential in place of the solid-state crystal, and the atoms in the optical lattice take on the role of the valence electrons @jessen_optical_1996.
-Reaching very low temperatures where fermionic atoms obey the same quantum-statistical behavior as electrons required significant advancements in trapping and cooling techniques.
+Due to their fermionic properties, the neutral atoms obey the same quantum-statistical behavior as electrons.
+The corresponding energy scales for neutral atoms are realized at very low temperatures, which required significant advancements in trapping and cooling techniques.
 The development of laser cooling @hansch_cooling_1975 @ashkin_cooling_1979 @phillips_laser_1982 @raab_trapping_1987 and evaporative cooling @hess_evaporative_1986 @pritchard_cooling_1983 @mewes_bose-einstein_1996 led to the first experimental realization of degenerate Fermi gases using ultracold atoms @demarco_onset_1999 @truscott_observation_2001.
 
-Optical lattices provide defect-free potentials for ultracold atoms with versatile geometries and tunable parameters @bloch_ultracold_2005.
-The tunneling amplitude can be adjusted through the depth of the optical lattices, and the interaction between the atoms can be modified using magnetic Feshbach resonances @inouye_observation_1998.
+Optical lattices, formed by multiple interfering laser beams, create a periodic potential in place of the solid-state crystal, and the atoms in the optical lattice take on the role of the valence electrons @jessen_optical_1996.
+In contrast to solid-state crystals, optical lattices provide defect-free potentials with tunable parameters @bloch_ultracold_2005.
+The tunneling amplitude can be adjusted through the depth of the optical lattices, and the interaction strength between the atoms can be modified using magnetic Feshbach resonances @inouye_observation_1998.
 This tunability is the key to explore different phases of the Fermi-Hubbard model, such as the Mott insulator @jordens_mott_2008 with antiferromagnetic correlations @mazurenko_cold-atom_2017 or pairing of atoms in a system with strongly-attractive interactions @hartke_direct_2023.
 The most common type of optical lattice uses two counterpropagating laser beams with equal frequencies to form a standing-wave potential @greiner_exploring_2001.
-Using different frequencies allows the optical lattice to work as a conveyor belt, transporting atoms over macroscopic distances @schrader_optical_2001 @matthies_long-distance_2024.
+Using laser beams with different frequencies or phases results in a dynamic optical lattice such as an optical conveyor belt to transport atoms over macroscopic distances @schrader_optical_2001 @matthies_long-distance_2024.
 Another type of dynamic optical lattice is the accordion lattice, which is based on the shallow-angle interference of two laser beams @fallani_bose-einstein_2005.
 By varying the angle of intersection, the spatial period of the optical lattice can be adjusted.
-This technique has been used to improve the loading of atoms into a single plane of an optical lattice @ville_loading_2017 and the single-site detection of atoms in a two-dimensional optical lattice @su_fast_2025.
+This lattice configuration has been used to enable the loading of atoms into a single plane of an optical lattice @ville_loading_2017 and it provides the basis for a single-site detection technique in a two-dimensional optical lattice @su_fast_2025.
 
-Advanced optical lattice geometries can be created with more than two interfering lattice beams @windpassinger_engineering_2013.
-For example, three laser beams intersecting at #deg[120] angles in one plane form a triangular lattice resembling the geometry of graphene @becker_ultracold_2010,
-while interfering perpendicular optical lattices form a two-dimensional optical lattice that is tunable to a checkerboard, square, triangular, dimer and honeycomb geometry @tarruell_creating_2012.
-A triangular lattice geometry is suitable to study phenomena such as frustrated magnets @eckardt_frustrated_2010, and a honeycomb lattice can be used to engineer advanced band structures featuring Dirac points @hasan_topological_2010.
-Tuning the lattice geometry from a checkerboard pattern to a dimerized lattice enables an adiabatic splitting of a band insulator into a Mott insulator @lubasch_adiabatic_2011.
+Advanced lattice geometries can be realized by interfering more than two laser beams @windpassinger_engineering_2013.
+For example, three laser beams intersecting at #deg[120] angles in one plane form a triangular lattice resembling the geometry of graphene @becker_ultracold_2010.
+The triangular geometry enables studying phenomena such as frustrated magnetism @eckardt_frustrated_2010.
+A two-dimensional optical lattice that is tunable to a checkerboard, square, triangular, dimer and honeycomb geometry can be formed by three retro-reflected optical lattices with the same wavelengths @tarruell_creating_2012.
+Two lattices are perpendicular with the same polarization such that they interfere to create a checkerboard lattice.
+The third lattice is collinear with one of the other lattices with the opposite polarization and a small frequency detuning.
+The different lattice geometries are realized by changing the lattice depths and the frequency detuning.
+A honeycomb lattice can be used to engineer advanced band structures featuring Dirac points @hasan_topological_2010, and tuning the lattice geometry from a checkerboard pattern to a dimerized lattice enables an adiabatic splitting of a band insulator into a Mott insulator @lubasch_adiabatic_2011.
 Recently, this technique was employed to achieve a significant improvement in the temperature of an antiferromagnetic Mott insulator @xu_neutral-atom_2025.
 
-Overlapping two commensurate optical lattices forms a superlattice potential that can be adjusted from an array of coupled double wells to a staggered potential by tuning the relative phase of the two lattices @windpassinger_engineering_2013.
-The superlattice phase provides control over the energy offset between neighboring lattice sites, which has been used for studying pair and density-assisted tunneling @folling_direct_2007, superexchange interactions @trotzky_time-resolved_2008, and the bilayer Hubbard model @gall_competing_2021.
+Overlapping two commensurate optical lattices forms a superlattice potential that can be adjusted from an array of coupled double wells to a staggered potential by varying the relative phase of the two lattices @windpassinger_engineering_2013.
+The superlattice phase allows precise control over the energy offset in the double wells, which has been used for studying pair and density-assisted tunneling @folling_direct_2007, superexchange interactions @trotzky_time-resolved_2008, and the bilayer Hubbard model @gall_competing_2021.
 Tuning the superlattice phase over multiple periods enables topological charge pumping where the atoms experience a quantized deflection in each pump cycle @lohse_thouless_2016 @nakajima_topological_2016.
 
 While optical superlattices can be realized by two lattices with equal wavelengths and different intersection angles @wili_accordion_2023, they are typically implemented in a bichromatic configuration with equal beam paths and wavelengths differing by a factor of two @folling_direct_2007 @gall_competing_2021 @impertro_local_2024.
 In a bichromatic superlattice with different path lengths for the interfering lattice beams, the superlattice phase can be tuned through the optical frequency of either lattice.
 This enables a fast and precise control of the superlattice phase and, thereby, the energy offset in the double wells.
 Precisely controlling the energy offset is essential in a superlattice configuration with balanced double wells, especially for attractively-interacting fermionic pairs that experience a high sensitivity to the energy offset.
-The fast tunability of the energy offset enables a high-frequency modulation of the superlattice potential for studying effective systems through Floquet engineering @weitenberg_tailoring_2021.
+Furthermore, a high-frequency modulation of the energy offset enables Floquet engineering for studying effective systems @weitenberg_tailoring_2021.
 Floquet-driven optical lattices have been used to realize the dynamic localization of atoms @lignier_dynamical_2007 and to modify magnetic correlations in double wells with strongly-repulsive interactions @gorg_enhancement_2018.
 
-In bichromatic superlattices, the tunability and environmental sensitivity of the superlattice phase are directly related.
+In bichromatic superlattices, the tunability and environmental sensitivity of the superlattice phase are inevitably linked.
 The optical path lengths of the individual lattices are sensitive to changes of the refractive indices in air and the optical elements.
-Therefore, building an optical superlattice with a stable yet tunable phase requires significant technical effort.
-Current approaches range from lattice setups with equal path lengths for intrinsic phase stability @li_high-powered_2021 to optical paths in an evacuated box to suppress environmental phase sensitivity @chalopin_optical_2024.
+Therefore, constructing a bichromatic superlattice with a stable yet tunable phase requires significant technical effort.
+Current experimental setups range from equal path lengths for an intrinsic phase stability @li_high-powered_2021 to optical paths in an evacuated box to suppress environmental phase sensitivity @chalopin_optical_2024.
 
-All optical lattices, regardless of their geometry, require calibration of the lattice potential.
-The most common technique involves modulating the lattice depth to probe the band structure of the optical lattice @friebel_co_1998.
-The detection is typically performed in momentum space using the band-mapping technique where atoms in excited bands experience a higher momentum @kohl_fermionic_2005.
-While this allows for the measurement of the momentum-resolved band structure @heinze_multiband_2011, it does not resolve the inherent inhomogeneity of optical lattices made from Gaussian laser beams.
+All optical lattices, regardless of their geometry, require calibration of the lattice depth and the inhomogeneity due to the intensity profiles of the underlying Gaussian laser beams.
+The Hubbard parameters depend on the depth of the optical lattice, and the inhomogeneity determines the confinement of the atoms in the lattice potential.
+The most commonly used technique to calibrate the lattice depth involves modulating the optical lattice to probe the band structure @friebel_co_1998, followed by detecting the occupation of the energy bands in momentum space using the band-mapping technique @kohl_fermionic_2005.
+The inhomogeneity of the lattice potential is typically calibrated through the trap frequencies perpendicular to the lattice axis @miller_ultracold_2016.
 
-In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice, focusing on the stability of the in-plane, bichromatic superlattice.
-For calibrating the optical lattices, we develop a modulation technique that spatially resolves the lattice depths.
-This permits a reliable alignment of the lattice beams and a precise calibration of the lattice parameters, which we use to investigate and minimize thermally-induced drifts of the lattice depths.
-For stabilizing the superlattice phase, we implement an active stabilization technique based on environmental sensors along the optical path.
-We achieve an excellent phase stability that provides the foundation for enhancing pair tunneling in Floquet-driven double wells.
+In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice, focusing on the stability of the in-plane, bichromatic superlattice to study pair-tunneling dynamics.
+For the precise calibration of the optical lattices, we develop a modulation technique that spatially resolves the lattice depths.
+This enables a reliable alignment of the lattice beams and a precise calibration of the lattice parameters, which we use to investigate and minimize thermally-induced drifts of the lattice depths.
+For the phase of the in-plane superlattice, we implement an active stabilization technique based on environmental sensors along the optical path.
+We achieve an excellent phase stability that provides the foundation for studying the enhancement of pair tunneling in Floquet-driven double wells.
 
 #v(0.9em)
 
-- In @ch:theory, I will introduce the atom-light interaction as the foundation of optical lattices with ultracold atoms.
-  Within the unit cells of the superlattice potential, the dynamic behavior of the atoms can be described by a double-well potential.
-  The reduced system size enables an exact numerical solution for interacting particles in a double well.
+- In @ch:theory, I will introduce the experimental principles of ultracold atoms in optical lattices with a focus on superlattice potentials and the dynamics of interacting particles in a double well as the unit cell of the superlattice potential.
 
 - In @ch:setup, I will present the experimental setup used to cool the fermionic isotope #K40 from room temperature to a degenerate Fermi gas.
   Starting with loading the atoms into the optical lattice, I will briefly describe the experimental sequence and the available detection techniques for resolving the atomic densities.
 
-- In @ch:super, I will provide a detailed introduction to the optical setup of the in-plane superlattice.
-  Due to thermally-induced focal shifts by the optical elements, we observed significant instability in the optical lattices forming the in-plane superlattice.
-  I will briefly introduce thermal lensing and discuss the possible modifications to the optical setup that could reduce the focal shifts.
-  To conclude the chapter, I will show the improved stability of the lattice parameters in the upgraded optical setups.
+- In @ch:super, I will present the optical setup of the in-plane superlattice and discuss the thermally-induced focal shifts of the optical lattices.
+  We observed significant drifts in the optical lattices forming the in-plane superlattice and upgraded the optical setup to improve the stability of the lattice potentials.
 
 - In @ch:mod, I will introduce the in-situ #lms that we developed to calibrate the lattice depths with spatial resolution.
-  I will show the data analysis in detail as a benchmark for the calibration technique and discuss the atom-loss mechanism to devise parameter regimes for the in-situ #lms.
-  At the end of the chapter, I will introduce the in-situ #lms in the superlattice potential, and I will investigate the radial potential of the superlattice.
+  This technique is essential for the operation of the optical lattices from aligning the lattice beams to calibrating the Hubbard parameters and the confinement in the optical lattices.
 
-- In @ch:phase, I will introduce the experimental control of the superlattice phase, followed by the in-situ detection of the superlattice phase.
+- In @ch:phase, I will introduce the control and in-situ detection of the superlattice phase.
   To ensure the reliable operation of the superlattice potential, we set up an active phase stabilization using environmental sensors.
-  With the stabilized superlattice phase, we calibrate the double-well parameters and investigate Floquet driving of the superlattice potential to enhance pair tunneling.
+  Using the superlattice phase, we calibrate the lattice parameters and implement Floquet driving to enhance pair tunneling.
 
-- In @ch:outlook, I will reflect on the results of this thesis and discuss the applicability of the developed techniques to other experimental setups.
-  Additionally, I will summarize possible improvements to the in-situ #lms and the active stabilization of the superlattice phase.
-  Finally, I will discuss the next possible steps for the in-plane superlattice potential in the experimental setup.
+- In @ch:outlook, I will summarize the main results of thesis and discuss the applicability of the developed techniques to other experimental setups.
+  Besides improvements to the in-situ #lms and the active stabilization of the superlattice phase, I will discuss possible projects using the in-plane superlattice potential.
 
 
 == Individual contributions

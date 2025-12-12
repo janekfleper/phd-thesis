@@ -66,6 +66,7 @@ bosonic
 c.f.
 collimated
 collimator
+collinear
 counterpropagating
 crosstalk
 cuprates
