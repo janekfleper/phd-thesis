@@ -265,7 +265,7 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
     *a*, Minimal energy gap between the three eigenstates shown in @fig:phase-floquet-crossover-spectrum.
     The solid line shows the minimal energy gap in the static spectrum as a function of the interaction energy $U slash t$.
     *b*, Correlated-tunneling amplitude extracted from the effective Hamiltonian.
-    The first-order modulation results in a small amplitude #VCTeff, while the second-order modulation enhances the amplitude up to $VCTeff slash abs(teff) approx 0.4$.
+    The first-order modulation results in a small amplitude #VCTeff, while the second-order modulation enhances the amplitude up to $VCTeff slash ateffn(2) approx 0.4$.
     *c*, Pair-tunneling fidelity #Fpair @eq:phase-floquet-crossover-fidelity[] to quantify the mean occupation of the singlet state #kets during the tunneling depending on the detuning from the resonance $l h nu = U$.
     *d*, Enhanced pair-tunneling amplitude at $Ueff slash ateffn(2) = 6$ compared to the time evolution in a static double well with $U slash t = 6$ in *e*.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the modulation amplitude is $K0 = 2.4$ to suppress the single-particle tunneling.
@@ -277,9 +277,9 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
 The primary difference between the Floquet spectrum in @fig:phase-floquet-crossover-spectrum and the static spectrum in @fig:theory-double-two-symmetric is the asymmetry of the eigenvalues around the interaction energy $U = 0$.
 The minimal energy gap #DEmin between the two closest eigenvalues, which determines the primary timescale of the oscillation between the states #ketLL and #ketRR, is larger towards one side of the Floquet spectrum for each order $l$.
 In #subref(<fig:phase-floquet-crossover-result>, "a"), we see the comparison of the minimal energy gap in the static double well to the orders $l = 1$ and $l = 2$ of the Floquet-driven double well.
-The minimal energy gap of the first-order spectrum appears to be centered around $Ueff slash abs(teff) approx -0.5$.
+The minimal energy gap of the first-order spectrum appears to be centered around $Ueff slash ateffn(1) approx -0.5$.
 For attractive interactions in the effective Hamiltonian, the minimal energy gap is slightly increased compared to the static Hamiltonian.
-In the second-order spectrum, the minimal energy gap is shifted to $Ueff slash abs(teff) approx 2$ and we observe a significant increase compared to the static Hamiltonian.
+In the second-order spectrum, the minimal energy gap is shifted to $Ueff slash ateffn(2) approx 2$ and we observe a significant increase compared to the static Hamiltonian.
 We attribute the difference between the Floquet-driven double wells and the static double wells to the correlated tunneling amplitude #VCTeff.
 While the correlated tunneling amplitude #VCT is much smaller than the tunneling amplitude $t$ in the static double wells, the effective amplitude #VCTeff can reach the same order of magnitude as the effective tunneling amplitude $teff^((l))$ (see #subref(<fig:phase-floquet-crossover-result>, "b")).
 The total pair-tunneling amplitude in the near-resonant Floquet theory is
