@@ -289,8 +289,8 @@ $
 $ <eq:phase-floquet-crossover-tunneling>
 
 where the first term corresponds to the superexchange constant based on the effective parameters #teff and #Ueff.
-The enhancement of the pair tunneling in the Floquet-driven double wells is therefore primarily caused by the enhanced parameter #VCT.
-For the second-order near-resonant Floquet driving, we can achieve $VCT slash ateffn(2) approx 0.4$ at the effective interaction energy $Ueff slash ateffn(2) approx 6$.
+The enhancement of the pair tunneling in the Floquet-driven double wells is, therefore, primarily caused by the enhanced parameter #VCTeff.
+For the second-order near-resonant Floquet driving, we can achieve $VCTeff slash ateffn(2) approx 0.4$ at the effective interaction energy $Ueff slash ateffn(2) approx 6$.
 
 In addition to the pair-tunneling amplitude #Jeff in @eq:phase-floquet-crossover-tunneling, we consider the effective interaction energy #Ueff to quantify the fidelity of the pair tunneling.
 As discussed for the oscillation in #subref(<fig:phase-floquet-setup>, "b"), the time evolution between the states #ketLL and #ketRR is completely mediated by the singlet state #kets if the effective interaction energy is zero.
