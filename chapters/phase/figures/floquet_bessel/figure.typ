@@ -170,7 +170,7 @@
       -90.0deg,
       place(
         center + top,
-        text(size: 1em, fill: black, [Tunneling amplitude $abs(teff) slash t$]),
+        text(size: 1em, fill: black, [Tunneling amplitude $ateffn(l) slash t$]),
       ),
     ),
   )
@@ -399,7 +399,7 @@
 }
 
 
-#let figure(width: 15.24cm, height: 5.35cm) = {
+#let figure(width: 15.24cm, height: 5.31cm) = {
   show: figure-style
   block(
     width: width,

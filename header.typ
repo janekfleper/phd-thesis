@@ -237,7 +237,7 @@
 #let H0 = $hat(H)_0$
 #let Heff = $hat(H)_"eff"$
 #let Vmod = $hat(V)$
-#let kick = $hat(K)$
+#let kick = $hat(K, size: #90%)$
 #let K0 = $K_0$
 #let teff = $t_"eff"$
 #let Ueff = $U_"eff"$

@@ -17,8 +17,6 @@ Unless noted otherwise, the content in this section is adapted from @klemmer_flo
 
 === Floquet theory <ssec:phase-floquet-theory>
 
-// TOOD: Fix $kick$ in @eq:phase-floquet-theory-evolution...
-
 In the framework of Floquet engineering, we apply a periodic modulation $Vmod(tau + T) = Vmod(tau)$ to a system described by the static Hamiltonian #H0.
 The total Hamiltonian of the system is
 
@@ -56,7 +54,7 @@ in powers of the inverse modulation frequency $Heff^((n)), kick^((n)) prop 1 sla
 )
 
 We use the superlattice phase #phase to apply a periodic modulation to the superlattice potential.
-In a superlattice configuration where $tout slash tin << 1$, we reduce the system to an individual double well where the modulation is applied to the offset $Delta prop phase$.
+In a superlattice configuration where $tout slash tin << 1$, we reduce the system to an individual double well where the modulation is applied to the energy offset $Delta prop phase$.
 We add the modulation
 
 $
@@ -99,7 +97,7 @@ For computing the effective Hamiltonian, we include terms in the high-frequency 
 ] up to $Jn(3)$.
 
 In addition to the effective Hamiltonian, the time evolution operator in @eq:phase-floquet-theory-evolution also contains the kick operator $kick(tau)$, which results in a micromotion of the system depending on the initial time $tau_i$ and the final time $tau_f$ @desbuquois_controlling_2017.
-In the singly-occupied double well and in the off-resonant regime of the doubly-occupied double well, the first order of the kick operator is $kick^((1))(tau) prop t Jn(1) (K0) slash nu$.
+In singly-occupied double wells and in the off-resonant regime of doubly-occupied double wells, the first order of the kick operator is $kick^((1))(tau) prop t Jn(1) (K0) slash nu$.
 For the near-resonant regime, the additional term $t Jn(0) (K0) slash nu$ shows up in the first order.
 Terms proportional to the interaction energy $U$ only appear in the second order $kick^((2)) (tau)$, regardless of the modulation regime.
 As long as the modulation frequency $nu$ is much larger than the tunneling amplitude $t$, the micromotion introduced by the kick operator is only a small perturbation of the system.
@@ -128,9 +126,9 @@ In a few iterations, we can reduce the intensity noise during the modulation to 
 The time-dependent correction is applied automatically at the start of each experimental sequence.
 This technique was implemented by Valentin Jonas and the technical details are compiled in @klemmer_ultracold_2024.
 
-According to the Floquet theory introduced in @ssec:phase-floquet-theory, the tunneling amplitude is modified by periodically modulating the offset $Delta(tau)$.
+According to the Floquet theory introduced in @ssec:phase-floquet-theory, the tunneling amplitude is modified by periodically modulating the energy offset $Delta(tau)$.
 While the Bessel functions $Jn(l)$ in @eq:phase-floquet-theory-teff-high and @eq:phase-floquet-theory-near[] only depend on the modulation amplitude #K0, the modulation amplitude $nu$ is included implicitly since the absolute amplitude in @eq:phase-floquet-theory-modulation is $h nu K0$.
-The practical limitation for the modulation parameters is the amplitude #K0 that is proportional to the detuning of the AOM frequency.
+The practical limitation for the modulation amplitude #K0 is the detuning of the AOM frequency.
 As discussed earlier, the detuning is limited to $plus.minus #qty[10][MHz]$, which corresponds to $phase = plus.minus pi slash 15$ in terms of the superlattice phase.
 If we increase the modulation frequency $nu$, we also need to increase the detuning of the AOM frequency to conserve the dimensionless amplitude #K0.
 For the Floquet-driven double wells occupied by a single particle, the high-frequency limit requires a modulation frequency $h nu >> t$.
@@ -138,18 +136,17 @@ For the Floquet-driven double wells occupied by a single particle, the high-freq
 To apply the Floquet driving, we use a different approach compared to measuring the time evolution in the static double wells according to @sec:phase-measure.
 Initially, we load the atoms into the #x1064 lattice at the depth $Vx1064 = #qty[15][Erec]$.
 Then, we ramp up the #x532 lattice to the depth $Vx532 = #qty[30][Erec]$ at the phase $phase = -pi slash 4$ to prepare the states #ketL or #ketLL in the double wells, depending on the occupation.
-In this superlattice configuration, the tunneling amplitude after the phase ramp $-pi slash 4 --> 0$ is $t slash h approx #qty[10][Hz]$, which conserves the states #ketL or #ketLL.
-At the symmetric phase ($phase = 0$), we adiabatically turn on the Floquet driving  in a few milliseconds @desbuquois_controlling_2017.
+In this superlattice configuration, the tunneling amplitude after the phase ramp $-pi slash 4 --> 0$ is $t slash h approx #qty[10][Hz]$, which conserves the states #ketL or #ketLL while we adiabatically turn on the Floquet driving in a few milliseconds @desbuquois_controlling_2017.
 Only after reaching the modulation amplitude #K0, we diabatically lower the #x532\-lattice depth to $Vx532 = #qty[12][Erec]$, where the static tunneling amplitude is $t slash h = #qty[488][Hz]$, to start the time evolution of the initial state.
 After the measuring time $tau$, we diabatically turn off the Floquet driving and ramp the phase back to $phase = -pi slash 4$, thereby stopping the time evolution.
 
 For detecting the final state, we use the band-mapping technique shown in @fig:setup-sequence-imaging-tof to measure the contrast in @eq:phase-measure-detect-contrast between the sites in each double well.
-When we prepare singly-occupied double wells, the atom cloud is already polarized and we can directly release the atoms from the optical lattices to measure their momentum distribution.
+When we prepare singly-occupied double wells, the atom cloud is already spin-polarized and we can directly release the atoms from the optical lattices to measure their momentum distribution.
 In a system with doubly-occupied double wells, we need to remove the atoms in all but one $m_F$ state prior to the band mapping to avoid an interaction between the atoms during the time-of-flight expansion.
 At first, we use the singles-doubles separation (see @ssec:setup-sequence-detect) to separate the states #ketLL and #ketRR from the singlet state #kets and the singly-occupied states #ketL and #ketR.
 Afterwards, the atoms occupy the three $m_F$ states #mF(9), #mF(7) and #mF(5), where the information about the occupation of the states #ketLL and #ketRR is contained in the state #mF(5).
 We discard the states #mF(9) and #mF(7) using two imaging pulses ahead of the band mapping#footnote[
-  We also use this spin-cleaning technique to prepare the polarized atom cloud in @sec:phase-measure.
+  We also use this spin-cleaning technique to prepare the spin-polarized atom cloud in @sec:phase-measure.
 ].
 With only a single $m_F$ state remaining, we turn off the optical lattices to resolve the momentum distribution of the atoms.
 The details about the experimental sequence to realize the Floquet driving can be found in @klemmer_ultracold_2024.
@@ -165,8 +162,8 @@ The details about the experimental sequence to realize the Floquet driving can b
     *b*, Floquet-driven double wells with the modulation amplitude $K0 = 2.4$.
     The oscillation in the singly-occupied double wells is suppressed since the effective tunneling amplitude is zero.
     The residual oscillation is the micromotion due to the kick operator (see @ssec:phase-floquet-theory).
-    For the doubly-occupied double wells, we select the modulation frequency $h nu = abs(U)$ to realize a system with $Ueff approx 0$ and the effective tunneling amplitude $teff slash t approx 0.5$.
-    *c*, Effective tunneling amplitudes of singly-occupied (orange) and doubly-occupied (blue) double wells.
+    For doubly-occupied double wells, we select the modulation frequency $h nu = abs(U)$ to realize a system with the effective parameters $Ueff approx 0$ and $teff slash t approx 0.5$.
+    *c*, Effective tunneling amplitudes $ateffn(l) slash t$ in singly-occupied and doubly-occupied double wells.
     The dashed lines show the Bessel functions $Jn(0)(K0)$ and $Jn(1)(K0)$, and the dotted vertical line marks the amplitude $K0 = 2.4$ used in *b*.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the interaction energy is $U slash t approx -9$.
     This figure is adapted from @klemmer_floquet-driven_2024.
@@ -175,24 +172,23 @@ The details about the experimental sequence to realize the Floquet driving can b
 )
 
 To study the effective tunneling amplitudes in singly-occupied and doubly-occupied double wells, we prepare the corresponding systems and apply the Floquet driving as described earlier.
-Additionally, we measure the time evolutions in the static double wells as a reference.
-In #subref(<fig:phase-floquet-setup>, "a"), we observe an oscillation with a significant dephasing for the singly-occupied, static double wells.
+Additionally, we measure the time evolutions in static double wells as a reference.
+In #subref(<fig:phase-floquet-setup>, "a"), we observe an oscillation with a significant dephasing for singly-occupied, static double wells.
 The oscillation frequency corresponds to the weighted average of $2t$ across the atom cloud.
 In the doubly-occupied case, the single-particle tunneling is suppressed due to the interaction energy $U slash t approx -9$.
 The superexchange between the states #ketLL and #ketRR at the frequency $J slash t approx 0.5$ according to @eq:theory-double-two-superexchange cannot be resolved due to the strong sensitivity to the offset $Delta$ (see #subref(<fig:theory-double-two-general>, "a")).
 
-If we turn on the Floquet driving with the amplitude $K0 = 2.4$, the effective tunneling amplitude vanishes in the singly-occupied double wells according to @eq:phase-floquet-theory-teff-high.
+If we turn on the Floquet driving with the amplitude $K0 = 2.4$, the effective tunneling amplitude vanishes in singly-occupied double wells according to @eq:phase-floquet-theory-teff-high.
 On the other hand, the effective tunneling amplitude is enhanced to $teff slash t approx 0.5$ in the near-resonant regime $h nu = abs(U)$.
-However, since the effective interaction in this case is $Ueff = U + h nu = 0$, we only realize density-assisted tunneling where the time evolution between the states #ketLL and #ketRR is mediated by the singlet state #kets.
-The resulting oscillation, as well as the frozen occupation of the singly-occupied double wells, are shown in #subref(<fig:phase-floquet-setup>, "b").
-By varying the modulation amplitude from $K0 = 0$ to $K0 approx 4.3$ in #subref(<fig:phase-floquet-setup>, "c"), we confirm the rescaling of the effective tunneling amplitudes according to the zeroth-order Bessel function $Jn(0)(K0)$ and the first-order Bessel function $Jn(1)(K0)$.
+However, since the effective interaction in this case is $Ueff = U + h nu = 0$, we only realize density-assisted tunneling where the time evolution between the states #ketLL and #ketRR is fully mediated by the singlet state #kets.
+The resulting oscillation, as well as the frozen occupation of singly-occupied double wells, are shown in #subref(<fig:phase-floquet-setup>, "b").
+By varying the modulation amplitude from $K0 = 0$ to $K0 approx 4.3$ in #subref(<fig:phase-floquet-setup>, "c"), we confirm the rescaling of the effective tunneling amplitudes $ateffn(l)$ according to the Bessel functions $Jn(0)(K0)$ and $Jn(1)(K0)$.
 
 
 === Crossover from density-assisted tunneling to enhanced pair tunneling <ssec:phase-floquet-crossover>
 
 According to the near-resonant Floquet theory, the effective interaction energy @eq:phase-floquet-theory-near[] vanishes in the lowest order if the static interaction energy is an integer multiple of the modulation frequency.
-Therefore, resonant Floquet driving only realizes a density-assisted
-We can therefore only use the resonant Floquet driving to realize a density-assisted tunneling between the states #ketLL, #kets and #ketRR.
+Therefore, resonant Floquet driving only realizes a density-assisted tunneling between the states #ketLL, #kets and #ketRR.
 The mediation of the tunneling through the singlet state #kets prevents an interpretation of the time evolution as pair tunneling between the states #ketLL and #ketRR.
 The correlated tunneling between the states #ketLL and #ketRR is quantified by the amplitude #VCT.
 Together with the amplitudes #VNN and #VDE for the nearest-neighbor interaction and the direct spin exchange @dutta_non-standard_2015, the higher-order corrections of the double-well Hamiltonian are
@@ -207,32 +203,32 @@ $
 $ <eq:phase-floquet-crossover-hamiltonian>
 
 We neglect the higher-order corrections in the static Hamiltonian @eq:theory-double-two-hamiltonian[] since they are smaller than the tunneling amplitude $t$ by several orders of magnitude.
-In the Floquet-driven double wells, we aim to enhance the pair tunneling through the correlated-tunneling amplitude #VCT, while suppressing the single-particle tunneling #teff with the modulation amplitude $K0 = 2.4$.
+In the Floquet-driven double wells, we aim to enhance the pair tunneling through the correlated-tunneling amplitude #VCTeff, while suppressing the single-particle tunneling #teff with the modulation amplitude $K0 = 2.4$.
 
 To investigate the effective Hamiltonian of the Floquet-driven double wells, we measure the contrast $calC(tau)$ for different modulation frequencies $nu$.
 The evaluation of the oscillation signals uses an elaborate scheme based on the near-resonant Floquet theory and the independent calibration of the static system parameters $t(x, y)$, $Delta(x, y)$ and $U(x, y)$.
-In addition to the regular tunneling amplitude $t$, we also consider density-induced tunneling amplitude #tcorr proportional to the scattering length #asc @jurgensen_density-induced_2012.
+In addition to the regular tunneling amplitude $t$, we also consider the density-induced tunneling amplitude #tcorr proportional to the scattering length #asc @jurgensen_density-induced_2012.
 This correction modifies the total tunneling amplitude as part of the extended Hubbard parameters @dutta_non-standard_2015.
 To take the residual superlattice phase $phase(x, y)$ into account, we run regular measurements of the zero-phase frequency $f_0(x, y)$ as shown in @fig:phase-measure-detect-result between the measurements of the oscillation signals $calC(tau)$.
-Instead of applying feedback based on the residual phases, we compute the corresponding offset $Delta_phase (x, y)$ and include it in the computation of the time evolution according to the Floquet theory.
+Instead of applying feedback based on the residual phases, we take the offset $Delta_phase (x, y)$ into account for the computation of the time evolution according to the Floquet theory.
 Additionally, we consider the offset $Delta_y1064 (x, y)$ due to the radial confinement by the #y1064 lattice.
 For the interaction energy $U(x, y)$, we employ the calibration method introduced in @sec:phase-parameters.
 However, instead of directly using the measured interaction energy, we use the generalized evaluation to determine the scattering length $asc(B)$, thereby allowing a variation of the scattering length as a fit parameter.
-Finally, we calibrate the initial atomic density $n(x, y)$ of the doubly-occupied sites in the #x1064 lattice as the weights for the global average.
-In total, the evaluation takes the parameters $t(x, y)$, $tcorr(x, y)$, $Delta(x, y)$, $U(x, y)$, $K0(x, y)$, $nu$ and $n(x, y)$ into account, and we fit the effective Hamiltonian #Heff in @eq:phase-floquet-theory-expansion up to the order $1 slash nu^3$ and the Bessel function $Jn(n <= 3)$.
+Finally, we use the initial atomic density $n(x, y)$ of the doubly-occupied sites in the #x1064 lattice as the weights for the global average.
+In total, the evaluation takes the parameters $t(x, y)$, $tcorr(x, y)$, $Delta(x, y)$, $U(x, y)$, $K0(x, y)$, $nu$ and $n(x, y)$ into account, and we fit the effective Hamiltonian #Heff in @eq:phase-floquet-theory-expansion up to the order $1 slash nu^3$ and Bessel functions up to $Jn(3)$.
 With an exact diagonalization of the effective Hamiltonian, we find the eigenvalues $epsilon_1$ to $epsilon_4$ (compare @fig:theory-double-two-symmetric) and we compute the time evolution starting from the initial state #ketLL.
 Additionally, we can read the parameters #teff, #Ueff and #VCTeff directly from the effective Hamiltonian.
-The fit parameters to adjust the theoretical signals to the measured oscillation signals $calC(tau)$ are the #x532\-lattice depth #Vx532 in the center of the atom cloud and the scattering length #asc.
+The fit parameters are the #x532\-lattice depth #Vx532 and the scattering length #asc.
 
 #floating-figure(
   figure-spectrum(),
   caption: [
     Floquet spectrum of the effective Hamiltonian.
-    We evaluate the oscillation signals (insets) with the Floquet theory to find the matrix elements of the effective Hamiltonian for the doubly-occupied double well.
+    We evaluate the oscillation signals (insets) with the near-resonant Floquet theory to find the matrix elements of the effective Hamiltonian.
     The data points show the eigenvalues $epsilon_n$ of the effective Hamiltonian in the center of the atom cloud.
     Compared to the static spectrum in @fig:theory-double-two-symmetric, the triplet state $epsilon_3 = #kett$ is not included here since it is decoupled from the other three eigenstates.
-    The shaded areas show the near-resonant Floquet theory based on the experimental parameters, while the uncertainties are determined with a Monte-Carlo simulation.
-    Around $h nu = abs(U)$, the first order ($l = 1$) of the Floquet theory is used, while the second-order theory ($l = 2$) is used around $h nu = abs(U) slash 2$.
+    The shaded areas show the near-resonant Floquet theory based on the experimental parameters, and the uncertainties are computed with Monte-Carlo simulations.
+    Around $h nu = abs(U)$, the first-order theory ($l = 1$) is used, while the second-order theory ($l = 2$) is used around $h nu = abs(U) slash 2$.
     To completely suppress the single-particle tunneling, the modulation amplitude is set to $K0 = 2.4$.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the interaction energy is $U slash t approx -9$.
     This figure is adapted from @klemmer_floquet-driven_2024.
@@ -243,18 +239,18 @@ The fit parameters to adjust the theoretical signals to the measured oscillation
 The spectrum of the effective Hamiltonian for the orders $l = 1$ and $l = 2$ is shown in @fig:phase-floquet-crossover-spectrum.
 For each modulation frequency $nu$, we compare the eigenvalues $epsilon_1$, $epsilon_2$ and $epsilon_4$ of the effective Hamiltonian in the center of the atom cloud to the theoretical spectrum $epsilon_n (nu)$.
 The energies are normalized by the modulation frequency, which leads to the visual distortion of the eigenvalues compared to the spectrum of the static Hamiltonian in @fig:theory-double-two-symmetric.
-Furthermore, there are two copies of the spectrum centered around $h nu = abs(U)$ and $h nu = abs(U) slash 2$ respectively.
-The color gradients around $h nu = #qty[0.7][U]$ indicate that we cannot connect the different orders since the high-frequency condition $h nu >> abs(U) - l h nu$ is no longer fulfilled.
-Instead, we select the appropriate order $l$ for each evaluation based on the proximity of the interaction energy $abs(U)$ to an integer multiple of the modulation frequency $h nu$.
+Furthermore, there are two copies of the spectrum centered around $h nu = abs(U)$ and $h nu = abs(U) slash 2$, respectively.
+The color gradients indicate that we cannot connect the different orders since the high-frequency condition $h nu >> abs(U) - l h nu$ is no longer fulfilled.
+Instead, we select the order $l$ for each data point based on the proximity of the interaction energy $abs(U)$ to an integer multiple of the modulation frequency $h nu$.
 The insets in @fig:phase-floquet-crossover-spectrum show the measured oscillation signals $calC(tau)$ and the theoretical time evolution according to the effective Hamiltonian determined from the fit.
-At $l h nu approx abs(U)[]$, the oscillations show a single frequency since the effective interaction energy is $Ueff approx 0$ (see #subref(<fig:phase-floquet-setup>, "b")).
+At $l h nu approx abs(U)$, the oscillations show a single frequency since the effective interaction energy is $Ueff approx 0$ (see #subref(<fig:phase-floquet-setup>, "b")).
 This requires two equal gaps in the spectrum between the eigenvalues $(epsilon_1, epsilon_2)$ and $(epsilon_2, epsilon_4)$, which only occurs when the interaction energy vanishes.
 For any finite interaction energy $U$, two of the eigenvalues approach each other while the third eigenvalue converges to $epsilon = 0$.
 In the time evolution, this is expressed as a beat of two different frequencies for weak to intermediate interactions#footnote[
   If the interactions are strong $abs(U) slash t >> 1$, the coupling to the third state becomes weak and only a single frequency equal to the superexchange constant $J$ @eq:theory-double-two-superexchange[] remains.
   However, we are not able to access this regime with the effective interaction energy #Ueff in the Floquet-driven double wells.
 ].
-We can observe this beating in the two near-resonant oscillation signals at $h nu slash abs(U) approx 0.65$ and $h nu slash abs(U) approx 1.05$.
+We observe this beat signature in the two near-resonant oscillation signals at $h nu slash abs(U) approx 0.65$ and $h nu slash abs(U) approx 1.05$.
 
 #floating-figure(
   figure-result(),
@@ -266,7 +262,7 @@ We can observe this beating in the two near-resonant oscillation signals at $h n
     The solid line shows the minimal energy gap in the static spectrum as a function of the interaction energy $U slash t$.
     *b*, Correlated-tunneling amplitude extracted from the effective Hamiltonian.
     The first-order modulation results in a small amplitude #VCTeff, while the second-order modulation enhances the amplitude up to $VCTeff slash ateffn(2) approx 0.4$.
-    *c*, Pair-tunneling fidelity #Fpair @eq:phase-floquet-crossover-fidelity[] to quantify the mean occupation of the singlet state #kets during the tunneling depending on the detuning from the resonance $l h nu = U$.
+    *c*, Pair-tunneling fidelity #Fpair @eq:phase-floquet-crossover-fidelity[] to quantify the mean occupation of the singlet state #kets during the time evolution.
     *d*, Enhanced pair-tunneling amplitude at $Ueff slash ateffn(2) = 6$ compared to the time evolution in a static double well with $U slash t = 6$ in *e*.
     The superlattice parameters are $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$, and the modulation amplitude is $K0 = 2.4$ to suppress the single-particle tunneling.
     This figure is adapted from @klemmer_floquet-driven_2024.
@@ -282,14 +278,16 @@ For attractive interactions in the effective Hamiltonian, the minimal energy gap
 In the second-order spectrum, the minimal energy gap is shifted to $Ueff slash ateffn(2) approx 2$ and we observe a significant increase compared to the static Hamiltonian.
 We attribute the difference between the Floquet-driven double wells and the static double wells to the correlated tunneling amplitude #VCTeff.
 While the correlated tunneling amplitude #VCT is much smaller than the tunneling amplitude $t$ in the static double wells, the effective amplitude #VCTeff can reach the same order of magnitude as the effective tunneling amplitude $teff^((l))$ (see #subref(<fig:phase-floquet-crossover-result>, "b")).
-The total pair-tunneling amplitude in the near-resonant Floquet theory is
+The total pair-tunneling amplitude is
 
 $
   Jeff approx (4 teff^2) / Ueff + (-1)^l dot 2 VCTeff eqc
 $ <eq:phase-floquet-crossover-tunneling>
 
-where the first term corresponds to the superexchange constant based on the effective parameters #teff and #Ueff.
-The enhancement of the pair tunneling in the Floquet-driven double wells is, therefore, primarily caused by the enhanced parameter #VCTeff.
+where the first term corresponds to the effective superexchange constant#footnote[
+  We use #teff here instead of $teffn(l)$ for the sake of readability.
+].
+The enhancement of the pair-tunneling amplitude in the Floquet-driven double wells is, therefore, primarily caused by the enhanced parameter #VCTeff.
 For the second-order near-resonant Floquet driving, we can achieve $VCTeff slash ateffn(2) approx 0.4$ at the effective interaction energy $Ueff slash ateffn(2) approx 6$.
 
 In addition to the pair-tunneling amplitude #Jeff in @eq:phase-floquet-crossover-tunneling, we consider the effective interaction energy #Ueff to quantify the fidelity of the pair tunneling.
@@ -308,6 +306,5 @@ The oscillation between the states #ketLL and #ketRR in the Floquet-driven doubl
 However, compared to the corresponding oscillation in the static double wells in #subref(<fig:phase-floquet-crossover-result>, "e"), the pair-tunneling amplitude is enhanced by a factor greater than $2$.
 
 In conclusion, we modulate the superlattice phase #phase to realize near-resonant Floquet systems where we investigate a crossover from density-assisted tunneling around the effective interaction energy $Ueff approx 0$ to enhanced pair tunneling at $Ueff slash ateffn(2) approx 6$.
-The enhancement of the pair tunneling is primarily enabled by the correlated-tunneling amplitude #VCTeff between the states #ketLL and #ketRR.
-In addition to the enhancement compared to static double wells, the pair tunneling amplitude is also significantly larger than the single-particle tunneling amplitude $teff = t Jn(0)$.
-With the modulation amplitude $K0 = 2.4$, we suppress the single-particle tunneling while the near-resonant tunneling amplitudes $teffn(l)$ remain tunable.
+The enhancement of the pair-tunneling amplitude is primarily enabled by the correlated-tunneling amplitude #VCTeff between the states #ketLL and #ketRR.
+In addition to the enhancement compared to static double wells, the pair-tunneling amplitude is also significantly larger than the single-particle tunneling amplitude $teff = t Jn(0)$, which is suppressed by using the modulation amplitude $K0 = 2.4$.
