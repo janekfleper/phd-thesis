@@ -84,7 +84,7 @@ Both effects match the expected behavior of the intensity profile of the Gaussia
     In-situ #lms of the #x1064 lattice.
     The modulation frequency is scanned from #qty[118.0][kHz] (*a*) to #qty[122.5][kHz] (*j*) in steps of #qty[0.5][kHz].
     The resonances show the equipotential lines where the energy gap between the bands $n = 1$ and $n' = 3$ in the lattice potential $Vx1064(x, y)$ is equal to $h dot fmod$.
-    The lattice depth is set to $#Vx1064 = #qty[60][Erec]$, the modulation time is set to $tau_"mod" = #qty[0.75][s]$ and the modulation amplitude is set to $dV slash Vx1064 = #tr[#qty[3][%]]$.
+    The lattice depth is set to $#Vx1064 = #qty[60][Erec]$, the modulation time is set to $tmod = #qty[0.75][s]$ and the modulation amplitude is set to $dV slash Vx1064 = #num[3.1e-3]$.
     The angle of the resonances in the #xy-plane matches the expected angle of the #x1064\-lattice axis relative to the camera frame.
   ],
   label: <fig:mod-intro-images>,

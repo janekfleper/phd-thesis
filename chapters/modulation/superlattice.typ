@@ -33,7 +33,7 @@ Since we can control the superlattice phase $phi$ with an absolute accuracy of a
 At the antisymmetric phase $phi = -pi slash 4$, the lower lattice site in the unit cell is effectively the sum of the two potentials (compare #subref(<fig:theory-super-potential-phase>, "c")).
 A modulation of either lattice depth #Vx1064 or #Vx532 is suitable for the band transition $1 -> 4$.
 However, applying the modulation to the #x532\-lattice depth is significantly more effective compared to the #x1064\-lattice depth due to the shorter lattice period.
-We achieve a good resonance visibility with the modulation amplitude $dV slash Vx532 approx #tr[???]$ and the modulation time $tmod = #qty[0.75][s]$.
+We achieve a good resonance visibility with the modulation amplitude $dV slash Vx532 = #num[2.5e-3]$ and the modulation time $tmod = #qty[0.75][s]$.
 
 #floating-figure(
   figure-phase(),

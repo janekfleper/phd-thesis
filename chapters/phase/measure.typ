@@ -148,7 +148,7 @@ For the atoms occupying the states #ketR, the band transition $3 -> 7$ is resona
 With a typical atom-cloud radius $< #qty[35][μm]$, this is sufficient to address all atoms in the states #ketR regardless of their position.
 Furthermore, the Wannier functions $w_3 (x)$ and $w_7 (x)$ have the same parity to allow an efficient excitation.
 From the lowest band with index $n = 1$, there is no resonant transition available at the frequency $fmod = #qty[185][kHz]$.
-With the modulation time $tmod = #qty[5][s]$ and the modulation amplitude #tr[$delta V slash Vx532 = ?$], we find a detection efficiency of approximately #qty[95][%] for the states #ketR.
+With the modulation time $tmod = #qty[5][s]$ and the modulation amplitude $delta V slash Vx532 = #num[8e-3]$, we find a detection efficiency of approximately #qty[95][%] for the states #ketR.
 However, we also observe a #qty[10][%] loss of the atoms in the states #ketL.
 We attribute this loss to the second-order transitions $1 -> 6$ and $1 -> 7$ that are resonant at twice the modulation frequency #fmod.
 Despite its sensitivity to the total atom number, we are now exclusively using the in-situ technique described in this subsection.

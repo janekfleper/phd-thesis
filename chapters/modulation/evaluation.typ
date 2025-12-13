@@ -152,7 +152,7 @@ The resulting fit parameters are compiled in @tab:mod-eval-results.
 )
 
 For the calibration of the #y1064 lattice, the in-situ #lms works analogous to the #x1064 lattice.
-We set the lattice depths $Vy1064 = #qty[60][Erec]$ and $Vx1064 = #qty[30][Erec]$, and apply the lattice modulation for $#qty[0.75][s]$ with the modulation amplitude $dV slash Vy1064 approx #tr[#qty[3][%]]$.
+We set the lattice depths $Vy1064 = #qty[60][Erec]$ and $Vx1064 = #qty[30][Erec]$, and apply the lattice modulation for $#qty[0.75][s]$ with the modulation amplitude $dV slash Vy1064 = #num[3.4e-3]$.
 The visual overlap of the normalized resonances and the fit model @eq:mod-eval-model-lattice-depth[] is shown in #subref(<fig:mod-eval-other-result>, "a"), and the calibration result computed from the individual fits is listed in @tab:mod-eval-results.
 To estimate the calibration uncertainty we only consider the images with $fmod <= #qty[118.5][kHz]$.
 

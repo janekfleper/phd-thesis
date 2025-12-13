@@ -92,7 +92,7 @@ We can, therefore, operate the optical lattices for longer times without a relev
     The global optimum $zfwd approx #qty[3.5][μm]$ (*a*) agrees with the largest calibration factor #fita0.
     *c* - *e*, Individual results of the lattice calibration as a function of the #retro beam position.
     The maximum of the calibration factor (blue) is always at $zret approx #qty[0][μm]$, while the maximum of the resonance contrast (orange) depends on the #forward beam position.
-    For all measurements, the modulation parameters are $Vx1064 = #qty[60][Erec]$, $tau_"mod" = #qty[0.75][s]$ and $dV slash Vx1064 = #tr(qty[3][%])$.
+    For all measurements, the modulation parameters are $Vx1064 = #qty[60][Erec]$, $tau_"mod" = #qty[0.75][s]$ and $dV slash Vx1064 = #num[3.1e-3]$.
   ],
   label: <fig:mod-align-x1064-walking>,
 )

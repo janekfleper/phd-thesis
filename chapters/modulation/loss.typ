@@ -78,7 +78,7 @@ To confirm that the transition $3 -> n''$ is required for the visibility of the 
 ] at the frequency #fmod2.
 If our understanding about the loss channel $1 -> 3 -> 6$ is correct, we can see a recovery of the resonance visibility at $V0 > #qty[65][Erec]$ with the appropriate secondary modulation frequency.
 To see the isolated effect of the secondary modulation frequency, we conduct the measurement at $Vx1064 = #qty[70][Erec]$ where the frequencies of the transitions $1 -> 3$ and $3 -> 6$ are already detuned by approximately #qty[4][kHz].
-For the primary modulation, we use the default amplitude $dV slash Vx1064 = #tr[#qty[3][%]]$ where the resonances are barely visible at $Vx1064 = #qty[70][Erec]$.
+For the primary modulation, we use the default amplitude $dV slash Vx1064 = #num[3.1e-3]$ where the resonances are barely visible at $Vx1064 = #qty[70][Erec]$.
 Since no other transition $1 -> n'$ is available at the frequency #fmod2, we can use a strong modulation amplitude $dV^((2)) slash dV approx 5$ without affecting the atoms in the lowest band.
 In #subref(<fig:mod-loss-channels>, "a") we observe the recovery of the resonance visibility if the secondary modulation frequency #fmod2 is resonant with one of the available transitions $3 -> n''$ in #subref(<fig:mod-loss-channels>, "b").
 Despite the additional band gaps of the coupled band structure, we can always find a fixed modulation frequency #fmod2 to enable the atom-loss mechanism across the entire atom cloud.
