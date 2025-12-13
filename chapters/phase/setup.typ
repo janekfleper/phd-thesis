@@ -10,7 +10,7 @@ Instead, we use the optical frequency of the individual lattices to tune the sup
 A frequency difference $Delta nu$ changes the superlattice phase by
 
 $
-  Delta phase = Delta k dot d = 2 pi (Delta nu) / c dot d
+  Delta phase = Delta k dot d = 2 pi (Delta nu) / c dot d eqc
 $ <eq:phase-setup-delta-phi>
 
 where $d$ is the distance from the retro mirror to the atom position.
@@ -25,8 +25,8 @@ With the path length $d approx #qty[50][cm]$, the frequency difference of the #x
     The #x532\-lattice pump laser and the amplified #x1064\-lattice seed laser are overlapped on a photodiode.
     The resulting beat signal $Delta nu$ is mixed with the reference signal from the direct digital synthesis (DDS) board to yield the error signal for the fast and slow feedback loops.
     The optical frequencies of the pump and seed laser are approximately #qty[281.6][THz] with a detuning of a few #qty[100][MHz] between each other.
-    In the second-harmonic generation (SHG) cavity, the pump laser is frequency-doubled to obtain the wavelength $lambda = #qty[532][nm]$ for the #x532 lattice.
-    The acousto-optical modulator (AOM) in the #x532\-lattice setup is driven by a constant frequency of #qty[80][MHz].
+    In the second-harmonic generation (SHG) cavity, the pump laser is frequency doubled to obtain the wavelength $lambda = #qty[532][nm]$ for the #x532 lattice.
+    The acousto-optical modulator (AOM) in the #x532\-lattice setup is driven at a constant frequency of #qty[80][MHz].
     In the #x1064\-lattice setup, the AOM frequency is controlled by an arbitrary-waveform generator (AWG).
     The vertical dashed line indicates the separation of the optical tables.
     While the entire frequency control is handled on the laser table, the superlattice phase #phase accumulates on the experimental table.
@@ -44,14 +44,14 @@ We use an optical phase locked loop (OPLL) to stabilize the frequency $nu_x1064$
 The reference signal is provided by a direct digital synthesis (DDS) board#footnote[
   Analog Devices AD9914 Evaluation Board ($fdds <= #qty[1.4][GHz]$)
 ].
-While we do not need the phases of the forward-propagating lattice beams to be locked, we observe a better phase control, in terms of the delay to the reference signal, compared to a frequency-offset lock @klemmer_ultracold_2020.
+While we do not need the phases of the forward-propagating lattice beams to be locked, we observe a better phase control, in terms of the delay to the reference signal, compared to a frequency offset lock @klemmer_ultracold_2020.
 In the fast feedback branch, we use a fast PID regulator#footnote[
   Toptica Fast Analog Linewidth Control (FALC 110)
 ] to produce the feedback signal for the laser-diode current of the #x1064\-lattice laser.
 While the fast feedback has a very high regulation bandwidth of several #qty[10][MHz], it can only address frequency changes $Delta nu < #qty[1][MHz]$.
 To cover the entire superlattice period of #qty[150][MHz], we need to use the slow feedback branch with a regulation bandwidth of a few #unit[kHz].
 The output signal of the PID regulator in the slow feedback branch is applied to the piezo actuator that controls the external-cavity length of the #x1064\-lattice laser.
-On the DDS board, we use the digital ramp generator to drive linear ramps between two preset frequencies.
+On the DDS board, we use the digital ramp generator to drive linear ramps between two frequencies.
 For rapid changes of the DDS frequency by more than #qty[1][MHz], we use an arbitrary-waveform generator #footnote[
   Keysight 33622A Waveform Generator
 ] to apply an auxiliary signal to the piezo actuator that matches the expected output of the slow PID regulator.
