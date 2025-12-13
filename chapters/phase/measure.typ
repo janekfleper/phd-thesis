@@ -25,7 +25,7 @@ However, the superlattice phase $phase = 0$ is not uniquely defined since the su
 As a result, we can find a symmetric configuration every $Df approx #qty[150][MHz]$.
 In @ssec:phase-measure-period, we determine the exact periodicity of the frequency to precisely compute any superlattice phase $phase(f)$.
 
-We use the superlattice potential as an array of isolated double wells for measuring the phase#footnote[
+We regard the superlattice potential as an array of isolated double wells for measuring the phase#footnote[
   For the superlattice configuration in this section, the outer tunneling amplitude is typically $tout slash tin approx 0.016$ and we can completely neglect the coupling of the double wells due to the measuring times $tau0 dot tout << 1$.
 ].
 This allows a robust preparation of the initial state and a simple interpretation of the detected occupation at the end of the measurement.
@@ -47,14 +47,14 @@ Just before the experimental segment, we employ an imaging pulse to remove the a
   label: <fig:phase-measure-theory>,
 )
 
-The eigenstates of a single particle in the double-well potential only depend on $Delta slash t$ (see @ssec:theory-double-one).
+The eigenstates of a single particle in a double-well potential only depend on $Delta slash t$ (see @ssec:theory-double-one).
 In the symmetric configuration $Delta slash t = phase = 0$, the two eigenstates are equal mixtures of the localized states #ketL and #ketR, and the gap between the eigenenergies is $2t$.
 When we prepare the initial state #ketL close to the symmetric configuration, the atoms undergo coherent Rabi oscillations between the two states #ketL and #ketR.
 According to @eq:theory-double-one-rabi-parameters, the oscillation frequency is minimal and the oscillation amplitude is maximal at $Delta slash t = 0$.
-Since both parameters of the oscillation only depend on $abs(Delta) slash t$, we find a symmetric signal around $Delta slash t = phase = 0$ (see #subref(<fig:phase-measure-theory>, "d")).
+Since both parameters of the oscillation only depend on $abs(Delta) slash t$, we find a symmetric signal around $Delta slash t = phase = 0$ (see @fig:phase-measure-theory).
 In the symmetric configuration, the first minimum ($n_L = 0$) occurs after the measurement time #tau0.
 For any offset $abs(Delta) slash t > 0$, the occupation of $n_L$ at the same measurement time is greater than zero.
-The strong sensitivity of the signal is a result of both oscillation parameters contributing to an increase of the occupation $n_L$ at the time #tau0.
+The strong sensitivity of the signal is a result of both oscillation parameters contributing to an increase of the occupation $n_L (tau0)$.
 
 In the experimental setup, the tunneling amplitude $t(x, y)$ varies across the atom cloud due to the inhomogeneity of the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$.
 The ideal measurement time, therefore, changes as a function of the position in the atom cloud.
@@ -67,13 +67,13 @@ If the wavefronts of the #x1064 lattice and the #x532 lattice are not parallel, 
 
 === State initialization and projection <ssec:phase-measure-sequence>
 
-To measure the signal shown in #subref(<fig:phase-measure-theory>, "d"), we prepare the initial state #ketL and detect the state $phy.ket(psi(tau = tau0))$ after the time #tau0.
+To measure the signal shown in @fig:phase-measure-theory, we prepare the initial state #ketL and detect the state $phy.ket(psi(tau = tau0))$ after the time #tau0.
 For the preparation, we use a large offset $abs(Delta) >> t$ where the ground state in the double wells is equal to #ketL.
 We achieve this by initially loading the atoms into the lowest band of the #x1064 lattice.
 The #x532 lattice is turned on adiabatically at the antisymmetric phase $phase = -pi slash 4$ to keep the atoms in the lowest band of the superlattice potential.
 As shown in @fig:phase-measure-sequence, the atoms are located on the left site in each unit cell, which corresponds to the state #ketL in the double-well potential.
 For the initialization of the Rabi oscillation in each double well, we diabatically change the superlattice phase from $-pi slash 4$ to the target phase to realize the offset $Delta(phase)$.
-The relevant energy scale for the phase ramp is the energy gap $2t$ of the avoided crossing at $Delta slash t = 0$ (see #subref(<fig:theory-double-one>, "b")).
+The relevant energy scale for the phase ramp is the energy gap $2t$ of the avoided crossing at $Delta slash t = 0$ (see #subref(<fig:theory-double-one>, "a")).
 If the rate of change $dot(Delta)$ is too small, the atoms remain in the ground state which would reduce or completely disable the oscillation.
 The diabatic preparation is essential to conserve the initial state #ketL at any offset $Delta slash t$.
 After the time #tau0, we stop the oscillation to freeze the current state $phy.ket(psi(tau = tau0))$.
@@ -86,22 +86,23 @@ This phase ramp is also diabatic to conserve the composition of the final state.
     State initialization and projection for the phase measurement.
     Initially, only the left well is occupied by loading the superlattice at the antisymmetric phase $phase = -pi slash 4$.
     After the initialization at the offset $Delta(phase)$, the two sites are connected by the tunneling amplitude $t$.
-    During the time evolution, the atom oscillates between the left and the right site with the parameters in @eq:theory-double-one-rabi-parameters.
-    To stop the oscillation after the time #tau0, we use a diabatic phase ramp back to the antisymmetric configuration $phase = -pi slash 4$ to project the state $phy.ket(psi(tau = tau0))$ onto the states #ketL and #ketR.
+    During the time evolution, the atom oscillates between the left and the right site according to the parameters in @eq:theory-double-one-rabi-parameters.
+    To stop the oscillation after the time #tau0, we use a diabatic phase ramp back to the antisymmetric configuration $phase = -pi slash 4$ that projects the state $phy.ket(psi(tau = tau0))$ onto the states #ketL and #ketR.
   ],
   label: <fig:phase-measure-sequence>,
+  placement: bottom,
 )
 
 When we use the phase $phase = -pi slash 4$ for the initial loading of the atoms, we increase the DDS frequency by approximately #qty[75][MHz] to reach the target phase around $phase = 0$.
 For the projection, we use the identical phase ramp back to the antisymmetric configuration $phase = -pi slash 4$.
-While we can change the DDS frequency arbitrarily on nanosecond timescales, the actual rate of change is limited by the phase locked loop.
+While we can change the DDS frequency arbitrarily on nanosecond timescales, the actual rate of change is limited by the optical phase locked loop.
 If we use the arbitrary waveform generator to add the auxiliary voltage signal to the output of the slow PID regulator#footnote[
   Without the auxiliary signal, the rate of change is significantly lower.
 ] (see @fig:phase-setup), the maximal rate of change is $dot(phase) approx 0.5 pi slash#unit[ms]$.
-Using the double-pass AOM, we achieve rates up to $dot(phase) approx #iqty[0.1][rad/μs]$ which is an improvement by a factor of more than $60$ compared to the DDS frequency and the phase locked loop.
+Using the double-pass AOM, we achieve rates up to $dot(phase) approx #iqty[0.1][rad/μs]$ which is an improvement by a factor of more than $60$ compared to the DDS frequency and the optical phase locked loop.
 The limitation when using the double-pass AOM is the maximal frequency detuning of #qty[40][MHz], which corresponds to the phase detuning $2 pi slash 15$.
 While this range is too small to realize the phase ramp $-pi slash 4 -> 0$, it is generally sufficient for the initialization and projection of the states for the phase measurement.
-According to the composition of the ground state in #subref(<fig:theory-double-one>, "c"), we can already neglect the mixture of the states #ketL and #ketR at $abs(Delta) slash t = 5$, which typically corresponds to the phase $abs(phase) approx pi slash 100$.
+According to the composition of the ground state in #subref(<fig:theory-double-one>, "b"), we can already neglect the mixture of the states #ketL and #ketR at $abs(Delta) slash t = 5$, which typically corresponds to the phase $abs(phase) approx pi slash 100$.
 When the ground state is equal to #ketL, there is no advantage in moving all the way to the antisymmetric phase $phase = -pi slash 4$ for the state initialization and the projection onto the sites #ketL and #ketR.
 
 
@@ -127,10 +128,10 @@ Compared to the individual occupations $n_L$ and $n_R$, the contrast is insensit
   caption: [
     Technique for the in-situ detection of the double-well occupation.
     *a*, Energy bands and Wannier functions up to $n = 7$ in a superlattice potential with the parameters $Vx1064 = #qty[60][Erec]$, $Vx532 = #qty[18][Erec]$ and $phase = - pi slash 4$.
-    The Wannier functions $w_n (x)$ are offset by the mean band energies $overline(band_n)$.
-    Based on the Wannier functions, we associate the double-well states #ketL and #ketR with the bands $n = 1$ and $n = 3$ respectively.
+    The Wannier functions $w_n (x)$ are offset by the mean band energies $overline(band)_n$.
+    Based on the Wannier functions, we associate the double-well states #ketL and #ketR with the bands $n = 1$ and $n = 3$, respectively.
     *b*, *c*, Transition frequencies from the bands $n = 3$ (*b*) and $n = 1$ (*c*) as a function of the radius $rho$ from the optical axis of the lattice beams.
-    The dotted vertical line indicates the typical size of the atom cloud.
+    The dotted vertical lines indicate the typical size of the atom cloud.
     The dashed horizontal line shows the modulation frequency $fmod = #qty[185][kHz]$ to drive the band transition $3 -> 7$, while the atoms in the band $n = 1$ are not affected.
   ],
   label: <fig:phase-measure-detect-technique>,
@@ -143,7 +144,7 @@ In contrast to the in-situ #lms, the transition to the untrapped band must be re
 While the inhomogeneity of the lattice beams was crucial to measure the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$, we need the in-situ phase detection to be uniform across the atom cloud.
 We find a suitable modulation frequency #fmod in the superlattice configuration that we use for the in-situ #lms in @sec:mod-super.
 The band structure and the transition frequencies in @fig:phase-measure-detect-technique show that we can realize the in-situ detection technique with the modulation frequency $fmod = #qty[185][kHz]$.
-For the atoms occupying the states #ketR, the band transition $3 -> 7$ is resonant up to the radius $rho = #qty[40][μm]$ from the optical axis.
+For the atoms occupying the states #ketR, the band transition $3 -> 7$ is resonant up to the radius $rho = #qty[60][μm]$ from the optical axis.
 With a typical atom-cloud radius $< #qty[35][μm]$, this is sufficient to address all atoms in the states #ketR regardless of their position.
 Furthermore, the Wannier functions $w_3 (x)$ and $w_7 (x)$ have the same parity to allow an efficient excitation.
 From the lowest band with index $n = 1$, there is no resonant transition available at the frequency $fmod = #qty[185][kHz]$.
@@ -180,7 +181,7 @@ Due to the inhomogeneity of the lattice depths $Vx1064(x, y)$ and $Vx532(x, y)$,
 Therefore, we use the average measurement time for a reliable phase measurement across the entire atom cloud.
 Since a deviation of the measurement time from the optimal value #tau0 only changes the shape of the phase-sensitive signal, the position of the minimum in the occupation is not affected.
 The sensitivity of the phase measurement is determined by the ratio $Delta slash t$.
-For the superlattice parameters in @fig:phase-measure-detect-result, the phase $phase = #qty[10][mrad]$, which corresponds to the frequency $Df = #qty[1][MHz]$, realizes the ratio $Delta slash t approx 1.9$.
+For the superlattice parameters in @fig:phase-measure-detect-result, the phase $phase = #qty[10][mrad]$, which corresponds to the frequency $Df approx #qty[1][MHz]$, realizes the ratio $Delta slash t approx 1.9$.
 To reduce the sensitivity of the phase measurement, we typically use the superlattice parameters $Vx1064 = #qty[15][Erec]$ and $Vx532 = #qty[12][Erec]$ where we achieve the ratio $Delta slash t approx 1.3$ at the phase $phase = #qty[10][mrad]$.
 
 
@@ -190,11 +191,11 @@ The measurement of the in-situ superlattice phase $phase(x, y)$ in @fig:phase-me
 If the standing-wave patterns of the individual lattices are not parallel, the zero-phase frequency #f0 varies as a function of the position $(x, y)$.
 Consequently, compensating the phase gradient requires a tilt of the lattice beams without affecting their position relative to the atoms.
 We shift the collimated #x532\-lattice beam#footnote[
-  Compensating the phase gradient also works by shifting the #x1064\-lattice beam.
+  Compensating the phase gradient would also work by shifting the #x1064\-lattice beam.
 ] perpendicular to the optical axis using the glass plates shown in @fig:super-setup.
 Rotating the glass plates displaces the collimated beam due to the refraction at the surfaces while conserving its angle.
 Behind the forward lens, this displacement tilts the #x532\-lattice beams without affecting their alignment to the atom position.
-The motorized mirror mount holding one of the glass plates has a range of $plus.minus #deg[2]$ and an absolute accuracy of #deg[0.05] for each axis.
+The motorized mirror mount holding one of the glass plates has a range of $plus.minus #deg[2]$ and an absolute accuracy of #deg[0.05] for each axis, which corresponds to approximately #qty[10][μrad] for the relative angle between the two lattice wavefronts.
 We can control the motorized mirror mount in the experimental sequence to vary the horizontal and vertical shift of the #x532\-lattice beams for compensating the individual gradient components.
 
 #floating-figure(
@@ -212,11 +213,11 @@ We can control the motorized mirror mount in the experimental sequence to vary t
 )
 
 For compensating the horizontal gradient component, we repeat the measurement of the superlattice phase $phase(x, y)$ in @fig:phase-measure-detect-result at several angles #ghor of the glass plate.
-We evaluate the zero-phase frequency $f0(x, y)$ by fitting a first-degree polynomial that can be rotated in the #xy-plane.
+We evaluate the gradient in the zero-phase frequency $f0(x, y)$ by fitting a first-degree polynomial that can be rotated in the #xy-plane.
 In @fig:phase-measure-gradient-horizontal, the measurement and compensation of the horizontal gradient component is shown.
 We vary the glass-plate angle in steps of #deg[0.4] to find the zero-crossing of the gradient component at $ghor approx #deg[1.7]$.
-The standard deviation of the zero-phase frequency $f0(x, y)$ across the atom cloud is $sigma(f0) = #qty[0.11][MHz]$.
-This corresponds to $sigma(phase) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-stability-result).
+The standard deviation of the zero-phase frequency $f0(x, y)$ across the atom cloud is $sqrt(Delta f0^2) = #qty[0.11][MHz]$.
+This corresponds to $sqrt(Delta phase^2) approx #qty[1.15][mrad]$, which is on par with the shot-to-shot stability of the superlattice phase (see @ssec:phase-stability-result).
 During the scan of the angle #ghor, the zero-phase frequency #f0 in the center of the atom cloud varies by less than #qty[0.25][MHz].
 We can, therefore, tune the horizontal gradient component without significantly affecting the mean zero-phase frequency.
 
@@ -224,7 +225,7 @@ We can, therefore, tune the horizontal gradient component without significantly 
   figure-vertical-gradient(),
   caption: [
     Compensating the vertical component of the phase gradient.
-    The contrast shows the ratio of the amplitude and the width of the minimum in the atomic densities, as highlighted by the insets.
+    The contrast shows the ratio of the amplitude and the width of the minimum in the atomic densities.
     The uncertainties of the angle #gver take the #deg[0.05] accuracy of the motorized mirror mount into account, and the uncertainties of the contrast show the fit errors.
     The horizontal gradient component is approximately #iqty[0.17][MHz/μm], and the lattice depths are $Vx1064 = #qty[40][Erec]$ and $Vx532 = #qty[14.4][Erec]$.
   ],
@@ -271,7 +272,7 @@ The two corresponding superlattice configurations are illustrated in @fig:phase-
 For the single-shot measurement of the superlattice phase, we apply a small horizontal gradient component to encode the phase in the position of the minimum in the atomic density (see @fig:phase-measure-gradient-vertical).
 With the horizontal gradient component of #iqty[0.060(6)][MHz/μm], the positions of the minima span the entire atom cloud to make the measurement as sensitive to the phase as possible.
 This technique allows an alternation between the two configurations every sequence, which makes the measurement insensitive to long-term drifts.
-The distribution of the frequency differences of consecutive sequences in #subref(<fig:phase-measure-period>, tr[a]) yields the frequency period
+The distribution of the frequency differences of consecutive sequences in #subref(<fig:phase-measure-period>, "a") yields the frequency period
 
 $
   Df = #qty[149.79(18)][MHz] eqc

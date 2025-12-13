@@ -127,7 +127,7 @@
   draw.line(..line-0)
   // draw.collection(..collection-1)
   // draw.collection(..collection-2)
-  draw.line(..line-3)
+  // draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 1)
 }
@@ -224,7 +224,7 @@
   draw.line(..line-0)
   // draw.collection(..collection-1)
   // draw.collection(..collection-2)
-  draw.line(..line-3)
+  // draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 2)
 }
@@ -321,7 +321,7 @@
   draw.line(..line-0)
   // draw.collection(..collection-1)
   // draw.collection(..collection-2)
-  draw.line(..line-3)
+  // draw.line(..line-3)
   axes.spines(spines)
   axes.abc(..abc-style, location: top + center, 3)
 }
@@ -355,7 +355,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Occupation $n_L = abs(phy.braket("L", psi))^2$]),
+        text(size: 1em, fill: black, bottom-edge: "descender", [Occupation $n_L$]),
       ),
     ),
   )
