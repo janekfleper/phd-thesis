@@ -10,6 +10,9 @@ The eigenstates and the energy spectrum depend on the interplay of the tunneling
 In this section, I will present the calibration measurements for the two double-well parameters $t(x, y)$ and $U(x, y)$ with local resolution.
 The energy offset $Delta(x, y)$ can be computed from the phase $phase(x, y)$ and the lattice depth $Vx1064(x, y)$.
 
+
+=== Tunneling amplitude <ssec:phase-parameters-tunneling>
+
 For calibrating the tunneling amplitude $t(x, y)$, we employ the phase-sensitive measurement and the in-situ detection of the double-well occupation introduced in @sec:phase-measure.
 However, we scan the oscillation time $tau$ to measure the time evolution instead of varying the phase #phase through the frequency $f$.
 We set the superlattice phase $phase(x, y) approx 0$ using the zero-phase frequency #f0 and compensate the phase gradient according to the scheme introduced in @ssec:phase-measure-gradient.
@@ -56,6 +59,9 @@ If the actual #x532\-lattice depth is lower than #qty[12][Erec] by #qty[4][%], t
   label: <fig:phase-parameters-result>,
 )
 
+
+=== Interaction energy <ssec:phase-parameters-interaction>
+
 For calibrating the interaction energy $U(x, y)$, we prepare the atoms in the initial state #ketLL in the double-well potentials#footnote[
   Some double wells are prepared in the state #ketL and some double wells are empty since we cannot achieve a perfect filling of the superlattice.
   However, only the double wells with two particles in the initial state #ketLL actually contribute to the interaction-sensitive measurement.
@@ -74,7 +80,6 @@ with the zero-phase frequency $f0(x, y)$ and the superlattice period #Df.
 From the phase $phase_U (x,y)$, we compute the energy offset $Delta(phase_U)$ and, subsequently, the interaction energy $U(x, y)$.
 In #subref(<fig:phase-parameters-result>, "b"), a typical result of the interaction calibration is shown for strongly attractive interactions of the mixture #mix(9, 7).
 In the center of the atom cloud, the mean interaction energy is $U slash h = #qty[-8035(29)][Hz]$.
-Even though we use the superlattice along the #x-axis for the measurement of the interaction energy, the lattice depths $Vy1064(x, y)$ and $Vz532(x, y)$ also affect the interactions.
 The confinement is reduced in all directions towards the edge of the atom cloud, thereby resulting in weaker interactions.
 Ultimately, the shape of $U(x, y)$ depends on all lattice depths as well as the scattering length #asc.
 
@@ -86,10 +91,7 @@ Therefore, we always rely on the independent calibration of the interaction ener
 
 If we can run the calibration in the target lattice configuration, we directly use the interaction energy $U(x, y)$ without any further evaluation.
 The systematic error of the interaction energy at the offset $Delta = - U slash 2$ compared to the symmetric configuration $Delta slash t = 0$ is negligible unless the scattering length exceeds $abs(asc) slash a_0 = 500$.
-On the other hand, the calibration of weak interactions is limited by the condition $abs(U) slash t >> 1$.
-If the avoided crossings of the density-assisted tunneling are not well separated from the symmetric configuration $Delta slash t = 0$, the minimal energy gaps are not located exactly at $Delta = plus.minus U slash 2$.
-We correct for this deviation into account based on the local tunneling amplitude $t(x, y)$ and the interaction energy $U(x, y)$.
-However, for even weaker interactions, the measurement technique is no longer possible since the time evolution of the initial state #ketLL also involves the interacting state #ketRR in addition to the singlet state #kets.
+On the other hand, the calibration of weak interactions is limited by the condition $abs(U) slash t >> 1$ since the time evolution of the initial state #ketLL also involves the interacting state #ketRR in addition to the singlet state #kets.
 Therefore, we have to use a different lattice configuration for calibrating weak interactions.
 With a decreased tunneling amplitude $t$, the condition $abs(U) slash t >> 1$ can be recovered without changing the magnetic field or the mixture of hyperfine states.
 Then, we use the measured interaction energy $U(x, y)$ to calibrate the scattering length #asc.
