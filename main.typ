@@ -18,6 +18,16 @@
   date: datetime(year: 2025, month: 12, day: 14),
 )
 
+#{
+  set page(numbering: "i")
+  counter(page).update(1)
+
+  // do not include the table of contents itself in the table of contents...
+  show outline: set heading(outlined: false)
+  outline(title: [Table of Contents], target: heading)
+}
+
+#counter(page).update(1)
 #include "src/introduction.typ"
 #include "src/theory/theory.typ"
 #include "src/setup/setup.typ"
@@ -27,3 +37,5 @@
 #include "src/outlook.typ"
 
 #bibliography("refs.bib", style: "american-physics-society")
+#outline(title: [List of Figures], target: figure.where(kind: image))
+#outline(title: [List of Tables], target: figure.where(kind: table))
