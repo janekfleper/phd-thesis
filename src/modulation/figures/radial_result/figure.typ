@@ -5,7 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
-#let cmap = color.map.vlag
+#let cmap = ((blue.darken(30%), 0%), (white, 100% / 3), (red.darken(30%), 100%))
 
 #let label-xaxis = (
   position: (50.0%, 111%),
