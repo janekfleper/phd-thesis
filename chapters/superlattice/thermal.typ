@@ -8,11 +8,11 @@ The absorption of light in lenses, windows, and other optical elements induces a
 Thermal lensing refers to the wavefront distortion of a laser beam that passes through the temperature gradient @laskin_selection_2021.
 Industrial lasers used for welding or cutting can achieve average powers of several #unit[kW], where elaborate techniques are required to compensate the effects of the thermal lensing @reitemeyer_online_2010 @rall_simulation_2022.
 In the context of the experimental setup in this thesis, we only use intermediate optical powers up to a few watts.
-Nevertheless, we observe significant thermal lensing in the optical setups of the in-plane superlattice.
+Nevertheless, we observed significant thermal lensing in the optical setups of the in-plane superlattice.
 Since the strength of the thermal lensing depends on the beam intensity, the shape of the lattice beams in the optical elements is also relevant besides the beam power.
 
 For the optical setups of the lattices in this thesis, we only consider thermal lensing due to the absorption of light in the bulk material and the dielectric coatings of the optical elements#footnote[
-  In industrial applications, scratches and other surface defects can also cause significant absorption @laskin_selection_2021.
+  In high-power applications, scratches and other surface defects can also cause significant absorption @laskin_selection_2021.
 ].
 The absorption of a laser beam induces a temperature gradient $Delta T$ in the optical element.
 The dominant effects from the temperature gradient are a geometrical expansion of the material and a change of the refractive index.
@@ -23,10 +23,9 @@ $
 $ <eq:super-thermal-G>
 
 where $n_0$ is the refractive index of the optical material @laskin_selection_2022.
-The _coefficient of thermal expansion_ (CTE) $alpha$ is positive for most optical materials#footnote[
+The coefficient of thermal expansion (CTE) $alpha$ is positive for most optical materials#footnote[
   Corning Ultra-Low Expansion (ULE#super[®]) Glass @corning_ultra-low_2016 and SCHOTT ZERODUR#super[®] @schott_zerodur_2024 are examples for glasses with a near-zero thermal expansion $alpha = #pqty[0+-10e-9][1/K]$.
 ], while the coefficient $phy.dv(n, T, style: "horizontal")$ can either be positive or negative.
-// For all optical materials with $phy.dv(n, T) > 0$, the coefficient $G$ is also positive.
 If the coefficient $phy.dv(n, T, style: "horizontal")$ is negative, $G$ ranges from weakly positive to weakly negative.
 Certain materials show an athermal behavior $(G approx 0)$ where the two contributions to the thermal lensing in @eq:super-thermal-G compensate each other.
 In case $G$ is negative, the optical material can be used to compensate the thermal lensing in composite optics @rall_simulation_2022.
@@ -72,8 +71,8 @@ Since we operate the lattice beams with a small numerical aperture, we neglect h
   label: <tab:super-thermal-materials>,
 )
 
-In @tab:super-thermal-materials, the relevant properties of the materials in the optical setups of the #x1064 lattice and the #x532 lattice are compiled.
-The most common materials used in readily available optical elements are #NBK7 and UV-grade fused silica (#UVFS).
+In @tab:super-thermal-materials, the relevant properties of the materials in the optical setups of the #x1064 and #x532 lattice are compiled.
+The most common materials used in standard optical elements are #NBK7 and UV-grade fused silica (#UVFS).
 According to the thermo-optical ratio @eq:super-thermal-rho[], they experience a similar thermal-lensing strength.
 However, this does not take the initial heating due to the absorption of the laser beams into account.
 At the wavelengths #qty[532][nm] and #qty[1064][nm], the absorption in #UVFS is significantly lower than in #NBK7.
@@ -81,7 +80,7 @@ Therefore, for most optical elements such as singlet lenses, windows, and polari
 
 Achromatic doublets are composite lenses made of two materials with different dispersive properties to compensate chromatic aberrations @hecht_optics_2016.
 One lens is made from a crown glass which has a low refractive index and a weak dispersion, and the other lens is made from a flint glass with a high refractive index and a strong dispersion.
-A common crown glass suitable for high-power applications is calcium fluoride (#CAF2).
+A common crown glass for high-power applications is calcium fluoride (#CAF2).
 It experiences a very low absorption at #qty[532][nm] and #qty[1064][nm] and the thermo-optical ratio is slightly negative.
 In general, there is a wide range of crown and flint glasses available to construct achromatic doublets.
 Regardless of the glasses used in an achromatic doublet, the lenses must be air-spaced for high-power applications.
@@ -91,20 +90,20 @@ Waveplates are built using a birefringent material where the optical axis of the
 In the context of thermal lensing, the optimal material for waveplates is crystalline quartz (#SiO2).
 Regardless of the orientation of the optical axis, it exhibits a very low absorption and ideal thermal properties @laskin_selection_2022.
 In the orientation that is required for waveplates, the thermo-optical ratio vanishes almost completely.
-Analogous to achromatic doublets, compound waveplates are either air-spaced or optically contacted to avoid absorption in the bonding material and consequent thermal lensing.
+Analogous to achromatic doublets, compound waveplates are either air-spaced or optically contacted to avoid absorption in the bonding material.
 
 Optical isolators use a Faraday medium in a magnetic field to rotate the polarization of the laser beam between two polarizing beam splitters @saleh_fundamentals_2019.
 The most common Faraday medium used in optical isolators is terbium gallium garnet (#TGG).
 While it experiences a low absorption at #qty[1064][nm] @stevens_promising_2016, the absorption increases significantly towards shorter wavelengths @franta_wide_2025.
 At #qty[532][nm], the absorption is more than $10 times$ higher compared to #qty[1064][nm].
-Despite this high absorption, it is the default Faraday medium used in readily available optical isolators at #qty[532][nm].
+Despite this high absorption, it is the default Faraday medium used in standard optical isolators at #qty[532][nm].
 Other than selecting an optical isolator with a minimal length, we cannot reduce the thermal lensing at #qty[532][nm].
 The research on suitable Faraday media with lower absorption is ongoing @xygkis_absorption_2023.
 
 
 === Simulating the focal shift <ssec:super-thermal-simulation>
 
-We simulate the thermal lensing in the optical setups of the #x1064 lattice and the #x532 lattice using a thin spherical lens with the focal length#footnote[
+We simulate the thermal lensing in the optical setups of the #x1064 and #x532 lattice using a thin spherical lens with the focal length#footnote[
   Based on the focal length associated with the thermal lensing in the optical isolator of the #x532 lattice.
 ] $ftherm = cal(O)(#qty[10][m])$, followed by a lens with focal length $f$ to focus the lattice beams onto the atoms#footnote[
   To simplify the simulation, the other components in the optical setups do not experience any thermal lensing.
@@ -136,6 +135,7 @@ The best option to reduce the focal shift is an improvement of the properties of
     The dashed lines indicate the propagating beam without the thermal lens.
   ],
   label: <fig:super-thermal-simulation-setup>,
+  placement: bottom,
 )
 
 We find the same result for the focal shift in an optical system with an additional telescope to handle the beam shaping.

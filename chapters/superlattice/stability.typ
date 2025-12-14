@@ -4,7 +4,7 @@
 
 == Characterizing the lattice depths <sec:super-stability>
 
-To quantify the effects of the thermal lensing on the lattice depths #Vx1064 and #Vx532 at the position of the atoms, we use the beam-profiling cameras shown in @fig:super-setup and the in-situ #lms introduced in @ch:mod.
+To quantify the effects of the thermal lensing on the lattice depths #Vx1064 and #Vx532 at the position of the atoms, we use cameras for beam monitoring (see @fig:super-setup) and the in-situ #lms introduced in @ch:mod.
 The cameras enable a measurement of the beam profile around the position of the atoms with a sub-millisecond time resolution.
 By moving the camera around the virtual position of the atoms, we can directly measure the focal shift $delta(tau)$ due to the thermal lensing.
 Furthermore, the cameras resolve the full beam profiles perpendicular to the propagation axis.
@@ -25,7 +25,7 @@ During the remainder of the holding time up to $tau = #qty[5][s]$, the lattice d
 We find the relative decrease of the lattice depth to be proportional to the setpoint #Vx1064, which is in turn proportional to the beam power.
 Therefore, we are in a regime where the decrease of the lattice depth is linear in the focal shift due to the thermal lensing.
 The waist $wx1064(tau)$ in #subref(<fig:super-stability-x1064>, "b") shows the complementary signal to the lattice depth $Vx1064(tau)$ with an exponential increase by approximately #qty[20][μm].
-From these two lattice parameters, we conclude that the foci of the #forward and #retro beams are too close to their respective lenses.
+From these two lattice parameters we conclude that the foci of the #forward and #retro beams are too close to their respective lenses.
 The thermal lensing shifts the foci even further towards their lenses (see @fig:super-thermal-simulation-setup), resulting in a shallower and wider optical lattice at the position of the atoms.
 The lattice position $fity0(tau)$ increases linearly during the holding time.
 With $Delta fity0 < #qty[1][μm]$ after #qty[5][s], the change of the position is too small to affect the lattice depth.
@@ -64,16 +64,16 @@ In any case, this drift is negligible compared to the size of the atom cloud and
 
 === Stability of the green lattice <ssec:super-stability-x532>
 
-For the characterization of the lattice depth $Vx532(tau)$, we use the superlattice potential in the antisymmetric configuration ($phi = -pi slash 4$).
-The lattice depth $Vx532 <= #qty[30][Erec]$ is not sufficient for the in-situ #lms.
+For calibrating the lattice depth $Vx532(tau)$, we use the superlattice potential in the antisymmetric configuration ($phase = -pi slash 4$).
+The achievable lattice depth $Vx532 <= #qty[30][Erec]$ is not sufficient for the in-situ #lms.
 Using the superlattice potential for the lattice-depth calibration ensures a suitable band structure.
-The details about the in-situ #slms are introduced in @sec:mod-super.
+The details about this calibration technique are introduced in @sec:mod-super.
 Compared to the #x1064\-lattice setup, we find the thermal lensing to be significantly stronger in the #x532\-lattice setup.
 We attribute this to the higher absorption in the optical materials at the wavelength #qty[532][nm] as shown in @tab:super-thermal-materials.
 Analogous to the #x1064 lattice in @fig:super-stability-x1064, we observe an exponential decrease of the lattice depth in the first second of the holding time.
-After this initial decrease, the thermal lensing reaches a nearly steady state where the lattice depth $Vx532(tau)$ only shows minor changes.
+After this initial decrease, the thermal lensing reaches a steady state where the lattice depth $Vx532(tau)$ only shows minor changes.
 Compared to the #x1064 lattice, the reduction of the steady-state lattice depth $Vx532(tau)$ due to the focal shift is not linear in the setpoint #Vx532.
-This is shown for the holding time $tau = #qty[3][s]$ in @fig:super-stability-x532.
+This is shown for the holding time $tau = #qty[3][s]$ in #subref(<fig:super-stability-x532>, "a").
 At the maximal lattice depth $Vx532 = #qty[24][Erec]$, the calibration factor is $fita0 approx #num[0.7]$.
 With a linear scaling of the thermal lensing with the setpoint #Vx532, the expected calibration factor at $Vx532 = #qty[14][Erec]$ is $fita0 approx #num[0.825]$.
 Instead, we measure the calibration factor $fita0 approx #num[0.925]$ in the steady state at the lattice depth $Vx532 = #qty[14][Erec]$.
@@ -92,13 +92,13 @@ At the lattice depth $Vx532 = #qty[24][Erec]$, we estimate that the focal shifts
   figure-x532(height: 7.2cm),
   caption: [
     Reduction of the thermal lensing in the #x532\-lattice setup.
-    *a*, Calibration factor #fita0 as a function of the setpoint #Vx532 after the holding time $tau = #qty[3][s]$ to measure the steady state of the thermal lensing.
+    *a*, Calibration factor #fita0 as a function of the setpoint #Vx532 in the steady state after the holding time $tau = #qty[3][s]$.
     The measured lattice depth settles at a significantly lower value compared to the setpoint.
     The reference value for $fita0 = #num[1.0]$ is taken from a calibration measurement at $tau = #qty[0][s]$.
     *b*, Horizontal waist $wx532^y$ after the holding time $tau = #qty[3][s]$.
     We cannot resolve the vertical waist $wx532^z$ with the in-situ #lms.
-    The insets show the calibration factor $fita0(tau)$ and the horizontal waist $wx532^y (tau)$, after the upgrade of the optical setup, at the lattice depth $Vx532 = #qty[18][Erec]$.
-    We use the superlattice parameters $Vx1064 = #qty[60][Erec]$ and $phi = - pi slash 4$, and the modulation time $tmod = #qty[500][ms]$ for both measurements.
+    The insets show the calibration factor $fita0(tau)$ and horizontal waist $wx532^y (tau)$, after upgrading the optical setup, at the lattice depth $Vx532 = #qty[18][Erec]$.
+    We use the superlattice parameters $Vx1064 = #qty[60][Erec]$ and $phase = - pi slash 4$, and the modulation time $tmod = #qty[500][ms]$ for both measurements.
     The uncertainties of the parameters #fita0 and $wx532^y$ in the initial and final configuration are computed with the procedure introduced in @ssec:mod-eval-error.
   ],
   label: <fig:super-stability-x532>,
@@ -106,7 +106,7 @@ At the lattice depth $Vx532 = #qty[24][Erec]$, we estimate that the focal shifts
 
 Analogous to the setup of the #x1064 lattice, we replace all lenses in the telescopes with singlet lenses made of #UVFS.
 Additionally, we replace the optical isolator with a model that experiences less thermal lensing.
-After the replacement of the retro lens, the new optical isolator is the only remaining optical element where we can detect thermal lensing.
+After replacing the retro lens, the new optical isolator is the only remaining optical element where we can detect thermal lensing.
 In the final optical setup after the upgrade, the calibration factor #fita0 and the horizontal waist $wx532^y$ are nearly constant in time (see insets in @fig:super-stability-x532).
 The residual variation of both parameters is on par with the uncertainties of the in-situ #slms in @tab:mod-super-result.
 Even though the #x532\-lattice depth is constant at the atom position, the focal shift due to the thermal lensing is not zero.
@@ -116,7 +116,7 @@ The focal shift of the horizontal axis is significantly greater due to the beam 
 The ratio of the focal shifts agrees with the expected value $delta_z slash delta_y = 9$ from the simulation of the thermal lensing in @ssec:super-thermal-simulation.
 To minimize the change of the lattice depth at the atom position, we set the vertical and horizontal focus at the distances #qty[2.5][mm] and #qty[20][mm] from the atom position respectively.
 This beam configuration is the result of an empirical optimization with the beam-profiling cameras.
-Compared to the beam configuration both foci or located at the atom position, the maximum lattice depth is reduced by approximately #qty[3][%].
+Compared to the beam configuration where both foci are located at the atom position, the maximum lattice depth is reduced by approximately #qty[3][%].
 We accept this compromise since the time dependence of the lattice depth due to the thermal lensing is more detrimental for the operation of the optical lattices than an overall reduction of the lattice depth.
 
 
@@ -128,17 +128,17 @@ Therefore, selecting optical materials with a minimal absorption such as #UVFS, 
 In the upgraded #x532\-lattice setup, the optical isolator is the primary contribution to the remaining focal shift due to the thermal lensing.
 To minimize the variation of the lattice depth $Vx532(tau)$ due to the focal shift, we find a beam configuration where the horizontal and vertical foci of the #x532\-lattice beams are shifted away from the position of the atoms.
 In this configuration, we achieve a stability of the #x532\-lattice depth better than #qty[0.3][%] during a holding time of #qty[5][s] at $Vx532 = #qty[18][Erec]$ (see @fig:super-stability-x532).
-This is on par with the estimated uncertainty of the #x532\-lattice calibration in the superlattice potential (see @tab:mod-super-result).
+This is on par with the uncertainty of the #x532\-lattice parameters (see @tab:mod-super-result).
 For the #x1064 lattice, we achieve a stability better than #qty[0.2][%] in #qty[5][s] at the lattice depth $Vx1064 = #qty[60][Erec]$.
-We cannot associate the residual variation of the lattice depth $Vx1064(tau)$ to a specific optical element.
-The most likely candidate for the thermal lensing in the #x1064\-lattice setup is the optical isolator made of terbium gallium garnet (TGG).
+We cannot associate the residual variation of the lattice depth $Vx1064(tau)$ with a specific optical element.
+However, the most likely candidate for the thermal lensing in the #x1064\-lattice setup is the optical isolator made of terbium gallium garnet (TGG).
 Additionally, we expect a finite contribution from the forward and retro lens due to the flint glass #NBALF4 (see @tab:super-thermal-materials).
 
 Before the upgrade of the optical setups, the thermal lensing reduced the lattice depths $Vx1064(tau)$ and $Vx532(tau)$ on a timescale from #qty[100][ms] to several seconds.
 Measurements up to a few #qty[10][ms] in the frozen lattices were, therefore, not directly affected by the thermal lensing.
-However, the thermal lensing resulted in a systematic error of the lattice-depth calibration in both the #1064 lattice and the #x532 lattice.
+However, the thermal lensing resulted in a systematic error of the lattice-depth calibration in both the #1064 and the #x532 lattice.
 At $Vx1064 = #qty[54][Erec]$, the lattice depth was already reduced by approximately #qty[1][%] after #qty[100][ms].
 The reduction of the lattice depth during the lattice calibration was even greater in the #x532 lattice.
 In conclusion, the upgrade of the optical setups was essential for the reliable operation of the optical lattices.
-In the context of the superlattice potential, we also find a significant improvement in the stability of the superlattice phase $phi(tau)$ during the experimental sequence.
+In the context of the superlattice potential, we also find a significant improvement in the stability of the superlattice phase $phase(tau)$ during the experimental sequence.
 The phase stability is discussed in detail in @ssec:phase-stability-result.
