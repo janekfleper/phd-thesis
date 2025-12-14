@@ -1,19 +1,21 @@
 #import "@local/fancy-thesis:0.1.0": optional-refs, thesis
 #import "/header.typ": fancy-units
+#import "src/titlepage.typ": titlepage
 
 #set math.equation(number-align: bottom)
 #show ref: optional-refs
 #show: fancy-units
 
 #show: thesis.with(
+  lang: "en",
+  debug: true,
+)
+
+#titlepage(
   title: "Ultracold Fermions in an\nUltrastable Optical Superlattice",
   author: "Janek Fleper",
-  type: "phd",
-  lang: "en",
-  institute: "Physikalisches Institut",
   birthplace: "Köln",
-  date: datetime.today(),
-  debug: true,
+  date: datetime(year: 2025, month: 12, day: 14),
 )
 
 #include "src/introduction.typ"
