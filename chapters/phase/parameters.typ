@@ -78,7 +78,7 @@ $ <eq:phase-parameters-interaction-phi>
 
 with the zero-phase frequency $f0(x, y)$ and the superlattice period #Df.
 From the phase $phase_U (x,y)$, we compute the energy offset $Delta(phase_U)$ and, subsequently, the interaction energy $U(x, y)$.
-In #subref(<fig:phase-parameters-result>, "b"), a typical result of the interaction calibration is shown for strongly attractive interactions of the mixture #mix(9, 7).
+In #subref(<fig:phase-parameters-result>, "b"), a typical result of the interaction calibration is shown for strongly-attractive interactions of the mixture #mix(9, 7).
 In the center of the atom cloud, the mean interaction energy is $U slash h = #qty[-8035(29)][Hz]$.
 The confinement is reduced in all directions towards the edge of the atom cloud, thereby resulting in weaker interactions.
 Ultimately, the shape of $U(x, y)$ depends on all lattice depths as well as the scattering length #asc.
