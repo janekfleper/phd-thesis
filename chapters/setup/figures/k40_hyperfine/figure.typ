@@ -24,7 +24,7 @@
     position: (50.0%, 111.347%),
     body: place(
       center + top,
-      text(size: 1em, fill: black, [Magnetic field $B slash T$]),
+      text(size: 1em, fill: black, [Magnetic field $B slash G$]),
     ),
   )
   let label-yaxis = (

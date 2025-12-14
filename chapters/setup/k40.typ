@@ -9,11 +9,11 @@ Potassium is an alkali metal with the atomic number $Z = 19$.
 As for any alkali metal, the electronic properties of potassium depend on the single electron in the outermost orbital, while the electrons occupying the inner orbitals mainly shield the charge of the nucleus @foot_atomic_2005.
 The experimental setup in this thesis was built to work with the fermionic isotope #K40.
 Compared to the bosonic isotopes #phy.isotope("K", a: [39]) and #phy.isotope("K", a: [41]), the isotope #K40 has a very low natural abundance which requires the usage of an enriched potassium source @feld_low_2011.
-The physical properties, optical properties and scattering properties of these three potassium isotopes are compiled in @tiecke_properties_2011.
+The physical, optical scattering properties of these three potassium isotopes are compiled in @tiecke_properties_2011.
 In this section, I will only mention a selection of the most important properties to understand the experimental setup and the manipulation of the internal states of the potassium atoms.
 
 The electronic ground state of potassium is $4 sn(S, 1/2)$ in the spectroscopic notation $n attach(L, tl: 2S+1, br: J)$.
-The primary optical transitions are the D1 and D2 lines to the excited states $4 sn(P, 1/2)$ and $4 sn(P, 3/2)$ respectively#footnote[
+The primary optical transitions are the D1 and D2 lines to the excited states $4 sn(P, 1/2)$ and $4 sn(P, 3/2)$, respectively#footnote[
   The principal quantum number $n = 4$ is omitted from here on.
 ].
 The corresponding wavelengths are $lambda_"D1" approx #qty[770.1][nm]$ and $lambda_"D2" approx #qty[766.7][nm]$, where laser sources and optical elements are readily available.
@@ -37,9 +37,9 @@ The relevant optical transitions between the hyperfine states are shown in #subr
     Hyperfine structure of #K40.
     *a*, Level structure with the hyperfine splitting of the ground state $sn(S, 1/2)$ and the excited state $sn(P, 3/2)$.
     We use the D2 line between the states $phy.ket(F = 9 slash 2)$ and $phy.ket(F' = 11 slash 2)$ for the magneto-optical trap (see @sec:setup-prepare-mot) and the imaging of the atoms (see @ssec:setup-sequence-detect).
-    In addition, the transition between $phy.ket(F = 7 slash 2)$ and $phy.ket(F' = 9 slash 2)$ is required for the repumping in the magneto-optical trap.
+    In addition, the transition from $phy.ket(F = 7 slash 2)$ to $phy.ket(F' = 9 slash 2)$ is required for repumping the atoms in the magneto-optical trap.
     *b*, $m_F$ states of the ground state $sn(S, 1/2)$ as a function of the external magnetic field $B$.
-    In the lower hyperfine manifold $phy.ket(F = 9 slash 2)$, the upper four $m_F$ states (black) are used for the magnetic evaporation (see @sec:setup-prepare-ioffe).
+    In the lower hyperfine manifold $phy.ket(F = 9 slash 2)$, the upper four $m_F$ states (black) are used for the evaporation in the magnetic trap (see @sec:setup-prepare-ioffe).
     The lowest three $m_F$ states (blue) in the lower manifold and the state $m_F = -7 slash 2$ in the upper manifold are used for the detection and the imaging.
   ],
   label: <fig:setup-k40-hfs>,
@@ -49,14 +49,14 @@ In an external magnetic field, the hyperfine states split up based on the quantu
 If the magnetic field is weak compared to the coupling of the electron angular momentum $hat(phy.vb(J))$ and the nuclear angular momentum $hat(phy.vb(I))$, the states are shifted by $E prop m_F B$ according to the Zeeman effect.
 In intermediate magnetic fields, the coupling of the two angular momenta $hat(phy.vb(J))$ and $hat(phy.vb(I))$ starts to break down.
 For large magnetic fields, the Paschen-Back regime is reached where the energy shift is $E prop m_J B$.
-In general, the energy shifts can be computed with the Breit-Rabi formula that takes the internal coupling of the angular momenta and their coupling to the external magnetic field $B$ into account @breit_measurement_1931.
+In general, the energy shifts are computed with the Breit-Rabi formula that takes the internal coupling of the angular momenta and their coupling to the external magnetic field $B$ into account @breit_measurement_1931.
 In #subref(<fig:setup-k40-hfs>, "b"), the energies $E(B)$ are shown for both hyperfine manifolds in the ground state $sn(S, 1/2)$.
 At $B = 0$, the difference between the two manifolds corresponds to the total hyperfine splitting of the ground state in #subref(<fig:setup-k40-hfs>, "a").
 During the later stages of the experimental sequence, the atoms only occupy the lowest $m_F$ states in #subref(<fig:setup-k40-hfs>, "b").
-We are therefore using the naming convention
+We are, therefore, using the naming convention
 
 $
-  phy.ket(N) eq.triple FmF(9/2, -N/2)
+  mF(N) eq.triple FmF(9/2, -N/2)
 $ <eq:setup-k40-hfs-naming>
 
 to refer to these states as #mF(9), #mF(7) and #mF(5).
@@ -76,10 +76,10 @@ In the context of this thesis, we use the s-wave Feshbach resonances of the lowe
 Of the three possible mixtures, only the mixture #mix(9, 7) is fully stable.
 The other two mixtures can experience losses due to magnetic dipole-dipole relaxation @ludewig_feshbach_2012.
 This can lead to a reduction of the lifetime if we keep the mixture for an extended amount of time @cocchi_analogue_2016.
-We are therefore using the mixture #mix(9, 7) to represent the spin states #ketup and #ketdown during the experimental sequence (see @fig:setup-sequence).
+We are, therefore, using the mixture #mix(9, 7) to represent the spin states #ketup and #ketdown during the experimental sequence (see @fig:setup-sequence).
 The Feshbach resonance at $B_0 = #qty[202.1][G]$ provides access to all required interaction regimes.
 Strongly repulsive interactions are available in the range $#qty[190][G] < B < #qty[200][G]$, where they were previously used for measurements of the two-dimensional Fermi-Hubbard model @cocchi_equation_2016.
-Around the zero-crossing at $B approx #qty[210][G]$, we can continuously tune the interactions from the strongly attractive regime to the background scattering length $a_"bg" slash a_0 = #num[167]$.
+Around the zero-crossing at $B approx #qty[210][G]$, we can continuously tune the interactions from the strongly-attractive regime to the background scattering length $a_"bg" slash a_0 = #num[167]$.
 
 #floating-figure(
   figure-feshbach(width: 11cm, height: 6.5cm),

@@ -3,7 +3,7 @@
 
 == Optical lattices <sec:setup-lattices>
 
-After the evaporative cooling in the Ioffe-Pritchard trap and the optical dipole trap, the atoms are loaded into optical lattices for the remainder of the experimental sequence.
+After the evaporative cooling in the Ioffe-Pritchard trap and the optical dipole trap, the atoms are loaded into the optical lattices for the remainder of the experimental sequence.
 The individual lattices axes are aligned with the coordinate axes#footnote[
   The lattices along the #x-axis are rotated slightly with respect to the coordinate axis.
   This results in a coupling to the lattice along the #y-axis (see @sec:mod-coupled).
@@ -32,7 +32,7 @@ The lattice beams are powered by a laser#footnote[
 To take the lattice axis and the wavelength into account, I will refer to this lattice as the #z532 lattice.
 The angle of intersection (compare @fig:theory-lattice-intersection-angle) is $anglez = #num[14.5(1)]degree$, resulting in the lattice period $az532 = #qty[1.06(1)][μm]$ according to @eq:theory-lattice-period.
 The lattice beams are circular with a waist of $wz532 approx #qty[120][μm]$ at the position of the atoms.
-However, due to the shallow-angle configuration, the effective waist along the #y-axis is greater by a factor of $2$.
+However, due to the shallow-angle configuration, the effective waist along the #box(y-axis) is greater by a factor of $2$.
 The radial potential of the #z532 lattice is deconfining due to the blue detuning, preventing the lattice from confining atoms without the optical dipole trap or a red-detuned optical lattice.
 The shallow-angle setup permits a power ratio of $gamma = #num[1.00(1)]$ and equal path lengths for the two lattice beams.
 With the available optical power, we can typically achieve lattice depths up to $Vz532 = #qty[100][Erec]$.
@@ -40,7 +40,7 @@ With the available optical power, we can typically achieve lattice depths up to 
 The previous generation of PhD students added an additional vertical lattice with the wavelength $lambda approx #qty[1064][nm]$ @chan_quantum_2019 @gall_quantum_2020 @wurz_quantum_2021.
 This #z1064 lattice is superimposed onto the #z532 lattice to create a superlattice potential along the #z-axis.
 Since the optical setup of the vertical lattices was optimized for the wavelength $lambda = #qty[532][nm]$, the power ratio of the #z1064\-lattice beams is approximately $1 : 3$.
-Together with its red detuning, the #z1064 lattice therefore causes a significant confinement in the #xy-plane.
+Together with its red detuning, the radial potential of the #z1064 lattice results in a significant confinement in the #xy-plane.
 During the measurements in this thesis, the #z1064 lattice was turned off and we exclusively used the #z532 lattice for the vertical confinement of the atoms.
 The #z1064 lattice is only mentioned here for the sake of completeness, and to highlight the possibility to create a vertical superlattice potential.
 
@@ -48,7 +48,7 @@ The #z1064 lattice is only mentioned here for the sake of completeness, and to h
 === In-plane lattices <ssec:setup-lattices-xy>
 
 In the #xy-plane, there are two red-detuned optical lattices with the wavelength $lambda approx #qty[1064][nm]$.
-Together with the #z532 lattice, these two lattices were part of the initial setup to study the two-dimensional Fermi-Hubbard model.
+Together with the #z532 lattice, these two lattices are part of the initial setup for studying the two-dimensional Fermi-Hubbard model.
 Following the naming convention based on the lattice axis and the wavelength, I will refer to them as #x1064 lattice and #y1064 lattice.
 Both lattices use a standing-wave configuration and the resulting lattice periods are $ax1064 = ay1064 approx #qty[0.532][μm]$ (compare @fig:theory-lattice-intersection-angle).
 To avoid reflections off the inner surfaces of the glass cell, the lattice axes are not perpendicular to the glass cell.
