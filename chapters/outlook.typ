@@ -28,7 +28,7 @@ Compared to band mapping and time-of-flight detection to measure the global aver
 Furthermore, we can determine the waists of the lattice beams and the position of the optical lattice from the locally-resolved lattice depth.
 These detection capabilities were essential for investigating the thermally-induced focal shifts of the lattice beams that make up the superlattice potential.
 With an upgrade of the optical setups, we achieved a significant improvement in the stability of the lattice depths.
-The respective stability of the infrared and green lattice depths is better than #num[2e-3] and #num[3e-3] over an interval of #qty[5][s], which amounts to an improvement in stability by one to two orders of magnitude compared to the previous optical setups.
+The respective stability of the infrared and green lattice depths is better than #qty[0.2][%] and #qty[0.3][%] over an interval of #qty[5][s], which amounts to an improvement in stability by one to two orders of magnitude compared to the previous optical setups.
 
 Combining the calibration of several lattice parameters in short measurements is an essential step towards autonomous operation of an optical-lattice experiment.
 Furthermore, the high precision of the in-situ #lms detects small changes in the lattice alignment, which can be used to automate the entire alignment procedure of the lattice beams.
