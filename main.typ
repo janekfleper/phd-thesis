@@ -16,12 +16,12 @@
   debug: true,
 )
 
-#include "chapters/introduction.typ"
-#include "chapters/theory/theory.typ"
-#include "chapters/setup/setup.typ"
-#include "chapters/superlattice/superlattice.typ"
-#include "chapters/modulation/modulation.typ"
-#include "chapters/phase/phase.typ"
-#include "chapters/outlook.typ"
+#include "src/introduction.typ"
+#include "src/theory/theory.typ"
+#include "src/setup/setup.typ"
+#include "src/superlattice/superlattice.typ"
+#include "src/modulation/modulation.typ"
+#include "src/phase/phase.typ"
+#include "src/outlook.typ"
 
 #bibliography("refs.bib", style: "american-physics-society")
