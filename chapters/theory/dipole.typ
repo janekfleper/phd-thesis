@@ -94,21 +94,21 @@ The optical lattice potential can be computed directly from the dipole potential
 In a coordinate system where $Delta phy.vb(k) || phy.vu(x)$, the optical lattice potential can be written as
 
 $
-  V(x) = V_0 dot sin^2(k x)
+  V(x) = V0 dot sin^2(k x)
 $ <eq:theory-lattice-potential>
 
-with the lattice depth $V_0$ and the lattice vector $k = abs(Delta phy.vb(k)) = pi slash a$.
+with the lattice depth #V0 and the lattice vector $k = abs(Delta phy.vb(k)) = pi slash a$.
 The lattice depth takes the intensity $I(0) = abs(phy.vb(E)_0)^2$, the detuning $Delta$ and the other parameters of the atom-light interaction into account.
 This expression for the optical lattice potential can be used for red-detuned light as well as blue-detuned light.
 The practical difference between the two detunings is the location where the atoms are trapped (see @fig:theory-lattice-detuning).
 In a red-detuned optical lattice, the atoms are attracted by the intensity maxima of the interference pattern.
-On the other hand, in a blue-detuned optical lattice, the atoms are trapped in the intensity minima.
-In the direction of the lattice vector $Delta phy.vb(k)$, the two potentials therefore only differ by the energy offset $V_0$.
+On the other hand, the atoms are trapped in the intensity minima of a blue-detuned optical lattice.
+In the direction of the lattice vector $Delta phy.vb(k)$, the two potentials, therefore, only differ by the energy offset #V0.
 The relevant differences between the two detunings can be found in the scattering rate and the radial potential.
 The scattering rate in @eq:theory-dipole-terms is maximal (minimal) if the lattice is red (blue) detuned.
 A blue-detuned lattice can therefore be used to minimize the loss or heating of the atoms due to the scattering rate.
 The radial potential of an optical lattice depends on the Gaussian envelope introduced in @eq:theory-dipole-gaussian.
-In a red-detuned optical lattice, the radial potential is always confining, while it is always deconfining in a blue-detuned optical lattice @greiner_ultracold_2003.
+In a red-detuned optical lattice, the radial potential is always confining, while it is deconfining in a blue-detuned optical lattice @greiner_ultracold_2003.
 The radial potential is relevant for the trapping of atoms in a three-dimensional optical lattice.
 In @sec:mod-radial, I will discuss this further in the context of the in-plane superlattice.
 
@@ -116,7 +116,7 @@ In @sec:mod-radial, I will discuss this further in the context of the in-plane s
   lattice-detuning(xscale: 2.4, depth: 2.5),
   caption: [
     Trapping atoms in an optical lattice potential.
-    Both optical lattices have the same lattice depth $V_0$ and lattice period $a$ according to @eq:theory-lattice-potential.
+    Both optical lattices have the same lattice depth #V0 and lattice period $a$ according to @eq:theory-lattice-potential.
     The red-detuned optical lattice traps the atoms at the maxima of the intensity, while the blue-detuned lattice traps the atoms at the minima of the intensity.
   ],
   label: <fig:theory-lattice-detuning>,

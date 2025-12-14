@@ -6,7 +6,7 @@
 We want to find the eigenfunctions in the potential @eq:theory-lattice-potential[] to describe the behavior of a particle in the optical lattice.
 The corresponding Hamiltonian of a single particle is
 $
-  hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V_0 dot sin^2(k x) eqp
+  hat(H) = -phy.hbar^2 / (2m) phy.dv(, x, 2) + V0 dot sin^2(k x) eqp
 $ <eq:theory-bloch-hamiltonian>
 
 To make the Hamiltonian dimensionless, we express the energy in units of the recoil energy $#unit[Erec] = (phy.hbar^2 k^2) / (2 m)$, where $phy.hbar k$ is the momentum of a single photon and $m$ is the mass of the particle.
@@ -34,9 +34,8 @@ $
 $ <eq:theory-bloch-uq-fourier-series>
 
 with the integer index $m$ counting from $-infinity$ to $+infinity$.
-A translation $x -> x + a$ by the lattice period only shifts the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
-In the next step, we also express the potential $V(x)$ as a Fourier series.
-The coefficients $c_m$ are revealed by rewriting $sin^2(x)$ in terms of complex exponential functions.
+A translation $x -> x + a$ by the lattice period shifts the phase of each term in the Fourier series by $2 pi m$, leaving the functions $u_q (x)$ invariant.
+We also express the potential $V(x)$ as a Fourier series, where the coefficients $c_m$ are revealed by rewriting $sin^2(x)$ in terms of complex exponential functions.
 
 $
   V(x) slash #unit[Erec] & = v_0 dot sin^2(x)
@@ -60,22 +59,21 @@ The eigenenergies $epsilon_n (q)$ form energy bands with the band index $n >= 1$
 In @fig:theory-bloch-energy-bands, the five lowest energy bands $epsilon_n (q)$ are shown with the corresponding Bloch waves $bloch(q=0, n)(x)$.
 The lowest band with index $n = 1$ is deeply trapped in the optical lattice potential.
 Therefore, the dispersion $epsilon_1 (q)$ is nearly constant and the Bloch wave is maximal on the lattice sites and minimal inside the potential $V(x)$.
-Both aspects show a similarity to the ground state of the harmonic oscillator#footnote[
-  In deeper lattices, this behavior is also found for higher bands and the corresponding excited states of the harmonic oscillator (see @fig:mod-intro-theory).
-].
-For the lattice depth $V_0 = #qty[15][Erec]$, the band with index $n = 4$ is no longer trapped according to the condition $epsilon_n (q) > V_0$.
+Both aspects show a similarity to the ground-state wavefunction of the harmonic oscillator.
+For the lattice depth $V0 = #qty[15][Erec]$, the band with index $n = 4$ is no longer trapped in the optical lattice according to the condition $epsilon_n (q) > V0$.
 As a result, the Bloch waves $bloch(q, n)(x)$ approach the plane waves $phi.alt(x) prop cexp(p x slash phy.hbar)$ describing a free particle with the momentum $p$.
 Correspondingly, the energy band $epsilon_n (q)$ converges to the dispersion $epsilon = p^2 slash (2 m)$ of a free particle mapped onto the first Brillouin zone.
-At $q = 0$, the band gap to the fifth band is already closed, and the Bloch wave only changes slightly at the positions of the maxima of the potential $V(x)$.
+At $q = 0$, the band gap to the fifth band is already closed, and the Bloch wave $bloch(q=0, n=4)(x)$ only changes slightly at the maxima of the potential $V(x)$.
 This behavior can be found in all energy bands that are not trapped anymore.
-In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite bandwidth $Delta epsilon_n$ and the Bloch waves $bloch(q, n)(x)$ still follow the shape of the potential $V(x)$.
+In the intermediate regime, the bands with indices $n = 2$ and $n = 3$ have a finite bandwidth $delta epsilon_n$ and the Bloch waves $bloch(q, n)(x)$ still follow the shape of the potential $V(x)$.
+In general, the bandwidth $delta epsilon_n$ changes rapidly if the energy $epsilon_n (q)$ is close to the lattice depth #V0.
 
 #floating-figure(
   figure-band-structure(),
   caption: [
     Band structure of an optical lattice potential.
-    *a*, Energy bands $epsilon_n (q)$ in the first Brillouin zone $q slash k = [-1, 1)$ of an optical lattice potential with the depth $V_0 = #qty[15][Erec]$.
-    The bandwidth $Delta epsilon_n = max(epsilon_n (q)) - min(epsilon_n (q))$ increases with the index $n$, while the gaps between the bands get smaller.
+    *a*, Energy bands $epsilon_n (q)$ in the first Brillouin zone $q slash k = [-1, 1)$ of an optical lattice potential with the depth $V0 = #qty[15][Erec]$.
+    The bandwidth $delta epsilon_n = max(epsilon_n (q)) - min(epsilon_n (q))$ increases with the index $n$, while the gaps between the bands get smaller.
     *b*, Band energies $epsilon_n (q)$ and Bloch waves $bloch(q=0, n)(x)$ in the lattice potential $V(x)$.
     The offsets of the Bloch waves are the corresponding energies $epsilon_n (q = 0)$, and the solid (dashed) lines indicate the real (imaginary) component of the Bloch waves.
     The parity $cal(P) = (-1)^(n-1)$ of the Bloch waves alternates with the index $n$.

@@ -12,14 +12,14 @@ The Wannier functions are only required to compute the tunneling amplitude $t$ @
 For the expression of many-body states, the occupation number representation#footnote[
   This is also referred to as the second quantization.
 ] is inevitable.
-In a monochromatic optical lattice, this formalism is used for the Hamiltonian of the Fermi-Hubbard model with the tunneling amplitude $t$ and the interaction energy $U$ @esslinger_fermi-hubbard_2010.
-The general superlattice potential with the tunneling amplitudes #tin and #tout and a phase $phi != 0$ is described by the Rice-Mele model @rice_elementary_1982 @lin_interacting_2020.
+In an optical lattice, this formalism is used to express the Hamiltonian of the Fermi-Hubbard model with the tunneling amplitude $t$ and the interaction energy $U$ @esslinger_fermi-hubbard_2010.
+The general superlattice potential with the tunneling amplitudes #tin and #tout and a superlattice phase $phi != 0$ is described by the Rice-Mele model @rice_elementary_1982 @lin_interacting_2020.
 If the superlattice phase is symmetric ($phi = 0$), the system can be simplified with the Su-Schrieffer-Heger model @su_solitons_1979 @di_salvo_topological_2024.
 
 In the context of this thesis, we mainly investigate the dynamics inside the unit cells of the superlattice potential.
-By selecting the lattice depths $V_l$ and $V_s$ such that $tin >> tout$, we can describe the superlattice potential as an array of weakly coupled double wells.
-In this section, I will introduce the behavior of one and two particles inside the double-well potential based on @bergschneider_strong_2017.
-This is the reference for all measurements related to the superlattice phase $phi$ in @ch:phase.
+By selecting the lattice depths #Vl and #Vs such that $tin >> tout$, we can describe the superlattice potential as an array of weakly coupled double wells.
+In this section, I will introduce the behavior of one and two particles inside double-well potentials based on @bergschneider_strong_2017.
+This provides the basis for all measurements related to the superlattice phase $phi$ in @ch:phase.
 
 
 === One particle in a double well <ssec:theory-double-one>
@@ -48,7 +48,7 @@ $ <eq:theory-double-one-eigenstate-plus-minus>
 with the corresponding eigenenergies $epsilon_g = -t$ and $epsilon_e = +t$.
 A particle localized on either site is in an equal superposition of the eigenstates #ketg and #kete.
 The resulting time evolution of the system is described by a coherent Rabi oscillation between the states #ketL and #ketR with the oscillation frequency $f = 2 t slash h$.
-For the maximally-localized Wannier functions in the symmetric superlattice potential in @eq:theory-super-wannier-superposition, we can find the equivalent time evolution based on the band gap $Delta epsilon$.
+For the maximally-localized Wannier functions in the symmetric superlattice potential in @eq:theory-super-wannier-superposition, we can find the equivalent time evolution based on the band gap $delta epsilon$.
 If the double well has an offset $Delta != 0$, the gap between the eigenenergies grows as indicated in #subref(<fig:theory-double-one>, "a").
 At the same time, the ground (excited) state approaches the basis state corresponding to the site with the lower (higher) energy as shown in #subref(<fig:theory-double-one>, "b").
 The growing energy gap results in an increase of the oscillation frequency, while the unequal superposition of the eigenstates reduces the amplitude of the Rabi oscillation.
@@ -58,20 +58,19 @@ $
   f = 2 sqrt(t^2 + Delta^2) slash h quad "and" quad A = t^2 / (t^2 + Delta^2) eqp
 $ <eq:theory-double-one-rabi-parameters>
 
-For a large offset $abs(Delta) >> t$, the coupling between the sites vanishes and the eigenenergies approach $epsilon_g = minus Delta$ and $epsilon_e = plus Delta$.
+For a large offset $abs(Delta) >> t$, the coupling between the sites vanishes and the eigenenergies approach $epsilon_g = minus abs(Delta)$ and $epsilon_e = plus abs(Delta)$.
 This behavior of the eigenstates in the double-well potential matches the composition of the maximally-localized Wannier functions for an asymmetric phase $phi$ in #subref(<fig:theory-super-wannier-mixing>, "b").
 The only difference between the double-well potential described by the Hamiltonian @eq:theory-double-one-hamiltonian[] and the actual unit cell of the superlattice potential is the change of the confinement in an asymmetric configuration.
 Since the maximally-localized Wannier functions depend on the exact shape of the lattice sites, the overlap with the other lattice site in the unit cell is different for $phi != 0$.
-In theory, the tunneling amplitude $t$ should therefore be a function of the energy offset $Delta(phi)$.
-We can however neglect this since the oscillation frequency and amplitude in @eq:theory-double-one-rabi-parameters are significantly more sensitive to $Delta$.
+In theory, the tunneling amplitude $t$ should, therefore, be a function of the energy offset $Delta(phi)$.
+However, we can neglect this correction since the oscillation frequency and amplitude in @eq:theory-double-one-rabi-parameters are significantly more sensitive to $Delta$.
 
 #floating-figure(
   figure-single(),
   caption: [
     One particle in a double-well potential.
     *a*, Spectrum with the ground state and the excited state as a function of the energy offset $Delta slash t$.
-    The inset shows the double-well potential in the unit cell of the superlattice potential @eq:theory-super-potential[] with $phi = -0.04 pi$.
-    The corresponding energy offset is #box[$Delta slash t approx #num[-1.8]$].
+    The inset shows the double-well potential in the unit cell of the superlattice potential @eq:theory-super-potential[] with a finite energy offset $Delta slash t > 0$.
     *b*, Composition of the ground state in the basis ${ketL, ketR}$.
     For the excited state, the composition is inverted due to the symmetry of the double-well potential with respect to $Delta$.
   ],
@@ -84,7 +83,7 @@ We can however neglect this since the oscillation frequency and amplitude in @eq
 
 With a second particle in the double well, the interaction energy $U$ introduced in @eq:theory-wannier-interaction-strength and the spin state of the particles become relevant.
 The Pauli exclusion principle prevents two particles with the same spin to occupy the same lattice site.
-The states $phy.ket(arrow.t\, arrow.t)$ and $phy.ket(arrow.b\, arrow.b)$, where both particles have the same spin, are therefore trivial since the particles can neither tunnel nor interact with each other.
+The states $phy.ket(arrow.t\, arrow.t)$ and $phy.ket(arrow.b\, arrow.b)$, where both particles have the same spin, are trivial since the particles can neither tunnel nor interact with each other.
 If the two particles have opposite spins #ketup and #ketdown, several configurations are possible.
 Here, we use the basis ${ketLL, ketLR, ketRL, ketRR}$ that orders the particles by their spins#footnote[
   The order of the particles is relevant for the antisymmetry of the wavefunction that is always required for fermionic particles.
@@ -94,10 +93,10 @@ Here, we use the basis ${ketLL, ketLR, ketRL, ketRR}$ that orders the particles 
   This requires a sign flip $-t -> t$ to fulfill the antisymmetry of the fermionic wavefunction.
 ].
 The first letter indicates the site of the particle with the spin #ketup and the second letter indicates the site of the particle with the spin #ketdown.
-The interacting states #ketLL and #ketRR have both particles on the same lattice site, making the states subject to the interaction energy $U$ and the offset $Delta$.
+The interacting states #ketLL and #ketRR have both particles on the same lattice site, making the states subject to the interaction energy $U$ and the offset $2 Delta$.
 On the other hand, the split states #ketLR and #ketRL experience no interaction#footnote[
   The nearest-neighbor interaction $V_"NN"$ is part of the extended Hubbard parameters @dutta_non-standard_2015.
-] and their energy offset $Delta$ averages to zero.
+] and their offset averages to zero.
 In first order, the tunneling amplitude $t$ connects the interacting states and the coupled states in the Hamiltonian
 
 $
@@ -167,7 +166,7 @@ The associated eigenenergy is $epsilon_3 = 0$ since the split states #ketLR and 
 The basis states #kets and #ketdp are directly coupled by the tunneling amplitude $t$ and form an avoided crossing around the interaction energy $U slash t = 0$.
 Depending on the sign of the interaction, the ground state $phy.ket(psi_1)$ either favors the interacting state #ketdp or the split state #kets.
 The excited state $phy.ket(psi_4)$ always has the opposite composition of the ground state.
-For strongly repulsive interactions $U >> t$, the ground-state energy $epsilon_1$ only slowly approaches the energy $epsilon = 0$ we would expect from a completely split state.
+For strongly-repulsive interactions $U >> t$, the ground-state energy $epsilon_1$ only slowly approaches the energy $epsilon = 0$ we would expect from a completely split state.
 This gap is a result of the second-order tunneling process between the split state #kets and the interacting state #ketdp.
 The corresponding energy scale is the superexchange constant
 
@@ -177,37 +176,37 @@ $ <eq:theory-double-two-superexchange>
 
 that is computed with the second-order perturbation theory @auerbach_interacting_2012.
 In the ground state $phy.ket(psi_1)$, this process is enabled by a tiny fraction of the interacting state #ketdp even for large interactions $U >> t$.
-The same energy gap $J$ also shows up between the strongly attractive ground state and the state #ketdm.
+The same energy gap $J$ also shows up between the strongly-attractive ground state and the state #ketdm.
 While the process itself is not referred to as the superexchange, we can interpret the gap with the equivalent second-order tunneling process between the states #ketdp and #kets.
 
 #floating-figure(
   figure-two-general(width: 14cm, height: 5.8cm),
   caption: [
     Two attractively interacting particles in the double-well potential.
-    *a*, Spectrum of two particles with the interaction energy $U slash t = -4$.
-    The colors of the eigenenergies $epsilon_n$ indicate the basis states.
-    *b*, *c*, Time evolution of the initial state #ketLL at the offsets $Delta slash t = 2.1$ (*b*) and $Delta slash t = 0$ (*c*).
+    Spectrum of two particles with the interaction energy $U slash t = -4$.
+    The colors indicate the compositions of the eigenstates.
+    The time evolutions use the initial state #ketLL at the offsets $Delta slash t = 2.1$ and $Delta slash t = 0$.
   ],
   label: <fig:theory-double-two-general>,
 )
 
 In the second configuration, we look at the double-well potential with a fixed interaction energy $U slash t = -4$.
-The spectrum in #subref(<fig:theory-double-two-general>, "a") shows three avoided crossings between the eigenstates $phy.ket(psi_1)$, $phy.ket(psi_2)$ and $phy.ket(psi_4)$, while the third eigenstate $phy.ket(psi_3) = kett$ is isolated again due to its spin wavefunction.
+The spectrum in @fig:theory-double-two-general shows three avoided crossings between the eigenstates $phy.ket(psi_1)$, $phy.ket(psi_2)$ and $phy.ket(psi_4)$, while the third eigenstate $phy.ket(psi_3) = kett$ is isolated again due to its spin wavefunction.
 Here, we use a mixed basis to show the composition of the eigenstates.
 The interacting states #ketLL and #ketRR are part of the original basis of the Hamiltonian @eq:theory-double-two-hamiltonian[], and the states #kets and #kett are part of the symmetry basis @eq:theory-double-two-symmetry-basis[] that introduces the superpositions of the basis states #ketLR and #ketRL.
 
 Around the offset $Delta = 0$, the composition of the ground state $phy.ket(psi_1)$ rapidly switches between the states #ketLL and #ketRR due to the attractive interaction.
 The corresponding energy of two particles in the lower well is $epsilon_1 approx U - 2 abs(Delta)$.
-At $Delta = 0$, the double-well potential is symmetric, and the ground state is mainly composed of the state #ketdp (compare @fig:theory-double-two-symmetric).
+At the offset $Delta = 0$, the double-well potential is symmetric and the ground state is mainly composed of the state #ketdp (compare @fig:theory-double-two-symmetric).
 The neighboring eigenstate is $phy.ket(psi_2) = ketdm$ with the opposite parity of the state #ketdp.
 A coupling between the two states #ketdp and #ketdm is only possible with a second-order tunneling process that involves the singlet state #kets.
-In #subref(<fig:theory-double-two-general>, "c"), a small occupation of the singlet state #kets mediates the slow oscillation between the states #ketLL and #ketRR.
-The oscillation frequency is $f approx J slash h$, with the superexchange constant $J$ introduced in @eq:theory-double-two-superexchange.
+The small occupation of the singlet state #kets mediates the slow oscillation between the states #ketLL and #ketRR.
+The oscillation frequency is $f approx J slash h$, where $J$ is the superexchange constant introduced in @eq:theory-double-two-superexchange.
 
-Besides the avoided crossing at $Delta = 0$, there are two more avoided crossings at $plus.minus Delta approx abs(U) slash 2$ in #subref(<fig:theory-double-two-general>, "a").
+Besides the avoided crossing at $Delta = 0$, there are two more avoided crossings at $plus.minus Delta approx abs(U) slash 2$ in @fig:theory-double-two-general.
 In both cases, the eigenstates $phy.ket(psi_2)$ and $phy.ket(psi_4)$ mix the interacting state (#ketLL or #ketRR) on the upper site and the singlet state #kets.
 We can interpret this coupling as the resonant tunneling of a single particle since the energy of the interacting states is $U + 2 abs(Delta) approx 0$.
-The time evolution of the initial state #ketLL at the offset $Delta slash t = 2.1$ in #subref(<fig:theory-double-two-general>, "b") highlights this process.
+The time evolution of the initial state #ketLL at the offset $Delta slash t = 2.1$ highlights this process.
 Apart from a tiny contribution by the state #ketRR, the occupation oscillates with the maximum amplitude between the states #ketLL and #kets.
 The corresponding frequency is $f approx 2.7 t slash h$, which is slightly larger than the expected frequency for the single-particle tunneling in @eq:theory-double-one-rabi-parameters.
 This is caused by the proximity of the avoided crossing to the symmetric double-well potential.
