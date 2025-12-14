@@ -481,7 +481,7 @@
 }
 
 
-#let axes-1(xlim: (8.75, 31.25), ylim: (-1.0, 21.0), dpi: 100.0) = {
+#let axes-1(xlim: (-1.0, 21.0), ylim: (8.75, 31.25), dpi: 100.0) = {
   let xscale = 1 / (xlim.at(1) - xlim.at(0)) * 100%
   let yscale = 1 / (ylim.at(1) - ylim.at(0)) * 100%
   let xshift = 50% - (xlim.at(0) + xlim.at(1)) / 2 * xscale
@@ -507,25 +507,25 @@
     ),
   )
   let xaxis-major-ticks = (
-    locs: (0.0, 10.0, 20.0, 30.0),
-    labels: ($0$, $10$, $20$, $30$),
+    locs: (-5.0, 0.0, 5.0, 10.0, 15.0, 20.0, 25.0),
+    labels: ($−5$, $0$, $5$, $10$, $15$, $20$, $25$),
     tick-style: xaxis-major-tick-style,
     label-style: xaxis-major-label-style,
   )
   let xaxis-minor-ticks = (
-    locs: range(5, 35, step: 10),
+    locs: range(2, 22, step: 5).map(y => y + 0.5),
     labels: (),
     tick-style: xaxis-minor-tick-style,
     label-style: xaxis-minor-label-style,
   )
   let yaxis-major-ticks = (
-    locs: (-5.0, 0.0, 5.0, 10.0, 15.0, 20.0, 25.0),
-    labels: ($−5$, $0$, $5$, $10$, $15$, $20$, $25$),
+    locs: range(10, 35, step: 5),
+    labels: ($10$, $15$, $20$, $25$, $30$),
     tick-style: yaxis-major-tick-style,
     label-style: yaxis-major-label-style,
   )
   let yaxis-minor-ticks = (
-    locs: range(2, 22, step: 5).map(y => y + 0.5),
+    locs: range(5, 35, step: 5).map(y => y + 2.5),
     labels: (),
     tick-style: yaxis-minor-tick-style,
     label-style: yaxis-minor-label-style,
