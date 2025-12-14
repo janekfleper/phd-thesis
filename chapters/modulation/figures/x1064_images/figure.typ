@@ -376,7 +376,7 @@
 
 
   let label-colormap = (
-    position: (550.321%, 50.0%),
+    position: (100% + 3.3em, 50.0%),
     body: rotate(
       -90.0deg,
       place(
