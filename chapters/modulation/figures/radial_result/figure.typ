@@ -5,7 +5,7 @@
 
 #set page(width: 17cm, height: auto, margin: 0.9em)
 
-#let cmap = ((blue, 0%), (white, 100% / 3), (red, 100%))
+#let cmap = color.map.vlag
 
 #let label-xaxis = (
   position: (50.0%, 111%),
@@ -367,7 +367,13 @@
     offset-transform: offset-transform-collection-10,
   )
 
-  let fill-color = colors(3).transparentize(50%)
+  let fill-color = gradient.linear(
+    ..gradient-colors(
+      colors(3).transparentize(50%),
+      (97%, 6%),
+      colors(3).transparentize(100%),
+    ),
+  )
   let fill-collection-11 = fill-color
   let stroke-collection-11 = (
     paint: fill-color,

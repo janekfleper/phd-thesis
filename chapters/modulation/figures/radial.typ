@@ -5,7 +5,7 @@
 #import "/style.typ": *
 
 
-#let axes(vl: 1.1, vs: 3, phase: +1, xmin: -0.55, xmax: 0.55, dx: 0.01, xscale: 4) = {
+#let axes(vl: 1.0, vs: 3, phase: +1, xmin: -0.525, xmax: 0.525, dx: 0.01, xscale: 4) = {
   let xdata = range(int(xmin / dx), int(xmax / dx) + 1).map(x => x * dx)
   let potential-short(x, depth) = depth * calc.pow(calc.sin(2 * x * calc.pi), 2)
   let potential-long(x, depth, phase) = depth * calc.pow(calc.cos((x + phase / 4 + 1 / 4) * calc.pi), 2)
@@ -53,7 +53,7 @@
   })
 }
 
-#let figure(width: 1.1 * 8cm + gutter, height: 1.1 * 4cm) = {
+#let figure(width: 1.05 * 8cm + gutter, height: 1.05 * 4cm) = {
   let cell = block.with(width: 100%, height: 100%, stroke: spine-stroke, fill: none)
 
   show: figure-style
