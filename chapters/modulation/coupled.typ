@@ -44,8 +44,8 @@ For the two-dimensional potential @eq:mod-coupled-potential[], we compute the co
 Compared to the one-dimensional potential in @eq:theory-bloch-potential-fourier-series, none of the coefficients vanish unless the relative angle is $fitang = #deg[0]$.
 Instead of the index $m$, the rows and columns of the matrix are labeled with the index tuple $(m1, m2)$.
 To solve the Schrödinger equation @eq:mod-coupled-schroedinger[], we diagonalize the corresponding matrix for each quasimomentum vector #vq in the first Brillouin zone.
-The eigenvalues $cband_cn (vq)$ form the energy bands in the two-dimensional band structure, and we compute the two-dimensional Bloch waves $bloch(vq, eta)(vr)$ from the coefficients $uqm2(m1, m2)$.
-We use #cn as the generalized index of the energy bands in the coupled band structure.
+The eigenvalues $cband_cn (vq)$ form the energy bands in the two-dimensional band structure, and we compute the Bloch waves $bloch(vq, eta)(vr)$ from the coefficients $uqm2(m1, m2)$.
+We use #cn as the generalized index to label the coupled energy bands.
 
 #floating-figure(
   {
@@ -99,7 +99,7 @@ The three avoided crossings of the bands $cband_cn (vq)$ are located at $Vx1064 
   label: <fig:mod-coupled-theory>,
 )
 
-Since the excitation to a higher band is still based on the overlap of the Wannier functions due to the perturbation of the lattice potential (compare @sec:mod-intro), the optimal band transition corresponds to the index changes $Delta nx = 2$ and $Delta ny = 0$.
+Since the excitation to a higher band is still based on the overlap of the Wannier functions due to the perturbation of the lattice potential (compare @sec:mod-intro), the optimal band transition corresponds have $Delta nx = 2$ and $Delta ny = 0$.
 For the in-situ #lms, the transition from the lowest band with index $cn = 1$, therefore, relies on the contribution from the uncoupled band $vn = (3, 1)$.
 In #subref(<fig:mod-coupled-theory>, "b-d") the composition of the coupled states corresponding to the energy bands $cband_2$, $cband_3$ and $cband_4$ is shown#footnote[
   Since we only consider the lowest band with $cn = 1$ and the excited bands in @fig:mod-coupled-theory, we use the indices $cn = 2, 3 "and "4$.
@@ -110,12 +110,12 @@ For $Vy1064 < #qty[40][Erec]$, the coupled band with the index $cn = 2$ is the d
 At $Vy1064 > #qty[70][Erec]$, the coupled band with the index $cn = 4$ shows the strongest transition from the lowest band with the index $cn = 1$.
 In the intermediate regime $#qty[40][Erec] <= Vy1064 <= #qty[70][Erec]$, all three coupled bands contribute with varying strengths.
 We could, therefore, observe three transitions in a frequency interval smaller than #qty[15][kHz] with the in-situ #lms.
-An unambiguous identification of the transitions would require a wide scan of the modulation frequency #fmod.
-At $Vy1064 < #qty[40][Erec]$ and $Vy1064 > #qty[70][Erec]$ this is not an issue since only one of the coupled energy bands is easily accessible with the modulation of the #x1064 lattice.
+An unambiguous identification of the transitions would, then, require a wide scan of the modulation frequency #fmod.
+At $Vy1064 < #qty[40][Erec]$ and $Vy1064 > #qty[70][Erec]$ this is not an issue since only one of the coupled energy bands is easily accessible through the modulation of the #x1064 lattice.
 Additionally, the transitions to the other coupled energy bands are detuned by at least #qty[10][kHz].
 
-The main purpose of the investigation of the coupled band structure in this section is to find the optimal configuration for the in-situ #lms of the #x1064 lattice and the #y1064 lattice.
-Due to the computational runtime of the coupled band structure, we are not able to use it for the data analysis according to @sec:mod-eval.
+The main purpose of investigating the coupled band structure in this section is to find the optimal configuration for the in-situ #lms of the #x1064 lattice and the #y1064 lattice.
+Due to the computational runtime of the coupled band structure, we cannot use it for the evaluation introduced in @sec:mod-eval.
 Instead, we use the one-dimensional band structure to compute the reference data for the transition frequency $fnm(1, 3)(V)$.
 Depending on the lattice depth of the other infrared in-plane lattice, we apply a correction to take the coupled band structure into account.
 @fig:mod-coupled-result shows the calibration factor #fita0 and the waist #fitw0 of the modulated #x1064 lattice as a function of the lattice depth #Vy1064.
@@ -123,17 +123,16 @@ We observe that the measured calibration factor #fita0 matches the predicted ban
 For $Vy1064 < #qty[40][Erec]$ the calibration factor #fita0 deviates by less than #qty[1][%] from the reference value $fita0 = 1.0$.
 In this regime, the measured calibration factors match the coupled theory, and the waist #fitw0 in #subref(<fig:mod-coupled-result>, "b") shows consistent results.
 In the intermediate regime $#qty[40][Erec] < Vy1064 <= #qty[50][Erec]$ we observe a significant increase of the measured and theoretical calibration factors.
-However, the measured calibration factors are slightly smaller than the prediction for the transition to the coupled band $cband_4$.
+The measured calibration factors are slightly smaller than the prediction for the transition to the coupled band $cband_4$.
 At the same time, the waist increases from #qty[145][μm] to #qty[170][μm] and its uncertainty increases as well.
 This indicates the breakdown of the data analysis based on the one-dimensional theory close to the avoided crossings in #subref(<fig:mod-coupled-theory>, "a").
 The fit model for the lattice depth $V(fitr)$ in @eq:mod-eval-model-lattice-depth assumes a constant calibration factor #fita0 across the atom cloud.
 However, at $Vy1064 > #qty[40][Erec]$, the calibration factor #fita0 of the #x1064 lattice increases with the distance #fitr from the lattice axis since the ratio $Vy1064 slash Vx1064$ increases.
 This is wrongly interpreted as an increase of the waist #fitw0 by the fit model.
 Additionally, the equipotential lines become elliptical (see inset in #subref(<fig:mod-coupled-result>, "a") since the ratio $Vy1064 slash Vx1064$ also changes due to the inhomogeneity of the #y1064 lattice.
-We could only overcome this limitation by directly using the coupled band structure to compute the transition frequency $fnm(1, 3)(Vx1064, Vy1064)$ for the data analysis.
 At $Vy1064 > #qty[60][Erec]$, we can see the results of the transition to the coupled band $cband_2$.
 The calibration factor $fita0$ matches the theory again, and the waists #fitw0 are mostly consistent with the reference value.
-Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided crossings, we attribute the slightly increased waist to the breakdown of the fit model again.
+Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided crossings, we attribute the increased waist to the breakdown of the fit model.
 
 #floating-figure(
   figure-result(),
@@ -153,9 +152,8 @@ Since the data point at $Vy1064 = #qty[70][Erec]$ is closest to the avoided cros
 )
 
 Based on the result for the #x1064\-lattice calibration in @fig:mod-coupled-result, we conclude that the optical configuration for the in-situ #lms uses the lattice depths $Vx1064 = #qty[60][Erec]$ and $Vy1064 = #qty[30][Erec]$.
-While the results for $Vy1064 > #qty[70][Erec]$ are also consistent, the resonance visibility is significantly worse than for $Vy1064 < #qty[40][Erec]$ according to the insets in #subref(<fig:mod-coupled-result>, "a").
+While the results for $Vy1064 > #qty[70][Erec]$ are also consistent, the resonance visibility is significantly worse compared to $Vy1064 < #qty[40][Erec]$ according to the insets in #subref(<fig:mod-coupled-result>, "a").
 Our interpretation is that the stronger confinement by the radial potential of the #y1064 lattice limits the atom-loss mechanism discussed in @sec:mod-loss.
 The lower limit for the lattice depth #Vy1064 is given by the requirement for a frozen lattice potential (see @sec:mod-intro).
 If the atoms could tunnel perpendicular to the modulated lattice, the depleted resonances would be occupied by the surrounding atoms again.
 This reduces the resonance visibility and could result in a systematic error if the resonance positions are slightly shifted.
-The lattice configuration $Vx1064 = #qty[60][Erec]$ and $Vy1064 = #qty[30][Erec]$ is, therefore, a good compromise for these two limitations of the in-situ #lms.

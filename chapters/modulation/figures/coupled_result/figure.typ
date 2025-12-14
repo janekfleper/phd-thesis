@@ -546,7 +546,7 @@
   )
 }
 
-#let figure(width: 15.24cm, height: 7.4cm) = {
+#let figure(width: 15.04cm, height: 7.3cm) = {
   show: figure-style
   block(
     width: width,
