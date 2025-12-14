@@ -1,6 +1,7 @@
 #import "@local/fancy-thesis:0.1.0": optional-refs, thesis
 #import "/header.typ": fancy-units
 #import "src/titlepage.typ": titlepage
+#import "src/examination.typ": examination
 
 #set math.equation(number-align: bottom)
 #show ref: optional-refs
@@ -16,6 +17,12 @@
   author: "Janek Fleper",
   birthplace: "Köln",
   date: datetime(year: 2025, month: 12, day: 14),
+)
+
+#examination(
+  supervisor: [Prof. Dr. Michael Köhl],
+  examiner: [Prof. Dr. Simon Stellmer],
+  date: none,
 )
 
 #{
