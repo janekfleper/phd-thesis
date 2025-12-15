@@ -142,10 +142,7 @@ ludewig_feshbach_2012:
   title: Feshbach resonances in {40K}
   author: Ludewig, Antje
   date: 2012
-  publisher:
-    name: null
-    location: S.l
-  organization: "[s.n.]"
+  organization: Universiteit van Amsterdam
   note: "{OCLC}: 788564450"
   abstract: "De wisselwerking tussen deeltjes bepaalt de eigenschappen van alle materie. Als het mogelijk is de wisselwerking in te stellen, kunnen deze eigenschappen worden veranderd. Er is een mechanisme bekend om de wisselwerking tussen sommige atoomsoorten te veranderen: de zogeheten Feshbach-resonanties. Deze resonanties kunnen optreden in ultrakoude atomen. Het mechanisme werkt alleen als de atomen in gasvorm zijn en tot dichtbij het absolute nulpunt zijn gekoeld. Feshbach-resonanties in ultrakoude atomen zijn al enige tijd bekend. De juiste magnetische veldsterktes waarbij deze resonanties optreden zijn echter nog onbekend en moeten voor elke atoomsoort opnieuw worden bepaald. Antje Ludewig bepaalde voor de kaliumisotoop 40K de waarden van 23 magnetische velden, waar de wisselwerking kan worden toegepast. Deze waarden worden gebruikt om theoretische modellen te verbeteren, zodat het makkelijker wordt Feshbach-resonanties in andere atoomsoorten te voorspellen. Als de wisselwerking tussen ultrakoude atomen ingesteld kan worden, kunnen ultrakoude atomen gebruikt worden als modelsysteem voor het oplossen van andere problemen in de natuurkunde zoals hoge-temperatuursupergeleiding of het gedrag van neutronensterren."
 friebel_co_1998:
@@ -248,7 +245,7 @@ chomaz_coherence_2014:
   title: "Coherence and superfluidity of Bose gases in reduced dimensions: from harmonic traps to uniform fluids"
   author: Chomaz, Lauriane
   date: 2014-11-10
-  organization: "{ENS}"
+  organization: École Normale Supérieure
 nakajima_topological_2016:
   type: article
   title: Topological Thouless Pumping of Ultracold Fermions
@@ -981,7 +978,6 @@ gorg_exploring_2019:
     date: 2020-01-30
   serial-number:
     doi: 10.3929/ethz-b-000361822
-  abstract: This thesis reports on the experimental realization and investigation of the driven Fermi-Hubbard model with ultracold fermionic atoms in optical lattices. It is demonstrated that the outstanding challenge of heating in driven quantum many-body systems can be overcome, which enables to achieve low-temperature states that feature for example tunable magnetic correlations. In a set of experiments, we establish the description of such strongly correlated, time-periodic systems by means of effective static Hamiltonians. This Floquet-engineering approach allows for a quantum simulation of a large variety of many-body models, which go well beyond the scope of condensed matter physics. In order to push the boundaries of the field in the context of high-energy physics, a scheme to couple dynamical gauge fields to matter is proposed and experimentally implemented. The driven Fermi-Hubbard model is realized by loading interacting potassium-40 atoms into a tunable lattice consisting of optical standing waves and subsequently modulating the lattice position periodically in time. A key to suppress heating and loss of atoms induced by the drive is to engineer the dispersion of higher bands in the lattice. We investigate the charge and magnetic properties of the driven many-body state for a large range of interactions and driving strengths. Two different regimes are considered, in which the modulation frequencies is either much higher than all static energy scales or close to the Hubbard onsite interaction. In the near-resonant regime, we demonstrate that anti-ferromagnetic spin correlations can be enhanced compared to the static case or even switched to ferromagnetic ordering, while an off-resonant drive is found to reduce correlations. Using Floquet theory, we derive effective many-body Hamiltonians for the two modulation regimes, which feature new terms that cannot be realized in static systems. In particular, if the modulation frequency is close to the interaction energy, density-assisted hopping processes and hence the magnetic exchange energy can be tuned independently from the single particle tunneling. Furthermore, we investigate the dynamics of driven many-body systems by varying the modulation time over several orders of magnitude. The validity of the description in terms of an effective Hamiltonian is demonstrated for experimentally relevant timescales of up to hundreds of tunneling times. This verification of the Floquet-engineering approach for interacting systems is achieved by comparing the time evolution in driven systems to equivalent implementations of the effective Hamiltonian in a static lattice. In addition, we benchmark the experimental observations against non-equilibrium dynamical mean field theory calculations. Using this control and understanding of the driven Fermi-Hubbard model, we experimentally realize Peierls phases that depend on the occupations of the lattice sites. To this end, we propose and implement a two-frequency driving scheme, which explicitly breaks time-reversal symmetry and hence enables to engineer complex-valued density-assisted tunneling matrix elements. We demonstrate measurement protocols in a Hubbard dimer, which allow to quantify the magnitude of the induced density-assisted tunnel coupling and to directly measure its Peierls phase compared to the single particle tunneling. These experiments constitute the first step towards the simulation of dynamical gauge fields and lattice gauge theories with ultracold atoms in optical lattices.
 jaksch_cold_2005:
   type: article
   title: The cold atom Hubbard toolbox
@@ -1214,7 +1210,6 @@ bergschneider_strong_2017:
     date: 2022-01-10
   serial-number:
     doi: 10.11588/heidok.00023328
-  abstract: In this thesis, I report on the deterministic preparation and the observation of strongly correlated few-fermion systems in single and double-well potentials. In a first experiment, we studied a system of one impurity interacting with a number of majority atoms which we prepared in a single potential well in the one-dimensional limit. With increasing number of majority particles, we observed a decrease in the quasi-particle residue which is in agreement with expectations from the Anderson orthogonality catastrophe. In a second experiment, we prepared two fermions in a double-well potential which represents the fundamental building block of the Fermi-Hubbard model. By increasing the repulsion between the two fermions, we observed the crossover into the antiferromagnetic Mott-insulator regime. Furthermore, I describe a new imaging technique, which allows spin-resolved single-atom detection both in in-situ and in time-of-flight. We use this technique to investigate the emergence of momentum correlations of two repulsive fermions in the ground state of the double well. With the methods developed in this thesis, we have established a framework for quantum simulation of strongly correlated many-body systems in tunable potentials.
 trotzky_time-resolved_2008:
   type: article
   title: Time-Resolved Observation and Control of Superexchange Interactions with Ultracold Atoms in Optical Lattices
@@ -1486,7 +1481,6 @@ bissbort_dynamical_2012:
   url:
     value: http://publikationen.ub.uni-frankfurt.de/frontdoor/index/index/docId/28591
     date: 2024-11-25
-  abstract: In this thesis, various aspects on the theoretical description of ultracold bosonic atoms in optical lattices are investigated. After giving a brief introduction to the fundamental concepts of {BECs}, atomic physics, interatomic interactions and experimental procedures in chapter (1), we derive the Bose-Hubbard model from first principles in chapter (2). In this chapter, we also introduce and discuss a technique to efficiently determine Wannier states, which, in contrast to current techniques, can also be extended to inhomogeneous systems. This technique is later extended to higher dimensional, non-separable lattices in chapter (5). The many-body physics and phases of the Bose-Hubbard is shortly presented in chapter (3) in conjunction with Gutzwiller mean-field theory, and the recently devised projection operator approach. We then return to the derivation of an improved microscopic many-body Hamiltonian, which contains higher band contributions in the presence of interactions in chapter (4). We then move on to many-particle theory. To demonstrate the conceptual relations required in the following chapter, we derive Bogoliubov theory in chapter (5.3.4) in three different ways and discuss the connections. Furthermore, this derivation goes beyond the usual version discussed in most textbooks and papers, as it accounts for the fact, that the quasi-particle Hamiltonian is not diagonalizable in the condensate and the eigenvectors have to be completed by additional vectors to form a basis. This leads to a qualitatively different quasi-particle Hamiltonian and more intricate transformation relations as a result. In the following two chapters (7, 8), we derive an extended quasi-particle theory, which goes beyond Bogoliubov theory and is not restricted to weak interactions or a large condensate fraction. This quasi-particle theory naturally contains additional modes, such as the amplitude mode in the strongly interacting condensate. Bragg spectroscopy, a momentum-resolved spectroscopic technique, is introduced and used for the first experimental detection of the amplitude mode at finite quasi-momentum in chapter (9). The closely related lattice modulation spectroscopy is discussed in chapter (10). The results of a time-dependent simulation agree with experimental data, suggesting that also the amplitude mode, and not the sound mode, was probed in these experiments. In chapter (11) the dynamics of strongly interacting bosons far from equilibrium in inhomogeneous potentials is explored. We introduce a procedure that, in conjunction with the collapse and revival of the condensate, can be used to create exotic condensates, while particularly focusing on the case of a quadratic trapping potential. Finally, in chapter (12), we turn towards the physics of disordered systems derive and discuss in detail the stochastic mean-field theory for the disordered Bose-Hubbard model.
 raab_trapping_1987:
   type: article
   title: Trapping of Neutral Sodium Atoms with Radiation Pressure
@@ -2223,7 +2217,7 @@ bourgund_charge_2024:
   title: Charge correlations in quantum simulation of mixed-dimensional Hubbard systems
   author: Bourgund, Dominik
   date: 2024-03-12
-  organization: "{LMU} München"
+  organization: Ludwig-Maximilians-Universität München
   url:
     value: https://edoc.ub.uni-muenchen.de/view/autoren/Bourgund=3ADominik=3A=3A.html
     date: 2025-09-04
@@ -2941,18 +2935,16 @@ haug_fast_2022:
   title: Fast Typesetting with Incremental Compilation
   author: Haug, Martin
   date: 2022-06-15
-  organization: Technical University of Berlin
+  organization: Technische Universität Berlin
   serial-number:
     doi: 10.13140/RG.2.2.15606.88642
-  abstract: Text-based typesetting systems like {LATEX} compile source files into {PDF} and other formats. This process is computationally expensive. Unlike “What You See Is What You Get” ({WYSIWYG}) systems, most text-based typesetting systems recompile the document from scratch, even after minor changes. Constant expensive recomputations prevent instant preview of changes, as in {WYSIWYG} software. This thesis explores how to speed up the text-based typesetting software Typst by reusing artifacts from past compilations while parsing and layouting. We propose an incremental parsing algorithm that accommodates context-sensitive properties of markup languages such as the “off-side rule” and is suited for handwritten recursive descent parsers. Furthermore, we also present a constrained layout caching scheme that allows reusing previous layout elements even if the dimensions of their parent containers changed. In an evaluation based on a set of typical documents and edits, we determined that this thesis’ contributions increase the speed of Typst by a factor between 4.5 and 91. Compared with {LATEX}, Typst can compile an edit between 3.4 and 9895 times as fast.
 madje_programmable_2022:
   type: thesis
   title: A Programmable Markup Language for Typesetting
   author: Mädje, Laurenz
   date: 2022-09-08
-  organization: Technical University of Berlin
+  organization: Technische Universität Berlin
   url: https://laurmaedje.github.io/programmable-markup-language-for-typesetting.pdf
-  abstract: Markup languages are well-suited for typesetting of structured documents. By separating content from presentation, they are more automatable and flexible than their visual (Wysiwyg) counterparts. {TEX}-based systems, which trace back to the 1970s, are still the state of the art in this domain. Due to {TEX}’s arcane macro system and poor error messages, these are hard to learn and use. More lightweight alternatives like Markdown and {AsciiDoc} fall short for complex typesetting while {XML}-based languages are too verbose for manual editing. This situation is unsatisfactory from a user experience perspective. For this reason, we present Typst, a new markup language with more expressive syntax and stronger computational foundations. By building on a type system with pure functions instead of macros, Typst eliminates many typical problems {TEX} suffers from. We show that Typst is highly automatable while being much easier to learn and use than current alternatives.
 stoferle_molecules_2006:
   type: article
   title: Molecules of Fermionic Atoms in an Optical Lattice
