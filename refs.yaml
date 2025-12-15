@@ -719,7 +719,7 @@ modugno_maximally_2012:
     volume: 14
 malitson_interspecimen_1965:
   type: article
-  title: Interspecimen Comparison of the Refractive Index of Fused Silica*,†
+  title: Interspecimen Comparison of the Refractive Index of Fused Silica
   author: Malitson, I. H.
   date: 1965-10-01
   page-range: 1205-1209
@@ -1297,9 +1297,6 @@ laskin_selection_2022:
     - Laskin, Alexander V.
     - Volpp, Joerg
   date: 2022-03-04
-  editor:
-    - Kaierle, Stefan
-    - Heinemann, Stefan W.
   page-range: "10"
   url:
     value: https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11994/2607931/On-the-selection-of-materials-for-high-power-laser-optics/10.1117/12.2607931.full
@@ -1308,13 +1305,9 @@ laskin_selection_2022:
     doi: 10.1117/12.2607931
     isbn: 978-1-5106-4859-3 978-1-5106-4860-9
   parent:
-    - type: proceedings
-      title: "High-Power Laser Materials Processing: Applications, Diagnostics, and Systems {XI}"
-      publisher:
-        name: "{SPIE}"
-        location: San Francisco, United States
-    - type: conference
-      title: "High-Power Laser Materials Processing: Applications, Diagnostics, and Systems {XI}"
+    type: periodical
+    title: "{SPIE}"
+    volume: 11994
 jurgensen_observation_2014:
   type: article
   title: Observation of Density-Induced Tunneling
@@ -2345,7 +2338,9 @@ nurnberg_bulk_2015:
   serial-number:
     doi: 10.1117/12.2194289
   parent:
-    type: proceedings
+    type: periodical
+    title: SPIE
+    volume: 9632
 gyger_continuous_2024:
   type: article
   title: Continuous operation of large-scale atom arrays in optical lattices
@@ -2981,18 +2976,12 @@ madje_typst_2023:
     - The Typst Project Developers
   date: 2023-03-21
   publisher: Typst {GmbH}
-  url:
-    value: https://github.com/typst/typst
-    date: 2025-10-31
-  serial-number:
-    version: 0.14.0
-  note: "original-date: 2019-09-24T21:41:56Z"
-fleper_ultracold_2025:
-  type: misc
-  title: Ultracold Fermions in an Ultrastable Optical Superlattice
-  author: Fleper, Janek
-  date: 2025
-  url: https://github.com/janekfleper/phd-thesis
+  # url:
+  #   value: https://github.com/typst/typst
+  #   date: 2025-10-31
+  # serial-number:
+  #   version: 0.14.0
+  # note: "original-date: 2019-09-24T21:41:56Z"
 park_cavity-enhanced_2022:
   type: article
   title: Cavity-Enhanced Optical Lattices for Scaling Neutral Atom Quantum Technologies to Higher Qubit Numbers
