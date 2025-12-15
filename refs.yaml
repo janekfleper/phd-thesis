@@ -2219,7 +2219,7 @@ bourgund_charge_2024:
   title: Charge correlations in quantum simulation of mixed-dimensional Hubbard systems
   author: Bourgund, Dominik
   date: 2024-03-12
-  organization: Ludwig-Maximilians-Universität München
+  publisher: Ludwig-Maximilians-Universität München
   url:
     value: https://edoc.ub.uni-muenchen.de/view/autoren/Bourgund=3ADominik=3A=3A.html
     date: 2025-09-04
@@ -2937,7 +2937,7 @@ haug_fast_2022:
   title: Fast Typesetting with Incremental Compilation
   author: Haug, Martin
   date: 2022-06-15
-  organization: Technische Universität Berlin
+  publisher: Technische Universität Berlin
   serial-number:
     doi: 10.13140/RG.2.2.15606.88642
 madje_programmable_2022:
@@ -2945,7 +2945,7 @@ madje_programmable_2022:
   title: A Programmable Markup Language for Typesetting
   author: Mädje, Laurenz
   date: 2022-09-08
-  organization: Technische Universität Berlin
+  publisher: Technische Universität Berlin
   url: https://laurmaedje.github.io/programmable-markup-language-for-typesetting.pdf
 stoferle_molecules_2006:
   type: article
@@ -3176,19 +3176,19 @@ fleper_long-range_2020:
   title: Long-range disorder in the non-interacting one-dimensional Fermi-Hubbard model
   author: Fleper, Janek
   date: 2020-12
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 reuter_akusto-optische_2024:
   type: thesis
   title: Akusto-optische Formung eines Lichtstrahls zur Kompensation der Inhomogenität eines optischen Gitters
   author: Reuter, Juliane
   date: 2024-09
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 bukov_floquet_2017:
   type: thesis
   title: "Floquet engineering in periodically driven closed quantum systems: from dynamical localisation to ultracold topological matter"
   author: Bukov, Marin
   date: 2017
-  organization: Boston University
+  publisher: Boston University
   url:
     value: https://open.bu.edu/items/a50a6c5e-075b-4079-983c-703d1970de94
     date: 2025-11-09
