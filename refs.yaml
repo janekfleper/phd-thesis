@@ -439,7 +439,7 @@ lignier_dynamical_2007:
     volume: 99
 bednorz_possible_1986:
   type: article
-  title: Possible {highTc} superconductivity in the Ba−La−Cu−O system
+  title: Possible {high-Tc} superconductivity in the Ba−La−Cu−O system
   author:
     - Bednorz, J. G.
     - Müller, K. A.
@@ -1528,7 +1528,7 @@ nandy_dynamical_2020:
     volume: 22
 tindall_heating-induced_2019:
   type: article
-  title: Heating-Induced Long-Range η Pairing in the Hubbard Model
+  title: Heating-Induced Long-Range $eta$ Pairing in the Hubbard Model
   author:
     - Tindall, J.
     - Buča, B.
@@ -2455,7 +2455,7 @@ fermi_zur_1926:
     volume: 36
 stoof_superfluidity_1996:
   type: article
-  title: Superfluidity of Spin-Polarized \$\{\}{^}\{6\}\$Li
+  title: Superfluidity of Spin-Polarized $#none^6$Li
   author:
     - Stoof, H. T. C.
     - Houbiers, M.
@@ -2623,7 +2623,7 @@ schrader_optical_2001:
     volume: 73
 matthies_long-distance_2024:
   type: article
-  title: Long-distance optical-conveyor-belt transport of ultracold Cs133 and Rb87 atoms
+  title: Long-distance optical-conveyor-belt transport of ultracold $#none^133$Cs and $#none^87$Rb atoms
   author:
     - Matthies, Alex J.
     - Mortlock, Jonathan M.
@@ -3091,7 +3091,7 @@ park_cavity-enhanced_2022:
     volume: 3
 yang_ensurematheta_1989:
   type: article
-  title: '{\\}ensuremath\{{\\}eta\} pairing and off-diagonal long-range order in a Hubbard model'
+  title: $eta$ pairing and off-diagonal long-range order in a Hubbard model
   author: Yang, Chen Ning
   date: 1989-11-06
   page-range: 2144-2147
@@ -3109,7 +3109,7 @@ yang_ensurematheta_1989:
     volume: 63
 fan_entanglement_2005:
   type: article
-  title: Entanglement and off-diagonal long-range order of an η-pairing state
+  title: Entanglement and off-diagonal long-range order of an $eta$-pairing state
   author:
     - Fan, Heng
     - Lloyd, Seth
@@ -3149,7 +3149,7 @@ sansonetti_wavelengths_2010:
     volume: 39
 hoyt_observation_2005:
   type: article
-  title: Observation and Absolute Frequency Measurements of the \${^}\{1\}S_\{0\}{\\}mathrm\{{\\}text\{{\\}ensuremath\{-\}\}\}{^}\{3\}P_\{0\}\$ Optical Clock Transition in Neutral Ytterbium
+  title: Observation and Absolute Frequency Measurements of the $#none^1S_0$-$#none^3P_0$ Optical Clock Transition in Neutral Ytterbium
   author:
     - Hoyt, C. W.
     - Barber, Z. W.
