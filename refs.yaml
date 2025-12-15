@@ -119,7 +119,7 @@ greif_quantum_2013:
   title: Quantum magnetism with ultracold fermions in an optical lattice
   author: Greif, Daniel Günther
   date: 2013
-  organization: "{ETH} Zurich"
+  publisher: "{ETH} Zurich"
   url:
     value: https://www.research-collection.ethz.ch/handle/20.500.11850/74466
     date: 2019-11-07
@@ -130,19 +130,19 @@ miller_ultracold_2016:
   title: "Ultracold Fermions in Two-Dimensional Optical Lattices: Quantum Simulation of the Hubbard Model"
   author: Miller, Luke
   date: 2016-08
-  organization: University of Cambridge
+  publisher: University of Cambridge
 vogt_collective_2013:
   type: thesis
   title: Collective Modes and Polarons in two-dimensional Fermi Gases
   author: Vogt, Enrico
   date: 2013-02-26
-  organization: University of Cambridge
+  publisher: University of Cambridge
 ludewig_feshbach_2012:
   type: thesis
   title: Feshbach resonances in {40K}
   author: Ludewig, Antje
   date: 2012
-  organization: Universiteit van Amsterdam
+  publisher: Universiteit van Amsterdam
   note: "{OCLC}: 788564450"
   abstract: "De wisselwerking tussen deeltjes bepaalt de eigenschappen van alle materie. Als het mogelijk is de wisselwerking in te stellen, kunnen deze eigenschappen worden veranderd. Er is een mechanisme bekend om de wisselwerking tussen sommige atoomsoorten te veranderen: de zogeheten Feshbach-resonanties. Deze resonanties kunnen optreden in ultrakoude atomen. Het mechanisme werkt alleen als de atomen in gasvorm zijn en tot dichtbij het absolute nulpunt zijn gekoeld. Feshbach-resonanties in ultrakoude atomen zijn al enige tijd bekend. De juiste magnetische veldsterktes waarbij deze resonanties optreden zijn echter nog onbekend en moeten voor elke atoomsoort opnieuw worden bepaald. Antje Ludewig bepaalde voor de kaliumisotoop 40K de waarden van 23 magnetische velden, waar de wisselwerking kan worden toegepast. Deze waarden worden gebruikt om theoretische modellen te verbeteren, zodat het makkelijker wordt Feshbach-resonanties in andere atoomsoorten te voorspellen. Als de wisselwerking tussen ultrakoude atomen ingesteld kan worden, kunnen ultrakoude atomen gebruikt worden als modelsysteem voor het oplossen van andere problemen in de natuurkunde zoals hoge-temperatuursupergeleiding of het gedrag van neutronensterren."
 friebel_co_1998:
@@ -200,7 +200,7 @@ bauer_enhancing_2020:
   title: Enhancing Pair Hopping in a Floquet-Engineered Two-Site Hubbard Model
   author: Bauer, Simon
   date: 2020-08
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 pertot_relaxation_2014:
   type: article
   title: Relaxation dynamics of a Fermi gas in an optical superlattice
@@ -233,19 +233,19 @@ klemmer_ultracold_2020:
   title: Ultracold Fermions in an Optical Superlattice
   author: Klemmer, Nick
   date: 2020-11
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 loida_modulation_2017:
   type: thesis
   title: Modulation Spectroscopy of Ultracold Atoms in Optical Lattices
   author: Loida, Karla Henriette
   date: 2017
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 chomaz_coherence_2014:
   type: thesis
   title: "Coherence and superfluidity of Bose gases in reduced dimensions: from harmonic traps to uniform fluids"
   author: Chomaz, Lauriane
   date: 2014-11-10
-  organization: École Normale Supérieure
+  publisher: École Normale Supérieure
 nakajima_topological_2016:
   type: article
   title: Topological Thouless Pumping of Ultracold Fermions
@@ -904,7 +904,7 @@ gorg_ultracold_2014:
   title: Ultracold Fermionic Atoms in Optical Superlattices
   author: Görg, Frederik
   date: 2014-03-14
-  organization: Technische Universität München
+  publisher: Technische Universität München
 windpassinger_engineering_2013:
   type: article
   title: Engineering novel optical lattices
@@ -930,49 +930,49 @@ wurz_quantum_2021:
   title: Quantum Magnetism in the Two-Dimensional Fermi-Hubbard Model and Beyond
   author: Wurz, Nicola
   date: 2021
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 frohlich_strongly_2011:
   type: thesis
   title: A Strongly Interacting Two-Dimensional Fermi Gas
   author: Fröhlich, Bernd
   date: 2011-07
-  organization: University of Cambridge
+  publisher: University of Cambridge
 feld_low_2011:
   type: thesis
   title: Low temperature phases of interacting fermions in two dimensions
   author: Feld, Michael
   date: 2011-08
-  organization: University of Cambridge
+  publisher: University of Cambridge
 drewes_thermodynamics_2020:
   type: thesis
   title: Thermodynamics and correlations of ultracold fermions in a two-dimensional optical lattice
   author: Drewes, Jan
   date: 2020
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 cocchi_analogue_2016:
   type: thesis
   title: Analogue Quantum Simulation of the Two-Dimensional Hubbard Model with Ultracold Fermions
   author: Cocchi, Eugenio
   date: 2016-10
-  organization: University of Cambridge
+  publisher: University of Cambridge
 chan_quantum_2019:
   type: thesis
   title: Quantum simulation of strongly-correlated two-dimensional fermions in optical lattices
   author: Chan, C. F.
   date: 2019
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 gall_quantum_2020:
   type: thesis
   title: Quantum Simulation of the Bilayer Hubbard Model Using Ultracold Atoms
   author: Gall, Marcell
   date: 2020
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 gorg_exploring_2019:
   type: thesis
   title: Exploring and Floquet-Engineering the Driven Fermi-Hubbard Model with Ultracold Atoms
   author: Görg, Frederik
   date: 2019
-  organization: "{ETH} Zurich"
+  publisher: "{ETH} Zurich"
   url:
     value: https://www.research-collection.ethz.ch/handle/20.500.11850/361822
     date: 2020-01-30
@@ -1155,7 +1155,7 @@ greiner_ultracold_2003:
   title: Ultracold quantum gases in three-dimensional optical lattice potentials
   author: Greiner, Markus
   date: 2003-01-22
-  organization: Ludwig-Maximilians-Universität München
+  publisher: Ludwig-Maximilians-Universität München
 rahav_effective_2003:
   type: article
   title: Effective Hamiltonians for periodically driven systems
@@ -1204,7 +1204,7 @@ bergschneider_strong_2017:
   title: Strong correlations in few-fermion systems
   author: Bergschneider, Andrea
   date: 2017
-  organization: Ruprecht-Karls-Universität Heidelberg
+  publisher: Ruprecht-Karls-Universität Heidelberg
   url:
     value: https://archiv.ub.uni-heidelberg.de/volltextserver/23328/
     date: 2022-01-10
@@ -1477,7 +1477,7 @@ bissbort_dynamical_2012:
   title: Dynamical effects and disorder in ultracold bosonic matter
   author: Bissbort, Ulf
   date: 2012
-  organization: Johann Wolfgang Goethe-Universität Frankfurt am Main
+  publisher: Johann Wolfgang Goethe-Universität Frankfurt am Main
   url:
     value: http://publikationen.ub.uni-frankfurt.de/frontdoor/index/index/docId/28591
     date: 2024-11-25
@@ -1951,7 +1951,7 @@ klemmer_ultracold_2024:
   title: Ultracold fermions in periodically-driven superlattices
   author: Klemmer, Nick
   date: 2024
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 breit_measurement_1931:
   type: article
   title: Measurement of Nuclear Spin
@@ -1997,7 +1997,7 @@ klemmer_cavity_2018:
   title: Cavity design for high-power frequency doubling
   author: Klemmer, Nick
   date: 2018-07
-  organization: Rheinische Friedrich-Wilhelms-Universität Bonn
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 slater_simplified_1954:
   type: article
   title: Simplified {LCAO} Method for the Periodic Potential Problem
