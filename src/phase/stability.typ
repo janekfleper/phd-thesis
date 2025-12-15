@@ -280,7 +280,7 @@ The phase measurement is done with a camera that captures the interference fring
 The reported short-term stability is $0.003 pi approx #qty[9.4][mrad]$ in #qty[10][s], and the typical drift of the phase in #qty[90][min] is $0.03 pi$.
 Regular compensation measurements are required to ensure the long-term phase stability.
 
-Another shallow-angle superlattice using the wavelengths #qty[1064][nm] and #qty[532][nm] is introduced in @chalopin_optical_2024.
+Another shallow-angle superlattice using the wavelengths #qty[1064][nm] and #qty[532][nm] is introduced in @chalopin_optical_2025.
 The tunability of the superlattice phase is achieved with a difference in the path length of approximately #qty[40][cm].
 To ensure a passive stability of the superlattice, the optical setup is placed into an evacuated box and the optical elements are glued onto a near-zero thermal expansion glass plate.
 The superlattice phase is inferred from the double-well population after loading the atoms around the symmetric configuration.

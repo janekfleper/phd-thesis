@@ -56,7 +56,7 @@ Floquet-driven optical lattices have been used to realize the dynamic localizati
 In bichromatic superlattices, the tunability and environmental sensitivity of the superlattice phase are inevitably linked.
 The optical path lengths of the individual lattices are sensitive to changes of the refractive indices in air and the optical elements.
 Therefore, constructing a bichromatic superlattice with a stable yet tunable phase requires significant technical effort.
-Current experimental setups range from equal path lengths for an intrinsic phase stability @li_high-powered_2021 to optical paths in an evacuated box to suppress environmental phase sensitivity @chalopin_optical_2024.
+Current experimental setups range from equal path lengths for an intrinsic phase stability @li_high-powered_2021 to optical paths in an evacuated box to suppress environmental phase sensitivity @chalopin_optical_2025.
 
 All optical lattices, regardless of their geometry, require calibration of the lattice depth and the inhomogeneity due to the intensity profiles of the underlying Gaussian laser beams.
 The Hubbard parameters depend on the depth of the optical lattice, and the inhomogeneity determines the confinement of the atoms in the lattice potential.

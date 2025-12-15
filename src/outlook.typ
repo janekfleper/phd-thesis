@@ -20,7 +20,7 @@ With local resolution of the superlattice phase, we are able to compensate phase
 For the long-term stability of the superlattice phase we developed an active stabilization using environmental sensors along the optical path between the position of the atoms and the retro-reflecting mirror.
 We compute the phase correction from the refractive indices and the environmental parameters.
 With the active correction of the superlattice phase, we achieve an excellent phase stability with a standard deviation $sqrt(Delta phi^2) = #qty[1.27][mrad]$ over more than #qty[16][h].
-Other experimental setups with comparable tunability of the superlattice phase rely on a passive stabilization through equal path lengths @li_high-powered_2021 or an evacuated beam path @chalopin_optical_2024, which requires significant effort to develop the necessary hardware.
+Other experimental setups with comparable tunability of the superlattice phase rely on a passive stabilization through equal path lengths @li_high-powered_2021 or an evacuated beam path @chalopin_optical_2025, which requires significant effort to develop the necessary hardware.
 In contrast, the active stabilization technique presented in this thesis can be used to upgrade an existing optical setup, and we achieve a significantly better short- and long-term phase stability.
 
 We have developed the in-situ #lms for calibrating the lattice depths with local resolution.
