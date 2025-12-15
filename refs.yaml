@@ -696,7 +696,7 @@ corning_fused_2015:
   title: Fused Silica - Optical Materials Product Information
   author: Corning
   date: 2015
-  url: https://www.corning.com/media/worldwide/csm/documents/HPFS_Product_Brochure_All_Grades_2015_07_21.pdf
+  # url: https://www.corning.com/media/worldwide/csm/documents/HPFS_Product_Brochure_All_Grades_2015_07_21.pdf
 saleh_fundamentals_2019:
   type: book
   title: Fundamentals of Photonics
@@ -2086,9 +2086,9 @@ corning_ultra-low_2016:
   title: Ultra-Low Expansion Glass Data Sheet
   author: Corning
   date: 2016-01
-  url:
-    value: https://www.corning.com/emea/de/products/advanced-optics/product-materials/semiconductor-laser-optic-components/ultra-low-expansion-glass.html
-    date: 2025-08-14
+  # url:
+  #   value: https://www.corning.com/emea/de/products/advanced-optics/product-materials/semiconductor-laser-optic-components/ultra-low-expansion-glass.html
+  #   date: 2025-08-14
 franta_wide_2025:
   type: article
   title: Wide spectral range optical characterization of terbium gallium garnet ({TGG}) single crystal by universal dispersion model
@@ -2116,18 +2116,17 @@ corning_optigrade_2024:
   title: "{OptiGrade}™ Calcium Fluoride Data Sheet"
   author: Corning
   date: 2024-06
-  url:
-    value: https://www.corning.com/media/worldwide/csm/documents/Corning_AdvancedOptics_OpticalGradeCaF2_DataSheet.pdf
-    date: 2025-08-15
+  # url:
+  #   value: https://www.corning.com/media/worldwide/csm/documents/Corning_AdvancedOptics_OpticalGradeCaF2_DataSheet.pdf
+  #   date: 2025-08-15
 schott_zerodur_2024:
   type: misc
   title: "{ZERODUR}® Data Sheet"
   author: SCHOTT
   date: 2024-08
-  url:
-    value: https://www.schott.com/de-de/products/zerodur-p1000269/downloads
-    date: 2025-08-20
-  abstract: Klicken Sie hier, um das Angebot an Broschüren, Datenblättern und Downloads für {SCHOTT} {ZERODUR}® Glas mit geringer Wärmeausdehnung zu entdecken
+  # url:
+  #   value: https://www.schott.com/de-de/products/zerodur-p1000269/downloads
+  #   date: 2025-08-20
 humbach_analysis_1996:
   type: article
   title: Analysis of {OH} absorption bands in synthetic silica
@@ -2164,9 +2163,9 @@ xygkis_absorption_2023:
     - Rakitzis, T. Peter
   date: 2023-03-21
   publisher: Optica Open
-  url:
-    value: https://preprints.opticaopen.org/articles/preprint/Absorption_coefficients_and_scattering_losses_of_TGG_TGP_KTF_FS_and_CeF_magneto-optic_crystals_in_the_visible_via_cavity_ring_down_spectroscopy/22303453/1
-    date: 2025-08-21
+  # url:
+  #   value: https://preprints.opticaopen.org/articles/preprint/Absorption_coefficients_and_scattering_losses_of_TGG_TGP_KTF_FS_and_CeF_magneto-optic_crystals_in_the_visible_via_cavity_ring_down_spectroscopy/22303453/1
+  #   date: 2025-08-21
   serial-number:
     doi: 10.1364/opticaopen.22303453.v1
   abstract: We demonstrate a method for determining small absorption coefficients and surface scattering losses of crystals using cavity ring down spectroscopy, and perform measurements on crystals of {TGG}, {TGP}, {FS}, {KTF}, and {CeF}₃, at 532nm and 634nm. We separate the surface-scattering and absorption losses by using crystals of different length. The measurements differ from those in the literature, especially for small absorption coefficients. We define a figure of merit ({FoM}) for magneto-optic crystals in signal-reversing cavity-ringdown polarimetry, which depends on the cavity losses, and on the crystal Verdet constant and absorption coefficient, and use it to evaluate the crystals for suitability for intra-cavity applications. We show that {TGP} has a significantly higher {FoM} compared to the other crystals, for crystal lengths up to 16 mm, whereas {CeF}₃ and {FS} outperform {TGP} for longer crystals.
@@ -2281,9 +2280,9 @@ vishay_selecting_2015:
   title: Selecting {NTC} Thermistors
   author: Vishay
   date: 2015-07-14
-  url:
-    value: https://www.vishay.com/docs/33001/seltherm.pdf
-    date: 2025-09-13
+  # url:
+  #   value: https://www.vishay.com/docs/33001/seltherm.pdf
+  #   date: 2025-09-13
 bukov_universal_2015:
   type: article
   title:
