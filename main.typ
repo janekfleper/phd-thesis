@@ -27,7 +27,9 @@
 
 #{
   set page(numbering: "i")
+  set heading(numbering: none, outlined: false)
   counter(page).update(1)
+  include "src/abstract.typ"
 
   // do not include the table of contents itself in the table of contents...
   show outline: set heading(outlined: false)
