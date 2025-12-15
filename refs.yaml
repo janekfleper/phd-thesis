@@ -1344,10 +1344,13 @@ jurgensen_observation_2014:
     - Mark, Manfred J
     - Nägerl, Hanns-Christoph
     - Lühmann, Dirk-Sören
-  date: 2014
+  date: 2014-11-07
+  page-range: "193003"
   parent:
     type: periodical
-    title: "{PHYSICAL} {REVIEW} {LETTERS}"
+    title: Physical Review Letters
+    issue: 19
+    volume: 113
 schott_tie-31_2018:
   type: misc
   title: "{TIE}-31 Mechanical and thermal properties of optical glass"
