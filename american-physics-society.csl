@@ -147,7 +147,7 @@
         </else-if>
         <else-if type="thesis report" match="any">
           <group delimiter=", ">
-            <text variable="title" text-case="title"/>
+            <text variable="title"/>
             <group delimiter=" ">
               <text variable="genre"/>
               <group delimiter=" ">
