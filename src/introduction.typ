@@ -61,7 +61,7 @@ Current experimental setups range from equal path lengths for an intrinsic phase
 All optical lattices, regardless of their geometry, require calibration of the lattice depth and the inhomogeneity due to the intensity profiles of the underlying Gaussian laser beams.
 The Hubbard parameters depend on the depth of the optical lattice, and the inhomogeneity determines the confinement of the atoms in the lattice potential.
 The most commonly used technique to calibrate the lattice depth involves modulating the optical lattice to probe the band structure @friebel_co_1998, followed by detecting the occupation of the energy bands in momentum space using the band-mapping technique @kohl_fermionic_2005.
-The inhomogeneity of the lattice potential is typically calibrated through the trap frequencies perpendicular to the lattice axis @miller_ultracold_2016.
+The inhomogeneity of the lattice potential is typically calibrated through the radial trap frequencies analogous to optical dipole traps @grimm_optical_2000.
 
 In this thesis, I will present our work on ultracold fermions in a three-dimensional optical lattice, focusing on the stability of the in-plane, bichromatic superlattice to study pair-tunneling dynamics.
 For the precise calibration of the optical lattices, we develop a modulation technique that spatially resolves the lattice depths.
