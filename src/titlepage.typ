@@ -1,6 +1,6 @@
 #let titlepage(title: none, author: none, birthplace: none, date: none) = {
   set document(title: title, author: author, date: date)
-  set page(numbering: none, header: none, footer: none)
+  set page(numbering: none, header: none, footer: none, margin: (left: auto, right: auto))
   set text(lang: "de", size: 12pt)
   set align(center)
 
