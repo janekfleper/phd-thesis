@@ -14,7 +14,6 @@ schneider_ab-initio_2009:
     arxiv: "0903.3185"
     doi: 10.1103/PhysRevA.80.013404
     issn: 1050-2947, 1094-1622
-  abstract: We calculate numerically the exact energy spectrum of the six dimensional problem of two interacting Bosons in a three-well optical lattice. The particles interact via a full Born-Oppenheimer potential which can be adapted to model the behavior of the s-wave scattering length at Feshbach resonances. By adjusting the parameters of the corresponding Bose-Hubbard ({BH}) Hamiltonian the deviation between the numerical energy spectrum and the {BH} spectrum is minimized. This defines the optimal {BH} parameter set which we compare to the standard parameters of the {BH} model. The range of validity of the {BH} model with these parameter sets is examined, and an improved analytical prediction of the interaction parameter is introduced. Furthermore, an extended {BH} model and implications due to the energy dependence of the scattering length and couplings to higher Bloch bands at a Feshbach resonance are discussed.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -38,7 +37,6 @@ gorg_enhancement_2018:
   serial-number:
     doi: 10.1038/nature25135
     issn: 1476-4687
-  abstract: By periodically modulating the position of degenerate fermions unidirectionally in a three-dimensional optical lattice, antiferromagnetic correlations in this many-body system can be reduced, enhanced or even switched to ferromagnetic correlations.
   parent:
     type: periodical
     title: Nature
@@ -59,7 +57,6 @@ goldman_periodically_2014:
     date: 2020-01-30
   serial-number:
     doi: 10.1103/PhysRevX.4.031027
-  abstract: "Driving a quantum system periodically in time can profoundly alter its long-time dynamics and trigger topological order. Such schemes are particularly promising for generating nontrivial energy bands and gauge structures in quantum-matter systems. Here, we develop a general formalism that captures the essential features ruling the dynamics: the effective Hamiltonian, but also the effects related to the initial phase of the modulation and the micromotion. This framework allows for the identification of driving schemes, based on general N-step modulations, which lead to configurations relevant for quantum simulation. In particular, we explore methods to generate synthetic spin-orbit couplings and magnetic fields in cold-atom setups."
   parent:
     type: periodical
     title: Physical Review {X}
@@ -80,7 +77,6 @@ chin_feshbach_2010:
     date: 2019-01-30
   serial-number:
     doi: 10.1103/RevModPhys.82.1225
-  abstract: Feshbach resonances are the essential tool to control the interaction between atoms in ultracold quantum gases. They have found numerous experimental applications, opening up the way to important breakthroughs. This review broadly covers the phenomenon of Feshbach resonances in ultracold gases and their main applications. This includes the theoretical background and models for the description of Feshbach resonances, the experimental methods to find and characterize the resonances, a discussion of the main properties of resonances in various atomic species and mixed atomic species systems, and an overview of key experiments with atomic Bose-Einstein condensates, degenerate Fermi gases, and ultracold molecules.
   parent:
     type: periodical
     title: Reviews of Modern Physics
@@ -108,7 +104,6 @@ ville_loading_2017:
     date: 2019-01-25
   serial-number:
     doi: 10.1103/PhysRevA.95.013632
-  abstract: The experimental realization of two-dimensional (2D) Bose gases with a tunable interaction strength is an important challenge for the study of ultracold quantum matter. Here we report on the realization of an optical accordion creating a lattice potential with a spacing that can be dynamically tuned between 11 and 2 μm. We show that we can load ultracold 87Rb atoms into a single node of this optical lattice in the large spacing configuration and then decrease nearly adiabatically the spacing to reach a strong harmonic confinement with frequencies larger than ωz/2π=10 {kHz}. Atoms are trapped in an additional flat-bottom in-plane potential that is shaped with a high resolution. By combining these tools we create custom-shaped uniform 2D Bose gases with tunable confinement along the transverse direction and hence with a tunable interaction strength.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -144,7 +139,6 @@ ludewig_feshbach_2012:
   date: 2012
   publisher: Universiteit van Amsterdam
   note: "{OCLC}: 788564450"
-  abstract: "De wisselwerking tussen deeltjes bepaalt de eigenschappen van alle materie. Als het mogelijk is de wisselwerking in te stellen, kunnen deze eigenschappen worden veranderd. Er is een mechanisme bekend om de wisselwerking tussen sommige atoomsoorten te veranderen: de zogeheten Feshbach-resonanties. Deze resonanties kunnen optreden in ultrakoude atomen. Het mechanisme werkt alleen als de atomen in gasvorm zijn en tot dichtbij het absolute nulpunt zijn gekoeld. Feshbach-resonanties in ultrakoude atomen zijn al enige tijd bekend. De juiste magnetische veldsterktes waarbij deze resonanties optreden zijn echter nog onbekend en moeten voor elke atoomsoort opnieuw worden bepaald. Antje Ludewig bepaalde voor de kaliumisotoop 40K de waarden van 23 magnetische velden, waar de wisselwerking kan worden toegepast. Deze waarden worden gebruikt om theoretische modellen te verbeteren, zodat het makkelijker wordt Feshbach-resonanties in andere atoomsoorten te voorspellen. Als de wisselwerking tussen ultrakoude atomen ingesteld kan worden, kunnen ultrakoude atomen gebruikt worden als modelsysteem voor het oplossen van andere problemen in de natuurkunde zoals hoge-temperatuursupergeleiding of het gedrag van neutronensterren."
 friebel_co_1998:
   type: article
   title: "{CO} 2 -laser optical lattice with cold rubidium atoms"
@@ -189,7 +183,6 @@ li_high-powered_2021:
     doi: 10.1364/OE.423776
     issn: 1094-4087
   note: "Publisher: Optical Society of America"
-  abstract: Optical superlattice has a wide range of applications in the study of ultracold atom physics. Especially, it can be used to trap and manipulate thousands of atom pairs in parallel which constitutes a promising system for quantum simulation and quantum computation. In the present work, we report on a high-power optical superlattice formed by a 532-nm and 1064-nm dual-wavelength interferometer with a short lattice spacing of 630 nm. The short-term fluctuation (in 10 seconds) of the relative phase between the short lattice and the long lattice is measured to be 0.003&#x03C0;, which satisfies the needs for performing two-qubit gates among neighboring lattice sites. We further implement this superlattice in a 87Rb experiment with a quantum gas microscope of single-site resolution, where the high-power 532-nm laser is necessary for pinning atoms in the short lattice during imaging, providing a unique platform for engineering quantum states.
   parent:
     type: periodical
     title: Optics Express
@@ -222,7 +215,6 @@ pertot_relaxation_2014:
     arxiv: "1407.6037"
     doi: 10.1103/PhysRevLett.113.170403
     issn: 0031-9007, 1079-7114
-  abstract: This paper comprises an experimental and theoretical investigation of the time evolution of a Fermi gas following fast and slow quenches of a one-dimensional optical double-well superlattice potential. We investigate both the local tunneling in the connected double wells and the global dynamics towards a steady state. The local observables in the steady-state resemble those of an equilibrium state, whereas the global properties indicate a strong non-equilibrium situation.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -267,7 +259,6 @@ nakajima_topological_2016:
     arxiv: "1507.02223"
     doi: 10.1038/nphys3622
     issn: 1745-2473, 1745-2481
-  abstract: A gas of electrons in a one-dimensional periodic potential can be transported even in the absence of a voltage bias if the potential is modulated slowly and periodically in time. Remarkably, the transferred charge per cycle is only sensitive to the topology of the path in parameter space. Although this so-called Thouless charge pump has first been proposed more than thirty years ago, it has not yet been realized. Here we report the first demonstration of topological Thouless pumping using ultracold atoms in a dynamically controlled optical superlattice. We observe a shift of the atomic cloud as a result of pumping and extract the topological invariance of the pumping process from this shift. We demonstrate the topological nature of the Thouless pump by varying the topology of the pumping path and verify that the topological pump indeed works in the quantum region by varying speed and temperature.
   parent:
     type: periodical
     title: Nature Physics
@@ -315,7 +306,6 @@ gall_competing_2021:
     doi: 10.1038/s41586-020-03058-x
     issn: 1476-4687
   note: "Number: 7840 Publisher: Nature Publishing Group"
-  abstract: Fermionic atoms in optical lattices have served as a useful model system in which to study and emulate the physics of strongly correlated matter. Driven by the advances of high-resolution microscopy, the current research focus is on two-dimensional systems1–3, in which several quantum phases—such as antiferromagnetic Mott insulators for repulsive interactions4–7 and charge-density waves for attractive interactions8—have been observed. However, the lattice structure of real materials, such as bilayer graphene, is composed of coupled layers and is therefore not strictly two-dimensional, which must be taken into account in simulations. Here we realize a bilayer Fermi–Hubbard model using ultracold atoms in an optical lattice, and demonstrate that the interlayer coupling controls a crossover between a planar antiferromagnetically ordered Mott insulator and a band insulator of spin-singlets along the bonds between the layers. We probe the competition of the magnetic ordering by measuring spin–spin correlations both within and between the two-dimensional layers. Our work will enable the exploration of further properties of coupled-layer Hubbard models, such as theoretically predicted superconducting pairing mechanisms9,10.
   parent:
     type: periodical
     title: Nature
@@ -342,7 +332,6 @@ drewes_antiferromagnetic_2017:
   serial-number:
     doi: 10.1103/PhysRevLett.118.170401
   note: "Publisher: American Physical Society"
-  abstract: We experimentally study the emergence of antiferromagnetic correlations between ultracold fermionic atoms in a two-dimensional optical lattice with decreasing temperature. We determine the uniform magnetic susceptibility of the two-dimensional Hubbard model from simultaneous measurements of the in situ density distribution of both spin components. At half filling and strong interactions our data approach the Heisenberg model of localized spins with antiferromagnetic correlations. Moreover, we observe a fast decay of magnetic correlations when doping the system away from half filling.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -431,7 +420,6 @@ lignier_dynamical_2007:
     date: 2019-11-25
   serial-number:
     doi: 10.1103/PhysRevLett.99.220403
-  abstract: We report on measurements of dynamical suppression of interwell tunneling of a Bose-Einstein condensate ({BEC}) in a strongly driven optical lattice. The strong driving is a sinusoidal shaking of the lattice corresponding to a time-varying linear potential, and the tunneling is measured by letting the {BEC} freely expand in the lattice. The measured tunneling rate is reduced and, for certain values of the shaking parameter, completely suppressed. Our results are in excellent agreement with theoretical predictions. Furthermore, we have verified that, in general, the strong shaking does not destroy the phase coherence of the {BEC}, opening up the possibility of realizing quantum phase transitions by using the shaking strength as the control parameter.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -451,7 +439,6 @@ bednorz_possible_1986:
   serial-number:
     doi: 10.1007/BF01303701
     issn: 1431-584X
-  abstract: Metallic, oxygen-deficient compounds in the Ba−La−Cu−O system, with the composition {BaxLa}5−{xCu}5O5(3−y) have been prepared in polycrystalline form. Samples withx=1 and 0.75,y{>}0, annealed below 900°C under reducing conditions, consist of three phases, one of them a perovskite-like mixed-valent copper compound. Upon cooling, the samples show a linear decrease in resistivity, then an approximately logarithmic increase, interpreted as a beginning of localization. Finally an abrupt decrease by up to three orders of magnitude occurs, reminiscent of the onset of percolative superconductivity. The highest onset temperature is observed in the 30 K range. It is markedly reduced by high current densities. Thus, it results partially from the percolative nature, bute possibly also from 2D superconducting fluctuations of double perovskite layers of one of the phases present.
   parent:
     type: periodical
     title: Zeitschrift für Physik B Condensed Matter
@@ -484,7 +471,6 @@ cocchi_equation_2016:
   serial-number:
     doi: 10.1103/PhysRevLett.116.175301
   note: "Publisher: American Physical Society"
-  abstract: The subtle interplay between kinetic energy, interactions, and dimensionality challenges our comprehension of strongly correlated physics observed, for example, in the solid state. In this quest, the Hubbard model has emerged as a conceptually simple, yet rich model describing such physics. Here we present an experimental determination of the equation of state of the repulsive two-dimensional Hubbard model over a broad range of interactions 0≲U/t≲20 and temperatures, down to {kBT}/t=0.63(2) using high-resolution imaging of ultracold fermionic atoms in optical lattices. We show density profiles, compressibilities, and double occupancies over the whole doping range, and, hence, our results constitute benchmarks for state-of-the-art theoretical approaches.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -508,7 +494,6 @@ inouye_observation_1998:
   serial-number:
     doi: 10.1038/32354
     issn: 1476-4687
-  abstract: It has long been predicted that the scattering of ultracold atoms can be altered significantly through a so-called ‘Feshbach resonance’. Two such resonances have now been observed in optically trapped Bose–Einstein condensates of sodium atoms by varying an external magnetic field. They gave rise to enhanced inelastic processes and a dispersive variation of the scattering length by a factor of over ten. These resonances open new possibilities for the study and manipulation of Bose–Einstein condensates.
   parent:
     type: periodical
     title: Nature
@@ -535,7 +520,6 @@ wurz_coherent_2018:
   serial-number:
     doi: 10.1103/PhysRevA.97.051602
   note: "Publisher: American Physical Society"
-  abstract: We coherently manipulate spin correlations in a two-component atomic Fermi gas loaded into an optical lattice using spatially and time-resolved Ramsey spectroscopy combined with high-resolution in situ imaging. This technique allows us not only to imprint spin patterns but also to probe the static magnetic structure factor at an arbitrary wave vector, in particular, the staggered structure factor. From a measurement along the diagonal of the first Brillouin zone of the optical lattice, we determine the magnetic correlation length and the individual spatial spin correlators. At half filling, the staggered magnetic structure factor serves as a sensitive thermometer, which we employ to study the equilibration in the spin and density sector during a slow quench of the lattice depth.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -553,7 +537,6 @@ esslinger_fermi-hubbard_2010:
   serial-number:
     doi: 10.1146/annurev-conmatphys-070909-104059
   note: "Publisher: Annual Reviews"
-  abstract: The Fermi-Hubbard model is a key concept in condensed matter physics and provides crucial insights into electronic and magnetic properties of materials. Yet, the intricate nature of Fermi systems poses a barrier to answering important questions concerning d-wave superconductivity and quantum magnetism. Recently, it has become possible to experimentally realize the Fermi-Hubbard model using a fermionic quantum gas loaded into an optical lattice. In this atomic approach to the Fermi-Hubbard model, the Hamiltonian is a direct result of the optical lattice potential created by interfering laser fields and short-ranged ultracold collisions. It provides a route to simulate the physics of the Hamiltonian and to address open questions and novel challenges of the underlying many-body system. This review gives an overview of the current efforts in understanding and realizing experiments with fermionic atoms in optical lattices and discusses key experiments in the metallic, band-insulating, superfluid, and Mott-insulating regimes.
   parent:
     type: periodical
     title: Annual Review of Condensed Matter Physics
@@ -577,7 +560,6 @@ kohl_fermionic_2005:
   serial-number:
     doi: 10.1103/PhysRevLett.94.080403
   note: "Publisher: American Physical Society"
-  abstract: We have studied interacting and noninteracting quantum degenerate Fermi gases in a three-dimensional optical lattice. We directly image the Fermi surface of the atoms in the lattice by turning off the optical lattice adiabatically. Because of the confining potential, gradual filling of the lattice transforms the system from a normal state into a band insulator. The dynamics of the transition from a band insulator to a normal state is studied, and the time scale is measured to be an order of magnitude larger than the tunneling time in the lattice. Using a Feshbach resonance, we increase the interaction between atoms in two different spin states and dynamically induce a coupling between the lowest energy bands. We observe a shift of this coupling with respect to the Feshbach resonance in free space which is anticipated for strongly confined atoms.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -620,7 +602,6 @@ demarco_onset_1999:
     doi: 10.1126/science.285.5434.1703
     issn: 0036-8075, 1095-9203
   note: "Publisher: American Association for the Advancement of Science Section: Report"
-  abstract: '{<}p{>}An evaporative cooling strategy that uses a two-component Fermi gas was employed to cool a magnetically trapped gas of 7 × 10$^\{\\textrm\{5\}\}$$^\{\\textrm\{40\}\}$K atoms to 0.5 of the Fermi temperature\\textit\{T\}$_\{\\textrm\{F\}\}$. In this temperature regime, where the state occupation at the lowest energies has increased from essentially zero at high temperatures to nearly 60 percent, quantum degeneracy was observed as a barrier to evaporative cooling and as a modification of the thermodynamics. Measurements of the momentum distribution and the total energy of the confined Fermi gas directly revealed the quantum statistics.{<}/p{>}'
   parent:
     type: periodical
     title: Science
@@ -661,7 +642,6 @@ folling_direct_2007:
     doi: 10.1038/nature06112
     issn: 1476-4687
   note: "Number: 7157 Publisher: Nature Publishing Group"
-  abstract: Direct, time-resolved observations of the correlated tunnelling of two interacting ultracold atoms through a barrier in a double-well potential are reported. Second-order tunnelling events, which are found to be the dominating dynamical effect in the strongly interacting regime, have not been previously directly observed with ultracold atoms.
   parent:
     type: periodical
     title: Nature
@@ -685,7 +665,6 @@ tarruell_creating_2012:
     doi: 10.1038/nature10871
     issn: 1476-4687
   note: "Number: 7389 Publisher: Nature Publishing Group"
-  abstract: A tunable optical lattice is used to engineer massless and massive Dirac fermions and realize the topological transition at which two Dirac points merge and annihilate each other.
   parent:
     type: periodical
     title: Nature
@@ -742,7 +721,6 @@ malitson_interspecimen_1965:
   serial-number:
     doi: 10.1364/JOSA.55.001205
   note: "Publisher: Optical Society of America"
-  abstract: The index of refraction of optical quality fused silica ({SiO}2) was determined for 60 wavelengths from 0.21 to 3.71 μ at 20°C. The dispersion equation n2-1=0.6961663λ2λ2-(0.0684043)2+0.4079426λ2λ2-(0.1162414)2+0.8974794λ2λ2-(9.896161)2.where λ is expressed in microns was found to yield an absolute residual of 10.5×10−6. The variation in index between 12 specimens was determined. Dispersive properties of the material and thermal coefficient of index are graphically presented. A comparison with previous {NBS} index data is discussed.
   parent:
     type: periodical
     title: "{JOSA}"
@@ -765,7 +743,6 @@ reinaudi_strong_2007:
     doi: 10.1364/OL.32.003143
     issn: 1539-4794
   note: "Publisher: Optical Society of America"
-  abstract: We report on a far above saturation absorption imaging technique to investigate the characteristics of dense packets of ultracold atoms. The transparency of the cloud is controlled by the incident light intensity as a result of the nonlinear response of the atoms to the probe beam. We detail our experimental procedure to calibrate the imaging system for reliable quantitative measurements and demonstrate the use of this technique to extract the profile and its spatial extent of an optically thick atomic cloud.
   parent:
     type: periodical
     title: Optics Letters
@@ -786,7 +763,6 @@ ciddor_refractive_1996:
     doi: 10.1364/AO.35.001566
     issn: 2155-3165
   note: "Publisher: Optical Society of America"
-  abstract: The precision of modern length interferometry and geodetic surveying far exceeds the accuracy, which is ultimately limited by the inadequacy of currently used equations for the refractive index of the atmosphere. I have critically reviewed recent research at the National Physical Laboratory, the International Bureau of Weights and Measures, and elsewhere that has led to revised formulas and data for the dispersion and density of the major components of the atmosphere. I have combined selected formulas from these sources to yield a set of equations that match recently reported measurements to within the experimental error, and that are expected to be reliable over very wide ranges of atmospheric parameters and wavelength.
   parent:
     type: periodical
     title: Applied Optics
@@ -803,7 +779,6 @@ foot_atomic_2005:
   page-total: 346
   serial-number:
     isbn: 978-0-19-850696-6
-  abstract: This text will thoroughly update the existing literature on atomic physics. Intended to accompany an advanced undergraduate course in atomic physics, the book will lead the students up to the latest advances and the applications to Bose-Einstein Condensation of atoms, matter-wave inter-ferometry and quantum computing with trapped ions. The elementary atomic physics covered in the early chapters should be accessible to undergraduates when they are first introduced to the subject. To complement the usual quantum mechanical treatment of atomic structure the book strongly emphasizes the experimental basis of the subject, especially in the later chapters. It includes ample tutorial material (examples, illustrations, chapter summaries, graded problem sets).
   parent:
     type: book
     title: Oxford Master Series in Physics
@@ -895,7 +870,6 @@ desbuquois_controlling_2017:
   serial-number:
     doi: 10.1103/PhysRevA.96.053602
   note: "Publisher: American Physical Society"
-  abstract: Near-resonant periodic driving of quantum systems promises the implementation of a large variety of novel quantum states, though their preparation and measurement remains challenging. We address these aspects in a model system consisting of interacting fermions in a periodically driven array of double wells created by an optical lattice. The singlet and triplet fractions and the double occupancy of the Floquet states are measured and their behavior as a function of the interaction strength is analyzed in the high- and low-frequency regimes. We demonstrate full control of the Floquet state population and find suitable ramping protocols and time scales that adiabatically connect the initial ground state to different targeted Floquet states. The micromotion that exactly describes the time evolution of the system within one driving cycle is observed. Additionally, we provide an analytic description of the model and compare it to numerical simulations.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -921,7 +895,6 @@ windpassinger_engineering_2013:
   serial-number:
     doi: 10.1088/0034-4885/76/8/086401
     issn: 0034-4885, 1361-6633
-  abstract: Optical lattices have developed into a widely used and highly recognized tool to study many-body quantum physics with special relevance for solid state type systems. One of the most prominent reasons for this success is the high degree of tunability in the experimental setups. While at the beginning quasi-static, cubic geometries were mainly explored, the focus of the ﬁeld has now shifted toward new lattice topologies and the dynamical control of lattice structures. In this review we intend to give an overview of the progress recently achieved in this ﬁeld on the experimental side. In addition, we discuss theoretical proposals exploiting speciﬁcally these novel lattice geometries. This article was invited by Professor Gordon Baym.
   parent:
     type: periodical
     title: Reports on Progress in Physics
@@ -994,7 +967,6 @@ jaksch_cold_2005:
   serial-number:
     doi: 10.1016/j.aop.2004.09.010
     issn: 0003-4916
-  abstract: We review recent theoretical advances in cold atom physics concentrating on strongly correlated cold atoms in optical lattices. We discuss recently developed quantum optical tools for manipulating atoms and show how they can be used to realize a wide range of many body Hamiltonians. Then, we describe connections and differences to condensed matter physics and present applications in the fields of quantum computing and quantum simulations. Finally, we explain how defects and atomic quantum dots can be introduced in a controlled way in optical lattice systems.
   parent:
     type: periodical
     title: Annals of Physics
@@ -1014,7 +986,6 @@ soni_density_2016:
   serial-number:
     doi: 10.1103/PhysRevA.94.063404
   note: "Publisher: American Physical Society"
-  abstract: We simulate a one-dimensional fermionic optical lattice to analyze heating due to nonadiabatic lattice loading. Our simulations reveal that, similar to the bosonic case, density redistribution effects are the major cause of heating in harmonic traps. We suggest protocols to modulate the local-density distribution during the process of lattice loading in order to reduce the excess energy. Our numerical results confirm that linear interpolation of the trapping potential and/or the interaction strength is an efficient method of doing so, bearing practical applications relevant to experiments.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -1038,7 +1009,6 @@ truscott_observation_2001:
     doi: 10.1126/science.1059318
     issn: 0036-8075, 1095-9203
   note: "Publisher: American Association for the Advancement of Science Section: Report"
-  abstract: We report the attainment of simultaneous quantum degeneracy in a mixed gas of bosons (lithium-7) and fermions (lithium-6). The Fermi gas has been cooled to a temperature of 0.25 times the Fermi temperature by thermal collisions with the evaporatively cooled bosons. At this temperature, the spatial size of the gas is strongly affected by the Fermi pressure resulting from the Pauli exclusion principle and gives clear experimental evidence for quantum degeneracy.
   parent:
     type: periodical
     title: Science
@@ -1061,7 +1031,6 @@ jaksch_cold_1998:
   serial-number:
     doi: 10.1103/PhysRevLett.81.3108
   note: "Publisher: American Physical Society"
-  abstract: The dynamics of an ultracold dilute gas of bosonic atoms in an optical lattice can be described by a Bose-Hubbard model where the system parameters are controlled by laser light. We study the continuous (zero temperature) quantum phase transition from the superfluid to the Mott insulator phase induced by varying the depth of the optical potential, where the Mott insulator phase corresponds to a commensurate filling of the lattice (“optical crystal”). Examples for formation of Mott structures in optical lattices with a superimposed harmonic trap and in optical superlattices are presented.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1081,7 +1050,6 @@ bloch_many-body_2008:
     date: 2019-01-30
   serial-number:
     doi: 10.1103/RevModPhys.80.885
-  abstract: This paper reviews recent experimental and theoretical progress concerning many-body phenomena in dilute, ultracold gases. It focuses on effects beyond standard weak-coupling descriptions, such as the Mott-Hubbard transition in optical lattices, strongly interacting gases in one and two dimensions, or lowest-Landau-level physics in quasi-two-dimensional gases in fast rotation. Strong correlations in fermionic gases are discussed in optical lattices or near-Feshbach resonances in the {BCS}-{BEC} crossover.
   parent:
     type: periodical
     title: Reviews of Modern Physics
@@ -1098,7 +1066,6 @@ hubbard_electron_1963:
   serial-number:
     doi: 10.1098/rspa.1963.0204
   note: "Publisher: The Royal Society London"
-  abstract: It is pointed out that one of the main effects of correlation phenomena in d- and f-bands is to give rise to behaviour characteristic of the atomic or Heitler-London model. To investigate this situ...
   parent:
     type: periodical
     title: Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences
@@ -1124,7 +1091,6 @@ wannier_structure_1937:
   serial-number:
     doi: 10.1103/PhysRev.52.191
   note: "Publisher: American Physical Society"
-  abstract: In this article, a method is devised to study the energy spectrum for an excited electron configuration in an ideal crystal. The configuration studied consists of a single excited electron taken out of a full band of N electrons. The multiplicity of the state is N2. It is shown that because of the Coulomb attraction between the electron and its hole N85 states are split off from the bottom of the excited Bloch band; for these states the electron cannot escape its hole completely. The analogy of these levels to the spectrum of an atom or molecule is worked out quantitatively. The bottom of the Bloch band appears as "ionization potential" and the Bloch band itself as the continuum above this threshold energy.
   parent:
     type: periodical
     title: Physical Review
@@ -1147,7 +1113,6 @@ grimm_optical_2000:
     date: 2019-01-30
   serial-number:
     doi: 10.1016/S1049-250X(08)60186-X
-  abstract: This chapter discusses optical dipole traps for neutral atoms. Methods for storage and trapping of charged and neutral particles have very often served as the experimental key to great scientific advances, covering physics in the vast energy range from elementary particles to ultracold atomic quantum matter. It describes the basic physics of dipole trapping in fardetuned light, the typical experimental techniques and procedures, and the different trap types currently available, along with their specific features. In the experiments discussed, optical dipole traps have already shown great promise for a variety of different applications. Of particular importance is the trapping of atoms in the absolute internal ground state, which cannot be trapped magnetically. In this state, inelastic binary collisions are completely suppressed for energetic reasons. In this respect, an ultracold cesium gas represents a particularly interesting situation, because Bose–Einstein condensation seems attainable only for the absolute ground state. Therefore, an optical trap may be the only way to realize a quantum-degenerate gas of Cs atoms. Further, optical dipole traps can be seen as storage devices at the low end of the presently explorable energy scale. Future experiments exploiting the particular advantages of these traps can reveal interesting new phenomena.
   parent:
     type: periodical
     title: Advances In Atomic, Molecular, and Optical Physics
@@ -1173,7 +1138,6 @@ rahav_effective_2003:
   serial-number:
     doi: 10.1103/PhysRevA.68.013820
   note: "Publisher: American Physical Society"
-  abstract: The dynamics of classical and quantum systems, which are driven by a high-frequency (ω) field, is investigated. For classical systems, the motion is separated into a slow part and a fast part. The motion for the slow part is computed perturbatively in powers of ω−1 to the order ω−4, and the corresponding time independent Hamiltonian is calculated. Such an effective Hamiltonian for the corresponding quantum problem is computed to the order ω−4 in a high-frequency expansion. Its spectrum is the quasienergy spectrum of the time dependent quantum system. The classical limit of this effective Hamiltonian is the classical effective time independent Hamiltonian. It is demonstrated that this effective Hamiltonian gives the exact quasienergies and quasienergy states of some simple examples, as well as the lowest resonance of a nontrivial model for an atom trap. The theory that is developed in this paper is useful for the analysis of atomic motion in atom traps of various shapes.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -1195,7 +1159,6 @@ busch_two_1998:
   serial-number:
     doi: 10.1023/A:1018705520999
     issn: 1572-9516
-  abstract: Two ultracold atoms moving in a trap interact weakly at a very short distance. This interaction can be modeled by a properly regularized contact potential. We solve the corresponding time-independent Schrödinger equation under the assumption of a parabolic, spherically symmetric trapping potential.
   parent:
     type: periodical
     title: Foundations of Physics
@@ -1233,7 +1196,6 @@ trotzky_time-resolved_2008:
   serial-number:
     doi: 10.1126/science.1150841
   note: "Publisher: American Association for the Advancement of Science"
-  abstract: Quantum mechanical superexchange interactions form the basis of quantum magnetism in strongly correlated electronic media. We report on the direct measurement of superexchange interactions with ultracold atoms in optical lattices. After preparing ...
   parent:
     type: periodical
     title: Science
@@ -1260,7 +1222,6 @@ dutta_non-standard_2015:
     doi: 10.1088/0034-4885/78/6/066001
     issn: 0034-4885
   note: "Publisher: {IOP} Publishing"
-  abstract: Originally, the Hubbard model was derived for describing the behavior of strongly correlated electrons in solids. However, for over a decade now, variations of it have also routinely been implemented with ultracold atoms in optical lattices, allowing their study in a clean, essentially defect-free environment. Here, we review some of the vast literature on this subject, with a focus on more recent non-standard forms of the Hubbard model. After giving an introduction to standard (fermionic and bosonic) Hubbard models, we discuss briefly common models for mixtures, as well as the so-called extended Bose–Hubbard models, that include interactions between neighboring sites, next-neighbor sites, and so on. The main part of the review discusses the importance of additional terms appearing when refining the tight-binding approximation for the original physical Hamiltonian. Even when restricting the models to the lowest Bloch band is justified, the standard approach neglects the density-induced tunneling (which has the same origin as the usual on-site interaction). The importance of these contributions is discussed for both contact and dipolar interactions. For sufficiently strong interactions, the effects related to higher Bloch bands also become important even for deep optical lattices. Different approaches that aim at incorporating these effects, mainly via dressing the basis, Wannier functions with interactions, leading to effective, density-dependent Hubbard-type models, are reviewed. We discuss also examples of Hubbard-like models that explicitly involve higher p orbitals, as well as models that dynamically couple spin and orbital degrees of freedom. Finally, we review mean-field nonlinear Schrödinger models of the Salerno type that share with the non-standard Hubbard models nonlinear coupling between the adjacent sites. In that part, discrete solitons are the main subject of consideration. We conclude by listing some open problems, to be addressed in the future.
   parent:
     type: periodical
     title: Reports on Progress in Physics
@@ -1281,7 +1242,6 @@ kantian_eta_2010:
   serial-number:
     doi: 10.1103/PhysRevLett.104.240406
   note: "Publisher: American Physical Society"
-  abstract: We discuss how an η condensate, corresponding to an exact excited eigenstate of the Fermi-Hubbard model, can be produced with cold atoms in an optical lattice. Using time-dependent density matrix renormalization group methods, we analyze a state preparation scheme beginning from a band insulator state in an optical superlattice. This state can act as an important test case, both for adiabatic preparation methods and the implementation of the many-body Hamiltonian, and measurements on the final state can be used to help detect associated errors.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1303,7 +1263,6 @@ rall_simulation_2022:
   serial-number:
     doi: 10.1364/OE.467813
     issn: 1094-4087
-  abstract: High-power optical systems are used in a number of industrial applications. One difficulty in designing such systems is that the beam itself is a significant source of heat, which changes the optical properties of the system. To reduce this effect, we propose a new thermal lensing compensation technique based on a detailed analysis of the optical properties of the high-power optical system. To this end, we have developed a new ray tracing simulation technique that accurately models optical propagation through inhomogeneous, anisotropic, and deformed media. This model enables the performance of systems in physically realistic situations to be evaluated efficiently. Experimental comparisons were conducted to validate the simulation. We found excellent agreement between the simulation and the measured data. We have validated the simulation technique for a single lens setup and a complex optical scanner system.
   parent:
     type: periodical
     title: Optics Express
@@ -1326,7 +1285,6 @@ laskin_selection_2022:
   serial-number:
     doi: 10.1117/12.2607931
     isbn: 978-1-5106-4859-3 978-1-5106-4860-9
-  abstract: "Thermal lensing is a well-known but undesired effect in high power laser optics for welding, 3D-printing and other technologies. Stability and performance of laser processing depend on the possibility to control and minimize the thermo-optical effects induced by non-uniform (gradient) heating due to absorption of laser energy in optical elements: paraxial focus shift and thermally induced aberration, which lead to a change in size and intensity profile of the focal spot. Analysis of primary physical effects: geometrical deformation of optical surfaces and the material transformation into a gradient refractive medium, allows the quantitative estimation of the wavefront beam distortion leading to focus shift and aberration. It also allows formulating an optimal relationship between the physical properties of optical materials to reduce the change in the wavefront through mutual compensation of thermo-optical effects induced by the thermal expansion and the refractive index change – athermalization condition. Athermal optics exhibit minimized thermal focus shift and aberration even when absorbing laser energy in the bulk material and coatings, by contamination or scratches. Considering physical characteristics the Temperature Coefficient of the Optical Pathlength and {ThermoOptical} Ratio allows determining the optimal materials for optics: athermal crystalline Quartz and specialty glasses, Sapphire with high thermal conductivity. Weak birefringence of Quartz and Sapphire doesn’t prevent their successive use in laser optics. The comparison of the theoretical analysis and experimental validation results of optics made of Fused Silica, N-{BK}7, crystalline Quartz and Sapphire confirm the theoretical method for reducing the thermal focus shift and effectiveness of the suggested approach."
   parent:
     - type: proceedings
       title: "High-Power Laser Materials Processing: Applications, Diagnostics, and Systems {XI}"
@@ -1375,7 +1333,6 @@ chalopin_optical_2025:
   serial-number:
     doi: 10.1103/PhysRevLett.134.053402
     issn: 0031-9007, 1079-7114
-  abstract: Quantum simulations of Hubbard models with ultracold atoms rely on the exceptional control of coherent motion provided by optical lattices. Here we demonstrate enhanced tunability using an optical superlattice in a fermionic quantum gas microscope, evidenced by long-lived coherent double-well oscillations, next-nearest-neighbor quantum walks in a staggered configuration, and correlated quantum walks of two particles initiated through a resonant pair-breaking mechanism. We furthermore demonstrate tunable spin couplings through local offsets and engineer a spin ladder with ferromagnetic and antiferromagnetic couplings along the rungs and legs, respectively. Our Letter underscores the high potential of optical superlattices for engineering, simulating, and detecting strongly correlated many-body quantum states, with direct applications ranging from the study of mixed-dimensional systems to fermionic quantum computing.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1398,7 +1355,6 @@ kastberg_adiabatic_1995:
   serial-number:
     doi: 10.1103/PhysRevLett.74.1542
   note: "Publisher: American Physical Society"
-  abstract: We localize Cs atoms in wavelength-sized potential wells of an optical lattice, and cool them to a three-dimensional temperature of 700 {nK} by adiabatic expansion. In the optical lattice we precool the atoms to ≈1⁢𝜇⁢K. We then reduce the trapping potential in a few hundred 𝜇s, causing the atomic center-of-mass distribution to expand and the temperature to decrease by an amount which agrees with a simple 3D band theory. These are the lowest 3D kinetic temperatures ever measured.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1426,7 +1382,6 @@ heinze_multiband_2011:
   serial-number:
     doi: 10.1103/PhysRevLett.107.135303
   note: "Publisher: American Physical Society"
-  abstract: We perform a detailed experimental study of the band excitations and tunneling properties of ultracold fermions in optical lattices. Employing a novel multiband spectroscopy for fermionic atoms, we can measure the full band structure and tunneling energy with high accuracy. In an attractive Bose-Fermi mixture we observe a significant reduction of the fermionic tunneling energy, which depends on the relative atom numbers. We attribute this to an interaction-induced increase of the lattice depth due to the self-trapping of the atoms.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1451,7 +1406,6 @@ impertro_local_2024:
   serial-number:
     doi: 10.1103/PhysRevLett.133.063401
   note: "Publisher: American Physical Society"
-  abstract: Quantum gas microscopes have revolutionized quantum simulations with ultracold atoms, allowing one to measure local observables and snapshots of quantum states. However, measurements so far were mostly carried out in the occupation basis. Here, we demonstrate how all kinetic operators, such as kinetic energy or current operators, can be measured and manipulated with single-bond resolution. Beyond simple expectation values of these observables, the single-shot measurements allow one to access full counting statistics and complex correlation functions. Our work paves the way for the implementation of efficient quantum state tomography and hybrid quantum computing protocols for itinerant particles on a lattice. In addition, we demonstrate how site-resolved programmable potentials enable a spatially selective, parallel readout in different bases as well as the engineering of arbitrary initial states.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1471,7 +1425,6 @@ foot_double_2011:
   serial-number:
     doi: 10.1119/1.3583478
     issn: 0002-9505, 1943-2909
-  abstract: A system of particles in a double well potential is a widely studied and useful example for understanding quantum mechanics. This simple system has recently been used in theoretical proposals and related experiments as a way to make quantum logic gates for ultracold atoms confined in optical lattices. Such quantum gates are the fundamental building blocks for quantum information processing; in these proposals, a regular array of cold atoms in an optical lattice serves as the quantum register. We explain how this research can be understood in terms of well-known principles for systems of identical particles.
   parent:
     type: periodical
     title: American Journal of Physics
@@ -1523,7 +1476,6 @@ nandy_dynamical_2020:
     doi: 10.1088/1367-2630/ab878c
     issn: 1367-2630
   note: "Publisher: {IOP} Publishing"
-  abstract: A comprehensive analysis of the exact unitary dynamics of two-component mass-imbalanced fermions in a one-dimensional double-well potential is accomplished by considering the total number of particles maximum up to six. The simultaneous effect of mass imbalance between the flavors and their mutual interactions on the dynamics is scrutinized through the exact diagonalization. In particular, we investigate the occupation dynamics of such systems being initially prepared in experimentally accessible states in which opposite components occupy opposite wells. Moreover, to capture the role of interactions, we also inspect situations in which initial states contain an opposite-spin pair localized in a chosen well. Finally, to assess the amount of quantum correlations produced during the evolution, we analyze the behavior of the von Neumann entanglement entropy between components.
   parent:
     type: periodical
     title: New Journal of Physics
@@ -1570,7 +1522,6 @@ cabrera-gutierrez_robust_2018:
   serial-number:
     doi: 10.1103/PhysRevA.97.043617
   note: "Publisher: American Physical Society"
-  abstract: We report on a method to calibrate the depth of an optical lattice. It consists of triggering the intrasite dipole mode of the cloud by a sudden phase shift. The corresponding oscillatory motion is directly related to the interband frequencies on a large range of lattice depths. Remarkably, for a moderate displacement, a single frequency dominates the oscillation of the zeroth and first orders of the interference pattern observed after a sufficiently long time of flight. The method is robust against atom-atom interactions and the exact value of the extra weak external confinement superimposed to the optical lattice.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -1595,7 +1546,6 @@ ovchinnikov_diffraction_1999:
   serial-number:
     doi: 10.1103/PhysRevLett.83.284
   note: "Publisher: American Physical Society"
-  abstract: We study the diffraction of a released sodium Bose-Einstein condensate by a pulsed standing light wave. The width of the momentum distribution of the diffracted atoms exhibits strong oscillations as a function of the pulse duration, corresponding to periodic focusing and collimation of the condensate inside the standing light wave. Applications of this thick grating regime of diffraction to atom interferometry are discussed.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1616,7 +1566,6 @@ zhou_exploring_2023:
   serial-number:
     doi: 10.1103/PhysRevB.107.054105
   note: "Publisher: American Physical Society"
-  abstract: Exploring topological phases in interacting systems is a challenging task. We investigate many-body topological physics of interacting fermions in an extended Su-Schrieffer-Heeger ({SSH}) model, which extends the two sublattices of the {SSH} model into four sublattices and thus is dubbed the {SSH}4 model, based on the density-matrix renormalization-group numerical method. The interaction-driven phase transition from the topological insulator phase to the charge density wave ({CDW}) phase can be identified by analyzing the variations of the entanglement spectrum, entanglement entropies, energy gaps, {CDW} order parameter, and fidelity. We map the global phase diagram of the many-body ground state, which contains nontrivial topological insulator, trivial insulator, and {CDW} phases, respectively. In contrast to the interacting {SSH} model, in which the phase transitions to the {CDW} phase are argued to be first-order phase transitions, the phase transitions between the {CDW} phase and topologically trivial or nontrivial phases are shown to be continuous phase transitions. Finally, we also show the phase diagram of the interacting spinful {SSH}4 model, where the attractive (repulsive) on-site spin interaction amplifies (suppresses) the {CDW} phase. The models analyzed here can be implemented with ultracold atoms on optical superlattices.
   parent:
     type: periodical
     title: Physical Review B
@@ -1644,7 +1593,6 @@ xu_neutral-atom_2025:
     doi: 10.1038/s41586-025-09112-w
     issn: 1476-4687
   note: "Publisher: Nature Publishing Group"
-  abstract: Ultracold fermionic atoms in optical lattices offer pristine realizations of Hubbard models1, which are fundamental to modern condensed-matter physics2,3. Despite notable advancements4–6, the accessible temperatures in these optical lattice material analogues are still too high to address many open problems7–10. Here we demonstrate a several-fold reduction in temperature6,11–13, bringing large-scale quantum simulations of the Hubbard model into an entirely new regime. This is accomplished by transforming a low-entropy product state into strongly correlated states of interest via dynamic control of the model parameters14,15, which is extremely challenging to simulate classically10. At half-filling, the long-range antiferromagnetic order is close to saturation, leading to a temperature of \$\$T/t=0.0\{5\}_\{-0.05\}{^}\{+0.06\}\$\$based on comparisons with numerically exact simulations. Doped away from half-filling, it is exceedingly challenging to realize systematically accurate and predictive numerical simulations9. Importantly, we are able to use quantum simulation to identify a new pathway for achieving similarly low temperatures with doping. This is confirmed by comparing short-range spin correlations to state-of-the-art, but approximate, constrained-path auxiliary-field quantum Monte Carlo simulations16–18. Compared with the cuprates2,19,20, the reported temperatures correspond to a reduction from far above to below room temperature, at which physics such as the pseudogap and stripe phases may be expected3,19,21–24. Our work opens the door to quantum simulations that solve open questions in material science, develop synergies with numerical methods and theoretical studies, and lead to discoveries of new physics8,10.
   parent:
     type: periodical
     title: Nature
@@ -1672,7 +1620,6 @@ su_fast_2025:
     doi: 10.1038/s41467-025-56305-y
     issn: 2041-1723
   note: "Publisher: Nature Publishing Group"
-  abstract: High-resolution fluorescence imaging of ultracold atoms and molecules is paramount to performing quantum simulation and computation in optical lattices and tweezers. Imaging durations in these experiments typically range from a millisecond to a second, significantly limiting the cycle time. In this work, we present fast, 2.4 μs single-atom imaging in lattices, with 99.4% fidelity - pushing the readout duration of neutral atom quantum platforms to be close to that of superconducting qubit platforms. Additionally, we thoroughly study the performance of accordion lattices. We also demonstrate number-resolved imaging without parity projection, which will facilitate experiments such as the exploration of high-filling phases in the extended Bose-Hubbard models, multi-band or {SU}(N) Fermi-Hubbard models, and quantum link models.
   parent:
     type: periodical
     title: Nature Communications
@@ -1709,7 +1656,6 @@ daimon_high-accuracy_2002:
     doi: 10.1364/AO.41.005275
     issn: 2155-3165
   note: "Publisher: Optica Publishing Group"
-  abstract: The refractive indices of synthetic calcium fluoride for 69 wavelengths from 138 nm in the deep ultraviolet to 2326 nm in the near infrared were measured by the minimum-deviation method in a nitrogen environment. We made these measurements at 20° and 25 °C, respectively, to determine the thermal coefficients of the refractive index over this wide-wavelength region. These refractive indices were fitted to a four-term Sellmeier dispersion formula. The temperature coefficients of the refractive index were fitted to a Hoffman-type dispersion formula. The standard deviation of the residual between the observed values and the calculated values was 0.6 × 10-6 for the refractive index and was 0.13 × 10-6/°C for the temperature coefficient of the refractive index.
   parent:
     type: periodical
     title: Applied Optics
@@ -1727,7 +1673,6 @@ ghosh_dispersion-equation_1999:
   serial-number:
     doi: 10.1016/S0030-4018(99)00091-7
     issn: 0030-4018
-  abstract: The refractive index, birefringence and their dispersions are analyzed accurately in a physically meaningful model of a dispersion equation having only five coefficients for the calcite and quartz crystals. This dispersion equation is based on the average electronic absorption gap in the {UV} region and the effective lattice resonance absorption gap in the {IR} region. The five coefficients of the dispersion equation are different for each fundamental parameters. The dispersion equation for the birefringence leads to represent a standardized equation describing the birefringence of all optical materials.
   parent:
     type: periodical
     title: Optics Communications
@@ -1747,7 +1692,6 @@ toyoda_temperature_1983:
   serial-number:
     doi: 10.1088/0022-3727/16/5/002
     issn: 0022-3727, 1361-6463
-  abstract: The temperature dependenceof the refractive indices of high-purity fusedsilica and crystal quartzwas measured in the 450-1600 nm wavelength range and at temperatures from room temperature t4o00 "C. The average thermalcoefficients of the refractiveindices of those materialsshow opposite sign. Twhaevelength dependence of the coefficient in fused silica is smaller than thatin crystal quartz.
   parent:
     type: periodical
     title: "Journal of Physics D: Applied Physics"
@@ -1769,7 +1713,6 @@ furuse_thermo-optic_2015:
     doi: 10.1364/OME.5.001266
     issn: 2159-3930
   note: "Publisher: Optica Publishing Group"
-  abstract: The thermal expansion coefficient α and the thermo-optic coefficient dn/{dT} were measured using a He-Ne laser (λ = 632.8 nm) between 300 K and 500 K for ceramic and single-crystal terbium gallium garnet ({TGG}). For ceramic {TGG}, the experimental values of α and dn/{dT} at 300 K were 7.0×10−6 K−1 and 17.5×10−6 K−1, respectively. We proposed fitting relations regarding the temperature dependence of α and dn/{dT}. Both α and dn/{dT} increased with temperature, and the temperature dependencies for ceramic {TGG} were in agreement with those of single-crystal {TGG} with &lt;111&gt; orientation. We then evaluated thermally induced depolarization for an average laser power of 1 {kW}. The depolarization was evaluated to be larger than 0.01 at room temperature. Moreover, we simulated the thermal lens focal length and found that the temperature dependence is very slight compared to its dependence on the beam radius.
   parent:
     type: periodical
     title: Optical Materials Express
@@ -1789,7 +1732,6 @@ marzari_maximally_1997:
   serial-number:
     doi: 10.1103/PhysRevB.56.12847
   note: "Publisher: American Physical Society"
-  abstract: We discuss a method for determining the optimally localized set of generalized Wannier functions associated with a set of Bloch bands in a crystalline solid. By “generalized Wannier functions” we mean a set of localized orthonormal orbitals spanning the same space as the specified set of Bloch bands. Although we minimize a functional that represents the total spread ∑𝑛〈𝑟2〉𝑛−〈𝐫〉2𝑛 of the Wannier functions in real space, our method proceeds directly from the Bloch functions as represented on a mesh of 𝑘 points, and carries out the minimization in a space of unitary matrices 𝑈(𝐤)mn describing the rotation among the Bloch bands at each 𝑘 point. The method is thus suitable for use in connection with conventional electronic-structure codes. The procedure also returns the total electric polarization as well as the location of each Wannier center. Sample results for Si, {GaAs}, molecular C2H4, and {LiCl} will be presented.
   parent:
     type: periodical
     title: Physical Review B
@@ -1809,7 +1751,6 @@ kivelson_wannier_1982:
   serial-number:
     doi: 10.1103/PhysRevB.26.4269
   note: "Publisher: American Physical Society"
-  abstract: Wannier functions can be defined as the eigenstates of the position operator projected onto a given band. Though this definition is equivalent to the usual definition of Wannier functions in a crystal, the present definition is useful in disordered systems as well. It is shown that if a band is separated from all other bands by a finite energy gap, the Wannier functions are spatially localized. Although the Wannier functions are typically too complicated to compute explicitly, they are a useful conceptual tool. As an example of their usefulness, they are here used to study the charge fluctuations associated with a fractionally charged topological defect or soliton. It is shown that fractional charge is a sharp quantum observable, thus confirming the results of previous continuum-model calculations S. Kivelson and J. R. Schrieffer, [Phys. Rev. B 25, 6447 (1982)].
   parent:
     type: periodical
     title: Physical Review B
@@ -1834,7 +1775,6 @@ klemmer_floquet-driven_2024:
   serial-number:
     doi: 10.1103/PhysRevLett.133.253402
   note: "Publisher: American Physical Society"
-  abstract: We investigate the experimental control of pair tunneling in a double-well potential using Floquet engineering. We demonstrate a crossover from a regime with density-assisted tunneling to dominant pair tunneling by tuning the effective interactions. Furthermore, we show that the pair tunneling rate can be enhanced not only compared to the Floquet-reduced single-particle tunneling but even beyond the static superexchange rate, while keeping the effective interaction in a relevant range. This opens possibilities to realize models with explicit pair tunneling in ultracold atomic systems.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1856,7 +1796,6 @@ sebby-strabley_lattice_2006:
   serial-number:
     doi: 10.1103/PhysRevA.73.033605
   note: "Publisher: American Physical Society"
-  abstract: We describe the design and implementation of a two-dimensional optical lattice of double wells suitable for isolating and manipulating an array of individual pairs of atoms in an optical lattice. Atoms in the square lattice can be placed in a double well with any of their four nearest neighbors. The properties of the double well (the barrier height and relative energy offset of the paired sites) can be dynamically controlled. The topology of the lattice is phase stable against phase noise imparted by vibrational noise on mirrors. We demonstrate the dynamic control of the lattice by showing the coherent splitting of atoms from single wells into double wells and observing the resulting double-slit atom diffraction pattern. This lattice can be used to test controlled neutral atom motion among lattice sites and should allow for testing controlled two-qubit gates.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -1876,7 +1815,6 @@ rice_elementary_1982:
   serial-number:
     doi: 10.1103/PhysRevLett.49.1455
   note: "Publisher: American Physical Society"
-  abstract: The low-lying particlelike excitations of a model linearly conjugated diatomic polymer, (𝐴=𝐵)𝑥, are found to be pairs of either spin-0 or spin-½ solitons with irrational charge values. The charge values and excitation energies are calculated as functions of the difference of the energy levels of the atomic 𝑝 orbitals of the two atomic constitutents of the unit cell. The phonon spectrum of the uniform polymer is also calculated.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1897,7 +1835,6 @@ su_solitons_1979:
   serial-number:
     doi: 10.1103/PhysRevLett.42.1698
   note: "Publisher: American Physical Society"
-  abstract: We present a theoretical study of soliton formation in long-chain polyenes, including the energy of formation, length, mass, and activation energy for motion. The results provide an explanation of the mobile neutral defect observed in undoped ({CH})𝑥. Since the soliton formation energy is less than that needed to create band excitation, solitons play a fundamental role in the charge-transfer doping mechanism.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -1923,7 +1860,6 @@ lin_interacting_2020:
   serial-number:
     doi: 10.1103/PhysRevB.102.085122
   note: "Publisher: American Physical Society"
-  abstract: We investigate the interacting, one-dimensional Rice-Mele model, a prototypical fermionic model of topological properties. To set the stage, we first compute the single-particle spectral function, the local density, and the boundary charge in the absence of interactions. We find that the fractional part of the boundary charge is fully determined by bulk properties of the lattice model. In a large parameter regime the boundary charge agrees with the one obtained from an effective low-energy theory ({arXiv}:2004.00463). Second, we investigate the robustness of our results towards two-particle interactions. To resume the series of leading logarithms for small gaps, which dismantle plain perturbation theory in the interaction, we use an essentially analytical renormalization group approach. It is controlled for small interactions and can directly be applied to the microscopic lattice model. We benchmark the results against numerical density matrix renormalization group data. The main interaction effect in the bulk is a power-law renormalization of the gap with an interaction dependent exponent. The important characteristics of the fractional part of the boundary charge are unaltered and can be understood from the renormalized bulk properties. This requires a consistent treatment not only of the low-energy gap renormalization but also of the high-energy band width one. In contrast to low-energy field theories our renormalization group approach also provides the latter. We show that the interaction spoils the relation between the bulk properties and the number of edge states, consistent with the observation that the Rice-Mele model with finite potential modulation does not reveal any zero-energy edge states.
   parent:
     type: periodical
     title: Physical Review B
@@ -1945,7 +1881,6 @@ garwood_return_2001:
   serial-number:
     doi: 10.1006/jmre.2001.2340
     issn: 1090-7807
-  abstract: Frequency-modulated ({FM}) pulses that function according to adiabatic principles are becoming increasingly popular in many areas of {NMR}. Often adiabatic pulses can extend experimental capabilities and minimize annoying experimental imperfections. Here, adiabatic principles and some of the current methods used to create these pulses are considered. The classical adiabatic rapid passage, which is a fundamental element upon which all adiabatic pulses and sequences are based, is analyzed using vector models in different rotating frames of reference. Two methods to optimize adiabaticity are described, and ways to tailor modulation functions to best satisfy specific experimental needs are demonstrated. Finally, adiabatic plane rotation pulses and frequency-selective multiple spin-echo sequences are considered.
   parent:
     type: periodical
     title: Journal of Magnetic Resonance
@@ -1991,7 +1926,6 @@ bergeman_magnetostatic_1987:
   serial-number:
     doi: 10.1103/PhysRevA.35.1535
   note: "Publisher: American Physical Society"
-  abstract: In view of the recent successful confinement of decelerated sodium atoms in a magnetostatic trap, it is of interest to evaluate possible trap-field configurations. Neutral atoms in a Zeeman sublevel whose energy increases with field can be confined by a field whose magnitude ‖B‖ increases with distance from the center. Because this same basic requirement applies also to traps for neutrons and for plasmas (in the guiding-center approximation), trap configurations developed previously for these purposes are of interest for neutral atoms. However, the desired properties differ considerably because of very different objectives and different behavior of very cold atoms as compared with hot plasmas. We characterize basic trap configurations using both the exact expressions for the field, and a multipole polynomial expansion that facilitates studies of symmetry properties and classical or quantum orbits. Polynomial terms for the field components are derived and coefficients obtained by comparison with Taylor-series expansions and by global fit. Contours of ‖B‖ for various trap configurations are also presented. Under certain restrictive conditions, ‖B‖, and hence the effective potential, can be made isotropic to second order.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -2017,7 +1951,6 @@ slater_simplified_1954:
   serial-number:
     doi: 10.1103/PhysRev.94.1498
   note: "Publisher: American Physical Society"
-  abstract: The {LCAO}, or Bloch, or tight binding, approximation for solids is discussed as an interpolation method, to be used in connection with more accurate calculations made by the cellular or orthogonalized plane-wave methods. It is proposed that the various integrals be obtained as disposable constants, so that the tight binding method will agree with accurate calculations at symmetry points in the Brillouin zone for which these calculations have been made, and that the {LCAO} method then be used for making calculations throughout the Brillouin zone. A general discussion of the method is given, including tables of matrix components of energy for simple cubic, face-centered and body-centered cubic, and diamond structures. Applications are given to the results of Fletcher and Wohlfarth on Ni, and Howarth on Cu, as illustrations of the fcc case. In discussing the bcc case, the splitting of the energy bands in chromium by an antiferromagnetic alternating potential is worked out, as well as a distribution of energy states for the case of no antiferromagnetism. For diamond, comparisons are made with the calculations of Herman, using the orthogonalized plane-wave method. The case of such crystals as {InSb} is discussed, and it is shown that their properties fit in with the energy band picture.
   parent:
     type: periodical
     title: Physical Review
@@ -2033,7 +1966,6 @@ auerbach_interacting_2012:
   serial-number:
     isbn: 978-1-4612-6928-1
   note: "Google-Books-{ID}: {ytgXkgEACAAJ}"
-  abstract: "In the excitement and rapid pace of developments, writing pedagogical texts has low priority for most researchers. However, in transforming my lecture l notes into this book, I found a personal benefit: the organization of what I understand in a (hopefully simple) logical sequence. Very little in this text is my original contribution. Most of the knowledge was collected from the research literature. Some was acquired by conversations with colleagues; a kind of physics oral tradition passed between disciples of a similar faith. For many years, diagramatic perturbation theory has been the major theoretical tool for treating interactions in metals, semiconductors, itiner ant magnets, and superconductors. It is in essence a weak coupling expan sion about free quasiparticles. Many experimental discoveries during the last decade, including heavy fermions, fractional quantum Hall effect, high temperature superconductivity, and quantum spin chains, are not readily accessible from the weak coupling point of view. Therefore, recent years have seen vigorous development of alternative, nonperturbative tools for handling strong electron-electron interactions. I concentrate on two basic paradigms of strongly interacting (or con strained) quantum systems: the Hubbard model and the Heisenberg model. These models are vehicles for fundamental concepts, such as effective Ha miltonians, variational ground states, spontaneous symmetry breaking, and quantum disorder. In addition, they are used as test grounds for various nonperturbative approximation schemes that have found applications in diverse areas of theoretical physics."
 di_salvo_topological_2024:
   type: article
   title:
@@ -2055,7 +1987,6 @@ di_salvo_topological_2024:
   serial-number:
     doi: 10.1103/PhysRevB.110.165145
   note: "Publisher: American Physical Society"
-  abstract: "The interacting {SSH} model provides an ideal ground to study the interplay between topologically insulating phases and electron-electron interactions. We study the polarization density as a topological invariant and provide an analytic treatment of its behavior in the low-energy sector of the one-dimensional interacting {SSH} model. By formulating the topological invariant in terms of Green's functions, we use the low-energy field theory of the Thirring model to derive the behavior of the polarization density. We show that polarization density in the continuum theory describes the usual topological insulating phases. Still, it contains an extra factor from the fields' scaling dimensions in the low-energy quantum field theory. We interpret this as a measure of the modified charge of the new excitations in the system. We find two distinct contributions: a renormalization of the electronic charge 𝑒 of a Fermi liquid because of quasiparticle smearing and an additional contribution coming from the topological charge of the soliton arising in the bosonized version of the Thirring model, the sine-Gordon model."
   parent:
     type: periodical
     title: Physical Review B
@@ -2076,7 +2007,6 @@ reitemeyer_online_2010:
   serial-number:
     doi: 10.1016/j.phpro.2010.08.073
     issn: 1875-3892
-  abstract: The occurrence of focus shift in high power fiber laser welding has been reported. The small percentage of laser light absorbed in the optical elements of the welding head leads to a thermal focus shift. Contaminations on the optical surfaces are enhancing the absorption and thus the focus shift. Thus, one of the main influencing factors on focus shift is the condition of the optics of the head. The topic of this paper is the experimental characterization of focus shift behavior, and the development of a novel method to measure the shift of the focal plane during processing. This method allows for considering the shift caused by every optical element within the path of the beam. The online focus shift measurement is the missing part for a closed loop focus shift control during high power fiber laser welding.
   parent:
     type: periodical
     title: Physics Procedia
@@ -2109,7 +2039,6 @@ franta_wide_2025:
   serial-number:
     doi: 10.1016/j.optlastec.2024.111916
     issn: 0030-3992
-  abstract: Terbium gallium garnet ({TGG} – Tb3Ga5O12) single crystal was optically characterized using the multi-sample and multi-instrument method across a wide spectral range with the help of the universal dispersion model. The obtained optical constants cover the spectral range from the far-{IR} region (25cm−1) to the vacuum-{UV} region (10.3eV). The applied dispersion model includes all elementary absorption processes occurring within the spectral range that affect the dielectric response, including phonons and valence electron excitations. The primary objective was to accurately determine the optical constants with the highest possible precision. The optical results were compared with ab initio density functional theory calculations to gain insight into the nature of the absorption edge and the distribution of the f-electron excitations.
   parent:
     type: periodical
     title: Optics & Laser Technology
@@ -2147,7 +2076,6 @@ humbach_analysis_1996:
   serial-number:
     doi: 10.1016/0022-3093(96)00329-8
     issn: 0022-3093
-  abstract: The presence of bound hydroxyl ({SiOH}) in silica is well known to produce an optical fundamental absorption band at about 2.7 μm. For optical fiber applications the influence of the corresponding overtones and combination modes on the absorption spectrum are of significant importance. A literature review is presented which reveals uncertainties regarding the correct absorption band intensities as well as their spectral positions. We present precise data on spectral position and relative intensities of {OH} absorption bands in state of the art synthetic silica. Our investigations cover the influence of different manufacturing techniques, {OH} content, and a comparison of bulk and fiber data. With the knowledge of the conversion factors between the intensities of different {OH} absorption bands it is possible to predict the entire {OH} related transmission performance of an optical component by measurement of a single absorption band, e.g., the fundamental mode at 2.7 μm or the 1.38 μm band in the low loss range of optical fibers.
   parent:
     type: periodical
     title: Journal of Non-Crystalline Solids
@@ -2171,7 +2099,6 @@ xygkis_absorption_2023:
   #   date: 2025-08-21
   serial-number:
     doi: 10.1364/opticaopen.22303453.v1
-  abstract: We demonstrate a method for determining small absorption coefficients and surface scattering losses of crystals using cavity ring down spectroscopy, and perform measurements on crystals of {TGG}, {TGP}, {FS}, {KTF}, and {CeF}₃, at 532nm and 634nm. We separate the surface-scattering and absorption losses by using crystals of different length. The measurements differ from those in the literature, especially for small absorption coefficients. We define a figure of merit ({FoM}) for magneto-optic crystals in signal-reversing cavity-ringdown polarimetry, which depends on the cavity losses, and on the crystal Verdet constant and absorption coefficient, and use it to evaluate the crystals for suitability for intra-cavity applications. We show that {TGP} has a significantly higher {FoM} compared to the other crystals, for crystal lengths up to 16 mm, whereas {CeF}₃ and {FS} outperform {TGP} for longer crystals.
 stevens_promising_2016:
   type: article
   title: Promising Materials for High Power Laser Isolators
@@ -2190,7 +2117,6 @@ stevens_promising_2016:
     doi: 10.1002/latj.201600017
     issn: 1863-9119
   note: "_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/latj.201600017"
-  abstract: Northrop Grumman Synoptics is developing the growth of large singlecrystal fluoride materials for Faraday rotator / isolator applications. These materials exhibit smaller nonlinear refractive index and thermo-optic coefficients, while maintaining Verdet constants near those of the commonly used terbium gallium garnet ({TGG}) crystals. In particular, the cubic potassium terbium fluoride, {KTF} ({KTb}3F10) crystal has low absorption and thermo-optic coefficients. The crystal growth and performance of these single-crystal fluoride materials will be discussed as well as recent improvements to the performance of {TGG} crystals.
   parent:
     type: periodical
     title: Laser Technik Journal
@@ -2210,7 +2136,6 @@ telle_phase-locking_1990:
   serial-number:
     doi: 10.1049/el:19900562
   note: "Publisher: The Institution of Engineering and Technology"
-  abstract: Phase-locking of two optically prestablised laser diodes is realised by controlling the injection current and the feedback cavity resonance frequency of one of the lasers.
   parent:
     type: periodical
     title: Electronics Letters
@@ -2253,7 +2178,6 @@ aksentsev_phase_2025:
   serial-number:
     arxiv: 2506.03809 [cond-mat]
     doi: 10.48550/arXiv.2506.03809
-  abstract: Optical lattices play a significant role in the field of cold atom physics, particularly in quantum simulations. Varying the lattice period is often a useful feature, but it presents the challenge of maintaining lattice phase stability in both stationary and varying-period regimes. Here, we report the realization of a feedback loop for a tunable optical lattice. Our scheme employs a {CCD} camera, a computer, and a piezoelectric actuator mounted on a mirror. Using this setup, we significantly improved the long-term stability of an optical lattice over durations exceeding 10 seconds. More importantly, we demonstrated a rapid change in the optical lattice period without any loss of phase.
 wei_observation_2023:
   type: article
   title: Observation of Brane Parity Order in Programmable Optical Lattices
@@ -2304,7 +2228,6 @@ bukov_universal_2015:
     doi: 10.1080/00018732.2015.1055918
     issn: 0001-8732
   note: "Publisher: Taylor & Francis _eprint: https://doi.org/10.1080/00018732.2015.1055918"
-  abstract: We give a general overview of the high-frequency regime in periodically driven systems and identify three distinct classes of driving protocols in which the infinite-frequency Floquet Hamiltonian is not equal to the time-averaged Hamiltonian. These classes cover systems, such as the Kapitza pendulum, the Harper–Hofstadter model of neutral atoms in a magnetic field, the Haldane Floquet Chern insulator and others. In all setups considered, we discuss both the infinite-frequency limit and the leading finite-frequency corrections to the Floquet Hamiltonian. We provide a short overview of Floquet theory focusing on the gauge structure associated with the choice of stroboscopic frame and the differences between stroboscopic and non-stroboscopic dynamics. In the latter case, one has to work with dressed operators representing observables and a dressed density matrix. We also comment on the application of Floquet Theory to systems described by static Hamiltonians with well-separated energy scales and, in particular, discuss parallels between the inverse-frequency expansion and the Schrieffer–Wolff transformation extending the latter to driven systems.
   parent:
     type: periodical
     title: Advances in Physics
@@ -2347,7 +2270,6 @@ greiner_exploring_2001:
   serial-number:
     doi: 10.1103/PhysRevLett.87.160405
   note: "Publisher: American Physical Society"
-  abstract: Bose-Einstein condensates of rubidium atoms are stored in a two-dimensional periodic dipole force potential, formed by a pair of standing wave laser fields. The resulting potential consists of a lattice of tightly confining tubes, each filled with a 1D quantum gas. Tunnel coupling between neighboring tubes is controlled by the intensity of the laser fields. By observing the interference pattern of atoms released from more than 3000 individual lattice tubes, the phase coherence of the coupled quantum gases is studied. The lifetime of the condensate in the lattice and the dependence of the interference pattern on the lattice configuration are investigated.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2369,7 +2291,6 @@ vlasova_absorption_2024:
     doi: 10.3390/app14209474
     issn: 2076-3417
   note: "Publisher: Multidisciplinary Digital Publishing Institute"
-  abstract: We demonstrate measurements of the absorption coefficient α ≈ 2.5 × 10−7 cm−1 in synthetic crystalline quartz at a wavelength of 1071 nm with a signal-to-noise ratio of 10/1 using the Time-resolved photothermal common-path interferometry ({TPCI}) scheme. It utilized cells filled with flowing argon and eliminated the influence of ambient air absorption. The scheme elements limiting the sensitivity of measurements at the level of ≈7.8 × 10−8 cm−1 were revealed. When these elements are replaced by better ones in terms of their thermal influence, the sensitivity of absorption coefficient measurements in crystalline quartz is {~}10−8 cm−1. The calculation of the correction due to these optical elements of the values of the measured absorption coefficients is also described, which makes it possible to achieve the same sensitivity without replacing the elements. The improved scheme confirms the presence of the spatial inhomogeneity of absorption with a minimum coefficient of 2.5 × 10−7 cm−1 in synthetic crystalline quartz. The discrepancy of the absorption coefficient values in different regions of the crystal in the presented series of experiments was 2.5 × 10−7 cm−1 to 4 × 10−6 cm−1. Taking into account the ratio of thermo-optical parameters and the heat diffusion effect, the calculation shows that for quartz glasses the corresponding sensitivity of the absorption coefficient measurements equals ≈1.5 × 10−9 cm−1.
   parent:
     type: periodical
     title: Applied Sciences
@@ -2391,7 +2312,6 @@ nurnberg_bulk_2015:
   page-range: "96321"
   serial-number:
     doi: 10.1117/12.2194289
-  abstract: Laser fusion projects are heading for {IR} optics with high broadband transmission, high shock and temperature resistance, long laser durability, and best purity. For this application, fused silica is an excellent choice. The energy density threshold on {IR} laser optics is mainly influenced by the purity and homogeneity of the fused silica. The absorption behavior regarding the hydroxyl content was studied for various synthetic fused silica grades. The main absorption influenced by {OH} vibrational excitation leads to different {IR} attenuations for {OH}-rich and low-{OH} fused silica. Industrial laser systems aim for the maximum energy extraction possible. Heraeus Quarzglas developed an Yb-doped fused silica fiber to support this growing market. But the performance of laser welding and cutting systems is fundamentally limited by beam quality and stability of focus. Since absorption in the optical components of optical systems has a detrimental effect on the laser focus shift, the beam energy loss and the resulting heating has to be minimized both in the bulk materials and at the coated surfaces. In collaboration with a laser research institute, an optical finisher and end users, photo thermal absorption measurements on coated samples of different fused silica grades were performed to investigate the influence of basic material properties on the absorption level. High purity, synthetic fused silica is as well the material of choice for optical components designed for {DUV} applications (wavelength range 160 nm - 260 nm). For higher light intensities, e.g. provided by Excimer lasers, {UV} photons may generate defect centers that effect the optical properties during usage, resulting in an aging of the optical components ({UV} radiation damage). Powerful Excimer lasers require optical materials that can withstand photon energy close to the band gap and the high intensity of the short pulse length. The {UV} transmission loss is restricted to the {DUV} wavelength range below 300 nm and consists of three different absorption bands centered at 165 nm (peroxy radicals), 215 nm (E’-center), and 265 nm (non-bridging oxygen hole center ({NBOH})), which change the transmission behavior of material. © (2015) {COPYRIGHT} Society of Photo-Optical Instrumentation Engineers ({SPIE}). Downloading of the abstract is permitted for personal use only.
   parent:
     type: proceedings
 gyger_continuous_2024:
@@ -2413,7 +2333,6 @@ gyger_continuous_2024:
   serial-number:
     doi: 10.1103/PhysRevResearch.6.033104
   note: "Publisher: American Physical Society"
-  abstract: Scaling the size of assembled neutral-atom arrays trapped in optical lattices or optical tweezers is an enabling step for a number of applications ranging from quantum simulations to quantum metrology. However, preparation times increase with system size and constitute a severe bottleneck in the bottom-up assembly of large ordered arrays from stochastically loaded optical traps. Here we demonstrate a method to circumvent this bottleneck by recycling atoms from one experimental run to the next, while continuously reloading and adding atoms to the array. Using this approach, we achieve densely packed arrays with more than 1000 atoms stored in an optical lattice, continuously refilled with a 3.5 s cycle time and about 130 atoms reloaded during each cycle. Furthermore, we show that we can continuously maintain such large arrays by simply reloading atoms that are lost from one cycle to the next. Our approach paves the way towards quantum science with large ordered atomic arrays containing thousands of atoms in continuous operation.
   parent:
     type: periodical
     title: Physical Review Research
@@ -2431,7 +2350,6 @@ dirac_theory_1926:
   serial-number:
     doi: 10.1098/rspa.1926.0133
   note: "Publisher: Royal Society"
-  abstract: The new mechanics of the atom introduced by Heisenberg may be based on the assumption that the variables that describe a dynamical system do not obey the commutative law of multiplication, but satisfy instead certain quantum conditions. One can build up a theory without knowing anything about the dynamical variables except the algebraic laws that they are subject to, and can show that they may be represented by matrices whenever a set of uniformising variables for the dynamical system exists. It may be shown, however (see 3), that there is no set of uniformising variables for a system containing more than one electron, so that the theory cannot progress very far on these lines. A new development of the theory has recently been given by Schrödinger. Starting from the idea that an atomic system cannot be represented by a trajectory, i. e., by a point moving through the co-ordinate space, but must be represented by a wave in this space, Schrödinger obtains from a variation prin­ciple a differential equation which the wave function ψ must satisty. This differential equation turns out to be very closely connected with the Hamiltonian equation which specifies the system, namely, if H (qr, Pr - W = 0 is the Hamiltonian equation of the system, where the qr, Pr are canonical variables, then the wave equation for ψ is \{H(q r, ih ∂/∂q) - W\} ψ = 0.
   parent:
     type: periodical
     title: Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character
@@ -2449,7 +2367,6 @@ fermi_zur_1926:
   serial-number:
     doi: 10.1007/BF01400221
     issn: 0044-3328
-  abstract: Wenn der Nernstsche Wärmesatz auch, für das ideale Gas seine Gültigkeit behalten soll, muß man annehmen, daß die Gesetze idealer Gase bei niedrigen Temperaturen von den klassischen abweichen. Die Ursache dieser Entartung ist in einer Quantelung der Molekularbewegungen zu suchen. Bei allen Theorien der Entartung werden immer mehr oder weniger willkürliche Annahmen über das statistische Verhalten der Moleküle, oder über ihre Quantelung gemacht. In der vorliegenden Arbeit wird nur die von Pauli zuerst ausgesprochene und auf zahlreiche spektroskopische Tatsachen begründete Annahme benutzt, daß in einem System nie zwei gleichwertige Elemente vorkommen können, deren Quantenzahlen vollständig übereinstimmen. Mit dieser Hypothese werden die Zustandsgieichung und die innere Energie des idealen Gases abgeleitet; der Entropiewert für große Temperaturen stimmt mit dem Stern-Tetrodeschen überein.
   parent:
     type: periodical
     title: Zeitschrift für Physik
@@ -2471,7 +2388,6 @@ stoof_superfluidity_1996:
   serial-number:
     doi: 10.1103/PhysRevLett.76.10
   note: "Publisher: American Physical Society"
-  abstract: We study the prospects for observing superfluidity in a spin-polarized atomic gas of 6⁢Li atoms, using state-of-the-art interatomic potentials. We determine the spinodal line and show that a {BCS} transition to the superfluid state can indeed occur in the (meta)stable region of the phase diagram if the densities are sufficiently low. We also discuss the stability of the gas due to exchange and dipolar relaxation and conclude that the prospects for observing superfluidity in a magnetically trapped atomic 6⁢Li gas are particularly promising for magnetic bias fields larger than 10 T.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2491,7 +2407,6 @@ baranov_critical_1998:
   serial-number:
     doi: 10.1103/PhysRevA.58.R801
   note: "Publisher: American Physical Society"
-  abstract: We discuss a superfluid phase transition in a trapped neutral-atom Fermi gas. We consider the case where the critical temperature greatly exceeds the spacing between the trap levels and derive the corresponding Ginzburg-Landau equation. The latter turns out to be analogous to the equation for the condensate wave function in a trapped Bose gas. The analysis of its solution provides us with the value of the critical temperature 𝑇𝑐 and with the spatial and temperature dependence of the order parameter in the vicinity of the phase transition point.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -2511,7 +2426,6 @@ phillips_laser_1982:
   serial-number:
     doi: 10.1103/PhysRevLett.48.596
   note: "Publisher: American Physical Society"
-  abstract: Deceleration and velocity bunching of Na atoms in an atomic beam have been observed. The deceleration, caused by absorption of counterpropagating resonant laser light, amounts to 40% of the initial thermal velocity, corresponding to about 15 000 absorptions. Atoms were kept in resonance with the laser by using a spatially varying magnetic field to provide a changing Zeeman shift to compensate for the changing Doppler shift as the atoms decelerated.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2529,7 +2443,6 @@ hess_evaporative_1986:
   serial-number:
     doi: 10.1103/PhysRevB.34.3476
   note: "Publisher: American Physical Society"
-  abstract: A gas of spin-polarized atomic hydrogen can be prepared in the upper hyperfine states and loaded into a static magnetic trap. Evaporative cooling and magnetic compression of such a gas can produce temperatures of 30 μK and densities of 1014 cm−3. Under these conditions a Bose-Einstein condensate may form.
   parent:
     type: periodical
     title: Physical Review B
@@ -2549,7 +2462,6 @@ timmermans_superfluidity_1998:
   serial-number:
     doi: 10.1103/PhysRevLett.80.3419
   note: "Publisher: American Physical Society"
-  abstract: The dynamical structure of an atomic Bose-Einstein condensate limits the efficiency of the condensate in cooling slow impurity atoms. To illustrate the point, we show that an impurity atom moving in a homogeneous zero-temperature condensate is not scattered incoherently if its velocity is lower than the condensate sound velocity 𝑐, limiting cooling to velocities 𝑣 ≥𝑐. This striking effect is an expression of superfluidity and provides a direct means to detect the fundamental property of superfluidity in atomic condensates. Furthermore, we show that the fermionic lithium isotope, 6⁢Li, is a reasonable candidate for sympathetic cooling by a 23⁢Na condensate.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2567,7 +2479,6 @@ pritchard_cooling_1983:
   serial-number:
     doi: 10.1103/PhysRevLett.51.1336
   note: "Publisher: American Physical Society"
-  abstract: A configuration of magnetic fields is exhibited which can harmonically trap paramagnetic particles in a shallow field minimum, superposed on a nearly uniform field which simplifies spectroscopic interactions with the particles. The potential energy of a trapped neutral particle depends on the particle's internal quantum number, as well as its position in the trap, permitting a combined rf-laser optical pumping cycle which can cool particles by a factor of 2 per cycle. Application of these ideas to the trapping of Na atoms is discussed.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2593,7 +2504,6 @@ mewes_bose-einstein_1996:
   serial-number:
     doi: 10.1103/PhysRevLett.77.416
   note: "Publisher: American Physical Society"
-  abstract: Bose-Einstein condensation of sodium atoms has been observed in a novel “cloverleaf” trap. This trap combines tight confinement with excellent optical access, using only dc electromagnets. Evaporative cooling in this trap produced condensates of 5 ×106 atoms, a tenfold improvement over previous results. We measured the condensate fraction and the repulsive mean-field energy, finding agreement with theoretical predictions.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2617,7 +2527,6 @@ schrader_optical_2001:
   serial-number:
     doi: 10.1007/s003400100722
     issn: 1432-0649
-  abstract: Using optical dipole forces we have realized controlled transport of a single or any desired small number of neutral atoms over a distance of a centimeter with sub-micrometer precision. A standing wave dipole trap is loaded with a prescribed number of cesium atoms from a magneto-optical trap. Mutual detuning of the counter-propagating laser beams moves the interference pattern, allowing us to accelerate and stop the atoms at preselected points along the standing wave. The transportation efficiency is close to 100%. This optical ‘single-atom conveyor belt’ represents a versatile tool for future experiments requiring deterministic delivery of a prescribed number of atoms on demand.
   parent:
     type: periodical
     title: Applied Physics B
@@ -2643,7 +2552,6 @@ matthies_long-distance_2024:
   serial-number:
     doi: 10.1103/PhysRevA.109.023321
   note: "Publisher: American Physical Society"
-  abstract: We report on the transport of a thermal cloud of ultracold cesium and rubidium atoms over about 37 cm in under 25 ms using an optical conveyor belt formed by two counterpropagating beams with a controllable frequency difference that generate a movable optical lattice. By carefully selecting the waists and focus positions, we are able to use two static Gaussian beams for the transport, avoiding the need for a Bessel beam or variable-focus lenses. We characterize the transport efficiency for both species, including a comparison of different transport trajectories, gaining insight into the loss mechanisms and finding the minimum jerk trajectory to be optimum. Using the optimized parameters, we are able to transport up to 7×106 cesium or rubidium atoms with an efficiency up to 75%. To demonstrate the viability of our transport scheme for experiments employing quantum gas microscopy, we produce Bose-Einstein condensates of either species after transport and present measurements of the simultaneous transport of both species.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -2668,7 +2576,6 @@ fallani_bose-einstein_2005:
     doi: 10.1364/OPEX.13.004303
     issn: 1094-4087
   note: "Publisher: Optica Publishing Group"
-  abstract: In this Letter we report the investigation of transport and static properties of a Bose-Einstein condensate in a large-spaced optical lattice. The lattice spacing can be easily tuned starting from few micrometers by adjusting the relative angle of two partially reflective mirrors. We have performed in-situ imaging of the atoms trapped in the potential wells of a 20 µm spaced lattice. For a lattice spacing of 10 µm we have studied the transport properties of the system and the interference pattern after expansion, evidencing quite different results with respect to the physics of {BECs} in ordinary near-infrared standing wave lattices, owing to the different length and energy scales.
   parent:
     type: periodical
     title: Optics Express
@@ -2697,7 +2604,6 @@ mazurenko_cold-atom_2017:
     doi: 10.1038/nature22362
     issn: 1476-4687
   note: "Publisher: Nature Publishing Group"
-  abstract: An antiferromagnet with a correlation length that encompasses the whole system is created with the aid of quantum gas microscopy of cold atoms in an optical lattice.
   parent:
     type: periodical
     title: Nature
@@ -2721,7 +2627,6 @@ jordens_mott_2008:
     doi: 10.1038/nature07244
     issn: 1476-4687
   note: "Publisher: Nature Publishing Group"
-  abstract: In a Mott insulator, suppression of conductivity occurs as a result of electron interactions. Proximity to this phase causes intriguing phenomena in fermionic condensed matter systems, most notably high-temperature superconductivity. The Hubbard model, which encompasses the essential physics of the Mott insulator, can be realized with quantum gases trapped in an optical lattice. Therefore, experimental tools developed in atomic physics can be used to study this regime. However, an atomic Mott insulator has so far been realized only with a gas of bosons, which lack the rich and peculiar nature of fermions. The authors report the formation of a Mott insulator of a repulsively interacting two-component Fermi gas in an optical lattice. The results pave the way for further studies of the Mott insulator, including spin-ordering and ultimately the question of d-wave superfluidity.
   parent:
     type: periodical
     title: Nature
@@ -2745,7 +2650,6 @@ becker_ultracold_2010:
   serial-number:
     doi: 10.1088/1367-2630/12/6/065025
     issn: 1367-2630
-  abstract: Over recent years, exciting developments in the field of ultracold atoms confined in optical lattices have led to numerous theoretical proposals devoted to the quantum simulation of problems e.g. known from condensed matter physics. Many of those ideas demand experimental environments with non-cubic lattice geometries. In this paper, we report on the implementation of a versatile three-beam lattice allowing for the generation of triangular as well as hexagonal optical lattices. As an important step, the superfluid–Mott insulator ({SF}–{MI}) quantum phase transition has been observed and investigated in detail in this lattice geometry for the first time. In addition to this, we study the physics of spinor Bose–Einstein condensates ({BEC}) in the presence of the triangular optical lattice potential, especially spin changing dynamics across the {SF}–{MI} transition. Our results suggest that, below the {SF}–{MI} phase transition, a well-established mean-field model describes the observed data when renormalizing the spin-dependent interaction. Interestingly, this opens up new perspectives for a lattice-driven tuning of a spin dynamics resonance occurring through the interplay of the quadratic Zeeman effect and spin-dependent interaction. Finally, we discuss further lattice configurations that can be realized with our setup.
   parent:
     type: periodical
     title: New Journal of Physics
@@ -2769,7 +2673,6 @@ lohse_thouless_2016:
     doi: 10.1038/nphys3584
     issn: 1745-2481
   note: "Publisher: Nature Publishing Group"
-  abstract: Topological charge pumping enables the transport of charge through an adiabatic cyclic evolution of the underlying Hamiltonian. In contrast to classical transport, the transported charge is quantized and purely determined by the topology of the pump cycle, making it robust to perturbations. Here, we report on the realization of such a pump with ultracold bosonic atoms forming a Mott insulator in a dynamically controlled optical superlattice. By taking in situ images of the cloud, we observe a quantized deflection per pump cycle. We reveal the pump’s genuine quantum nature by showing that, in contrast to ground-state particles, a counterintuitive reversed deflection occurs for particles in the first excited band. Furthermore, we directly demonstrate that the system undergoes a controlled topological transition in higher bands when tuning the superlattice parameters. These results open a route to the implementation of more complex pumping schemes, including spin degrees of freedom and higher dimensions.
   parent:
     type: periodical
     title: Nature Physics
@@ -2791,7 +2694,6 @@ wili_accordion_2023:
     doi: 10.1088/1367-2630/acc5ab
     issn: 1367-2630
   note: "Publisher: {IOP} Publishing"
-  abstract: "We propose a method for separating trapped atoms in optical lattices by large distances. The key idea is the cyclic transfer of atoms between two lattices of variable spacing, known as accordion lattices, each covering at least a factor of two in lattice spacing. By coherently loading atoms between the two superimposed potentials, we can reach, in principle, arbitrarily large atom separations, while requiring only a relatively small numerical aperture. Numerical simulations of our ‘accordion superlattice’ show that the atoms remain localized to one lattice site throughout the separation process, even for moderate lattice depths. In a proof-of-principle experiment, we demonstrate the optical fields required for the accordion superlattice using acousto-optic deflectors. The method can be applied to neutral-atom quantum computing with optical tweezers, as well as quantum simulation of low-entropy many-body states. For instance, a unit-filling atomic Mott insulator can be coherently expanded by a factor of ten in order to load an optical tweezer array with very high filling. In turn, sorted tweezer arrays can be compressed to form high-density states of ultracold atoms in optical lattices. The method can also be applied to biological systems where dynamical separation of particles is required. Video Abstract: An accordion superlattice for controlling atom separation in optical potentials"
   parent:
     type: periodical
     title: New Journal of Physics
@@ -2812,7 +2714,6 @@ weitenberg_tailoring_2021:
     doi: 10.1038/s41567-021-01316-x
     issn: 1745-2481
   note: "Publisher: Nature Publishing Group"
-  abstract: Floquet engineering is the concept of tailoring a system by a periodic drive, and it is increasingly employed in many areas of physics. Ultracold atoms in optical lattices offer a particularly large toolbox to design a variety of driving schemes. A strong motivation for developing these methods is the prospect to study the interplay between topology and interactions in a system where both ingredients are fully tunable. We review the recent successes of Floquet engineering in realizing new classes of Hamiltonians in quantum gases, such as Hamiltonians including artificial gauge fields, topological band structures and density-dependent tunnelling. The creation of periodically driven systems also gives rise to phenomena without static counterparts such as anomalous Floquet topological insulators. We discuss the challenges facing the field, particularly the control of heating mechanisms, which currently limit the preparation of many-body phases, as well as the potential future developments as these obstacles are overcome.
   parent:
     type: periodical
     title: Nature Physics
@@ -2832,7 +2733,6 @@ hansch_cooling_1975:
   serial-number:
     doi: 10.1016/0030-4018(75)90159-5
     issn: 0030-4018
-  abstract: It is shown that a low-density gas can be cooled by illuminating it with intense, quasi-monochromatic light confined to the lower-frequency half of a resonance line's Doppler width. Translational kinetic energy can be transferred from the gas to the scattered light, until the atomic velocity is reduced by the ratio of the Doppler width to the natural line width.
   parent:
     type: periodical
     title: Optics Communications
@@ -2853,7 +2753,6 @@ ashkin_cooling_1979:
     doi: 10.1364/OL.4.000161
     issn: 1539-4794
   note: "Publisher: Optica Publishing Group"
-  abstract: The combined use of trapping and cooling laser beams for optical trapping and cooling of neutral atoms by the forces of resonance radiation pressure is examined. Calculations show that atoms can be held in traps as deep as 10−4 {eV} at temperatures of {~}10−3 K, close to the minimum set by quantum fluctuations. Spatial confinement of atoms to a region a fraction of a wavelength in length should be possible.
   parent:
     type: periodical
     title: Optics Letters
@@ -2871,7 +2770,6 @@ ferrari_collisional_1999:
   serial-number:
     doi: 10.1103/PhysRevA.59.R4125
   note: "Publisher: American Physical Society"
-  abstract: We propose a method to study the degeneracy of a trapped atomic gas of fermions through the relaxation of the motion of a test particle. In the degenerate regime, and for an energy of the test particle well below the Fermi energy, we show that the Fermi-Dirac statistics is responsible for a strong decrease in the relaxation rate. This method can be used to directly measure the temperature of the fermionic gas.
   parent:
     type: periodical
     title: Physical Review {A}
@@ -2911,7 +2809,6 @@ anderson_resonating_1987:
   serial-number:
     doi: 10.1126/science.235.4793.1196
   note: "Publisher: American Association for the Advancement of Science"
-  abstract: 'The oxide superconductors, particularly those recently discovered that are based on La2CuO4, have a set of peculiarities that suggest a common, unique mechanism: they tend in every case to occur near a metal-insulator transition into an odd-electron insulator with peculiar magnetic properties. This insulating phase is proposed to be the long-sought "resonating-valence-bond" state or "quantum spin liquid" hypothesized in 1973. This insulating magnetic phase is favored by low spin, low dimensionality, and magnetic frustration. The preexisting magnetic singlet pairs of the insulating state become charged superconducting pairs when the insulator is doped sufficiently strongly. The mechanism for superconductivity is hence predominantly electronic and magnetic, although weak phonon interactions may favor the state. Many unusual properties are predicted, especially of the insulating state.'
   parent:
     type: periodical
     title: Science
@@ -2966,7 +2863,6 @@ stoferle_molecules_2006:
   serial-number:
     doi: 10.1103/PhysRevLett.96.030401
   note: "Publisher: American Physical Society"
-  abstract: We create molecules from fermionic atoms in a three-dimensional optical lattice using a Feshbach resonance. In the limit of low tunneling, the individual wells can be regarded as independent three-dimensional harmonic oscillators. The measured binding energies for varying scattering length agree excellently with the theoretical prediction for two interacting atoms in a harmonic oscillator. We demonstrate that the formation of molecules can be used to measure the occupancy of the lattice and perform thermometry.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -2991,7 +2887,6 @@ link_machine_2023:
   serial-number:
     doi: 10.1103/PhysRevLett.130.203401
   note: "Publisher: American Physical Society"
-  abstract: We determine the phase diagram of strongly correlated fermions in the crossover from Bose-Einstein condensates of molecules ({BEC}) to Cooper pairs of fermions ({BCS}) utilizing an artificial neural network. By applying advanced image recognition techniques to the momentum distribution of the fermions, a quantity which has been widely considered as featureless for providing information about the condensed state, we measure the critical temperature and show that it exhibits a maximum on the bosonic side of the crossover. Additionally, we backanalyze the trained neural network and demonstrate that it interprets physically relevant quantities.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -3012,7 +2907,6 @@ greiner_probing_2005:
   serial-number:
     doi: 10.1103/PhysRevLett.94.070403
   note: "Publisher: American Physical Society"
-  abstract: We measure excitation spectra of an ultracold gas of fermionic 40K atoms in the {BCS}–Bose-Einstein-condensation ({BEC}) crossover regime. The measurements are performed with a novel spectroscopy that employs a small modulation of the 𝐵 field close to a Feshbach resonance to give rise to a modulation of the interaction strength. With this method we observe both a collective excitation as well as the dissociation of fermionic atom pairs in the strongly interacting regime. The excitation spectra reveal the binding energy or excitation gap for pairs in the crossover region.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -3039,7 +2933,6 @@ behrle_higgs_2018:
     doi: 10.1038/s41567-018-0128-6
     issn: 1745-2481
   note: "Publisher: Nature Publishing Group"
-  abstract: Higgs and Goldstone modes are possible collective modes of an order parameter on spontaneously breaking a continuous symmetry. Whereas the low-energy Goldstone (phase) mode is always stable, additional symmetries are required to prevent the Higgs (amplitude) mode from rapidly decaying into low-energy excitations. In high-energy physics, where the Higgs boson1 has been found after a decades-long search, the stability is ensured by Lorentz invariance. In the realm of condensed-matter physics, particle–hole symmetry can play this role2 and a Higgs mode has been observed in weakly interacting superconductors3–5. However, whether the Higgs mode is also stable for strongly correlated superconductors in which particle–hole symmetry is not precisely fulfilled or whether this mode becomes overdamped has been the subject of numerous discussions6–11. Experimental evidence is still lacking, in particular owing to the difficulty of exciting the Higgs mode directly. Here, we observe the Higgs mode in a strongly interacting superfluid Fermi gas. By inducing a periodic modulation of the amplitude of the superconducting order parameter Δ, we observe an excitation resonance at the frequency 2Δ/h. For strong coupling, the peak width broadens and eventually the mode disappears when the Cooper pairs turn into tightly bound dimers signalling the eventual instability of the Higgs mode.
   parent:
     type: periodical
     title: Nature Physics
@@ -3060,7 +2953,6 @@ madje_typst_2023:
   serial-number:
     version: 0.14.0
   note: "original-date: 2019-09-24T21:41:56Z"
-  abstract: A markup-based typesetting system that is powerful and easy to learn.
 fleper_ultracold_2025:
   type: misc
   title: Ultracold Fermions in an Ultrastable Optical Superlattice
@@ -3103,7 +2995,6 @@ yang_ensurematheta_1989:
   serial-number:
     doi: 10.1103/PhysRevLett.63.2144
   note: "Publisher: American Physical Society"
-  abstract: It is shown in a simple Hubbard model that through a mechanism called η pairing one can construct many eigenstates of the Hamiltonian possessing off-diagonal long-range order. The intrapair distance is small. It is shown that these eigenstates are metastable and possess an energy gap.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -3123,7 +3014,6 @@ fan_entanglement_2005:
   serial-number:
     doi: 10.1088/0305-4470/38/23/014
     issn: 0305-4470
-  abstract: Off-diagonal long-range order ({ODLRO}) which is believed to be one characteristic of superconductivity is a quantum phenomenon not describable in classical mechanical terms. The quantum state constructed by η-pairing demonstrates {ODLRO}. Entanglement is a key concept of the quantum information processing and has no classical counterpart. We study the entanglement property of the η-pairing quantum state by concurrence and entropy which are two measures of the entanglement. We show that the concurrence of entanglement between one-site and the rest sites is exactly the correlation function of the {ODLRO} for the η-pairing state in the thermodynamic limit. So, when the η-pairing state is entangled, it demonstrates {ODLRO} and is thus in the superconducting phase, if it is a separable state, there is no {ODLRO}. In the thermodynamical limit, the entanglement between the M-site and other sites of the η-pairing state does not vanish. Other types of {ODLRO} of the η-pairing state are presented. We show that the behaviour of the {ODLRO} correlation functions is equivalent to that of the entanglement of the η-pairing state. The scaling of the entropy of the entanglement for the η-pairing state is studied.
   parent:
     type: periodical
     title: "Journal of Physics A: Mathematical and General"
@@ -3143,7 +3033,6 @@ sansonetti_wavelengths_2010:
   serial-number:
     doi: 10.1063/1.3449176
     issn: 0047-2689, 1529-7845
-  abstract: Following a critical review of spectroscopic data for neutral strontium (Z=38), the energy levels, with designations and uncertainties, have been tabulated. Wavelengths with classifications, intensities, and transition probabilities have also been reviewed. In addition, the 5s S1∕22, 4d D3∕22, and 4d D5∕22 ionization energies have been listed. A summary of the current state of measurements of the {SrI} 5s2 S01-5s5p P0∘3, F=9∕2 atomic clock transition, and other isotopic observations has also been included.
   parent:
     type: periodical
     title: Journal of Physical and Chemical Reference Data
@@ -3167,7 +3056,6 @@ hoyt_observation_2005:
   serial-number:
     doi: 10.1103/PhysRevLett.95.083003
   note: "Publisher: American Physical Society"
-  abstract: We report the direct excitation of the highly forbidden optical transition in two odd isotopes of neutral ytterbium. As the excitation laser frequency is scanned, absorption is detected by monitoring the depletion from an atomic cloud at in a magneto-optical trap. The measured frequency in () is . The measured frequency in () is . Measurements are made with a femtosecond-laser frequency comb calibrated by the National Institute of Standards and Technology cesium fountain clock and represent nearly a -fold reduction in uncertainty. The natural linewidth of these to transitions is calculated to be , making them well suited to support a new generation of optical atomic clocks based on confinement in an optical lattice.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -3206,7 +3094,6 @@ mott_basis_1949:
   serial-number:
     doi: 10.1088/0370-1298/62/7/303
     issn: 0370-1298
-  abstract: It is shown that the collective electron and London-Heitler models are not to be regarded as different approximations to the same exact wave function for solids in which, according to the former model, there is a partially filled zone of energy levels. It can thus be shown why nickel oxide in the pure state is a non-conductor, although it contains an incomplete zone. The properties of the metals nickel, palladium and platinum are discussed in the light of these results; platinum differs from nickel in that the orbital contribution to the moment of the elementary magnets is not quenched. A discussion is given of x-ray absorption edges, and it is shown why exciton lines are absent for metals.
   parent:
     type: periodical
     title: Proceedings of the Physical Society. Section A
@@ -3224,7 +3111,6 @@ mott_metal-insulator_1968:
   serial-number:
     doi: 10.1103/RevModPhys.40.677
   note: "Publisher: American Physical Society"
-  abstract: "A general survey of the idea of the metal-nonmetal transition is given with particular emphasis to the following points: (a) is the transition of first order; (b) can one observe the transition; and (c) how is the transition affected when it occurs in ionic lattices or polar liquids."
   parent:
     type: periodical
     title: Reviews of Modern Physics
@@ -3247,7 +3133,6 @@ lee_doping_2006-1:
   serial-number:
     doi: 10.1103/RevModPhys.78.17
   note: "Publisher: American Physical Society"
-  abstract: This article reviews the physics of high-temperature superconductors from the point of view of the doping of a Mott insulator. The basic electronic structure of cuprates is reviewed, emphasizing the physics of strong correlation and establishing the model of a doped Mott insulator as a starting point. A variety of experiments are discussed, focusing on the region of the phase diagram close to the Mott insulator (the underdoped region) where the behavior is most anomalous. The normal state in this region exhibits pseudogap phenomenon. In contrast, the quasiparticles in the superconducting state are well defined and behave according to theory. This review introduces Anderson’s idea of the resonating valence bond and argues that it gives a qualitative account of the data. The importance of phase fluctuations is discussed, leading to a theory of the transition temperature, which is driven by phase fluctuations and the thermal excitation of quasiparticles. However, an argument is made that phase fluctuations can only explain pseudogap phenomenology over a limited temperature range, and some additional physics is needed to explain the onset of singlet formation at very high temperatures. A description of the numerical method of the projected wave function is presented, which turns out to be a very useful technique for implementing the strong correlation constraint and leads to a number of predictions which are in agreement with experiments. The remainder of the paper deals with an analytic treatment of the 𝑡−𝐽 model, with the goal of putting the resonating valence bond idea on a more formal footing. The slave boson is introduced to enforce the constraint againt double occupation and it is shown that the implementation of this local constraint leads naturally to gauge theories. This review follows the historical order by first examining the U(1) formulation of the gauge theory. Some inadequacies of this formulation for underdoping are discussed, leading to the {SU}(2) formulation. Here follows a rather thorough discussion of the role of gauge theory in describing the spin-liquid phase of the undoped Mott insulator. The difference between the high-energy gauge group in the formulation of the problem versus the low-energy gauge group, which is an emergent phenomenon, is emphasized. Several possible routes to deconfinement based on different emergent gauge groups are discussed, which leads to the physics of fractionalization and spin-charge separation. Next the extension of the {SU}(2) formulation to nonzero doping is described with a focus on a part of the mean-field phase diagram called the staggered flux liquid phase. It will be shown that inclusion of the gauge fluctuation provides a reasonable description of the pseudogap phase. It is emphasized that 𝑑-wave superconductivity can be considered as evolving from a stable U(1) spin liquid. These ideas are applied to the high-𝑇𝑐 cuprates, and their implications for the vortex structure and the phase diagram are discussed. A possible test of the topological structure of the pseudogap phase is described.
   parent:
     type: periodical
     title: Reviews of Modern Physics
@@ -3267,7 +3152,6 @@ jessen_optical_1996:
   serial-number:
     doi: 10.1016/S1049-250X(08)60099-3
   note: "{ISSN}: 1049-250X"
-  abstract: This chapter reviews the experimental and theoretical developments made in the study of optical lattices. The interference pattern of a set of interse…
   parent:
     type: anthology
     title: Advances In Atomic, Molecular, and Optical Physics
@@ -3287,7 +3171,6 @@ gross_quantum_2017:
   serial-number:
     doi: 10.1126/science.aal3837
   note: "Publisher: American Association for the Advancement of Science"
-  abstract: Quantum simulation, a subdiscipline of quantum computation, can provide valuable insight into difficult quantum problems in physics or chemistry. Ultracold atoms in optical lattices represent an ideal platform for simulations of quantum many-body problems. Within this setting, quantum gas microscopes enable single atom observation and manipulation in large samples. Ultracold atom–based quantum simulators have already been used to probe quantum magnetism, to realize and detect topological quantum matter, and to study quantum systems with controlled long-range interactions. Experiments on many-body systems out of equilibrium have also provided results in regimes unavailable to the most advanced supercomputers. We review recent experimental progress in this field and comment on future directions.
   parent:
     type: periodical
     title: Science
@@ -3306,7 +3189,6 @@ bloch_ultracold_2005:
     doi: 10.1038/nphys138
     issn: 1745-2481
   note: "Publisher: Nature Publishing Group"
-  abstract: Artificial crystals of light, consisting of hundreds of thousands of optical microtraps, are routinely created by interfering optical laser beams. These so-called optical lattices act as versatile potential landscapes to trap ultracold quantum gases of bosons and fermions. They form powerful model systems of quantum many-body systems in periodic potentials for probing nonlinear wave dynamics and strongly correlated quantum phases, building fundamental quantum gates or observing Fermi surfaces in periodic potentials. Optical lattices represent a fast-paced modern and interdisciplinary field of research.
   parent:
     type: periodical
     title: Nature Physics
@@ -3329,7 +3211,6 @@ lubasch_adiabatic_2011:
   serial-number:
     doi: 10.1103/PhysRevLett.107.165301
   note: "Publisher: American Physical Society"
-  abstract: We analyze the possibility to prepare a Heisenberg antiferromagnet with cold fermions in optical lattices, starting from a band insulator and adiabatically changing the lattice potential. The numerical simulation of the dynamics in 1D allows us to identify the conditions for success, and to study the influence that the presence of holes in the initial state may have on the protocol. We also extend our results to two-dimensional systems.
   parent:
     type: periodical
     title: Physical Review Letters
@@ -3353,7 +3234,6 @@ eckardt_frustrated_2010:
   serial-number:
     doi: 10.1209/0295-5075/89/10010
     issn: 0295-5075
-  abstract: We propose to realize the anisotropic triangular-lattice Bose-Hubbard model with positive tunneling matrix elements by using ultracold atoms in an optical lattice dressed by a fast lattice oscillation. This model exhibits frustrated antiferromagnetism at experimentally feasible temperatures; it interpolates between a classical rotor model for weak interaction, and a quantum spin-(1/2) {XY}-model in the limit of hard-core bosons. This allows to explore experimentally gapped spin-liquid phases predicted recently (Schmied R. et al., New J. Phys., 10 (2008) 045017).
   parent:
     type: periodical
     title: Europhysics Letters
@@ -3372,7 +3252,6 @@ balents_spin_2010:
     doi: 10.1038/nature08917
     issn: 1476-4687
   note: "Publisher: Nature Publishing Group"
-  abstract: Frustrated magnets are materials in which localized magnetic moments, or spins, interact through competing exchange interactions that cannot be simultaneously satisfied, giving rise to a large degeneracy of the system ground state. Under certain conditions, this can lead to the formation of fluid-like states of matter, so-called spin liquids, in which the constituent spins are highly correlated but still fluctuate strongly down to a temperature of absolute zero. The fluctuations of the spins in a spin liquid can be classical or quantum and show remarkable collective phenomena such as emergent gauge fields and fractional particle excitations. This exotic behaviour is now being uncovered in the laboratory, providing insight into the properties of spin liquids and challenges to the theoretical description of these materials.
   parent:
     type: periodical
     title: Nature
@@ -3395,7 +3274,6 @@ hartke_direct_2023:
   serial-number:
     doi: 10.1126/science.ade4245
   note: "Publisher: American Association for the Advancement of Science"
-  abstract: The Hubbard model of attractively interacting fermions provides a paradigmatic setting for fermion pairing. It features a crossover between Bose-Einstein condensation of tightly bound pairs and Bardeen-Cooper-Schrieffer superfluidity of long-range Cooper pairs, and a “pseudo-gap” region where pairs form above the superfluid critical temperature. We directly observe the nonlocal nature of fermion pairing in a Hubbard lattice gas, using spin- and density-resolved imaging of ∼ 1000 fermionic potassium-40 atoms under a bilayer microscope. Complete fermion pairing is revealed by the vanishing of global spin fluctuations with increasing attraction. In the strongly correlated regime, the fermion pair size is found to be on the order of the average interparticle spacing. Our study informs theories of pseudo-gap behavior in strongly correlated fermion systems.
   parent:
     type: periodical
     title: Science
@@ -3417,7 +3295,6 @@ hasan_topological_2010:
   serial-number:
     doi: 10.1103/RevModPhys.82.3045
   note: "Publisher: American Physical Society"
-  abstract: Topological insulators are electronic materials that have a bulk band gap like an ordinary insulator but have protected conducting states on their edge or surface. These states are possible due to the combination of spin-orbit interactions and time-reversal symmetry. The two-dimensional (2D) topological insulator is a quantum spin Hall insulator, which is a close cousin of the integer quantum Hall state. A three-dimensional (3D) topological insulator supports novel spin-polarized 2D Dirac fermions on its surface. In this Colloquium the theoretical foundation for topological insulators and superconductors is reviewed and recent experiments are described in which the signatures of topological insulators have been observed. Transport experiments on Hg⁢Te/Cd⁢Te quantum wells are described that demonstrate the existence of the edge states predicted for the quantum spin Hall insulator. Experiments on Bi1−𝑥⁢Sb𝑥, Bi2⁢Se3, Bi2⁢Te3, and Sb2⁢Te3 are then discussed that establish these materials as 3D topological insulators and directly probe the topology of their surface states. Exotic states are described that can occur at the surface of a 3D topological insulator due to an induced energy gap. A magnetic gap leads to a novel quantum Hall state that gives rise to a topological magnetoelectric effect. A superconducting energy gap leads to a state that supports Majorana fermions and may provide a new venue for realizing proposals for topological quantum computation. Prospects for observing these exotic states are also discussed, as well as other potential device applications of topological insulators.
   parent:
     type: periodical
     title: Reviews of Modern Physics
