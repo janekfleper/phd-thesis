@@ -54,7 +54,7 @@
 }
 
 #let figure(width: 1.05 * 8cm + gutter, height: 1.05 * 4cm) = {
-  let cell = block.with(width: 100%, height: 100%, stroke: spine-stroke, fill: none)
+  let cell = block.with(width: 100%, height: 100%, stroke: none, fill: none)
 
   show: figure-style
   block(

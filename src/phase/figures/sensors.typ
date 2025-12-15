@@ -210,7 +210,7 @@
     content((rel: (0, -0.3), to: "retro.south"), "Retro mirror")
     content((rel: (0, -0.3), to: "glasscell.south"), "Glass cell")
     content((rel: (-0.9, 0.3), to: "ioffe-upper-2.north-east"), "Ioffe bars")
-    content((rel: (0, -0.4), to: "pinch-pump-4.south"), "Pinch coil")
+    content((rel: (0, -0.4), to: "pinch-pump-4.south"), "Pinch coils")
     content((rel: (0, 0.3), to: "sensor-lens.north"), $T_"Lens"$)
     content((rel: (0, -0.3), to: "TA.south"), $T_"A"$)
     content((rel: (0, -0.3), to: "TB.south"), $T_"B"$)

@@ -123,7 +123,7 @@ The in-situ #slms can, therefore, only be used for a coarse alignment of the ang
   table(
     columns: 5,
     stroke: table-stroke.with(stroke: black + 0.5pt),
-    table.header("Lattice", $fitw0 slash#unit[μm]$, fita0, $fity0 slash#unit[px]$, $fitang slash degree$),
+    table.header("Lattice", $fitw0 slash#unit[μm]$, fita0, $fity0 slash#unit[μm]$, $fitang slash degree$),
 
     x1064, num[139.4(17)], num[1.0011(5)], num[-1.60(23)], num[-5.50(17)],
     x532,
