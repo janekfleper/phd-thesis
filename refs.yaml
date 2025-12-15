@@ -113,6 +113,7 @@ greif_quantum_2013:
   type: thesis
   title: Quantum magnetism with ultracold fermions in an optical lattice
   author: Greif, Daniel Günther
+  genre: PhD thesis
   date: 2013
   publisher: "{ETH} Zurich"
   url:
@@ -124,18 +125,21 @@ miller_ultracold_2016:
   type: thesis
   title: "Ultracold Fermions in Two-Dimensional Optical Lattices: Quantum Simulation of the Hubbard Model"
   author: Miller, Luke
+  genre: PhD thesis
   date: 2016-08
   publisher: University of Cambridge
 vogt_collective_2013:
   type: thesis
   title: Collective Modes and Polarons in two-dimensional Fermi Gases
   author: Vogt, Enrico
+  genre: PhD thesis
   date: 2013-02-26
   publisher: University of Cambridge
 ludewig_feshbach_2012:
   type: thesis
   title: Feshbach resonances in {40K}
   author: Ludewig, Antje
+  genre: PhD thesis
   date: 2012
   publisher: Universiteit van Amsterdam
   note: "{OCLC}: 788564450"
@@ -192,6 +196,7 @@ bauer_enhancing_2020:
   type: thesis
   title: Enhancing Pair Hopping in a Floquet-Engineered Two-Site Hubbard Model
   author: Bauer, Simon
+  genre: Bachelor thesis
   date: 2020-08
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 pertot_relaxation_2014:
@@ -224,18 +229,21 @@ klemmer_ultracold_2020:
   type: thesis
   title: Ultracold Fermions in an Optical Superlattice
   author: Klemmer, Nick
+  genre: Master thesis
   date: 2020-11
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 loida_modulation_2017:
   type: thesis
   title: Modulation Spectroscopy of Ultracold Atoms in Optical Lattices
   author: Loida, Karla Henriette
+  genre: PhD thesis
   date: 2017
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 chomaz_coherence_2014:
   type: thesis
   title: "Coherence and superfluidity of Bose gases in reduced dimensions: from harmonic traps to uniform fluids"
   author: Chomaz, Lauriane
+  genre: PhD thesis
   date: 2014-11-10
   publisher: École Normale Supérieure
 nakajima_topological_2016:
@@ -879,6 +887,7 @@ gorg_ultracold_2014:
   type: thesis
   title: Ultracold Fermionic Atoms in Optical Superlattices
   author: Görg, Frederik
+  genre: Master thesis
   date: 2014-03-14
   publisher: Technische Universität München
 windpassinger_engineering_2013:
@@ -904,48 +913,56 @@ wurz_quantum_2021:
   type: thesis
   title: Quantum Magnetism in the Two-Dimensional Fermi-Hubbard Model and Beyond
   author: Wurz, Nicola
+  genre: PhD thesis
   date: 2021
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 frohlich_strongly_2011:
   type: thesis
   title: A Strongly Interacting Two-Dimensional Fermi Gas
   author: Fröhlich, Bernd
+  genre: PhD thesis
   date: 2011-07
   publisher: University of Cambridge
 feld_low_2011:
   type: thesis
   title: Low temperature phases of interacting fermions in two dimensions
   author: Feld, Michael
+  genre: PhD thesis
   date: 2011-08
   publisher: University of Cambridge
 drewes_thermodynamics_2020:
   type: thesis
   title: Thermodynamics and correlations of ultracold fermions in a two-dimensional optical lattice
   author: Drewes, Jan
+  genre: PhD thesis
   date: 2020
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 cocchi_analogue_2016:
   type: thesis
   title: Analogue Quantum Simulation of the Two-Dimensional Hubbard Model with Ultracold Fermions
   author: Cocchi, Eugenio
+  genre: PhD thesis
   date: 2016-10
   publisher: University of Cambridge
 chan_quantum_2019:
   type: thesis
   title: Quantum simulation of strongly-correlated two-dimensional fermions in optical lattices
   author: Chan, C. F.
+  genre: PhD thesis
   date: 2019
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 gall_quantum_2020:
   type: thesis
   title: Quantum Simulation of the Bilayer Hubbard Model Using Ultracold Atoms
   author: Gall, Marcell
+  genre: PhD thesis
   date: 2020
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 gorg_exploring_2019:
   type: thesis
   title: Exploring and Floquet-Engineering the Driven Fermi-Hubbard Model with Ultracold Atoms
   author: Görg, Frederik
+  genre: PhD thesis
   date: 2019
   publisher: "{ETH} Zurich"
   url:
@@ -1121,6 +1138,7 @@ greiner_ultracold_2003:
   type: thesis
   title: Ultracold quantum gases in three-dimensional optical lattice potentials
   author: Greiner, Markus
+  genre: PhD thesis
   date: 2003-01-22
   publisher: Ludwig-Maximilians-Universität München
 rahav_effective_2003:
@@ -1168,6 +1186,7 @@ bergschneider_strong_2017:
   type: thesis
   title: Strong correlations in few-fermion systems
   author: Bergschneider, Andrea
+  genre: PhD thesis
   date: 2017
   publisher: Ruprecht-Karls-Universität Heidelberg
   url:
@@ -1434,6 +1453,7 @@ bissbort_dynamical_2012:
   type: thesis
   title: Dynamical effects and disorder in ultracold bosonic matter
   author: Bissbort, Ulf
+  genre: PhD thesis
   date: 2012
   publisher: Johann Wolfgang Goethe-Universität Frankfurt am Main
   url:
@@ -1890,12 +1910,14 @@ klemmer_ultracold_2024:
   type: thesis
   title: Ultracold fermions in periodically-driven superlattices
   author: Klemmer, Nick
+  genre: PhD thesis
   date: 2024
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 jonas_ultracold:
   type: thesis
   title: Ultracold Fermions in Optical Superlattices ({preliminary title})
   author: Jonas, Valentin
+  genre: PhD thesis
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 breit_measurement_1931:
   type: article
@@ -1940,6 +1962,7 @@ klemmer_cavity_2018:
   type: thesis
   title: Cavity design for high-power frequency doubling
   author: Klemmer, Nick
+  genre: Bachelor thesis
   date: 2018-07
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 slater_simplified_1954:
@@ -2150,6 +2173,7 @@ bourgund_charge_2024:
   type: thesis
   title: Charge correlations in quantum simulation of mixed-dimensional Hubbard systems
   author: Bourgund, Dominik
+  genre: PhD thesis
   date: 2024-03-12
   publisher: Ludwig-Maximilians-Universität München
   url:
@@ -2840,6 +2864,7 @@ haug_fast_2022:
   type: thesis
   title: Fast Typesetting with Incremental Compilation
   author: Haug, Martin
+  genre: Master thesis
   date: 2022-06-15
   publisher: Technische Universität Berlin
   serial-number:
@@ -2848,6 +2873,7 @@ madje_programmable_2022:
   type: thesis
   title: A Programmable Markup Language for Typesetting
   author: Mädje, Laurenz
+  genre: Master thesis
   date: 2022-09-08
   publisher: Technische Universität Berlin
   url: https://laurmaedje.github.io/programmable-markup-language-for-typesetting.pdf
@@ -3070,18 +3096,21 @@ fleper_long-range_2020:
   type: thesis
   title: Long-range disorder in the non-interacting one-dimensional Fermi-Hubbard model
   author: Fleper, Janek
+  genre: Master thesis
   date: 2020-12
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 reuter_akusto-optische_2024:
   type: thesis
   title: Akusto-optische Formung eines Lichtstrahls zur Kompensation der Inhomogenität eines optischen Gitters
   author: Reuter, Juliane
+  genre: Bachelor thesis
   date: 2024-09
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 bukov_floquet_2017:
   type: thesis
   title: "Floquet engineering in periodically driven closed quantum systems: from dynamical localisation to ultracold topological matter"
   author: Bukov, Marin
+  genre: PhD thesis
   date: 2017
   publisher: Boston University
   url:
