@@ -17,7 +17,7 @@ schneider_ab-initio_2009:
   abstract: We calculate numerically the exact energy spectrum of the six dimensional problem of two interacting Bosons in a three-well optical lattice. The particles interact via a full Born-Oppenheimer potential which can be adapted to model the behavior of the s-wave scattering length at Feshbach resonances. By adjusting the parameters of the corresponding Bose-Hubbard ({BH}) Hamiltonian the deviation between the numerical energy spectrum and the {BH} spectrum is minimized. This defines the optimal {BH} parameter set which we compare to the standard parameters of the {BH} model. The range of validity of the {BH} model with these parameter sets is examined, and an improved analytical prediction of the interaction parameter is introduced. Furthermore, an extended {BH} model and implications due to the energy dependence of the scattering length and couplings to higher Bloch bands at a Feshbach resonance are discussed.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 1
     volume: 80
 gorg_enhancement_2018:
@@ -62,7 +62,7 @@ goldman_periodically_2014:
   abstract: "Driving a quantum system periodically in time can profoundly alter its long-time dynamics and trigger topological order. Such schemes are particularly promising for generating nontrivial energy bands and gauge structures in quantum-matter systems. Here, we develop a general formalism that captures the essential features ruling the dynamics: the effective Hamiltonian, but also the effects related to the initial phase of the modulation and the micromotion. This framework allows for the identification of driving schemes, based on general N-step modulations, which lead to configurations relevant for quantum simulation. In particular, we explore methods to generate synthetic spin-orbit couplings and magnetic fields in cold-atom setups."
   parent:
     type: periodical
-    title: Physical Review X
+    title: Physical Review {X}
     issue: 3
     volume: 4
 chin_feshbach_2010:
@@ -111,7 +111,7 @@ ville_loading_2017:
   abstract: The experimental realization of two-dimensional (2D) Bose gases with a tunable interaction strength is an important challenge for the study of ultracold quantum matter. Here we report on the realization of an optical accordion creating a lattice potential with a spacing that can be dynamically tuned between 11 and 2 μm. We show that we can load ultracold 87Rb atoms into a single node of this optical lattice in the large spacing configuration and then decrease nearly adiabatically the spacing to reach a strong harmonic confinement with frequencies larger than ωz/2π=10 {kHz}. Atoms are trapped in an additional flat-bottom in-plane potential that is shaped with a high resolution. By combining these tools we create custom-shaped uniform 2D Bose gases with tunable confinement along the transverse direction and hence with a tunable interaction strength.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 1
     volume: 95
 greif_quantum_2013:
@@ -164,7 +164,7 @@ friebel_co_1998:
     issn: 1050-2947, 1094-1622
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 1
     volume: 57
 li_high-powered_2021:
@@ -364,7 +364,7 @@ idziaszek_two_2005:
     issn: 1050-2947, 1094-1622
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 5
     volume: 71
 idziaszek_analytical_2006:
@@ -383,7 +383,7 @@ idziaszek_analytical_2006:
     issn: 1050-2947, 1094-1622
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 2
     volume: 74
 tiecke_properties_2011:
@@ -538,7 +538,7 @@ wurz_coherent_2018:
   abstract: We coherently manipulate spin correlations in a two-component atomic Fermi gas loaded into an optical lattice using spatially and time-resolved Ramsey spectroscopy combined with high-resolution in situ imaging. This technique allows us not only to imprint spin patterns but also to probe the static magnetic structure factor at an arbitrary wave vector, in particular, the staggered structure factor. From a measurement along the diagonal of the first Brillouin zone of the optical lattice, we determine the magnetic correlation length and the individual spatial spin correlators. At half filling, the staggered magnetic structure factor serves as a sensitive thermometer, which we employ to study the equilibration in the spin and density sector during a slow quench of the lattice depth.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 5
     volume: 97
 esslinger_fermi-hubbard_2010:
@@ -546,6 +546,7 @@ esslinger_fermi-hubbard_2010:
   title: Fermi-Hubbard Physics with Atoms in an Optical Lattice
   author: Esslinger, Tilman
   date: 2010-07-29
+  page-range: 129-152
   url:
     value: https://www.annualreviews.org/doi/abs/10.1146/annurev-conmatphys-070909-104059
     date: 2020-12-05
@@ -555,7 +556,8 @@ esslinger_fermi-hubbard_2010:
   abstract: The Fermi-Hubbard model is a key concept in condensed matter physics and provides crucial insights into electronic and magnetic properties of materials. Yet, the intricate nature of Fermi systems poses a barrier to answering important questions concerning d-wave superconductivity and quantum magnetism. Recently, it has become possible to experimentally realize the Fermi-Hubbard model using a fermionic quantum gas loaded into an optical lattice. In this atomic approach to the Fermi-Hubbard model, the Hamiltonian is a direct result of the optical lattice potential created by interfering laser fields and short-ranged ultracold collisions. It provides a route to simulate the physics of the Hamiltonian and to address open questions and novel challenges of the underlying many-body system. This review gives an overview of the current efforts in understanding and realizing experiments with fermionic atoms in optical lattices and discusses key experiments in the metallic, band-insulating, superfluid, and Mott-insulating regimes.
   parent:
     type: periodical
-    title: http://dx.doi.org/10.1146/annurev-conmatphys-070909-104059
+    title: Annual Review of Condensed Matter Physics
+    volume: 1
 kohl_fermionic_2005:
   type: article
   title:
@@ -848,7 +850,7 @@ chen_analytical_2020:
     issn: 2469-9926, 2469-9934
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 5
     volume: 101
 hung_extracting_2011:
@@ -896,7 +898,7 @@ desbuquois_controlling_2017:
   abstract: Near-resonant periodic driving of quantum systems promises the implementation of a large variety of novel quantum states, though their preparation and measurement remains challenging. We address these aspects in a model system consisting of interacting fermions in a periodically driven array of double wells created by an optical lattice. The singlet and triplet fractions and the double occupancy of the Floquet states are measured and their behavior as a function of the interaction strength is analyzed in the high- and low-frequency regimes. We demonstrate full control of the Floquet state population and find suitable ramping protocols and time scales that adiabatically connect the initial ground state to different targeted Floquet states. The micromotion that exactly describes the time evolution of the system within one driving cycle is observed. Additionally, we provide an analytic description of the model and compare it to numerical simulations.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 5
     volume: 96
 gorg_ultracold_2014:
@@ -1015,7 +1017,7 @@ soni_density_2016:
   abstract: We simulate a one-dimensional fermionic optical lattice to analyze heating due to nonadiabatic lattice loading. Our simulations reveal that, similar to the bosonic case, density redistribution effects are the major cause of heating in harmonic traps. We suggest protocols to modulate the local-density distribution during the process of lattice loading in order to reduce the excess energy. Our numerical results confirm that linear interpolation of the trapping potential and/or the interaction strength is an efficient method of doing so, bearing practical applications relevant to experiments.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 6
     volume: 94
 truscott_observation_2001:
@@ -1174,7 +1176,7 @@ rahav_effective_2003:
   abstract: The dynamics of classical and quantum systems, which are driven by a high-frequency (ω) field, is investigated. For classical systems, the motion is separated into a slow part and a fast part. The motion for the slow part is computed perturbatively in powers of ω−1 to the order ω−4, and the corresponding time independent Hamiltonian is calculated. Such an effective Hamiltonian for the corresponding quantum problem is computed to the order ω−4 in a high-frequency expansion. Its spectrum is the quasienergy spectrum of the time dependent quantum system. The classical limit of this effective Hamiltonian is the classical effective time independent Hamiltonian. It is demonstrated that this effective Hamiltonian gives the exact quasienergies and quasienergy states of some simple examples, as well as the lowest resonance of a nontrivial model for an atom trap. The theory that is developed in this paper is useful for the analysis of atomic motion in atom traps of various shapes.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 1
     volume: 68
 busch_two_1998:
@@ -1568,7 +1570,7 @@ cabrera-gutierrez_robust_2018:
   abstract: We report on a method to calibrate the depth of an optical lattice. It consists of triggering the intrasite dipole mode of the cloud by a sudden phase shift. The corresponding oscillatory motion is directly related to the interband frequencies on a large range of lattice depths. Remarkably, for a moderate displacement, a single frequency dominates the oscillation of the zeroth and first orders of the interference pattern observed after a sufficiently long time of flight. The method is robust against atom-atom interactions and the exact value of the extra weak external confinement superimposed to the optical lattice.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 4
     volume: 97
 ovchinnikov_diffraction_1999:
@@ -1854,7 +1856,7 @@ sebby-strabley_lattice_2006:
   abstract: We describe the design and implementation of a two-dimensional optical lattice of double wells suitable for isolating and manipulating an array of individual pairs of atoms in an optical lattice. Atoms in the square lattice can be placed in a double well with any of their four nearest neighbors. The properties of the double well (the barrier height and relative energy offset of the paired sites) can be dynamically controlled. The topology of the lattice is phase stable against phase noise imparted by vibrational noise on mirrors. We demonstrate the dynamic control of the lattice by showing the coherent splitting of atoms from single wells into double wells and observing the resulting double-slit atom diffraction pattern. This lattice can be used to test controlled neutral atom motion among lattice sites and should allow for testing controlled two-qubit gates.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 3
     volume: 73
 rice_elementary_1982:
@@ -1989,7 +1991,7 @@ bergeman_magnetostatic_1987:
   abstract: In view of the recent successful confinement of decelerated sodium atoms in a magnetostatic trap, it is of interest to evaluate possible trap-field configurations. Neutral atoms in a Zeeman sublevel whose energy increases with field can be confined by a field whose magnitude ‖B‖ increases with distance from the center. Because this same basic requirement applies also to traps for neutrons and for plasmas (in the guiding-center approximation), trap configurations developed previously for these purposes are of interest for neutral atoms. However, the desired properties differ considerably because of very different objectives and different behavior of very cold atoms as compared with hot plasmas. We characterize basic trap configurations using both the exact expressions for the field, and a multipole polynomial expansion that facilitates studies of symmetry properties and classical or quantum orbits. Polynomial terms for the field components are derived and coefficients obtained by comparison with Taylor-series expansions and by global fit. Contours of ‖B‖ for various trap configurations are also presented. Under certain restrictive conditions, ‖B‖, and hence the effective potential, can be made isotropic to second order.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 4
     volume: 35
 klemmer_cavity_2018:
@@ -2271,7 +2273,7 @@ wei_observation_2023:
     issn: 2160-3308
   parent:
     type: periodical
-    title: Physical Review X
+    title: Physical Review {X}
     issue: 2
     volume: 13
 vishay_selecting_2015:
@@ -2323,7 +2325,7 @@ jurgensen_density-induced_2012:
     issn: 1050-2947, 1094-1622
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 4
     volume: 86
 greiner_exploring_2001:
@@ -2490,7 +2492,7 @@ baranov_critical_1998:
   abstract: We discuss a superfluid phase transition in a trapped neutral-atom Fermi gas. We consider the case where the critical temperature greatly exceeds the spacing between the trap levels and derive the corresponding Ginzburg-Landau equation. The latter turns out to be analogous to the equation for the condensate wave function in a trapped Bose gas. The analysis of its solution provides us with the value of the critical temperature 𝑇𝑐 and with the spatial and temperature dependence of the order parameter in the vicinity of the phase transition point.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 2
     volume: 58
 phillips_laser_1982:
@@ -2642,7 +2644,7 @@ matthies_long-distance_2024:
   abstract: We report on the transport of a thermal cloud of ultracold cesium and rubidium atoms over about 37 cm in under 25 ms using an optical conveyor belt formed by two counterpropagating beams with a controllable frequency difference that generate a movable optical lattice. By carefully selecting the waists and focus positions, we are able to use two static Gaussian beams for the transport, avoiding the need for a Bessel beam or variable-focus lenses. We characterize the transport efficiency for both species, including a comparison of different transport trajectories, gaining insight into the loss mechanisms and finding the minimum jerk trajectory to be optimum. Using the optimized parameters, we are able to transport up to 7×106 cesium or rubidium atoms with an efficiency up to 75%. To demonstrate the viability of our transport scheme for experiments employing quantum gas microscopy, we produce Bose-Einstein condensates of either species after transport and present measurements of the simultaneous transport of both species.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 2
     volume: 109
 fallani_bose-einstein_2005:
@@ -2870,7 +2872,7 @@ ferrari_collisional_1999:
   abstract: We propose a method to study the degeneracy of a trapped atomic gas of fermions through the relaxation of the motion of a test particle. In the degenerate regime, and for an energy of the test particle well below the Fermi energy, we show that the Fermi-Dirac statistics is responsible for a strong decrease in the relaxation rate. This method can be used to directly measure the temperature of the fermionic gas.
   parent:
     type: periodical
-    title: Physical Review A
+    title: Physical Review {A}
     issue: 6
     volume: 59
 hofstetter_high-temperature_2002:
