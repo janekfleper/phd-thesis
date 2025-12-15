@@ -1892,6 +1892,11 @@ klemmer_ultracold_2024:
   author: Klemmer, Nick
   date: 2024
   publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
+jonas_ultracold:
+  type: thesis
+  title: Ultracold Fermions in Optical Superlattices ({preliminary title})
+  author: Jonas, Valentin
+  publisher: Rheinische Friedrich-Wilhelms-Universität Bonn
 breit_measurement_1931:
   type: article
   title: Measurement of Nuclear Spin

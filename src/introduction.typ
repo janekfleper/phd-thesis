@@ -8,9 +8,6 @@
 
 = Introduction <ch:intro>
 
-// TODO: Add citation for Valentins PhD thesis
-// TODO: Find a better citation for the radial trap frequencies...
-
 One major area of interest in ultracold fermionic atoms is the analog quantum simulation of many-body physics.
 In solid-state crystals, the behavior of electrons can be described by the Fermi-Hubbard model @hubbard_electron_1963.
 The valence electrons can tunnel between the lattice sites that are formed by the ions in the crystal, and the electrons experience an interaction energy when they occupy the same lattice site.
@@ -92,7 +89,7 @@ We achieve an excellent phase stability that provides the foundation for studyin
 
 == Individual contributions
 
-The results presented in this thesis are the conclusion of four and a half years of working together with Nick Klemmer @klemmer_ultracold_2024 and Valentin Jonas on an experimental setup previously constructed and maintained by three generations of doctoral students @frohlich_strongly_2011 @feld_low_2011 @vogt_collective_2013 @miller_ultracold_2016 @cocchi_analogue_2016 @chan_quantum_2019 @gall_quantum_2020 @drewes_thermodynamics_2020 @wurz_quantum_2021.
+The results presented in this thesis are the conclusion of four and a half years of working together with Nick Klemmer @klemmer_ultracold_2024 and Valentin Jonas @jonas_ultracold on an experimental setup previously constructed and maintained by three generations of doctoral students @frohlich_strongly_2011 @feld_low_2011 @vogt_collective_2013 @miller_ultracold_2016 @cocchi_analogue_2016 @chan_quantum_2019 @gall_quantum_2020 @drewes_thermodynamics_2020 @wurz_quantum_2021.
 We primarily focused on setting up and characterizing the in-plane superlattice, which we ultimately used to enhance the pair tunneling in Floquet-driven double wells.
 Below, I will present detailed insights into the contributions of each team member.
 
