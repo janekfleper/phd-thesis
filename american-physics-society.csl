@@ -156,7 +156,14 @@
               </group>
             </group>
             <text variable="publisher"/>
-            <text macro="year-date"/>
+            <choose>
+              <if variable="issued">
+                <text macro="year-date"/>
+              </if>
+              <else>
+                <text value="(to be submitted)"/>
+              </else>
+            </choose>
           </group>
         </else-if>
         <else-if type="article" match="any">
