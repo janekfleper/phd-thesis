@@ -144,13 +144,10 @@ Additionally, the control server makes experimental sequence data, such as timin
 This allows clients that control standalone devices or run automated data analysis processes to easily extend the experimental control.
 
 This thesis is written in Typst @madje_typst_2023, a modern typesetting language developed by Martin Haug @haug_fast_2022 and Laurenz Mädje @madje_programmable_2022.
-Typst uses a markup-based syntax for the simple document styling and integrates a scripting language for complex document modifications and user-defined functions.
+Typst uses a markup-based syntax for the simple document styling and integrates a scripting language for complex modifications and user-defined functions.
 Essential features, such as figures, captions, citations, and equations, are built directly into the Typst compiler.
 Packages that implement advanced features and templates to streamline the creation of new documents can be found in the Typst Universe.
-The following software was used to write this thesis:
-
-// TODO: Make sure all the package versions are up to date!
-// TODO: Add mpl2typ here...
+The following software was used for writing this thesis:
 
 #figure(
   table(
@@ -162,19 +159,19 @@ The following software was used to write this thesis:
     table.vline(x: 2),
 
     link("https://github.com/typst/typst")[`typst`],
-    `0.14.0`,
+    `0.14.2`,
     [
       A markup-based typesetting system that is powerful and easy to learn.
     ],
 
     link("https://github.com/Myriad-Dreamin/tinymist")[`tinymist`],
-    `0.13.30`,
+    `0.14.4`,
     [
       An integrated language service for Typst.
     ],
 
     link("https://github.com/Automattic/harper")[`harper`],
-    `0.70.0`,
+    `1.2.0`,
     [
       Offline, privacy-first grammar checker. Fast, open-source, Rust-powered.
     ],
@@ -220,9 +217,15 @@ The following software was used to write this thesis:
     [
       A simple yet powerful template for your thesis.
     ],
+
+    link("https://github.com/janekfleper/mpl2typ")[`mpl2typ`] + super[\*],
+    `0.1.0`,
+    [
+      Create your figures in matplotlib and polish them in Typst.
+    ],
   )
     + align(left)[#super[\*]These packages are developed by myself.],
   numbering: none,
 )
 
-After the thesis is published, the source code will be publicly available on GitHub @fleper_ultracold_2025.
+The source code for this thesis will be available at https://github.com/janekfleper/phd-thesis.
