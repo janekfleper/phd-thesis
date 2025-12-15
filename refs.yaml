@@ -145,7 +145,7 @@ ludewig_feshbach_2012:
   note: "{OCLC}: 788564450"
 friebel_co_1998:
   type: article
-  title: "{CO} 2 -laser optical lattice with cold rubidium atoms"
+  title: $"CO"_2$-laser optical lattice with cold rubidium atoms
   author:
     - Friebel, S.
     - D’Andrea, C.
@@ -1209,6 +1209,7 @@ trotzky_time-resolved_2008:
     - Lukin, M. D.
     - Bloch, I.
   date: 2008-01-18
+  page-range: "295-299"
   url:
     value: https://www.science.org/doi/abs/10.1126/science.1150841
     date: 2022-01-10
@@ -1218,6 +1219,8 @@ trotzky_time-resolved_2008:
   parent:
     type: periodical
     title: Science
+    issue: 5861
+    volume: 319
 dutta_non-standard_2015:
   type: article
   title:
@@ -2828,7 +2831,7 @@ hofstetter_high-temperature_2002:
     volume: 89
 anderson_resonating_1987:
   type: article
-  title: The Resonating Valence Bond State in La2CuO4 and Superconductivity
+  title: The Resonating Valence Bond State in $"La"_2"CuO"_4$ and Superconductivity
   author: Anderson, P. W.
   date: 1987-03-06
   page-range: 1196-1198
