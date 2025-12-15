@@ -108,6 +108,7 @@ inhomogeneity
 integrand
 lensing
 linewidth
+memeing
 micromirror
 micromotion
 millikelvin

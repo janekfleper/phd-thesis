@@ -31,6 +31,7 @@
   counter(page).update(1)
   include "src/dedication.typ"
   include "src/abstract.typ"
+  include "src/thanks.typ"
 
   // do not include the table of contents itself in the table of contents...
   show outline: set heading(outlined: false)
