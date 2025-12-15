@@ -47,6 +47,6 @@
 #include "src/phase/phase.typ"
 #include "src/outlook.typ"
 
-#bibliography("refs.bib", style: "american-physics-society")
+#bibliography("refs.bib", full: true, style: "american-physics-society.csl")
 #outline(title: [List of Figures], target: figure.where(kind: image))
 #outline(title: [List of Tables], target: figure.where(kind: table))
