@@ -32,12 +32,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-11.461%, 50.0%),
+    position: (-13%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Scattering length $asc slash a_0$]),
+        text(size: 1em, fill: black, [Scattering length $asc slash a_0$]),
       ),
     ),
   )

@@ -135,12 +135,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-12.369%, 50.0%),
+    position: (-14%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Energy $epsilon slash t$]),
+        text(size: 1em, fill: black, [Energy $epsilon slash t$]),
       ),
     ),
   )

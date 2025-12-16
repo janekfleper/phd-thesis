@@ -7,7 +7,7 @@
 
 #let frequency-ylim = (113.5, 125.5)
 
-#let label-yaxis-x0 = -28%
+#let label-yaxis-x0 = -30%
 
 #let label-xaxis = (
   position: (50.0%, 120%),
@@ -90,7 +90,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Frequency $f slash #h(0.1em) #unit[kHz]$]),
+        text(size: 1em, fill: black, [Frequency $f slash #h(0.1em) #unit[kHz]$]),
       ),
     ),
   )
@@ -314,7 +314,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Resonance $R$]),
+        text(size: 1em, fill: black, [Resonance $R$]),
       ),
     ),
   )
@@ -502,7 +502,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Atomic density $n slash#unit[μm]$]),
+        text(size: 1em, fill: black, [Atomic density $n slash#unit[μm]$]),
       ),
     ),
   )

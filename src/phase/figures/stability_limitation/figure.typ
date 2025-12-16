@@ -31,12 +31,12 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-9%, 50.0%),
+    position: (-10%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Temperature $T slash degree "C"$]),
+        text(size: 1em, fill: black, [Temperature $T slash degree "C"$]),
       ),
     ),
   )

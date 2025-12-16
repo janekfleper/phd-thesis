@@ -28,11 +28,10 @@
     body: place(center + top, text(size: 1em, fill: black, [Quasimomentum $q slash k$])),
   )
   let label-yaxis = (
-    position: (-10.999%, 50.0%),
+    position: (-12%, 50.0%),
     body: rotate(-90.0deg, place(center + bottom, text(
       size: 1em,
       fill: black,
-      bottom-edge: "descender",
       [Energy $epsilon slash #unit[Erec]$],
     ))),
   )

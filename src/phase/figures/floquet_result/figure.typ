@@ -71,7 +71,7 @@
 
   let label-xaxis = Ueff-label-xaxis
   let label-yaxis = (
-    position: (-12.187%, 50.0%),
+    position: (-14%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -79,7 +79,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [$E_"min" slash 2 ateffn(l)$],
         ),
       ),
@@ -521,7 +520,7 @@
 
   let label-xaxis = Ueff-label-xaxis
   let label-yaxis = (
-    position: (-12.233%, 50.0%),
+    position: (-14%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -529,7 +528,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Pair tunneling fidelity $Fpair$],
         ),
       ),

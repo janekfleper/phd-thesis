@@ -599,12 +599,12 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-6%, 50.0%),
+    position: (-7%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Band energy $epsilon_n (q) slash #unit[Erec]$]),
+        text(size: 1em, fill: black, [Band energy $epsilon_n (q) slash #unit[Erec]$]),
       ),
     ),
   )
@@ -809,12 +809,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-6%, 50.0%),
+    position: (-7%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Composition $abs(phy.braket(w_n, w_L))^2$]),
+        text(size: 1em, fill: black, [Composition $abs(phy.braket(w_n, w_L))^2$]),
       ),
     ),
   )

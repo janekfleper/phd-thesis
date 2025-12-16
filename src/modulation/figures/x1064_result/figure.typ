@@ -43,7 +43,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-19%, 50.0%),
+    position: (-20%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -51,7 +51,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           text-modulation-frequency,
         ),
       ),
@@ -137,7 +136,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Waist $fitw0 slash#unit[μm]$],
         ),
       ),
@@ -342,7 +340,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Position $fity0 slash#unit[μm]$],
         ),
       ),

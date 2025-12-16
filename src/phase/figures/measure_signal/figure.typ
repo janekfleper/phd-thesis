@@ -171,14 +171,14 @@
 
 
   let label-colormap = (
-    position: (-390%, 50.0%),
+    position: (-400%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
         box(
           width: 5cm,
-          text(size: 1em, fill: black, bottom-edge: "descender", [Frequency $f slash#unit[MHz]$]),
+          text(size: 1em, fill: black, [Frequency $f slash#unit[MHz]$]),
         ),
       ),
     ),
@@ -235,7 +235,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-17%, 50.0%),
+    position: (-19%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -243,7 +243,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Position $y slash#unit[μm]$],
         ),
       ),

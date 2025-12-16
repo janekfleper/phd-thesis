@@ -44,12 +44,12 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-26.179%, 50.0%),
+    position: (-28%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Calibration factor #fita0]),
+        text(size: 1em, fill: black, [Calibration factor #fita0]),
       ),
     ),
   )
@@ -198,12 +198,12 @@
   let data = json("data/axes-1.json")
 
   let label-yaxis = (
-    position: (-24.422%, 50.0%),
+    position: (-26%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Waist $wx1064 slash#unit[μm]$]),
+        text(size: 1em, fill: black, [Waist $wx1064 slash#unit[μm]$]),
       ),
     ),
   )
@@ -319,12 +319,12 @@
   let data = json("data/axes-2.json")
 
   let label-yaxis = (
-    position: (-20%, 50.0%),
+    position: (-22%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Position $fity0 slash#unit[μm]$]),
+        text(size: 1em, fill: black, [Position $fity0 slash#unit[μm]$]),
       ),
     ),
   )

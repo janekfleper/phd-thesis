@@ -60,7 +60,7 @@
   let compute-scale(size) = calc.sqrt(size) * dpi / 72
 
   let label-yaxis = (
-    position: (-30%, 50.0%),
+    position: (-34%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -68,7 +68,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [$y slash#unit[μm]$],
         ),
       ),

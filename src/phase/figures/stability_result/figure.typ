@@ -76,7 +76,7 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-5%, 50.0%),
+    position: (-6%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -84,7 +84,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Phase $phase slash#unit[mrad]$],
         ),
       ),
@@ -222,7 +221,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-5%, 50.0%),
+    position: (-6%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -230,7 +229,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Correction $delta phase slash#unit[mrad]$],
         ),
       ),

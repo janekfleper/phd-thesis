@@ -31,11 +31,10 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-11.655%, 50.0%),
+    position: (-13%, 50.0%),
     body: rotate(-90.0deg, place(center + bottom, text(
       size: 1em,
       fill: black,
-      bottom-edge: "descender",
       ylabel-text,
     ))),
   )
@@ -280,7 +279,7 @@
   let data = json("data/axes-1.json")
 
   let label-yaxis = (
-    position: (108.582%, 50.0%),
+    position: (110%, 50.0%),
     body: rotate(-90.0deg, place(center + top, text(size: 1em, fill: black, ylabel-text))),
   )
   let xaxis-major-ticks = (

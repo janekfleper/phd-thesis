@@ -68,7 +68,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [$y slash#unit[μm]$],
         ),
       ),

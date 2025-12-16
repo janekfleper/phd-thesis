@@ -26,7 +26,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-7%, 50.0%),
+    position: (-8%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -34,7 +34,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [$q_y slash (pi slash a_y)$],
         ),
       ),

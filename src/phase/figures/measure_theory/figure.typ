@@ -350,12 +350,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Occupation $n_L$]),
+        text(size: 1em, fill: black, [Occupation $n_L$]),
       ),
     ),
   )

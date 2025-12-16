@@ -175,12 +175,12 @@
     ),
   )
   let secondary-label-yaxis = (
-    position: (0% - 9.2cm, 50.0%),
+    position: (0% - 9.3cm, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Occupation contrast #calC]),
+        text(size: 1em, fill: black, [Occupation contrast #calC]),
       ),
     ),
   )

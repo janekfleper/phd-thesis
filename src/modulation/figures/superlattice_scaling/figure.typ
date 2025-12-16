@@ -56,12 +56,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-14.104%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Transition frequency $fnm(1, n) slash#unit[kHz]$]),
+        text(size: 1em, fill: black, [Transition frequency $fnm(1, n) slash#unit[kHz]$]),
       ),
     ),
   )

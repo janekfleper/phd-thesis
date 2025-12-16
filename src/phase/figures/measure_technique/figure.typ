@@ -43,7 +43,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -51,14 +51,13 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Energy $epsilon slash (h dot #unit[kHz])$],
         ),
       ),
     ),
   )
   let secondary-label-yaxis = (
-    position: (170%, 50.0%),
+    position: (169%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -66,7 +65,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Transition frequency $fnm(n, m) slash#unit[kHz]$],
         ),
       ),

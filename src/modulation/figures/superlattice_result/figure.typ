@@ -42,12 +42,12 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-17.445%, 50.0%),
+    position: (-19%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Modulation frequency $fmod slash#unit[kHz]$]),
+        text(size: 1em, fill: black, [Modulation frequency $fmod slash#unit[kHz]$]),
       ),
     ),
   )
@@ -122,7 +122,7 @@
   let data = json("data/axes-1.json")
 
   let label-yaxis = (
-    position: (-17%, 50.0%),
+    position: (-19%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -130,7 +130,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Lattice depth $Vx532 slash #unit[Erec]$],
         ),
       ),

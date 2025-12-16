@@ -28,12 +28,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Energy $E slash (h dot #unit[MHz]$)]),
+        text(size: 1em, fill: black, [Energy $E slash (h dot #unit[MHz]$)]),
       ),
     ),
   )

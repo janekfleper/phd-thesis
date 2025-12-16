@@ -44,7 +44,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Resonance amplitude #fitaR],
         ),
       ),
@@ -204,7 +203,7 @@
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Quasimomentum $q slash k$]),
+        text(size: 1em, fill: black, [Quasimomentum $q slash k$]),
       ),
     ),
   )

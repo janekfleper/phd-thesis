@@ -9,7 +9,7 @@
 #let abc-style = (..abc-style, fill: none)
 
 #let label-yaxis = (
-  position: (-35%, 50.0%),
+  position: (-38%, 50.0%),
   body: rotate(
     -90.0deg,
     place(
@@ -17,7 +17,6 @@
       text(
         size: 1em,
         fill: black,
-        bottom-edge: "descender",
         [$y slash#unit[μm]$],
       ),
     ),

@@ -227,7 +227,7 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -235,7 +235,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Optimal position $zret slash#unit[μm]$],
         ),
       ),
@@ -497,7 +496,7 @@
     ),
   )
   let label-yaxis = (
-    position: (-14%, 50.0%),
+    position: (-16%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -505,7 +504,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Maximum $fita0(zret)$],
         ),
       ),
@@ -710,12 +708,12 @@
   let data = json("data/axes-3.json")
 
   let label-yaxis = (
-    position: (-24%, 50.0%),
+    position: (-28%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Calibration factor $fita0$]),
+        text(size: 1em, fill: black, [Calibration factor $fita0$]),
       ),
     ),
   )

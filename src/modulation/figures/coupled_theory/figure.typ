@@ -21,12 +21,12 @@
 )
 
 #let label-yaxis = (
-  position: (128%, 50.0%),
+  position: (129%, 50.0%),
   body: rotate(
     -90.0deg,
     place(
       center + bottom,
-      text(size: 1em, fill: black, bottom-edge: "descender", "Band composition"),
+      text(size: 1em, fill: black, "Band composition"),
     ),
   ),
 )
@@ -72,12 +72,12 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-11%, 50.0%),
+    position: (-13%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Transition frequency $fnm(1, eta) slash#unit[kHz]$]),
+        text(size: 1em, fill: black, [Transition frequency $fnm(1, eta) slash#unit[kHz]$]),
       ),
     ),
   )

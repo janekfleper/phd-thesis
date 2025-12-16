@@ -16,7 +16,6 @@
 #let label-yaxis-text = text(
   size: 1em,
   fill: black,
-  bottom-edge: "descender",
   [Modulation frequency $fmod slash#unit[kHz]$],
 )
 
@@ -49,7 +48,7 @@
   let data = json("data/axes-0.json")
 
   let label-yaxis = (
-    position: (-20.438%, 50.0%),
+    position: (-22.438%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -125,7 +124,7 @@
   let data = json("data/axes-1.json")
 
   let label-yaxis = (
-    position: (112.318%, 50.0%),
+    position: (114.318%, 50.0%),
     body: rotate(
       -90.0deg,
       place(

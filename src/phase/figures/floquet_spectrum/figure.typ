@@ -95,7 +95,7 @@
   let data = json("data/inset-0.json")
 
   let label-yaxis = (
-    position: (-3.1em, 50.0%),
+    position: (-3.4em, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -105,7 +105,6 @@
           text(
             size: 1em,
             fill: black,
-            bottom-edge: "descender",
             [Occupation contrast #calC],
           ),
         ),
@@ -418,12 +417,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-3.1em, 50.0%),
+    position: (-3.4em, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [Energy $E slash h nu$]),
+        text(size: 1em, fill: black, [Energy $E slash h nu$]),
       ),
     ),
   )

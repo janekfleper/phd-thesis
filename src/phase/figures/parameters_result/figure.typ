@@ -61,12 +61,12 @@
     ),
   )
   let label-yaxis = (
-    position: (-18%, 50.0%),
+    position: (-20%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
         center + bottom,
-        text(size: 1em, fill: black, bottom-edge: "descender", [$n_L$]),
+        text(size: 1em, fill: black, [$n_L$]),
       ),
     ),
   )
@@ -239,7 +239,7 @@
   let data = json("data/axes-2.json")
 
   let label-yaxis = (
-    position: (-15%, 50.0%),
+    position: (-17%, 50.0%),
     body: rotate(
       -90.0deg,
       place(
@@ -247,7 +247,6 @@
         text(
           size: 1em,
           fill: black,
-          bottom-edge: "descender",
           [Position $y slash#unit[μm]$],
         ),
       ),
