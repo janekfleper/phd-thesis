@@ -211,4 +211,4 @@ The following software was used for writing this thesis:
   numbering: none,
 )
 
-The source code for this thesis will be available at https://github.com/janekfleper/phd-thesis.
+The source code for this thesis will be available at #text(blue, [https://github.com/janekfleper/phd-thesis]).
