@@ -9,7 +9,7 @@
 
 #show: thesis.with(
   lang: "en",
-  debug: true,
+  debug: false,
 )
 
 #titlepage(

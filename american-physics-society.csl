@@ -67,10 +67,10 @@
     </choose>
   </macro>
   <macro name="publisher">
-    <group prefix="(" suffix=")" delimiter=", ">
-      <text variable="publisher"/>
-      <text variable="publisher-place" text-case="title"/>
-      <text macro="year-date"/>
+    <group prefix=". " suffix="" delimiter=" ">
+      <text variable="publisher" text-case="title"/>
+      <!-- <text variable="publisher-place" text-case="title"/> -->
+      <text macro="year-date" prefix="(" suffix=")"/>
     </group>
   </macro>
   <macro name="edition-volume">
@@ -108,9 +108,9 @@
       <text macro="author" suffix=", "/>
       <choose>
         <if type="bill book figure graphic legal_case legislation map motion_picture song treaty" match="any">
-          <group delimiter=" ">
+          <group delimiter="">
             <group delimiter=", ">
-              <text variable="title" text-case="title" font-style="italic"/>
+              <text variable="title" text-case="title" quotes="true"/>
               <text macro="edition-volume"/>
             </group>
             <text macro="publisher"/>
@@ -146,16 +146,16 @@
           </group>
         </else-if>
         <else-if type="thesis report" match="any">
-          <group delimiter=", ">
-            <text variable="title"/>
+          <group delimiter="">
+            <text variable="title" quotes="true"/>
             <group delimiter=" ">
-              <text variable="genre"/>
+              <text variable="genre" prefix=". "/>
               <group delimiter=" ">
                 <text term="issue" form="short" text-case="capitalize-first"/>
                 <text variable="number"/>
               </group>
             </group>
-            <text variable="publisher"/>
+            <text variable="publisher" prefix=", " suffix=", "/>
             <choose>
               <if variable="issued">
                 <text macro="year-date"/>
@@ -171,7 +171,7 @@
             <text variable="title" text-case="title" font-style="italic"/>
             <choose>
               <if variable="container-title">
-                <text variable="container-title"/>
+                <text variable="container-title" text-case="title"/>
               </if>
               <else>
                 <text variable="number"/>
@@ -182,11 +182,12 @@
         <else-if type="dataset interview manuscript pamphlet personal_communication post post-weblog speech webpage" match="any">
           <!-- unpublished materials; guidelines call for 'enough information to be retrievable' -->
           <!-- Based on arXiv format -->
-          <group delimiter=", ">
-            <text variable="title" text-case="title" font-style="italic"/>
+          <group delimiter="">
+            <text variable="title" text-case="title" quotes="true"/>
+            <text macro="year-date" prefix=". (" suffix=")"/>
             <choose>
               <if variable="DOI">
-                <text variable="DOI" prefix="https://doi.org/"/>
+                <text variable="DOI" prefix=". https://doi.org/"/>
               </if>
               <else-if variable="URL">
                 <text variable="URL"/>
@@ -199,22 +200,22 @@
         </else-if>
         <else>
           <!--article-journal article-magazine article-newspaper review review-book-->
-          <group delimiter=", ">
-            <text variable="title"/>
+          <group delimiter="">
+            <text variable="title" quotes="true"/>
             <group delimiter=" ">
-              <text variable="container-title" form="short" text-case="title"/>
+              <text variable="container-title" prefix=". " form="short" text-case="title"/>
               <group delimiter=", ">
                 <text variable="volume" font-weight="bold"/>
-                <group delimiter=" ">
+                <group delimiter="">
                   <choose>
                     <if variable="number">
                       <text variable="number"/>
                     </if>
                     <else>
-                      <text variable="page-first" form="short"/>
+                      <text variable="page" form="short"/>
                     </else>
                   </choose>
-                  <text macro="year-date" prefix="(" suffix=")"/>
+                  <text macro="year-date" prefix=" (" suffix=")"/>
                 </group>
               </group>
             </group>
