@@ -19,7 +19,7 @@ Therefore, we are primarily interested in changing the phase of the #x1064 latti
 With the path length $d approx #qty[50][cm]$, the frequency difference of the #x1064\-lattice laser corresponding to the superlattice phase $Delta phase = pi slash 2$ is $Delta nu approx #qty[150][MHz]$.
 
 #floating-figure(
-  control-diagram(),
+  block(control-diagram()),
   caption: [
     Control diagram of the superlattice phase.
     The #x532\-lattice pump laser and the amplified #x1064\-lattice seed laser are overlapped on a photodiode.

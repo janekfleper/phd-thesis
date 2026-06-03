@@ -81,7 +81,7 @@ We achieve this with a phase ramp back to $phase = -pi slash 4$ to project the f
 This phase ramp is also diabatic to conserve the composition of the final state.
 
 #floating-figure(
-  figure-sequence(),
+  block(figure-sequence()),
   caption: [
     State initialization and projection for the phase measurement.
     Initially, only the left well is occupied by loading the superlattice at the antisymmetric phase $phase = -pi slash 4$.
