@@ -18,7 +18,7 @@
   v(6em)
   [
     vorgelegt von\
-    #author\
+    #text(author, size: 1.2em, weight: 600)\
     aus\
     #birthplace
   ]

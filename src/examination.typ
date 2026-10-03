@@ -18,7 +18,7 @@
     column-gutter: 0.9em,
     inset: (left: 0mm),
     stroke: none,
-    [Betreuer:], supervisor,
+    [Gutachter/Betreuer:], supervisor,
     [Gutachter:], examiner,
     table.cell(colspan: 2, []),
     [Tag der Promotion:], date-of-examination,
