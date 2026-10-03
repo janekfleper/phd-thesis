@@ -22,7 +22,7 @@
 #examination(
   supervisor: [Prof. Dr. Michael Köhl],
   examiner: [Prof. Dr. Simon Stellmer],
-  date: none,
+  date: datetime(year: 2026, month: 06, day: 08),
 )
 
 #{
